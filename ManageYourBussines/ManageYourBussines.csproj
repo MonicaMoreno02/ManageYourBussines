@@ -92,6 +92,7 @@
     <Content Include="recursos\images\favicon.png" />
     <Content Include="recursos\images\hero-bg.jpg" />
     <Content Include="recursos\images\imagen.jpeg" />
+    <Content Include="recursos\images\mueble.jpeg" />
     <Content Include="recursos\images\o1.jpg" />
     <Content Include="recursos\images\o2.jpg" />
     <Content Include="recursos\js\bootstrap.js" />
@@ -101,7 +102,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\clConexion.cs" />
+    <Compile Include="Datos\clProductoD.cs" />
     <Compile Include="Datos\clUsuarioD.cs" />
+    <Compile Include="Entidades\clProductoE.cs" />
     <Compile Include="Entidades\clUsuarioE.cs" />
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
@@ -110,6 +113,7 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Logica\clProductoL.cs" />
     <Compile Include="Logica\clUsuarioL.cs" />
     <Compile Include="Presentacion\frmAbout.aspx.cs">
       <DependentUpon>frmAbout.aspx</DependentUpon>
