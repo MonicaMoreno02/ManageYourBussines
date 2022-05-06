@@ -388,8 +388,9 @@
         <asp:ListView ID="ListView1" runat="server">
             <ItemTemplate>
                 
-                    <div class="list">
-                        <table>
+                 <div class="d-flex flex-row flex-wrap">
+                    <div class="card card-block col-md-4">
+                         <div class="card-body">
                         <tr><img src="<%#Eval("imagen") %>" width="145" height="145"</tr>
                   
                          

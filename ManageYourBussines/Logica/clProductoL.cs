@@ -7,7 +7,7 @@ using System.Web;
 
 namespace ManageYourBussines.Logica
 {
-    public class clProductoL
+    public class ClProductoL
     {
         public List<clProductoE> mtdListarP()
         {
