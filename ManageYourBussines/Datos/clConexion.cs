@@ -9,13 +9,13 @@ namespace ManageYourBussines.Datos
 {
     public class ClConexion
     {
-        public class clConexion
-        {
+        
+        
             SqlConnection conexion = null;
-            public clConexion()
+            public ClConexion()
             {
 
-                conexion = new SqlConnection("");
+                conexion = new SqlConnection("Data Source=SOGAPRRBCFSD526;Initial Catalog=dbManage;Integrated Security=True");
                 conexion.Open();
             }
 
@@ -35,6 +35,6 @@ namespace ManageYourBussines.Datos
                 conexion.Close();
                 return filasAfectadas;
             }
-        }
+        
     }
 }

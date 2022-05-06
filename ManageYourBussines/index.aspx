@@ -3,6 +3,7 @@
 <html>
 
 <head>
+
   <!-- Basic -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -37,7 +38,7 @@
 
   <div class="hero_area">
     <div class="bg-box">
-      <img src="recursos/images/imagen.jpeg" alt="">
+      <img src="recursos/images/mueble.png" alt="">
     </div>
     <!-- header section strats -->
     <header class="header_section">
@@ -149,11 +150,13 @@
               <div class="row">
                 <div class="col-md-7 col-lg-6 ">
                   <div class="detail-box">
+                    
                     <h1>
-                      Fast Food Restaurant
+                      muebles san jose
+
                     </h1>
                     <p>
-                      Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.
+                    ddddddddddddddddd
                     </p>
                     <div class="btn-box">
                       <a href="" class="btn1">
