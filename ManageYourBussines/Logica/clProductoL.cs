@@ -9,10 +9,13 @@ namespace ManageYourBussines.Logica
 {
     public class clProductoL
     {
-        public List<clProductoL> mtdListarProducto()
+        public List<clProductoE> mtdListarP()
         {
-            clProductoD objProductoD = new clProductoD();
-            List<clProductoE> listaProducto = new 
+            clProductoD objProducto = new clProductoD();
+            List<clProductoE> objProductoD = new List<clProductoE>();
+            objProductoD = objProducto.mtdListar();
+            return objProductoD;
+
         }
     }
 }
