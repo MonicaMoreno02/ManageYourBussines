@@ -12,7 +12,7 @@ namespace ManageYourBussines.Datos
     {
         public List<clProductoE> mtdListar()
         {
-            string sql = "select * from imagen inner join producto on nombre.idProducto=nombre.idProducto on precio.idProducto=precio.idProducto on descripcion.idProducto=descripcion.idProducto ";
+            string sql = "select * from producto ";
             clConexion objConexion = new clConexion();
             DataTable tblProducto = new DataTable();
             tblProducto = objConexion.mtdDesconectado(sql);
@@ -24,14 +24,12 @@ namespace ManageYourBussines.Datos
             for (int i = 0; i < catnReg; i++)
             {
                 clProductoE objDatosProducto = new clProductoE();
-                objDatosProducto.idImagen = int.Parse(tblProducto.Rows[i]["idImagen"].ToString());
-                objDatosProducto.imagen = tblProducto.Rows[i]["imagen"].ToString();
-                objDatosProducto.material = tblProducto.Rows[i]["material"].ToString();
-                objDatosProducto.caracteristicas = tblProducto.Rows[i]["caracteristicas"].ToString();
                 objDatosProducto.idProducto = int.Parse(tblProducto.Rows[i]["idProducto"].ToString());
                 objDatosProducto.nombre = tblProducto.Rows[i]["nombre"].ToString();
-                objDatosProducto.precio = float.Parse(tblProducto.Rows[i]["precio"].ToString());
                 objDatosProducto.descripcion = tblProducto.Rows[i]["descripcion"].ToString();
+                objDatosProducto.precio = float.Parse(tblProducto.Rows[i]["precio"].ToString());
+                objDatosProducto.imagen = tblProducto.Rows[i]["imagen"].ToString();
+                
 
 
                 listarProducto.Add(objDatosProducto);
