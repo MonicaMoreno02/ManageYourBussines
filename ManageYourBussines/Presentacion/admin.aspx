@@ -1164,15 +1164,23 @@
              Contamos con diseños exclusivos 
             </p>
             <div class="footer_social">
-              <a href="">
+            
+             
+
+                 <a href="https://web.facebook.com/Muebles-San-Jos%C3%A9-113560607081755" target="_blank" rel="noopener noreferrer">
                 <i class="fa fa-facebook" aria-hidden="true"></i>
               </a>
-              <a href="">
+
+                <a href="https://instagram.com/muebles.san_jose?igshid=YmMyMTA2M2Y=" target="_blank" rel="noopener noreferrer">
                 <i class="fa fa-instagram" aria-hidden="true"></i>
               </a>
-              <a href="">
+
+              <a href="http://wa.me/573133658254/" target="_blank" rel="noopener noreferrer">
                 <i class="fa fa-whatsapp" aria-hidden="true"></i>
-                   <a target="_blank" class="fcc-btn" href="http://wa.me/573133658254/">freeCodeCamp</a>  
+              </a>
+
+
+             
                 
               </a>
             </div>
