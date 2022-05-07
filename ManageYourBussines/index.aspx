@@ -30,7 +30,7 @@
   <link href="recursos/css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="recursos/css/responsive.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
 
@@ -388,47 +388,19 @@
         <asp:ListView ID="ListView1" runat="server">
             <ItemTemplate>
                 
-                    <div class="list">
-                        <table>
+                   
+                 <div class="d-flex flex-row flex-wrap">
+                    <div class="card card-block col-md-3">
+                         <div class="card-body">
+                        
                         <tr><img src="<%#Eval("imagen") %>" width="145" height="145"</tr>
                   
                          
                         <tr><h1><%#Eval("nombre") %></h1></tr>
                   
-                        <div class="options">
+                       
                         <tr><p><%#Eval("precio") %></p></tr>
-                      
-                     <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#myModal">
-    Abrir Detalles
-  </button>
-</div>
-
-<!-- The Modal -->
-<div class="modal fade" id="myModal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-
-      <!-- Modal Header -->
-      <div class="modal-header">
-        <h4 class="modal-title">Detalles:</h4>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-
-      <!-- Modal body -->
-      <div class="modal-body">
-        
-      </div>
-
-      <!-- Modal footer -->
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-
     </div>
-  </div>
-</div>
-
-</table>
           </div>
                 </div>
             </ItemTemplate>
