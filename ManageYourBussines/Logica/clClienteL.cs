@@ -20,12 +20,14 @@ namespace ManageYourBussines.Logica
 
         }
 
-        public int mtdRegistarUsuario(clClienteE objdatosClien)
+        public int mtdRegistrarCliente(clClienteE objdatosClien)
         {
             clClienteD objClientesD = new clClienteD();
             int resultado = objClientesD.mtdRegistrar(objdatosClien);
             return resultado;
         }
+
+
 
     }
 }

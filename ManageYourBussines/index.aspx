@@ -68,6 +68,10 @@
               <li class="nav-item">
                 <a class="nav-link" href="Presentacion/frmRegistrar.aspx">Registrarse</a>
               </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="Presentacion/frmLogin.aspx">Iniciar Ssesion</a>
+              </li>
             </ul>
             <div class="user_option">
               <a href="" class="user_link">
