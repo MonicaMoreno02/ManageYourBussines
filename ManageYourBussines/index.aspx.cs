@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ManageYourBussines.Datos;
+using ManageYourBussines.Entidades;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -12,7 +14,7 @@ namespace ManageYourBussines
 {
     public partial class index : System.Web.UI.Page
     {
-        string CadenaConexion = "Data Source=SOGAPRRBCFSD546\\SQLEXPRESS;Initial Catalog=dbManage;Integrated Security=True";
+        string CadenaConexion = "Data Source=.;Initial Catalog=dbManage;Integrated Security=True";
         protected void Page_Load(object sender, EventArgs e)
         {
             SqlConnection conexionSQL = new SqlConnection(CadenaConexion);
@@ -25,10 +27,13 @@ namespace ManageYourBussines
             DataTable productoBD = new DataTable();
             productoBD.Load(cmd.ExecuteReader());
 
-            ListView1.DataSource = productoBD;
-            ListView1.DataBind();
+            Repeater1.DataSource = productoBD;
+            Repeater1.DataBind();
             conexionSQL.Close();
         }
+
+
+
        
     }
 }
