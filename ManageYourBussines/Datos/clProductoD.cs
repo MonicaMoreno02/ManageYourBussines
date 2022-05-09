@@ -12,7 +12,7 @@ namespace ManageYourBussines.Datos
     {
         public List<clProductoE> mtdListar()
         {
-            string sql = "select * from imagen inner join producto on nombre.idProducto=nombre.idProducto on precio.idProducto=precio.idProducto on descripcion.idProducto=descripcion.idProducto ";
+            string sql = "SELECT * FROM imagen INNER JOIN producto ON imagen.idProducto = producto.idProducto; ";
             clConexion objConexion = new clConexion();
             DataTable tblProducto = new DataTable();
             tblProducto = objConexion.mtdDesconectado(sql);
@@ -42,4 +42,4 @@ namespace ManageYourBussines.Datos
         }
     }
     }
-    }
+    
