@@ -1817,7 +1817,9 @@
   <ItemGroup>
     <Compile Include="Datos\clConexion.cs" />
     <Compile Include="Datos\clClienteD.cs" />
+    <Compile Include="Datos\clEmpleadoD.cs" />
     <Compile Include="Entidades\clClienteE.cs" />
+    <Compile Include="Entidades\clEmpleadoE.cs" />
     <Compile Include="formGenContrasena.aspx.cs">
       <DependentUpon>formGenContrasena.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1833,6 +1835,7 @@
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Logica\clClienteL.cs" />
+    <Compile Include="Logica\clEmpleadoL.cs" />
     <Compile Include="Presentacion\frmAbout.aspx.cs">
       <DependentUpon>frmAbout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

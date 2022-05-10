@@ -26,46 +26,49 @@ namespace ManageYourBussines.Presentacion
             objClientesE.telefono = txtTelefono.Text;
             objClientesE.direccion = txtDireccion.Text;
             objClientesE.email = txtEmail.Text;
-            //objClientesE.clave = txtClave.Text;
+            objClientesE.clave = txtClave.Text;
 
 
+            Random rdn = new Random();
+            string caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890%$#@";
+            int longitud = caracteres.Length;
+            char letra;
+            int longitudContrasenia = 10;
+            string contraseniaAleatoria = string.Empty;
+            for (int i = 0; i < longitudContrasenia; i++)
+            {
+                letra = caracteres[rdn.Next(longitud)];
+                contraseniaAleatoria += letra.ToString();
+            }
 
+            clClienteL objClientesL = new clClienteL();
 
-
-            clClienteL objProductosL = new clClienteL();
-
-            int filas = objProductosL.mtdRegistrarCliente(objClientesE);
+            int filas = objClientesL.mtdRegistrarCliente(objClientesE);
             if (filas > 0)
 
             {
-
-                //< div class="alert alert-info">
-                // <strong>Info!</strong> This alert box could indicate a neutral informative change or action.
-                //     </div>
-                lblMensaje.Text = "producto registrado ";
+                lblMensaje.Text = "Cliente Registrado ";
 
             }
             else
             {
-                lblMensaje.Text = "error al registrar el producto  ";
+                lblMensaje.Text = "error al registraar el cliente   ";
             }
 
-         
+            txtDocumento.Text = String.Empty;
+
+            txtNombres.Text = String.Empty;
+            txtApellidos.Text = String.Empty;
+            txtTelefono.Text = String.Empty;
+            txtDireccion.Text = String.Empty;
+            txtEmail.Text = String.Empty;
+            txtClave.Text = String.Empty;
 
 
-        }
-
-
-        protected void cmdLimpiar_Click(object sender, EventArgs e)
-        {
-            //object p = txtDocumento.Clear();
-            //object p1 = txtNombres.Clear();
-            //txtApellidos.Clear();
-            //txtTelefono.Clear();
-            //txtDireccion.Clear();
-            //txtEmail.Clear();
-            //txtDocumento.Focus();
 
         }
+
+
+       
     }
 }

@@ -296,11 +296,15 @@
 
                             <label for="email " class="form-label">Email :</label>
 
-                            <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" name="uname" required placeholder="Email " TextMode="MultiLine" AutoCompleteType="Email"></asp:TextBox>
+                            <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" name="uname" required placeholder="Email " TextMode="Email" AutoCompleteType="Email"></asp:TextBox>
                             <div class="valid-feedback">Valid.</div>
                             <div class="invalid-feedback">Complete este Campo.</div>
 
+                              <label for="clave " class="form-label">Clave :</label>
 
+                            <asp:TextBox ID="txtClave" runat="server" CssClass="form-control" name="uname"  placeholder="clave  " TextMode="Password"></asp:TextBox>
+                         <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Complete este Campo.</div>
                           
 
                                             <div class=" col mt-3 mb-3">

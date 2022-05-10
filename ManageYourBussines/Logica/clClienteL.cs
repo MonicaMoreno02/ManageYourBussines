@@ -12,11 +12,12 @@ namespace ManageYourBussines.Logica
         public clClienteE mtdLogin(clClienteE objDatos)
         {
             clClienteD objDatosClienteD = new clClienteD();
+            clEmpleadoE objDatosEmpleD = new clEmpleadoE();
             clClienteE objDatosCliente = new clClienteE();
             objDatosCliente = objDatosClienteD.mtdLogin(objDatos);
             return objDatosCliente;
 
-
+            
 
         }
 
