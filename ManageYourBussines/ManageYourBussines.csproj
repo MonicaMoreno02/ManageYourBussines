@@ -65,7 +65,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.aspx" />
-    <Content Include="index.html" />
     <Content Include="Presentacion\frmAbout.aspx" />
     <Content Include="Presentacion\frmHome.aspx" />
     <Content Include="Presentacion\frmProductos.aspx" />
@@ -87,6 +86,8 @@
     <Content Include="recursos\images\iconoSofa.png" />
     <Content Include="recursos\images\imagen.jpeg" />
     <Content Include="recursos\images\iconoEscritorio.png" />
+    <Content Include="recursos\images\logo.jpg" />
+    <Content Include="recursos\images\logo.png" />
     <Content Include="recursos\images\mesaclasica.png" />
     <Content Include="recursos\images\mesadejardin.png" />
     <Content Include="recursos\images\mesamoderna.png" />
