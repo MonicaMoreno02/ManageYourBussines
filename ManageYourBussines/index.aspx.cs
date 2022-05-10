@@ -1,4 +1,5 @@
 ﻿using ManageYourBussines.Entidades;
+using ManageYourBussines.Logica;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -13,37 +14,51 @@ namespace ManageYourBussines
 {
     public partial class index : System.Web.UI.Page
     {
-        string CadenaConexion = "Data Source=.;Initial Catalog=dbManage;Integrated Security=True";
+       
         protected void Page_Load(object sender, EventArgs e)
         {
-            SqlConnection conexionSQL = new SqlConnection(CadenaConexion);
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT * FROM imagen INNER JOIN producto ON imagen.idProducto = producto.idProducto; ";
-            cmd.CommandType = CommandType.Text;
-            cmd.Connection = conexionSQL;
-            conexionSQL.Open();
+            //SqlConnection conexionSQL = new SqlConnection(CadenaConexion);
+            //SqlCommand cmd = new SqlCommand();
+            //cmd.CommandText = "SELECT * FROM imagen INNER JOIN producto ON imagen.idProducto = producto.idProducto; ";
+            //cmd.CommandType = CommandType.Text;
+            //cmd.Connection = conexionSQL;
+            //conexionSQL.Open();
 
-            DataTable productoBD = new DataTable();
-            productoBD.Load(cmd.ExecuteReader());
+            //DataTable productoBD = new DataTable();
+            //productoBD.Load(cmd.ExecuteReader());
 
-            Repeater1.DataSource = productoBD;
+            //Repeater1.DataSource = productoBD;
+            //Repeater1.DataBind();
+            //conexionSQL.Close();
+
+            if(!this.IsPostBack)
+            { 
+                
+            }
+
+            clProductoL obProductoL = new clProductoL();
+            Repeater1.DataSource = obProductoL.mtdListarP();
             Repeater1.DataBind();
-            conexionSQL.Close();
+
         }
 
-        protected void btnModal_Click(object sender, EventArgs e)
+        protected void Button1_Click(object sender, EventArgs e)
         {
-            SqlConnection conexionSQL = new SqlConnection(CadenaConexion);
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT * FROM imagen INNER JOIN producto ON imagen.idProducto = producto.idProducto; ";
-            cmd.CommandType = CommandType.Text;
-            cmd.Connection = conexionSQL;
-            conexionSQL.Open();
+            string sql = "SELECT * FROM imagen INNER JOIN producto ON imagen.idProducto = producto.idProducto";
 
-            DataTable productoBD = new DataTable();
-            productoBD.Load(cmd.ExecuteReader());
-
+            //clProductoL objProductoL = new clProductoL();
+            //dgv.ListarProductos.DataSource = 
+           
             
+            
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Pop", "openModal();", true);
+        }
+
+       
+
+        protected void btnDetalles_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Presentacion/frmProductos.aspx");
         }
     }
 

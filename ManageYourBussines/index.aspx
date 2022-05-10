@@ -386,63 +386,25 @@
           Nuestros Productos
         </h2>
       </div>
-   
-        <asp:Repeater ID="Repeater1" runat="server">
-            <ItemTemplate>
-               <div class="container">   
-    <div class="row">
-
-        <div class="col-sm-6 col-md-4">
-            <div class="card border-white">
-                <div class="card-header"><img src="<%#Eval("imagen") %>" width="145" height="145</div>
-                    <div class="card-body">
-                        <p class="card-text"><%#Eval("nombre") %></p>
-                         <p class="card-text"><%#Eval("precio") %></p>
-                    </div>
-                </div>
-            <!--</div>-->
-        </div>
-
-        <div class="col-sm-6 col-md-4">
-            <div class="card border-white">
-                <div class="card-header"><img src="<%#Eval("imagen") %>" width="145" height="145</div>
-                    <div class="card-body">
-                        <p class="card-text"><%#Eval("nombre") %></p>
-                        <p class="card-text"><%#Eval("precio") %></p>
-                    </div>
-                </div>
-            </div>
-            <!--</div>-->
-
-        <div class="col-sm-6 col-md-4">
-            <div class="card border-white">
-                <div class="card-header"><img src="<%#Eval("imagen") %>" width="145" height="145</div>
-                    <div class="card-body">
-                        <p class="card-text"><%#Eval("nombre") %></p>
-                        <p class="card-text"><%#Eval("precio") %></p>
-                    </div>
-                </div>
-            </div>
-            <!--</div>-->
-
-</div>
-                
-                   
-                <%-- <div class="d-flex flex-row flex-wrap">
-                    <div class="card card-block col-md-3">
-                         <div class="card-body">
-               
-                        
-                        <tr><img src="<%#Eval("imagen") %>" width="145" height="145"</tr>
-                  
-                        
-                     <tr><h1><%#Eval("nombre") %></h1></tr>
-                  
-                       
-                      <tr><p><%#Eval("precio") %></p></tr>--%>
-                       <div>
-<asp:Button ID="btnModal" runat="server" Text="Abrir Detalles"  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" OnClick="btnModal_Click"   />
       </div>
+      <asp:Button ID="btnDetalles" runat="server" CssClass="alert alert-info" Text="Detalles" OnClick="btnDetalles_Click" />
+   
+
+        <asp:Repeater ID="Repeater1" runat="server">
+
+            <ItemTemplate>
+                
+                    <table>
+                            <tr><th><asp:Label ID="lblName" runat="server"><%#Eval("nombre") %></asp:Label></th></tr>
+                            <tr><img src="<%#Eval("imagen") %>" width="145" height="145"</tr>
+                        
+                       
+                        
+                            <tr><td><asp:Label ID="llPrice" runat="server">Precio: $<%#Eval("precio") %>Pesos</asp:Label></td></tr>
+                        <tr><td><asp:Label ID="Label1" runat="server"> <%#Eval("idproducto") %></asp:Label></td></tr>
+                        <div class="container">
+                        <asp:Button ID="Button1" runat="server" Text="Ver Detalles" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" />
+                        </div>
 <!-- The Modal -->
 <div class="modal" id="myModal">
   <div class="modal-dialog">
@@ -450,17 +412,14 @@
 
       <!-- Modal Header -->
       <div class="modal-header">
-        <h4 class="modal-title">Detalles</h4>
+        <h4 class="modal-title">Modal Heading</h4>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
 
       <!-- Modal body -->
       <div class="modal-body">
-        <tr><img src="<%#Eval("imagen") %>" width="145" height="145"</tr>
-        <tr><h1><%#Eval("nombre") %></h1></tr>
-         <tr><p><%#Eval("precio") %></p></tr>
-         <tr><p><%#Eval("descripcion") %></p></tr>
-
+        <img src="<%#Eval("imagen") %>" width="145" height="145"
+        <%#Eval("precio") %>
       </div>
 
       <!-- Modal footer -->
@@ -471,31 +430,20 @@
     </div>
   </div>
 </div>
-    </div>
-          </div>
+           
+                    </table>
                 </div>
             </ItemTemplate>
         </asp:Repeater>
-
    
   <section class="book_section layout_padding">
     <div class="container">
       <div class="heading_container">
         <h2>
+         
+                                  
           Book A Table
-        </h2>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="form_container">
-            <form action="">
-              <div>
-                <input type="text" class="form-control" placeholder="Your Name" />
-              </div>
-              <div>
-                <input type="text" class="form-control" placeholder="Phone Number" />
-              </div>
-              <div>
+                    <div>
                 <input type="email" class="form-control" placeholder="Your Email" />
               </div>
               <div>
