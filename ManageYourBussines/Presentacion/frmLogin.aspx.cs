@@ -25,43 +25,19 @@ namespace ManageYourBussines.Presentacion
             objDatos.clave = txtClave.Text;
 
             clClienteL objUsuariosL = new clClienteL();
-            clClienteE objDatosReci = new clClienteE();
-            objDatosReci = objUsuariosL.mtdLogin(objDatos);
-            if (objDatosReci != null)
+
+            objDatos = objUsuariosL.mtdLogin(objDatos);
+            if (objDatos != null)
             {
 
 
 
-                //clEmpleadoE objDatosE = new clEmpleadoE();
-                //objDatosE.email = txtEmail.Text;
-                //objDatosE.clave = txtClave.Text;
-
-                //clEmpleadoL objEmpleadoL = new clEmpleadoL();
-                //clEmpleadoE objDatosEmple = new clEmpleadoE();
-                //objDatosEmple = objEmpleadoL.mtdLogin(objDatosE);
-
-
-
-                //if (objDatosEmple!=null)
-                //{
-
-                //    Session["usuario"] = objDatosEmple.nombres + " " + objDatosEmple.apellidos;
-                //    Response.Redirect("frmProductos.aspx");
-                //}
+               
 
                 Session["usuario"] = objDatos.nombres + " " + objDatos.apellidos;
                 Response.Redirect("frmProductos.aspx");
 
 
-
-                //lblMensaje.Text = "usuario Valido ";
-
-                ////Session["usuario"] = "" + "" + "";
-                //Session["usuario"] = txtEmail.Text;
-                ////Response es para llamar la pagina 
-                //Response.Redirect("presentacion/frmHome.aspx");
-
-                //establesco la paguina de inicio q quiero q me aparesca
 
 
             }

@@ -3,7 +3,6 @@
 <html>
 
 <head>
-
   <!-- Basic -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -25,30 +24,14 @@
   <!-- nice select  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
   <!-- font awesome style -->
-  <link href="presentacion/recursos/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="recursos/css/font-awesome.min.css" rel="stylesheet" />
 
   <!-- Custom styles for this template -->
-  <link href="presentacionrecursos/css/style.css" rel="stylesheet" />
+  <link href="recursos/css/style.css" rel="stylesheet" />
   <!-- responsive style -->
-  <link href="presentacion/recursos/css/responsive.css" rel="stylesheet" />
+  <link href="recursos/css/responsive.css" rel="stylesheet" />
 
-
-
-
-
-        <link href="presentacion/recursosadmin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom styles for this template-->
-    <link href="presentacion/recursosadmin/css/sb-admin-2.min.css" rel="stylesheet">
-
-
-    
-
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </head>
@@ -57,7 +40,7 @@
 
   <div class="hero_area">
     <div class="bg-box">
-      <img src="presentacion/recursos/images/mueble.png" alt="">
+      <img src="recursos/images/imagen.jpeg" alt="">
     </div>
     <!-- header section strats -->
     <header class="header_section">
@@ -78,150 +61,119 @@
               <li class="nav-item active">
                 <a class="nav-link" href="Presentacion/frmHome.aspx">Home <span class="sr-only">(current)</span></a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Presentacion/frmProductos.aspx">Productos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Presentacion/frmAbout.aspx">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Presentacion/frmRegistrar.aspx">Registrarse</a>
-              </li>
-
-                <li class="nav-item">
-            
+      <li class="nav-item">
+          <a class="nav-link" href="Presentacion/frmProductos.aspx">Productos</a>
+      </li>
+      <div class="container mt-3">
 
 
 
+     
+       
+             
 
-
-      
-  <button type="button"  runat="server" class ="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
-  registrar
-  </button>
-
-
-<!-- The Modal -->
-<div class="modal" id="myModal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-
-      <!-- Modal Header -->
-      <div class="modal-header">
-        <h4 class="modal-title">Modal Heading</h4>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+           <li class="nav-item">
+          <a class="nav-link"  data-bs-toggle="modal" data-bs-target="#myModal">
+              Iniciar Sesion </a>
+         </li>
       </div>
 
-      <!-- Modal body -->
-      <div class="modal-body">
-     
+      <!-- The Modal -->
+      <div class="modal" id="myModal">
+          <div class="modal-dialog">
+              <div class="modal-content">
+
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                      <h4 class="modal-title">Iniciar Sesion </h4>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+
+                  <!-- Modal body -->
+                  <div class="modal-body">
 
 
 
 
-
-    <div class="container">
-
-        <!-- Outer Row -->
-        <div class="row justify-content-center">
-
-            <div class="col-xl-10 col-lg-12 col-md-9">
-
-                <div class="card o-hidden border-0 shadow-lg my-5">
-                    <div class="card-body p-0">
-                        <!-- Nested Row within Card Body -->
-                        <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
-                            <div class="col-lg-6">
-                                <div class="p-5">
-                                    <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Iniciar Sesion !</h1>
-                                    </div>
-                                    <form class="user" runat="server">
-                                        <div class="form-group">
+                      <form class="user" runat="server">
 
 
 
-                                            <div class="mb-3 mt-3">
-                                                <label for="email" class="form-label">Email:</label>
 
-                                                <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="Email usuario" TextMode="Email"></asp:TextBox>
+                          <div class="mb-3 mt-3">
+                              <label for="email" class="form-label">Email:</label>
 
-
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="pwd" class="form-label">Password:</label>
+                              <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="Email usuario" TextMode="Email"></asp:TextBox>
 
 
-                                                <asp:TextBox ID="txtClave" runat="server" CssClass="form-control" placeholder="password" TextMode="Password"></asp:TextBox>
+                          </div>
+                          <div class="mb-3">
+                              <label for="pwd" class="form-label">Password:</label>
 
 
-                                                <div class="container mt-3">
-                                              
-                                                   <div class="dropdown">
+                              <asp:TextBox ID="txtClave" runat="server" CssClass="form-control" placeholder="password" TextMode="Password"></asp:TextBox>
 
 
-                                                        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-                                                           elija el usuario para ingresar
-                                                        </button>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a class="dropdown-item" href="#">Cliente</a></li>
-                                                            <li><a class="dropdown-item" href="#">Administrado</a></li>
-                                                      
-                                                        </ul>
-                                                    </div>
-                                                </div>
+                              <div class="container mt-3">
 
-                                                <div class=" col mt-3 mb-3">
-                                                    <asp:Label ID="lblMensaje" runat="server" Text=""></asp:Label>
+                                  <div class="dropdown">
+                                      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                                          elija el usuario para ingresar
+                                      </button>
+                                      <ul class="dropdown-menu">
+                                          <li><a class="dropdown-item" href="#">Cliente</a></li>
+                                          <li><a class="dropdown-item" href="#">Administrado</a></li>
+
+                                      </ul>
+                                  </div>
+                              </div>
+
+                              <div class=" col mt-3 mb-3">
+                                  <asp:Label ID="lblMensaje" runat="server" Text=""></asp:Label>
 
 
 
 
 
 
-                                                </div>
-                                            </div>
-                                            <center>
-                                                <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" OnClick="btnIngresar_Click" /></center>
+                              </div>
+                          </div>
+                          <center>
+                              <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" OnClick="btnIngresar_Click" /></center>
 
-                                            <%-- <a href="index.html" class="btn btn-primary btn-user btn-block">
+                          <%-- <a href="index.html" class="btn btn-primary btn-user btn-block">
                                             INGRESAR
                                         </a>--%>
-                                        <hr>
-                                      <%--  <a href="index.html" class="btn btn-google btn-user btn-block">
+                          <hr>
+                          <%--  <a href="index.html" class="btn btn-google btn-user btn-block">
                                             <i class="fab fa-google fa-fw"></i> Login with Google
                                         </a>
                                         <a href="index.html" class="btn btn-facebook btn-user btn-block">
                                             <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
                                         </a>--%>
-                                    </form>
-                                    <hr>
-                                   <%-- <div class="text-center">
-                                        <a class="small" href="forgot-password.html">Forgot Password?</a>
-                                    </div>
-                                    <div class="text-center">
-                                        <a class="small" href="register.html">Create an Account!</a>--%>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
- 
+                      </form>
 
 
 
 
-              </li>
+                  </div>
+
+                  <!-- Modal footer --->
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+
+
+
+      <li class="nav-item">
+          <a class="nav-link" href="Presentacion/frmRegistrar.aspx">Registrarse</a>
+      </li>
+     
+               
             </ul>
             <div class="user_option">
               <a href="" class="user_link">
@@ -286,9 +238,7 @@
                   <i class="fa fa-search" aria-hidden="true"></i>
                 </button>
               </form>
-              <a href="" class="order_online">
-                Order Online
-              </a>
+              
             </div>
           </div>
         </nav>
@@ -304,13 +254,11 @@
               <div class="row">
                 <div class="col-md-7 col-lg-6 ">
                   <div class="detail-box">
-                    
                     <h1>
-                      muebles san jose
-
+                      Muebles San José 
                     </h1>
                     <p>
-                    ddddddddddddddddd
+                      
                     </p>
                     <div class="btn-box">
                       <a href="" class="btn1">
@@ -1281,64 +1229,7 @@
   <!-- end about section -->
 
   <!-- book section -->
-  <section class="book_section layout_padding">
-    <div class="container">
-      <div class="heading_container">
-        <h2>
-          Book A Table
-        </h2>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="form_container">
-            <form action="">
-              <div>
-                <input type="text" class="form-control" placeholder="Your Name" />
-              </div>
-              <div>
-                <input type="text" class="form-control" placeholder="Phone Number" />
-              </div>
-              <div>
-                <input type="email" class="form-control" placeholder="Your Email" />
-              </div>
-              <div>
-                <select class="form-control nice-select wide">
-                  <option value="" disabled selected>
-                    How many persons?
-                  </option>
-                  <option value="">
-                    2
-                  </option>
-                  <option value="">
-                    3
-                  </option>
-                  <option value="">
-                    4
-                  </option>
-                  <option value="">
-                    5
-                  </option>
-                </select>
-              </div>
-              <div>
-                <input type="date" class="form-control">
-              </div>
-              <div class="btn_box">
-                <button>
-                  Book Now
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="map_container ">
-            <div id="googleMap"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  
   <!-- end book section -->
 
   <!-- client section -->
@@ -1402,25 +1293,25 @@
         <div class="col-md-4 footer-col">
           <div class="footer_contact">
             <h4>
-              Contact Us
+              Contactanos
             </h4>
             <div class="contact_link_box">
               <a href="">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
                 <span>
-                  Location
+                  Cra40#24-63 - barrio Camilo Torres 
                 </span>
               </a>
               <a href="">
                 <i class="fa fa-phone" aria-hidden="true"></i>
                 <span>
-                  Call +01 1234567890
+                  3125403349
                 </span>
               </a>
               <a href="">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
                 <span>
-                  demo@gmail.com
+                  muebles.sanjose@gmail.com
                 </span>
               </a>
             </div>
@@ -1429,49 +1320,47 @@
         <div class="col-md-4 footer-col">
           <div class="footer_detail">
             <a href="" class="footer-logo">
-              Feane
+              Nuestras redes sociales
             </a>
             <p>
-              Necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with
+             Contamos con diseños exclusivos 
             </p>
             <div class="footer_social">
-              <a href="">
+            
+             
+
+                 <a href="https://web.facebook.com/Muebles-San-Jos%C3%A9-113560607081755" target="_blank" rel="noopener noreferrer">
                 <i class="fa fa-facebook" aria-hidden="true"></i>
               </a>
-              <a href="">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-              </a>
-              <a href="">
-                <i class="fa fa-linkedin" aria-hidden="true"></i>
-              </a>
-              <a href="">
+
+                <a href="https://instagram.com/muebles.san_jose?igshid=YmMyMTA2M2Y=" target="_blank" rel="noopener noreferrer">
                 <i class="fa fa-instagram" aria-hidden="true"></i>
               </a>
-              <a href="">
-                <i class="fa fa-pinterest" aria-hidden="true"></i>
+
+              <a href="http://wa.me/573133658254/" target="_blank" rel="noopener noreferrer">
+                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+              </a>
+
+
+             
+                
               </a>
             </div>
           </div>
         </div>
         <div class="col-md-4 footer-col">
           <h4>
-            Opening Hours
+            Horario de atención 
           </h4>
           <p>
-            Everyday
+            Lunes a sábado
           </p>
           <p>
-            10.00 Am -10.00 Pm
+            8:00 Am a 12:00 Pm - 2:00 Pm a 5:00 Pm
           </p>
         </div>
       </div>
-      <div class="footer-info">
-        <p>
-          &copy; <span id="displayYear"></span> All Rights Reserved By
-          <a href="https://html.design/">Free Html Templates</a><br><br>
-          &copy; <span id="displayYear"></span> Distributed By
-          <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
-        </p>
+      
       </div>
     </div>
   </footer>
@@ -1483,7 +1372,7 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
   </script>
   <!-- bootstrap js -->
-  <script src="presentacion/recursos/js/bootstrap.js"></script>
+  <script src="recursos/js/bootstrap.js"></script>
   <!-- owl slider -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
   </script>
@@ -1492,24 +1381,11 @@
   <!-- nice select -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
   <!-- custom js -->
-  <script src="presentacion/recursos/js/custom.js"></script>
+  <script src="recursos/js/custom.js"></script>
   <!-- Google Map -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
   </script>
   <!-- End Google Map -->
-
-
-
-       <!-- Bootstrap core JavaScript-->
-    <script src="presentacionrecursosadmin/vendor/jquery/jquery.min.js"></script>
-    <script src="presentacionrecursosadmin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Core plugin JavaScript-->
-    <script src="presentaciob/vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for all pages-->
-    <script src="presentacio/recursosadmin/js/sb-admin-2.min.js"></script>
-
 
 </body>
 

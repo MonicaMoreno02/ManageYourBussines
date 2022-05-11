@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ManageYourBussines.Entidades;
+using ManageYourBussines.Logica;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -14,5 +16,35 @@ namespace ManageYourBussines
 
         }
 
+        protected void btnIngresar_Click(object sender, EventArgs e)
+        {
+            clClienteE objDatos = new clClienteE();
+            objDatos.email = txtEmail.Text;
+            objDatos.clave = txtClave.Text;
+
+            clClienteL objUsuariosL = new clClienteL();
+            clClienteE objDatosClien = new clClienteE();
+            objDatosClien = objUsuariosL.mtdLogin(objDatos);
+            if (objDatosClien != null)
+            {
+
+
+
+
+                Session["usuario"] = objDatos.nombres + " " + objDatos.apellidos;
+                Response.Redirect("Presentacion/frmProductos.aspx");
+
+
+
+
+
+            }
+            else
+            {
+                lblMensaje.Text = "usuario no Registrado ";
+            }
+
+        }
+
     }
-}
+    }

@@ -33,20 +33,7 @@ namespace ManageYourBussines.Datos
             }
             else
             {
-                //objDatosCliente = null;
-                if (tblDatos.Rows.Count == 1)
-                {
-                    objDatosCliente.idCliente = int.Parse(tblDatos.Rows[0]["idCliente"].ToString());
-                    objDatosCliente.documento = tblDatos.Rows[0]["documento"].ToString();
-                    objDatosCliente.nombres = tblDatos.Rows[0]["nombres"].ToString();
-                    objDatosCliente.telefono = tblDatos.Rows[0]["telefono"].ToString();
-                    objDatosCliente.apellidos = tblDatos.Rows[0]["apellidos"].ToString();
-                    objDatosCliente.direccion = tblDatos.Rows[0]["direccion"].ToString();
-                    objDatosCliente.email = tblDatos.Rows[0]["email"].ToString();
-                    objDatosCliente.clave = tblDatos.Rows[0]["clave"].ToString();
-
-                }
-                return objDatosCliente;
+                objDatosCliente = null;
 
             }
             return objDatosCliente;
