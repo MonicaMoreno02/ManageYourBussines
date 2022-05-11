@@ -13,7 +13,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ManageYourBussines</RootNamespace>
     <AssemblyName>ManageYourBussines</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort />
@@ -68,7 +68,38 @@
     <Content Include="Presentacion\frmAbout.aspx" />
     <Content Include="Presentacion\frmHome.aspx" />
     <Content Include="Presentacion\frmProductos.aspx" />
-    <Content Include="Presentacion\frmRegistrar.aspx" />
+    <Content Include="Presentacion\frmEstadisticas.aspx" />
+    <Content Include="Presentacion\recursos\css\bootstrap.css" />
+    <Content Include="Presentacion\recursos\css\font-awesome.min.css" />
+    <Content Include="Presentacion\recursos\css\responsive.css" />
+    <Content Include="Presentacion\recursos\css\style.css" />
+    <Content Include="Presentacion\recursos\images\about-img.png" />
+    <Content Include="Presentacion\recursos\images\biblioteca1.png" />
+    <Content Include="Presentacion\recursos\images\dinosaurio.png" />
+    <Content Include="Presentacion\recursos\images\Escritorio1.png" />
+    <Content Include="Presentacion\recursos\images\Escritorio2.png" />
+    <Content Include="Presentacion\recursos\images\estante2.png" />
+    <Content Include="Presentacion\recursos\images\fondo1.jpg" />
+    <Content Include="Presentacion\recursos\images\fondo2.jpeg" />
+    <Content Include="Presentacion\recursos\images\fondo3.jpg" />
+    <Content Include="Presentacion\recursos\images\fondo5.jpeg" />
+    <Content Include="Presentacion\recursos\images\icono3.png" />
+    <Content Include="Presentacion\recursos\images\iconoEscritorio.png" />
+    <Content Include="Presentacion\recursos\images\iconoSofa.png" />
+    <Content Include="Presentacion\recursos\images\logo.jpg" />
+    <Content Include="Presentacion\recursos\images\logo.png" />
+    <Content Include="Presentacion\recursos\images\mesaclasica.png" />
+    <Content Include="Presentacion\recursos\images\mesadejardin.png" />
+    <Content Include="Presentacion\recursos\images\mesamoderna.png" />
+    <Content Include="Presentacion\recursos\images\perrito.jpeg" />
+    <Content Include="Presentacion\recursos\images\sillaclasica.png" />
+    <Content Include="Presentacion\recursos\images\sillaIcono.png" />
+    <Content Include="Presentacion\recursos\images\sillamesedora.png" />
+    <Content Include="Presentacion\recursos\images\soportelefante.png" />
+    <Content Include="Presentacion\recursos\images\Taburetes.png" />
+    <Content Include="Presentacion\recursos\js\bootstrap.js" />
+    <Content Include="Presentacion\recursos\js\custom.js" />
+    <Content Include="Presentacion\recursos\js\jquery-3.4.1.min.js" />
     <Content Include="recursos\css\bootstrap.css" />
     <Content Include="recursos\css\font-awesome.min.css" />
     <Content Include="recursos\css\responsive.css" />
@@ -136,12 +167,12 @@
     <Compile Include="Presentacion\frmProductos.aspx.designer.cs">
       <DependentUpon>frmProductos.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\frmRegistrar.aspx.cs">
-      <DependentUpon>frmRegistrar.aspx</DependentUpon>
+    <Compile Include="Presentacion\frmEstadisticas.aspx.cs">
+      <DependentUpon>frmEstadisticas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Presentacion\frmRegistrar.aspx.designer.cs">
-      <DependentUpon>frmRegistrar.aspx</DependentUpon>
+    <Compile Include="Presentacion\frmEstadisticas.aspx.designer.cs">
+      <DependentUpon>frmEstadisticas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
@@ -160,6 +191,11 @@
     <Content Include="recursos\fonts\fontawesome-webfont.woff" />
     <Content Include="recursos\fonts\fontawesome-webfont.woff2" />
     <Content Include="Presentacion\Site1.Master" />
+    <Content Include="Presentacion\recursos\css\style.css.map" />
+    <Content Include="Presentacion\recursos\css\style.scss" />
+    <Content Include="Presentacion\recursos\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Presentacion\recursos\fonts\fontawesome-webfont.woff" />
+    <Content Include="Presentacion\recursos\fonts\fontawesome-webfont.woff2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

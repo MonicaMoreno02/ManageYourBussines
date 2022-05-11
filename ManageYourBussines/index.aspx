@@ -19,7 +19,7 @@
     <!--Insertamos el icono que se visualiza en la esquina de la pestaña en el navegador-->
     <link rel="shortcut icon" href="recursos/images/sillaIcono.png" type="">
     <!--Añadimos el titulo-->
-    <title>Muebles San José </title>
+    <title>Muebles San José</title>
 
 
 
@@ -39,6 +39,7 @@
     <link href="recursos/css/responsive.css" rel="stylesheet" />
 
 </head>
+
 
 <body>
     <!--Añadimos el fondo-->
