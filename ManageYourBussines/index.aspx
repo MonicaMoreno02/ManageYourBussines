@@ -30,6 +30,8 @@
   <link href="recursos/css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="recursos/css/responsive.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </head>
 
@@ -63,6 +65,27 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="Presentacion/frmAbout.aspx">About</a>
+                          
+                          
+                    <li class="nav-item">
+
+          <div class="container mt-3">
+
+              <div class="dropdown">
+                  <a class="nav-link" data-bs-toggle="dropdown">
+                      Nosotros
+                 </a>
+                  <ul class="dropdown-menu">
+                    
+
+                      <li><a class="dropdown-item" href="Presentacion/acerca1.aspx">informacion</a></li>
+                      <li><a class="dropdown-item" href="Presentacion/Empresa.aspx">Empresa</a></li>
+                  </ul>
+                    
+              </div>
+          </div>
+                       
+      </li>      
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="Presentacion/frmRegistrar.aspx">Registrarse</a>
@@ -131,9 +154,7 @@
                   <i class="fa fa-search" aria-hidden="true"></i>
                 </button>
               </form>
-              <a href="" class="order_online">
-                Order Online
-              </a>
+              
             </div>
           </div>
         </nav>
@@ -150,10 +171,10 @@
                 <div class="col-md-7 col-lg-6 ">
                   <div class="detail-box">
                     <h1>
-                      Fast Food Restaurant
+                      Muebles San José 
                     </h1>
                     <p>
-                      Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.
+                      
                     </p>
                     <div class="btn-box">
                       <a href="" class="btn1">
@@ -1097,6 +1118,7 @@
         <div class="col-md-6 ">
           <div class="img-box">
             <img src="recursos/images/about-img.png" alt="">
+  
           </div>
         </div>
         <div class="col-md-6">
@@ -1104,6 +1126,7 @@
             <div class="heading_container">
               <h2>
                 We Are Feane
+                  
               </h2>
             </div>
             <p>
@@ -1134,17 +1157,20 @@
       <div class="row">
         <div class="col-md-6">
           <div class="form_container">
-            <form action="">
+            <form action="" runat="server">
               <div>
-                <input type="text" class="form-control" placeholder="Your Name" />
-              </div>
-              <div>
-                <input type="text" class="form-control" placeholder="Phone Number" />
-              </div>
-              <div>
-                <input type="email" class="form-control" placeholder="Your Email" />
-              </div>
-              <div>
+                <asp:TextBox ID="TextBox1" runat="server">hiiiyyyyyyy</asp:TextBox>
+                  
+                  
+                  
+                  <asp:Label ID="Label1" runat="server" Text="jhhbjhk
+                      
+                      ghckhvjvjvuhvgbhbhnbh
+                      
+                      
+                      
+                      
+                      "></asp:Label>
                 <select class="form-control nice-select wide">
                   <option value="" disabled selected>
                     How many persons?
@@ -1245,25 +1271,25 @@
         <div class="col-md-4 footer-col">
           <div class="footer_contact">
             <h4>
-              Contact Us
+              Contactanos
             </h4>
             <div class="contact_link_box">
               <a href="">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
                 <span>
-                  Location
+                  Cra40#24-63 - barrio Camilo Torres 
                 </span>
               </a>
               <a href="">
                 <i class="fa fa-phone" aria-hidden="true"></i>
                 <span>
-                  Call +01 1234567890
+                  3125403349
                 </span>
               </a>
               <a href="">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
                 <span>
-                  demo@gmail.com
+                  muebles.sanjose@gmail.com
                 </span>
               </a>
             </div>
@@ -1272,49 +1298,47 @@
         <div class="col-md-4 footer-col">
           <div class="footer_detail">
             <a href="" class="footer-logo">
-              Feane
+              Nuestras redes sociales
             </a>
             <p>
-              Necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with
+             Contamos con diseños exclusivos 
             </p>
             <div class="footer_social">
-              <a href="">
+            
+             
+
+                 <a href="https://web.facebook.com/Muebles-San-Jos%C3%A9-113560607081755" target="_blank" rel="noopener noreferrer">
                 <i class="fa fa-facebook" aria-hidden="true"></i>
               </a>
-              <a href="">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-              </a>
-              <a href="">
-                <i class="fa fa-linkedin" aria-hidden="true"></i>
-              </a>
-              <a href="">
+
+                <a href="https://instagram.com/muebles.san_jose?igshid=YmMyMTA2M2Y=" target="_blank" rel="noopener noreferrer">
                 <i class="fa fa-instagram" aria-hidden="true"></i>
               </a>
-              <a href="">
-                <i class="fa fa-pinterest" aria-hidden="true"></i>
+
+              <a href="http://wa.me/573133658254/" target="_blank" rel="noopener noreferrer">
+                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+              </a>
+
+
+             
+                
               </a>
             </div>
           </div>
         </div>
         <div class="col-md-4 footer-col">
           <h4>
-            Opening Hours
+            Horario de atención 
           </h4>
           <p>
-            Everyday
+            Lunes a sábado
           </p>
           <p>
-            10.00 Am -10.00 Pm
+            8:00 Am a 12:00 Pm - 2:00 Pm a 5:00 Pm
           </p>
         </div>
       </div>
-      <div class="footer-info">
-        <p>
-          &copy; <span id="displayYear"></span> All Rights Reserved By
-          <a href="https://html.design/">Free Html Templates</a><br><br>
-          &copy; <span id="displayYear"></span> Distributed By
-          <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
-        </p>
+      
       </div>
     </div>
   </footer>

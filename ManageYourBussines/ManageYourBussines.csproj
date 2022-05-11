@@ -68,7 +68,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.aspx" />
-    <Content Include="index.html" />
+    <Content Include="Presentacion\acerca1.aspx" />
+    <Content Include="Presentacion\Empresa.aspx" />
     <Content Include="Presentacion\frmAbout.aspx" />
     <Content Include="Presentacion\frmHome.aspx" />
     <Content Include="Presentacion\frmProductos.aspx" />
@@ -136,6 +137,20 @@
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Logica\clUsuarioL.cs" />
+    <Compile Include="Presentacion\acerca1.aspx.cs">
+      <DependentUpon>acerca1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\acerca1.aspx.designer.cs">
+      <DependentUpon>acerca1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Empresa.aspx.cs">
+      <DependentUpon>Empresa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Empresa.aspx.designer.cs">
+      <DependentUpon>Empresa.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\frmAbout.aspx.cs">
       <DependentUpon>frmAbout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
