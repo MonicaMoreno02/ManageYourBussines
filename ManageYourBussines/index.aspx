@@ -29,6 +29,7 @@
   <!-- Custom styles for this template -->
   <link href="recursos/css/style.css" rel="stylesheet" />
   <!-- responsive style -->
+     <link rel="Stylesheet" href="common.css" />
     
   <link href="recursos/css/responsive.css" rel="stylesheet" />
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -386,56 +387,40 @@
           Nuestros Productos
         </h2>
       </div>
-      </div>
-      <asp:Button ID="btnDetalles" runat="server" CssClass="alert alert-info" Text="Detalles" OnClick="btnDetalles_Click" />
-   
+      </div>  
+      
+      <asp:Repeater ID="Repeater1" runat="server">
+          <ItemTemplate>
+                 <div class="container">   
+    <div class="card-deck mt-3">
 
-        <asp:Repeater ID="Repeater1" runat="server">
+      <div class="card text-center border-info">
+        <div class="card-body">
+          <h4 class="card-title">Producto</h4>
+          <img src="" />
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lectus sem, 
+                                tempor vitae mattis malesuada, ornare sed erat. Pellentesque nulla dui, congue
+                                nec tortor sit amet, maximus mattis dui. </p>
+          <a href="#" class="btn btn-primary">Entrar</a>
+        </div>
+      </div>          
 
-            <ItemTemplate>
-                
-                    <table>
-                            <tr><th><asp:Label ID="lblName" runat="server"><%#Eval("nombre") %></asp:Label></th></tr>
-                            <tr><img src="<%#Eval("imagen") %>" width="145" height="145"</tr>
-                        
-                       
-                        
-                            <tr><td><asp:Label ID="llPrice" runat="server">Precio: $<%#Eval("precio") %>Pesos</asp:Label></td></tr>
-                        <tr><td><asp:Label ID="Label1" runat="server"> <%#Eval("idproducto") %></asp:Label></td></tr>
-                        <div class="container">
-                        <asp:Button ID="Button1" runat="server" Text="Ver Detalles" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" />
-                        </div>
-<!-- The Modal -->
-<div class="modal" id="myModal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-
-      <!-- Modal Header -->
-      <div class="modal-header">
-        <h4 class="modal-title">Modal Heading</h4>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-
-      <!-- Modal body -->
-      <div class="modal-body">
-        <img src="<%#Eval("imagen") %>" width="145" height="145"
-        <%#Eval("precio") %>
-      </div>
-
-      <!-- Modal footer -->
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-      </div>
-
+      <div class="card text-center border-info">
+        <div class="card-body">
+          <h4 class="card-title">Titulo de la tarjeta 2</h4>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lectus sem, 
+                                tempor vitae mattis malesuada, ornare sed erat. Pellentesque nulla dui, congue
+                                nec tortor sit amet, maximus mattis dui. </p>
+          <a href="#" class="btn btn-primary">Entrar</a>
+        </div>
+      </div>          
+  
+      
     </div>
-  </div>
-</div>
-           
-                    </table>
-                </div>
-            </ItemTemplate>
-        </asp:Repeater>
-   
+  </div>  
+    </ItemTemplate>
+       </asp:Repeater>
+
   <section class="book_section layout_padding">
     <div class="container">
       <div class="heading_container">

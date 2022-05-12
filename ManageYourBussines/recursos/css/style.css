@@ -1004,4 +1004,19 @@ a:focus {
 .footer_section .footer-info p a {
   color: inherit;
 }
+
+.flexbox-container {
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+}
+
+    .flexbox-container > div {
+        width: 50%;
+        padding: 10px;
+    }
+
+        .flexbox-container > div:first-child {
+            margin-right: 20px;
+        }
 /*# sourceMappingURL=style.css.map */
