@@ -18,31 +18,30 @@ namespace ManageYourBussines
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
-
-
-            clProductoL obProductoL = new clProductoL();
-            Repeater1.DataSource = obProductoL.mtdListarP();
+            clProductoL objProductoL = new clProductoL();
+            Repeater1.DataSource = objProductoL.mtdListarP();
             Repeater1.DataBind();
 
+
+
+
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void btnModal_Click(object sender, EventArgs e)
         {
-            string sql = "SELECT * FROM imagen INNER JOIN producto ON imagen.idProducto = producto.idProducto";
+            clProductoL objProductoL = new clProductoL();
+            List<clProductoE> ListarProducto = new List<clProductoE>();
+            ListarProducto=objProductoL.mtdListarP();
 
-            //clProductoL objProductoL = new clProductoL();
-            //dgv.ListarProductos.DataSource = 
-           
-            
-            
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "Pop", "openModal();", true);
+            int lista = 0;
+            int idProducto = ListarProducto[lista].idProducto;
+            string imagen = ListarProducto[lista].imagen;
+            float precio = ListarProducto[lista].precio;
+            string descripcion = ListarProducto[lista].descripcion;
+
+
+
         }
-
-        protected void Repeater1_ItemCommand(object source, RepeaterCommandEventArgs e)
-        {
-           
-            }
     }
 
         

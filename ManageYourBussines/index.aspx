@@ -29,21 +29,17 @@
   <!-- Custom styles for this template -->
   <link href="recursos/css/style.css" rel="stylesheet" />
   <!-- responsive style -->
-     <link rel="Stylesheet" href="common.css" />
-    
   <link href="recursos/css/responsive.css" rel="stylesheet" />
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
- <form id="form1" runat="server">
-
+  <form id="form1" runat="server">
 </head>
 
 <body>
 
   <div class="hero_area">
     <div class="bg-box">
-
-      <img src="recursos/images/mueble.jpeg" alt="">
+      <img src="recursos/images/imagen.jpeg" alt="">
     </div>
     <!-- header section strats -->
     <header class="header_section">
@@ -156,10 +152,10 @@
                 <div class="col-md-7 col-lg-6 ">
                   <div class="detail-box">
                     <h1>
-                      Muebles San José
+                      Fast Food Restaurant
                     </h1>
                     <p>
-                      
+                      Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.
                     </p>
                     <div class="btn-box">
                       <a href="" class="btn1">
@@ -177,7 +173,7 @@
                 <div class="col-md-7 col-lg-6 ">
                   <div class="detail-box">
                     <h1>
-                      Muebles San José
+                      Fast Food Restaurant
                     </h1>
                     <p>
                       Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.
@@ -198,7 +194,7 @@
                 <div class="col-md-7 col-lg-6 ">
                   <div class="detail-box">
                     <h1>
-                      Muebles San José 
+                      Fast Food Restaurant
                     </h1>
                     <p>
                       Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.
@@ -386,49 +382,103 @@
         <h2>
           Nuestros Productos
         </h2>
+            <div id="BlockItemSubMenu">
+	<asp:Repeater id="Repeater1" runat="server">
+		<ItemTemplate>
+			<div class="ItemSubMenu">
+				<asp:Literal ID="Imagen" Runat="server" /><img src="<%#Eval("imagen") %>" width="200" height="200"  /></td></tr><br>
+			    <asp:Literal ID="nombre" Runat="server" /> <%#Eval("nombre") %><br>
+                <asp:Literal ID="precio" Runat="server" /> $ <%#Eval("precio") %><br>
+                <asp:Button ID="btnModal" runat="server" Text="Detalles:" class="btn btn-success" data-toggle="modal" data-target="#exampleModal"/>
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Detalles del Producto:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
-      </div>  
-      
-      <asp:Repeater ID="Repeater1" runat="server">
-          <ItemTemplate>
-                 <div class="container">   
-    <div class="card-deck mt-3">
-
-      <div class="card text-center border-info">
-        <div class="card-body">
-          <h4 class="card-title">Producto</h4>
-          <img src="" />
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lectus sem, 
-                                tempor vitae mattis malesuada, ornare sed erat. Pellentesque nulla dui, congue
-                                nec tortor sit amet, maximus mattis dui. </p>
-          <a href="#" class="btn btn-primary">Entrar</a>
-        </div>
-      </div>          
-
-      <div class="card text-center border-info">
-        <div class="card-body">
-          <h4 class="card-title">Titulo de la tarjeta 2</h4>
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lectus sem, 
-                                tempor vitae mattis malesuada, ornare sed erat. Pellentesque nulla dui, congue
-                                nec tortor sit amet, maximus mattis dui. </p>
-          <a href="#" class="btn btn-primary">Entrar</a>
-        </div>
-      </div>          
-  
-      
+      <div class="modal-body">
+        <asp:Literal ID="Literal1" Runat="server" /><img src="<%#Eval("imagen") %>" width="200" height="200"  /></td></tr><br>
+			    <asp:Literal ID="Literal2" Runat="server" />Nombre: <%#Eval("nombre") %><br>
+                <asp:Literal ID="Literal3" Runat="server" />Precio del Producto: $ <%#Eval("precio") %><br>
+                <asp:Literal ID="Literal4" Runat="server" />Descripción:  <%#Eval("descripcion") %><br>
+                <asp:Literal ID="Literal5" Runat="server" />Material:  <%#Eval("material") %><br>
+                
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+      </div>
     </div>
-  </div>  
-    </ItemTemplate>
-       </asp:Repeater>
+  </div>
+</div>
+            </div>				
+		</ItemTemplate>
+	</asp:Repeater>
+     
+      </div>
+      </div>
+  
+ </section>    
 
+
+  <!-- end food section -->
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding">
+    <div class="container  ">
+
+      <div class="row">
+        <div class="col-md-6 ">
+          <div class="img-box">
+            <img src="recursos/images/about-img.png" alt="">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                We Are Feane
+              </h2>
+            </div>
+            <p>
+              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+              in some form, by injected humour, or randomised words which don't look even slightly believable. If you
+              are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
+              the middle of text. All
+            </p>
+            <a href="">
+              Read More
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+  <!-- book section -->
   <section class="book_section layout_padding">
     <div class="container">
       <div class="heading_container">
         <h2>
-         
-                                  
           Book A Table
-                    <div>
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form_container">
+            <form action="">
+              <div>
+                <input type="text" class="form-control" placeholder="Your Name" />
+              </div>
+              <div>
+                <input type="text" class="form-control" placeholder="Phone Number" />
+              </div>
+              <div>
                 <input type="email" class="form-control" placeholder="Your Email" />
               </div>
               <div>
@@ -631,3 +681,5 @@
 </body>
 </form>
 </html>
+
+        
