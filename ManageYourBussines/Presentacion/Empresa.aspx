@@ -12,6 +12,7 @@
         <div>
 
               <asp:Label ID="Label1" runat="server" Text="Muebles San José"></asp:Label>
+
         </div>
     </form>
 </body>

@@ -78,7 +78,7 @@
                   <ul class="dropdown-menu">
                     
 
-                      <li><a class="dropdown-item" href="Presentacion/acerca1.aspx">informacion</a></li>
+          
                       <li><a class="dropdown-item" href="Presentacion/Empresa.aspx">Empresa</a></li>
                   </ul>
                     
@@ -1109,7 +1109,7 @@
 
   <!-- end food section -->
 
-  <!-- about section -->
+  <!-- ACERCA DE -->
 
   <section class="about_section layout_padding">
     <div class="container  ">
@@ -1117,7 +1117,7 @@
       <div class="row">
         <div class="col-md-6 ">
           <div class="img-box">
-            <img src="recursos/images/about-img.png" alt="">
+            <img src="recursos/images/Muebles%20San%20Josè%20(1).jpg"  alt="">
   
           </div>
         </div>
@@ -1125,19 +1125,25 @@
           <div class="detail-box">
             <div class="heading_container">
               <h2>
-                We Are Feane
+                Muebles San José
                   
               </h2>
             </div>
             <p>
-              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-              in some form, by injected humour, or randomised words which don't look even slightly believable. If you
-              are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
-              the middle of text. All
+
+
+             Fabricamos los muebles y decoración para tu hogar, oficina, exteriores y otros.
+             <br />Diferentes lineas de acabados: 
+             <br /> - Linea de muebles rústicos
+             <br /> - Linea de moderno
+             <br /> -Linea en forja
+            <br /> Dale un toque diferente a tus lugares, con nuestras alcobas, comedores, salas, muebles auxiliares, muebles de exterior.
+       
+          
+
+            
             </p>
-            <a href="">
-              Read More
-            </a>
+            
           </div>
         </div>
       </div>
@@ -1264,7 +1270,7 @@
 
   <!-- end client section -->
 
-  <!-- footer section -->
+  <!-- PIE DE PAGINA -->
   <footer class="footer_section">
     <div class="container">
       <div class="row">

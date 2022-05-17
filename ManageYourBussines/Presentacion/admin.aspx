@@ -1124,7 +1124,7 @@
 
   <!-- end client section -->
 
-  <!-- footer section -->
+  <!-- PIE DE PAGINA -->
   <footer class="footer_section">
     <div class="container">
       <div class="row">
