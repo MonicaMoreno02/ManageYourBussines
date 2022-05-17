@@ -383,39 +383,44 @@
           Nuestros Productos
         </h2>
             <div id="BlockItemSubMenu">
-	<asp:Repeater id="Repeater1" runat="server">
-		<ItemTemplate>
-			<div class="ItemSubMenu">
-				<asp:Literal ID="Imagen" Runat="server" /><img src="<%#Eval("imagen") %>" width="200" height="200"  /></td></tr><br>
-			    <asp:Literal ID="nombre" Runat="server" /> <%#Eval("nombre") %><br>
-                <asp:Literal ID="precio" Runat="server" /> $ <%#Eval("precio") %><br>
-                <asp:Button ID="btnModal" runat="server" Text="Detalles:" class="btn btn-success" data-toggle="modal" data-target="#exampleModal"/>
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Detalles del Producto:</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <asp:Literal ID="Literal1" Runat="server" /><img src="<%#Eval("imagen") %>" width="200" height="200"  /></td></tr><br>
-			    <asp:Literal ID="Literal2" Runat="server" />Nombre: <%#Eval("nombre") %><br>
-                <asp:Literal ID="Literal3" Runat="server" />Precio del Producto: $ <%#Eval("precio") %><br>
-                <asp:Literal ID="Literal4" Runat="server" />Descripción:  <%#Eval("descripcion") %><br>
-                <asp:Literal ID="Literal5" Runat="server" />Material:  <%#Eval("material") %><br>
-                
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-            </div>				
-		</ItemTemplate>
-	</asp:Repeater>
+                <asp:Repeater ID="Repeater1" runat="server">
+                    <ItemTemplate>
+                        <div class="ItemSubMenu">
+                            <asp:Literal ID="id" runat="server" />
+                            <%#Eval("idProducto") %><br>
+                            <asp:Literal ID="Imagen" runat="server" /><img src="<%#Eval("imagen") %>" width="200" height="200" /></td></tr><br>
+                            <asp:Literal ID="nombre" runat="server" />
+                            <%#Eval("nombre") %><br>
+                            <asp:Literal ID="precio" runat="server" />
+                            $ <%#Eval("precio") %><br>
+                            <asp:Button ID="btnModal" runat="server" Text="Detalles:" class="btn btn-success"  OnClick="btnModal_Click"  />
+
+                            <%--modal--%>
+
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Detalles del Producto:</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <asp:Label ID="lblImagen" runat="server" Text="Label"></asp:Label>
+                                            <asp:Label ID="lblNombre" runat="server" Text="Label"></asp:Label>
+                                            <asp:Label ID="lblPrecio" runat="server" Text="Label"></asp:Label>
+                                            <asp:Label ID="lblMaterial" runat="server" Text="Label"></asp:Label>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ItemTemplate>
+                </asp:Repeater>
      
       </div>
       </div>

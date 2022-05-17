@@ -33,14 +33,24 @@ namespace ManageYourBussines
             List<clProductoE> ListarProducto = new List<clProductoE>();
             ListarProducto=objProductoL.mtdListarP();
 
-            int lista = 0;
-            int idProducto = ListarProducto[lista].idProducto;
-            string imagen = ListarProducto[lista].imagen;
-            float precio = ListarProducto[lista].precio;
-            string descripcion = ListarProducto[lista].descripcion;
+           
+            
+                int lista =3 ;
+                int idProducto = ListarProducto[lista].idProducto;
+                string imagen = ListarProducto[lista].imagen;
+                float precio = ListarProducto[lista].precio;
+                string descripcion = ListarProducto[lista].descripcion;
 
 
+            
 
+        }
+
+        protected void btnModal_Click1(object sender, EventArgs e)
+        {
+            clProductoL objProductoL = new clProductoL();
+            List<clProductoE> ListarProducto = new List<clProductoE>();
+            ListarProducto = objProductoL.mtdListarP();
         }
     }
 
