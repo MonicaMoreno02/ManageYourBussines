@@ -379,10 +379,11 @@
   <section class="food_section layout_padding-bottom">
     <div class="container">
       <div class="heading_container heading_center">
-       <%-- <h2>
+       <h2>
           Nuestros Productos
         </h2>
-           ----Repeater
+          
+           <%------Repeater--%>
 
             <div id="BlockItemSubMenu">
                 <asp:Repeater ID="Repeater1" runat="server">
@@ -395,11 +396,11 @@
                             <%#Eval("nombre") %><br>
                             <asp:Literal ID="precio" runat="server" />
                             $ <%#Eval("precio") %><br>
-                            <asp:Button ID="btnModal" runat="server" Text="Detalles:" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal" OnClick="btnModal_Click"  />
+                            <asp:Button ID="btnModal" runat="server" Text="Detalles:" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal"   />
 
                             <%--modal--%>
 
-                         <%--   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                           <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -422,10 +423,10 @@
                             </div>
                         </div>
                     </ItemTemplate>
-                </asp:Repeater>--%>
+                </asp:Repeater>
      
       </div>
-      </div>--%>
+      </div>
   
  </section>    
 

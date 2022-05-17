@@ -19,9 +19,9 @@ namespace ManageYourBussines
         protected void Page_Load(object sender, EventArgs e)
         {
             //------cargar Repeater
-            //clProductoL objProductoL = new clProductoL();
-            //Repeater1.DataSource = objProductoL.mtdListarP();
-            //Repeater1.DataBind();
+            clProductoL objProductoL = new clProductoL();
+            Repeater1.DataSource = objProductoL.mtdListarP();
+            Repeater1.DataBind();
 
 
 

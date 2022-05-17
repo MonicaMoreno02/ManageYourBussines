@@ -8,14 +8,17 @@ using System.Web;
 namespace ManageYourBussines.Logica
 {
     public class clProductoL
-    {
-        //public List<clProductoE> mtdListarP()
-        //{
-        //    clProductoD objProducto = new clProductoD();
-        //    List<clProductoE> objProductoD = new List<clProductoE>();
-        //    objProductoD = objProducto.mtdListar();
-        //    return objProductoD;
+    {/// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
+        public List<clProductoE> mtdListarP()
+        {
+            clProductoD objProducto = new clProductoD();
+            List<clProductoE> objProductoD = new List<clProductoE>();
+            objProductoD = objProducto.mtdListar();
+            return objProductoD;
 
-        //}
+        }
     }
 }
