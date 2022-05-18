@@ -7,5 +7,6 @@ namespace ManageYourBussines.Entidades
 {
     public class clUsuarioE
     {
+
     }
 }
