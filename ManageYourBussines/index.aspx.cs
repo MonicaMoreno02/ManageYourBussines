@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+
 namespace ManageYourBussines
 {
     public partial class index : System.Web.UI.Page
@@ -27,12 +28,12 @@ namespace ManageYourBussines
             objDatosClien = objUsuariosL.mtdLogin(objDatos);
             if (objDatosClien != null)
             {
-
+            
 
 
 
                 Session["usuario"] = objDatos.nombres + " " + objDatos.apellidos;
-                Response.Redirect("Presentacion/frmProductos.aspx");
+                Response.Redirect("index.aspx");
 
 
 
@@ -46,5 +47,10 @@ namespace ManageYourBussines
 
         }
 
+        protected void btnRecuperar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Recuperar.aspx");
+        }
     }
-    }
+
+}

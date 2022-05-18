@@ -21,6 +21,12 @@ namespace ManageYourBussines.Logica
 
         }
 
+        //public string recuperaContraseña(string usuarioRequerido)
+        //{
+        //    //return clClienteD.usuarioRequerido(usuarioRequerido);
+        //}
+
+
         public int mtdRegistrarCliente(clClienteE objdatosClien)
         {
             clClienteD objClientesD = new clClienteD();

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
@@ -40,7 +41,45 @@ namespace ManageYourBussines.Datos
         }
 
 
-      
+
+        //public string recoverPassword(string userRequesting)
+        //{
+
+
+        //    using (var command = new SqlCommand())
+        //    {
+              
+        //        command.CommandText = "select *from cliente where LoginName=@user or Email=@mail";
+        //        command.Parameters.AddWithValue("@user", userRequesting);
+        //        command.Parameters.AddWithValue("@mail", userRequesting);
+        //        command.CommandType = CommandType.Text;
+        //        SqlDataReader reader = command.ExecuteReader();
+        //        if (reader.Read() == true)
+        //        {
+        //            string userName = reader.GetString(3) + ", " + reader.GetString(4);
+        //            string userMail = reader.GetString(6);
+        //            string accountPassword = reader.GetString(2);
+        //            var mailService = new servicioCorreo.correoSoporteSistema();
+        //            mailService.sendMail(
+        //              subject: "solicitud:recuperar contraseña",
+        //              body: "Hola, " + userName + "\nYou Requested to Recover your password.\n" +
+        //              "your current password is: " + accountPassword +
+        //              "\nHowever, we ask that you change your password inmediately once you enter the system.",
+        //              recipientMail: new List<string> { userMail }
+        //              );
+        //            return "Hi, " + userName + "\nYou Requested to Recover your password.\n" +
+        //              "Please check your mail: " + userMail +
+        //              "\nHowever, we ask that you change your password inmediately once you enter the system.";
+        //        }
+        //        else
+        //            return "No tiene una cuenta con este usuario o contraseña";
+
+        //    }
+        //}
+            
+
+
+       
 
 
             public int mtdRegistrar(clClienteE objDatosCliente)

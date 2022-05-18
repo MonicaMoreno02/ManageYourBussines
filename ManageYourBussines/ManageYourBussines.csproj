@@ -69,7 +69,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="formGenContrasena.aspx" />
     <Content Include="index.aspx">
       <BrowseToURL>~/index.aspx</BrowseToURL>
     </Content>
@@ -1788,6 +1787,7 @@
     <Content Include="Presentacion\recursos\js\jquery-3.4.1.min.js" />
     <Content Include="Presentacion\recursos\js\sweetalert2.js" />
     <Content Include="Presentacion\frmLogin.aspx" />
+    <Content Include="recuperar.aspx" />
     <Content Include="recursos\css\bootstrap.css" />
     <Content Include="recursos\css\font-awesome.min.css" />
     <Content Include="recursos\css\responsive.css" />
@@ -1820,13 +1820,6 @@
     <Compile Include="Datos\clEmpleadoD.cs" />
     <Compile Include="Entidades\clClienteE.cs" />
     <Compile Include="Entidades\clEmpleadoE.cs" />
-    <Compile Include="formGenContrasena.aspx.cs">
-      <DependentUpon>formGenContrasena.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="formGenContrasena.aspx.designer.cs">
-      <DependentUpon>formGenContrasena.aspx</DependentUpon>
-    </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1879,6 +1872,13 @@
       <DependentUpon>frmLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="recuperar.aspx.cs">
+      <DependentUpon>recuperar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="recuperar.aspx.designer.cs">
+      <DependentUpon>recuperar.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

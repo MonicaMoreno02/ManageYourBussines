@@ -56,6 +56,9 @@
             <span class=""> </span>
           </button>
 
+            <asp:Label ID="Label1" runat="server"></asp:Label>
+            <asp:Label ID="Label2" runat="server"></asp:Label>
+
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav  mx-auto ">
               <li class="nav-item active">
@@ -116,16 +119,7 @@
 
                               <div class="container mt-3">
 
-                                  <div class="dropdown">
-                                      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-                                          elija el usuario para ingresar
-                                      </button>
-                                      <ul class="dropdown-menu">
-                                          <li><a class="dropdown-item" href="#">Cliente</a></li>
-                                          <li><a class="dropdown-item" href="#">Administrado</a></li>
-
-                                      </ul>
-                                  </div>
+                                  
                               </div>
 
                               <div class=" col mt-3 mb-3">
@@ -140,17 +134,16 @@
                           </div>
                           <center>
                               <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" OnClick="btnIngresar_Click" /></center>
+                          <br />
+                          <center>
+                              <asp:Button ID="btnRecuperar" runat="server" Text="Recuperar Contraseña"  OnClick="btnRecuperar_Click"/></center>
 
-                          <%-- <a href="index.html" class="btn btn-primary btn-user btn-block">
-                                            INGRESAR
-                                        </a>--%>
+
                           <hr>
-                          <%--  <a href="index.html" class="btn btn-google btn-user btn-block">
-                                            <i class="fab fa-google fa-fw"></i> Login with Google
-                                        </a>
-                                        <a href="index.html" class="btn btn-facebook btn-user btn-block">
-                                            <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
+                        <%--<a href="" class="btn btn-google btn-user btn-block">
+                                            <i class="fab fa-google fa-fw"></i> Olvide mi contraseña 
                                         </a>--%>
+                                      
                       </form>
 
 
