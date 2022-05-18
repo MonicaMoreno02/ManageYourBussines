@@ -1020,13 +1020,12 @@ a:focus {
             margin-right: 20px;
         }
 #BlockItemSubMenu {
-    width: 1050px;
+    width: 1250px;
     display: block;
 }
 
     #BlockItemSubMenu .ItemSubMenu {
-        width: 350px;
+        width: 395px;
         float: left;
-        height: 300px;
-        font-family: 'Times New Roman';
+        height: 290px;
     }

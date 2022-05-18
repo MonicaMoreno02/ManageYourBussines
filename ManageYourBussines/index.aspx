@@ -382,54 +382,21 @@
        <h2>
           Nuestros Productos
         </h2>
-          
-           <%------Repeater--%>
-
-            <div id="BlockItemSubMenu">
-                <asp:Repeater ID="Repeater1" runat="server">
-                    <ItemTemplate>
-                        <div class="ItemSubMenu">
-                            <asp:Literal ID="id" runat="server" />
-                            <%#Eval("idProducto") %><br>
-                            <asp:Literal ID="Imagen" runat="server" /><img src="<%#Eval("imagen") %>" width="200" height="200" /></td></tr><br>
-                            <asp:Literal ID="nombre" runat="server" />
-                            <%#Eval("nombre") %><br>
-                            <asp:Literal ID="precio" runat="server" />
-                            $ <%#Eval("precio") %><br>
-                            <asp:Button ID="btnModal" runat="server" Text="Detalles:" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal"   />
-
-                            <%--modal--%>
-
-                           <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Detalles del Producto:</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <asp:Label ID="lblImagen" runat="server" Text="Label"></asp:Label>
-                                            <asp:Label ID="lblNombre" runat="server" Text="Label"></asp:Label>
-                                            <asp:Label ID="lblPrecio" runat="server" Text="Label"></asp:Label>
-                                            <asp:Label ID="lblMaterial" runat="server" Text="Label"></asp:Label>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </ItemTemplate>
-                </asp:Repeater>
-     
-      </div>
-      </div>
-  
- </section>    
-
+        <div id="BlockItemSubMenu">
+	<asp:Repeater id="Repeater1" runat="server">
+		<ItemTemplate>
+			<div class="ItemSubMenu">
+				<asp:Literal ID="Imagen" runat="server" /><img src="<%#Eval("imagen") %>" width="200" height="200" /></td></tr><br>
+                <asp:Literal ID="nombre" runat="server" /> <%#Eval("nombre") %><br>
+                <asp:Literal ID="precio" runat="server" />$ <%#Eval("precio") %><br>
+                <asp:Button ID="btnDetalles" runat="server" Text="Detalles:" CssClass="btn btn-success" onclick="btnDetalles_Click"/>
+			</div>				
+		</ItemTemplate>
+	</asp:Repeater>
+</div> 
+ </div>
+</div>
+</section>      
 
   <!-- end food section -->
 
@@ -685,7 +652,7 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
   </script>
   <!-- End Google Map -->
-
+    <script src="Presentacion/Recursos/js/datosDatable.js"></script>
 </body>
 </form>
 </html>

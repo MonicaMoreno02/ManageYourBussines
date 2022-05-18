@@ -73,7 +73,7 @@
     <Content Include="Presentacion\frmHome.aspx" />
     <Content Include="Presentacion\frmProductos.aspx" />
     <Content Include="Presentacion\frmRegistrar.aspx" />
-    <Content Include="Presentacion\Recursos\datosDatable.js" />
+    <Content Include="Presentacion\Recursos\js\datosDatable.js" />
     <Content Include="recursos\css\bootstrap.css" />
     <Content Include="recursos\css\font-awesome.min.css" />
     <Content Include="recursos\css\responsive.css" />
