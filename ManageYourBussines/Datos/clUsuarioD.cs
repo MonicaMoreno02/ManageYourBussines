@@ -8,17 +8,17 @@ using System.Web;
 
 namespace ManageYourBussines.Datos
 {
-    public class clClienteD
+    public class clUsuarioD
     {
 
-        public clClienteE mtdLogin(clClienteE objDatos)
+        public clUsuarioE mtdLogin(clUsuarioE objDatos)
         {
 
             string consulta = "select * from  cliente  where email='" + objDatos.email + "' and clave='" + objDatos.clave + "'";
             ClConexion objConexion = new ClConexion();
             DataTable tblDatos = new DataTable();
             tblDatos = objConexion.mtdDesconectado(consulta);
-            clClienteE objDatosCliente = new clClienteE();
+            clUsuarioE objDatosCliente = new clUsuarioE();
 
             if (tblDatos.Rows.Count == 1)
             {
@@ -82,7 +82,7 @@ namespace ManageYourBussines.Datos
        
 
 
-            public int mtdRegistrar(clClienteE objDatosCliente)
+            public int mtdRegistrar(clUsuarioE objDatosCliente)
         {
             string sql = "insert into cliente(documento,nombres,apellidos,telefono,direccion,email,clave)" +
                 "values ('" + objDatosCliente.documento + "' ,'" + objDatosCliente.nombres + "','" + objDatosCliente.apellidos + "','"+ objDatosCliente.telefono+"','"+objDatosCliente.direccion+"','" + objDatosCliente.email + "' ,'" + objDatosCliente.clave + "')";

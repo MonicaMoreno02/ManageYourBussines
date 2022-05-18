@@ -1816,9 +1816,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\clConexion.cs" />
-    <Compile Include="Datos\clClienteD.cs" />
+    <Compile Include="Datos\clUsuarioD.cs" />
     <Compile Include="Datos\clEmpleadoD.cs" />
-    <Compile Include="Entidades\clClienteE.cs" />
+    <Compile Include="Entidades\clUsuarioE.cs" />
     <Compile Include="Entidades\clEmpleadoE.cs" />
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
@@ -1827,7 +1827,7 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Logica\clClienteL.cs" />
+    <Compile Include="Logica\clUsuarioL.cs" />
     <Compile Include="Logica\clEmpleadoL.cs" />
     <Compile Include="Presentacion\frmAbout.aspx.cs">
       <DependentUpon>frmAbout.aspx</DependentUpon>

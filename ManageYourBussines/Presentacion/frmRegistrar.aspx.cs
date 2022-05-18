@@ -18,7 +18,7 @@ namespace ManageYourBussines.Presentacion
 
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
-            clClienteE objClientesE = new clClienteE();
+            clUsuarioE objClientesE = new clUsuarioE();
 
             objClientesE.documento = txtDocumento.Text;
             objClientesE.nombres = txtNombres.Text;
@@ -41,7 +41,7 @@ namespace ManageYourBussines.Presentacion
                 contraseniaAleatoria += letra.ToString();
             }
 
-            clClienteL objClientesL = new clClienteL();
+            clUsuarioL objClientesL = new clUsuarioL();
 
             int filas = objClientesL.mtdRegistrarCliente(objClientesE);
             if (filas > 0)

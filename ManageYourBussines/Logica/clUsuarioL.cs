@@ -7,13 +7,13 @@ using System.Web;
 
 namespace ManageYourBussines.Logica
 {
-    public class clClienteL
+    public class clUsuarioL
     {
-        public clClienteE mtdLogin(clClienteE objDatos)
+        public clUsuarioE mtdLogin(clUsuarioE objDatos)
         {
-            clClienteD objDatosClienteD = new clClienteD();
+            clUsuarioD objDatosClienteD = new clUsuarioD();
          
-            clClienteE objDatosCliente = new clClienteE();
+            clUsuarioE objDatosCliente = new clUsuarioE();
             objDatosCliente = objDatosClienteD.mtdLogin(objDatos);
             return objDatosCliente;
 
@@ -27,9 +27,9 @@ namespace ManageYourBussines.Logica
         //}
 
 
-        public int mtdRegistrarCliente(clClienteE objdatosClien)
+        public int mtdRegistrarCliente(clUsuarioE objdatosClien)
         {
-            clClienteD objClientesD = new clClienteD();
+            clUsuarioD objClientesD = new clUsuarioD();
             int resultado = objClientesD.mtdRegistrar(objdatosClien);
             return resultado;
         }

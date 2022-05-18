@@ -19,12 +19,12 @@ namespace ManageYourBussines
 
         protected void btnIngresar_Click(object sender, EventArgs e)
         {
-            clClienteE objDatos = new clClienteE();
+            clUsuarioE objDatos = new clUsuarioE();
             objDatos.email = txtEmail.Text;
             objDatos.clave = txtClave.Text;
 
-            clClienteL objUsuariosL = new clClienteL();
-            clClienteE objDatosClien = new clClienteE();
+            clUsuarioL objUsuariosL = new clUsuarioL();
+            clUsuarioE objDatosClien = new clUsuarioE();
             objDatosClien = objUsuariosL.mtdLogin(objDatos);
             if (objDatosClien != null)
             {

@@ -20,11 +20,11 @@ namespace ManageYourBussines.Presentacion
         protected void btnIngresar_Click(object sender, EventArgs e)
         {
 
-            clClienteE objDatos = new clClienteE();
+            clUsuarioE objDatos = new clUsuarioE();
             objDatos.email = txtEmail.Text;
             objDatos.clave = txtClave.Text;
 
-            clClienteL objUsuariosL = new clClienteL();
+            clUsuarioL objUsuariosL = new clUsuarioL();
 
             objDatos = objUsuariosL.mtdLogin(objDatos);
             if (objDatos != null)

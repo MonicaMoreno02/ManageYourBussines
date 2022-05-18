@@ -5,7 +5,7 @@ using System.Web;
 
 namespace ManageYourBussines.Entidades
 {
-    public class clClienteE
+    public class clUsuarioE
     {
 
         public int idCliente { get; set; }
