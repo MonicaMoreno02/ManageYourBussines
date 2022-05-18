@@ -386,7 +386,7 @@
           Nuestros Productos
         </h2>
         <div id="BlockItemSubMenu">
-	<asp:Repeater id="Repeater1" runat="server">
+	<asp:Repeater id="Repeater2" runat="server">
 		<ItemTemplate>
 			<div class="ItemSubMenu">
 				<asp:Literal ID="Imagen" runat="server" /><img src="<%#Eval("imagen") %>" width="200" height="200" /></td></tr><br>

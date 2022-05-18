@@ -31,6 +31,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="about.html">Sobre Nosotros</a>
                             </li>
+
                             <!--<li class="nav-item">
                 <a class="nav-link" href="book.html">Book Table</a>
               </li>-->
@@ -93,6 +94,10 @@
                                     </g>
                                 </svg>
                             </a>
+
+                            <asp:Button ID="btncarrito" runat="server" Text="carrito" OnClick="btncarrito_Click" />
+                             <asp:Label ID="lbnumero" runat="server" Text=""></asp:Label>
+
                             <form class="form-inline">
                                 <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
                                     <i class="fa fa-search" aria-hidden="true"></i>
@@ -330,6 +335,34 @@
         </div>
     </section>
 
+
+
+
+    <section class="food_section layout_padding-bottom">
+    <div class="container">
+      <div class="heading_container heading_center">
+       <h2>
+          Nuestros Productos
+        </h2>
+        <div id="BlockItemSubMenu">
+	
+        <asp:Repeater ID="repeater2" runat="server">
+            <ItemTemplate>
+			<div class="ItemSubMenu">
+				<asp:Literal ID="Imagen" runat="server" /><img src="<%#Eval("imagen") %>" width="200" height="200" /></td></tr><br>
+                <asp:Literal ID="nombre" runat="server" /> <%#Eval("nombre") %><br>
+                <asp:Literal ID="precio" runat="server" />$ <%#Eval("precio") %><br>
+                <asp:Button ID="btnDetalles" runat="server" Text="Detalles:" CssClass="btn btn-success" onclick="btnDetalles_Click"/>
+                <asp:Button ID="idcarrito" runat="server" Text="carrito" OnClick="Getcarrito"/>
+			</div>				
+		</ItemTemplate>
+        </asp:Repeater>
+		
+	
+</div> 
+ </div>
+</div>
+</section>      
 
 
 <%--   

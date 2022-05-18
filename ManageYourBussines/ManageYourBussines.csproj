@@ -66,6 +66,7 @@
   <ItemGroup>
     <Content Include="index.aspx" />
     <Content Include="Presentacion\frmAbout.aspx" />
+    <Content Include="Presentacion\frmCarrito.aspx" />
     <Content Include="Presentacion\frmHome.aspx" />
     <Content Include="Presentacion\frmProductos.aspx" />
     <Content Include="Presentacion\frmEstadisticas.aspx" />
@@ -166,9 +167,11 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Datos\clCarritoD.cs" />
     <Compile Include="Datos\clConexion.cs" />
     <Compile Include="Datos\clProductoD.cs" />
     <Compile Include="Datos\clUsuarioD.cs" />
+    <Compile Include="Entidades\clCarritoE.cs" />
     <Compile Include="Entidades\clProductoE.cs" />
     <Compile Include="Entidades\clUsuarioE.cs" />
     <Compile Include="index.aspx.cs">
@@ -180,12 +183,20 @@
     </Compile>
     <Compile Include="Logica\clProductoL.cs" />
     <Compile Include="Logica\clUsuarioL.cs" />
+    <Compile Include="Logica\clCarritoL.cs" />
     <Compile Include="Presentacion\frmAbout.aspx.cs">
       <DependentUpon>frmAbout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentacion\frmAbout.aspx.designer.cs">
       <DependentUpon>frmAbout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmCarrito.aspx.cs">
+      <DependentUpon>frmCarrito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmCarrito.aspx.designer.cs">
+      <DependentUpon>frmCarrito.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmHome.aspx.cs">
       <DependentUpon>frmHome.aspx</DependentUpon>
