@@ -11,7 +11,7 @@ namespace ManageYourBussines.Presentacion
 {
 
 
-    public partial class frmHome
+    public partial class frmRegistrar
     {
     }
 }

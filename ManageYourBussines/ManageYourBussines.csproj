@@ -13,7 +13,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ManageYourBussines</RootNamespace>
     <AssemblyName>ManageYourBussines</AssemblyName>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort />
@@ -23,6 +23,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -50,10 +51,6 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
@@ -68,10 +65,41 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.aspx" />
-    <Content Include="index.html" />
     <Content Include="Presentacion\frmAbout.aspx" />
     <Content Include="Presentacion\frmHome.aspx" />
     <Content Include="Presentacion\frmProductos.aspx" />
+    <Content Include="Presentacion\frmEstadisticas.aspx" />
+    <Content Include="Presentacion\recursos\css\bootstrap.css" />
+    <Content Include="Presentacion\recursos\css\font-awesome.min.css" />
+    <Content Include="Presentacion\recursos\css\responsive.css" />
+    <Content Include="Presentacion\recursos\css\style.css" />
+    <Content Include="Presentacion\recursos\images\about-img.png" />
+    <Content Include="Presentacion\recursos\images\biblioteca1.png" />
+    <Content Include="Presentacion\recursos\images\dinosaurio.png" />
+    <Content Include="Presentacion\recursos\images\Escritorio1.png" />
+    <Content Include="Presentacion\recursos\images\Escritorio2.png" />
+    <Content Include="Presentacion\recursos\images\estante2.png" />
+    <Content Include="Presentacion\recursos\images\fondo1.jpg" />
+    <Content Include="Presentacion\recursos\images\fondo2.jpeg" />
+    <Content Include="Presentacion\recursos\images\fondo3.jpg" />
+    <Content Include="Presentacion\recursos\images\fondo5.jpeg" />
+    <Content Include="Presentacion\recursos\images\icono3.png" />
+    <Content Include="Presentacion\recursos\images\iconoEscritorio.png" />
+    <Content Include="Presentacion\recursos\images\iconoSofa.png" />
+    <Content Include="Presentacion\recursos\images\logo.jpg" />
+    <Content Include="Presentacion\recursos\images\logo.png" />
+    <Content Include="Presentacion\recursos\images\mesaclasica.png" />
+    <Content Include="Presentacion\recursos\images\mesadejardin.png" />
+    <Content Include="Presentacion\recursos\images\mesamoderna.png" />
+    <Content Include="Presentacion\recursos\images\perrito.jpeg" />
+    <Content Include="Presentacion\recursos\images\sillaclasica.png" />
+    <Content Include="Presentacion\recursos\images\sillaIcono.png" />
+    <Content Include="Presentacion\recursos\images\sillamesedora.png" />
+    <Content Include="Presentacion\recursos\images\soportelefante.png" />
+    <Content Include="Presentacion\recursos\images\Taburetes.png" />
+    <Content Include="Presentacion\recursos\js\bootstrap.js" />
+    <Content Include="Presentacion\recursos\js\custom.js" />
+    <Content Include="Presentacion\recursos\js\jquery-3.4.1.min.js" />
     <Content Include="Presentacion\frmRegistrar.aspx" />
     <Content Include="Presentacion\Recursos\js\datosDatable.js" />
     <Content Include="recursos\css\bootstrap.css" />
@@ -99,7 +127,30 @@
     <Content Include="recursos\images\f9.png" />
     <Content Include="recursos\images\favicon.png" />
     <Content Include="recursos\images\hero-bg.jpg" />
+    <Content Include="recursos\images\biblioteca1.png" />
+    <Content Include="recursos\images\Escritorio1.png" />
+    <Content Include="recursos\images\Escritorio2.png" />
+    <Content Include="recursos\images\estante2.png" />
+    <Content Include="recursos\images\fondo1.jpg" />
+    <Content Include="recursos\images\fondo2.jpeg" />
+    <Content Include="recursos\images\fondo3.jpg" />
+    <Content Include="recursos\images\fondo5.jpeg" />
+    <Content Include="recursos\images\icono3.png" />
+    <Content Include="recursos\images\iconoSofa.png" />
     <Content Include="recursos\images\imagen.jpeg" />
+    <Content Include="recursos\images\iconoEscritorio.png" />
+    <Content Include="recursos\images\logo.jpg" />
+    <Content Include="recursos\images\logo.png" />
+    <Content Include="recursos\images\mesaclasica.png" />
+    <Content Include="recursos\images\mesadejardin.png" />
+    <Content Include="recursos\images\mesamoderna.png" />
+    <Content Include="recursos\images\perrito.jpeg" />
+    <Content Include="recursos\images\dinosaurio.png" />
+    <Content Include="recursos\images\sillaclasica.png" />
+    <Content Include="recursos\images\sillaIcono.png" />
+    <Content Include="recursos\images\sillamesedora.png" />
+    <Content Include="recursos\images\soportelefante.png" />
+    <Content Include="recursos\images\Taburetes.png" />
     <Content Include="recursos\images\mesaportable.jpeg" />
     <Content Include="recursos\images\mueble.jpeg" />
     <Content Include="recursos\images\o1.jpg" />
@@ -150,12 +201,12 @@
     <Compile Include="Presentacion\frmProductos.aspx.designer.cs">
       <DependentUpon>frmProductos.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\frmRegistrar.aspx.cs">
-      <DependentUpon>frmRegistrar.aspx</DependentUpon>
+    <Compile Include="Presentacion\frmEstadisticas.aspx.cs">
+      <DependentUpon>frmEstadisticas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Presentacion\frmRegistrar.aspx.designer.cs">
-      <DependentUpon>frmRegistrar.aspx</DependentUpon>
+    <Compile Include="Presentacion\frmEstadisticas.aspx.designer.cs">
+      <DependentUpon>frmEstadisticas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
@@ -174,6 +225,11 @@
     <Content Include="recursos\fonts\fontawesome-webfont.woff" />
     <Content Include="recursos\fonts\fontawesome-webfont.woff2" />
     <Content Include="Presentacion\Site1.Master" />
+    <Content Include="Presentacion\recursos\css\style.css.map" />
+    <Content Include="Presentacion\recursos\css\style.scss" />
+    <Content Include="Presentacion\recursos\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Presentacion\recursos\fonts\fontawesome-webfont.woff" />
+    <Content Include="Presentacion\recursos\fonts\fontawesome-webfont.woff2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
