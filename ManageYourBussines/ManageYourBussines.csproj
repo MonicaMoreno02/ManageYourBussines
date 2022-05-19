@@ -67,6 +67,7 @@
     <Content Include="index.aspx" />
     <Content Include="Presentacion\frmAbout.aspx" />
     <Content Include="Presentacion\frmcarrito.aspx" />
+    <Content Include="Presentacion\frmdetalles.aspx" />
     <Content Include="Presentacion\frmHome.aspx" />
     <Content Include="Presentacion\frmProductos.aspx" />
     <Content Include="Presentacion\frmEstadisticas.aspx" />
@@ -197,6 +198,13 @@
     </Compile>
     <Compile Include="Presentacion\frmcarrito.aspx.designer.cs">
       <DependentUpon>frmcarrito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmdetalles.aspx.cs">
+      <DependentUpon>frmdetalles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmdetalles.aspx.designer.cs">
+      <DependentUpon>frmdetalles.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmHome.aspx.cs">
       <DependentUpon>frmHome.aspx</DependentUpon>

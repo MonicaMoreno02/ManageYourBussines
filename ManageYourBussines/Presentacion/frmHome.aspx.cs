@@ -13,8 +13,8 @@ namespace ManageYourBussines.Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           
-                if (!this.IsPostBack)
+
+            if (!this.IsPostBack)
             {
                 this.BindRepeater();
             }
@@ -99,17 +99,19 @@ namespace ManageYourBussines.Presentacion
                     ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('jhhh');", true);
                 }
 
-            } 
+            }
         }
 
-            protected void btnDetalles_Click(object sender, EventArgs e)
-            {
-                Response.Redirect("Presentacion\\frmProductos.aspx");
-            }
+        protected void btnDetalles_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("frmProductos.aspx");
+        }
 
         protected void btncarrito_Click(object sender, EventArgs e)
         {
             Response.Redirect("frmcarrito.aspx");
         }
+       
+           
     }
     }
