@@ -64,7 +64,7 @@ namespace ManageYourBussines.Presentacion
                 string describsion = "tiene 4 patas la mesa";
                 float precio = 2000;
                 int cantidadstock = 20;
-                string Imagen = "recursos\\images\\comedores.jpg";
+                string Imagen = "recursos\\images\\dinosaurio.png";
                 int catidad = 1;
                 int idcliente = 2;
 
