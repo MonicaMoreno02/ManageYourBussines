@@ -105,17 +105,9 @@ namespace ManageYourBussines.Presentacion
 
         protected void btnDetalles_Click(object sender, EventArgs e)
         {
-
-
-            // El detalle está en encontrar el item padre del botón que se presionó
-            //Button btn = (btnDetalles)sender;
-            //RepeaterItem item = (RepeaterItem)btn.NamingContainer;
-
-            // Buscamos el control en ese item 
-            //Label id = (Label)item.FindControl("idProducto");
-            //int idProducto = (int)id.Text;
-            //var n = 0;
-            //n = (id)repeater2.Items[1].FindControl("label");
+            Label t = (Label)repeater2 .Items[0].FindControl("id");
+            string id = repeater2.Items[0].FindControl("lblidproducto").;
+           
 
             Response.Redirect("frmProductos.aspx");
         }
@@ -125,6 +117,11 @@ namespace ManageYourBussines.Presentacion
             Response.Redirect("frmcarrito.aspx");
         }
 
+<<<<<<< HEAD
+
+      
+=======
       
         }
+>>>>>>> 63d8081664a074ff2139e6e50a731045d3e7583c
     }
