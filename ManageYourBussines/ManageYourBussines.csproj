@@ -93,7 +93,10 @@
     <Content Include="Presentacion\recursos\images\mesaclasica.png" />
     <Content Include="Presentacion\recursos\images\mesadejardin.png" />
     <Content Include="Presentacion\recursos\images\mesamoderna.png" />
+    <Content Include="Presentacion\recursos\images\mesaportable.jpeg" />
+    <Content Include="Presentacion\recursos\images\organizador.jpeg" />
     <Content Include="Presentacion\recursos\images\perrito.jpeg" />
+    <Content Include="Presentacion\recursos\images\repisa.jpeg" />
     <Content Include="Presentacion\recursos\images\sillaclasica.png" />
     <Content Include="Presentacion\recursos\images\sillaIcono.png" />
     <Content Include="Presentacion\recursos\images\sillamesedora.png" />

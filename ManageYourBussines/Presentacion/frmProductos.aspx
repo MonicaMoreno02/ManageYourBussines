@@ -25,7 +25,18 @@
     </div>
   </div>
 </nav>
-     
+     <div id="BlockItemSubMenu">
+	<asp:Repeater id="Repeater2" runat="server">
+		<ItemTemplate>
+			<div class="ItemSubMenu">
+				<asp:Literal ID="Imagen" runat="server" /><img src="<%#Eval("imagen") %>" width="200" height="200" /></td></tr><br>
+                <asp:Literal ID="nombre" runat="server" /> <%#Eval("nombre") %><br>
+                <asp:Literal ID="precio" runat="server" />$ <%#Eval("precio") %><br>
+              
+
+			</div>				
+		</ItemTemplate>
+	</asp:Repeater>
 
 
 </asp:Content>

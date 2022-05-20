@@ -1,8 +1,55 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Presentacion/Site1.Master" AutoEventWireup="true" CodeBehind="frmHome.aspx.cs" Inherits="ManageYourBussines.Presentacion.frmHome" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <!--Añadimos el fondo-->
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="ManageYourBussines.index" %>
+
+
+<html>
+
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+
+
+    <!--Insertamos el icono que se visualiza en la esquina de la pestaña en el navegador-->
+    <link rel="shortcut icon" href="recursos/images/sillaIcono.png" type="">
+    <!--Añadimos el titulo-->
+    <title>Muebles San José</title>
+
+
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="recursos/css/bootstrap.css" />
+
+    <!--owl slider stylesheet -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <!-- nice select  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
+    <!-- font awesome style -->
+    <link href="recursos/css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="recursos/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="recursos/css/responsive.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <form id="form1" runat="server">
+    <!-- Custom styles for this template -->
+    <link href="recursos/css/style.css" rel="stylesheet" />
+    <!-- estilo para que sea responsive -->
+    <link href="recursos/css/responsive.css" rel="stylesheet" />
+
+</head>
+
+
+<body>
+    <!--Añadimos el fondo-->
     <div class="hero_area">
         <div class="bg-box">
             <img src="recursos/images/fondo5.jpeg" alt="">
@@ -31,7 +78,6 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="about.html">Sobre Nosotros</a>
                             </li>
-
                             <!--<li class="nav-item">
                 <a class="nav-link" href="book.html">Book Table</a>
               </li>-->
@@ -94,17 +140,11 @@
                                     </g>
                                 </svg>
                             </a>
-
-                            <asp:Button ID="btncarrito" runat="server" Text="carrito" OnClick="btncarrito_Click" />
-                             <asp:Label ID="lbnumero" runat="server" Text=""></asp:Label>
-
                             <form class="form-inline">
                                 <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
                                     <i class="fa fa-search" aria-hidden="true"></i>
                                 </button>
                             </form>
-                            <a href="" class="order_online">Compra Ahora
-                            </a>
                             <a href="" class="order_online">Compra Ahora
                             </a>
                         </div>
@@ -335,59 +375,98 @@
         </div>
     </section>
 
+    <!-- end offer section -->
 
+    <!-- food section -->
 
-
-    <section class="food_section layout_padding-bottom">
+  <section class="food_section layout_padding-bottom">
     <div class="container">
       <div class="heading_container heading_center">
        <h2>
           Nuestros Productos
         </h2>
         <div id="BlockItemSubMenu">
-	
-        <asp:Repeater ID="repeater2" runat="server">
-            <ItemTemplate>
+	<asp:Repeater id="Repeater2" runat="server">
+		<ItemTemplate>
 			<div class="ItemSubMenu">
-                <asp:Label ID="id" runat="server" Text="Label"><%#Eval("idProducto") %></asp:Label>
 				<asp:Literal ID="Imagen" runat="server" /><img src="<%#Eval("imagen") %>" width="200" height="200" /></td></tr><br>
                 <asp:Literal ID="nombre" runat="server" /> <%#Eval("nombre") %><br>
                 <asp:Literal ID="precio" runat="server" />$ <%#Eval("precio") %><br>
                 <asp:Button ID="btnDetalles" runat="server" Text="Detalles:" CssClass="btn btn-success" onclick="btnDetalles_Click"/>
-                <asp:Button ID="idcarrito" runat="server" Text="carrito" OnClick="Getcarrito"/>
 			</div>				
 		</ItemTemplate>
-        </asp:Repeater>
-		
-	
+	</asp:Repeater>
 </div> 
  </div>
 </div>
 </section>      
 
+    <!-- end food section -->
 
-<%--   
+    <!-- about section -->
+
+    <section class="about_section layout_padding">
+        <div class="container  ">
+
+            <div class="row">
+                <div class="col-md-6 ">
+                    <div class="img-box">
+                        <img src="recursos/images/logo.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="detail-box">
+                        <div class="heading_container">
+                            <h2>Somos Muebles San José
+                            </h2>
+                        </div>
+                        <p>
+                            Te ofrecemos
+                            <ul>
+                                <li>Fabricación de toda clase de muebles</li>
+                                <li>Restauracion de muebles</li>
+                                <li>Excelentes acabados</li>
+                                <li>Muebles Rusticos</li>
+                                <li>Decoración en madera</li>
+                                <li>Proyectos en Madera</li>
+                            </ul>
+                        </p>
+                        <a href="https://www.instagram.com/muebles.san_jose/">Mas sobre nosotros
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- end about section -->
+
+   
     <!-- footer section -->
 
-    <!-- jQery -->
-    <script src="recursos/js/jquery-3.4.1.min.js"></script>
-    <!-- popper js -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
-    <!-- bootstrap js -->
-    <script src="recursos/js/bootstrap.js"></script>
-    <!-- owl slider -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-    </script>
-    <!-- isotope js -->
-    <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
-    <!-- nice select -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
-    <!-- custom js -->
-    <script src="recursos/js/custom.js"></script>
-    <!-- Google Map -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
-    </script>
-    <!-- End Google Map -->--%>
+  <!-- jQery -->
+  <script src="recursos/js/jquery-3.4.1.min.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <!-- bootstrap js -->
+  <script src="recursos/js/bootstrap.js"></script>
+  <!-- owl slider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- isotope js -->
+  <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
+  <!-- nice select -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+  <!-- custom js -->
+  <script src="recursos/js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  </script>
+  <!-- End Google Map -->
+    <script src="Presentacion/Recursos/js/datosDatable.js"></script>
+</body>
+</form>
+</html>
 
-</asp:Content>
+        
