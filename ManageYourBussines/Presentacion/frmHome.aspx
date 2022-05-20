@@ -346,15 +346,16 @@
         </h2>
         <div id="BlockItemSubMenu">
 	
-        <asp:Repeater ID="repeater2" runat="server">
+        <asp:Repeater ID="repeater2" runat="server"
+            >
             <ItemTemplate>
 			<div class="ItemSubMenu">
-                <asp:Label ID="id" runat="server" Text="Label"><%#Eval("idProducto") %></asp:Label>
+                <asp:Label ID="id" runat="server" Text=""><%#Eval("idProducto") %></asp:Label>
 				<asp:Literal ID="Imagen" runat="server" /><img src="<%#Eval("imagen") %>" width="200" height="200" /></td></tr><br>
                 <asp:Literal ID="nombre" runat="server" /> <%#Eval("nombre") %><br>
                 <asp:Literal ID="precio" runat="server" />$ <%#Eval("precio") %><br>
                 <asp:Button ID="btnDetalles" runat="server" Text="Detalles:" CssClass="btn btn-success" onclick="btnDetalles_Click"/>
-                <asp:Button ID="idcarrito" runat="server" Text="carrito" OnClick="Getcarrito"/>
+                <asp:Button ID="idcarrito" runat="server" Text="carrito:" OnClick="Getcarrito" CssClass="btn btn-warning"/>
 			</div>				
 		</ItemTemplate>
         </asp:Repeater>
@@ -366,8 +367,8 @@
 </section>      
 
 
-<%--   
-    <!-- footer section -->
+   
+  <%--  <!-- footer section -->
 
     <!-- jQery -->
     <script src="recursos/js/jquery-3.4.1.min.js"></script>
@@ -388,6 +389,6 @@
     <!-- Google Map -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
     </script>
-    <!-- End Google Map -->--%>
-
+    <!-- End Google Map -->
+    --%>
 </asp:Content>

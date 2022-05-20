@@ -32,7 +32,8 @@
 				<asp:Literal ID="Imagen" runat="server" /><img src="<%#Eval("imagen") %>" width="200" height="200" /></td></tr><br>
                 <asp:Literal ID="nombre" runat="server" /> <%#Eval("nombre") %><br>
                 <asp:Literal ID="precio" runat="server" />$ <%#Eval("precio") %><br>
-              
+                <asp:Literal ID="material" runat="server" /> <%#Eval("material") %><br>
+                <asp:Literal ID="descripcion" runat="server" /> <%#Eval("descripcion") %><br>
 
 			</div>				
 		</ItemTemplate>
