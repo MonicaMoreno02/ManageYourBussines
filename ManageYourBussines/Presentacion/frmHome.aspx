@@ -350,11 +350,11 @@
             >
             <ItemTemplate>
 			<div class="ItemSubMenu">
-<<<<<<< HEAD
-                <asp:Label ID="lblidproducto" runat="server" Text=><%#Eval("idProducto") %></asp:Label>
-=======
+
+           <%--     <asp:Label ID="lblidproducto" runat="server" Text=><%#Eval("idProducto") %></asp:Label>--%>
+
                 <asp:Label ID="id" runat="server" Text=""><%#Eval("idProducto") %></asp:Label>
->>>>>>> 63d8081664a074ff2139e6e50a731045d3e7583c
+
 				<asp:Literal ID="Imagen" runat="server" /><img src="<%#Eval("imagen") %>" width="200" height="200" /></td></tr><br>
                 <asp:Literal ID="nombre" runat="server" /> <%#Eval("nombre") %><br>
                 <asp:Literal ID="precio" runat="server" />$ <%#Eval("precio") %><br>

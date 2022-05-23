@@ -105,9 +105,9 @@ namespace ManageYourBussines.Presentacion
 
         protected void btnDetalles_Click(object sender, EventArgs e)
         {
-            Label t = (Label)repeater2 .Items[0].FindControl("id");
-            string id = repeater2.Items[0].FindControl("lblidproducto").;
-           
+            //Label t = (Label)repeater2.Items[0].FindControl("id");
+            //string id = repeater2.Items[0].FindControl("lblidproducto").;
+
 
             Response.Redirect("frmProductos.aspx");
         }
@@ -117,11 +117,9 @@ namespace ManageYourBussines.Presentacion
             Response.Redirect("frmcarrito.aspx");
         }
 
-<<<<<<< HEAD
+
 
       
-=======
-      
         }
->>>>>>> 63d8081664a074ff2139e6e50a731045d3e7583c
-    }
+
+    } 
