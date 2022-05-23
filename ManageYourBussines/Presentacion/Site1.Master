@@ -65,6 +65,10 @@
     </script>
     <!-- End Google Map -->
 
+     <%--implementar Api--%>
+     <script src="https://www.paypal.com/sdk/js?client-id=AQZ0coiFkLAlxgPzeadKi0fv6-BufRhRdnEbMz4Xco6pRYvi16sCwkI1NhUlPvocsrLa0NqS81hD6a_k&currency=USD"> </script>
+
+
 </head>
 <body>
     <form id="form1" runat="server">
