@@ -95,7 +95,7 @@
                                 </svg>
                             </a>
 
-                            <asp:Button ID="btncarrito" runat="server" Text="carrito" OnClick="btncarrito_Click" />
+                            <asp:Button ID="btncarrito" runat="server" Text="carrito" OnClick="btncarrito_Click" CssClass="btn btn-warning"  />
                              <asp:Label ID="lbnumero" runat="server" Text=""></asp:Label>
 
                             <form class="form-inline">
@@ -103,9 +103,7 @@
                                     <i class="fa fa-search" aria-hidden="true"></i>
                                 </button>
                             </form>
-                            <a href="" class="order_online">Compra Ahora
-                            </a>
-                            <a href="" class="order_online">Compra Ahora
+                            
                             </a>
                         </div>
                     </div>
@@ -353,7 +351,7 @@
 
            <%--     <asp:Label ID="lblidproducto" runat="server" Text=><%#Eval("idProducto") %></asp:Label>--%>
 
-                <asp:Label ID="id" runat="server" Text=""><%#Eval("idProducto") %></asp:Label>
+             <%--   <asp:Label ID="id" runat="server" Text=""><%#Eval("idProducto") %></asp:Label>--%>
 
 				<asp:Literal ID="Imagen" runat="server" /><img src="<%#Eval("imagen") %>" width="200" height="200" /></td></tr><br>
                 <asp:Literal ID="nombre" runat="server" /> <%#Eval("nombre") %><br>
