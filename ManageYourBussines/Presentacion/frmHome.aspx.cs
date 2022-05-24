@@ -48,7 +48,7 @@ namespace ManageYourBussines.Presentacion
         {  ///boton carrito
 
             int cliente = 1;
-            int idproduc = 4;
+            int idproduc = 1;
             clCarritoE objDatosptod = new clCarritoE();
             objDatosptod.idcliente = cliente;
             objDatosptod.idproducto = idproduc;
@@ -60,21 +60,21 @@ namespace ManageYourBussines.Presentacion
 
             if (numer == 0)
             {
-                int idproducto = 3;
+                int idproducto = 1;
                 string nombre = "mesa";
                 string describsion = "tiene 4 patas la mesa";
                 float precio = 2000;
                 int cantidadstock = 20;
                 string Imagen = "recursos\\images\\dinosaurio.png";
                 int catidad = 1;
-                int idcliente = 2;
+                int idcliente = 1;
 
 
 
 
                 //Reference the Repeater Item using Button.
                 //RepeaterItem item = (sender as Button).NamingContainer as RepeaterItem;
-
+             
 
                 clCarritoE objcarrito = new clCarritoE();
 
@@ -89,11 +89,12 @@ namespace ManageYourBussines.Presentacion
 
                 clCarritoL objCarritoL = new clCarritoL();
                 int filas = objCarritoL.mtdRegistrarCar(objcarrito);
-
-                if (filas > 0)
+                int fil = filas; 
+                if (fil > 0)
                 {
+                 
                     ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('carrito agregado correctamente');", true);
-
+                    fil = -1;
                 }
                 else
                 {
