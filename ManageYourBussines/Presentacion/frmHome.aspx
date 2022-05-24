@@ -368,7 +368,7 @@
 
            <%--     <asp:Label ID="lblidproducto" runat="server" Text=><%#Eval("idProducto") %></asp:Label>--%>
 
-             <%--   <asp:Label ID="id" runat="server" Text=""><%#Eval("idProducto") %></asp:Label>--%>
+                <asp:Label ID="id" runat="server" Text=""><%#Eval("idProducto") %></asp:Label>
 
 				<asp:Literal ID="Imagen" runat="server" /><img src="<%#Eval("imagen") %>" width="200" height="200" /></td></tr><br>
                 <asp:Literal ID="nombre" runat="server" /> <%#Eval("nombre") %><br>
