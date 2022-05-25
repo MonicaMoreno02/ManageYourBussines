@@ -41,6 +41,7 @@ namespace ManageYourBussines.Presentacion
             clProductoL objProductoL = new clProductoL();
             repeater2.DataSource = objProductoL.mtdListarP();
             repeater2.DataBind();
+           
 
 
         }
@@ -105,11 +106,16 @@ namespace ManageYourBussines.Presentacion
 
         protected void btnDetalles_Click(object sender, EventArgs e)
         {
-            //Label t = (Label)repeater2.Items[0].FindControl("id");
-            //string id = repeater2.Items[0].FindControl("lblidproducto").;
 
+            Button btn = (Button)sender;
+            RepeaterItem item = (RepeaterItem)btn.NamingContainer;
 
-            Response.Redirect("frmProductos.aspx");
+            // Buscamos el control en ese item 
+            Label lbl = (Label)item.FindControl("LabelDato");
+            
+            int idProducto = int.Parse(lbl.Text);
+
+            Response.Redirect("frmProductos.aspx?idP=" + idProducto);
         }
 
         protected void btncarrito_Click(object sender, EventArgs e)
@@ -119,7 +125,7 @@ namespace ManageYourBussines.Presentacion
 
 
 
-      
-        }
 
-    } 
+    }
+
+}
