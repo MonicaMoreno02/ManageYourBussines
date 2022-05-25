@@ -14,6 +14,7 @@ namespace ManageYourBussines.Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+         
 
             if (!this.IsPostBack)
             {
@@ -32,6 +33,8 @@ namespace ManageYourBussines.Presentacion
             lbnumero.Text = numer.ToString();
 
 
+
+
         }
         public void BindRepeater()
         {
@@ -48,25 +51,38 @@ namespace ManageYourBussines.Presentacion
         public void Getcarrito(object sender, EventArgs e)
         {  ///boton carrito
 
+
+
+            Button btn = (Button)sender;
+            RepeaterItem item = (RepeaterItem)btn.NamingContainer;
+
+            // Buscamos el control en ese item 
+            Label lbl = (Label)item.FindControl("LabelDato");
+
+            int idProducto = int.Parse(lbl.Text);
+
+
             int cliente = 1;
-            int idproduc = 1;
+
             clCarritoE objDatosptod = new clCarritoE();
             objDatosptod.idcliente = cliente;
-            objDatosptod.idproducto = idproduc;
+            objDatosptod.idproducto = idProducto;
             clCarritoL objprod = new clCarritoL();
             int numer = objprod.MtdcarPro(objDatosptod);
 
-
-
-
             if (numer == 0)
-            {
-                int idproducto = 1;
-                string nombre = "mesa";
-                string describsion = "tiene 4 patas la mesa";
-                float precio = 2000;
-                int cantidadstock = 20;
-                string Imagen = "recursos\\images\\dinosaurio.png";
+            { 
+                clProductoE objProducto =new clProductoE();
+                objProducto.idProducto = idProducto;
+                clProductoL objProductoL = new clProductoL();
+                List<clProductoE> listar = new List<clProductoE>();
+                listar = objProductoL.mtdListarProd(objProducto);
+
+                string nombre = listar[0].nombre;
+                string describsion = listar[0].descripcion;
+                float precio = listar[0].precio;
+                int cantidadstock =listar[0].cantidadStock;
+                string Imagen = listar[0].imagen;
                 int catidad = 1;
                 int idcliente = 1;
 
@@ -79,7 +95,7 @@ namespace ManageYourBussines.Presentacion
 
                 clCarritoE objcarrito = new clCarritoE();
 
-                objcarrito.idproducto = idproducto;
+                objcarrito.idproducto = idProducto;
                 objcarrito.idcliente = idcliente;
                 objcarrito.describcion = describsion;
                 objcarrito.precio = precio;
