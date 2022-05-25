@@ -1,4 +1,5 @@
-﻿using ManageYourBussines.Logica;
+﻿using ManageYourBussines.Entidades;
+using ManageYourBussines.Logica;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,8 +14,13 @@ namespace ManageYourBussines.Presentacion
         protected void Page_Load(object sender, EventArgs e)
         {
             clProductoL objProductoL = new clProductoL();
-           gvInventario.DataSource = objProductoL.mtdListarP();
+            List<clProductoE> listInvent=new List<clProductoE>();
+           listInvent = objProductoL.mtdListarP();
+            gvInventario.DataSource = listInvent;
             gvInventario.DataBind();
+
+
+            
 
         }
     }

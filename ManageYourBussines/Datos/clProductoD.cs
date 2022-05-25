@@ -66,7 +66,7 @@ namespace ManageYourBussines.Datos
                 objDatosProductos.descripcion = tblProducto.Rows[i]["descripcion"].ToString();
                 objDatosProductos.material = tblProducto.Rows[i]["material"].ToString();
                 objDatosProductos.caracteristicas = tblProducto.Rows[i]["caracteristicas"].ToString();
-
+                objDatosProductos.cantidadStock = int.Parse(tblProducto.Rows[i]["cantidadStock"].ToString());
 
 
 
