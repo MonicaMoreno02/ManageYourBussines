@@ -66,6 +66,7 @@
   <ItemGroup>
     <Content Include="index.aspx" />
     <Content Include="Presentacion\frmAbout.aspx" />
+    <Content Include="Presentacion\frmAdmin.aspx" />
     <Content Include="Presentacion\frmHome.aspx" />
     <Content Include="Presentacion\frmProductos.aspx" />
     <Content Include="Presentacion\frmEstadisticas.aspx" />
@@ -152,6 +153,13 @@
     </Compile>
     <Compile Include="Presentacion\frmAbout.aspx.designer.cs">
       <DependentUpon>frmAbout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmAdmin.aspx.cs">
+      <DependentUpon>frmAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmAdmin.aspx.designer.cs">
+      <DependentUpon>frmAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmHome.aspx.cs">
       <DependentUpon>frmHome.aspx</DependentUpon>
