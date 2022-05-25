@@ -43,6 +43,37 @@ namespace ManageYourBussines.Datos
             return listarProducto;
 
         }
+        public List<clProductoE> mtdListarDetalles(clProductoE objdatos)
+        {
+            string sql = "select * from producto where idProducto ="+objdatos.idProducto+"";
+            clConexion objConexion = new clConexion();
+            DataTable tblProducto = new DataTable();
+            tblProducto = objConexion.mtdDesconectado(sql);
+
+            List<clProductoE> listarProducto = new List<clProductoE>();
+
+            int cantReg = tblProducto.Rows.Count;
+            for (int i = 0;i<cantReg;i++)
+            {
+
+                clProductoE objDatosProductos = new clProductoE();
+            
+               
+                objDatosProductos.idProducto = int.Parse(tblProducto.Rows[i]["idProducto"].ToString());
+                objDatosProductos.imagen = tblProducto.Rows[i]["imagen"].ToString();
+                objDatosProductos.nombre = tblProducto.Rows[i]["nombre"].ToString();
+                objDatosProductos.precio = float.Parse(tblProducto.Rows[i]["precio"].ToString());
+                objDatosProductos.descripcion = tblProducto.Rows[i]["descripcion"].ToString();
+                objDatosProductos.material = tblProducto.Rows[i]["material"].ToString();
+                objDatosProductos.caracteristicas = tblProducto.Rows[i]["caracteristicas"].ToString();
+
+
+
+
+              listarProducto.Add(objDatosProductos);
+            }
+            return listarProducto;
+        }
     }
 }
 

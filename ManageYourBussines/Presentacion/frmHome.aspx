@@ -26,7 +26,7 @@
                                 <a class="nav-link" href="index.aspx">Home <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="menu.html">Productos</a>
+                                <a class="nav-link" href="frmdetalles.aspx">Productos</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="about.html">Sobre Nosotros</a>
@@ -366,9 +366,11 @@
             <ItemTemplate>
 			<div class="ItemSubMenu">
 
-           <%--     <asp:Label ID="lblidproducto" runat="server" Text=><%#Eval("idProducto") %></asp:Label>--%>
+               <%-- <asp:Label ID="lblidproducto" runat="server" Text="<%#Eval("idProducto") %>"></asp:Label>--%>
 
-             <%--   <asp:Label ID="id" runat="server" Text=""><%#Eval("idProducto") %></asp:Label>--%>
+            
+         
+                 <asp:Label ID="LabelDato" runat="server" Visible="false" Text='<%#Eval("idProducto")%>'> </asp:Label>
 
 				<asp:Literal ID="Imagen" runat="server" /><img src="<%#Eval("imagen") %>" width="200" height="200" /></td></tr><br>
                 <asp:Literal ID="nombre" runat="server" /> <%#Eval("nombre") %><br>

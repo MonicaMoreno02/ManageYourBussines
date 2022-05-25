@@ -1,4 +1,5 @@
-﻿using ManageYourBussines.Logica;
+﻿using ManageYourBussines.Entidades;
+using ManageYourBussines.Logica;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,9 +13,24 @@ namespace ManageYourBussines.Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            clProductoL objProductoL = new clProductoL();
-            Repeater2.DataSource = objProductoL.mtdListarP();
-            Repeater2.DataBind();
+
+            string valor = Convert.ToString(Request.QueryString["idP"]);
+           lblID.Attributes.Add("style", "DISPLAY:none");
+            lblID.Text = valor;
+            int idProducto = int.Parse(valor);
+
+
+            clProductoE objProducto = new clProductoE();
+            objProducto.idProducto = idProducto;
+            clProductoL objProductos = new clProductoL();
+            List<clProductoE> listarProductos = new List<clProductoE>();
+            listarProductos = objProductos.mtdListarD(objProducto);
+
+
+            string nombre = listarProductos[0].nombre;
+            lbnombre.Text = nombre;
+            string imagen = listarProductos[0].imagen;
+            Image1.ImageUrl = imagen;
         }
     }
 }
