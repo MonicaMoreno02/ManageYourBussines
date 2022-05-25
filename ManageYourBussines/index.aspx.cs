@@ -20,8 +20,8 @@ namespace ManageYourBussines
         {
             //------cargar Repeater
             clProductoL objProductoL = new clProductoL();
-            Repeater1.DataSource = objProductoL.mtdListarP();
-            Repeater1.DataBind();
+            Repeater2.DataSource = objProductoL.mtdListarP();
+            Repeater2.DataBind();
 
 
 

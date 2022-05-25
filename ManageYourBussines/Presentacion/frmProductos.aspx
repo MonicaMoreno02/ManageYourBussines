@@ -25,7 +25,12 @@
     </div>
   </div>
 </nav>
-     
+  
+	
+   <div align="center"> <asp:Image ID="Image1" runat="server" Width="300" height="300" /></div><br />
+    <asp:Label ID="lblID" runat="server" Text="Label"></asp:Label><br />
+    <asp:Label ID="lbnombre" runat="server" Text="Label"></asp:Label><br />
+  
 
-
+  
 </asp:Content>
