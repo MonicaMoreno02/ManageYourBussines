@@ -4,6 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+    <img src=""> 
     <div class="btn from-top">Empleados</div>
     <div class="btn from-left">Ventas</div>
     <div class="btn from-right">Clientes</div>

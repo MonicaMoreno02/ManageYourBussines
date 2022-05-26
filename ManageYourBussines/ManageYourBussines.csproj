@@ -74,6 +74,7 @@
     <Content Include="Presentacion\recursos\css\font-awesome.min.css" />
     <Content Include="Presentacion\recursos\css\responsive.css" />
     <Content Include="Presentacion\recursos\css\style.css" />
+    <Content Include="Presentacion\recursos\css\style2.css" />
     <Content Include="Presentacion\recursos\images\about-img.png" />
     <Content Include="Presentacion\recursos\images\biblioteca1.png" />
     <Content Include="Presentacion\recursos\images\dinosaurio.png" />
@@ -101,7 +102,6 @@
     <Content Include="Presentacion\recursos\js\bootstrap.js" />
     <Content Include="Presentacion\recursos\js\custom.js" />
     <Content Include="Presentacion\recursos\js\jquery-3.4.1.min.js" />
-    <Content Include="Presentacion\recursos\css\style2.css" />
     <Content Include="recursos\css\bootstrap.css" />
     <Content Include="recursos\css\font-awesome.min.css" />
     <Content Include="recursos\css\responsive.css" />
