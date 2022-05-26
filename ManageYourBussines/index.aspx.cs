@@ -30,7 +30,7 @@ namespace ManageYourBussines
 
         protected void btnDetalles_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Presentacion\\frmProductos.aspx");
+            Response.Redirect("~/Presentacion/frmDetalles.aspx");
         }
     }
 
