@@ -25,7 +25,7 @@ namespace ManageYourBussines.Presentacion
             inventario.Columns.Add(new DataColumn("#", typeof(int)));
             inventario.Columns.Add(new DataColumn("idproducto", typeof(string)));
             inventario.Columns.Add(new DataColumn("nombre", typeof(string)));
-            inventario.Columns.Add(new DataColumn("describcion", typeof(string)));
+            inventario.Columns.Add(new DataColumn("descripcion", typeof(string)));
             inventario.Columns.Add(new DataColumn("precio", typeof(float)));
             inventario.Columns.Add(new DataColumn("cantidadStock", typeof(int)));
             inventario.Columns.Add(new DataColumn("total", typeof(float)));
@@ -54,7 +54,7 @@ namespace ManageYourBussines.Presentacion
                     row["idproducto"] = idproducto;
                     ;
                     row["nombre"] = nombre;
-                    row["describcion"] = describcion;
+                    row["descripcion"] = describcion;
                     row["precio"] = precio;
 
                     row["cantidadstock"] = cantidadstok;
@@ -75,7 +75,7 @@ namespace ManageYourBussines.Presentacion
                     row["#"] = i + 1;
 
                     row["nombre"] = "vtotal";
-                    row["describcion"] = "";
+                    row["descripcion"] = "";
                     row["precio"] = 0;
 
                     row["cantidadstock"] = 0;
@@ -170,10 +170,82 @@ namespace ManageYourBussines.Presentacion
                     });
             }
 
-            workbook.Save("B:/file.xlsx");
+            workbook.Save("D:/report.xlsx");
             }
+
+        protected void btnpdf_Click(object sender, EventArgs e)
+        {
+            SpreadsheetInfo.SetLicense("FREE-LIMITED-KEY");
+
+            // Create test DataSet with five DataTables
+            DataSet dataSet = new DataSet();
+            for (int i = 0; i < 5; i++)
+            {
+                clProductoL objProductoL = new clProductoL();
+                List<clProductoE> listInvent = new List<clProductoE>();
+                listInvent = objProductoL.mtdListarP();
+
+                DataTable dataTable = new DataTable("Table " + (i + 1));
+                dataTable.Columns.Add(new DataColumn("#", typeof(int)));
+                dataTable.Columns.Add(new DataColumn("idproducto", typeof(string)));
+                dataTable.Columns.Add(new DataColumn("nombre", typeof(string)));
+                dataTable.Columns.Add(new DataColumn("describcion", typeof(string)));
+                dataTable.Columns.Add(new DataColumn("precio", typeof(float)));
+                dataTable.Columns.Add(new DataColumn("cantidadStock", typeof(int)));
+                dataTable.Columns.Add(new DataColumn("total", typeof(float)));
+
+                int cuenta = listInvent.Count;
+                int num = cuenta + 1;
+                float vtot = 0;
+                float total = 0;
+                for (int j = 0; j < cuenta; j++)
+                {
+                    if (i != cuenta)
+                    {
+                        int numero = j + 1;
+                        int idproducto = listInvent[j].idProducto;
+                        string nombre = listInvent[j].nombre;
+                        string describcion = listInvent[j].descripcion;
+                        float precio = listInvent[j].precio;
+                        int cantidadstok = listInvent[j].cantidadStock;
+                        total = precio * cantidadstok;
+                        vtot = vtot + total;
+
+                        dataTable.Rows.Add(new object[] { numero, idproducto, nombre, describcion, precio, cantidadstok, total });
+                    }
+                    else
+                    {
+                        total = vtot;
+
+                        dataTable.Rows.Add(new object[] { "", "", "", "", "", "", total });
+
+                    }
+                }
+
+
+
+                dataSet.Tables.Add(dataTable);
+            }
+
+            // Create and fill a sheet for every DataTable in a DataSet
+            var workbook = new ExcelFile();
+            foreach (DataTable dataTable in dataSet.Tables)
+            {
+                ExcelWorksheet worksheet = workbook.Worksheets.Add(dataTable.TableName);
+
+                // Insert DataTable to an Excel worksheet.
+                worksheet.InsertDataTable(dataTable,
+                    new InsertDataTableOptions()
+                    {
+                        ColumnHeaders = true
+                    });
+            }
+
+            workbook.Save("D:/report.pdf");
         }
     }
+    }
+    
 
 
         
