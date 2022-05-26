@@ -3,13 +3,16 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server" >
-    <asp:Label ID="lbingresar" runat="server" Text="igresar producto"></asp:Label>
-    <asp:DropDownList ID="dpProducto" runat="server"></asp:DropDownList><br />
-     <asp:Label ID="Label1" runat="server" Text="ingrese catidad de productos"></asp:Label>
-    <asp:TextBox ID="TxtNproductos" runat="server"></asp:TextBox>
-    <asp:Button ID="btnEntrada" runat="server" Text="aceptar" />
-    <asp:GridView ID="gvInventario" runat="server">
+   
+       <asp:Label ID="lbingresar" runat="server" Text="igresar producto"></asp:Label><br /> 
+    <asp:DropDownList ID="dpProducto" runat="server" AutoPostBack="True"></asp:DropDownList><br />
+     <asp:Label ID="Label1" runat="server" Text="ingrese catidad de productos"></asp:Label><br />
+    <asp:TextBox ID="TxtNproductos" runat="server"></asp:TextBox><br />
+    <asp:Button ID="btnEntrada" runat="server" Text="aceptar" /><br />
+    <br />
+    <asp:GridView ID="gvInventario" runat="server" Width="740px">
 
     </asp:GridView>
+  
 
 </asp:Content>

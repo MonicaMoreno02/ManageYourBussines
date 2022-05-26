@@ -35,7 +35,7 @@ namespace ManageYourBussines.Datos
                 objDatosProducto.nombre = tblProducto.Rows[i]["nombre"].ToString();
                 objDatosProducto.precio = float.Parse(tblProducto.Rows[i]["precio"].ToString());
                 objDatosProducto.descripcion = tblProducto.Rows[i]["descripcion"].ToString();
-
+                objDatosProducto.cantidadStock = int.Parse(tblProducto.Rows[i]["cantidadStock"].ToString());
 
                 listarProducto.Add(objDatosProducto);
             }
