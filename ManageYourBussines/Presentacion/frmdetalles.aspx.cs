@@ -12,9 +12,14 @@ namespace ManageYourBussines.Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            clProductoL objProductoL = new clProductoL();
-            Repeater2.DataSource = objProductoL.mtdListarP();
-            Repeater2.DataBind();
+            if (!IsPostBack)
+            {
+
+
+                clProductoL objProductoL = new clProductoL();
+                Repeater2.DataSource = objProductoL.mtdListarP();
+                Repeater2.DataBind();
+            }
         }
 
         protected void btnDetalles_Click(object sender, EventArgs e)
