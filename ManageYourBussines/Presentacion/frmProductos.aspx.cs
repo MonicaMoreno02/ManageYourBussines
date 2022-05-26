@@ -36,5 +36,10 @@ namespace ManageYourBussines.Presentacion
             string material = listarProductos[0].material;
             lbMaterial.Text = material;
         }
+
+        protected void btnHome_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("frmHome.aspx");
+        }
     }
 }
