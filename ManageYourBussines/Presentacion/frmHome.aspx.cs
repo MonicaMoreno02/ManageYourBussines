@@ -15,11 +15,7 @@ namespace ManageYourBussines.Presentacion
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            if (!this.IsPostBack)
-            {
-                this.BindRepeater();
-            }
-
+            
 
 
             int cliente = 2;
@@ -33,17 +29,17 @@ namespace ManageYourBussines.Presentacion
 
 
         }
-        public void BindRepeater()
-        {
+        //public void BindRepeater()
+        //{
 
-            ///auto posbak
+        //    ///auto posbak
 
-            clProductoL objProductoL = new clProductoL();
-            repeater2.DataSource = objProductoL.mtdListarP();
-            repeater2.DataBind();
+        //    clProductoL objProductoL = new clProductoL();
+        //    GridView.DataSource = objProductoL.mtdListarP();
+        //    GridView.DataBind();
 
 
-        }
+        //}
         public void Getcarrito(object sender, EventArgs e)
         {  ///boton carrito
 
@@ -103,14 +99,7 @@ namespace ManageYourBussines.Presentacion
             }
         }
 
-        protected void btnDetalles_Click(object sender, EventArgs e)
-        {
-            //Label t = (Label)repeater2.Items[0].FindControl("id");
-            //string id = repeater2.Items[0].FindControl("lblidproducto").;
-
-
-            Response.Redirect("frmProductos.aspx");
-        }
+       
 
         protected void btncarrito_Click(object sender, EventArgs e)
         {

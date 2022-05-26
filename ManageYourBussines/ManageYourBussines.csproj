@@ -65,9 +65,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.aspx" />
+    <Content Include="Logica\clEmpleadosL.html" />
     <Content Include="Presentacion\frmAbout.aspx" />
     <Content Include="Presentacion\frmcarrito.aspx" />
     <Content Include="Presentacion\frmdetalles.aspx" />
+    <Content Include="Presentacion\frmEmpleadoss.aspx" />
     <Content Include="Presentacion\frmHome.aspx" />
     <Content Include="Presentacion\frmProductos.aspx" />
     <Content Include="Presentacion\frmEstadisticas.aspx" />
@@ -105,7 +107,6 @@
     <Content Include="Presentacion\recursos\js\bootstrap.js" />
     <Content Include="Presentacion\recursos\js\custom.js" />
     <Content Include="Presentacion\recursos\js\jquery-3.4.1.min.js" />
-    <Content Include="Presentacion\frmRegistrar.aspx" />
     <Content Include="Presentacion\Recursos\js\datosDatable.js" />
     <Content Include="recursos\css\bootstrap.css" />
     <Content Include="recursos\css\font-awesome.min.css" />
@@ -173,9 +174,11 @@
   <ItemGroup>
     <Compile Include="Datos\clCarritoD.cs" />
     <Compile Include="Datos\clConexion.cs" />
+    <Compile Include="Datos\clEmpleadoD.cs" />
     <Compile Include="Datos\clProductoD.cs" />
     <Compile Include="Datos\clUsuarioD.cs" />
     <Compile Include="Entidades\clCarritoE.cs" />
+    <Compile Include="Entidades\clEmpleadoE.cs" />
     <Compile Include="Entidades\clProductoE.cs" />
     <Compile Include="Entidades\clUsuarioE.cs" />
     <Compile Include="index.aspx.cs">
@@ -185,9 +188,12 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Logica\clEmpleadoD.cs" />
+    <Compile Include="Logica\ClEmpleadoL.cs" />
     <Compile Include="Logica\clProductoL.cs" />
     <Compile Include="Logica\clUsuarioL.cs" />
     <Compile Include="Logica\clCarritoL.cs" />
+    <Compile Include="Presentacion\clEmpleadosL.cs" />
     <Compile Include="Presentacion\frmAbout.aspx.cs">
       <DependentUpon>frmAbout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -208,6 +214,13 @@
     </Compile>
     <Compile Include="Presentacion\frmdetalles.aspx.designer.cs">
       <DependentUpon>frmdetalles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmEmpleadoss.aspx.cs">
+      <DependentUpon>frmEmpleadoss.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmEmpleadoss.aspx.designer.cs">
+      <DependentUpon>frmEmpleadoss.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmHome.aspx.cs">
       <DependentUpon>frmHome.aspx</DependentUpon>
