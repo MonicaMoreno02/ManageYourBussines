@@ -143,6 +143,9 @@
     <Content Include="recursos\images\fondo5.jpeg" />
     <Content Include="recursos\images\icono3.png" />
     <Content Include="recursos\images\iconoSofa.png" />
+    <Content Include="recursos\images\icons8-casa-48.png">
+      <BrowseToURL>recursos\images\icons8-casa-48.png</BrowseToURL>
+    </Content>
     <Content Include="recursos\images\imagen.jpeg" />
     <Content Include="recursos\images\iconoEscritorio.png" />
     <Content Include="recursos\images\logo.jpg" />

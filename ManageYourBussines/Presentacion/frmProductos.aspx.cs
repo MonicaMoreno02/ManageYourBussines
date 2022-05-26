@@ -31,6 +31,15 @@ namespace ManageYourBussines.Presentacion
             lbnombre.Text = nombre;
             string imagen = listarProductos[0].imagen;
             Image1.ImageUrl = imagen;
+            string descripcion = listarProductos[0].descripcion;
+            lbDescripcion.Text = descripcion;
+            string material = listarProductos[0].material;
+            lbMaterial.Text = material;
+        }
+
+        protected void btnHome_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("frmHome.aspx");
         }
     }
 }
