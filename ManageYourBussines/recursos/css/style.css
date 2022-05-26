@@ -1029,3 +1029,13 @@ a:focus {
         float: left;
         height: 290px;
     }
+#BlockItemSubMenu {
+    width: 1250px;
+    display: block;
+}
+
+    #BlockItemSubMenu .ItemSubMenu {
+        width: 395px;
+        float: left;
+        height: 290px;
+    }

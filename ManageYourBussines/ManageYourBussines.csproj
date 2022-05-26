@@ -71,6 +71,7 @@
     <Content Include="Presentacion\frmHome.aspx" />
     <Content Include="Presentacion\frmProductos.aspx" />
     <Content Include="Presentacion\frmEstadisticas.aspx" />
+    <Content Include="Presentacion\frmProductos2.aspx" />
     <Content Include="Presentacion\recursos\css\bootstrap.css" />
     <Content Include="Presentacion\recursos\css\font-awesome.min.css" />
     <Content Include="Presentacion\recursos\css\responsive.css" />
@@ -232,6 +233,13 @@
     </Compile>
     <Compile Include="Presentacion\frmEstadisticas.aspx.designer.cs">
       <DependentUpon>frmEstadisticas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmProductos2.aspx.cs">
+      <DependentUpon>frmProductos2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmProductos2.aspx.designer.cs">
+      <DependentUpon>frmProductos2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>

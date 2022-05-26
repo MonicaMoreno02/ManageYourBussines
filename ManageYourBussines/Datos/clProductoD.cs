@@ -15,7 +15,7 @@ namespace ManageYourBussines.Datos
     /// <returns></returns>
         public List<clProductoE> mtdListar()
         {
-            string sql = "SELECT * FROM imagen INNER JOIN producto ON imagen.idProducto = producto.idProducto; ";
+            string sql = "select * from producto ";
             clConexion objConexion = new clConexion();
             DataTable tblProducto = new DataTable();
             tblProducto = objConexion.mtdDesconectado(sql);
@@ -27,15 +27,17 @@ namespace ManageYourBussines.Datos
             for (int i = 0; i < catnReg; i++)
             {
                 clProductoE objDatosProducto = new clProductoE();
-                objDatosProducto.idImagen = int.Parse(tblProducto.Rows[i]["idImagen"].ToString());
-                objDatosProducto.imagen = tblProducto.Rows[i]["imagen"].ToString();
-                objDatosProducto.material = tblProducto.Rows[i]["material"].ToString();
-                objDatosProducto.caracteristicas = tblProducto.Rows[i]["caracteristicas"].ToString();
                 objDatosProducto.idProducto = int.Parse(tblProducto.Rows[i]["idProducto"].ToString());
                 objDatosProducto.nombre = tblProducto.Rows[i]["nombre"].ToString();
-                objDatosProducto.precio = float.Parse(tblProducto.Rows[i]["precio"].ToString());
                 objDatosProducto.descripcion = tblProducto.Rows[i]["descripcion"].ToString();
-
+                objDatosProducto.precio = float.Parse(tblProducto.Rows[i]["precio"].ToString());
+                objDatosProducto.cantidadStock = tblProducto.Rows[i]["cantidadStock"].ToString();
+                objDatosProducto.largo = tblProducto.Rows[i]["largo"].ToString();
+                objDatosProducto.ancho = tblProducto.Rows[i]["ancho"].ToString();
+                objDatosProducto.profundidad = tblProducto.Rows[i]["profundidad"].ToString();
+                objDatosProducto.material = tblProducto.Rows[i]["material"].ToString();
+                objDatosProducto.caracteristicas = tblProducto.Rows[i]["caracteristicas"].ToString();
+                objDatosProducto.imagen = tblProducto.Rows[i]["imagen"].ToString();
 
                 listarProducto.Add(objDatosProducto);
             }
