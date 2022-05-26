@@ -13,6 +13,6 @@
     <asp:GridView ID="gvInventario" runat="server" Width="740px">
 
     </asp:GridView>
-  
+  <asp:Button ID="btnreport" runat="server" Text="exel" OnClick="btnreport_Click"  />
 
 </asp:Content>
