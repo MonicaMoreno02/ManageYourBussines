@@ -4,13 +4,17 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
       
-         <asp:Button ID="BtnInicio" runat="server" Text="INICIO" Height="47px" OnClick="BtnInicio_Click" Width="98px" BackColor="#AB8365" BorderColor="Black" BorderStyle="Outset" BorderWidth="2px" />
+         <asp:Button ID="BtnInicio" runat="server" Text="INICIO" Height="96px" OnClick="BtnInicio_Click" Width="135px" BackColor="#AB8365" BorderColor="Black" BorderStyle="Outset" BorderWidth="2px" />
     <br />
     <br />
     <br />
     <br />
     <br />
-    
+    <br />
+    <br />
+    <br />
+    <br />
+
               
         <div class="btn from-top">Empleados</div>
         <div class="btn from-left">Ventas</div>
