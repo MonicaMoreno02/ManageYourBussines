@@ -15,7 +15,7 @@ namespace ManageYourBussines.Datos
             public clConexion()
             {
 
-                conexion = new SqlConnection();
+                conexion = new SqlConnection("Data Source=.;Initial Catalog=dbManage;Integrated Security=True");
                 conexion.Open();
             }
 

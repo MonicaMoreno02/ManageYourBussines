@@ -246,6 +246,11 @@ namespace ManageYourBussines.Presentacion
 
             ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Archivo creado correctamente guardado en: D:/report.pdf');", true);
         }
+
+        protected void btnregresar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("frmAdmin.aspx");
+        }
     }
     }
     
