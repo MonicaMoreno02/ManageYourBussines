@@ -10,7 +10,7 @@
     <asp:TextBox ID="TxtNproductos" runat="server"></asp:TextBox><br />
     <asp:Button ID="btnEntrada" runat="server" Text="aceptar" /><br />--%>
     <br />
-    <asp:GridView ID="gvInventario" runat="server" Width="740px">
+    <asp:GridView ID="gvInventario" runat="server" Width="1159px"  class="table-success" >
 
     </asp:GridView>
     <br />
