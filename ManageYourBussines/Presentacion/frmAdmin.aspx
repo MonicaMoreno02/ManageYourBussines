@@ -16,8 +16,8 @@
         <div class="btn from-left">Ventas</div>
         <div class="btn from-right">Clientes</div>
         <div class="btn from-center">Productos</div>
-        <div class="btn from-bottom">Inventario</div>
-    
+        <div class="btn from-bottom ">Inventario   </div>
+
 
      
 
