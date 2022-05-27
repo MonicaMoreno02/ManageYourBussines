@@ -181,9 +181,11 @@
     <Compile Include="Datos\clConexion.cs" />
     <Compile Include="Datos\clProductoD.cs" />
     <Compile Include="Datos\clUsuarioD.cs" />
+    <Compile Include="Datos\clVentaD.cs" />
     <Compile Include="Entidades\clCarritoE.cs" />
     <Compile Include="Entidades\clProductoE.cs" />
     <Compile Include="Entidades\clUsuarioE.cs" />
+    <Compile Include="Entidades\clVentaE.cs" />
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
