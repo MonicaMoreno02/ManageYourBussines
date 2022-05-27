@@ -64,6 +64,7 @@ namespace ManageYourBussines.Presentacion
             {
 
 
+
                 if (i != cuenta)
                 {
                     int numero = i + 1;

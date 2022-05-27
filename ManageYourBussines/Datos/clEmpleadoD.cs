@@ -29,12 +29,13 @@ namespace ManageYourBussines.Datos
             for (int i = 0; i < catnReg; i++)
             {
                 clEmpleadoE objDatosEmpleado = new clEmpleadoE();
-                objDatosEmpleado.idEmpleado = int.Parse(tblEmpleado.Rows[i]["idImagen"].ToString());
+           
+
                 objDatosEmpleado.documento = tblEmpleado.Rows[i]["documento"].ToString();
                 objDatosEmpleado.nombres = tblEmpleado.Rows[i]["nombres"].ToString();
                 objDatosEmpleado.apellidos = tblEmpleado.Rows[i]["apellidos"].ToString();
                 objDatosEmpleado.tipoEmpleado = tblEmpleado.Rows[i]["tipoEmpleado"].ToString();
-                objDatosEmpleado.idseguridadSocial = int.Parse(tblseguridadSocial.Rows[i]["idseguridadSocial"].ToString());
+                //objDatosEmpleado.idseguridadSocial = int.Parse(tblseguridadSocial.Rows[i]["idseguridadSocial"].ToString());
                 objDatosEmpleado.porcentajePension = tblseguridadSocial.Rows[i]["porcentajePension"].ToString();
                 objDatosEmpleado.porcentajeSalud = tblseguridadSocial.Rows[i]["porcentajePension"].ToString();
 

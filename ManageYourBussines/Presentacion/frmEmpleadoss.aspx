@@ -9,20 +9,19 @@
            </asp:ScriptManager>
            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                <ContentTemplate>--%>
-                   <asp:GridView ID="gvCar" runat="server" AutoGenerateColumns="False" class="table table-dark table-striped" OnRowCommand="gvCar_RowCommand" >
+                   <asp:GridView ID="gvemple" runat="server" AutoGenerateColumns="False" class="table table-dark table-striped" OnRowCommand="gvemple_RowCommand1" >
                        <Columns>
                            <asp:BoundField DataField="#" HeaderText="#">
                            <ControlStyle Width="10px" />
                            <ItemStyle Width="10px" />
                            </asp:BoundField>
-                           <asp:ImageField DataImageUrlField="imagen" HeaderText="imagen">
-                               <ControlStyle Height="60px" Width="60px" />
-                               <ItemStyle Height="100px" Width="100px" />
-                           </asp:ImageField>
-                           <asp:BoundField DataField="nombre" HeaderText="nombre" />
-                           <asp:BoundField DataField="describcion" HeaderText="describcion" />
-                           <asp:BoundField DataField="precio" HeaderText="precio" />
-                           <asp:BoundField DataField="cantidad" HeaderText="cantidad" />
+                               
+                           <asp:BoundField DataField="Documento" HeaderText="nombre" />
+                           <asp:BoundField DataField="Nombres" HeaderText="describcion" />
+                           <asp:BoundField DataField="Apellidos" HeaderText="precio" />
+                           <asp:BoundField DataField="Tipo empleado" HeaderText="cantidad" />
+                            <asp:BoundField DataField="Porcentaje pensión" HeaderText="cantidad" />
+                            <asp:BoundField DataField="Porcentaje salud" HeaderText="cantidad" />
                           
                            <asp:BoundField DataField="cantidadstock" HeaderText="cantidadstock" />
                            <asp:BoundField DataField="total" HeaderText="total" />

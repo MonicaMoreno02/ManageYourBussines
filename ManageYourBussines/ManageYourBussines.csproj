@@ -188,7 +188,6 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Logica\clEmpleadoD.cs" />
     <Compile Include="Logica\ClEmpleadoL.cs" />
     <Compile Include="Logica\clProductoL.cs" />
     <Compile Include="Logica\clUsuarioL.cs" />
