@@ -3,16 +3,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    
-<%--        <div class="btn btn">Inicio<br />
-            <br />
-            <br />
-        </div>--%>
-
+       <div  >
+       <asp:ImageButton ID="btn" runat="server" />
+       
+       <h1>Inicio</h1></div>
    
               
         <div class="btn from-top">
-            <asp:ImageButton ID="btn" runat="server" />
+           
             <br />
             Empleados</div>
         <div class="btn from-left">Ventas</div>
