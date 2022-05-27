@@ -94,8 +94,8 @@
                                     </g>
                                 </svg>
                             </a>
-
-                            <asp:Button ID="btncarrito" runat="server" Text="carrito" OnClick="btncarrito_Click" CssClass="btn btn-warning"  />
+                            <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Presentacion/recursos/images/anadir-al-carrito (1).png" Width="25" Height="25"  OnClick="btncarrito_Click" />
+                       <%--     <asp:Button ID="btncarrito" runat="server" Text="carrito" OnClick="btncarrito_Click" CssClass="btn btn-warning"  />--%>
                              <asp:Label ID="lbnumero" runat="server" Text=""></asp:Label>
 
                             <form class="form-inline">
