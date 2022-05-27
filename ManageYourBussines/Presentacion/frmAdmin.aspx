@@ -3,16 +3,16 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-       <div  >
-       <asp:ImageButton ID="btn" runat="server" />
-       
-       <h1>Inicio</h1></div>
-   
+      
+         <asp:Button ID="BtnInicio" runat="server" Text="INICIO" Height="47px" OnClick="BtnInicio_Click" Width="98px" BackColor="#AB8365" BorderColor="Black" BorderStyle="Outset" BorderWidth="2px" />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    
               
-        <div class="btn from-top">
-           
-            <br />
-            Empleados</div>
+        <div class="btn from-top">Empleados</div>
         <div class="btn from-left">Ventas</div>
         <div class="btn from-right">Clientes</div>
         <div class="btn from-center">Productos</div>
