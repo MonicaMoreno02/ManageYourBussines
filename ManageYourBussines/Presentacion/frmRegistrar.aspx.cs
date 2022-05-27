@@ -78,8 +78,8 @@ namespace ManageYourBussines.Presentacion
           
             
                 clUsuarioE objDatos = new clUsuarioE();
-                objDatos.email = txtEmail.Text;
-                objDatos.clave = txtClave.Text;
+                objDatos.email = txtCorreo.Text;
+                objDatos.clave = txtClaves.Text;
 
                 clUsuarioL objUsuariosL = new clUsuarioL();
                 clUsuarioE objDatosClien = new clUsuarioE();

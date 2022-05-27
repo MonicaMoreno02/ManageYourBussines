@@ -103,7 +103,7 @@
                                                 <div class="mb-3 mt-3">
                                                     <label for="email" class="form-label">Email:</label>
 
-                                                    <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" placeholder="Email usuario" TextMode="Email"></asp:TextBox>
+                                                    <asp:TextBox ID="txtCorreo" runat="server" CssClass="form-control" placeholder="Email usuario" TextMode="Email"></asp:TextBox>
 
 
                                                 </div>
@@ -111,7 +111,7 @@
                                                     <label for="pwd" class="form-label">Password:</label>
 
 
-                                                    <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control" placeholder="password" TextMode="Password"></asp:TextBox>
+                                                    <asp:TextBox ID="txtClaves" runat="server" CssClass="form-control" placeholder="password" TextMode="Password"></asp:TextBox>
 
 
                                                     <div class="container mt-3">
