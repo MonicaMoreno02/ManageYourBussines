@@ -1,55 +1,49 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="ManageYourBussines.index" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Presentacion/Site1.Master" AutoEventWireup="true" CodeBehind="frmRegistrar.aspx.cs" Inherits="ManageYourBussines.Presentacion.frmRegistrar" %>
 
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-<html>
+    <!DOCTYPE html>
+    <html>
 
-<head>
-    <!-- Basic -->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- Mobile Metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <!-- Site Metas -->
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
+    <head>
+        <!-- Basic -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- Mobile Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!-- Site Metas -->
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <link rel="shortcut icon" href="recursos/images/favicon.png" type="">
 
+        <title></title>
 
+        <!-- bootstrap core css -->
+        <link rel="stylesheet" type="text/css" href="recursos/css/bootstrap.css" />
 
-    <!--Insertamos el icono que se visualiza en la esquina de la pestaña en el navegador-->
-    <link rel="shortcut icon" href="recursos/images/sillaIcono.png" type="">
-    <!--Añadimos el titulo-->
-    <title>Muebles San José</title>
+        <!--owl slider stylesheet -->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+        <!-- nice select  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
+        <!-- font awesome style -->
+        <link href="recursos/css/font-awesome.min.css" rel="stylesheet" />
 
+        <!-- Custom styles for this template -->
+        <link href="recursos/css/style.css" rel="stylesheet" />
+        <!-- responsive style -->
+        <link href="recursos/css/responsive.css" rel="stylesheet" />
 
-
-    <!-- bootstrap core css -->
-    <link rel="stylesheet" type="text/css" href="recursos/css/bootstrap.css" />
-
-    <!--owl slider stylesheet -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-    <!-- nice select  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
-    <!-- font awesome style -->
-    <link href="recursos/css/font-awesome.min.css" rel="stylesheet" />
-
-  <!-- Custom styles for this template -->
-  <link href="recursos/css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="recursos/css/responsive.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!--validacion para formulario-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-  <form id="form1" runat="server">
-    <!-- Custom styles for this template -->
-    <link href="recursos/css/style.css" rel="stylesheet" />
-    <!-- estilo para que sea responsive -->
-    <link href="recursos/css/responsive.css" rel="stylesheet" />
+    </head>
 
-</head>
+    <body>
 
-
-<body>
-    <!--Añadimos el fondo-->
+ <!--Añadimos el fondo-->
     <div class="hero_area">
         <div class="bg-box">
             <img src="recursos/images/fondo5.jpeg" alt="">
@@ -80,7 +74,8 @@
                             </li>
 
 
-                             <div class="container mt-3">
+                            
+                            <div class="container mt-3">
 
 
 
@@ -103,12 +98,12 @@
                                         <!-- Modal body  el inicio de sesion  para cliente y administraador -->
                                         <div class="modal-body">
 
-                                           
+                                          
 
                                                 <div class="mb-3 mt-3">
                                                     <label for="email" class="form-label">Email:</label>
 
-                                                    <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="Email usuario" TextMode="Email"></asp:TextBox>
+                                                    <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" placeholder="Email usuario" TextMode="Email"></asp:TextBox>
 
 
                                                 </div>
@@ -116,14 +111,14 @@
                                                     <label for="pwd" class="form-label">Password:</label>
 
 
-                                                    <asp:TextBox ID="txtClave" runat="server" CssClass="form-control" placeholder="password" TextMode="Password"></asp:TextBox>
+                                                    <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control" placeholder="password" TextMode="Password"></asp:TextBox>
 
 
                                                     <div class="container mt-3">
                                                     </div>
 
                                                     <div class=" col mt-3 mb-3">
-                                                        <asp:Label ID="lblMensaje" runat="server" Text=""></asp:Label>
+                                                        <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
 
 
                                                     </div>
@@ -132,9 +127,8 @@
                                                     <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" onClick="btnIngresar_Click" /></center>
                                                 <br />
                                                 <center>
-                                                    <asp:Button ID="btnRecuperar" runat="server" Text="Recuperar Contraseña" onClick="btnRecuperar_Click" />
-                                         
-
+                                                    <asp:Button ID="btnRecuperar" runat="server" Text="Recuperar Contraseña" OnClick="btnRecuperar_Click"  />
+                                      
 
                                         </div>
 
@@ -150,10 +144,14 @@
 
                             <%-- continua con los  item de  navegacion --%>
                             <li class="nav-item">
-          <a class="nav-link" href="Presentacion/frmRegistrar.aspx">Registrarse</a>
+          <a class="nav-link" href="frmRegistrar.aspx">Registrarse</a>
       </li>
 
-                
+
+
+                            <!--<li class="nav-item">
+                <a class="nav-link" href="book.html">Book Table</a>
+              </li>-->
                         </ul>
                         <div class="user_option">
                             <a href="" class="user_link">
@@ -303,182 +301,108 @@
 
     <!-- offer section -->
 
-    <section class="offer_section layout_padding-bottom">
-        <div class="offer_container">
-            <div class="container ">
-                <div class="row">
-                    <div class="col-md-6  ">
-                        <div class="box ">
-                            <div class="img-box">
-                                <img src="recursos/images/sillamesedora.png" alt="">
-                            </div>
-                            <div class="detail-box">
-                                <h5>Jueves de Descuentos
-                                </h5>
-                                <h6>
-                                    <span>15%</span> Off
-                                </h6>
-                                <a href="">Hacer Pedido
-                                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background: new 0 0 456.029 456.029;" xml:space="preserve">
-                                        <g>
-                                            <g>
-                                                <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
-                     c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
-                                            </g>
-                                        </g>
-                                        <g>
-                                            <g>
-                                                <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
-                     C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
-                     c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
-                     C457.728,97.71,450.56,86.958,439.296,84.91z" />
-                                            </g>
-                                        </g>
-                                        <g>
-                                            <g>
-                                                <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
-                     c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
-                                            </g>
-                                        </g>
-                                        <g>
-                                        </g>
-                                        <g>
-                                        </g>
-                                        <g>
-                                        </g>
-                                        <g>
-                                        </g>
-                                        <g>
-                                        </g>
-                                        <g>
-                                        </g>
-                                        <g>
-                                        </g>
-                                        <g>
-                                        </g>
-                                        <g>
-                                        </g>
-                                        <g>
-                                        </g>
-                                        <g>
-                                        </g>
-                                        <g>
-                                        </g>
-                                        <g>
-                                        </g>
-                                        <g>
-                                        </g>
-                                        <g>
-                                        </g>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6  ">
-                        <div class="box ">
-                            <div class="img-box">
-                                <img src="recursos/images/biblioteca1.png" alt="">
-                            </div>
-                            <div class="detail-box">
-                                <h5>Super Sabados
-                                </h5>
-                                <h6>
-                                    <span>20%</span> Off
-                                </h6>
-                                <a href="">Hacer Pedido
-                                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background: new 0 0 456.029 456.029;" xml:space="preserve">
-                                        <g>
-                                            <g>
-                                                <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
-                     c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
-                                            </g>
-                                        </g>
-                                        <g>
-                                            <g>
-                                                <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
-                     C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
-                     c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
-                     C457.728,97.71,450.56,86.958,439.296,84.91z" />
-                                            </g>
-                                        </g>
-                                        <g>
-                                            <g>
-                                                <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
-                     c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
-                                            </g>
-                                        </g>
-                                        <g>
-                                        </g>
-                                        <g>
-                                        </g>
-                                        <g>
-                                        </g>
-                                        <g>
-                                        </g>
-                                        <g>
-                                        </g>
-                                        <g>
-                                        </g>
-                                        <g>
-                                        </g>
-                                        <g>
-                                        </g>
-                                        <g>
-                                        </g>
-                                        <g>
-                                        </g>
-                                        <g>
-                                        </g>
-                                        <g>
-                                        </g>
-                                        <g>
-                                        </g>
-                                        <g>
-                                        </g>
-                                        <g>
-                                        </g>
-                                    </svg>
-                                </a>
+
+
+
+
+
+
+        <section class="book_section layout_padding">
+            <div class="container">
+                <div class="heading_container">
+                    <h2>REGISTRARSE...
+                    </h2>
+                </div>
+                <div class="row" >
+                    <div class="col-md-6">
+                        <div  class="was-validated">
+
+
+                            <label for="documento" class="form-label">Documento:</label>
+
+                            <asp:TextBox ID="txtDocumento" runat="server" Class="form-control" name="uname" required placeholder="Documento " TextMode="Number"></asp:TextBox>
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Complete este campo.</div>
+
+
+
+
+
+
+
+                            <label for="nombres" class="form-label">Nombres:</label>
+
+                            <asp:TextBox ID="txtNombres" runat="server" CssClass="form-control" name="uname" required placeholder="Nombres" TextMode="MultiLine"></asp:TextBox>
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Complete este Campo.</div>
+
+
+
+                            <label for="apellidos" class="form-label">Apellidos:</label>
+
+                            <asp:TextBox ID="txtApellidos" runat="server" CssClass="form-control" name="uname" required placeholder="Apellidos: " TextMode="MultiLine"></asp:TextBox>
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Complete este Campo.</div>
+
+
+
+                            <label for="telefono " class="form-label">Telefono:</label>
+
+                            <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control" name="uname" required placeholder="telefono " TextMode="Number" AutoCompleteType="Cellular"></asp:TextBox>
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Complete este Campo.</div>
+
+
+
+                            <label for="direccion " class="form-label">Direccion :</label>
+
+                            <asp:TextBox ID="txtDireccion" runat="server" CssClass="form-control" name="uname" required placeholder="Direccion " TextMode="MultiLine"></asp:TextBox>
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Complete este Campo.</div>
+
+
+
+                            <label for="email " class="form-label">Email :</label>
+
+                            <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" name="uname" required placeholder="Email " TextMode="Email" AutoCompleteType="Email"></asp:TextBox>
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Complete este Campo.</div>
+
+                              <label for="clave " class="form-label">Clave :</label>
+
+                            <asp:TextBox ID="txtClave" runat="server" CssClass="form-control" name="uname"  placeholder="clave  " TextMode="Password"></asp:TextBox>
+                         <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Complete este Campo.</div>
+                          
+
+<%--                                            <div class=" col mt-3 mb-3">
+                   <%-- <asp:HyperLink ID="hplRegistro" runat="server" NavigateUrl="~/presentacion/frmRegistrarUsuarios.aspx">Registrar</asp:HyperLink>--%>
+                    <asp:Label ID="lblMensaje" runat="server" Text=""></asp:Label>
+                   
+           <%--                 
+
+
+
+
+
+         --%>                       <%--     <label for="clave " class="form-label">clave :</label>
+
+              <asp:TextBox ID="txtClave" runat="server" CssClass="form-control"  name="uname" required  placeholder="clave " TextMode="MultiLine" AutoCompleteType="clave"></asp:TextBox>
+                      <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Complete este Campo.</div>--%>
+
+  <center>
+                                <asp:Button ID="btnRegistrar" runat="server" Text="Registar" OnClick="btnRegistrar_Click" />  <center>
+
                             </div>
                         </div>
+
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
+        </section>
+        <!-- end book section -->
 
-    <!-- end offer section -->
-
-    <!-- food section -->
-
-  <section class="food_section layout_padding-bottom">
-    <div class="container">
-      <div class="heading_container heading_center">
-       <h2>
-          Nuestros Productos
-        </h2>
-        <div id="BlockItemSubMenu">
-	<asp:Repeater id="Repeater2" runat="server">
-		<ItemTemplate>
-			<div class="ItemSubMenu">
-				<asp:Literal ID="Imagen" runat="server" /><img src="<%#Eval("imagen") %>" width="200" height="200" /></td></tr><br>
-                <asp:Literal ID="nombre" runat="server" /> <%#Eval("nombre") %><br>
-                <asp:Literal ID="precio" runat="server" />$ <%#Eval("precio") %><br>
-                <asp:Button ID="btnDetalles" runat="server" Text="Detalles:" CssClass="btn btn-success" Onclick="btnDetalles_Click"/>
-			</div>				
-		</ItemTemplate>
-	</asp:Repeater>
-</div> 
- </div>
-</div>
-</section>      
-
-    <!-- end food section -->
-
-    <!-- about section -->
-
-    <section class="about_section layout_padding">
+  <section class="about_section layout_padding">
         <div class="container  ">
 
             <div class="row">
@@ -516,30 +440,32 @@
 
    
     <!-- footer section -->
+        <!-- footer section -->
 
-  <!-- jQery -->
-  <script src="recursos/js/jquery-3.4.1.min.js"></script>
-  <!-- popper js -->
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
-  <!-- bootstrap js -->
-  <script src="recursos/js/bootstrap.js"></script>
-  <!-- owl slider -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-  </script>
-  <!-- isotope js -->
-  <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
-  <!-- nice select -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
-  <!-- custom js -->
-  <script src="recursos/js/custom.js"></script>
-  <!-- Google Map -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
-  </script>
-  <!-- End Google Map -->
-    <script src="Presentacion/Recursos/js/datosDatable.js"></script>
-</body>
-</form>
-</html>
+        <!-- jQery -->
+        <script src="recursos/js/jquery-3.4.1.min.js"></script>
+        <!-- popper js -->
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+        </script>
+        <!-- bootstrap js -->
+        <script src="recursos/js/bootstrap.js"></script>
+        <!-- owl slider -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+        </script>
+        <!-- isotope js -->
+        <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
+        <!-- nice select -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+        <!-- custom js -->
+        <script src="recursos/js/custom.js"></script>
+        <!-- Google Map -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+        </script>
+        <!-- End Google Map -->
 
-        
+    </body>
+
+    </html>
+
+
+</asp:Content>
