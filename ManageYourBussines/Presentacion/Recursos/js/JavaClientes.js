@@ -21,7 +21,7 @@ function agregarFilas(datos) {
 function sendDataAjax() {
     $.ajax({
         type: "POST",
-        url: "frmAdminProductos.aspx/mtdListarProducto",
+        url: "frmClientes.aspx/mtdListarP",
         data: '{}',
         contentType: "application/json; charset=utf-8",
         dataType: "json",

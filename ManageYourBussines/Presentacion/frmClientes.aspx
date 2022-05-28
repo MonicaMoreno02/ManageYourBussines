@@ -9,7 +9,7 @@
         <div class="btn fondo">
             <div class="container">
 
-                <table class="table table-hover " id="dtCliente">
+                <table class="table table-hover " id="dtCliente" >
                     <thead>
                         <tr>
                             <th>id</th>
