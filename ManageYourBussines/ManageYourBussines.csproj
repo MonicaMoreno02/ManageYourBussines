@@ -13,7 +13,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ManageYourBussines</RootNamespace>
     <AssemblyName>ManageYourBussines</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort />
@@ -82,8 +82,10 @@
     <Content Include="index.aspx" />
     <Content Include="Presentacion\frmAbout.aspx" />
     <Content Include="Presentacion\frmcarrito.aspx" />
+    <Content Include="Presentacion\frmClientes.aspx" />
     <Content Include="Presentacion\frmdetalles.aspx" />
     <Content Include="Presentacion\frmAdmin.aspx" />
+    <Content Include="Presentacion\frmEmpleados.aspx" />
     <Content Include="Presentacion\frmHome.aspx" />
     <Content Include="Presentacion\frmInventario.aspx" />
     <Content Include="Presentacion\frmProductos.aspx" />
@@ -229,6 +231,13 @@
     <Compile Include="Presentacion\frmcarrito.aspx.designer.cs">
       <DependentUpon>frmcarrito.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\frmClientes.aspx.cs">
+      <DependentUpon>frmClientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmClientes.aspx.designer.cs">
+      <DependentUpon>frmClientes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\frmdetalles.aspx.cs">
       <DependentUpon>frmdetalles.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -242,6 +251,13 @@
     </Compile>
     <Compile Include="Presentacion\frmAdmin.aspx.designer.cs">
       <DependentUpon>frmAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmEmpleados.aspx.cs">
+      <DependentUpon>frmEmpleados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmEmpleados.aspx.designer.cs">
+      <DependentUpon>frmEmpleados.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmHome.aspx.cs">
       <DependentUpon>frmHome.aspx</DependentUpon>

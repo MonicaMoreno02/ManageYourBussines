@@ -1,7 +1,9 @@
-﻿.btn {
+﻿
+
+.btn {
     position: relative;
     padding: 1.4rem 4.2rem;
-    padding-right:3.1rem;
+    padding-right: 3.1rem;
     font-size: 2rem;
     color: var(--inv);
     letter-spacing: 1rem;
@@ -13,7 +15,13 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    /*text-decoration: none;*/
 }
+
+    .link {
+        color: white;
+        text-decoration:none;
+    }
 
     .btn:before,
     .btn:after {
@@ -23,6 +31,7 @@
         transition: inherit;
         z-index: -1;
     }
+
 
     .btn:hover {
         color: var(--def);
@@ -49,6 +58,7 @@
     left: 0;
     height: 0;
     width: 100%;
+   /* text-decoration: none;*/
 }
 
 .from-top:before {
@@ -56,16 +66,19 @@
     border: 3px solid var(--inv);
     border-top: 0;
     border-bottom: 0;
+    /*text-decoration: none;*/
 }
 
 .from-top:after {
     top: 0;
     height: 0;
+    /*text-decoration: none;*/
 }
 
 .from-top:hover:before,
 .from-top:hover:after {
     height: 100%;
+    /*text-decoration: none;*/
 }
 
 

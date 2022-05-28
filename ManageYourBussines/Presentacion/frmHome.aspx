@@ -51,7 +51,7 @@
 
                                     </li>
 
-                                    <li><a class="dropdown-item" href="../index.aspx">cerar sesion </a></li>
+                                    <li><a class="dropdown-item" href="../index.aspx">cerrar sesion </a></li>
 
                                 </ul>
 
