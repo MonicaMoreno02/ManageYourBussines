@@ -18,37 +18,41 @@
     /*text-decoration: none;*/
 }
 
-    .link {
-        color: white;
-        text-decoration:none;
+.fondo {
+    background-image: url(../images/fondoAdmin.jpg)
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+}
+
+.btn:before,
+.btn:after {
+    content: '';
+    position: absolute;
+    -webkit-transition: inherit;
+    transition: inherit;
+    z-index: -1;
+}
+
+
+.btn:hover {
+    color: var(--def);
+    -webkit-transition-delay: .5s;
+    transition-delay: .5s;
+}
+
+    .btn:hover:before {
+        -webkit-transition-delay: 0s;
+        transition-delay: 0s;
     }
 
-    .btn:before,
-    .btn:after {
-        content: '';
-        position: absolute;
-        -webkit-transition: inherit;
-        transition: inherit;
-        z-index: -1;
+    .btn:hover:after {
+        background: var(--inv);
+        -webkit-transition-delay: .35s;
+        transition-delay: .35s;
     }
-
-
-    .btn:hover {
-        color: var(--def);
-        -webkit-transition-delay: .5s;
-        transition-delay: .5s;
-    }
-
-        .btn:hover:before {
-            -webkit-transition-delay: 0s;
-            transition-delay: 0s;
-        }
-
-        .btn:hover:after {
-            background: var(--inv);
-            -webkit-transition-delay: .35s;
-            transition-delay: .35s;
-        }
 
 
 /* From Top */
@@ -58,7 +62,7 @@
     left: 0;
     height: 0;
     width: 100%;
-   /* text-decoration: none;*/
+    /* text-decoration: none;*/
 }
 
 .from-top:before {
@@ -207,7 +211,7 @@ body {
     display: flex;
     -webkit-box-pack: center;
     /*justificado a la izquierda*/
-    justify-content:left;
+    justify-content: left;
     -webkit-box-align: center;
     align-items: safe center;
     -webkit-box-orient: vertical;
@@ -215,9 +219,9 @@ body {
     flex-direction: column-reverse|;
     height: 100vh;
     width: 100%;
-    background-image:url(../images/fondo_admin.jpg);
+    background-image: url(../images/fondo_admin.jpg);
     background-attachment: fixed;
-    margin-left:100px;
+    margin-left: 100px;
 }
 
 
@@ -232,5 +236,6 @@ div {
 }
 
     div:last-child {
-        margin-bottom:0px;
+        margin-bottom: 0px;
     }
+

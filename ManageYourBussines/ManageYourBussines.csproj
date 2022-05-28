@@ -106,6 +106,7 @@
     <Content Include="Presentacion\recursos\images\fondo2.jpeg" />
     <Content Include="Presentacion\recursos\images\fondo3.jpg" />
     <Content Include="Presentacion\recursos\images\fondo5.jpeg" />
+    <Content Include="Presentacion\recursos\images\fondoAdmin.jpg" />
     <Content Include="Presentacion\recursos\images\fondo_admin.jpg" />
     <Content Include="Presentacion\recursos\images\icono3.png" />
     <Content Include="Presentacion\recursos\images\iconoEscritorio.png" />
@@ -126,6 +127,17 @@
     <Content Include="Presentacion\recursos\images\Taburetes.png" />
     <Content Include="Presentacion\recursos\js\bootstrap.js" />
     <Content Include="Presentacion\recursos\js\custom.js" />
+    <Content Include="Presentacion\recursos\js\datatables\dataTables.bootstrap4.css" />
+    <Content Include="Presentacion\recursos\js\datatables\dataTables.bootstrap4.js" />
+    <Content Include="Presentacion\recursos\js\datatables\dataTables.bootstrap4.min.css" />
+    <Content Include="Presentacion\recursos\js\datatables\dataTables.bootstrap4.min.js" />
+    <Content Include="Presentacion\recursos\js\datatables\jquery.dataTables.js" />
+    <Content Include="Presentacion\recursos\js\datatables\jquery.dataTables.min.js" />
+    <Content Include="Presentacion\recursos\js\demo\chart-area-demo.js" />
+    <Content Include="Presentacion\recursos\js\demo\chart-bar-demo.js" />
+    <Content Include="Presentacion\recursos\js\demo\chart-pie-demo.js" />
+    <Content Include="Presentacion\recursos\js\demo\datatables-demo.js" />
+    <Content Include="Presentacion\recursos\js\JavaClientes.js" />
     <Content Include="Presentacion\recursos\js\jquery-3.4.1.min.js" />
     <Content Include="Presentacion\Recursos\js\datosDatable.js" />
     <Content Include="recuperar.aspx" />
@@ -198,11 +210,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\clCarritoD.cs" />
+    <Compile Include="Datos\clClienteD.cs" />
     <Compile Include="Datos\clConexion.cs" />
     <Compile Include="Datos\clProductoD.cs" />
     <Compile Include="Datos\clUserDao.cs" />
     <Compile Include="Datos\clUsuarioD.cs" />
     <Compile Include="Entidades\clCarritoE.cs" />
+    <Compile Include="Entidades\clClienteE.cs" />
     <Compile Include="Entidades\clProductoE.cs" />
     <Compile Include="Entidades\clUsuarioE.cs" />
     <Compile Include="index.aspx.cs">
@@ -212,6 +226,7 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Logica\clClienteL.cs" />
     <Compile Include="Logica\clProductoL.cs" />
     <Compile Include="Logica\clUsuarioL.cs" />
     <Compile Include="Logica\clCarritoL.cs" />
