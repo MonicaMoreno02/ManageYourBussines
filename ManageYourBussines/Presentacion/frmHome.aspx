@@ -8,6 +8,7 @@
         <div class="bg-box">
             <img src="recursos/images/fondo5.jpeg" alt="">
         </div>
+        <asp:Label ID="LbidC" runat="server" Text="Label"></asp:Label>
         <!-- header section strats -->
         <header class="header_section">
             <div class="container">

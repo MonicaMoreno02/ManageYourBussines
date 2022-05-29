@@ -1,5 +1,6 @@
 ﻿using ManageYourBussines.Entidades;
 using ManageYourBussines.Logica;
+using ManageYourBussines.Presentacion;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -49,12 +50,14 @@ namespace ManageYourBussines
                 //lblUsuario.Text = objDatosClien.nombres + " " + objDatosClien.apellidos;
 
                 //Session["usuario"] = objDatos.nombres + " " + objDatos.apellidos;
-                Response.Redirect("Presentacion/frmHome.aspx");
+               
+                int idClient = objDatosClien.idCliente;
+                Response.Redirect("Presentacion/frmHome.aspx?idC="+ idClient);
 
                 //lblUsuario.Text = clSesionE.nombres + " " + clSesionE.apellidos;
 
-
-
+               
+               
             }
             else
             {

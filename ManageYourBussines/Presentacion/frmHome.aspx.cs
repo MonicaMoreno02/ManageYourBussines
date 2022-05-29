@@ -14,26 +14,24 @@ namespace ManageYourBussines.Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-         
+            string valor = Convert.ToString(Request.QueryString["idC"]);
+            LbidC.Attributes.Add("style", "DISPLAY:none");
+            LbidC.Text = valor;
+
+            int idClien = int.Parse(valor);
+
+            clCarritoE objDatosPro = new clCarritoE();
+            objDatosPro.idcliente = idClien;
+            clCarritoL objCarL = new clCarritoL();
+            int numer = objCarL.Mtdcar(objDatosPro);
+            lbnumero.Text = numer.ToString();
 
             if (!this.IsPostBack)
             {
                 this.BindRepeater();
             }
 
-
-
-            int cliente = 2;
-
-
-            clCarritoE objDatosPro = new clCarritoE();
-            objDatosPro.idcliente = cliente;
-            clCarritoL objCarL = new clCarritoL();
-            int numer = objCarL.Mtdcar(objDatosPro);
-            lbnumero.Text = numer.ToString();
-
-
-
+       
 
         }
         public void BindRepeater()
@@ -61,18 +59,22 @@ namespace ManageYourBussines.Presentacion
 
             int idProducto = int.Parse(lbl.Text);
 
+            string valor = Convert.ToString(Request.QueryString["idC"]);
+            LbidC.Attributes.Add("style", "DISPLAY:none");
+            LbidC.Text = valor;
 
-            int cliente = 1;
+            int idClien = int.Parse(valor);
+
 
             clCarritoE objDatosptod = new clCarritoE();
-            objDatosptod.idcliente = cliente;
+            objDatosptod.idcliente = idClien;
             objDatosptod.idproducto = idProducto;
             clCarritoL objprod = new clCarritoL();
             int numer = objprod.MtdcarPro(objDatosptod);
 
             if (numer == 0)
-            { 
-                clProductoE objProducto =new clProductoE();
+            {
+                clProductoE objProducto = new clProductoE();
                 objProducto.idProducto = idProducto;
                 clProductoL objProductoL = new clProductoL();
                 List<clProductoE> listar = new List<clProductoE>();
@@ -81,10 +83,10 @@ namespace ManageYourBussines.Presentacion
                 string nombre = listar[0].nombre;
                 string describsion = listar[0].descripcion;
                 float precio = listar[0].precio;
-                int cantidadstock =listar[0].cantidadStock;
+                int cantidadstock = listar[0].cantidadStock;
                 string Imagen = listar[0].imagen;
                 int catidad = 1;
-                int idcliente = 1;
+               
 
 
 
@@ -96,7 +98,7 @@ namespace ManageYourBussines.Presentacion
                 clCarritoE objcarrito = new clCarritoE();
 
                 objcarrito.idproducto = idProducto;
-                objcarrito.idcliente = idcliente;
+                objcarrito.idcliente = idClien;
                 objcarrito.describcion = describsion;
                 objcarrito.precio = precio;
                 objcarrito.cantidadstock = cantidadstock;
@@ -139,7 +141,12 @@ namespace ManageYourBussines.Presentacion
 
         protected void btncarrito_Click(object sender, EventArgs e)
         {
-            Response.Redirect("frmcarrito.aspx");
+            string valor = Convert.ToString(Request.QueryString["idC"]);
+            LbidC.Attributes.Add("style", "DISPLAY:none");
+            LbidC.Text = valor;
+
+            int idC = int.Parse(valor);
+            Response.Redirect("frmcarrito.aspx?idC="+idC);
         }
 
 
