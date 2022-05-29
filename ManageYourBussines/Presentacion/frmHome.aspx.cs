@@ -117,8 +117,10 @@ namespace ManageYourBussines.Presentacion
                 {
                     ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('jhhh');", true);
                 }
+               
 
             }
+            ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('El producto ya esta agregado');", true);
         }
 
         protected void btnDetalles_Click(object sender, EventArgs e)
