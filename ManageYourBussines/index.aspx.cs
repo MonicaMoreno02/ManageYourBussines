@@ -50,11 +50,11 @@ namespace ManageYourBussines
                 //lblUsuario.Text = objDatosClien.nombres + " " + objDatosClien.apellidos;
 
                 //Session["usuario"] = objDatos.nombres + " " + objDatos.apellidos;
-               
+                Session["idc"] = objDatosClien.idCliente;
                 int idClient = objDatosClien.idCliente;
-                Response.Redirect("Presentacion/frmHome.aspx?idC="+ idClient);
+                Response.Redirect("Presentacion/frmHome.aspx");
 
-                //lblUsuario.Text = clSesionE.nombres + " " + clSesionE.apellidos;
+              
 
                
                

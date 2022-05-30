@@ -14,11 +14,15 @@ namespace ManageYourBussines.Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string valor = Convert.ToString(Request.QueryString["idC"]);
-            LbidC.Attributes.Add("style", "DISPLAY:none");
-            LbidC.Text = valor;
 
-            int idClien = int.Parse(valor);
+            string idc = Convert.ToString(Session["idc"]);
+            LbidC.Text = idc;
+
+            int idClien = int.Parse(idc);
+
+           
+
+            
 
             clCarritoE objDatosPro = new clCarritoE();
             objDatosPro.idcliente = idClien;
@@ -49,7 +53,7 @@ namespace ManageYourBussines.Presentacion
         public void Getcarrito(object sender, EventArgs e)
         {  ///boton carrito
 
-
+           
 
             Button btn = (Button)sender;
             RepeaterItem item = (RepeaterItem)btn.NamingContainer;
@@ -59,11 +63,10 @@ namespace ManageYourBussines.Presentacion
 
             int idProducto = int.Parse(lbl.Text);
 
-            string valor = Convert.ToString(Request.QueryString["idC"]);
-            LbidC.Attributes.Add("style", "DISPLAY:none");
-            LbidC.Text = valor;
+            string idc = Convert.ToString(Session["idc"]);
+            LbidC.Text = idc;
 
-            int idClien = int.Parse(valor);
+            int idClien = int.Parse(idc);
 
 
             clCarritoE objDatosptod = new clCarritoE();
@@ -141,12 +144,13 @@ namespace ManageYourBussines.Presentacion
 
         protected void btncarrito_Click(object sender, EventArgs e)
         {
-            string valor = Convert.ToString(Request.QueryString["idC"]);
-            LbidC.Attributes.Add("style", "DISPLAY:none");
-            LbidC.Text = valor;
+            string idc = Convert.ToString(Session["idc"]);
+            LbidC.Text = idc;
 
-            int idC = int.Parse(valor);
-            Response.Redirect("frmcarrito.aspx?idC="+idC);
+            int idClien = int.Parse(idc);
+          
+
+            Response.Redirect("frmcarrito.aspx");
         }
 
 
