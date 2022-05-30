@@ -13,11 +13,12 @@ namespace ManageYourBussines.Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string valor = Convert.ToString(Request.QueryString["idC"]);
-            lbidC.Attributes.Add("style", "DISPLAY:none");
-            lbidC.Text = valor;
 
-            int idClien = int.Parse(valor);
+            string idc = Convert.ToString(Session["idc"]);
+            int idClien = int.Parse(idc);
+         
+
+            
             clCarritoE objcarrito = new clCarritoE();
             objcarrito.idcliente = idClien;
             clCarritoL objCarritoL = new clCarritoL();
@@ -40,11 +41,10 @@ namespace ManageYourBussines.Presentacion
             if (e.CommandName == "eliminar")
             {
 
-                string valor = Convert.ToString(Request.QueryString["idC"]);
-                lbidC.Attributes.Add("style", "DISPLAY:none");
-                lbidC.Text = valor;
+                string idc = Convert.ToString(Session["idc"]);
+                int idClien = int.Parse(idc);
 
-                int idClien = int.Parse(valor);
+
                 clCarritoE objcarrito = new clCarritoE();
                 objcarrito.idcliente = idClien;
                 clCarritoL objCarritoL = new clCarritoL();
@@ -81,18 +81,16 @@ namespace ManageYourBussines.Presentacion
                         ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('error');", true);
 
                     }
-                    string valor1 = Convert.ToString(Request.QueryString["idC"]);
-                    lbidC.Attributes.Add("style", "DISPLAY:none");
-                    lbidC.Text = valor;
+                    
 
-                    int idClien1 = int.Parse(valor);
+                   
                     clCarritoE objcarrito1 = new clCarritoE();
                     objcarrito1.idcliente = idClien;
                     clCarritoL objCarritoL1 = new clCarritoL();
                     DataTable dt = new DataTable();
                     List<clCarritoE> listarCar1 = new List<clCarritoE>();
                     //Session["objeto"] = objCarritoL.mtdListcar();
-                    carrito = objCarritoL.mtdListcar(objcarrito);
+                   dt= objCarritoL.mtdListcar(objcarrito);
 
 
 
@@ -114,11 +112,10 @@ namespace ManageYourBussines.Presentacion
                 cantidad = cantidad + 1;
                 if (stock1>=cantidad)
                 {
-                    string valor1 = Convert.ToString(Request.QueryString["idC"]);
-                    lbidC.Attributes.Add("style", "DISPLAY:none");
-                    lbidC.Text = valor1;
+                    string idc = Convert.ToString(Session["idc"]);
+                    int idClien = int.Parse(idc);
 
-                    int idClien = int.Parse(valor1);
+                   
                     clCarritoE objcarrito = new clCarritoE();
                     objcarrito.idcliente = idClien;
                     clCarritoL objCarritoL = new clCarritoL();
@@ -144,18 +141,20 @@ namespace ManageYourBussines.Presentacion
 
                         int filas = objcarritoL.mtdaumentar(objcarritos);
 
-                        string valor2 = Convert.ToString(Request.QueryString["idC"]);
-                        lbidC.Attributes.Add("style", "DISPLAY:none");
-                        lbidC.Text = valor1;
 
-                        int idClien2 = int.Parse(valor1);
-                        clCarritoE objcarrito2 = new clCarritoE();
-                        objcarrito2.idcliente = idClien;
-                        clCarritoL objCarritoL2 = new clCarritoL();
-                        DataTable carrito2 = new DataTable();
-                        List<clCarritoE> listarCar2 = new List<clCarritoE>();
+                        string idc1 = Convert.ToString(Session["idc"]);
+                        int idClien1 = int.Parse(idc);
+
+
+                        clCarritoE objcarrito1 = new clCarritoE();
+                        objcarrito.idcliente = idClien;
+                        clCarritoL objCarritoL1 = new clCarritoL();
+                        DataTable carrito1 = new DataTable();
+                        List<clCarritoE> listarCar1 = new List<clCarritoE>();
                         //Session["objeto"] = objCarritoL.mtdListcar();
-                        carrito = objCarritoL.mtdListcar(objcarrito);
+                        carrito1 = objCarritoL.mtdListcar(objcarrito);
+
+
 
                     }
                 }
@@ -170,11 +169,9 @@ namespace ManageYourBussines.Presentacion
                 cantidad = cantidad - 1;
                 if (cantidad>=0)
                 {
-                    string valor1 = Convert.ToString(Request.QueryString["idC"]);
-                    lbidC.Attributes.Add("style", "DISPLAY:none");
-                    lbidC.Text = valor1;
+                    string idc = Convert.ToString(Session["idc"]);
+                    int idClien = int.Parse(idc);
 
-                    int idClien = int.Parse(valor1);
                     clCarritoE objcarrito = new clCarritoE();
                     objcarrito.idcliente = idClien;
                     clCarritoL objCarritoL = new clCarritoL();
@@ -198,7 +195,7 @@ namespace ManageYourBussines.Presentacion
 
                         int filas = objcarritoL.mtdaumentar(objcarritos);
 
-                        int idClien2 = int.Parse(valor1);
+                      
                         clCarritoE objcarrito2 = new clCarritoE();
                         objcarrito2.idcliente = idClien;
                         clCarritoL objCarritoL2 = new clCarritoL();
