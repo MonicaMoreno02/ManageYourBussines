@@ -17,7 +17,7 @@ namespace ManageYourBussines.Presentacion
 
 
                 clProductoL objProductoL = new clProductoL();
-                Repeater2.DataSource = objProductoL.mtdListarP();
+                Repeater2.DataSource = objProductoL.mtdListarProducto();
                 Repeater2.DataBind();
             }
         }
@@ -33,6 +33,15 @@ namespace ManageYourBussines.Presentacion
             int idProducto = int.Parse(lbl.Text);
 
             Response.Redirect("frmProductos2.aspx?idP=" + idProducto);
+        }
+
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ListItem i;
+            i = new ListItem("Menor Precio");
+            ddlLista.Items.Add(i);
+            i = new ListItem("Mayor Precio");
+            ddlLista.Items.Add(i);
         }
     }
 }

@@ -24,24 +24,6 @@ namespace ManageYourBussines.Presentacion
         protected global::System.Web.UI.WebControls.Image Image1;
 
         /// <summary>
-        /// Control Image2.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image2;
-
-        /// <summary>
-        /// Control Image3.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image3;
-
-        /// <summary>
         /// Control lblID.
         /// </summary>
         /// <remarks>
@@ -78,21 +60,21 @@ namespace ManageYourBussines.Presentacion
         protected global::System.Web.UI.WebControls.Label lbMaterial;
 
         /// <summary>
-        /// Control btnCarrito.
+        /// Control Button1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCarrito;
+        protected global::System.Web.UI.WebControls.Button Button1;
 
         /// <summary>
-        /// Control btnHome.
+        /// Control Button2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnHome;
+        protected global::System.Web.UI.WebControls.Button Button2;
     }
 }

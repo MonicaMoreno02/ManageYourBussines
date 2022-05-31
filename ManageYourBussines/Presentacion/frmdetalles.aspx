@@ -8,12 +8,18 @@
   </div>
 </nav>
 <br />
+    <asp:DropDownList ID="ddlLista" runat="server" Height="31px" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" Width="140px">
+        <asp:ListItem Selected="True"></asp:ListItem>
+        <asp:ListItem>
+           
+        </asp:ListItem>
+    </asp:DropDownList>
   <div id="BlockItemSubMenu">
 	
         <asp:Repeater ID="Repeater2" runat="server">
             <ItemTemplate>
 			<div class="ItemSubMenu">
-
+                
                <%-- <asp:Label ID="lblidproducto" runat="server" Text="<%#Eval("idProducto") %>"></asp:Label>--%>
 
             
