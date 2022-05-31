@@ -217,6 +217,7 @@
     <Compile Include="Datos\clUsuarioD.cs" />
     <Compile Include="Entidades\clCarritoE.cs" />
     <Compile Include="Entidades\clClienteE.cs" />
+    <Compile Include="Entidades\clDetallesE.cs" />
     <Compile Include="Entidades\clProductoE.cs" />
     <Compile Include="Entidades\clUsuarioE.cs" />
     <Compile Include="index.aspx.cs">

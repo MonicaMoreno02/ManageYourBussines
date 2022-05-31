@@ -13,7 +13,9 @@ function agregarFilas(datos) {
             datos[i].telefono,
             datos[i].direccion,
             datos[i].email,
-            datos[i].clave
+            datos[i].clave,
+            '<button type="button" id="btnDetalles" class="btn btn-primary btn-details" data-toggle="modal" data-target="#ModalDetalles">Ver Detalles</button>'
+
         ]);
     }
 }

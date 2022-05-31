@@ -11,6 +11,7 @@ namespace ManageYourBussines.Datos
     public class clClienteD
     {
 
+        //Listar Datos de los clientes
         public List<clClienteE> mtdListarD()
         {
             string sql = "select * from cliente";
@@ -40,6 +41,38 @@ namespace ManageYourBussines.Datos
                 listarCliente.Add(objDatosClientes);
             }
             return listarCliente;
+        }
+
+        //Listar Detalles de venta
+        public List<clDetallesE> mtdListarDetalles(int idCliente)
+        {
+            string sql = "select cliente.nombres, venta.fechaVenta, venta.codigoVenta, venta.totalVenta, empleado.nombres, detallesVenta.cantidad, detallesVenta.valorTotal, producto.nombre"+
+                " from cliente inner join venta on cliente.idCliente = venta.idCliente inner join empleado on venta.idEmpleado = empleado.idEmpleado" + 
+                " inner join detallesVenta on detallesVenta.idVenta = venta.idVenta"+
+                " inner join producto on producto.idProducto = detallesVenta.idProducto";
+            clConexion objConexion = new clConexion();
+            DataTable tblDetallesVenta = new DataTable();
+            tblDetallesVenta = objConexion.mtdDesconectado(sql);
+
+            List<clDetallesE> listarDetallesVenta = new List<clDetallesE>();
+
+            int cantReg = tblDetallesVenta.Rows.Count;
+            for (int i = 0; i < cantReg; i++)
+            {
+
+                clDetallesE objDatosDetalle = new clDetallesE();
+
+                objDatosDetalle.nombreCliente = tblDetallesVenta.Rows[i]["nombres"].ToString();
+                objDatosDetalle.fechaVenta = DateTime.Parse(tblDetallesVenta.Rows[i]["fechaVenta"].ToString());
+                objDatosDetalle.codigoVenta = int.Parse(tblDetallesVenta.Rows[i]["codigoVenta"].ToString());
+                objDatosDetalle.cantidad = int.Parse(tblDetallesVenta.Rows[i]["cantidad"].ToString());
+                objDatosDetalle.valorTotal = float.Parse(tblDetallesVenta.Rows[i]["valorTotal"].ToString());
+                objDatosDetalle.nombreProducto = tblDetallesVenta.Rows[i]["nombre"].ToString();
+
+
+                listarDetallesVenta.Add(objDatosDetalle);
+            }
+            return listarDetallesVenta;
         }
 
 
