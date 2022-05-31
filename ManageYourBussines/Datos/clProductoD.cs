@@ -35,7 +35,7 @@ namespace ManageYourBussines.Datos
                 objDatosProducto.nombre = tblProducto.Rows[i]["nombre"].ToString();
                 objDatosProducto.precio = float.Parse(tblProducto.Rows[i]["precio"].ToString());
                 objDatosProducto.descripcion = tblProducto.Rows[i]["descripcion"].ToString();
-
+                objDatosProducto.cantidadStock = int.Parse(tblProducto.Rows[i]["cantidadStock"].ToString());
 
                 listarProducto.Add(objDatosProducto);
             }
@@ -66,13 +66,44 @@ namespace ManageYourBussines.Datos
                 objDatosProductos.descripcion = tblProducto.Rows[i]["descripcion"].ToString();
                 objDatosProductos.material = tblProducto.Rows[i]["material"].ToString();
                 objDatosProductos.caracteristicas = tblProducto.Rows[i]["caracteristicas"].ToString();
-
+                objDatosProductos.cantidadStock = int.Parse(tblProducto.Rows[i]["cantidadStock"].ToString());
 
 
 
               listarProducto.Add(objDatosProductos);
             }
             return listarProducto;
+        }
+        public List<clProductoE> mtdList(clProductoE objproductos)
+        {
+            string sql = "select * from producto where idProducto =" + objproductos.idProducto + "";
+            clConexion objConexion = new clConexion();
+            DataTable tblProducto = new DataTable();
+            tblProducto = objConexion.mtdDesconectado(sql);
+
+            List<clProductoE> listarProducto = new List<clProductoE>();
+
+            int catnReg = tblProducto.Rows.Count;
+
+            for (int i = 0; i < catnReg; i++)
+            {
+                clProductoE objDatosProducto = new clProductoE();
+               
+                objDatosProducto.imagen = tblProducto.Rows[i]["imagen"].ToString();
+                objDatosProducto.material = tblProducto.Rows[i]["material"].ToString();
+                objDatosProducto.caracteristicas = tblProducto.Rows[i]["caracteristicas"].ToString();
+                objDatosProducto.idProducto = int.Parse(tblProducto.Rows[i]["idProducto"].ToString());
+                objDatosProducto.nombre = tblProducto.Rows[i]["nombre"].ToString();
+                objDatosProducto.precio = float.Parse(tblProducto.Rows[i]["precio"].ToString());
+                objDatosProducto.descripcion = tblProducto.Rows[i]["descripcion"].ToString();
+                objDatosProducto.cantidadStock =int.Parse( tblProducto.Rows[i]["cantidadStock"].ToString());
+
+
+                listarProducto.Add(objDatosProducto);
+            }
+
+            return listarProducto;
+
         }
     }
 }

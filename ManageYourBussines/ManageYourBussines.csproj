@@ -44,7 +44,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="GemBox.Spreadsheet, Version=49.0.0.1017, Culture=neutral, PublicKeyToken=b1b72c69714d4847, processorArchitecture=MSIL">
+      <HintPath>..\packages\GemBox.Spreadsheet.49.0.1017\lib\net35\GemBox.Spreadsheet.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="ReachFramework" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -53,10 +64,14 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
@@ -69,8 +84,10 @@
     <Content Include="Presentacion\frmcarrito.aspx" />
     <Content Include="Presentacion\frmdetalles.aspx" />
     <Content Include="Presentacion\frmHome.aspx" />
+    <Content Include="Presentacion\frmInventario.aspx" />
     <Content Include="Presentacion\frmProductos.aspx" />
     <Content Include="Presentacion\frmEstadisticas.aspx" />
+    <Content Include="Presentacion\frmRegistrar.aspx" />
     <Content Include="Presentacion\recursos\css\bootstrap.css" />
     <Content Include="Presentacion\recursos\css\font-awesome.min.css" />
     <Content Include="Presentacion\recursos\css\responsive.css" />
@@ -105,12 +122,13 @@
     <Content Include="Presentacion\recursos\js\bootstrap.js" />
     <Content Include="Presentacion\recursos\js\custom.js" />
     <Content Include="Presentacion\recursos\js\jquery-3.4.1.min.js" />
-    <Content Include="Presentacion\frmRegistrar.aspx" />
     <Content Include="Presentacion\Recursos\js\datosDatable.js" />
+    <Content Include="recuperar.aspx" />
     <Content Include="recursos\css\bootstrap.css" />
     <Content Include="recursos\css\font-awesome.min.css" />
     <Content Include="recursos\css\responsive.css" />
     <Content Include="recursos\css\style.css" />
+    <Content Include="recursos\images\Imagen1.png" />
     <Content Include="recursos\images\arquilla.jpeg" />
     <Content Include="recursos\images\baseparacelular.jpeg" />
     <Content Include="recursos\images\carretilla.jpeg" />
@@ -142,6 +160,9 @@
     <Content Include="recursos\images\fondo5.jpeg" />
     <Content Include="recursos\images\icono3.png" />
     <Content Include="recursos\images\iconoSofa.png" />
+    <Content Include="recursos\images\icons8-casa-48.png">
+      <BrowseToURL>recursos\images\icons8-casa-48.png</BrowseToURL>
+    </Content>
     <Content Include="recursos\images\imagen.jpeg" />
     <Content Include="recursos\images\iconoEscritorio.png" />
     <Content Include="recursos\images\logo.jpg" />
@@ -174,6 +195,7 @@
     <Compile Include="Datos\clCarritoD.cs" />
     <Compile Include="Datos\clConexion.cs" />
     <Compile Include="Datos\clProductoD.cs" />
+    <Compile Include="Datos\clUserDao.cs" />
     <Compile Include="Datos\clUsuarioD.cs" />
     <Compile Include="Entidades\clCarritoE.cs" />
     <Compile Include="Entidades\clProductoE.cs" />
@@ -188,6 +210,8 @@
     <Compile Include="Logica\clProductoL.cs" />
     <Compile Include="Logica\clUsuarioL.cs" />
     <Compile Include="Logica\clCarritoL.cs" />
+    <Compile Include="MailServices1\MasterMailServer.cs" />
+    <Compile Include="MailServices1\systemSupportMail.cs" />
     <Compile Include="Presentacion\frmAbout.aspx.cs">
       <DependentUpon>frmAbout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -216,6 +240,13 @@
     <Compile Include="Presentacion\frmHome.aspx.designer.cs">
       <DependentUpon>frmHome.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\frmInventario.aspx.cs">
+      <DependentUpon>frmInventario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmInventario.aspx.designer.cs">
+      <DependentUpon>frmInventario.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\frmProductos.aspx.cs">
       <DependentUpon>frmProductos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -230,6 +261,13 @@
     <Compile Include="Presentacion\frmEstadisticas.aspx.designer.cs">
       <DependentUpon>frmEstadisticas.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\frmRegistrar.aspx.cs">
+      <DependentUpon>frmRegistrar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmRegistrar.aspx.designer.cs">
+      <DependentUpon>frmRegistrar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -238,6 +276,13 @@
       <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="recuperar.aspx.cs">
+      <DependentUpon>recuperar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="recuperar.aspx.designer.cs">
+      <DependentUpon>recuperar.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

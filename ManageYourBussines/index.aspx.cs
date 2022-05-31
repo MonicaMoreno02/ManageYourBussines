@@ -30,7 +30,43 @@ namespace ManageYourBussines
 
         protected void btnDetalles_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Presentacion\\frmProductos.aspx");
+            Response.Redirect("~/Presentacion/frmDetalles.aspx");
+        }
+
+        protected void btnIngresar_Click(object sender, EventArgs e)
+        {
+            clUsuarioE objDatos = new clUsuarioE();
+            objDatos.email = txtEmail.Text;
+            objDatos.clave = txtClave.Text;
+
+            clUsuarioL objUsuariosL = new clUsuarioL();
+            clUsuarioE objDatosClien = new clUsuarioE();
+            objDatosClien = objUsuariosL.mtdLogin(objDatos);
+            if (objDatosClien != null)
+            {
+
+
+                //lblUsuario.Text = objDatosClien.nombres + " " + objDatosClien.apellidos;
+
+                //Session["usuario"] = objDatos.nombres + " " + objDatos.apellidos;
+                Response.Redirect("Presentacion/frmHome.aspx");
+
+                //lblUsuario.Text = clSesionE.nombres + " " + clSesionE.apellidos;
+
+
+
+            }
+            else
+            {
+                //lblMensaje.Text = "usuario no Registrado ";
+                ScriptManager.RegisterClientScriptBlock(this.Page, this.GetType(), "AlertaLoginContrasenia", "window.onload = function(){ alert('La contraseña es incorrecta.'); };", true);
+
+            }
+        }
+
+        protected void btnRecuperar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Recuperar.aspx");
         }
     }
 

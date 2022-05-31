@@ -85,36 +85,41 @@ namespace ManageYourBussines.Presentacion
                 int lista = Convert.ToInt32(e.CommandArgument);
                 GridViewRow row = gvCar.Rows[lista];
                 string valor = gvCar.Rows[lista].Cells[5].Text;
+                string stock = gvCar.Rows[lista].Cells[8].Text;
                 int cantidad = int.Parse(valor);
+                int stock1=int.Parse(stock);
                 cantidad = cantidad + 1;
-
-                clCarritoL objCarritoL = new clCarritoL();
-                DataTable carrito = new DataTable();
-
-                carrito = objCarritoL.mtdListcar();
-                int cuen = carrito.Rows.Count;
-                cuen = cuen - 2;
-                if (cuen >= lista)
+                if (stock1>=cantidad)
                 {
+                    clCarritoL objCarritoL = new clCarritoL();
+                    DataTable carrito = new DataTable();
+
+                    carrito = objCarritoL.mtdListcar();
+                    int cuen = carrito.Rows.Count;
+                    cuen = cuen - 2;
+                    if (cuen >= lista)
+                    {
 
 
-                    int idproducto = int.Parse(carrito.Rows[lista]["idproducto"].ToString());
-                    int idcliente = int.Parse(carrito.Rows[lista]["idcliente"].ToString());
+                        int idproducto = int.Parse(carrito.Rows[lista]["idproducto"].ToString());
+                        int idcliente = int.Parse(carrito.Rows[lista]["idcliente"].ToString());
 
-                    clCarritoE objcarrito = new clCarritoE();
-                    objcarrito.idproducto = idproducto;
-                    objcarrito.idcliente = idcliente;
-                    objcarrito.catidad = cantidad;
-                    clCarritoL objcarritoL = new clCarritoL();
+                        clCarritoE objcarrito = new clCarritoE();
+                        objcarrito.idproducto = idproducto;
+                        objcarrito.idcliente = idcliente;
+                        objcarrito.catidad = cantidad;
+                        clCarritoL objcarritoL = new clCarritoL();
 
-                    int filas = objcarritoL.mtdaumentar(objcarrito);
+                        int filas = objcarritoL.mtdaumentar(objcarrito);
 
-                    clCarritoL objCarrito1L = new clCarritoL();
-                    DataTable dt = new DataTable();
-                    List<clCarritoE> listarCar1 = new List<clCarritoE>();
-                    dt = objCarrito1L.mtdListcar();
+                        clCarritoL objCarrito1L = new clCarritoL();
+                        DataTable dt = new DataTable();
+                        List<clCarritoE> listarCar1 = new List<clCarritoE>();
+                        dt = objCarrito1L.mtdListcar();
 
+                    }
                 }
+                
             }
             if (e.CommandName == "disminuir")
             {
@@ -123,31 +128,35 @@ namespace ManageYourBussines.Presentacion
                 string valor = gvCar.Rows[lista].Cells[5].Text;
                 int cantidad = int.Parse(valor);
                 cantidad = cantidad - 1;
-
-                clCarritoL objCarritoL = new clCarritoL();
-                DataTable carrito = new DataTable();
-
-                carrito = objCarritoL.mtdListcar();
-                int cuen = carrito.Rows.Count;
-                cuen = cuen - 2;
-                if (cuen >= lista)
+                if (cantidad>=0)
                 {
-                    int idproducto = int.Parse(carrito.Rows[lista]["idproducto"].ToString());
-                    int idcliente = int.Parse(carrito.Rows[lista]["idcliente"].ToString());
+                    clCarritoL objCarritoL = new clCarritoL();
+                    DataTable carrito = new DataTable();
 
-                    clCarritoE objcarrito = new clCarritoE();
-                    objcarrito.idproducto = idproducto;
-                    objcarrito.idcliente = idcliente;
-                    objcarrito.catidad = cantidad;
-                    clCarritoL objcarritoL = new clCarritoL();
+                    carrito = objCarritoL.mtdListcar();
+                    int cuen = carrito.Rows.Count;
+                    cuen = cuen - 2;
+                    if (cuen >= lista)
+                    {
+                        int idproducto = int.Parse(carrito.Rows[lista]["idproducto"].ToString());
+                        int idcliente = int.Parse(carrito.Rows[lista]["idcliente"].ToString());
 
-                    int filas = objcarritoL.mtdaumentar(objcarrito);
+                        clCarritoE objcarrito = new clCarritoE();
+                        objcarrito.idproducto = idproducto;
+                        objcarrito.idcliente = idcliente;
+                        objcarrito.catidad = cantidad;
+                        clCarritoL objcarritoL = new clCarritoL();
 
-                    clCarritoL objCarrito1L = new clCarritoL();
-                    DataTable dt = new DataTable();
-                    List<clCarritoE> listarCar1 = new List<clCarritoE>();
-                    dt = objCarrito1L.mtdListcar();
+                        int filas = objcarritoL.mtdaumentar(objcarrito);
+
+                        clCarritoL objCarrito1L = new clCarritoL();
+                        DataTable dt = new DataTable();
+                        List<clCarritoE> listarCar1 = new List<clCarritoE>();
+                        dt = objCarrito1L.mtdListcar();
+                    }
                 }
+
+                
             }
 
 
