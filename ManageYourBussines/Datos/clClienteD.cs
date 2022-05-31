@@ -44,7 +44,7 @@ namespace ManageYourBussines.Datos
         }
 
         //Listar Detalles de venta
-        public List<clDetallesE> mtdListarDetalles(int idCliente)
+        public List<clDetallesE> mtdListarDetallesD(int idCliente)
         {
             string sql = "select cliente.nombres, venta.fechaVenta, venta.codigoVenta, venta.totalVenta, empleado.nombres, detallesVenta.cantidad, detallesVenta.valorTotal, producto.nombre"+
                 " from cliente inner join venta on cliente.idCliente = venta.idCliente inner join empleado on venta.idEmpleado = empleado.idEmpleado" + 

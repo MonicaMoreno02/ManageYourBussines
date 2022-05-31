@@ -28,5 +28,14 @@ namespace ManageYourBussines.Presentacion
 
             return objListaCliente;
         }
+
+        public static List<clDetallesE> mtdListaDetallesP(int idCliente)
+        {
+            clClienteL objDatosVentas = new clClienteL();
+            List<clDetallesE> listaDetallesP = new List<clDetallesE>();
+
+            listaDetallesP = objDatosVentas.mtdListarDetallesL(idCliente);
+            return listaDetallesP ;
+        }
     }
 }
