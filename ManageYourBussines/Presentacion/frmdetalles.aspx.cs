@@ -35,13 +35,13 @@ namespace ManageYourBussines.Presentacion
             Response.Redirect("frmProductos2.aspx?idP=" + idProducto);
         }
 
-        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            ListItem i;
-            i = new ListItem("Menor Precio");
-            ddlLista.Items.Add(i);
-            i = new ListItem("Mayor Precio");
-            ddlLista.Items.Add(i);
-        }
+        //protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    ListItem i;
+        //    i = new ListItem("Menor Precio");
+        //    ddlLista.Items.Add(i);
+        //    i = new ListItem("Mayor Precio");
+        //    ddlLista.Items.Add(i);
+        //}
     }
 }

@@ -130,6 +130,7 @@
     <Content Include="recursos\images\arquilla.jpeg" />
     <Content Include="recursos\images\baseparacelular.jpeg" />
     <Content Include="recursos\images\carretilla.jpeg" />
+    <Content Include="recursos\images\carrito-de-compras.png" />
     <Content Include="recursos\images\decoracion.jpeg" />
     <Content Include="recursos\images\about-img.png" />
     <Content Include="recursos\images\client1.jpg" />
