@@ -1,11 +1,18 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Presentacion/Site1.Master" AutoEventWireup="true" CodeBehind="frmbalance.aspx.cs" Inherits="ManageYourBussines.Presentacion.frmbalance" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+
+
+
       <div class="container">
     <div class="col-md-6">
-    <asp:GridView ID="gvBalance" runat="server" AutoGenerateColumns="False"  class="table-secondary" Width="394px" OnRowCommand="gvBalance_RowCommand" >
+    <asp:GridView ID="gvBalance" runat="server" AutoGenerateColumns="False"  class="table-secondary" Width="608px" OnRowCommand="gvBalance_RowCommand" >
 
       <Columns>
                            <asp:BoundField DataField="#" HeaderText="#">
