@@ -26,5 +26,14 @@ namespace ManageYourBussines.Logica
             return listaClientes;
 
         }
+        public List<clBalanceE> mtdListarBalC()
+        {
+            clBalanceD objBalanceD = new clBalanceD();
+            List<clBalanceE> listaClientes = new List<clBalanceE>();
+            listaClientes = objBalanceD.mtdListarBal();
+            return listaClientes;
+
+        }
+
     }
 }

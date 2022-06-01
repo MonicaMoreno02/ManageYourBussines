@@ -212,48 +212,105 @@ namespace ManageYourBussines.Presentacion
             DataSet dataSet = new DataSet();
             for (int i = 0; i < 2; i++)
             {
-                clBalanceL objbalanceL = new clBalanceL();
-                List<clBalanceE> listbalanceE = new List<clBalanceE>();
-                DataTable dtBal = new DataTable();
-                listbalanceE = objbalanceL.mtdListarBal();
-                dtBal.Columns.Add(new DataColumn("#", typeof(int)));
-                dtBal.Columns.Add(new DataColumn("idVenta", typeof(int)));
-                dtBal.Columns.Add(new DataColumn("fechaVenta", typeof(DateTime)));
-                dtBal.Columns.Add(new DataColumn("codigoVenta", typeof(string)));
-                dtBal.Columns.Add(new DataColumn("totalVenta", typeof(float)));
-
-                int cuenta = listbalanceE.Count;
-                int num = cuenta + 1;
-                float vtot = 0;
-                float total = 0;
-                for (int j = 0; j < cuenta; j++)
+                if (i!=1)
                 {
-                   
-                    if (j != cuenta)
+                    clBalanceL objbalanceL = new clBalanceL();
+                    List<clBalanceE> listbalanceE = new List<clBalanceE>();
+                    DataTable dtBal = new DataTable();
+                    listbalanceE = objbalanceL.mtdListarBal();
+                    dtBal.Columns.Add(new DataColumn("#", typeof(int)));
+                    dtBal.Columns.Add(new DataColumn("idVenta", typeof(int)));
+                    dtBal.Columns.Add(new DataColumn("fechaVenta", typeof(DateTime)));
+                    dtBal.Columns.Add(new DataColumn("codigoVenta", typeof(string)));
+                    dtBal.Columns.Add(new DataColumn("totalVenta", typeof(float)));
+
+                    int cuenta = listbalanceE.Count;
+                    int num = cuenta + 1;
+                    float vtot = 0;
+                    float total = 0;
+                    for (int j = 0; j < cuenta; j++)
                     {
-                        int numero = j + 1;
-                        int idventa = listbalanceE[j].idventa;
-                        DateTime fecha = listbalanceE[j].fechaVenta;
-                        string codigoVenta = listbalanceE[j].codigoVenta;
-                        float totalVenta = listbalanceE[j].totalVenta;
 
-                        vtot = vtot + totalVenta;
-                        dtBal.Rows.Add(new object[] { numero,idventa, fecha, codigoVenta,totalVenta});
+                        if (j != cuenta)
+                        {
+                            int numero = j + 1;
+                            int idventa = listbalanceE[j].idventa;
+                            DateTime fecha = listbalanceE[j].fechaVenta;
+                            string codigoVenta = listbalanceE[j].codigoVenta;
+                            float totalVenta = listbalanceE[j].totalVenta;
 
+                            vtot = vtot + totalVenta;
+                            dtBal.Rows.Add(new object[] { numero, idventa, fecha, codigoVenta, totalVenta });
+
+                        }
+                        else
+                        {
+                            total = vtot;
+
+                            dtBal.Rows.Add(new object[] { "", "", "", "", "", "", total });
+
+                        }
+                      
                     }
-                    else
-                    {
-                        total = vtot;
+                    dataSet.Tables.Add(dtBal);
 
-                        dtBal.Rows.Add(new object[] { "", "", "", "", "", "", total });
-
-                    }
-                  
                 }
+                else
+                {
+                    clBalanceL objbalanceL = new clBalanceL();
+                    List<clBalanceE> listbalanceE = new List<clBalanceE>();
+                    DataTable dtBal = new DataTable();
+                    listbalanceE = objbalanceL.mtdListarBalC();
+                    dtBal.Columns.Add(new DataColumn("#", typeof(int)));
+                    dtBal.Columns.Add(new DataColumn("idVenta", typeof(int)));
+                    dtBal.Columns.Add(new DataColumn("fechaVenta", typeof(DateTime)));
+                    dtBal.Columns.Add(new DataColumn("codigoVenta", typeof(string)));
+                    dtBal.Columns.Add(new DataColumn("idProducto", typeof(int)));
+                    dtBal.Columns.Add(new DataColumn("nombre producto", typeof(string)));
+                    dtBal.Columns.Add(new DataColumn("cantidad", typeof(int)));
+                    dtBal.Columns.Add(new DataColumn("precio", typeof(float)));
+                    dtBal.Columns.Add(new DataColumn("valortotal", typeof(float)));
                 
 
+                    int cuenta = listbalanceE.Count;
+                    int num = cuenta + 1;
+                    float vtot = 0;
+                    float total = 0;
+                    for (int j = 0; j < cuenta; j++)
+                    {
 
-                dataSet.Tables.Add(dtBal);
+                        if (j != cuenta)
+                        {
+                            int numero = j + 1;
+                            int idventa = listbalanceE[j].idventa;
+                            DateTime fecha = listbalanceE[j].fechaVenta;
+                            string codigoVenta = listbalanceE[j].codigoVenta;
+                            int idProducto=listbalanceE[j].idProducto;
+                            string nombre=listbalanceE[j].nombre;
+                            int cantidad = listbalanceE[j].cantidad;
+                            float precio = listbalanceE[j].precio;
+                            float valortotal = precio * cantidad;
+                            
+                            dtBal.Rows.Add(new object[] { numero, idventa, fecha, codigoVenta,idProducto,nombre,cantidad,precio,valortotal });
+
+                        }
+                        else
+                        {
+                            total = vtot;
+
+                            dtBal.Rows.Add(new object[] { "", "", "", "", "", "", total });
+
+                        }
+                       
+                    }
+                    dataSet.Tables.Add(dtBal);
+
+                }
+
+
+
+
+
             }
 
             // Create and fill a sheet for every DataTable in a DataSet
@@ -269,9 +326,11 @@ namespace ManageYourBussines.Presentacion
                         ColumnHeaders = true
                     });
             }
-
-            workbook.Save("D:/report.xlsx");
-            ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Archivo creado correctamente guardado en: D:/report.xlsx');", true);
+            string ahora = DateTime.Now.ToString();
+            string nombreArchivo = "reporte" + ahora;
+         
+            workbook.Save("D:/"+nombreArchivo+".xlsx");
+            ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Archivo creado correctamente guardado en: D:/reporte"+ahora+".xlsx');", true);
 
         }
     }
