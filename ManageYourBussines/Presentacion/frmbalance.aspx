@@ -1,18 +1,39 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Presentacion/Site1.Master" AutoEventWireup="true" CodeBehind="frmbalance.aspx.cs" Inherits="ManageYourBussines.Presentacion.frmbalance" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-<!-- Latest compiled JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+   
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Registro programadores</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" media="screen" href="vista/css/main.css" />
+  <script src="vista/js/main.js"></script>
 
 
-      <div class="container">
+  <div class="container">
+    <div class="jumbotron">
+      <h1 style="text-align:center">balance de ventas</h1>
+    </div>
+  </div>
+
+  <div class="container">
     <div class="col-md-6">
-    <asp:GridView ID="gvBalance" runat="server" AutoGenerateColumns="False"  class="table-secondary" Width="608px" OnRowCommand="gvBalance_RowCommand" >
+      <asp:GridView ID="gvBalance" runat="server" AutoGenerateColumns="False"  class="table-secondary" Width="608px" OnRowCommand="gvBalance_RowCommand" >
 
       <Columns>
                            <asp:BoundField DataField="#" HeaderText="#">
@@ -27,12 +48,21 @@
                        
                        </Columns>
     </asp:GridView>
-    <asp:GridView ID="gvDetalles" runat="server"></asp:GridView>
+         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="excel" cssclass="btn btn-success" />
 
-        </div>
-          <div class="col-md-6">
+    </div>
+        <div class="col-md-1">
+   
+  
+</div>
 
-    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="excel" />
-          </div>
-          </div>
+    <div class="col-md-5">
+     <asp:GridView ID="gvDetalles"  class="table-secondary"  runat="server"></asp:GridView>
+  
+</div>
+
+     
+
+   
+          
 </asp:Content>
