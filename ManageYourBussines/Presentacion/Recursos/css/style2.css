@@ -210,7 +210,7 @@ body {
     display: -webkit-box;
     display: flex;
     -webkit-box-pack: center;
-    /*justificado a la izquierda*/
+   /* justificado a la izquierda*/
     justify-content: left;
     -webkit-box-align: center;
     align-items: safe center;
@@ -238,20 +238,20 @@ div {
     div:last-child {
         margin-bottom: 0px;
     }
-
+/*
 .table {
-    width: 100%;
     border: 1px solid #000;
-}
-
-.th, td {
-    width: 25%;
-    text-align: left;
-    vertical-align: top;
-    border: 1px solid #000;
-    border-collapse: collapse;
     padding: 0.3em;
-    caption-side: bottom;
+    color: #fff;
+    background: #000;
+    background: #eee;
+
+}
+*/
+
+
+/*.th, td {
+   
 }
 
 .caption {
@@ -261,5 +261,6 @@ div {
 }
 
 .th {
-    background: #eee;
+   
 }
+*/

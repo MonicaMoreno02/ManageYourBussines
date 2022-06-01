@@ -21,12 +21,12 @@ namespace ManageYourBussines.Logica
         }
 
         //Listamos los datos de los detalles de ventas de cada cliente
-        public List<clDetallesE> mtdListarDetallesL(int idCliente)
+        public List<clDetallesE> mtdListarDetallesL( )
         {
             clClienteD objListarDetalles = new clClienteD();
             List<clDetallesE> listaDetalles = new List<clDetallesE>();
 
-            listaDetalles = objListarDetalles.mtdListarDetallesD(idCliente);
+            listaDetalles = objListarDetalles.mtdListarDetallesD();
             return listaDetalles;
         }
     }

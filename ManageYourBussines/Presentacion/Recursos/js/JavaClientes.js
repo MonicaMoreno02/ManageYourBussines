@@ -20,77 +20,78 @@ function agregarFilas(datos) {
     }
 }
 
-function sendDataAjax() {
-    $.ajax({
-        type: "POST",
-        url: "frmClientes.aspx/mtdListarP",
-        data: '{}',
-        contentType: "application/json; charset=utf-8",
-        dataType: "json",
+    function sendDataAjax() {
+        $.ajax({
+            type: "POST",
+            url: "frmClientes.aspx/mtdListarP",
+            data: '{}',
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
 
-        success: function (datos) {
-            agregarFilas(datos.d);
-        },
-        failure: function (response) {
-            alert(response);
-        },
-        error: function (response) {
-            alert(response.d);
-        }
+            success: function (datos) {
+                agregarFilas(datos.d);
+            },
+            failure: function (response) {
+                alert(response);
+            },
+            error: function (response) {
+                alert(response.d);
+            }
 
-    });
-}
-
-
-/*llenar tabla para datos de detalles de venta */
-
-var tablaDetalles, datosDetalle
-sendDataAjaxDetalles();
-function agregarFilasDetalle(datosDetalle) {
-    console.log(datosDetalle);
-    tablaDetalles = $("#dtCliente").dataTable();
-    for (var i = 0; i < datosDetalle.length; i++) {
-
-        //tablaDetalles.fnAddData([
-        //    datosDetalle[i].idCliente,
-        //    datosDetalle[i].nombreCliente,
-        //    datosDetalle[i].fechaVenta,
-        //    datosDetalle[i].codigoVenta,
-        //    datosDetalle[i].totalVenta,
-        //    datosDetalle[i].valorTotal,
-        //    datosDetalle[i].nombreProducto
-        tablaDetalles.fnAddData([
-            datosDetalle[i].idCliente,
-            datosDetalle[i].documento,
-            datosDetalle[i].nombres,
-            datosDetalle[i].apellidos,
-            datosDetalle[i].telefono,
-            datosDetalle[i].direccion,
-            datosDetalle[i].email,
-            datosDetalle[i].clave,
-            '<button type="button" id="btnDetalles" class="btn btn-primary btn-details" data-toggle="modal" data-target="#ModalDetalles">Ver Detalles</button>'
-
-        ]);
+        });
     }
-}
 
-function sendDataAjaxDetalles() {
-    $.ajax({
-        type: "POST",
-        url: "frmClientes.aspx/mtdListarP",
-        data: '{}',
-        contentType: "application/json; charset=utf-8",
-        dataType: "json",
+    //$(document).on('click', '#btnDetalles', function (e) {
+    //    /*llenar tabla para datos de detalles de venta */
+    //    e.preventDefault();
 
-        success: function (datosDetalle) {
-            agregarFilasDetalle(datosDetalles.d);
-        },
-        failure: function (response) {
-            alert(response);
-        },
-        error: function (response) {
-            alert(response.d);
-        }
+    //    var tablaDetalles, datosDetalle
+    //    sendDataAjaxDetalles();
+    //    function agregarFilasDetalle(datosDetalle) {
+    //        console.log(datosDetalle);
+    //        tablaDetalles = $("#dtDetalles").dataTable();
+    //        for (var i = 0; i < datosDetalle.length; i++) {
 
-    });
-}
+    //            tablaDetalles.fnAddData([
+    //                datosDetalle[i].idCliente,
+    //                datosDetalle[i].nombreCliente,
+    //                datosDetalle[i].fechaVenta,
+    //                datosDetalle[i].codigoVenta,
+    //                datosDetalle[i].totalVenta,
+    //                datosDetalle[i].nombreEmpleado,
+    //                datosDetalle[i].valorTotal,
+    //                datosDetalle[i].nombreProducto,
+    //                '<button type="button" id="btnDetalles" class="btn btn-primary btn-details" data-toggle="modal" data-target="#ModalDetalles">Ver Detalles</button>'
+
+    //            ]);
+    //        }
+    //    }
+
+    //    function sendDataAjaxDetalles() {
+    //        $.ajax({
+    //            type: "POST",
+    //            url: "frmClientes.aspx/mtdListarDetallesP",
+    //            data: '{}',
+    //            contentType: "application/json; charset=utf-8",
+    //            dataType: "json",
+
+    //            success: function (datosDetalle) {
+    //                agregarFilasDetalle(datosDetalles.d);
+    //            },
+    //            failure: function (response) {
+    //                alert(response);
+    //            },
+    //            error: function (response) {
+    //                alert(response.d);
+    //            }
+
+    //        });
+
+
+
+
+
+
+
+
+

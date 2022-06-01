@@ -16,6 +16,14 @@ namespace ManageYourBussines.Presentacion
         {
 
 
+            clClienteL objDatosVentas = new clClienteL();
+            List<clDetallesE> listaDetallesP = new List<clDetallesE>();
+
+            listaDetallesP = objDatosVentas.mtdListarDetallesL();
+
+            dgModal.DataSource = listaDetallesP;
+            dgModal.DataBind();
+
         }
 
         [WebMethod]
@@ -30,14 +38,15 @@ namespace ManageYourBussines.Presentacion
         }
 
         
-        [WebMethod]
-        public static List<clDetallesE> mtdListaDetallesP(int idCliente)
-        {
-            clClienteL objDatosVentas = new clClienteL();
-            List<clDetallesE> listaDetallesP = new List<clDetallesE>();
+        //[WebMethod]
+        //public static List<clDetallesE> mtdListaDetallesP()
+        //{
+        //    clClienteL objDatosVentas = new clClienteL();
+        //    List<clDetallesE> listaDetallesP = new List<clDetallesE>();
 
-            listaDetallesP = objDatosVentas.mtdListarDetallesL(idCliente);
-            return listaDetallesP  ;
-        }
+        //    listaDetallesP = objDatosVentas.mtdListarDetallesL();
+
+        //    return listaDetallesP;
+        //}
     }
 }
