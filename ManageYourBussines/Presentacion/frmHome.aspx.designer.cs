@@ -15,6 +15,7 @@ namespace ManageYourBussines.Presentacion
     {
 
         /// <summary>
+        /// Control ImageButton1.
         /// Control LbidC.
         /// </summary>
         /// <remarks>
@@ -39,7 +40,7 @@ namespace ManageYourBussines.Presentacion
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btncarrito;
+        protected global::System.Web.UI.WebControls.ImageButton ImageButton1;
 
         /// <summary>
         /// Control lbnumero.

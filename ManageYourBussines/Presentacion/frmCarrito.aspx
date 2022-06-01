@@ -166,7 +166,7 @@
                            <asp:BoundField DataField="describcion" HeaderText="describcion" />
                            <asp:BoundField DataField="precio" HeaderText="precio" />
                            <asp:BoundField DataField="cantidad" HeaderText="cantidad" />
-                           <asp:ButtonField ButtonType="Button" CommandName="aumentar" Text="+" />
+                           <asp:ButtonField ButtonType="Button" CommandName="aumentar" Text="+"  />
                            <asp:ButtonField ButtonType="Button" CommandName="disminuir" Text="-" />
                            <asp:BoundField DataField="cantidadstock" HeaderText="cantidadstock" />
                            <asp:BoundField DataField="total" HeaderText="total" />
