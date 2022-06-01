@@ -78,6 +78,8 @@
     <Content Include="Presentacion\recursos\css\style.css" />
     <Content Include="Presentacion\recursos\images\about-img.png" />
     <Content Include="Presentacion\recursos\images\anadir-al-carrito %281%29.png" />
+    <Content Include="Presentacion\recursos\images\base.jpg" />
+    <Content Include="Presentacion\recursos\images\baseg.jpg" />
     <Content Include="Presentacion\recursos\images\biblioteca1.png" />
     <Content Include="Presentacion\recursos\images\cama.jpg" />
     <Content Include="Presentacion\recursos\images\carrito-de-compras.png" />
@@ -99,15 +101,19 @@
     <Content Include="Presentacion\recursos\images\logo.jpg" />
     <Content Include="Presentacion\recursos\images\logo.png" />
     <Content Include="Presentacion\recursos\images\matero.jpg" />
+    <Content Include="Presentacion\recursos\images\matero3.jpg" />
     <Content Include="Presentacion\recursos\images\mesaclasica.png" />
     <Content Include="Presentacion\recursos\images\mesadejardin.png" />
     <Content Include="Presentacion\recursos\images\mesamoderna.png" />
     <Content Include="Presentacion\recursos\images\mesaportable.jpeg" />
     <Content Include="Presentacion\recursos\images\organizador.jpeg" />
+    <Content Include="Presentacion\recursos\images\organizador.jpg" />
+    <Content Include="Presentacion\recursos\images\paraguero.jpg" />
     <Content Include="Presentacion\recursos\images\perrito.jpeg" />
     <Content Include="Presentacion\recursos\images\portacepillos.jpg" />
     <Content Include="Presentacion\recursos\images\repflotante.jpg" />
     <Content Include="Presentacion\recursos\images\repisa.jpeg" />
+    <Content Include="Presentacion\recursos\images\repisaB.jpg" />
     <Content Include="Presentacion\recursos\images\repisam.jpg" />
     <Content Include="Presentacion\recursos\images\repisaN.jpg" />
     <Content Include="Presentacion\recursos\images\repisaSp.jpg" />
@@ -129,6 +135,7 @@
     <Content Include="recursos\css\style.css" />
     <Content Include="recursos\images\arquilla.jpeg" />
     <Content Include="recursos\images\baseparacelular.jpeg" />
+    <Content Include="Presentacion\recursos\images\butaca.jpg" />
     <Content Include="recursos\images\carretilla.jpeg" />
     <Content Include="recursos\images\carrito-de-compras.png" />
     <Content Include="recursos\images\decoracion.jpeg" />
@@ -164,13 +171,19 @@
     </Content>
     <Content Include="recursos\images\imagen.jpeg" />
     <Content Include="recursos\images\iconoEscritorio.png" />
+    <Content Include="recursos\images\isla.jpg" />
+    <Content Include="Presentacion\recursos\images\isla2.jpg" />
+    <Content Include="Presentacion\recursos\images\jabonero.jpg" />
     <Content Include="recursos\images\logo.jpg" />
     <Content Include="recursos\images\logo.png" />
+    <Content Include="Presentacion\recursos\images\matero2.jpg" />
     <Content Include="recursos\images\mesaclasica.png" />
     <Content Include="recursos\images\mesadejardin.png" />
     <Content Include="recursos\images\mesamoderna.png" />
+    <Content Include="Presentacion\recursos\images\paticos.jpg" />
     <Content Include="recursos\images\perrito.jpeg" />
     <Content Include="recursos\images\dinosaurio.png" />
+    <Content Include="Presentacion\recursos\images\puerta.jpg" />
     <Content Include="recursos\images\sillaclasica.png" />
     <Content Include="recursos\images\sillaIcono.png" />
     <Content Include="recursos\images\sillamesedora.png" />
