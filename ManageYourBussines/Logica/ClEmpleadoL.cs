@@ -18,14 +18,16 @@ namespace ManageYourBussines.Logica
             listarEmpleado = objEmpleadosD.mtdListarEmpleado();
             DataTable empleado = new DataTable();
             DataTable seguridadSocial = new DataTable();
+            
 
            
             empleado.Columns.Add(new DataColumn("documento", typeof(string)));
             empleado.Columns.Add(new DataColumn("nombres", typeof(string)));
             empleado.Columns.Add(new DataColumn("apellidos", typeof(string)));
             empleado.Columns.Add(new DataColumn("tipoEmpleado", typeof(string)));
-            seguridadSocial.Columns.Add(new DataColumn("porcentajePension", typeof(float)));
-            seguridadSocial.Columns.Add(new DataColumn("porcentajeSalud", typeof(float)));
+            empleado.Columns.Add(new DataColumn("porcentajePension", typeof(float)));
+            empleado.Columns.Add(new DataColumn("porcentajeSalud", typeof(float)));
+            empleado.Columns.Add(new DataColumn("Salariominimo", typeof(float)));
 
 
             int cuenta = listarEmpleado.Count;
@@ -51,14 +53,16 @@ namespace ManageYourBussines.Logica
                     stot = salario - salud - pension;
 
                     DataRow row = empleado.NewRow();
-                   
+                    
+
                     row["documento"] = documento;
                     row["nombres"] = nombres;
                     row["apellidos"] = apellidos;
                     row["tipoEmpleado"] = tipoEmpleado;
                     row["porcentajePension"] = porcentajePension;
                     row["porcentajeSalud"] = porcentajeSalud;
-                   
+                    row["Salariominimo"] = stot;
+
                     empleado.Rows.Add(row);
                 }
                 
