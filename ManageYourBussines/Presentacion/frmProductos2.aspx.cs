@@ -32,10 +32,6 @@ namespace ManageYourBussines.Presentacion
             Image1.ImageUrl = imagen;
             string descripcion = listarProductos[0].descripcion;
             string imagen2 = listarProductos[0].imagen;
-            Image2.ImageUrl = imagen;
-            string imagen3 = listarProductos[0].imagen;
-            Image3.ImageUrl = imagen;
-
             lbDescripcion.Text = descripcion;
             string material = listarProductos[0].material;
             lbMaterial.Text = material;
@@ -43,7 +39,7 @@ namespace ManageYourBussines.Presentacion
 
         protected void btnHome_Click(object sender, EventArgs e)
         {
-            Response.Redirect("frmProductos2.aspx");
+            Response.Redirect("frmdetalles.aspx");
         }
     }
 }

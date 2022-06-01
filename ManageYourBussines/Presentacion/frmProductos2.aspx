@@ -24,52 +24,26 @@
   <br />
     <div class="container">   
    <center><h1>Detalles del Producto</h1></center> 
+   </div>
 <br />
 
-    <div id="demo" class="carousel slide" data-bs-ride="carousel">
-
-  <!-- Indicators/dots -->
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-  </div>
-
-  <!-- The slideshow/carousel -->
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-       <div align="center"> <asp:Image ID="Image1" runat="server" Width="400" height="400" /></div>
-    </div>
-    <div class="carousel-item">
-      <div align="center"> <asp:Image ID="Image2" runat="server" Width="400" height="400" /></div>
-    </div>
-    <div class="carousel-item">
-     <div align="center"> <asp:Image ID="Image3" runat="server" Width="400" height="400" /></div>
-    </div>
-  </div>
-  
-  <!-- Left and right controls/icons -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
-</div>
-          
-      <div class="col-md">        
-          <div class="card">
-            <div class="card-body">
-              <h4 class="card-title" align="center">Producto:</h4>
-          <p class="card-text" align="center"><asp:Label ID="lblID" runat="server" Text="Label"></asp:Label></p>
-          <p class="card-text" align="center"><asp:Label ID="lbnombre" runat="server" Text="Label"></asp:Label>
+  <div align="center">
+<div class="container mt-3 ">
+  <div class="card" style="width:400px">
+      <div align="center"> <asp:Image ID="Image1" runat="server" Width="100%"/></div>
+    <div class="card-body">
+      <h4 class="card-title" align="center" font-family="cursive">Producto:</h4>
+      <p class="card-text" align="center"><asp:Label ID="lblID" runat="server" Text="Label"></asp:Label></p>
+          <p class="card-text" align="center"><asp:Label ID="lbnombre" runat="server" Text="nombre:"></asp:Label>
           <p class="card-text" align="center"><asp:Label ID="lbDescripcion" runat="server" Text="Label"></asp:Label>
-          <p class="card-text" align="center"><asp:Label ID="lbMaterial" runat="server" Text="Label"></asp:Label>
-          <asp:Button ID="btnCarrito" runat="server" Text="Agregar al Carrito" CssClass="btn btn-warning" />
-          <asp:Button ID="btnHome" runat="server" Text="Productos:" CssClass="btn btn-primary" onclick="btnHome_Click"/>
+          <p class="card-text" align="center"><asp:Label ID="lbMaterial" runat="server" Text="Label"></asp:Label></p>
+          <asp:Button ID="Button1" runat="server" Text="Agregar al Carrito" CssClass="btn btn-warning" />
+          <asp:Button ID="Button2" runat="server" Text="Productos:" CssClass="btn btn-primary" onclick="btnHome_Click"/>
 
-            </div>                  
-          </div>          
-      </div>
-      
+            </div>
+        </div>
+     </div>
+    </div>
+  <br> 
+  
 </asp:Content>
