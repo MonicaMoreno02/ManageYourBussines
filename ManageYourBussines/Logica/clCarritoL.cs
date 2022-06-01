@@ -98,7 +98,7 @@ namespace ManageYourBussines.Presentacion
                     DataRow row = carrito.NewRow();
                     row["#"] = i + 1;
                     row["imagen"] = "";
-                    row["nombre"] = "vtotal";
+                    row["nombre"] = "vtotal =";
                     row["describcion"] = "";
                     row["precio"] = 0;
                     row["cantidad"] = 0;

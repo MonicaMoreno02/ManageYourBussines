@@ -326,10 +326,14 @@ namespace ManageYourBussines.Presentacion
                         ColumnHeaders = true
                     });
             }
-            string ahora = DateTime.Now.ToString();
+            string ahora = DateTime.Now.ToString("dd-MM-yyyy");
+
+         
+        
+
             string nombreArchivo = "reporte" + ahora;
          
-            workbook.Save("D:/"+nombreArchivo+".xlsx");
+            workbook.Save("D:/reporte"+ahora+".xlsx");
             ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Archivo creado correctamente guardado en: D:/reporte"+ahora+".xlsx');", true);
 
         }
