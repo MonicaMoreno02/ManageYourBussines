@@ -6,10 +6,9 @@
 
     <form runat="server">
 
-        <%--  <div class="btn fondo">--%>
         <div class="container">
 
-            <table class="table table-hover " id="dtCliente">
+            <table class=" table table " id="dtCliente">
                 <thead>
                     <tr>
                         <th>id</th>
@@ -26,7 +25,7 @@
 
             </table>
         </div>
-        <%--  </div>--%>
+    
 
         <%--modal ver detalles--%>
 
@@ -41,20 +40,20 @@
                     </div>
                     <div class="modal-body">
 
-                        <div class="container">
+                        <div class="table-responsive">
 
-                            <table class="table table-hover " id="dtDetalles">
+                            <table class="table table-hover" id="dtDetalles">
                                 <thead>
                                     <tr>
-                                        <th>id</th>
-                                        <th>Documento</th>
-                                        <th>Nombres</th>
-                                        <th>Apellidos</th>
-                                        <th>Telefono</th>
-                                        <th>Dirección</th>
-                                        <th>Email</th>
-                                        <th>Clave</th>
-                                        <th>Acciones</th>
+                                        <th>idCliente</th>
+                                        <th>Nombre Cliente</th>
+                                        <th>Fecha de Venta</th>
+                                        <th>Codigo de Venta</th>
+                                        <th>Cantidad</th>
+                                        <th>Valor Total</th>
+                                       <%-- <th>Nombre Empleado</th>--%>
+                                        <th>Nombre Producto</th>
+                                     
                                     </tr>
                                 </thead>
 
@@ -62,10 +61,9 @@
                         </div>
 
                     </div>
-                    <%-- <div class="modal-footer">
+                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <asp:Button ID="btnActualizar" class="btn btn-primary" runat="server" Text="Actualizar" OnClick="btnActualizar_Click" />
-                    </div>--%>
+                    </div>
                 </div>
             </div>
         </div>

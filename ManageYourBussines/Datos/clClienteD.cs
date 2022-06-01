@@ -62,12 +62,14 @@ namespace ManageYourBussines.Datos
 
                 clDetallesE objDatosDetalle = new clDetallesE();
 
-                objDatosDetalle.nombreCliente = tblDetallesVenta.Rows[i]["nombres"].ToString();
+                objDatosDetalle.nombreCliente = tblDetallesVenta.Rows[i]["nombreEmpleado"].ToString();
                 objDatosDetalle.fechaVenta = DateTime.Parse(tblDetallesVenta.Rows[i]["fechaVenta"].ToString());
                 objDatosDetalle.codigoVenta = int.Parse(tblDetallesVenta.Rows[i]["codigoVenta"].ToString());
+                objDatosDetalle.totalVenta = float.Parse(tblDetallesVenta.Rows[i]["totalVenta"].ToString());
+                objDatosDetalle.nombreEmpleado = tblDetallesVenta.Rows[i]["nombreEmpleado"].ToString();
                 objDatosDetalle.cantidad = int.Parse(tblDetallesVenta.Rows[i]["cantidad"].ToString());
                 objDatosDetalle.valorTotal = float.Parse(tblDetallesVenta.Rows[i]["valorTotal"].ToString());
-                objDatosDetalle.nombreProducto = tblDetallesVenta.Rows[i]["nombre"].ToString();
+                objDatosDetalle.nombreProducto = tblDetallesVenta.Rows[i]["nombreProducto"].ToString();
 
 
                 listarDetallesVenta.Add(objDatosDetalle);
