@@ -13,7 +13,7 @@ namespace ManageYourBussines.Entidades
         public string nombre { get; set; }
         public string descripcion { get; set; }
         public float precio { get; set; }
-        public string cantidadStock { get; set; }
+        public int cantidadStock { get; set; }
         public string largo { get; set; }
         public string ancho { get; set; }
         public string profundidad { get; set; }
@@ -21,7 +21,7 @@ namespace ManageYourBussines.Entidades
         public string caracteristicas { get; set; }
         public string imagen { get; set; }
 
-        public int cantidadStock { get; set; }
+       
 
 
     }

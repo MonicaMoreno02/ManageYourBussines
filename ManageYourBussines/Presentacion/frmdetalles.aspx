@@ -39,7 +39,7 @@
                 <asp:Literal ID="nombre" runat="server" /> <%#Eval("nombre") %><br>
                 <asp:Literal ID="precio" runat="server" />$ <%#Eval("precio") %><br>
                 <asp:Button ID="btnDetalles" runat="server" Text="Detalles:" CssClass="btn btn-success" OnClick="btnDetalles_Click"/>
-              <asp:ImageButton ID="ImageButton1" runat="server" Height="30px" ImageUrl="~/Presentacion/recursos/images/anadir-al-carrito (1).png" Width="30px" />
+             <asp:Button ID="idcarrito" runat="server" Text="carrito:" OnClick="Getcarrito" CssClass="btn btn-warning" />
 			</div>				
 		</ItemTemplate>
         </asp:Repeater>
