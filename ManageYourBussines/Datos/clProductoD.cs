@@ -123,7 +123,7 @@ namespace ManageYourBussines.Datos
                 objDatosProducto.nombre = tblProducto.Rows[i]["nombre"].ToString();
                 objDatosProducto.descripcion = tblProducto.Rows[i]["descripcion"].ToString();
                 objDatosProducto.precio = float.Parse(tblProducto.Rows[i]["precio"].ToString());
-                objDatosProducto.cantidadStock =int.Parse ( tblProducto.Rows[i]["cantidadStock"].ToString());
+                //objDatosProducto.cantidadStock =int.Parse ( tblProducto.Rows[i]["cantidadStock"].ToString());
                 objDatosProducto.largo = tblProducto.Rows[i]["largo"].ToString();
                 objDatosProducto.ancho = tblProducto.Rows[i]["ancho"].ToString();
                 objDatosProducto.profundidad = tblProducto.Rows[i]["profundidad"].ToString();

@@ -115,6 +115,8 @@ namespace ManageYourBussines.Presentacion
             ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('El producto ya esta agregado');", true);
         }
 
+        
+
         //protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         //{
         //    ListItem i;
