@@ -33,6 +33,12 @@
 
   <div class="container">
     <div class="col-md-6">
+
+        <asp:Label ID="Label1" runat="server" Text="desde" ></asp:Label>
+        <asp:TextBox ID="txtDesde" runat="server"  type="date"></asp:TextBox>
+        <asp:Label ID="Label2" runat="server" Text="hasta"></asp:Label>
+        <asp:TextBox ID="txthasta" runat="server" type="date"></asp:TextBox>
+          <asp:Button ID="btnfiltro" runat="server" Text="buscar" OnClick="btnfiltro_Click" />
       <asp:GridView ID="gvBalance" runat="server" AutoGenerateColumns="False"  class="table-secondary" Width="608px" OnRowCommand="gvBalance_RowCommand" >
 
       <Columns>
@@ -61,7 +67,7 @@
   
 </div>
 
-     
+     </div>
 
    
           

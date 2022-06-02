@@ -16,10 +16,12 @@ namespace ManageYourBussines.Presentacion
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            clBalanceE objbalance = new clBalanceE();
             clBalanceL objbalanceL = new clBalanceL();
+        
             List<clBalanceE> listbalanceE = new List<clBalanceE>();
             DataTable dtBal = new DataTable();
-            listbalanceE = objbalanceL.mtdListarBal();
+            listbalanceE = objbalanceL.mtdListarBal(objbalance);
             dtBal.Columns.Add(new DataColumn("#", typeof(int)));
             dtBal.Columns.Add(new DataColumn("idVenta", typeof(int)));
             dtBal.Columns.Add(new DataColumn("fechaVenta", typeof(DateTime)));
@@ -76,6 +78,7 @@ namespace ManageYourBussines.Presentacion
 
             gvBalance.DataSource = dtBal;
             gvBalance.DataBind();
+
         }
 
         protected void gvBalance_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -148,10 +151,35 @@ namespace ManageYourBussines.Presentacion
 
 
                 }
-                clBalanceL objbalanceL = new clBalanceL();
-                List<clBalanceE> listbalanceE = new List<clBalanceE>();
+
+                string desde = txtDesde.Text;
+                string hasta = txthasta.Text;
+
                 DataTable dtBal = new DataTable();
-                listbalanceE = objbalanceL.mtdListarBal();
+                List<clBalanceE> listbalanceE = new List<clBalanceE>();
+                if (desde == "" || hasta == "")
+                {
+                    clBalanceE objbalance = new clBalanceE();
+                    clBalanceL objbalanceL = new clBalanceL();
+   
+                   
+                  
+                    listbalanceE = objbalanceL.mtdListarBal(objbalance);
+
+                }
+                else
+                {
+                    int consult = 1;
+
+                    clBalanceE objbalance = new clBalanceE();
+                    clBalanceL objbalanceL = new clBalanceL();
+                    objbalance.desde = DateTime.Parse(txtDesde.Text);
+                    objbalance.Hasta = DateTime.Parse(txthasta.Text);
+                    objbalance.num = consult;
+                   
+                    listbalanceE = objbalanceL.mtdListarBal(objbalance);
+                }
+                
                 dtBal.Columns.Add(new DataColumn("#", typeof(int)));
                 dtBal.Columns.Add(new DataColumn("idVenta", typeof(int)));
                 dtBal.Columns.Add(new DataColumn("fechaVenta", typeof(DateTime)));
@@ -214,10 +242,12 @@ namespace ManageYourBussines.Presentacion
             {
                 if (i!=1)
                 {
+                    clBalanceE objbalance = new clBalanceE();
                     clBalanceL objbalanceL = new clBalanceL();
+                    
                     List<clBalanceE> listbalanceE = new List<clBalanceE>();
                     DataTable dtBal = new DataTable();
-                    listbalanceE = objbalanceL.mtdListarBal();
+                    listbalanceE = objbalanceL.mtdListarBal(objbalance);
                     dtBal.Columns.Add(new DataColumn("#", typeof(int)));
                     dtBal.Columns.Add(new DataColumn("idVenta", typeof(int)));
                     dtBal.Columns.Add(new DataColumn("fechaVenta", typeof(DateTime)));
@@ -326,7 +356,7 @@ namespace ManageYourBussines.Presentacion
                         ColumnHeaders = true
                     });
             }
-            string ahora = DateTime.Now.ToString("dd-MM-yyyy");
+            string ahora = DateTime.Now.ToString("yyyy-MM-dd-hh-m-s");
 
          
         
@@ -336,6 +366,90 @@ namespace ManageYourBussines.Presentacion
             workbook.Save("D:/reporte"+ahora+".xlsx");
             ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Archivo creado correctamente guardado en: D:/reporte"+ahora+".xlsx');", true);
 
+        }
+
+        protected void btnfiltro_Click(object sender, EventArgs e)
+        {
+            string desde = txtDesde.Text;
+            string hasta = txthasta.Text;
+            
+            
+
+            if (desde== ""||hasta == "")
+            {
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('los campos estan vacios');", true);
+
+            }
+            else
+            {
+
+
+                int consult = 1;
+                clBalanceE objbalance = new clBalanceE();
+                clBalanceL objbalanceL = new clBalanceL();
+                objbalance.desde = DateTime.Parse(txtDesde.Text);
+                objbalance.Hasta = DateTime.Parse(txthasta.Text);
+                objbalance.num = consult;
+                List<clBalanceE> listbalanceE = new List<clBalanceE>();
+                DataTable dtBal = new DataTable();
+                listbalanceE = objbalanceL.mtdListarBal(objbalance);
+                dtBal.Columns.Add(new DataColumn("#", typeof(int)));
+                dtBal.Columns.Add(new DataColumn("idVenta", typeof(int)));
+                dtBal.Columns.Add(new DataColumn("fechaVenta", typeof(DateTime)));
+                dtBal.Columns.Add(new DataColumn("codigoVenta", typeof(string)));
+                dtBal.Columns.Add(new DataColumn("totalVenta", typeof(float)));
+
+                int cuenta = listbalanceE.Count;
+                int num = cuenta + 1;
+                float vtot = 0;
+                float total = 0;
+                for (int i = 0; i < num; i++)
+                {
+
+
+                    if (i != cuenta)
+                    {
+                        int numero = i + 1;
+                        int idventa = listbalanceE[i].idventa;
+                        DateTime fecha = listbalanceE[i].fechaVenta;
+                        string codigoVenta = listbalanceE[i].codigoVenta;
+                        float totalVenta = listbalanceE[i].totalVenta;
+
+                        vtot = vtot + totalVenta;
+
+                        DataRow row = dtBal.NewRow();
+                        row["#"] = numero;
+                        row["idVenta"] = idventa;
+                        row["fechaVenta"] = fecha;
+                        row["codigoVenta"] = codigoVenta;
+                        row["totalVenta"] = totalVenta;
+
+                        dtBal.Rows.Add(row);
+                    }
+                    else
+                    {
+                        total = vtot;
+
+                        DataRow row = dtBal.NewRow();
+                        row["#"] = i + 1;
+                        row["idVenta"] = 0;
+                        row["fechaVenta"] = DateTime.Now.ToString("dd-MM-yyyy");
+                        row["codigoVenta"] = "total=";
+                        row["totalVenta"] = total;
+
+                        dtBal.Rows.Add(row);
+
+                    }
+
+
+
+
+
+                }
+
+                gvBalance.DataSource = dtBal;
+                gvBalance.DataBind();
+            }
         }
     }
 }

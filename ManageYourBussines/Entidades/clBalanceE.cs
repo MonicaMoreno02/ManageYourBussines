@@ -20,9 +20,11 @@ namespace ManageYourBussines.Entidades
 
         public float precio { get; set; }
 
+         public DateTime desde { get; set; }
+        public DateTime Hasta { get; set; }
          
+        public int num { get; set; }
 
-
-
+        
     }
 }

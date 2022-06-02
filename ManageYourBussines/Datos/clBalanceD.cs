@@ -10,9 +10,20 @@ namespace ManageYourBussines.Datos
 {
     public class clBalanceD
     {
-        public List<clBalanceE> mtdListar()
+        public List<clBalanceE> mtdListar(clBalanceE objbal)
         {
-            string sql = "select * from venta";
+            string fec1=objbal.desde.ToString("yyyy-MM-dd");
+            string fec2 = objbal.Hasta.ToString("yyyy-MM-dd");
+            string sql;
+            if (objbal.num==0)
+            {
+                 sql = "select * from venta";
+            }
+            else
+            {
+                 sql = "select * from venta  where (fechaVenta >="+fec1+ " ) and (fechaVenta <="+fec2+")";
+            }
+             
             clConexion objConexion = new clConexion();
             DataTable tblBalance = new DataTable();
             tblBalance = objConexion.mtdDesconectado(sql);
