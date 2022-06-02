@@ -5,7 +5,7 @@ using System.Web;
 
 namespace ManageYourBussines.Entidades
 {
-    public class clVentaE
+    public class clVentaE:clProductoE
     {
         public int idVenta { get; set; }
         public DateTime fechaVenta { get; set; }
@@ -13,5 +13,10 @@ namespace ManageYourBussines.Entidades
         public float totalVenta { get; set; }
         public int idCliente { get; set; }
         public int idEmpleado { get; set; }
+
+        public int idDetallesVenta { get; set; }
+        public int idProducto { get; set; }
+        public int cantidad { get; set; }
+        public float valorTotal { get; set; }
     }
 }

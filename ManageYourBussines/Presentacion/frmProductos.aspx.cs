@@ -42,5 +42,10 @@ namespace ManageYourBussines.Presentacion
         {
             Response.Redirect("frmHome.aspx");
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
