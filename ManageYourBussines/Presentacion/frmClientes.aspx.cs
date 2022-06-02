@@ -15,15 +15,6 @@ namespace ManageYourBussines.Presentacion
         protected void Page_Load(object sender, EventArgs e)
         {
 
-
-            clClienteL objDatosVentas = new clClienteL();
-            List<clDetallesE> listaDetallesP = new List<clDetallesE>();
-
-            listaDetallesP = objDatosVentas.mtdListarDetallesL();
-
-            dgModal.DataSource = listaDetallesP;
-            dgModal.DataBind();
-
         }
 
         [WebMethod]
@@ -37,16 +28,19 @@ namespace ManageYourBussines.Presentacion
             return objListaCliente;
         }
 
-        
-        //[WebMethod]
-        //public static List<clDetallesE> mtdListaDetallesP()
-        //{
-        //    clClienteL objDatosVentas = new clClienteL();
-        //    List<clDetallesE> listaDetallesP = new List<clDetallesE>();
+               
 
-        //    listaDetallesP = objDatosVentas.mtdListarDetallesL();
+        protected void btnAceptar_Click(object sender, EventArgs e)
+        {
+            clClienteL objDatosVentas = new clClienteL();
+            List<clDetallesE> listaDetallesP = new List<clDetallesE>();
 
-        //    return listaDetallesP;
-        //}
+            int idCliente = int.Parse(txtIdCliente.Text);
+
+            listaDetallesP = objDatosVentas.mtdListarDetallesL(idCliente);
+
+            dgModal.DataSource = listaDetallesP;
+            dgModal.DataBind();
+        }
     }
 }

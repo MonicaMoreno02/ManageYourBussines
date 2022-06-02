@@ -44,12 +44,12 @@ namespace ManageYourBussines.Datos
         }
 
         //Listar Detalles de venta
-        public List<clDetallesE> mtdListarDetallesD( )
+        public List<clDetallesE> mtdListarDetallesD(int idCliente)
         {
             string sql = "select cliente.nombreCliente , venta.fechaVenta, venta.codigoVenta, venta.totalVenta, empleado.nombreEmpleado, detallesVenta.cantidad, detallesVenta.valorTotal, producto.nombreProducto"+
                 " from cliente inner join venta on cliente.idCliente = venta.idCliente inner join empleado on venta.idEmpleado = empleado.idEmpleado" + 
                 " inner join detallesVenta on detallesVenta.idVenta = venta.idVenta"+
-                " inner join producto on producto.idProducto = detallesVenta.idProducto";
+                " inner join producto on producto.idProducto = detallesVenta.idProducto where cliente.idCliente='"+idCliente+"'";
             clConexion objConexion = new clConexion();
             DataTable tblDetallesVenta = new DataTable();
             tblDetallesVenta = objConexion.mtdDesconectado(sql);
