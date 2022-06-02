@@ -52,7 +52,7 @@
     <!--Añadimos el fondo-->
     <div class="hero_area">
         <div class="bg-box">
-            <img src="recursos/images/fondo5.jpeg" alt="">
+            <img src="recursos/images/Nominaaa.jpeg" alt="">
         </div>
         <!-- header section strats -->
         <header class="header_section">

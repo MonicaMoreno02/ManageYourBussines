@@ -615,8 +615,9 @@ a:focus {
 }
 
 .about_section {
-  background: #222831;
+  background: #FFCC99;
   color: #ffffff;
+    height: 375px;
 }
 
 .about_section .row {

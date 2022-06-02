@@ -9,7 +9,7 @@
    
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
- <%--   <!-- Basic -->
+    <!-- Basic -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- Mobile Metas -->
@@ -24,7 +24,7 @@
     <!--Insertamos el icono que se visualiza en la esquina de la pestaña en el navegador-->
     <link rel="shortcut icon" href="recursos/images/sillaIcono.png" type="">
     <!--Añadimos el titulo-->
-    <title>Muebles San José</title>--%>
+    <title>Muebles San José</title>
 
 
 

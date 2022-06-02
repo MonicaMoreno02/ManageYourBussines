@@ -21,9 +21,9 @@ namespace ManageYourBussines.Logica
             
 
            
-            empleado.Columns.Add(new DataColumn("documento", typeof(string)));
-            empleado.Columns.Add(new DataColumn("nombres", typeof(string)));
-            empleado.Columns.Add(new DataColumn("apellidos", typeof(string)));
+            empleado.Columns.Add(new DataColumn("Documento", typeof(string)));
+            empleado.Columns.Add(new DataColumn("Nombres", typeof(string)));
+            empleado.Columns.Add(new DataColumn("Apellidos", typeof(string)));
             empleado.Columns.Add(new DataColumn("tipoEmpleado", typeof(string)));
             empleado.Columns.Add(new DataColumn("porcentajePension", typeof(float)));
             empleado.Columns.Add(new DataColumn("porcentajeSalud", typeof(float)));
@@ -42,9 +42,9 @@ namespace ManageYourBussines.Logica
                 if(i != cuenta)
                 {
                     int numero = i + 1;
-                    string documento = listarEmpleado[i].documento;
-                    string nombres = listarEmpleado[i].nombres;
-                    string apellidos = listarEmpleado[i].apellidos;
+                    string Documento = listarEmpleado[i].documento;
+                    string Nombres = listarEmpleado[i].nombres;
+                    string Apellidos = listarEmpleado[i].apellidos;
                     string tipoEmpleado = listarEmpleado[i].tipoEmpleado;
                     string porcentajePension = listarEmpleado[i].porcentajePension;
                     string porcentajeSalud = listarEmpleado[i].porcentajeSalud;
@@ -55,9 +55,9 @@ namespace ManageYourBussines.Logica
                     DataRow row = empleado.NewRow();
                     
 
-                    row["documento"] = documento;
-                    row["nombres"] = nombres;
-                    row["apellidos"] = apellidos;
+                    row["documento"] = Documento;
+                    row["nombres"] = Nombres;
+                    row["apellidos"] = Apellidos;
                     row["tipoEmpleado"] = tipoEmpleado;
                     row["porcentajePension"] = porcentajePension;
                     row["porcentajeSalud"] = porcentajeSalud;
