@@ -27,7 +27,7 @@
 
   <div class="container">
     <div class="jumbotron">
-      <h1 style="text-align:center">balance de ventas</h1>
+      <h1 style="text-align:center">Balance de ventas</h1>
     </div>
   </div>
 
@@ -39,6 +39,10 @@
         <asp:Label ID="Label2" runat="server" Text="hasta"></asp:Label>
         <asp:TextBox ID="txthasta" runat="server" type="date"></asp:TextBox>
           <asp:Button ID="btnfiltro" runat="server" Text="buscar" OnClick="btnfiltro_Click" />
+           <asp:ScriptManager ID="ScriptManager1" runat="server">
+           </asp:ScriptManager>
+           <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+               <ContentTemplate>
       <asp:GridView ID="gvBalance" runat="server" AutoGenerateColumns="False"  class="table-secondary" Width="608px" OnRowCommand="gvBalance_RowCommand" >
 
       <Columns>
@@ -54,6 +58,9 @@
                        
                        </Columns>
     </asp:GridView>
+                     </ContentTemplate>
+           </asp:UpdatePanel>
+   
          <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="excel" cssclass="btn btn-success" />
 
     </div>
@@ -61,10 +68,14 @@
    
   
 </div>
-
+    
+          
+           <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+               <ContentTemplate>
     <div class="col-md-5">
      <asp:GridView ID="gvDetalles"  class="table-secondary"  runat="server"></asp:GridView>
-  
+      </ContentTemplate>
+           </asp:UpdatePanel>
 </div>
 
      </div>
