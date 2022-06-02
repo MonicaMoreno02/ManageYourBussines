@@ -43,7 +43,7 @@
            </asp:ScriptManager>
            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                <ContentTemplate>
-      <asp:GridView ID="gvBalance" runat="server" AutoGenerateColumns="False"  class="table-secondary" Width="608px" OnRowCommand="gvBalance_RowCommand" >
+      <asp:GridView ID="gvBalance" runat="server" AutoGenerateColumns="False"  class="table-primary" Width="608px" OnRowCommand="gvBalance_RowCommand" >
 
       <Columns>
                            <asp:BoundField DataField="#" HeaderText="#">
@@ -73,7 +73,9 @@
            <asp:UpdatePanel ID="UpdatePanel2" runat="server">
                <ContentTemplate>
     <div class="col-md-5">
-     <asp:GridView ID="gvDetalles"  class="table-secondary"  runat="server"></asp:GridView>
+        <br />
+         <br />
+     <asp:GridView ID="gvDetalles"  class="table-info"  runat="server"></asp:GridView>
       </ContentTemplate>
            </asp:UpdatePanel>
 </div>

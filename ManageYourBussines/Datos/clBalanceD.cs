@@ -12,18 +12,18 @@ namespace ManageYourBussines.Datos
     {
         public List<clBalanceE> mtdListar(clBalanceE objbal)
         {
-            string fec1=objbal.desde.ToString("yyyy-MM-dd");
-            string fec2 = objbal.Hasta.ToString("yyyy-MM-dd");
+            string fec1=objbal.desde.ToString("yyyy/MM/dd");
+            string fec2 = objbal.Hasta.ToString("yyyy/MM/dd");
             string sql;
-            if (objbal.num==0)
+            if (objbal.num == 0)
             {
-                 sql = "select * from venta";
+                sql = "select * from venta";
             }
             else
             {
-                 sql = "select * from venta  where (fechaVenta >="+fec1+ " ) and (fechaVenta <="+fec2+")";
+                sql = "select * from venta  where fechaVenta  BETWEEN '" + fec1 + "' and '" + fec2 + "'";
+
             }
-             
             clConexion objConexion = new clConexion();
             DataTable tblBalance = new DataTable();
             tblBalance = objConexion.mtdDesconectado(sql);
