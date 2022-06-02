@@ -8,6 +8,7 @@
             </div>
           </div>
    <div>
+ <br />
        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" CssClass="table table-hover ">
            <Columns>
                <asp:BoundField DataField="nombre" HeaderText="Nombre del Producto" />
