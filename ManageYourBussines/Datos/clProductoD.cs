@@ -32,7 +32,7 @@ namespace ManageYourBussines.Datos
                 objDatosProducto.material = tblProducto.Rows[i]["material"].ToString();
                 objDatosProducto.caracteristicas = tblProducto.Rows[i]["caracteristicas"].ToString();
                 objDatosProducto.idProducto = int.Parse(tblProducto.Rows[i]["idProducto"].ToString());
-                objDatosProducto.nombre = tblProducto.Rows[i]["nombre"].ToString();
+                objDatosProducto.nombre = tblProducto.Rows[i]["nombreProducto"].ToString();
                 objDatosProducto.precio = float.Parse(tblProducto.Rows[i]["precio"].ToString());
                 objDatosProducto.descripcion = tblProducto.Rows[i]["descripcion"].ToString();
                 objDatosProducto.cantidadStock = int.Parse(tblProducto.Rows[i]["cantidadStock"].ToString());

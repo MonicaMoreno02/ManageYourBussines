@@ -15,7 +15,7 @@ namespace ManageYourBussines.Datos
             public clConexion()
             {
 
-                conexion = new SqlConnection("Data Source=SOGAPRRBCFSD526;Initial Catalog=dbManage;Integrated Security=True");
+                conexion = new SqlConnection("Data Source=SOGAPRRBCFSD544\\SQLEXPRESS;Initial Catalog=dbManage;Integrated Security=True");
                 conexion.Open();
             }
 
