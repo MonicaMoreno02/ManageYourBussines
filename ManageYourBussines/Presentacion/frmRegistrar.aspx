@@ -66,21 +66,21 @@
                             <li class="nav-item active">
                                 <a class="nav-link" href="index.aspx">Home <span class="sr-only">(current)</span></a>
                             </li>
-                            <li class="nav-item">
+                           <%-- <li class="nav-item">
                                 <a class="nav-link" href="menu.html">Productos</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="about.html">Sobre Nosotros</a>
-                            </li>
+                            </li>--%>
 
 
                             
-                            <div class="container mt-3">
+                            <div class="container mt-">
 
 
 
                                 <li class="nav-item">
-                                    <a class="nav-link" data-bs-toggle="modal" data-bs-target="#myModal">Iniciar Sesion </a>
+                                    <a class="nav-link" data-bs-toggle="modal" data-bs-target="#myModal">Iniciar Sesión </a>
                                 </li>
                             </div>
 
@@ -212,11 +212,11 @@
                                 </svg>
                             </a>
                             <form class="form-inline">
-                                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
+                               <%-- <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
                                     <i class="fa fa-search" aria-hidden="true"></i>
                                 </button>
                             </form>
-                            <a href="" class="order_online">Compra Ahora
+                            <a href="" class="order_online">Compra Ahora--%>
                             </a>
                         </div>
                     </div>
@@ -392,7 +392,7 @@
     <div class="invalid-feedback">Complete este Campo.</div>--%>
 
   <center>
-                                <asp:Button ID="btnRegistrar" runat="server" Text="Registar" OnClick="btnRegistrar_Click" />  <center>
+                                <asp:Button ID="btnRegistrar" runat="server" Text="Registrarse" cssclass="btn btn-success" OnClick="btnRegistrar_Click" />  <center>
 
                             </div>
                         </div>
@@ -402,39 +402,82 @@
         </section>
         <!-- end book section -->
 
-  <section class="about_section layout_padding">
-        <div class="container  ">
+  <!-- end client section -->
 
+    <!-- PIE DE PAGINA -->
+    <footer class="footer_section">
+        <div class="container">
             <div class="row">
-                <div class="col-md-6 ">
-                    <div class="img-box">
-                        <img src="recursos/images/logo.jpg" alt="">
+                <div class="col-md-4 footer-col">
+                    <div class="footer_contact">
+                        <h4>Contactanos
+                        </h4>
+                        <div class="contact_link_box">
+                            <a href="">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <span>Cra40#24-63 - barrio Camilo Torres 
+                                </span>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <span>3133658254
+         <br />
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                    <span>3125403349
+                                    </span></a>
+                            <a href="">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                <span>muebles.sanjose@gmail.com
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="detail-box">
-                        <div class="heading_container">
-                            <h2>Somos Muebles San José
-                            </h2>
-                        </div>
-                        <p>
-                            Te ofrecemos
-                            <ul>
-                                <li>Fabricación de toda clase de muebles</li>
-                                <li>Restauracion de muebles</li>
-                                <li>Excelentes acabados</li>
-                                <li>Muebles Rusticos</li>
-                                <li>Decoración en madera</li>
-                                <li>Proyectos en Madera</li>
-                            </ul>
-                        </p>
-                        <a href="https://www.instagram.com/muebles.san_jose/">Mas sobre nosotros
+                <div class="col-md-4 footer-col">
+                    <div class="footer_detail">
+                        <a href="" class="footer-logo">Nuestras redes sociales
                         </a>
+                        <p>
+                            Contamos con diseños exclusivos, llevando calidad e innovación a tu hogar. 
+                        </p>
+                        <div class="footer_social">
+
+
+
+                            <a href="https://web.facebook.com/Muebles-San-Jos%C3%A9-113560607081755" target="_blank" rel="noopener noreferrer">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+
+                            <a href="https://instagram.com/muebles.san_jose?igshid=YmMyMTA2M2Y=" target="_blank" rel="noopener noreferrer">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+
+                            <a href="http://wa.me/573133658254/" target="_blank" rel="noopener noreferrer">
+                                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                            </a>
+
+
+
+
+                            </a>
+                        </div>
                     </div>
+                </div>
+                <div class="col-md-4 footer-col">
+                    <h4>Horario de atención 
+                    </h4>
+                    <p>
+                        Lunes a sábado
+                    </p>
+                    <p>
+                        8:00 Am a 12:00 Pm - 2:00 Pm a 5:00 Pm
+                    </p>
                 </div>
             </div>
+
         </div>
-    </section>
+        </div>
+    </footer>
 
     <!-- end about section -->
 

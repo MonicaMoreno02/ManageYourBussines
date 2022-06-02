@@ -31,6 +31,7 @@ namespace ManageYourBussines.Presentacion
             lbnombre.Text = nombre;
             string imagen = listarProductos[0].imagen;
             Image1.ImageUrl = imagen;
+            string imagen1 = listarProductos[0].imagen;
             string descripcion = listarProductos[0].descripcion;
             lbDescripcion.Text = descripcion;
             string material = listarProductos[0].material;
@@ -46,11 +47,12 @@ namespace ManageYourBussines.Presentacion
         {
             int idProducto = int.Parse(lblID.Text);
 
+            string idc = Convert.ToString(Session["idc"]);
+            int idClien = int.Parse(idc);
 
-            int cliente = 1;
 
             clCarritoE objDatosptod = new clCarritoE();
-            objDatosptod.idcliente = cliente;
+            objDatosptod.idcliente = idClien;
             objDatosptod.idproducto = idProducto;
             clCarritoL objprod = new clCarritoL();
             int numer = objprod.MtdcarPro(objDatosptod);
@@ -69,7 +71,7 @@ namespace ManageYourBussines.Presentacion
                 int cantidadstock = listar[0].cantidadStock;
                 string Imagen = listar[0].imagen;
                 int catidad = 1;
-                int idcliente = 1;
+               
 
 
 
@@ -81,7 +83,7 @@ namespace ManageYourBussines.Presentacion
                 clCarritoE objcarrito = new clCarritoE();
 
                 objcarrito.idproducto = idProducto;
-                objcarrito.idcliente = idcliente;
+                objcarrito.idcliente = idClien;
                 objcarrito.describcion = describsion;
                 objcarrito.precio = precio;
                 objcarrito.cantidadstock = cantidadstock;

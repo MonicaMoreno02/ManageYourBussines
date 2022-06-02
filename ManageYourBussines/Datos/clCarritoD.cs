@@ -77,9 +77,9 @@ namespace ManageYourBussines.Datos
 
 
         }
-        public List<clCarritoE> mtdListar()
+        public List<clCarritoE> mtdListar(clCarritoE objDatosCli)
         {
-            string sql = "select * from carrito";
+            string sql = "select * from carrito where idCliente="+objDatosCli.idcliente;
             clConexion objConexion = new clConexion();
             DataTable tblCarrito = new DataTable();
             tblCarrito = objConexion.mtdDesconectado(sql);

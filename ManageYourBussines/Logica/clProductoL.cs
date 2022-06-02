@@ -9,9 +9,9 @@ namespace ManageYourBussines.Logica
 {
     public class clProductoL
     {/// <summary>
-    /// 
-    /// </summary>
-    /// <returns></returns>
+     /// 
+     /// </summary>
+     /// <returns></returns>
         public List<clProductoE> mtdListarP()
         {
             clProductoD objProducto = new clProductoD();
@@ -24,8 +24,15 @@ namespace ManageYourBussines.Logica
         {
             clProductoD objProducto = new clProductoD();
             List<clProductoE> listarProductos = new List<clProductoE>();
-            listarProductos =objProducto.mtdListarDetalles(objdatos);
+            listarProductos = objProducto.mtdListarDetalles(objdatos);
             return listarProductos;
+        }
+        public List<clProductoE> mtdListarProducto()
+        {
+            clProductoD objProducto = new clProductoD();
+            List<clProductoE> objProductoD = new List<clProductoE>();
+            objProductoD = objProducto.mtdListarProducto();
+            return objProductoD;
         }
         public List<clProductoE> mtdListarProd(clProductoE objDatosPac)
         {

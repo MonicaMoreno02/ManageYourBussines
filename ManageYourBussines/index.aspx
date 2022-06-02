@@ -72,20 +72,20 @@
                             <li class="nav-item active">
                                 <a class="nav-link" href="index.aspx">Home <span class="sr-only">(current)</span></a>
                             </li>
-                            <li class="nav-item">
+                           <%-- <li class="nav-item">
                                 <a class="nav-link" href="menu.html">Productos</a>
-                            </li>
-                            <li class="nav-item">
+                            </li>--%>
+                           <%-- <li class="nav-item">
                                 <a class="nav-link" href="about.html">Sobre Nosotros</a>
-                            </li>
+                            </li>--%>
 
 
-                             <div class="container mt-3">
+                             <div class="container mt-">
 
 
 
                                 <li class="nav-item">
-                                    <a class="nav-link" data-bs-toggle="modal" data-bs-target="#myModal">Iniciar Sesion </a>
+                                    <a class="nav-link" data-bs-toggle="modal" data-bs-target="#myModal">Iniciar Sesión </a>
                                 </li>
                             </div>
 
@@ -96,7 +96,7 @@
 
                                         <!-- Modal Header -->
                                         <div class="modal-header">
-                                            <h4 class="modal-title">Iniciar Sesion </h4>
+                                            <h4 class="modal-title">Iniciar Sesión </h4>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                         </div>
 
@@ -129,10 +129,10 @@
                                                     </div>
                                                 </div>
                                                 <center>
-                                                    <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" onClick="btnIngresar_Click" /></center>
+                                                    <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" CssClass="btn btn-success" onClick="btnIngresar_Click" /></center>
                                                 <br />
                                                 <center>
-                                                    <asp:Button ID="btnRecuperar" runat="server" Text="Recuperar Contraseña" onClick="btnRecuperar_Click" />
+                                                    <asp:Button ID="btnRecuperar" runat="server" Text="Recuperar Contraseña" CssClass="btn btn-success" onClick="btnRecuperar_Click" />
                                          
 
 
@@ -159,8 +159,9 @@
                             <a href="" class="user_link">
                                 <i class="fa fa-user" aria-hidden="true"></i>
                             </a>
-                            <a class="cart_link" href="#">
-                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background: new 0 0 456.029 456.029;" xml:space="preserve">
+                           <%-- <asp:ImageButton ID="ImageButton1" runat="server" />--%>
+                          <%--  <a class="cart_link" href="#">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background: new 0 0 456.029 456.029;" xml:space="preserve">--%>
                                     <g>
                                         <g>
                                             <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
@@ -213,13 +214,13 @@
                                     </g>
                                 </svg>
                             </a>
-                            <form class="form-inline">
+                           <%-- <form class="form-inline">
                                 <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
                                     <i class="fa fa-search" aria-hidden="true"></i>
                                 </button>
                             </form>
                             <a href="" class="order_online">Compra Ahora
-                            </a>
+                            </a>--%>
                         </div>
                     </div>
                 </nav>
@@ -478,40 +479,82 @@
 
     <!-- about section -->
 
-    <section class="about_section layout_padding">
-        <div class="container  ">
+   <!-- end client section -->
 
+    <!-- PIE DE PAGINA -->
+    <footer class="footer_section">
+        <div class="container">
             <div class="row">
-                <div class="col-md-6 ">
-                    <div class="img-box">
-                        <img src="recursos/images/logo.jpg" alt="">
+                <div class="col-md-4 footer-col">
+                    <div class="footer_contact">
+                        <h4>Contactanos
+                        </h4>
+                        <div class="contact_link_box">
+                            <a href="">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <span>Cra40#24-63 - barrio Camilo Torres 
+                                </span>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <span>3133658254
+         <br />
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                    <span>3125403349
+                                    </span></a>
+                            <a href="">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                <span>muebles.sanjose@gmail.com
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="detail-box">
-                        <div class="heading_container">
-                            <h2>Somos Muebles San José
-                            </h2>
-                        </div>
-                        <p>
-                            Te ofrecemos
-                            <ul>
-                                <li>Fabricación de toda clase de muebles</li>
-                                <li>Restauracion de muebles</li>
-                                <li>Excelentes acabados</li>
-                                <li>Muebles Rusticos</li>
-                                <li>Decoración en madera</li>
-                                <li>Proyectos en Madera</li>
-                            </ul>
-                        </p>
-                        <a href="https://www.instagram.com/muebles.san_jose/">Mas sobre nosotros
+                <div class="col-md-4 footer-col">
+                    <div class="footer_detail">
+                        <a href="" class="footer-logo">Nuestras redes sociales
                         </a>
+                        <p>
+                            Contamos con diseños exclusivos, llevando calidad e innovación a tu hogar. 
+                        </p>
+                        <div class="footer_social">
+
+
+
+                            <a href="https://web.facebook.com/Muebles-San-Jos%C3%A9-113560607081755" target="_blank" rel="noopener noreferrer">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+
+                            <a href="https://instagram.com/muebles.san_jose?igshid=YmMyMTA2M2Y=" target="_blank" rel="noopener noreferrer">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+
+                            <a href="http://wa.me/573133658254/" target="_blank" rel="noopener noreferrer">
+                                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                            </a>
+
+
+
+
+                            </a>
+                        </div>
                     </div>
+                </div>
+                <div class="col-md-4 footer-col">
+                    <h4>Horario de atención 
+                    </h4>
+                    <p>
+                        Lunes a sábado
+                    </p>
+                    <p>
+                        8:00 Am a 12:00 Pm - 2:00 Pm a 5:00 Pm
+                    </p>
                 </div>
             </div>
-        </div>
-    </section>
 
+        </div>
+        </div>
+    </footer>
     <!-- end about section -->
 
    
