@@ -8,7 +8,7 @@ namespace ManageYourBussines.Entidades
     public class clDetallesE
 
     {
-        public int idCliente { get; set; }
+       
         public string nombreCliente { get; set; }
         public DateTime  fechaVenta{ get; set; }
         public int  codigoVenta{ get; set; }

@@ -51,14 +51,10 @@
                                 <h2>¿Mostrar elementos del cliente seleccionado?</h2>
                                 <br />
                                 <asp:GridView ID="dgModal" runat="server"></asp:GridView>
-
-
-                            </div>
-                            <div class="modal-footer">
-
-                                <asp:Button ID="btnAceptar" class="btn btn-primary btn-aceptt" runat="server" Text="Aceptar" OnClick="btnAceptar_Click" />
+                                 <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" OnClick="btnAceptar_Click" />
 
                             </div>
+                           
                         </div>
 
 

@@ -22,7 +22,7 @@
             </div>
         </a>
 
-        <a class="btn link" href="frmEmpleados.aspx">
+        <a class="btn link">
             <div class="btn from-left">
                 Ventas     
             </div>
@@ -40,7 +40,7 @@
         </a>
         <a class="btn link" href="frmInventario.aspx">
             <div class="btn from-bottom">
-                Inventario     
+                Balance 
             </div>
         </a>
     </form>

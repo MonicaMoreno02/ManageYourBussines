@@ -16,11 +16,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
+    <form runar="server">
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
-
+    </form>
     <script src="recursos/js/datatables/jquery.dataTables.min.js"></script>
     <script src="recursos/js/datatables/dataTables.bootstrap4.min.js"></script>
     <script src="recursos/js/demo/datatables-demo.js"></script>

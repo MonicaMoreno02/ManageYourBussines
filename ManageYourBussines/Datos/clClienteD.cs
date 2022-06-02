@@ -62,6 +62,7 @@ namespace ManageYourBussines.Datos
 
                 clDetallesE objDatosDetalle = new clDetallesE();
 
+              
                 objDatosDetalle.nombreCliente = tblDetallesVenta.Rows[i]["nombreCliente"].ToString();
                 objDatosDetalle.fechaVenta = DateTime.Parse(tblDetallesVenta.Rows[i]["fechaVenta"].ToString());
                 objDatosDetalle.codigoVenta = int.Parse(tblDetallesVenta.Rows[i]["codigoVenta"].ToString());
