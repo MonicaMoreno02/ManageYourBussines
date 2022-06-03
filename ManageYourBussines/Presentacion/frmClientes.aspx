@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div style="background-color: lightblue">
         <form runat="server">
-
+            <asp:TextBox ID="idClientee" runat="server"></asp:TextBox>
             <div class="container-fluid">
                 <h1>Lista de Clientes</h1>
                 <div class="card shadow mb-4">

@@ -15,6 +15,7 @@ namespace ManageYourBussines.Presentacion
         protected void Page_Load(object sender, EventArgs e)
         {
 
+
         }
 
         [WebMethod]
@@ -35,7 +36,7 @@ namespace ManageYourBussines.Presentacion
             clClienteL objDatosVentas = new clClienteL();
             List<clDetallesE> listaDetallesP = new List<clDetallesE>();
 
-            int idCliente = int.Parse(txtIdCliente.Text);
+            int idCliente = int.Parse(idClientee.Text);
 
             listaDetallesP = objDatosVentas.mtdListarDetallesL(idCliente);
 

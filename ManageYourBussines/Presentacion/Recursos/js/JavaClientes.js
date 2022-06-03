@@ -47,8 +47,8 @@ function agregarFilas(datos) {
             var fila = $(this).parent().parent()[0];
             var datosFila = tabla.fnGetData(fila);
             var idCliente = datosFila[0];
-            $("#txtIdCliente").val(idCliente);
-            /*alert(idCliente);*/
+            $("#IdClientee").val(idCliente);
+            alert(idCliente);
         });
 
     }
