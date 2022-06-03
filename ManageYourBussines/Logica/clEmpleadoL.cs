@@ -9,6 +9,8 @@ namespace ManageYourBussines.Logica
 {
     public class clEmpleadoL
     {
+
+        //Metodo para listar los empleados
         public List<clEmpleadoE> mtdListarEmpleadoL()
         {
             clEmpleadoD objEmpleadoD = new clEmpleadoD();
@@ -19,11 +21,40 @@ namespace ManageYourBussines.Logica
             return ListaEmpleados;
         }
 
+
+        //Metodo para registrar los empleados
+
         public int mtdRegistrarEmple(clEmpleadoE objDatosEmple)
         {
             clEmpleadoD objEmpleadosD = new clEmpleadoD();
             int result = objEmpleadosD.mtdRegistrar(objDatosEmple);
             return result;
         }
+
+
+
+        //Metodo para editar los empleados
+
+        public int mtdEditar(clEmpleadoE objDatosEmpleado)
+        {
+            clEmpleadoD objEmpleadoD = new clEmpleadoD();
+            int resultado = objEmpleadoD.mtdEditar(objDatosEmpleado);
+
+            return resultado;
+        }
+
+
+
+        //Metodo para eliminar los empleados
+
+        public int mtdEliminar(int idEmpleado)
+        {
+            clEmpleadoD objEmpleadoD = new clEmpleadoD();
+            int resultado = objEmpleadoD.mtdEliminar(idEmpleado);
+
+            return resultado;
+        }
+
+
     }
 }

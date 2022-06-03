@@ -58,5 +58,25 @@ namespace ManageYourBussines.Datos
             return resultado;
         }
 
+        public int mtdEditar(clEmpleadoE objDatos)
+        {
+            string sql = "Update Empleado set documento='" + objDatos.documento + "', nombreEmpleado='" + objDatos.nombreEmpleado + "'," +
+                "apellidos='" + objDatos.apellidos + "',tipoEmpleado='" + objDatos.tipoEmpleado + "',email='" + objDatos.email + "',clave='" +
+                objDatos.clave + "',idSeguridad='" + objDatos.idSeguridad + "' where idEmpleado=" + objDatos.idEmpleado +  "";
+
+            clConexion objConexion = new clConexion();
+            int result = objConexion.mtdConectado(sql);
+            return result;
+        }
+
+
+        public int mtdEliminar(int idEmpleado)
+        {
+            string sql = "Delete * from Empleado where idEmpleado=" + idEmpleado + "";
+
+            clConexion objConexion = new clConexion();
+            int result = objConexion.mtdConectado(sql);
+            return result;
+        }
     }
 }
