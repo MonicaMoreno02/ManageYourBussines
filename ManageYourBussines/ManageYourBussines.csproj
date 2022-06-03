@@ -105,7 +105,6 @@
     <Content Include="Presentacion\recursos\images\fondo2.jpeg" />
     <Content Include="Presentacion\recursos\images\fondo3.jpg" />
     <Content Include="Presentacion\recursos\images\fondo5.jpeg" />
-    <Content Include="Presentacion\recursos\images\fondoAdmin.jpg" />
     <Content Include="Presentacion\recursos\images\icono3.png" />
     <Content Include="Presentacion\recursos\images\iconoEscritorio.png" />
     <Content Include="Presentacion\recursos\images\iconoSofa.png" />

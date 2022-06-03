@@ -1,4 +1,6 @@
-﻿
+﻿* {
+    background-color: beige;
+}
 
 .btn {
     position: relative;
@@ -217,7 +219,6 @@ body {
     flex-direction: column-reverse|;
     height: 100vh;
     width: 100%;
-    background-color:beige;
     background-attachment: fixed;
     margin-left: 100px;
 }
