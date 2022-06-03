@@ -11,10 +11,10 @@ namespace ManageYourBussines.Logica
     {
 
         //Listamos los datos de los clientes
-        public List<clClienteE> mtdListarL()
+        public List<clUsuarioE> mtdListarL()
         {
             clClienteD objClienteD =new  clClienteD();
-            List<clClienteE> listaClientes = new List<clClienteE>();
+            List<clUsuarioE> listaClientes = new List<clUsuarioE>();
 
             listaClientes = objClienteD.mtdListarD();
             return listaClientes;

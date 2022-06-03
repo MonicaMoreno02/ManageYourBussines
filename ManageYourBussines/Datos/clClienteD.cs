@@ -12,25 +12,25 @@ namespace ManageYourBussines.Datos
     {
 
         //Listar Datos de los clientes
-        public List<clClienteE> mtdListarD()
+        public List<clUsuarioE> mtdListarD()
         {
             string sql = "select * from cliente";
             clConexion objConexion = new clConexion();
             DataTable tblCliente = new DataTable();
             tblCliente = objConexion.mtdDesconectado(sql);
 
-            List<clClienteE> listarCliente = new List<clClienteE>();
+            List<clUsuarioE> listarCliente = new List<clUsuarioE>();
 
             int cantReg = tblCliente.Rows.Count;
             for (int i = 0; i < cantReg; i++)
             {
 
-                clClienteE objDatosClientes = new clClienteE();
+                clUsuarioE objDatosClientes = new clUsuarioE();
 
 
                 objDatosClientes.idCliente = int.Parse(tblCliente.Rows[i]["idCliente"].ToString());
                 objDatosClientes.documento = tblCliente.Rows[i]["documento"].ToString();
-                objDatosClientes.nombres = tblCliente.Rows[i]["nombreCliente"].ToString();
+                objDatosClientes.nombreCliente = tblCliente.Rows[i]["nombreCliente"].ToString();
                 objDatosClientes.apellidos = tblCliente.Rows[i]["apellidos"].ToString();
                 objDatosClientes.telefono = tblCliente.Rows[i]["telefono"].ToString();
                 objDatosClientes.direccion = tblCliente.Rows[i]["direccion"].ToString();

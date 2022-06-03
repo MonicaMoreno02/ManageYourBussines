@@ -19,10 +19,10 @@ namespace ManageYourBussines.Presentacion
         }
 
         [WebMethod]
-        public static List<clClienteE> mtdListarP()
+        public static List<clUsuarioE> mtdListarP()
         {
             clClienteL objClienteL = new clClienteL();
-            List<clClienteE> objListaCliente = new List<clClienteE>();
+            List<clUsuarioE> objListaCliente = new List<clUsuarioE>();
 
             objListaCliente = objClienteL.mtdListarL();
 
