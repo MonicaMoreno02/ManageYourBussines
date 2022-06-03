@@ -23,9 +23,10 @@
                                         <th>Dirección</th>
                                         <th>Email</th>
                                         <th>Clave</th>
-                                        <th>Acciones</th>
-                                    </tr>
-                                </thead>
+                                        <th>Acciones</th> 
+
+
+                                                                   </thead>
 
                             </table>
                         </div>

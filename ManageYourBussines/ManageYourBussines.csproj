@@ -96,7 +96,6 @@
     <Content Include="Presentacion\recursos\css\responsive.css" />
     <Content Include="Presentacion\recursos\css\style.css" />
     <Content Include="Presentacion\recursos\css\style2.css" />
-    <Content Include="Presentacion\recursos\images\about-img.png" />
     <Content Include="Presentacion\recursos\images\biblioteca1.png" />
     <Content Include="Presentacion\recursos\images\dinosaurio.png" />
     <Content Include="Presentacion\recursos\images\Escritorio1.png" />
@@ -107,7 +106,6 @@
     <Content Include="Presentacion\recursos\images\fondo3.jpg" />
     <Content Include="Presentacion\recursos\images\fondo5.jpeg" />
     <Content Include="Presentacion\recursos\images\fondoAdmin.jpg" />
-    <Content Include="Presentacion\recursos\images\fondo_admin.jpg" />
     <Content Include="Presentacion\recursos\images\icono3.png" />
     <Content Include="Presentacion\recursos\images\iconoEscritorio.png" />
     <Content Include="Presentacion\recursos\images\iconoSofa.png" />
@@ -143,6 +141,8 @@
     <Content Include="recuperar.aspx" />
     <Content Include="recursos\css\bootstrap.css" />
     <Content Include="recursos\css\font-awesome.min.css" />
+    <Content Include="Presentacion\recursos\css\main.css" />
+    <Content Include="Presentacion\recursos\css\main.min.css" />
     <Content Include="recursos\css\responsive.css" />
     <Content Include="recursos\css\style.css" />
     <Content Include="recursos\images\Imagen1.png" />
@@ -150,23 +150,9 @@
     <Content Include="recursos\images\baseparacelular.jpeg" />
     <Content Include="recursos\images\carretilla.jpeg" />
     <Content Include="recursos\images\decoracion.jpeg" />
-    <Content Include="recursos\images\about-img.png" />
-    <Content Include="recursos\images\client1.jpg" />
-    <Content Include="recursos\images\client2.jpg" />
     <Content Include="recursos\images\comedores.jpg" />
     <Content Include="recursos\images\decoración2.jpeg" />
     <Content Include="recursos\images\escritorio.jpg" />
-    <Content Include="recursos\images\f1.png" />
-    <Content Include="recursos\images\f2.png" />
-    <Content Include="recursos\images\f3.png" />
-    <Content Include="recursos\images\f4.png" />
-    <Content Include="recursos\images\f5.png" />
-    <Content Include="recursos\images\f6.png" />
-    <Content Include="recursos\images\f7.png" />
-    <Content Include="recursos\images\f8.png" />
-    <Content Include="recursos\images\f9.png" />
-    <Content Include="recursos\images\favicon.png" />
-    <Content Include="recursos\images\hero-bg.jpg" />
     <Content Include="recursos\images\biblioteca1.png" />
     <Content Include="recursos\images\Escritorio1.png" />
     <Content Include="recursos\images\Escritorio2.png" />
@@ -180,7 +166,6 @@
     <Content Include="recursos\images\icons8-casa-48.png">
       <BrowseToURL>recursos\images\icons8-casa-48.png</BrowseToURL>
     </Content>
-    <Content Include="recursos\images\imagen.jpeg" />
     <Content Include="recursos\images\iconoEscritorio.png" />
     <Content Include="recursos\images\logo.jpg" />
     <Content Include="recursos\images\logo.png" />
@@ -205,6 +190,7 @@
     <Content Include="recursos\images\sillas.jpeg" />
     <Content Include="recursos\js\bootstrap.js" />
     <Content Include="recursos\js\custom.js" />
+    <Content Include="Presentacion\recursos\js\global.js" />
     <Content Include="recursos\js\jquery-3.4.1.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -212,7 +198,7 @@
     <Compile Include="Datos\clCarritoD.cs" />
     <Compile Include="Datos\clClienteD.cs" />
     <Compile Include="Datos\clConexion.cs" />
-    <Compile Include="Datos\ClEmpleadoD.cs" />
+    <Compile Include="Datos\clEmpleadoD.cs" />
     <Compile Include="Datos\clProductoD.cs" />
     <Compile Include="Datos\clUserDao.cs" />
     <Compile Include="Datos\clUsuarioD.cs" />
@@ -229,6 +215,7 @@
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Logica\clClienteL.cs" />
+    <Compile Include="Logica\clEmpleadoL.cs" />
     <Compile Include="Logica\clProductoL.cs" />
     <Compile Include="Logica\clUsuarioL.cs" />
     <Compile Include="Logica\clCarritoL.cs" />

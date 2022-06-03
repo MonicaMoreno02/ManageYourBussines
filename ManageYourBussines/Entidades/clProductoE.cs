@@ -20,7 +20,6 @@ namespace ManageYourBussines.Entidades
         public string nombre { get; set; }
         public float precio { get; set; }
         public string descripcion { get; set; }
-
         public int cantidadStock { get; set; }
 
 
