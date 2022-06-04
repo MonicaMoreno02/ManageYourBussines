@@ -94,6 +94,8 @@
     <Content Include="Presentacion\recursos\css\bootstrap.css" />
     <Content Include="Presentacion\recursos\css\font-awesome.min.css" />
     <Content Include="Presentacion\recursos\css\responsive.css" />
+    <Content Include="Presentacion\recursos\css\sb-admin-2.css" />
+    <Content Include="Presentacion\recursos\css\sb-admin-2.min.css" />
     <Content Include="Presentacion\recursos\css\style.css" />
     <Content Include="Presentacion\recursos\css\style2.css" />
     <Content Include="Presentacion\recursos\images\biblioteca1.png" />
@@ -135,8 +137,26 @@
     <Content Include="Presentacion\recursos\js\demo\chart-pie-demo.js" />
     <Content Include="Presentacion\recursos\js\demo\datatables-demo.js" />
     <Content Include="Presentacion\recursos\js\JavaClientes.js" />
+    <Content Include="Presentacion\recursos\js\JavaEmpleados.js" />
     <Content Include="Presentacion\recursos\js\jquery-3.4.1.min.js" />
     <Content Include="Presentacion\Recursos\js\datosDatable.js" />
+    <Content Include="Presentacion\recursos\js\main.js" />
+    <Content Include="Presentacion\recursos\js\sb-admin-2.js" />
+    <Content Include="Presentacion\recursos\js\sb-admin-2.min.js" />
+    <Content Include="Presentacion\recursos\vendor\datepicker\daterangepicker.css" />
+    <Content Include="Presentacion\recursos\vendor\datepicker\daterangepicker.js" />
+    <Content Include="Presentacion\recursos\vendor\datepicker\moment.min.js" />
+    <Content Include="Presentacion\recursos\vendor\font-awesome-4.7\css\font-awesome.css" />
+    <Content Include="Presentacion\recursos\vendor\font-awesome-4.7\css\font-awesome.min.css" />
+    <Content Include="Presentacion\recursos\vendor\font-awesome-4.7\fonts\fontawesome-webfont.svg" />
+    <Content Include="Presentacion\recursos\vendor\font-awesome-4.7\HELP-US-OUT.txt" />
+    <Content Include="Presentacion\recursos\vendor\jquery\jquery.js" />
+    <Content Include="Presentacion\recursos\vendor\jquery\jquery.min.js" />
+    <Content Include="Presentacion\recursos\vendor\mdi-font\css\material-design-iconic-font.css" />
+    <Content Include="Presentacion\recursos\vendor\mdi-font\css\material-design-iconic-font.min.css" />
+    <Content Include="Presentacion\recursos\vendor\mdi-font\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="Presentacion\recursos\vendor\select2\select2.min.css" />
+    <Content Include="Presentacion\recursos\vendor\select2\select2.min.js" />
     <Content Include="recuperar.aspx" />
     <Content Include="recursos\css\bootstrap.css" />
     <Content Include="recursos\css\font-awesome.min.css" />
@@ -357,6 +377,15 @@
     <Content Include="Presentacion\recursos\scss\_navs.scss" />
     <Content Include="Presentacion\recursos\scss\_utilities.scss" />
     <Content Include="Presentacion\recursos\scss\_variables.scss" />
+    <Content Include="Presentacion\recursos\vendor\font-awesome-4.7\fonts\fontawesome-webfont.eot" />
+    <Content Include="Presentacion\recursos\vendor\font-awesome-4.7\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Presentacion\recursos\vendor\font-awesome-4.7\fonts\fontawesome-webfont.woff" />
+    <Content Include="Presentacion\recursos\vendor\font-awesome-4.7\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Presentacion\recursos\vendor\font-awesome-4.7\fonts\FontAwesome.otf" />
+    <Content Include="Presentacion\recursos\vendor\mdi-font\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="Presentacion\recursos\vendor\mdi-font\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="Presentacion\recursos\vendor\mdi-font\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="Presentacion\recursos\vendor\mdi-font\fonts\Material-Design-Iconic-Font.woff2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

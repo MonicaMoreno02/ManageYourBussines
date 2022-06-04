@@ -25,8 +25,7 @@
                                         <th>Clave</th>
                                         <th>Acciones</th> 
 
-
-                                                                   </thead>
+                                </thead>
 
                             </table>
                         </div>

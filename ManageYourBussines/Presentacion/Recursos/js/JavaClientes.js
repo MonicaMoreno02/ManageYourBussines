@@ -52,18 +52,7 @@ function agregarFilas(datos) {
             alert(idCliente);
         });
 
-        $(document).on('click', '#btnEditar', function (e) {
-
-            e.preventDefault();
-            var fila = $(this).parent().parent();
-            datos = tabla.fnGetData(fila);
-            $("#txtID").val(datos[0]);
-            $("#txtDocumento").val(datos[1]);
-            $("#txtNombres").val(datos[2]);
-            $("#txtApellidos").val(datos[3]);
-            $("#txtEmail").val(datos[4]);
-            $("#txtCelular").val(datos[5]);
-        });
+       
     }
 
 

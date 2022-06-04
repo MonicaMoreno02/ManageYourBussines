@@ -4,7 +4,8 @@
 
 <html>
 <head runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge"; charset="utf-8" />
+    <meta  name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>ADMINISTRADOR</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -16,14 +17,51 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+      <!-- Jquery JS-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/datepicker/moment.min.js"></script>
+    <script src="vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="js/global.js"></script>
+
+
+
+      <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/main.css" rel="stylesheet" media="all">
+    <link href="recursos/css/cssBarra/main.css" rel="stylesheet" />
+
+
+    <!--Boostrap css-->
+    <link href="recursos/css/sb-admin-2.min.css" rel="stylesheet" />
+    <link href="recursos/js/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" />
+
+ 
+
 </head>
 <body>
-    <form runar="server">
+   
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
-    </form>
+
+    <script src="recursos/js/sb-admin-2.min.js"></script>
+
+     <!--Boostrap js-->    
     <script src="recursos/js/datatables/jquery.dataTables.min.js"></script>
     <script src="recursos/js/datatables/dataTables.bootstrap4.min.js"></script>
     <script src="recursos/js/demo/datatables-demo.js"></script>

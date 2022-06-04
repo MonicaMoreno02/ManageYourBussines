@@ -28,25 +28,20 @@ namespace ManageYourBussines.Presentacion
             return listaEmpleados;
         }
 
-        protected void btnActualizar_Click(object sender, EventArgs e)
-        {
-            clPersonaE objDatos = new clPersonaE();
-            objDatos.idPersona = int.Parse(txtID.Text);
-            objDatos.documento = txtDocumento.Text;
-            objDatos.nombres = txtNombres.Text;
-            objDatos.apellidos = txtApellidos.Text;
-            objDatos.email = txtEmail.Text;
-            objDatos.celular = txtCelular.Text;
-
-            clPersonaL objPersonaL = new clPersonaL();
-            objPersonaL.mtdEditarPersona(objDatos);
-
-        }
+        
 
         protected void btnEditar_Click(object sender, EventArgs e)
         {
             clEmpleadoE objDatos = new clEmpleadoE();
-            objDatos.
+            objDatos.idEmpleado = int.Parse(txtID.Text);
+            objDatos.documento = txtDocumento.Text;
+            objDatos.nombreEmpleado = txtNombres.Text;
+            objDatos.apellidos = txtApellidos.Text;
+            objDatos.tipoEmpleado = txtTipoEmpleado.Text;
+            objDatos.email = txtEmail.Text;
+            objDatos.clave = txtClave.Text;
+            //objDatos.idSeguridad = txtidS.Text;
+
         }
     }
 }
