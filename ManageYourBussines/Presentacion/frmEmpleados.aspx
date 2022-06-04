@@ -5,21 +5,16 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <form runat="server">
-       
         <div class="container-fluid">
-
             <!-- Page Heading -->
-            <h1 class="h3 mb-2 text-gray-800">LISTADO PERSONAS</h1>
+            <h1 class="h3 mb-2 text-gray-800">LISTADO EMPLEADOS</h1>
 
-           
+
             <!-- DataTales Example -->
             <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Listado</h6>
-                </div>
-                <div class="card-body">
+                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-bordered" id="dtEmpleado" width="100%" cellspacing="0">
+                        <table class="table table-bordered table-dark" id="dtEmpleado" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
                                     <th>id</th>
@@ -29,8 +24,9 @@
                                     <th>TipoEmpleado</th>
                                     <th>Email</th>
                                     <th>Clave</th>
+                                    <th>idSeguridad</th>
                                     <th>Acciones</th>
-                                   
+
 
                                 </tr>
                             </thead>
@@ -209,17 +205,21 @@
         </div>
     </form>
 
+    <script src="recursos/js/JavaEmpleados.js"></script>
 
+    <script src="recursos/js/jquery-3.4.1.min.js"></script>
 
     <script src="recursos/vendor/jquery/jquery.min.js"></script>
-    <script src="recursos/js/JavaEmpleados.js"></script>
 
     <script src="recursos/vendor/jquery/jquery.min.js"></script>
     <script src="recursos/js/datosDataTable.js"></script>
     <script src="recursos/js/sb-admin-2.min.js"></script>
 
-     <!--Boostrap js-->    
+    <!--Boostrap js-->
     <script src="recursos/js/datatables/jquery.dataTables.min.js"></script>
     <script src="recursos/js/datatables/dataTables.bootstrap4.min.js"></script>
     <script src="recursos/js/demo/datatables-demo.js"></script>
+    
+
+
 </asp:Content>

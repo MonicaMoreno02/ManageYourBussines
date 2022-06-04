@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div style="background-color: lightblue">
+    
         <form runat="server">
             <asp:TextBox ID="idClientee" runat="server"></asp:TextBox>
             <div class="container-fluid">
@@ -62,7 +62,7 @@
                 </div>
             </div>
         </form>
-    </div>
+ 
     <script src="recursos/js/jquery-3.4.1.min.js"></script>
     <script src="recursos/js/JavaClientes.js"></script>
 

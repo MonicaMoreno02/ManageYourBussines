@@ -14,7 +14,7 @@ namespace ManageYourBussines.Datos
         public List<clEmpleadoE> mtdListarEmpleadoD()
         {
          
-            string sql = "select * from empleados";
+            string sql = "select * from empleado";
             clConexion objConexion = new clConexion();
             DataTable tblEmpleados = new DataTable();
             tblEmpleados = objConexion.mtdDesconectado(sql);
@@ -32,9 +32,9 @@ namespace ManageYourBussines.Datos
                 objEmpleado.nombreEmpleado = tblEmpleados.Rows[i]["nombreEmpleado"].ToString();
                 objEmpleado.apellidos = tblEmpleados.Rows[i]["apellidos"].ToString();
                 objEmpleado.tipoEmpleado = tblEmpleados.Rows[i]["TipoEmpleado"].ToString();
-                objEmpleado.email = tblEmpleados.Rows[i]["email"].ToString();
-                objEmpleado.clave = tblEmpleados.Rows[i]["clave"].ToString();
-                objEmpleado.idSeguridad = int.Parse(tblEmpleados.Rows[i]["idSeguridad"].ToString());
+                objEmpleado.email = tblEmpleados.Rows[i]["emailEmpleado"].ToString();
+                objEmpleado.clave = tblEmpleados.Rows[i]["claveEmpleado"].ToString();
+                objEmpleado.idSeguridad = int.Parse(tblEmpleados.Rows[i]["idSeguridadSocial"].ToString());
 
                 ListaEmpleados.Add(objEmpleado);
             }
