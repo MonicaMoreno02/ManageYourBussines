@@ -23,7 +23,7 @@ namespace ManageYourBussines.Datos
             {
                 SqlDataAdapter adaptador = new SqlDataAdapter(sql, conexion);
                 DataTable tblDatos = new DataTable();
-                adaptador.Fill(tblDatos);
+                     adaptador.Fill(tblDatos);
                 conexion.Close();
                 return tblDatos;
             }
