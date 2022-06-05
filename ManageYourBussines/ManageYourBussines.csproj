@@ -90,6 +90,7 @@
     <Content Include="Presentacion\frmEstadisticas.aspx" />
     <Content Include="Presentacion\frmProductos2.aspx" />
     <Content Include="Presentacion\frmRegistrar.aspx" />
+    <Content Include="Presentacion\frmVenta.aspx" />
     <Content Include="Presentacion\recursos\css\bootstrap.css" />
     <Content Include="Presentacion\recursos\css\font-awesome.min.css" />
     <Content Include="Presentacion\recursos\css\responsive.css" />
@@ -248,6 +249,7 @@
     <Compile Include="Logica\clCarritoL.cs" />
     <Compile Include="MailServices1\MasterMailServer.cs" />
     <Compile Include="MailServices1\systemSupportMail.cs" />
+    <Compile Include="Logica\clVentaL.cs" />
     <Compile Include="Presentacion\frmAbout.aspx.cs">
       <DependentUpon>frmAbout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -317,6 +319,13 @@
     </Compile>
     <Compile Include="Presentacion\frmRegistrar.aspx.designer.cs">
       <DependentUpon>frmRegistrar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmVenta.aspx.cs">
+      <DependentUpon>frmVenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmVenta.aspx.designer.cs">
+      <DependentUpon>frmVenta.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
