@@ -1,4 +1,4 @@
-﻿var table, datos
+﻿var tabla, datos
 sendDataAjax();
 function agregarFilas(datos) {
     console.log(datos);
@@ -8,15 +8,13 @@ function agregarFilas(datos) {
         tabla.fnAddData([
             datos[i].idCliente,
             datos[i].documento,
-            datos[i].nombres,
+            datos[i].nombreCliente,
             datos[i].apellidos,
             datos[i].telefono,
             datos[i].direccion,
             datos[i].email,
             datos[i].clave,
             '<button type="button" id="btnDetalles" class="btn btn-primary btn-details" data-toggle="modal" data-target="#ModalDetalles">Ver Detalles</button>',
-            '<button type="button" id="btnEditar" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#ModalDatos">Editar</button>',
-            '<button type="button" id="btnEliminar" class="btn btn-danger btn-delete">Eliminar</button>'
         ]);
     }
 }
@@ -47,9 +45,9 @@ function agregarFilas(datos) {
 
             var fila = $(this).parent().parent()[0];
             var datosFila = tabla.fnGetData(fila);
-            var idCliente = datosFila[0];
-            $("#IdClientee").val(idCliente);
+            var idCliente = datosFila[0];            
             alert(idCliente);
+            $("#txtIdCliente").val(idCliente);
         });
 
        

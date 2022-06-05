@@ -14,7 +14,10 @@ namespace ManageYourBussines.Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            txtIDEmpleado.Attributes.Add("style", "DISPLAY:none");
+            //if (Page.IsPostBack)
+            //{
+            //    txtIDEmpleado.Attributes.Add("style", "DISPLAY:none");
+            //}
         }
 
         [WebMethod]
@@ -44,6 +47,15 @@ namespace ManageYourBussines.Presentacion
 
             clEmpleadoL objEmpleadoL = new clEmpleadoL();
             int resultado = objEmpleadoL.mtdEditar(objDatos);
+
+            if (resultado != 0)
+            {
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Registro editado correctamente:(');", true);
+            }
+            else
+            {
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('No se ha podido editar el registro:(');", true);
+            }
 
         }
 
@@ -84,14 +96,23 @@ namespace ManageYourBussines.Presentacion
         }
 
 
-        protected void btnEliminar_Click1(object sender, EventArgs e)
+        protected void btnEliminar_Click(object sender, EventArgs e)
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Algo ha salido mal y no hemos guardado tu registro :(');", true);
-
-            int id = int.Parse(txtIDEmpleado.Text);
+            
+            int id = int.Parse(txtIDEmpleadoB.Text);
 
             clEmpleadoL objEmpleadoL = new clEmpleadoL();
             int result = objEmpleadoL.mtdEliminar(id);
+
+            if (result != 0)
+            {
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Registro eliminar correctamente:(');", true);
+            }
+            else
+            {
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Algo ha salido mal y no hemos eliminado tu registro :(');", true);
+            }
+
         }
     }
 }

@@ -61,8 +61,8 @@ namespace ManageYourBussines.Datos
         public int mtdEditar(clEmpleadoE objDatos)
         {
             string sql = "Update Empleado set documento='" + objDatos.documento + "', nombreEmpleado='" + objDatos.nombreEmpleado + "'," +
-                "apellidos='" + objDatos.apellidos + "',tipoEmpleado='" + objDatos.tipoEmpleado + "',email='" + objDatos.email + "',clave='" +
-                objDatos.clave + "',idSeguridad='" + objDatos.idSeguridadSocial + "' where idEmpleado=" + objDatos.idEmpleado +  "";
+                "apellidos='" + objDatos.apellidos + "',tipoEmpleado='" + objDatos.tipoEmpleado + "',emailEmpleado='" + objDatos.email + "',claveEmpleado='" +
+                objDatos.clave + "',idSeguridadSocial='" + objDatos.idSeguridadSocial + "' where idEmpleado=" + objDatos.idEmpleado +  "";
 
             clConexion objConexion = new clConexion();
             int result = objConexion.mtdConectado(sql);
@@ -72,7 +72,7 @@ namespace ManageYourBussines.Datos
 
         public int mtdEliminar(int idEmpleado)
         {
-            string sql = "Delete * from Empleado where idEmpleado=" + idEmpleado + "";
+            string sql = "delete from empleado where idEmpleado=" + idEmpleado + "";
 
             clConexion objConexion = new clConexion();
             int result = objConexion.mtdConectado(sql);

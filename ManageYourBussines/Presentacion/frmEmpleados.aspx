@@ -38,6 +38,28 @@
 
         </div>
 
+     <%--   modal para eliminar--%>
+         <div class="modal fade" id="ModalEliminar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalabel">Eliminar datos del empleado</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="table-responsive">
+
+                                <asp:TextBox ID="txtIDEmpleadoB" runat="server"></asp:TextBox>
+                                <h2>¿Borrar datos del empleado seleccionado?</h2>
+                                <br />
+                                <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" class="btn btn-danger" OnClick="btnEliminar_Click"/>
+                            </div>                           
+                        </div>
+                    </div>
+                </div>
+             </div>
 
         <%--Modal para editar empleados--%>
 
@@ -86,8 +108,6 @@
 
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Send message</button>
                         <asp:Button ID="btnEditar"  runat="server" Text="Editar" OnClick="btnEditar_Click" CssClass="btn btn-primary" />
 
                     </div>
@@ -210,6 +230,8 @@
         </div>
         </div>--%>
     </form>
+
+
 
     <script src="recursos/js/JavaEmpleados.js"></script>
 

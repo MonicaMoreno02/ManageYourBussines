@@ -36,12 +36,14 @@ namespace ManageYourBussines.Presentacion
             clClienteL objDatosVentas = new clClienteL();
             List<clDetallesE> listaDetallesP = new List<clDetallesE>();
 
-            int idCliente = int.Parse(idClientee.Text);
+            int idCliente = int.Parse(txtIdCliente.Text);
 
             listaDetallesP = objDatosVentas.mtdListarDetallesL(idCliente);
 
             dgModal.DataSource = listaDetallesP;
             dgModal.DataBind();
+
+            //txtIdCliente.Text = " ";
         }
     }
 }

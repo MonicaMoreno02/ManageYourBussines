@@ -15,8 +15,8 @@ function agregarFilas(datos) {
             datos[i].email,
             datos[i].clave,
             datos[i].idSeguridadSocial,
-            '<button type="button" id="btnEditar" class="btn btn-primary" data-toggle="modal" data-target="#ModalEditarEmpleado">Editar</button>',
-            '<button type="button" id="btnEliminar" class="btn btn-danger">Eliminar</button>'
+            '<button type="button" id="btnEditarD" class="btn btn-primary" data-toggle="modal" data-target="#ModalEditarEmpleado">Editar</button>',
+            '<button type="button" id="btnEliminarD" class="btn btn-danger" data-toggle="modal" data-target="#ModalEliminar">Eliminar</button>'
 
         ]);
     }
@@ -43,7 +43,7 @@ function sendDataAjax() {
 
     });
 
-    $(document).on('click', '#btnEditar', function (e) {
+    $(document).on('click', '#btnEditarD', function (e) {
 
         e.preventDefault();
         var fila = $(this).parent().parent();
@@ -58,13 +58,16 @@ function sendDataAjax() {
         $("#txtSeguridadSocial").val(datos[7]);
     });
 
-    $(document).on('click', '#btnEliminar', function (e) {
+    $(document).on('click', '#btnEliminarD', function (e) {
 
+        
         e.preventDefault();
 
         var fila = $(this).parent().parent()[0];
         var datosFila = tabla.fnGetData(fila);
         var datoSend = datosFila[0];
+
+        $("#txtIDEmpleadoB").val(datoSend);
 
     })
 }
