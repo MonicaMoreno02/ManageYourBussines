@@ -21,7 +21,7 @@ namespace ManageYourBussines.Datos
             if (tblDatos.Rows.Count == 1)
             {
                 objDatosUsuario.idCliente = int.Parse(tblDatos.Rows[0]["idCliente"].ToString());
-                objDatosUsuario.nombres = tblDatos.Rows[0]["nombres"].ToString();
+                objDatosUsuario.nombres = tblDatos.Rows[0]["nombreCliente"].ToString();
                 objDatosUsuario.email = tblDatos.Rows[0]["email"].ToString();
                 objDatosUsuario.clave = tblDatos.Rows[0]["clave"].ToString();
 
