@@ -14,7 +14,7 @@ namespace ManageYourBussines.Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            txtIDEmpleado.Attributes.Add("style", "DISPLAY:none");
         }
 
         [WebMethod]
@@ -33,15 +33,65 @@ namespace ManageYourBussines.Presentacion
         protected void btnEditar_Click(object sender, EventArgs e)
         {
             clEmpleadoE objDatos = new clEmpleadoE();
-            objDatos.idEmpleado = int.Parse(txtID.Text);
+            objDatos.idEmpleado = int.Parse(txtIDEmpleado.Text);
             objDatos.documento = txtDocumento.Text;
-            objDatos.nombreEmpleado = txtNombres.Text;
+            objDatos.nombreEmpleado = txtNombreEmpleado.Text;
             objDatos.apellidos = txtApellidos.Text;
             objDatos.tipoEmpleado = txtTipoEmpleado.Text;
             objDatos.email = txtEmail.Text;
             objDatos.clave = txtClave.Text;
-            //objDatos.idSeguridad = txtidS.Text;
+            objDatos.idSeguridadSocial = int.Parse(txtSeguridadSocial.Text);
 
+            clEmpleadoL objEmpleadoL = new clEmpleadoL();
+            int resultado = objEmpleadoL.mtdEditar(objDatos);
+
+        }
+
+        protected void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            LblTipoEmpleado.Text = ddlTipoEmpleado.SelectedValue.ToString();
+
+            clEmpleadoE objEmpleadoE = new clEmpleadoE();
+            objEmpleadoE.documento = txtDocumentoRegis.Text;
+            objEmpleadoE.nombreEmpleado = txtNombreRegis.Text;
+            objEmpleadoE.apellidos = txtApellidoRegis.Text;
+            objEmpleadoE.tipoEmpleado = LblTipoEmpleado.Text;
+            objEmpleadoE.email = txtEmailRegis.Text;
+            objEmpleadoE.clave = txtClaveRegis.Text;
+            objEmpleadoE.idSeguridadSocial = int.Parse(txtSeguridadSocialRegis.Text);
+
+
+            clEmpleadoL objDatosEmpleado = new clEmpleadoL();
+            int resultado =  objDatosEmpleado.mtdRegistrarEmple(objEmpleadoE);
+
+            if (resultado!=0)
+            {
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Registro guardado correctamente:(');", true);
+            }
+            else
+            {
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Algo ha salido mal y no hemos guardado tu registro :(');", true);
+            }
+
+            txtDocumentoRegis.Text = " ";
+            txtNombreRegis.Text = " ";
+            txtApellidoRegis.Text = " ";
+            LblTipoEmpleado.Text = " ";
+            txtEmailRegis.Text = " ";
+            txtClaveRegis.Text = " ";
+            txtSeguridadSocialRegis.Text = " ";
+            
+        }
+
+
+        protected void btnEliminar_Click1(object sender, EventArgs e)
+        {
+            ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Algo ha salido mal y no hemos guardado tu registro :(');", true);
+
+            int id = int.Parse(txtIDEmpleado.Text);
+
+            clEmpleadoL objEmpleadoL = new clEmpleadoL();
+            int result = objEmpleadoL.mtdEliminar(id);
         }
     }
 }

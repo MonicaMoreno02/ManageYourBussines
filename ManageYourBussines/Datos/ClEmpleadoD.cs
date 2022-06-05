@@ -34,7 +34,7 @@ namespace ManageYourBussines.Datos
                 objEmpleado.tipoEmpleado = tblEmpleados.Rows[i]["TipoEmpleado"].ToString();
                 objEmpleado.email = tblEmpleados.Rows[i]["emailEmpleado"].ToString();
                 objEmpleado.clave = tblEmpleados.Rows[i]["claveEmpleado"].ToString();
-                objEmpleado.idSeguridad = int.Parse(tblEmpleados.Rows[i]["idSeguridadSocial"].ToString());
+                objEmpleado.idSeguridadSocial = int.Parse(tblEmpleados.Rows[i]["idSeguridadSocial"].ToString());
 
                 ListaEmpleados.Add(objEmpleado);
             }
@@ -46,11 +46,11 @@ namespace ManageYourBussines.Datos
         public int mtdRegistrar(clEmpleadoE objDatosEmpleados)
         {
             string sql = "insert into empleado(documento,nombreEmpleado,apellidos," +
-                "tipoEmpleado,email,clave,idSeguridad)" +
+                "tipoEmpleado,emailEmpleado,claveEmpleado,idSeguridadSocial)" +
                 "values('" + objDatosEmpleados.documento + "','" + objDatosEmpleados.nombreEmpleado + "'" +
                 ",'" + objDatosEmpleados.apellidos + "','" + objDatosEmpleados.tipoEmpleado + "'," +
                 "'" + objDatosEmpleados.email + "','" + objDatosEmpleados.clave + "'," +
-                "'" + objDatosEmpleados.idSeguridad + ")";
+                "" + objDatosEmpleados.idSeguridadSocial + ")";
 
             clConexion objConexion = new clConexion();
             int resultado = objConexion.mtdConectado(sql);
@@ -62,7 +62,7 @@ namespace ManageYourBussines.Datos
         {
             string sql = "Update Empleado set documento='" + objDatos.documento + "', nombreEmpleado='" + objDatos.nombreEmpleado + "'," +
                 "apellidos='" + objDatos.apellidos + "',tipoEmpleado='" + objDatos.tipoEmpleado + "',email='" + objDatos.email + "',clave='" +
-                objDatos.clave + "',idSeguridad='" + objDatos.idSeguridad + "' where idEmpleado=" + objDatos.idEmpleado +  "";
+                objDatos.clave + "',idSeguridad='" + objDatos.idSeguridadSocial + "' where idEmpleado=" + objDatos.idEmpleado +  "";
 
             clConexion objConexion = new clConexion();
             int result = objConexion.mtdConectado(sql);

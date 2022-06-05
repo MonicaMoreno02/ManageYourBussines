@@ -12,7 +12,7 @@
 
             <!-- DataTales Example -->
             <div class="card shadow mb-4">
-                 <div class="card-body">
+                <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-bordered table-dark" id="dtEmpleado" width="100%" cellspacing="0">
                             <thead>
@@ -21,16 +21,16 @@
                                     <th>Documento</th>
                                     <th>Nombres</th>
                                     <th>Apellidos</th>
-                                    <th>TipoEmpleado</th>
+                                    <th>Tipo Empleado</th>
                                     <th>Email</th>
                                     <th>Clave</th>
-                                    <th>idSeguridad</th>
-                                    <th>Acciones</th>
+                                    <th>Seguridad social</th>
+                                    <th>Editar</th>
+                                    <th>Eliminar</th>
 
 
                                 </tr>
                             </thead>
-
                         </table>
                     </div>
                 </div>
@@ -38,9 +38,8 @@
 
         </div>
 
-        <%--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Open modal for @fat</button>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Open modal for @getbootstrap</button>--%>
+
+        <%--Modal para editar empleados--%>
 
         <div class="modal fade" id="ModalEditarEmpleado" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -53,15 +52,15 @@
                     </div>
                     <div class="modal-body">
 
-                        <asp:TextBox ID="txtID" class="form-control" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtIDEmpleado" class="form-control" runat="server"></asp:TextBox>
 
                         <div class="form-group">
                             <label for="txtDocumento" class="col-form-label">Documento</label>
                             <asp:TextBox ID="txtDocumento" class="form-control" runat="server"></asp:TextBox>
                         </div>
                         <div class="form-group">
-                            <label for="txtNombres" class="col-form-label">Nombres</label>
-                            <asp:TextBox ID="txtNombres" class="form-control" runat="server"></asp:TextBox>
+                            <label for="txtNombreEmpleado" class="col-form-label">Nombres</label>
+                            <asp:TextBox ID="txtNombreEmpleado" class="form-control" runat="server"></asp:TextBox>
                         </div>
                         <div class="form-group">
                             <label for="txtApellidos" class="col-form-label">Apellidos</label>
@@ -89,7 +88,7 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary">Send message</button>
-                        <asp:Button ID="btnEditar" class="btn btn-primary" runat="server" Text="Editar" OnClick="btnEditar_Click" />
+                        <asp:Button ID="btnEditar"  runat="server" Text="Editar" OnClick="btnEditar_Click" CssClass="btn btn-primary" />
 
                     </div>
                 </div>
@@ -97,112 +96,119 @@
         </div>
 
 
-        <%--   Modal para registrar--%>
-        <div class="modal fade" id="ModalRegistro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
-                <div class="wrapper wrapper--w790">
-                    <div class="card card-5">
-                        <div class="card-heading">
-                            <h2 class="title">Event Registration Form</h2>
-                        </div>
-                        <div class="card-body">
-
-                            <div class="form-row m-b-55">
-                                <div class="name">Name</div>
-                                <div class="value">
-                                    <div class="row row-space">
-                                        <div class="col-2">
-                                            <div class="input-group-desc">
-                                                <input class="input--style-5" type="text" name="first_name">
-                                                <label class="label--desc">first name</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-2">
-                                            <div class="input-group-desc">
-                                                <input class="input--style-5" type="text" name="last_name">
-                                                <label class="label--desc">last name</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="name">Company</div>
-                                <div class="value">
-                                    <div class="input-group">
-                                        <input class="input--style-5" type="text" name="company">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="name">Email</div>
-                                <div class="value">
-                                    <div class="input-group">
-                                        <input class="input--style-5" type="email" name="email">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row m-b-55">
-                                <div class="name">Phone</div>
-                                <div class="value">
-                                    <div class="row row-refine">
-                                        <div class="col-3">
-                                            <div class="input-group-desc">
-                                                <input class="input--style-5" type="text" name="area_code">
-                                                <label class="label--desc">Area Code</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-9">
-                                            <div class="input-group-desc">
-                                                <input class="input--style-5" type="text" name="phone">
-                                                <label class="label--desc">Phone Number</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="name">Subject</div>
-                                <div class="value">
-                                    <div class="input-group">
-                                        <div class="rs-select2 js-select-simple select--no-search">
-                                            <select name="subject">
-                                                <option disabled="disabled" selected="selected">Choose option</option>
-                                                <option>Subject 1</option>
-                                                <option>Subject 2</option>
-                                                <option>Subject 3</option>
-                                            </select>
-                                            <div class="select-dropdown"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row p-t-20">
-                                <label class="label label--block">Are you an existing customer?</label>
-                                <div class="p-t-15">
-                                    <label class="radio-container m-r-55">
-                                        Yes
-                                   
-                                        <input type="radio" checked="checked" name="exist">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label class="radio-container">
-                                        No
-                                   
-                                        <input type="radio" name="exist">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </div>
-                            </div>
-                            <div>
-                                <button class="btn btn--radius-2 btn--red" type="submit">Register</button>
+        <%--   Modal para registrar los empleados --%>
+        <%--        <div class="modal fade" id="ModalRegistro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">--%>
+        <%-- <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+            <div class="wrapper wrapper--w790">--%>
+        <div class="card card-5">
+            <div class="card-heading">
+                <h2 class="title">Registrar Empleados</h2>
+            </div>
+            <div class="card-body">
+                <div class="form-row m-b-55">
+                    <div class="name">Documento</div>
+                    <div class="value">
+                        <div class="input-group">
+                            <div class="input--style-5">
+                                <asp:TextBox ID="txtDocumentoRegis" runat="server"></asp:TextBox>
                             </div>
 
                         </div>
                     </div>
                 </div>
+                <div class="form-row m-b-55">
+                    <div class="name">Nombre</div>
+                    <div class="value">
+                        <div class="input-group">
+                            <div class="input--style-5">
+                                <asp:TextBox ID="txtNombreRegis" runat="server"></asp:TextBox>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row m-b-55">
+                    <div class="name">Apellido</div>
+                    <div class="value">
+                        <div class="input-group">
+                            <div class="input--style-5">
+                                <asp:TextBox ID="txtApellidoRegis" runat="server"></asp:TextBox>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-row">
+                    <div class="name">Tipo de Empleado</div>
+                    <div class="value">
+                        <div class="input-group">
+                            
+                                    <asp:DropDownList ID="ddlTipoEmpleado" runat="server">
+                                        <asp:ListItem>Seleccione...</asp:ListItem>
+                                        <asp:ListItem>Vendedor</asp:ListItem>
+                                        <asp:ListItem>Productor</asp:ListItem>
+                                    </asp:DropDownList>
+                                    <asp:Label ID="LblTipoEmpleado" runat="server" Text=" "></asp:Label>
+                               
+                                <div class="select-dropdown"></div>
+                            </div>
+                    </div>
+                </div>
+
+
+                <div class="form-row m-b-55">
+                    <div class="name">Email</div>
+                    <div class="value">
+                        <div class="input-group">
+                            <div class="input--style-5">
+                                <asp:TextBox ID="txtEmailRegis" runat="server"></asp:TextBox>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-row m-b-55">
+                    <div class="name">Clave</div>
+                    <div class="value">
+                        <div class="input-group">
+                            <div class="input--style-5">
+                                <asp:TextBox ID="txtClaveRegis" runat="server"></asp:TextBox>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="form-row m-b-55">
+                    <div class="name">Seguridad Social</div>
+                    <div class="value">
+                        <div class="input-group">
+                            <div class="input--style-5">
+                                <asp:TextBox ID="txtSeguridadSocialRegis" runat="server"></asp:TextBox>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <br />
+                <br />
+                <br />
+                <div>
+                    <asp:Button ID="btnRegistrar" class="btn btn-primary" runat="server" Text="Registrar" OnClick="btnRegistrar_Click"/>
+                </div>
+
             </div>
         </div>
+
+        <%--</div>
+        </div>
+        </div>--%>
     </form>
 
     <script src="recursos/js/JavaEmpleados.js"></script>
@@ -219,7 +225,7 @@
     <script src="recursos/js/datatables/jquery.dataTables.min.js"></script>
     <script src="recursos/js/datatables/dataTables.bootstrap4.min.js"></script>
     <script src="recursos/js/demo/datatables-demo.js"></script>
-    
+
 
 
 </asp:Content>
