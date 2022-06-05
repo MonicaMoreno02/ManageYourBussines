@@ -7,29 +7,29 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace ManageYourBussines.Presentacion
+namespace ManageYourBussines
 {
 
 
-    public partial class frmdetalles
+    public partial class recuperar
     {
 
         /// <summary>
-        /// Control DropDownList1.
+        /// Control txtEmail.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.TextBox txtEmail;
 
         /// <summary>
-        /// Control Repeater2.
+        /// Control btnEnviarCorreo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater Repeater2;
+        protected global::System.Web.UI.WebControls.Button btnEnviarCorreo;
     }
 }

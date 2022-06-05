@@ -34,5 +34,13 @@ namespace ManageYourBussines.Logica
             objProductoD = objProducto.mtdListarProducto();
             return objProductoD;
         }
+        public List<clProductoE> mtdListarProd(clProductoE objDatosPac)
+        {
+            clProductoD obcarritoD = new clProductoD();
+            List<clProductoE> lista=new List<clProductoE>();
+            lista = obcarritoD.mtdList(objDatosPac);
+            return lista;
+
+        }
     }
 }

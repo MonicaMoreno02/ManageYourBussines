@@ -38,12 +38,12 @@ namespace ManageYourBussines.Presentacion
 
 
         }
-        public DataTable mtdListcar()
+        public DataTable mtdListcar(clCarritoE objDatosPro)
         {
 
             clCarritoD objCarritoD = new clCarritoD();
             List<clCarritoE> listarProductos = new List<clCarritoE>();
-            listarProductos = objCarritoD.mtdListar();
+            listarProductos = objCarritoD.mtdListar(objDatosPro);
             DataTable carrito = new DataTable();
             carrito.Columns.Add(new DataColumn("#", typeof(int)));
             carrito.Columns.Add(new DataColumn("idproducto", typeof(string)));
@@ -98,7 +98,7 @@ namespace ManageYourBussines.Presentacion
                     DataRow row = carrito.NewRow();
                     row["#"] = i + 1;
                     row["imagen"] = "";
-                    row["nombre"] = "vtotal";
+                    row["nombre"] = "vtotal =";
                     row["describcion"] = "";
                     row["precio"] = 0;
                     row["cantidad"] = 0;
@@ -135,5 +135,6 @@ namespace ManageYourBussines.Presentacion
             return result;
 
         }
+       
     }
 }

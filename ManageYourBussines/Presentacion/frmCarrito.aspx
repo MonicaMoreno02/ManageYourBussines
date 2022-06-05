@@ -6,6 +6,7 @@
     <html>
 
 <head>
+    <asp:Label ID="lbidC" runat="server" Text="Label"></asp:Label>
   <!-- Basic -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -55,7 +56,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav  mx-auto ">
               <li class="nav-item ">
-                <a class="nav-link" href="index.html">Home </a>
+                <a class="nav-link" href="frmHome.aspx">Home </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="menu.html">Menu</a>

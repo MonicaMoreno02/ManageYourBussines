@@ -15,22 +15,27 @@ namespace ManageYourBussines.Presentacion
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            string idc = Convert.ToString(Session["idc"]);
+            LbidC.Text = idc;
+
+            int idClien = int.Parse(idc);
+
+           
+
+            
+
+            clCarritoE objDatosPro = new clCarritoE();
+            objDatosPro.idcliente = idClien;
+            clCarritoL objCarL = new clCarritoL();
+            int numer = objCarL.Mtdcar(objDatosPro);
+            lbnumero.Text = numer.ToString();
+
             if (!this.IsPostBack)
             {
                 this.BindRepeater();
             }
 
-
-
-            int cliente = 2;
-
-
-            clCarritoE objDatosPro = new clCarritoE();
-            objDatosPro.idcliente = cliente;
-            clCarritoL objCarL = new clCarritoL();
-            int numer = objCarL.Mtdcar(objDatosPro);
-            lbnumero.Text = numer.ToString();
-
+       
 
         }
         public void BindRepeater()
@@ -48,39 +53,55 @@ namespace ManageYourBussines.Presentacion
         public void Getcarrito(object sender, EventArgs e)
         {  ///boton carrito
 
-            int cliente = 1;
-            int idproduc = 4;
+           
+
+            Button btn = (Button)sender;
+            RepeaterItem item = (RepeaterItem)btn.NamingContainer;
+
+            // Buscamos el control en ese item 
+            Label lbl = (Label)item.FindControl("LabelDato");
+
+            int idProducto = int.Parse(lbl.Text);
+
+            string idc = Convert.ToString(Session["idc"]);
+            LbidC.Text = idc;
+
+            int idClien = int.Parse(idc);
+
+
             clCarritoE objDatosptod = new clCarritoE();
-            objDatosptod.idcliente = cliente;
-            objDatosptod.idproducto = idproduc;
+            objDatosptod.idcliente = idClien;
+            objDatosptod.idproducto = idProducto;
             clCarritoL objprod = new clCarritoL();
             int numer = objprod.MtdcarPro(objDatosptod);
 
-
-
-
             if (numer == 0)
             {
-                int idproducto = 3;
-                string nombre = "mesa";
-                string describsion = "tiene 4 patas la mesa";
-                float precio = 2000;
-                int cantidadstock = 20;
-                string Imagen = "recursos\\images\\dinosaurio.png";
+                clProductoE objProducto = new clProductoE();
+                objProducto.idProducto = idProducto;
+                clProductoL objProductoL = new clProductoL();
+                List<clProductoE> listar = new List<clProductoE>();
+                listar = objProductoL.mtdListarProd(objProducto);
+
+                string nombre = listar[0].nombre;
+                string describsion = listar[0].descripcion;
+                float precio = listar[0].precio;
+                int cantidadstock = listar[0].cantidadStock;
+                string Imagen = listar[0].imagen;
                 int catidad = 1;
-                int idcliente = 2;
+               
 
 
 
 
                 //Reference the Repeater Item using Button.
                 //RepeaterItem item = (sender as Button).NamingContainer as RepeaterItem;
-
+             
 
                 clCarritoE objcarrito = new clCarritoE();
 
-                objcarrito.idproducto = idproducto;
-                objcarrito.idcliente = idcliente;
+                objcarrito.idproducto = idProducto;
+                objcarrito.idcliente = idClien;
                 objcarrito.describcion = describsion;
                 objcarrito.precio = precio;
                 objcarrito.cantidadstock = cantidadstock;
@@ -90,18 +111,21 @@ namespace ManageYourBussines.Presentacion
 
                 clCarritoL objCarritoL = new clCarritoL();
                 int filas = objCarritoL.mtdRegistrarCar(objcarrito);
-
-                if (filas > 0)
+                int fil = filas; 
+                if (fil > 0)
                 {
+                 
                     ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('carrito agregado correctamente');", true);
-
+                    fil = -1;
                 }
                 else
                 {
                     ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('jhhh');", true);
                 }
+               
 
             }
+            ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('El producto ya esta agregado');", true);
         }
 
         protected void btnDetalles_Click(object sender, EventArgs e)
@@ -120,6 +144,12 @@ namespace ManageYourBussines.Presentacion
 
         protected void btncarrito_Click(object sender, EventArgs e)
         {
+            string idc = Convert.ToString(Session["idc"]);
+            LbidC.Text = idc;
+
+            int idClien = int.Parse(idc);
+          
+
             Response.Redirect("frmcarrito.aspx");
         }
 

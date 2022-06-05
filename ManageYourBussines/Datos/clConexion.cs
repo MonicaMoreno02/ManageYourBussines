@@ -15,7 +15,7 @@ namespace ManageYourBussines.Datos
             public clConexion()
             {
 
-                conexion = new SqlConnection("Data Source=SOGAPRRBCFSD546\\SQLEXPRESS;Initial Catalog=dbManage;Integrated Security=True");
+                conexion = new SqlConnection("Data Source=.;Initial Catalog=dbManage;Integrated Security=True");
                 conexion.Open();
             }
 
@@ -23,7 +23,7 @@ namespace ManageYourBussines.Datos
             {
                 SqlDataAdapter adaptador = new SqlDataAdapter(sql, conexion);
                 DataTable tblDatos = new DataTable();
-                adaptador.Fill(tblDatos);
+                     adaptador.Fill(tblDatos);
                 conexion.Close();
                 return tblDatos;
             }

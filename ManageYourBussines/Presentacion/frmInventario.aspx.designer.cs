@@ -11,25 +11,34 @@ namespace ManageYourBussines.Presentacion
 {
 
 
-    public partial class frmdetalles
+    public partial class frmInventario
     {
 
         /// <summary>
-        /// Control DropDownList1.
+        /// Control gvInventario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.GridView gvInventario;
 
         /// <summary>
-        /// Control Repeater2.
+        /// Control btnreport.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater Repeater2;
+        protected global::System.Web.UI.WebControls.Button btnreport;
+
+        /// <summary>
+        /// Control btnpdf.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnpdf;
     }
 }
