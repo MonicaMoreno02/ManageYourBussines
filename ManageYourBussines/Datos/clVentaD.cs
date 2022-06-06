@@ -27,13 +27,13 @@ namespace ManageYourBussines.Datos
                 objDatosVenta.idVenta = int.Parse(tblVenta.Rows[i]["idVenta"].ToString());
                 objDatosVenta.fechaVenta = DateTime.Parse(tblVenta.Rows[i]["fechaVenta"].ToString());
                 objDatosVenta.codigoVenta = tblVenta.Rows[i]["codigoVenta"].ToString();
-                objDatosVenta.totalVenta = float.Parse(tblVenta.Rows[i]["totalVenta"].ToString());
+                //objDatosVenta.totalVenta = float.Parse(tblVenta.Rows[i]["totalVenta"].ToString());
                 objDatosVenta.idCliente = int.Parse(tblVenta.Rows[i]["idVenta"].ToString());
                 objDatosVenta.idDetallesVenta = int.Parse(tblVenta.Rows[i]["idDetallesVenta"].ToString());
                 objDatosVenta.idProducto = int.Parse(tblVenta.Rows[i]["idProducto"].ToString());
                 objDatosVenta.cantidad = int.Parse(tblVenta.Rows[i]["cantidad"].ToString());
                 //objDatosVenta.valorTotal = int.Parse(tblVenta.Rows[i]["valorTotal"].ToString());
-                objDatosVenta.nombre = (tblVenta.Rows[i]["nombre"].ToString());
+                objDatosVenta.nombre = (tblVenta.Rows[i]["nombreProducto"].ToString());
                 objDatosVenta.precio = float.Parse(tblVenta.Rows[i]["precio"].ToString());
 
 

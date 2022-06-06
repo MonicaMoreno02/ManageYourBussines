@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
       <div class="container text-center">
             <div class="bg-fa-circle-info rounded mt-2">
-                <h2>Lista de Ventas</h2>
+                <h2>Factura de Compra</h2>
             </div>
           </div>
    <div>
@@ -15,8 +15,11 @@
                <asp:BoundField DataField="precio" HeaderText="Precio" />
                <asp:BoundField DataField="cantidad" HeaderText="cantidad" />
                <asp:BoundField DataField="codigoVenta" HeaderText="codigo de Venta" />
+               <asp:BoundField DataField="fechaVenta" HeaderText="fecha de Venta" />
            </Columns>
        </asp:GridView>
+
+       <asp:Button ID="btnPdf" runat="server" Text="PDF" CssClass="btn btn-danger" onclick="btnPdf_Click"/>
    </div>
       
   

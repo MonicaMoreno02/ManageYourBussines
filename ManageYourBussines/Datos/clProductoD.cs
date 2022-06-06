@@ -28,6 +28,7 @@ namespace ManageYourBussines.Datos
             {
                 clProductoE objDatosProducto = new clProductoE();
                 objDatosProducto.idProducto = int.Parse(tblProducto.Rows[i]["idProducto"].ToString());
+                  
                 objDatosProducto.nombre = tblProducto.Rows[i]["nombreProducto"].ToString();
                 objDatosProducto.precio = float.Parse(tblProducto.Rows[i]["precio"].ToString());
                 objDatosProducto.descripcion = tblProducto.Rows[i]["descripcion"].ToString();

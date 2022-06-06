@@ -1,4 +1,5 @@
-﻿using ManageYourBussines.Entidades;
+﻿using GemBox.Spreadsheet;
+using ManageYourBussines.Entidades;
 using ManageYourBussines.Logica;
 using System;
 using System.Collections.Generic;
@@ -41,6 +42,30 @@ namespace ManageYourBussines.Presentacion
                     total = precio*cantidad;
 
                     vtot = vtot + total;
+                    DataRow row = datos.NewRow();
+                    row["#"] = numero;
+                    row["nombre"] = nombre;
+                    row["codigoVenta"] = codigoVenta;
+                    row["precio"] = precio;
+                    row["cantidad"] = cantidad;
+
+                    
+                }
+                else
+                {
+                    total = vtot;
+                    DataRow row = datos.NewRow();
+                    datos.Rows.Add(row);
+                    row["#"] = i + 1;
+                    row["nombre"] = "vtotal";
+                    row["codigoVenta"] = "";
+                    row["precio"] = 0;
+                    //row["cantidad"] = "";
+                    row["total"] = total;
+                    
+
+
+
                 }
             }
 
@@ -48,6 +73,68 @@ namespace ManageYourBussines.Presentacion
             GridView1.DataBind();
             GridView1.UseAccessibleHeader = true;
             //GridView1.HeaderRow.TableSection = TableRowSection.TableHeader;
+        }
+
+        protected void btnPdf_Click(object sender, EventArgs e)
+        {
+            SpreadsheetInfo.SetLicense("FREE-LIMITED-KEY");
+
+            DataSet dataset = new DataSet();
+            for(int i = 0; i < 5; i++)
+            {
+                clVentaL objVenta = new clVentaL();
+                List<clVentaE> listVenta = new List<clVentaE>();
+                listVenta = objVenta.mtdListarVenta();
+
+                DataTable dataTable = new DataTable("Table " + (i + 1));
+                dataTable.Columns.Add(new DataColumn("#", typeof(int)));
+                dataTable.Columns.Add(new DataColumn("nombre", typeof(string)));
+                dataTable.Columns.Add(new DataColumn("codigoVenta", typeof(string)));
+                dataTable.Columns.Add(new DataColumn("precio", typeof(float)));
+                dataTable.Columns.Add(new DataColumn("cantidad", typeof(int)));
+                dataTable.Columns.Add(new DataColumn("total", typeof(float)));
+
+                int cuenta = listVenta.Count;
+                int num = cuenta + 1;
+                float vtot = 0;
+                float total = 0;
+                for(int j= 0; j < cuenta; j++)
+                {
+                    if (i != cuenta)
+                    {
+                        int numero = j + 1;
+                        string nombre = listVenta[j].nombre;
+                        string codigoVenta = listVenta[j].codigoVenta;
+                        float precio = listVenta[j].precio;
+                        int cantidad = listVenta[j].cantidad;
+                        total = precio * cantidad;
+                        vtot = vtot + total;
+                        dataTable.Rows.Add(new object[] { numero, nombre, codigoVenta, precio, cantidad, total });
+                    }
+                    else
+                    {
+                        total = vtot;
+                        //dataTable.Rows.Add(new object[] { "", "", "", "", total });
+                    }
+                }
+                dataset.Tables.Add(dataTable);
+            }
+            var workbook = new ExcelFile();
+            foreach (DataTable dataTable in dataset.Tables)
+            {
+                ExcelWorksheet worksheet = workbook.Worksheets.Add(dataTable.TableName);
+
+                // Insert DataTable to an Excel worksheet.
+                worksheet.InsertDataTable(dataTable,
+                    new InsertDataTableOptions()
+                    {
+                        ColumnHeaders = true
+                    });
+            }
+
+           workbook.Save("C:/Users/Usuario/DocumentsNetBeansProjects/Imagenes/Sesion_44/report.pdf");
+
+            ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Archivo creado correctamente guardado en: D:/report.pdf');", true);
         }
     }
 }
