@@ -40,7 +40,7 @@ namespace ManageYourBussines.Presentacion
                     float precio = lista[i].precio;
                     int cantidad = lista[i].cantidad;
                     total = precio*cantidad;
-
+                 
                     vtot = vtot + total;
                     DataRow row = datos.NewRow();
                     row["#"] = numero;
@@ -48,28 +48,30 @@ namespace ManageYourBussines.Presentacion
                     row["codigoVenta"] = codigoVenta;
                     row["precio"] = precio;
                     row["cantidad"] = cantidad;
+                    row["total"] = total;
+                    datos.Rows.Add(row);
 
-                    
                 }
                 else
                 {
-                    total = vtot;
+                    string fech = lista[0].fechaVenta.ToString("yyyy/MM/dd");
+
+                    vtot = vtot + total;
                     DataRow row = datos.NewRow();
-                    datos.Rows.Add(row);
-                    row["#"] = i + 1;
-                    row["nombre"] = "vtotal";
+                    row["#"] = i+1;
+                    row["nombre"] = fech;
                     row["codigoVenta"] = "";
                     row["precio"] = 0;
-                    //row["cantidad"] = "";
-                    row["total"] = total;
-                    
-
+                    row["cantidad"] =0;
+                    row["total"] = vtot;
+                    datos.Rows.Add(row);
 
 
                 }
+
             }
 
-            GridView1.DataSource = lista;
+            GridView1.DataSource = datos;
             GridView1.DataBind();
             GridView1.UseAccessibleHeader = true;
             //GridView1.HeaderRow.TableSection = TableRowSection.TableHeader;

@@ -32,7 +32,7 @@ namespace ManageYourBussines.Datos
                 objDatosVenta.idDetallesVenta = int.Parse(tblVenta.Rows[i]["idDetallesVenta"].ToString());
                 objDatosVenta.idProducto = int.Parse(tblVenta.Rows[i]["idProducto"].ToString());
                 objDatosVenta.cantidad = int.Parse(tblVenta.Rows[i]["cantidad"].ToString());
-                //objDatosVenta.valorTotal = int.Parse(tblVenta.Rows[i]["valorTotal"].ToString());
+                objDatosVenta.valorTotal = float.Parse(tblVenta.Rows[i]["valorTotal"].ToString());
                 objDatosVenta.nombre = (tblVenta.Rows[i]["nombreProducto"].ToString());
                 objDatosVenta.precio = float.Parse(tblVenta.Rows[i]["precio"].ToString());
 

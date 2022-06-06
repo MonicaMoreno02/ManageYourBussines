@@ -11,11 +11,12 @@
  <br />
        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" CssClass="table table-hover ">
            <Columns>
-               <asp:BoundField DataField="nombre" HeaderText="Nombre del Producto" />
-               <asp:BoundField DataField="precio" HeaderText="Precio" />
+               <asp:BoundField DataField="#" HeaderText="#" />
+               <asp:BoundField DataField="nombre" HeaderText="nombre" />
+               <asp:BoundField DataField="precio" HeaderText="precio" />
                <asp:BoundField DataField="cantidad" HeaderText="cantidad" />
-               <asp:BoundField DataField="codigoVenta" HeaderText="codigo de Venta" />
-               <asp:BoundField DataField="fechaVenta" HeaderText="fecha de Venta" />
+               <asp:BoundField DataField="codigoVenta" HeaderText="codigoVenta" />
+                <asp:BoundField DataField="total" HeaderText="total" />
            </Columns>
        </asp:GridView>
 
