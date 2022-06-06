@@ -14,7 +14,7 @@ namespace ManageYourBussines.Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            txtIdCliente.Attributes.Add("style", "DISPLAY:none");
 
         }
 
@@ -33,7 +33,7 @@ namespace ManageYourBussines.Presentacion
 
         protected void btnAceptar_Click(object sender, EventArgs e)
         {
-            //dgModal.DataSource = " ";
+            
 
 
             clClienteL objDatosVentas = new clClienteL();

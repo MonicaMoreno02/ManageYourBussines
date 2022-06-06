@@ -14,10 +14,9 @@ namespace ManageYourBussines.Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (Page.IsPostBack)
-            //{
-            //    txtIDEmpleado.Attributes.Add("style", "DISPLAY:none");
-            //}
+            
+              txtIDEmpleado.Attributes.Add("style", "DISPLAY:none");
+              txtIDEmpleadoB.Attributes.Add("style", "DISPLAY:none");
         }
 
         [WebMethod]

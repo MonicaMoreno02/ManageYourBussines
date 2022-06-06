@@ -53,7 +53,7 @@
 
                                 <h2>de click en el botón "ACEPTAR" </h2>
                                 <br />
-                                <asp:GridView ID="dgModal" runat="server" BackColor="#E94E03"></asp:GridView>
+                                <asp:GridView ID="dgModal" runat="server"></asp:GridView>
 
                             </div>
 
