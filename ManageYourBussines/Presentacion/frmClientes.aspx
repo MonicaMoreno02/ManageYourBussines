@@ -40,9 +40,9 @@
                     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                         <ContentTemplate>
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Detalles de ventas del cliente</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
+                                <h2 class="modal-title" id="exampleModalLabel">Detalles de ventas del cliente</h2>
+                             <%--   <button type="button" class="close" data-dismiss="modal" aria-label="Close">--%>
+<%--                                    <span aria-hidden="true">&times;</span>--%>
                                 </button>
                             </div>
 
@@ -53,13 +53,14 @@
 
                                 <h2>de click en el botón "ACEPTAR" </h2>
                                 <br />
-                                <asp:GridView ID="dgModal" runat="server"></asp:GridView>
+                                <asp:GridView ID="dgModal" runat="server" BackColor="#E94E03"></asp:GridView>
 
                             </div>
 
                             <div class="modal-footer">
 
-                                <asp:Button ID="btnAceptar" runat="server" Text="ACEPTAR" OnClick="btnAceptar_Click" />
+                                <asp:Button ID="btnAceptar" runat="server" CssClass="btn btn-primary" Text="ACEPTAR" OnClick="btnAceptar_Click" />
+                                <asp:Button ID="btnCerrar" runat="server" CssClass="btn btn-danger"  Text="Cerrar" OnClick="btnCerrar_Click" />
 
                             </div>
                         </ContentTemplate>

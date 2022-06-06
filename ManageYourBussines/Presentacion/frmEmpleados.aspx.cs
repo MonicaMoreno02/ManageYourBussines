@@ -57,6 +57,8 @@ namespace ManageYourBussines.Presentacion
                 ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('No se ha podido editar el registro:(');", true);
             }
 
+            Response.Redirect("frmEmpleados.aspx");
+           
         }
 
         protected void btnRegistrar_Click(object sender, EventArgs e)
@@ -112,6 +114,8 @@ namespace ManageYourBussines.Presentacion
             {
                 ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Algo ha salido mal y no hemos eliminado tu registro :(');", true);
             }
+
+            Response.Redirect("frmEmpleados.aspx");
 
         }
     }

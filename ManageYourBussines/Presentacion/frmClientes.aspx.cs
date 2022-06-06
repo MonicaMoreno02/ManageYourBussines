@@ -14,7 +14,7 @@ namespace ManageYourBussines.Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
 
         }
 
@@ -33,6 +33,9 @@ namespace ManageYourBussines.Presentacion
 
         protected void btnAceptar_Click(object sender, EventArgs e)
         {
+            //dgModal.DataSource = " ";
+
+
             clClienteL objDatosVentas = new clClienteL();
             List<clDetallesE> listaDetallesP = new List<clDetallesE>();
 
@@ -43,7 +46,15 @@ namespace ManageYourBussines.Presentacion
             dgModal.DataSource = listaDetallesP;
             dgModal.DataBind();
 
-            //txtIdCliente.Text = " ";
+
+
+           
+        }
+
+        protected void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("frmClientes.aspx");
+
         }
     }
 }
