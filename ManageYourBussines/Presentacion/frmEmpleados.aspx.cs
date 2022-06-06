@@ -14,11 +14,13 @@ namespace ManageYourBussines.Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            //PAOLA: vuelve invisible los txt
               txtIDEmpleado.Attributes.Add("style", "DISPLAY:none");
               txtIDEmpleadoB.Attributes.Add("style", "DISPLAY:none");
         }
 
+
+        //PAOLA:listar empleados
         [WebMethod]
         public static List<clEmpleadoE>mtdListar()
         {
@@ -30,7 +32,8 @@ namespace ManageYourBussines.Presentacion
             return listaEmpleados;
         }
 
-        
+
+        //PAOLA:editar empleados
 
         protected void btnEditar_Click(object sender, EventArgs e)
         {
@@ -60,6 +63,7 @@ namespace ManageYourBussines.Presentacion
            
         }
 
+        //PAOLA:registrar empleados
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
             LblTipoEmpleado.Text = ddlTipoEmpleado.SelectedValue.ToString();
@@ -96,6 +100,7 @@ namespace ManageYourBussines.Presentacion
             
         }
 
+        //PAOLA:eliminar empleados
 
         protected void btnEliminar_Click(object sender, EventArgs e)
         {

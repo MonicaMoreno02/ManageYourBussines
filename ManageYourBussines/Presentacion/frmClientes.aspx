@@ -8,6 +8,7 @@
         <div class="container-fluid">
             <h1>Lista de Clientes</h1>
             <div class="card shadow mb-4">
+                <%--PAOLA: creo la tabla donde mostramos los datos del cliente --%>
                 <div class="card-body">
                     <div class="table-responsive">
 
@@ -29,8 +30,11 @@
                 </div>
             </div>
         </div>
+        <%--PAOLA: creo la tabla donde mostramos los datos del cliente FIN --%>
 
-        <%--modal ver detalles--%>
+
+
+        <%--PAOLA: modal ver detalles--%>
 
         <div class="modal fade" id="ModalDetalles" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
@@ -41,8 +45,8 @@
                         <ContentTemplate>
                             <div class="modal-header">
                                 <h2 class="modal-title" id="exampleModalLabel">Detalles de ventas del cliente</h2>
-                             <%--   <button type="button" class="close" data-dismiss="modal" aria-label="Close">--%>
-<%--                                    <span aria-hidden="true">&times;</span>--%>
+                                <%--   <button type="button" class="close" data-dismiss="modal" aria-label="Close">--%>
+                                <%--                                    <span aria-hidden="true">&times;</span>--%>
                                 </button>
                             </div>
 
@@ -60,7 +64,7 @@
                             <div class="modal-footer">
 
                                 <asp:Button ID="btnAceptar" runat="server" CssClass="btn btn-primary" Text="ACEPTAR" OnClick="btnAceptar_Click" />
-                                <asp:Button ID="btnCerrar" runat="server" CssClass="btn btn-danger"  Text="Cerrar" OnClick="btnCerrar_Click" />
+                                <asp:Button ID="btnCerrar" runat="server" CssClass="btn btn-danger" Text="Cerrar" OnClick="btnCerrar_Click" />
 
                             </div>
                         </ContentTemplate>
@@ -71,11 +75,12 @@
                     <ContentTemplate>
                     </ContentTemplate>
                     <Triggers>
-                        <asp:AsyncPostBackTrigger ControlID="btnAceptar" EventName="Click"/>
+                        <asp:AsyncPostBackTrigger ControlID="btnAceptar" EventName="Click" />
                     </Triggers>
                 </asp:UpdatePanel>
             </div>
         </div>
+        <%--PAOLA: modal ver detalles FIN --%>
     </form>
 
     <script src="recursos/js/jquery-3.4.1.min.js"></script>

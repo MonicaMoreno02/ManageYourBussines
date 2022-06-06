@@ -10,7 +10,7 @@
             <h1 class="h3 mb-2 text-gray-800">LISTADO EMPLEADOS</h1>
 
 
-            <!-- DataTales Example -->
+            <!--PAOLA: tabla de empleados -->
             <div class="card shadow mb-4">
                 <div class="card-body">
                     <div class="table-responsive">
@@ -35,10 +35,11 @@
                     </div>
                 </div>
             </div>
-
         </div>
+        <!--PAOLA: tabla de empleados FIN  -->
 
-        <%--   modal para eliminar--%>
+
+        <%--PAOLA: modal para eliminar--%>
         <div class="modal fade" id="ModalEliminar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
@@ -78,8 +79,12 @@
 
             </div>
         </div>
+        <%--PAOLA: modal para eliminar FIN --%>
 
-        <%--Modal para editar empleados--%>
+
+
+
+        <%--PAOLA: Modal para editar empleados--%>
 
         <div class="modal fade" id="ModalEditarEmpleado" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -143,12 +148,10 @@
                 </Triggers>
             </asp:UpdatePanel>
         </div>
+        <%--PAOLA: Modal para editar empleados FIN--%>
 
 
-        <%--   Modal para registrar los empleados --%>
-        <%--        <div class="modal fade" id="ModalRegistro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">--%>
-        <%-- <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
-            <div class="wrapper wrapper--w790">--%>
+        <%--PAOLA: Modal para registrar los empleados --%>
         <div class="card card-5">
             <div class="card-heading">
                 <h2 class="title">Registrar Empleados</h2>
@@ -254,10 +257,7 @@
 
             </div>
         </div>
-
-        <%--</div>
-        </div>
-        </div>--%>
+        <%--PAOLA: Modal para registrar los empleados --%>
     </form>
 
 
