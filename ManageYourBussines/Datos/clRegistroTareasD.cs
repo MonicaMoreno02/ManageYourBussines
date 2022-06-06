@@ -7,9 +7,9 @@ using static ManageYourBussines.Datos.ClConexion;
 
 namespace ManageYourBussines.Datos
 {
-    public int mtdRegistrarTarea(clRegistrotareasE objDatosRegistro)
+    public int mtdRegistrarTareaD(clRegistrotareasE objDatosRegistro)
     {
-        string consulta = "update tareas set descripcionTarea='" + objDatosRegistro.nombreTarea + "',descripcion='" + objDatosRegistro.descripcionTarea +;
+        string consulta = "insert into tareas(nombreTarea, descripcionTarea) values('" + objDatosRegistro.nombreTarea + "'," + objDatosRegistro.descripcionTarea + "')";
 
         clConexion objConexion = new clConexion();
         int resultado = objConexion.mtdConectado(consulta);
