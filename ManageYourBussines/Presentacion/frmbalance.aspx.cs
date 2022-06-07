@@ -303,13 +303,13 @@ namespace ManageYourBussines.Presentacion
                 
 
                     int cuenta = listbalanceE.Count;
-                    int num = cuenta + 1;
+                    int num = cuenta + 2;
                     float vtot = 0;
                     float total = 0;
                     for (int j = 0; j < cuenta; j++)
                     {
 
-                        if (j != cuenta)
+                        if (j != num)
                         {
                             int numero = j + 1;
                             int idventa = listbalanceE[j].idventa;
@@ -327,8 +327,17 @@ namespace ManageYourBussines.Presentacion
                         else
                         {
                             total = vtot;
+                            int numero=0;
+                            int idventa = 0;
+                            DateTime fecha = DateTime.Now;
+                            string codigoVenta = "";
+                            int idProducto=0;
+                            string nombre = "";
+                            int cantidad = 0;
+                            float precio = 0;
 
-                            dtBal.Rows.Add(new object[] { "", "", "", "", "", "", total });
+
+                            dtBal.Rows.Add(new object[] { numero, idventa, fecha, codigoVenta, idProducto, nombre, cantidad, precio, total });
 
                         }
                        
@@ -357,6 +366,7 @@ namespace ManageYourBussines.Presentacion
                     });
             }
             string ahora = DateTime.Now.ToString("yyyy-MM-dd-hh-m-s");
+
 
          
         

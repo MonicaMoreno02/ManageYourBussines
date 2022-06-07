@@ -38,7 +38,7 @@ namespace ManageYourBussines.Datos
                 objbalance.idventa = int.Parse(tblBalance.Rows[i]["idVenta"].ToString());
                 objbalance.fechaVenta = DateTime.Parse(tblBalance.Rows[i]["fechaVenta"].ToString());
                 objbalance.codigoVenta = tblBalance.Rows[i]["codigoVenta"].ToString();
-                objbalance.totalVenta = int.Parse(tblBalance.Rows[i]["totalVenta"].ToString());
+                objbalance.totalVenta = float.Parse(tblBalance.Rows[i]["totalVenta"].ToString());
                 objbalance.idventa = int.Parse(tblBalance.Rows[i]["idVenta"].ToString()); ;
                 listarBal.Add(objbalance);
             }
@@ -92,7 +92,7 @@ namespace ManageYourBussines.Datos
                 objbalance.codigoVenta = tblBalance.Rows[i]["codigoVenta"].ToString();
                 objbalance.totalVenta = int.Parse(tblBalance.Rows[i]["totalVenta"].ToString());
                 objbalance.idProducto= int.Parse(tblBalance.Rows[i]["idProducto"].ToString());
-                objbalance.nombre=tblBalance.Rows[i]["nombre"].ToString();
+                objbalance.nombre=tblBalance.Rows[i]["nombreProducto"].ToString();
                 objbalance.cantidad = int .Parse(tblBalance.Rows[i]["cantidad"].ToString());
                 objbalance.precio=int.Parse(tblBalance.Rows [i]["precio"].ToString ());
                 objbalance.valorTotal= int.Parse(tblBalance.Rows[i]["valorTotal"].ToString());
