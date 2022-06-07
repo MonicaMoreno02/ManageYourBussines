@@ -45,7 +45,6 @@ namespace ManageYourBussines.Presentacion
             objDatos.tipoEmpleado = txtTipoEmpleado.Text;
             objDatos.email = txtEmail.Text;
             objDatos.clave = txtClave.Text;
-            objDatos.idSeguridadSocial = int.Parse(txtSeguridadSocial.Text);
 
             clEmpleadoL objEmpleadoL = new clEmpleadoL();
             int resultado = objEmpleadoL.mtdEditar(objDatos);
@@ -75,7 +74,6 @@ namespace ManageYourBussines.Presentacion
             objEmpleadoE.tipoEmpleado = LblTipoEmpleado.Text;
             objEmpleadoE.email = txtEmailRegis.Text;
             objEmpleadoE.clave = txtClaveRegis.Text;
-            objEmpleadoE.idSeguridadSocial = int.Parse(txtSeguridadSocialRegis.Text);
 
 
             clEmpleadoL objDatosEmpleado = new clEmpleadoL();
@@ -96,7 +94,6 @@ namespace ManageYourBussines.Presentacion
             LblTipoEmpleado.Text = " ";
             txtEmailRegis.Text = " ";
             txtClaveRegis.Text = " ";
-            txtSeguridadSocialRegis.Text = " ";
             
         }
 
@@ -113,13 +110,15 @@ namespace ManageYourBussines.Presentacion
             if (result != 0)
             {
                 ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Registro eliminar correctamente:(');", true);
+                Response.Redirect("frmEmpleados.aspx");
             }
             else
             {
                 ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Algo ha salido mal y no hemos eliminado tu registro :(');", true);
+                Response.Redirect("frmEmpleados.aspx");
             }
 
-            Response.Redirect("frmEmpleados.aspx");
+          
 
         }
     }

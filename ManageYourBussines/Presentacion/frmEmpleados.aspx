@@ -24,7 +24,6 @@
                                     <th>Tipo Empleado</th>
                                     <th>Email</th>
                                     <th>Clave</th>
-                                    <th>Seguridad social</th>
                                     <th>Editar</th>
                                     <th>Eliminar</th>
 
@@ -162,18 +161,19 @@
                     <div class="value">
                         <div class="input-group">
                             <div class="input--style-5">
-                                <asp:TextBox ID="txtDocumentoRegis" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="txtDocumentoRegis" type="text" runat="server" ></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Campo obligatorio" ForeColor="Red"></asp:RequiredFieldValidator>
                             </div>
-
                         </div>
                     </div>
+
                 </div>
                 <div class="form-row m-b-55">
                     <div class="name">Nombre</div>
                     <div class="value">
                         <div class="input-group">
                             <div class="input--style-5">
-                                <asp:TextBox ID="txtNombreRegis" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="txtNombreRegis" runat="server" ValidateRequestMode="Enabled"></asp:TextBox>
                             </div>
 
                         </div>
@@ -185,7 +185,7 @@
                     <div class="value">
                         <div class="input-group">
                             <div class="input--style-5">
-                                <asp:TextBox ID="txtApellidoRegis" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="txtApellidoRegis" runat="server" ValidateRequestMode="Enabled"></asp:TextBox>
                             </div>
 
                         </div>
@@ -203,7 +203,7 @@
                                 <asp:ListItem>Vendedor</asp:ListItem>
                                 <asp:ListItem>Productor</asp:ListItem>
                             </asp:DropDownList>
-                            <asp:Label ID="LblTipoEmpleado" runat="server" Text=" "></asp:Label>
+                            <asp:Label ID="LblTipoEmpleado" runat="server" Text=" " ValidateRequestMode="Enabled"></asp:Label>
 
                             <div class="select-dropdown"></div>
                         </div>
@@ -216,7 +216,7 @@
                     <div class="value">
                         <div class="input-group">
                             <div class="input--style-5">
-                                <asp:TextBox ID="txtEmailRegis" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="txtEmailRegis" runat="server" ValidateRequestMode="Enabled"></asp:TextBox>
                             </div>
 
                         </div>
@@ -229,7 +229,7 @@
                     <div class="value">
                         <div class="input-group">
                             <div class="input--style-5">
-                                <asp:TextBox ID="txtClaveRegis" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="txtClaveRegis" runat="server" ValidateRequestMode="Enabled"></asp:TextBox>
                             </div>
 
                         </div>
@@ -241,7 +241,7 @@
                     <div class="value">
                         <div class="input-group">
                             <div class="input--style-5">
-                                <asp:TextBox ID="txtSeguridadSocialRegis" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="txtSeguridadSocialRegis" runat="server" ValidateRequestMode="Enabled"></asp:TextBox>
                             </div>
 
                         </div>

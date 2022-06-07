@@ -37,8 +37,8 @@ namespace ManageYourBussines.Presentacion
 
         protected void btnAceptar_Click(object sender, EventArgs e)
         {
-            
 
+            dgModal.DataSource = null;
 
             clClienteL objDatosVentas = new clClienteL();
             List<clDetallesE> listaDetallesP = new List<clDetallesE>();
