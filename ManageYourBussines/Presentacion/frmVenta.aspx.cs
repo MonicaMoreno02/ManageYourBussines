@@ -12,7 +12,8 @@ using System.Web.UI.WebControls;
 namespace ManageYourBussines.Presentacion
 {
     public partial class frmVenta : System.Web.UI.Page
-    {
+    {      
+        //string cod="";
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -45,6 +46,7 @@ namespace ManageYourBussines.Presentacion
 
             var resultString = new String(Charsarr);
             string codigoVent=resultString.ToString();
+            //cod = codigoVent;
 
             float valortotal = float.Parse(carrito.Rows[cuen][9].ToString());
 
@@ -166,9 +168,16 @@ namespace ManageYourBussines.Presentacion
             DataSet dataset = new DataSet();
             for(int i = 0; i < 5; i++)
             {
+
+                string idc = Convert.ToString(Session["idc"]);
+                int idClien = int.Parse(idc);
+
+                clVentaE objfactura = new clVentaE();
+                objfactura.idCliente = idClien;
+                //objfactura.codigoVenta = cod;
                 clVentaL objVenta = new clVentaL();
                 List<clVentaE> listVenta = new List<clVentaE>();
-                listVenta = objVenta.mtdListarVenta();
+                listVenta = objVenta.mtdListarVenta(objfactura);
 
                 DataTable dataTable = new DataTable("Table " + (i + 1));
                 dataTable.Columns.Add(new DataColumn("#", typeof(int)));
@@ -224,7 +233,10 @@ namespace ManageYourBussines.Presentacion
            
             workbook.Save(" D:/report" + ahora+".pdf");
 
-            ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Archivo creado correctamente guardado en: D:/report.pdf');", true);
+            ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Archivo creado correctamente guardado en: D:/report"+ahora+".pdf');", true);
+
+
+           
         }
     }
 }
