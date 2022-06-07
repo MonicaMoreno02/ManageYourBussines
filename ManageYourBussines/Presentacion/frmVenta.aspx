@@ -9,7 +9,7 @@
           </div>
    <div>
  <br />
-       <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" CssClass="table table-hover ">
+       <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" CssClass="table table-hover bg-light ">
            <Columns>
                <asp:BoundField DataField="#" HeaderText="#" />
                <asp:BoundField DataField="nombre" HeaderText="nombre" />
