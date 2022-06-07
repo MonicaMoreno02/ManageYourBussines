@@ -17,6 +17,11 @@ namespace ManageYourBussines.Entidades
         public string fechaInicio { get; set; }
         public string fechaTerminacion { get; set; }
         public string estado { get; set; }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 8f261e408640d8a56e2d55601d9a649276b7428d
 
 
     }
