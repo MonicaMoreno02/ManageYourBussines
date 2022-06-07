@@ -15,7 +15,7 @@ namespace ManageYourBussines.Presentacion
     {
 
         /// <summary>
-        /// Control GridView1.
+        /// Control gvfactura.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.

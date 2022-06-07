@@ -15,8 +15,12 @@ namespace ManageYourBussines.Entidades
         public int idEmpleado { get; set; }
 
         public int idDetallesVenta { get; set; }
-        public int idProducto { get; set; }
+    
         public int cantidad { get; set; }
         public float valorTotal { get; set; }
+        
+        public string fechaVen { get; set; }
+        public int filas { get; set; }
+
     }
 }
