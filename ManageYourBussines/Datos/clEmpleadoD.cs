@@ -10,10 +10,10 @@ namespace ManageYourBussines.Datos
     public class clEmpleadoD
     {
 
-         public clEmpleadoE mtdLogin(clEmpleadoE objDatos)
+        public clEmpleadoE mtdLogin(clEmpleadoE objDatos)
         {
 
-            string consulta = "select * from  empleado  where email='" + objDatos.email + "' and clave='" + objDatos.clave + "'";
+            string consulta = "select * from  empleado  where emailEmpleado='" + objDatos.emailEmpleado + "' and claveEmpleado='" + objDatos.claveEmpleado + "'";
             ClConexion objConexion = new ClConexion();
             DataTable tblDatos = new DataTable();
             tblDatos = objConexion.mtdDesconectado(consulta);
@@ -21,14 +21,21 @@ namespace ManageYourBussines.Datos
 
             if (tblDatos.Rows.Count == 1)
             {
-                objDatosEmple.idEmpleado = int.Parse(tblDatos.Rows[0]["idEmpleado"].ToString());
-                objDatosEmple.documento = tblDatos.Rows[0]["documento"].ToString();
-                objDatosEmple.nombres = tblDatos.Rows[0]["nombres"].ToString();
-                objDatosEmple.apellidos = tblDatos.Rows[0]["apellidos"].ToString();
-                objDatosEmple.tipoEmpleado = tblDatos.Rows[0]["tipoEmpleado"].ToString();
-         
-                objDatosEmple.email = tblDatos.Rows[0]["email"].ToString();
-                objDatosEmple.clave = tblDatos.Rows[0]["clave"].ToString();
+
+
+
+                if (tblDatos.Rows[0][4].ToString() == "Vendedor")
+                {
+                    objDatosEmple.idEmpleado = int.Parse(tblDatos.Rows[0]["idEmpleado"].ToString());
+                    objDatosEmple.documentoE = tblDatos.Rows[0]["documentoE"].ToString();
+                    objDatosEmple.nombreEmpleado = tblDatos.Rows[0]["nombreEmpleado"].ToString();
+                    objDatosEmple.apellidosEmple = tblDatos.Rows[0]["apellidosEmple"].ToString();
+                    objDatosEmple.tipoEmpleado = tblDatos.Rows[0]["tipoEmpleado"].ToString();
+
+                    objDatosEmple.emailEmpleado = tblDatos.Rows[0]["emailEmpleado"].ToString();
+                    objDatosEmple.claveEmpleado = tblDatos.Rows[0]["claveEmpleado"].ToString();
+
+                }
 
             }
             else

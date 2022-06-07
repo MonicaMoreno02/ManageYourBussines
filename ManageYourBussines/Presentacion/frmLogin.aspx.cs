@@ -34,7 +34,7 @@ namespace ManageYourBussines.Presentacion
 
                
 
-                Session["usuario"] = objDatos.nombres + " " + objDatos.apellidos;
+                Session["usuario"] = objDatos.nombreCliente + " " + objDatos.apellidos;
                 Response.Redirect("frmProductos.aspx");
 
 

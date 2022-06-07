@@ -11,7 +11,7 @@ namespace ManageYourBussines.Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            lblUsuario.Text = Session["cliente"].ToString();
         }
     }
 }

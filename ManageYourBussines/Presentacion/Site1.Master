@@ -43,6 +43,11 @@
 
 
 
+                                            <asp:Label ID="lblUsuario" runat="server" class="nav-link dropdown-toggle fa fa-user me-3" data-bs-toggle="dropdown" Text=""></asp:Label>
+              <asp:Label ID="lblUsuario1" runat="server" class="nav-link dropdown-toggle fa fa-user me-3" data-bs-toggle="dropdown" Text=""></asp:Label>
+
+                                                <asp:Button ID="btnPerfil" runat="server" Text="Mi Perfil" class="dropdown-item"  />
+                                    <asp:Button ID="btnCerrarSesion" runat="server" Text="Cerrar Sesión" class="dropdown-item" onClick="btnCerrarSesion_Click" />
 
 
 

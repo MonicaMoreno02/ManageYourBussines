@@ -115,6 +115,16 @@
 
 
                               <asp:TextBox ID="txtClave" runat="server" CssClass="form-control" placeholder="password" TextMode="Password"></asp:TextBox>
+                              <br />
+
+                              <div class="form-group">
+                                            <asp:DropDownList ID="idTipoUsuario" runat="server" class="form-select">
+                                                <asp:ListItem Value="Tipo usuario"></asp:ListItem>
+                                                <asp:ListItem Value="Cliente"></asp:ListItem>
+                                                <asp:ListItem Value="Empleado"></asp:ListItem>
+                                            </asp:DropDownList>
+                                        </div>
+
 
 
                               <div class="container mt-3">

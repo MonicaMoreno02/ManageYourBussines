@@ -19,7 +19,7 @@ namespace ManageYourBussines.Datos
             DataTable tblDatos = new DataTable();
             tblDatos = objConexion.mtdDesconectado(consulta);
             clUsuarioE objDatosCliente = new clUsuarioE();
-
+            //int valor = tblDatos.Rows.Count;
             if (tblDatos.Rows.Count == 1)
             {
                 objDatosCliente.idCliente = int.Parse(tblDatos.Rows[0]["idCliente"].ToString());
@@ -84,8 +84,8 @@ namespace ManageYourBussines.Datos
 
             public int mtdRegistrar(clUsuarioE objDatosCliente)
         {
-            string sql = "insert into cliente(documento,nombres,apellidos,telefono,direccion,email,clave)" +
-                "values ('" + objDatosCliente.documento + "' ,'" + objDatosCliente.nombres + "','" + objDatosCliente.apellidos + "','"+ objDatosCliente.telefono+"','"+objDatosCliente.direccion+"','" + objDatosCliente.email + "' ,'" + objDatosCliente.clave + "')";
+            string sql = "insert into cliente(documento,nombreCliente,apellidos,telefono,direccion,email,clave)" +
+                "values ('" + objDatosCliente.documento + "' ,'" + objDatosCliente.nombreCliente + "','" + objDatosCliente.apellidos + "','"+ objDatosCliente.telefono+"','"+objDatosCliente.direccion+"','" + objDatosCliente.email + "' ,'" + objDatosCliente.clave + "')";
             ClConexion objConexion = new ClConexion();
             int resulatdo = objConexion.mtdConectado(sql);
             return resulatdo;

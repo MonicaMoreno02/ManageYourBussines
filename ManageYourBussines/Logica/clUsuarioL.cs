@@ -15,6 +15,7 @@ namespace ManageYourBussines.Logica
          
             clUsuarioE objDatosCliente = new clUsuarioE();
             objDatosCliente = objDatosClienteD.mtdLogin(objDatos);
+            //int va = objDatosClienteD.mtdLogin(objDatos);
             return objDatosCliente;
 
             
