@@ -17,7 +17,7 @@ namespace ManageYourBussines.Presentacion
             ClEmpleadoL objEmpleadoL = new ClEmpleadoL();
             DataTable empleado = new DataTable();
             List<clEmpleadoE> listarCar = new List<clEmpleadoE>();
-            //Session["objeto"] = objCarritoL.mtdListcar();
+            
             empleado = objEmpleadoL.mtdListarEmple();
 
 

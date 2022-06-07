@@ -1,5 +1,8 @@
-﻿using System;
+﻿using ManageYourBussines.Entidades;
+using ManageYourBussines.Logica;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -11,7 +14,20 @@ namespace ManageYourBussines.Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-          
+            clTareasL objTareaL = new clTareasL();
+            DataTable tarea = new DataTable();
+            List<clTareasE> listarCar = new List<clTareasE>();
+
+            tarea = objTareaL.mtdListarTareas();
+
+
+            gv.DataSource = tarea;
+            gv.DataBind();
+        }
+
+        protected void gv_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+
         }
     }
 }

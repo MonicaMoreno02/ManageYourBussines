@@ -7,15 +7,16 @@ namespace ManageYourBussines.Entidades
 {
     public class clTareasE
     {
-        public int idTareasEmpleado { get; set; }
-        public int idTareas { get; set; }
         public int idEmpleado { get; set; }
-
-        public DateTime fechaInicio { get; set; }
-        public DateTime fechaTerminacion { get; set; }
+        public string documento { get; set; }
+        public string nombres { get; set; }
+        public string apellidos { get; set; }
+        public string tipoEmpleado { get; set; }
         public string nombreTarea { get; set; }
         public string descripcionTarea { get; set; }
-
+        public string fechaInicio { get; set; }
+        public string fechaTerminacion { get; set; }
+        public string estado { get; set; }
 
 
     }

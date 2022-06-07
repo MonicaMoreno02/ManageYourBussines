@@ -53,6 +53,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
@@ -109,6 +110,7 @@
     <Content Include="Presentacion\recursos\js\custom.js" />
     <Content Include="Presentacion\recursos\js\jquery-3.4.1.min.js" />
     <Content Include="Presentacion\Recursos\js\datosDatable.js" />
+    <Content Include="Presentacion\registrarTareas.aspx" />
     <Content Include="recursos\css\bootstrap.css" />
     <Content Include="recursos\css\font-awesome.min.css" />
     <Content Include="recursos\css\responsive.css" />
@@ -178,11 +180,13 @@
     <Compile Include="Datos\clConexion.cs" />
     <Compile Include="Datos\clEmpleadoD.cs" />
     <Compile Include="Datos\clProductoD.cs" />
+    <Compile Include="Datos\clRegistroD.cs" />
     <Compile Include="Datos\clTareasD.cs" />
     <Compile Include="Datos\clUsuarioD.cs" />
     <Compile Include="Entidades\clCarritoE.cs" />
     <Compile Include="Entidades\clEmpleadoE.cs" />
     <Compile Include="Entidades\clProductoE.cs" />
+    <Compile Include="Entidades\clRegistroE.cs" />
     <Compile Include="Entidades\clTareasE.cs" />
     <Compile Include="Entidades\clUsuarioE.cs" />
     <Compile Include="index.aspx.cs">
@@ -194,6 +198,7 @@
     </Compile>
     <Compile Include="Logica\ClEmpleadoL.cs" />
     <Compile Include="Logica\clProductoL.cs" />
+    <Compile Include="Logica\clRegistroL.cs" />
     <Compile Include="Logica\clTareasL.cs" />
     <Compile Include="Logica\clUsuarioL.cs" />
     <Compile Include="Logica\clCarritoL.cs" />
@@ -253,6 +258,13 @@
     </Compile>
     <Compile Include="Presentacion\frmTareas.aspx.designer.cs">
       <DependentUpon>frmTareas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\registrarTareas.aspx.cs">
+      <DependentUpon>registrarTareas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\registrarTareas.aspx.designer.cs">
+      <DependentUpon>registrarTareas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>

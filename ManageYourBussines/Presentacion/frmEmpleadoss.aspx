@@ -9,6 +9,7 @@
            </asp:ScriptManager>
            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                <ContentTemplate>--%>
+         <h1>Nómina empleados</h1>
                    <asp:GridView ID="gvemple" runat="server" class="table table-dark table-striped" OnRowCommand="gvemple_RowCommand1" Width="1810px" >
                    </asp:GridView>
               <%-- </ContentTemplate>

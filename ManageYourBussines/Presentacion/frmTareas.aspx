@@ -7,7 +7,8 @@
            </asp:ScriptManager>
            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                <ContentTemplate>--%>
-                   <asp:GridView ID="gvemple" runat="server" class="table table-dark table-striped" OnRowCommand="gvemple_RowCommand1" Width="1008px" >
+         <h1>Tareas</h1>
+                 <asp:GridView ID="gv" runat="server" class="table table-dark table-striped" OnRowCommand="gv_RowCommand" Width="1784px" >
                    </asp:GridView>
               <%-- </ContentTemplate>
            </asp:UpdatePanel>--%>
