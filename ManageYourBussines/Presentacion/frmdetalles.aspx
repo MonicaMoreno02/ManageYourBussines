@@ -21,8 +21,7 @@
   </div>
 </nav>
 <br />
-    <asp:DropDownList ID="DropDownList1" runat="server" onclick="">
-    </asp:DropDownList>
+    
 
   <div id="BlockItemSubMenu2">
 	
@@ -46,6 +45,6 @@
         </asp:Repeater>
       </div>
 
-
+     
 
 </asp:Content>

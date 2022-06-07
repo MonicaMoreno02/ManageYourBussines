@@ -115,8 +115,13 @@ namespace ManageYourBussines.Presentacion
                     }
                     else
                     {
+                        int numero=0;
+                        string nombre = "";
+                        string codigoVenta = "";
+                        float precio = 0;
+                        int cantidad = 0;
                         total = vtot;
-                        //dataTable.Rows.Add(new object[] { "", "", "", "", total });
+                        dataTable.Rows.Add(new object[] { numero, nombre, codigoVenta, precio, cantidad, vtot });
                     }
                 }
                 dataset.Tables.Add(dataTable);
@@ -133,8 +138,9 @@ namespace ManageYourBussines.Presentacion
                         ColumnHeaders = true
                     });
             }
-
-           workbook.Save("C:/Users/Usuario/DocumentsNetBeansProjects/Imagenes/Sesion_44/report.pdf");
+            string ahora = DateTime.Now.ToString("yyyy-MM-dd-hh-m-s");
+           
+            workbook.Save(" D:/report" + ahora+".pdf");
 
             ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Archivo creado correctamente guardado en: D:/report.pdf');", true);
         }
