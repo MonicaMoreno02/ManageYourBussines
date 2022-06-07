@@ -20,8 +20,10 @@
            </Columns>
        </asp:GridView>
 
-       <asp:Button ID="btnPdf" runat="server" Text="PDF" CssClass="btn btn-danger" onclick="btnPdf_Click"/>
+       <asp:Button ID="btnPdf" runat="server" Text="Descargar PDF" CssClass="btn btn-danger" onclick="btnPdf_Click"/>
+       <asp:Button ID="btnHome" runat="server" Text="Home" CssClass="btn btn-success" OnClick="btnHome_Click"/>
    </div>
+    <asp:Label ID="Lbcod" runat="server" Text="Label" Visible="false"></asp:Label>
       
     
 </asp:Content>

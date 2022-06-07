@@ -202,7 +202,7 @@
             onApprove: function (data, actions) {
                 actions.order.capture().then(function (detalles) {
                     console.log(detalles);
-                    window.location.href = "frmVenta.aspx";
+                    window.location.href = "WebForm1.aspx";
 
                 });
 

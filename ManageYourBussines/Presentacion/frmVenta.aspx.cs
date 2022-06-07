@@ -13,91 +13,19 @@ namespace ManageYourBussines.Presentacion
 {
     public partial class frmVenta : System.Web.UI.Page
     {      
-        //string cod="";
+       
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            string cod = Convert.ToString(Request.QueryString["cod"]);
 
             string idc = Convert.ToString(Session["idc"]);
             int idClien = int.Parse(idc);
 
 
-
-            clCarritoE objcarrito = new clCarritoE();
-            objcarrito.idcliente = idClien;
-            clCarritoL objCarritoL = new clCarritoL();
-            DataTable carrito = new DataTable();
-            List<clCarritoE> listarCar = new List<clCarritoE>();
-            //Session["objeto"] = objCarritoL.mtdListcar();
-            carrito = objCarritoL.mtdListcar(objcarrito);
-
-            int cuen = carrito.Rows.Count-1;
-            int  cue = cuen - 1;
-
-           string fechaVen = DateTime.Now.ToString("yyyy-MM-dd");
-
-            var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-            var Charsarr = new char[8];
-            var random = new Random();
-
-            for (int i = 0; i < Charsarr.Length; i++)
-            {
-                Charsarr[i] = characters[random.Next(characters.Length)];
-            }
-
-            var resultString = new String(Charsarr);
-            string codigoVent=resultString.ToString();
-            //cod = codigoVent;
-
-            float valortotal = float.Parse(carrito.Rows[cuen][9].ToString());
-
-            clVentaE objVenta = new clVentaE();
-
-            objVenta.fechaVen= fechaVen;
-            objVenta.codigoVenta = codigoVent;
-            objVenta.valorTotal= valortotal;
-            objVenta.idCliente = idClien;
-            
-            clVentaL objVehiculoL = new clVentaL();
-            List<clVentaE> lisDetalles = new List<clVentaE>();
-            lisDetalles = objVehiculoL.mtdRegistrarV(objVenta);
-
-            int filas = lisDetalles[0].filas;
-
-            if (filas > 0)
-            {
-                for (int i = 0; i < cuen; i++)
-                {
-
-
-                    clVentaE objDetVenta = new clVentaE();
-                    objDetVenta.idVenta = lisDetalles[0].idVenta;
-                    objDetVenta.idProducto = int.Parse(carrito.Rows[i][1].ToString());
-                    objDetVenta.cantidad= int.Parse(carrito.Rows[i][7].ToString());
-                    objDetVenta.valorTotal= float.Parse(carrito.Rows[i][9].ToString());
-                    clVentaL objdetallesL = new clVentaL();
-
-                    int filas1 = objdetallesL.mtdRegistrarDetalles(objDetVenta);
-
-
-
-                }
-
-                clVentaE objelimCar = new clVentaE();
-                objVenta.idCliente = idClien;
-                clVentaL objelimL = new clVentaL();
-              
-                 int fil = objelimL.mtdelimin(objVenta);
-
-            }
-            else
-            {
-              
-            }
-
-
             clVentaE objfactura = new clVentaE();
             objfactura.idCliente = idClien;
-            objfactura.codigoVenta = codigoVent;
+            objfactura.codigoVenta = cod;
             clVentaL objVentaL = new clVentaL();
 
             List<clVentaE> lista = new List<clVentaE>();
@@ -168,13 +96,14 @@ namespace ManageYourBussines.Presentacion
             DataSet dataset = new DataSet();
             for(int i = 0; i < 5; i++)
             {
+                string cod = Lbcod.ToString();
 
                 string idc = Convert.ToString(Session["idc"]);
                 int idClien = int.Parse(idc);
 
                 clVentaE objfactura = new clVentaE();
                 objfactura.idCliente = idClien;
-                //objfactura.codigoVenta = cod;
+                objfactura.codigoVenta = cod;
                 clVentaL objVenta = new clVentaL();
                 List<clVentaE> listVenta = new List<clVentaE>();
                 listVenta = objVenta.mtdListarVenta(objfactura);
@@ -237,6 +166,11 @@ namespace ManageYourBussines.Presentacion
 
 
            
+        }
+
+        protected void btnHome_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("frmHome.aspx");
         }
     }
 }
