@@ -55,13 +55,13 @@ namespace ManageYourBussines.Logica
             return resultado;
         }
 
-        //public List<clSeguridadE> mtdListarSeguridad()
-        //{
-        //    clEmpleadoD objSeguridad = new clEmpleadoD();
-        //    List<clSeguridadE> ListaSeguridadSocial = new List<clSeguridadE>();
-        //    ListaSeguridadSocial = objSeguridad.mtdListarSeguridadD();
+        public List<clSeguridadE> mtdListarSeguridad()
+        {
+            clEmpleadoD objSeguridad = new clEmpleadoD();
+            List<clSeguridadE> ListaSeguridadSocial = new List<clSeguridadE>();
+            ListaSeguridadSocial = objSeguridad.mtdListarSeguridadD();
 
-        //    return ListaSeguridadSocial;
-        //}
+            return ListaSeguridadSocial;
+        }
     }
 }

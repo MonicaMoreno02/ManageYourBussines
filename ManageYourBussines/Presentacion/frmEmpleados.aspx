@@ -18,7 +18,10 @@
             <div class="card shadow mb-4">
                 <div class="card-body">
                     <div class="table-responsive">
-                       
+                        <div class="fa-3x">
+                            <i class="fa-solid fa-cog fa-spin"></i>
+
+                        </div>
                         <table class="table table-bordered table-dark" id="dtEmpleado" width="100%" cellspacing="0">
 
                             <thead>
@@ -42,20 +45,11 @@
                     </div>
                 </div>
             </div>
-            <br />
-            <br />
-            <asp:Button ID="btnListarSeguridad" runat="server" CssClass="btn btn-primary" Text="Button" OnClick="btnListarSeguridad_Click" />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
         </div>
         <!--PAOLA: tabla de empleados FIN  -->
 
-       <!-- Page Heading -->
-      <div class="card card-5">
+        <!-- Page Heading -->
+        <div class="card card-5">
             <div class="card-heading">
                 <h2 class="title">LISTA DE SEGURIDAD SOCIAL</h2>
             </div>
@@ -66,7 +60,10 @@
         <div class="card shadow mb-4">
             <div class="card-body">
                 <div class="table-responsive">
-                   
+                    <div class="fa-3x">
+                        <i class="fa-solid fa-cog fa-spin"></i>
+
+                    </div>
                     <table class="table table-bordered table-dark" id="dtSeguridad" width="100%" cellspacing="0">
                         <thead>
                             <tr>

@@ -140,6 +140,7 @@
     <Content Include="Presentacion\recursos\js\formulario.js" />
     <Content Include="Presentacion\recursos\js\JavaEmpleados.js" />
     <Content Include="Presentacion\recursos\js\JavaClientes.js" />
+    <Content Include="Presentacion\recursos\js\JavaSeguridad.js" />
     <Content Include="Presentacion\recursos\js\jquery-3.4.1.min.js" />
     <Content Include="Presentacion\Recursos\js\datosDatable.js" />
     <Content Include="Presentacion\recursos\js\main.js" />
