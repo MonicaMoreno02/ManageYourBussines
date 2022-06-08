@@ -38,7 +38,7 @@
                 Productos     
             </div>
         </a>
-        <a class="btn link" href="frmInventario.aspx">
+        <a class="btn link" href="frmbalance.aspx">
             <div class="btn from-bottom">
                 Balance 
             </div>
