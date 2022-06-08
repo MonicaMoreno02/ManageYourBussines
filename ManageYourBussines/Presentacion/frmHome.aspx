@@ -30,9 +30,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="frmdetalles.aspx">Productos</a>
                             </li>
-                         <%--   <li class="nav-item">
-                                <a class="nav-link" href="about.html">Sobre Nosotros</a>
-                            </li>--%>
+                            <li class="nav-item">
+                                <a class="nav-link" href="frmAbout.aspx">Sobre Nosotros</a>
+                            </li>
 
                             <!--<li class="nav-item">
                 <a class="nav-link" href="book.html">Book Table</a>

@@ -68,11 +68,11 @@ namespace ManageYourBussines.Presentacion
                 {
                     string fech = lista[0].fechaVenta.ToString("yyyy/MM/dd");
 
-                    vtot = vtot + total;
+                    //vtot = vtot + total;
                     DataRow row = datos.NewRow();
                     row["#"] = i+1;
                     row["nombre"] = fech;
-                    row["codigoVenta"] = "";
+                     row["codigoVenta"] = "";
                     row["precio"] = 0;
                     row["cantidad"] =0;
                     row["total"] = vtot;

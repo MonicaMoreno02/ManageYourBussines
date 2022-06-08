@@ -153,6 +153,10 @@
     <Content Include="recursos\css\font-awesome.min.css" />
     <Content Include="recursos\css\responsive.css" />
     <Content Include="recursos\css\style.css" />
+    <Content Include="recursos\images\49c8e403cd1929e9e7b02126824ff831.jpg" />
+    <Content Include="recursos\images\casa.png" />
+    <Content Include="recursos\images\icono-ejecutivo-joven-del-perfil-de-la-mujer-81933191.jpg" />
+    <Content Include="recursos\images\icono-ejecutivo-joven-del-perfil-de-la-mujer-81933530.jpg" />
     <Content Include="recursos\images\Imagen1.png" />
     <Content Include="recursos\images\arquilla.jpeg" />
     <Content Include="recursos\images\baseparacelular.jpeg" />
@@ -202,6 +206,8 @@
     <Content Include="recursos\images\mesadejardin.png" />
     <Content Include="recursos\images\mesamoderna.png" />
     <Content Include="Presentacion\recursos\images\paticos.jpg" />
+    <Content Include="recursos\images\muebles.jpeg" />
+    <Content Include="recursos\images\pdf.png" />
     <Content Include="recursos\images\perrito.jpeg" />
     <Content Include="recursos\images\dinosaurio.png" />
     <Content Include="Presentacion\recursos\images\puerta.jpg" />
@@ -364,6 +370,7 @@
     <Content Include="Presentacion\recursos\fonts\fontawesome-webfont.ttf" />
     <Content Include="Presentacion\recursos\fonts\fontawesome-webfont.woff" />
     <Content Include="Presentacion\recursos\fonts\fontawesome-webfont.woff2" />
+    <Content Include="recursos\images\icono.jpg.webp" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
