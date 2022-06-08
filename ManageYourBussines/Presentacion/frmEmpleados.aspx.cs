@@ -32,17 +32,17 @@ namespace ManageYourBussines.Presentacion
             return listaEmpleados;
         }
 
-        //PAOLA:listar seguridad
-        [WebMethod]
-        public static List<clSeguridadE> mtdListarSeguridad()
-        {
-            clEmpleadoL objEmpleado = new clEmpleadoL();
-            List<clSeguridadE> listaSeguridad = new List<clSeguridadE>();
+        ////PAOLA:listar seguridad
+        //[WebMethod]
+        //public static List<clSeguridadE> mtdListarSeguridad()
+        //{
+        //    clEmpleadoL objEmpleado = new clEmpleadoL();
+        //    List<clSeguridadE> listaSeguridad = new List<clSeguridadE>();
 
-            listaSeguridad = objEmpleado.mtdListarSeguridad();
+        //    listaSeguridad = objEmpleado.mtdListarSeguridad();
 
-            return listaSeguridad;
-        }
+        //    return listaSeguridad;
+        //}
 
 
         //PAOLA:editar empleados
@@ -132,8 +132,13 @@ namespace ManageYourBussines.Presentacion
 
         }
 
+        protected void btnListarSeguridad_Click(object sender, EventArgs e)
+        {
+
+        }
+
         //PAOLA: Listar seguridad social
 
-            
+
     }
 }

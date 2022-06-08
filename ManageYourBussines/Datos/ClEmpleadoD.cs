@@ -77,34 +77,34 @@ namespace ManageYourBussines.Datos
             return result;
         }
 
-        public List<clSeguridadE> mtdListarSeguridadD()
-        {
+        //public List<clSeguridadE> mtdListarSeguridadD()
+        //{
 
-            string sql = "select * from seguridadSocial";
-            clConexion objConexion = new clConexion();
-            DataTable tblSeguridad = new DataTable();
-            tblSeguridad = objConexion.mtdDesconectado(sql);
+        //    string sql = "select * from seguridadSocial";
+        //    clConexion objConexion = new clConexion();
+        //    DataTable tblSeguridad = new DataTable();
+        //    tblSeguridad = objConexion.mtdDesconectado(sql);
 
-            List<clSeguridadE> ListaSeguridad = new List<clSeguridadE>();
+        //    List<clSeguridadE> ListaSeguridad = new List<clSeguridadE>();
 
-            int cantReg = tblSeguridad.Rows.Count;
-            for (int i = 0; i < cantReg; i++)
-            {
+        //    int cantReg = tblSeguridad.Rows.Count;
+        //    for (int i = 0; i < cantReg; i++)
+        //    {
 
-                clSeguridadE objSeguridad = new clSeguridadE();
+        //        clSeguridadE objSeguridad = new clSeguridadE();
 
-                objSeguridad.idSeguridadSocial = int.Parse(tblSeguridad.Rows[i]["idSeguridadSocial"].ToString());
-                objSeguridad.porcentajePension = float.Parse(tblSeguridad.Rows[i]["porcentajePension"].ToString());
-                objSeguridad.porcentajeSalud = float.Parse(tblSeguridad.Rows[i]["porcentajeSalud"].ToString());
-                objSeguridad.smlv = float.Parse(tblSeguridad.Rows[i]["smlv"].ToString());
-                objSeguridad.año = int.Parse(tblSeguridad.Rows[i]["año"].ToString());
+        //        objSeguridad.idSeguridadSocial = int.Parse(tblSeguridad.Rows[i]["idSeguridadSocial"].ToString());
+        //        objSeguridad.porcentajePension = float.Parse(tblSeguridad.Rows[i]["porcentajePension"].ToString());
+        //        objSeguridad.porcentajeSalud = float.Parse(tblSeguridad.Rows[i]["porcentajeSalud"].ToString());
+        //        objSeguridad.smlv = float.Parse(tblSeguridad.Rows[i]["smlv"].ToString());
+        //        objSeguridad.año = int.Parse(tblSeguridad.Rows[i]["año"].ToString());
                 
 
-                ListaSeguridad.Add(objSeguridad);
-            }
+        //        ListaSeguridad.Add(objSeguridad);
+        //    }
 
-            return ListaSeguridad;
-        }
+        //    return ListaSeguridad;
+        //}
 
 
     }
