@@ -11,7 +11,7 @@
     </asp:ContentPlaceHolder>
     <%--<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">--%>
-    <link href="recursos/css/style2.css" rel="stylesheet" />
+<%--    <link href="recursos/css/style2.css" rel="stylesheet" />--%>
 
 
 <%--    recursos de appPlantilla--%>

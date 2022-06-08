@@ -45,7 +45,7 @@ namespace ManageYourBussines.Datos
         public int mtdRegistrar(clEmpleadoE objDatosEmpleados)
         {
             string sql = "insert into empleado(documento,nombreEmpleado,apellidos," +
-                "tipoEmpleado,emailEmpleado,claveEmpleado,idSeguridadSocial)" +
+                "tipoEmpleado,emailEmpleado,claveEmpleado)" +
                 "values('" + objDatosEmpleados.documento + "','" + objDatosEmpleados.nombreEmpleado + "'" +
                 ",'" + objDatosEmpleados.apellidos + "','" + objDatosEmpleados.tipoEmpleado + "'," +
                 "'" + objDatosEmpleados.email + "','" + objDatosEmpleados.clave + "')";

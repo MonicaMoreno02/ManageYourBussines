@@ -92,6 +92,7 @@
     <Content Include="Presentacion\frmEstadisticas.aspx" />
     <Content Include="Presentacion\frmRegistrar.aspx" />
     <Content Include="Presentacion\recursos\css\bootstrap.css" />
+    <Content Include="Presentacion\recursos\css\estilosEmple.css" />
     <Content Include="Presentacion\recursos\css\font-awesome.min.css" />
     <Content Include="Presentacion\recursos\css\responsive.css" />
     <Content Include="Presentacion\recursos\css\sb-admin-2.css" />
@@ -136,6 +137,7 @@
     <Content Include="Presentacion\recursos\js\demo\chart-bar-demo.js" />
     <Content Include="Presentacion\recursos\js\demo\chart-pie-demo.js" />
     <Content Include="Presentacion\recursos\js\demo\datatables-demo.js" />
+    <Content Include="Presentacion\recursos\js\formulario.js" />
     <Content Include="Presentacion\recursos\js\JavaEmpleados.js" />
     <Content Include="Presentacion\recursos\js\JavaClientes.js" />
     <Content Include="Presentacion\recursos\js\jquery-3.4.1.min.js" />

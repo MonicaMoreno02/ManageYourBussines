@@ -162,7 +162,7 @@
                         <div class="input-group">
                             <div class="input--style-5">
                                 <asp:TextBox ID="txtDocumentoRegis" type="text" runat="server" ></asp:TextBox>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Campo obligatorio" ForeColor="Red"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Campo obligatorio" ForeColor="Red" ControlToValidate="txtDocumentoRegis"></asp:RequiredFieldValidator>
                             </div>
                         </div>
                     </div>
@@ -174,6 +174,8 @@
                         <div class="input-group">
                             <div class="input--style-5">
                                 <asp:TextBox ID="txtNombreRegis" runat="server" ValidateRequestMode="Enabled"></asp:TextBox>
+                                <br />
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtNombreRegis" ErrorMessage="Campo Obligatorio" ForeColor="Red"></asp:RequiredFieldValidator>
                             </div>
 
                         </div>
@@ -186,6 +188,7 @@
                         <div class="input-group">
                             <div class="input--style-5">
                                 <asp:TextBox ID="txtApellidoRegis" runat="server" ValidateRequestMode="Enabled"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtNombreRegis" ErrorMessage="Campo Obligatorio" ForeColor="Red"></asp:RequiredFieldValidator>
                             </div>
 
                         </div>
@@ -205,7 +208,9 @@
                             </asp:DropDownList>
                             <asp:Label ID="LblTipoEmpleado" runat="server" Text=" " ValidateRequestMode="Enabled"></asp:Label>
 
-                            <div class="select-dropdown"></div>
+                            <div class="select-dropdown">
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtNombreRegis" ErrorMessage="Campo Obligatorio" ForeColor="Red"></asp:RequiredFieldValidator>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -217,6 +222,7 @@
                         <div class="input-group">
                             <div class="input--style-5">
                                 <asp:TextBox ID="txtEmailRegis" runat="server" ValidateRequestMode="Enabled"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtNombreRegis" ErrorMessage="Campo Obligatorio" ForeColor="Red"></asp:RequiredFieldValidator>
                             </div>
 
                         </div>
@@ -230,23 +236,13 @@
                         <div class="input-group">
                             <div class="input--style-5">
                                 <asp:TextBox ID="txtClaveRegis" runat="server" ValidateRequestMode="Enabled"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtNombreRegis" ErrorMessage="Campo Obligatorio" ForeColor="Red"></asp:RequiredFieldValidator>
                             </div>
 
                         </div>
                     </div>
                 </div>
 
-                <div class="form-row m-b-55">
-                    <div class="name">Seguridad Social</div>
-                    <div class="value">
-                        <div class="input-group">
-                            <div class="input--style-5">
-                                <asp:TextBox ID="txtSeguridadSocialRegis" runat="server" ValidateRequestMode="Enabled"></asp:TextBox>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
 
                 <br />
                 <br />
