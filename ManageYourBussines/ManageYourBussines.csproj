@@ -140,6 +140,7 @@
     <Content Include="Presentacion\recursos\js\formulario.js" />
     <Content Include="Presentacion\recursos\js\JavaEmpleados.js" />
     <Content Include="Presentacion\recursos\js\JavaClientes.js" />
+    <Content Include="Presentacion\recursos\js\JavaSeguridad.js" />
     <Content Include="Presentacion\recursos\js\jquery-3.4.1.min.js" />
     <Content Include="Presentacion\Recursos\js\datosDatable.js" />
     <Content Include="Presentacion\recursos\js\main.js" />
@@ -234,6 +235,7 @@
     <Compile Include="Entidades\clDetallesE.cs" />
     <Compile Include="Entidades\clEmpleadoE.cs" />
     <Compile Include="Entidades\clProductoE.cs" />
+    <Compile Include="Entidades\clSeguridadE.cs" />
     <Compile Include="Entidades\clUsuarioE.cs" />
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>

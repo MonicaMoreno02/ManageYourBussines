@@ -14,6 +14,5 @@ namespace ManageYourBussines.Entidades
         public  string tipoEmpleado { get; set; }
         public  string email { get; set; }
         public  string clave { get; set; }
-        public  int idSeguridadSocial { get; set; }
     }
 }

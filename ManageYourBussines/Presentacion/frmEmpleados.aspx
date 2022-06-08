@@ -7,16 +7,27 @@
     <form runat="server">
         <div class="container-fluid">
             <!-- Page Heading -->
-            <h1 class="h3 mb-2 text-gray-800">LISTADO EMPLEADOS</h1>
+            <div class="card card-5">
+                <div class="card-heading">
+                    <h2 class="title">LISTADO EMPLEADOS</h2>
+                </div>
+            </div>
 
 
             <!--PAOLA: tabla de empleados -->
             <div class="card shadow mb-4">
                 <div class="card-body">
                     <div class="table-responsive">
+                        <div class="fa-3x">
+                            <i class="fa-solid fa-cog fa-spin"></i>
+
+                        </div>
                         <table class="table table-bordered table-dark" id="dtEmpleado" width="100%" cellspacing="0">
+
                             <thead>
+
                                 <tr>
+
                                     <th>id</th>
                                     <th>Documento</th>
                                     <th>Nombres</th>
@@ -37,6 +48,41 @@
         </div>
         <!--PAOLA: tabla de empleados FIN  -->
 
+        <!-- Page Heading -->
+        <div class="card card-5">
+            <div class="card-heading">
+                <h2 class="title">LISTA DE SEGURIDAD SOCIAL</h2>
+            </div>
+        </div>
+
+
+        <!--PAOLA: tabla de Seguridad Social -->
+        <div class="card shadow mb-4">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <div class="fa-3x">
+                        <i class="fa-solid fa-cog fa-spin"></i>
+
+                    </div>
+                    <table class="table table-bordered table-dark" id="dtSeguridad" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+
+                                <th>id</th>
+                                <th>Porcentaje Pension</th>
+                                <th>Porcentaje Salud</th>
+                                <th>Salario</th>
+                                <th>Año</th>
+
+
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+       
+         <!--PAOLA: tabla de Seguridad Social -->
 
         <%--PAOLA: modal para eliminar--%>
         <div class="modal fade" id="ModalEliminar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -85,7 +131,7 @@
 
         <%--PAOLA: Modal para editar empleados--%>
 
-        <div class="modal fade" id="ModalEditarEmpleado" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="ModalEditarEmpleado" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <asp:UpdatePanel ID="UpdatePanel3" runat="server">
@@ -160,38 +206,43 @@
                     <div class="name">Documento</div>
                     <div class="value">
                         <div class="input-group">
-                            <div class="input--style-5">
-                                <asp:TextBox ID="txtDocumentoRegis" type="text" runat="server" ></asp:TextBox>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Campo obligatorio" ForeColor="Red" ControlToValidate="txtDocumentoRegis"></asp:RequiredFieldValidator>
+                            <div class="input--style-5" style="border: thin double #000000; margin: auto; padding: inherit;">
+                                <asp:TextBox ID="txtDocumentoRegis" type="text" runat="server" BackColor="#E5E5E5"></asp:TextBox>
+                                <br />
                             </div>
                         </div>
                     </div>
+
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="txtNombreRegis" ErrorMessage="Campo Obligatorio" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtDocumentoRegis" ErrorMessage="Documento invalido" ForeColor="Red" ValidationExpression="^\d+$"></asp:RegularExpressionValidator>
 
                 </div>
                 <div class="form-row m-b-55">
                     <div class="name">Nombre</div>
                     <div class="value">
                         <div class="input-group">
-                            <div class="input--style-5">
-                                <asp:TextBox ID="txtNombreRegis" runat="server" ValidateRequestMode="Enabled"></asp:TextBox>
+                            <div class="input--style-5" style="border: thin double #000000">
+                                <asp:TextBox ID="txtNombreRegis" runat="server" ValidateRequestMode="Enabled" BackColor="#E5E5E5"></asp:TextBox>
                                 <br />
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtNombreRegis" ErrorMessage="Campo Obligatorio" ForeColor="Red"></asp:RequiredFieldValidator>
                             </div>
 
                         </div>
                     </div>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtNombreRegis" ErrorMessage="Campo Obligatorio" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtNombreRegis" ErrorMessage="Solo letras" ForeColor="Red" ValidationExpression="^[a-zA-Z]+$"></asp:RegularExpressionValidator>
                 </div>
 
                 <div class="form-row m-b-55">
                     <div class="name">Apellido</div>
                     <div class="value">
                         <div class="input-group">
-                            <div class="input--style-5">
-                                <asp:TextBox ID="txtApellidoRegis" runat="server" ValidateRequestMode="Enabled"></asp:TextBox>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtNombreRegis" ErrorMessage="Campo Obligatorio" ForeColor="Red"></asp:RequiredFieldValidator>
+                            <div class="input--style-5" style="border: thin double #000000">
+                                <asp:TextBox ID="txtApellidoRegis" runat="server" ValidateRequestMode="Enabled" BackColor="#E5E5E5"></asp:TextBox>
                             </div>
 
                         </div>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtNombreRegis" ErrorMessage="Campo Obligatorio" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="txtNombreRegis" ErrorMessage="Solo letras" ForeColor="Red" ValidationExpression="^[a-zA-Z]+$"></asp:RegularExpressionValidator>
                     </div>
                 </div>
 
@@ -220,12 +271,13 @@
                     <div class="name">Email</div>
                     <div class="value">
                         <div class="input-group">
-                            <div class="input--style-5">
-                                <asp:TextBox ID="txtEmailRegis" runat="server" ValidateRequestMode="Enabled"></asp:TextBox>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtNombreRegis" ErrorMessage="Campo Obligatorio" ForeColor="Red"></asp:RequiredFieldValidator>
+                            <div class="input--style-5" style="border: thin double #000000">
+                                <asp:TextBox ID="txtEmailRegis" runat="server" ValidateRequestMode="Enabled" BackColor="#E5E5E5"></asp:TextBox>
                             </div>
 
                         </div>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtNombreRegis" ErrorMessage="Campo Obligatorio" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="txtEmailRegis" ErrorMessage="Email Invalido" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                     </div>
                 </div>
 
@@ -234,21 +286,23 @@
                     <div class="name">Clave</div>
                     <div class="value">
                         <div class="input-group">
-                            <div class="input--style-5">
-                                <asp:TextBox ID="txtClaveRegis" runat="server" ValidateRequestMode="Enabled"></asp:TextBox>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtNombreRegis" ErrorMessage="Campo Obligatorio" ForeColor="Red"></asp:RequiredFieldValidator>
+                            <div class="input--style-5" style="border: thin double #000000">
+                                <asp:TextBox ID="txtClaveRegis" runat="server" ValidateRequestMode="Enabled" BackColor="#E5E5E5"></asp:TextBox>
                             </div>
 
                         </div>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtNombreRegis" ErrorMessage="Campo Obligatorio" ForeColor="Red"></asp:RequiredFieldValidator>
                     </div>
                 </div>
 
 
+                <asp:Button ID="btnRegistrar" class="btn btn-primary" runat="server" Text="Registrar" OnClick="btnRegistrar_Click" Height="73px" Width="271px" />
+
+
                 <br />
                 <br />
                 <br />
-                <div>
-                    <asp:Button ID="btnRegistrar" class="btn btn-primary" runat="server" Text="Registrar" OnClick="btnRegistrar_Click" />
+                &nbsp;<div>
                 </div>
 
             </div>
@@ -257,8 +311,11 @@
     </form>
 
 
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+
 
     <script src="recursos/js/JavaEmpleados.js"></script>
+    <script src="recursos/js/JavaSeguridad.js"></script>
 
     <script src="recursos/js/jquery-3.4.1.min.js"></script>
 

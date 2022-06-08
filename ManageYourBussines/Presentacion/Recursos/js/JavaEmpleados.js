@@ -1,6 +1,8 @@
 ﻿
 var tabla, datos
 sendDataAjax();
+sendDataAjaxS();
+
 
 function agregarFilas(datos) {
     console.log(datos);
@@ -14,7 +16,6 @@ function agregarFilas(datos) {
             datos[i].tipoEmpleado,
             datos[i].email,
             datos[i].clave,
-            datos[i].idSeguridadSocial,
             '<button type="button" id="btnEditarD" class="btn btn-primary" data-toggle="modal" data-target="#ModalEditarEmpleado">Editar</button>',
             '<button type="button" id="btnEliminarD" class="btn btn-danger" data-toggle="modal" data-target="#ModalEliminar">Eliminar</button>'
 
@@ -69,5 +70,44 @@ function sendDataAjax() {
 
         $("#txtIDEmpleadoB").val(datoSend);
 
+    })
+}
+
+
+var table, dato
+
+function agregarFilasS(datos) {
+    console.log(dato);
+    table = $("#dtSeguridad").dataTable();
+    for (var i = 0; i < dato.length; i++) {
+        table.fnAddData([
+            dato[i].idSeguridadSocial,
+            dato[i].porcentajePension,
+            dato[i].porcentajeSalud,
+            dato[i].smlv,
+            dato[i].año
+
+        ]);
+    }
+}
+
+
+function sendDataAjaxS() {
+    $.ajax({
+        type: "POST",
+        url: "frmEmpleados.aspx/mtdListarSeguridad",
+        data: '{}',
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+
+        success: function (dato) {
+            agregarFilas(dato.d);
+        },
+        failure: function (response) {
+            alert(response);
+        },
+        error: function (responde) {
+            alert(response.d);
+        }
     })
 }

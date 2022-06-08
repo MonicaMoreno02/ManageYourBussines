@@ -32,6 +32,18 @@ namespace ManageYourBussines.Presentacion
             return listaEmpleados;
         }
 
+        //PAOLA:listar seguridad
+        [WebMethod]
+        public static List<clSeguridadE> mtdListarSeguridad()
+        {
+            clEmpleadoL objEmpleado = new clEmpleadoL();
+            List<clSeguridadE> listaSeguridad = new List<clSeguridadE>();
+
+            listaSeguridad = objEmpleado.mtdListarSeguridad();
+
+            return listaSeguridad;
+        }
+
 
         //PAOLA:editar empleados
 
@@ -118,8 +130,10 @@ namespace ManageYourBussines.Presentacion
                 Response.Redirect("frmEmpleados.aspx");
             }
 
-          
-
         }
+
+        //PAOLA: Listar seguridad social
+
+            
     }
 }
