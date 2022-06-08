@@ -18,14 +18,14 @@ namespace ManageYourBussines.Presentacion
             string idc = Convert.ToString(Session["idc"]);
             LbidC.Text = idc;
 
-            //int idClien = int.Parse(idc);
+            int idClien = int.Parse(idc);
 
            
 
             
 
             clCarritoE objDatosPro = new clCarritoE();
-            //objDatosPro.idcliente = idClien;
+            objDatosPro.idcliente = idClien;
             clCarritoL objCarL = new clCarritoL();
             int numer = objCarL.Mtdcar(objDatosPro);
             lbnumero.Text = numer.ToString();
