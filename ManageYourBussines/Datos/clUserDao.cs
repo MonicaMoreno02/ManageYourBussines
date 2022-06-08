@@ -28,7 +28,7 @@ namespace ManageYourBussines.Datos
                 var mailService = new MailServices.systemSupportMail();
                 mailService.sendMail(
                   subject: "Solicitud de recuperación de contraseña",
-                  body: "Hola, " + objDatosUsuario.nombres + "\nUsted solicitó recuperar su contraseña.\n" +
+                  body: "Hola, " + objDatosUsuario.nombreCliente + "\nUsted solicitó recuperar su contraseña.\n" +
                   "Tu contraseña actual es: " + objDatosUsuario.clave,
                   recipientMail: new List<string> { objDatosUsuario.email }
                   );

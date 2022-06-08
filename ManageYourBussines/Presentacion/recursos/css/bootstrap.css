@@ -5928,10 +5928,10 @@ a.close.disabled {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .modal-lg,
   .modal-xl {
-    max-width: 800px;
+    max-width: 1000px;
   }
 }
 
