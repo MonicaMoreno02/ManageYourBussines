@@ -309,7 +309,7 @@ namespace ManageYourBussines.Presentacion
                     for (int j = 0; j < cuenta; j++)
                     {
 
-                        if (j != num)
+                        if (j !=cuenta)
                         {
                             int numero = j + 1;
                             int idventa = listbalanceE[j].idventa;

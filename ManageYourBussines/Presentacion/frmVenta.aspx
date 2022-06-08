@@ -4,20 +4,26 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
       <div class="container text-center">
             <div class="bg-fa-circle-info rounded mt-2">
-                <h2>Lista de Ventas</h2>
+                <h2>Factura de Compra</h2>
             </div>
           </div>
    <div>
  <br />
-       <asp:GridView ID="gvfactura" runat="server" AutoGenerateColumns="false" CssClass="table table-hover ">
+       <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" CssClass="table table-hover bg-light ">
            <Columns>
-               <asp:BoundField DataField="nombre" HeaderText="Nombre del Producto" />
-               <asp:BoundField DataField="precio" HeaderText="Precio" />
+               <asp:BoundField DataField="#" HeaderText="#" />
+               <asp:BoundField DataField="nombre" HeaderText="nombre" />
+               <asp:BoundField DataField="precio" HeaderText="precio" />
                <asp:BoundField DataField="cantidad" HeaderText="cantidad" />
-               <asp:BoundField DataField="codigoVenta" HeaderText="codigo de Venta" />
+               <asp:BoundField DataField="codigoVenta" HeaderText="codigoVenta" />
+                <asp:BoundField DataField="total" HeaderText="total" />
            </Columns>
        </asp:GridView>
+
+       <asp:Button ID="btnPdf" runat="server" Text="Descargar PDF" CssClass="btn btn-danger" onclick="btnPdf_Click"/>
+       <asp:Button ID="btnHome" runat="server" Text="Home" CssClass="btn btn-success" OnClick="btnHome_Click"/>
    </div>
+    <asp:Label ID="Lbcod" runat="server" Text="Label" Visible="false"></asp:Label>
       
     
 </asp:Content>

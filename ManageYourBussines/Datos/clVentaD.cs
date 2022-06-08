@@ -12,7 +12,7 @@ namespace ManageYourBussines.Datos
     {
         public List<clVentaE> mtdListarVenta(clVentaE objfactura)
         {
-            string sql = "select * from venta inner join detallesVenta on venta.idVenta=detallesVenta.idVenta inner join producto on detallesVenta.idProducto = producto.idProducto where (idCliente=" + objfactura.idCliente + ") and (codigoVenta ='" + objfactura.codigoVenta + "')";
+            string sql = "select * from venta inner join detallesVenta on venta.idVenta=detallesVenta.idVenta inner join producto on detallesVenta.idProducto = producto.idProducto where (idCliente=" + objfactura.idCliente + ") and(codigoVenta = '" + objfactura.codigoVenta + "')";
             clConexion objConexion = new clConexion();
             DataTable tblVenta = new DataTable();
             tblVenta = objConexion.mtdDesconectado(sql);
@@ -27,7 +27,7 @@ namespace ManageYourBussines.Datos
                 objDatosVenta.idVenta = int.Parse(tblVenta.Rows[i]["idVenta"].ToString());
                 objDatosVenta.fechaVenta = DateTime.Parse(tblVenta.Rows[i]["fechaVenta"].ToString());
                 objDatosVenta.codigoVenta = tblVenta.Rows[i]["codigoVenta"].ToString();
-                objDatosVenta.totalVenta = float.Parse(tblVenta.Rows[i]["totalVenta"].ToString());
+                //objDatosVenta.totalVenta = float.Parse(tblVenta.Rows[i]["totalVenta"].ToString());
                 objDatosVenta.idCliente = int.Parse(tblVenta.Rows[i]["idVenta"].ToString());
                 objDatosVenta.idDetallesVenta = int.Parse(tblVenta.Rows[i]["idDetallesVenta"].ToString());
                 objDatosVenta.idProducto = int.Parse(tblVenta.Rows[i]["idProducto"].ToString());
