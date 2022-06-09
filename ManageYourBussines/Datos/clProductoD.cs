@@ -9,10 +9,9 @@ using static ManageYourBussines.Datos.ClConexion;
 namespace ManageYourBussines.Datos
 {
     public class clProductoD
-    {/// <summary>
-    /// 
-    /// </summary>
-    /// <returns></returns>
+    {
+    /// para el home
+   
         public List<clProductoE> mtdListar()
         {
             string sql = "SELECT * FROM producto WHERE idProducto <= 12; ";
@@ -32,7 +31,6 @@ namespace ManageYourBussines.Datos
                 objDatosProducto.nombre = tblProducto.Rows[i]["nombreProducto"].ToString();
                 objDatosProducto.precio = float.Parse(tblProducto.Rows[i]["precio"].ToString());
                 objDatosProducto.descripcion = tblProducto.Rows[i]["descripcion"].ToString();
-                objDatosProducto.precio = float.Parse(tblProducto.Rows[i]["precio"].ToString());
                 objDatosProducto.cantidadStock = int.Parse(tblProducto.Rows[i]["cantidadStock"].ToString());
                 objDatosProducto.largo = tblProducto.Rows[i]["largo"].ToString();
                 objDatosProducto.ancho = tblProducto.Rows[i]["ancho"].ToString();
@@ -47,6 +45,8 @@ namespace ManageYourBussines.Datos
             return listarProducto;
 
         }
+
+        /// PARA EL ID DEL PRODUCTO EN EL FORMULARIO
         public List<clProductoE> mtdListarDetalles(clProductoE objdatos)
         {
             string sql = "select * from producto where idProducto ="+objdatos.idProducto+"";
@@ -78,6 +78,7 @@ namespace ManageYourBussines.Datos
             }
             return listarProducto;
         }
+        ///Para listar los detalles
         public List<clProductoE> mtdList(clProductoE objproductos)
         {
             string sql = "select * from producto where idProducto =" + objproductos.idProducto + "";
@@ -107,6 +108,7 @@ namespace ManageYourBussines.Datos
             }
             return listarProducto;
         }
+        ///Para el formulario de productos
         public List<clProductoE> mtdListarProducto()
         {
             string sql = "SELECT * FROM producto ";
@@ -125,7 +127,7 @@ namespace ManageYourBussines.Datos
                 objDatosProducto.nombre = tblProducto.Rows[i]["nombreProducto"].ToString();
                 objDatosProducto.descripcion = tblProducto.Rows[i]["descripcion"].ToString();
                 objDatosProducto.precio = float.Parse(tblProducto.Rows[i]["precio"].ToString());
-                //objDatosProducto.cantidadStock =int.Parse ( tblProducto.Rows[i]["cantidadStock"].ToString());
+                objDatosProducto.cantidadStock = int.Parse(tblProducto.Rows[i]["cantidadStock"].ToString());
                 objDatosProducto.largo = tblProducto.Rows[i]["largo"].ToString();
                 objDatosProducto.ancho = tblProducto.Rows[i]["ancho"].ToString();
                 objDatosProducto.profundidad = tblProducto.Rows[i]["profundidad"].ToString();

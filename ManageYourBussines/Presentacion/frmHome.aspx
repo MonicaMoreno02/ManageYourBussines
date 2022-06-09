@@ -33,7 +33,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="frmAbout.aspx">Sobre Nosotros</a>
                             </li>
-
+                             <li class="nav-item">
+                                <a class="nav-link" href="frmContactenos.aspx">Contactenos</a>
+                            </li>
                             <!--<li class="nav-item">
                 <a class="nav-link" href="book.html">Book Table</a>
               </li>-->
