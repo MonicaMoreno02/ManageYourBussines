@@ -41,6 +41,9 @@ namespace ManageYourBussines.Presentacion
                 contraseniaAleatoria += letra.ToString();
             }
 
+
+
+
             clUsuarioL objClientesL = new clUsuarioL();
 
             int filas = objClientesL.mtdRegistrarCliente(objClientesE);

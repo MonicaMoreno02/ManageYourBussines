@@ -11,6 +11,7 @@ namespace ManageYourBussines.Datos
     {
         public clUsuarioE mtdLoginUsuario(clUsuarioE objDatoscli)
         {
+             //metodo de login para  el clientes 
 
             string consulta = "select * from cliente where email='" + objDatoscli.email + "'";
             ClConexion objConexion = new ClConexion();
@@ -41,15 +42,17 @@ namespace ManageYourBussines.Datos
 
 
         }
-        public int mtdLoginEmpleado(clEmpleadoE objDatosEmple)
+
+        //metodo de login para empleados
+        public clEmpleadoE mtdLoginEmpleado(clEmpleadoE objDatosEmple)
         {
-            string consulta = "select * from empleado where emailEmpleado='" + objDatosEmple.emailEmpleado + "'and tipoEmpleado = '" + objDatosEmple.tipoEmpleado + "'";
+            string consulta = "select * from empleado where emailEmpleado='" + objDatosEmple.emailEmpleado + "'";
             ClConexion objConexion = new ClConexion();
             DataTable tblDatos = new DataTable();
             tblDatos = objConexion.mtdDesconectado(consulta);
 
             clEmpleadoE objDatosCliente = new clEmpleadoE();
-            int valor = tblDatos.Rows.Count;
+
             if (tblDatos.Rows.Count == 1)
             {
                 objDatosEmple.idEmpleado = int.Parse(tblDatos.Rows[0]["idEmpleado"].ToString());
@@ -66,7 +69,21 @@ namespace ManageYourBussines.Datos
                 objDatosEmple = null;
 
             }
-            return valor;
+            return objDatosEmple;
         }
+
+        //metodo para editar  los clientes
+        public int mtdEditar(clUsuarioE objDatos)
+        {
+            string sql = "Update cliente set documento='" + objDatos.documento + "', nombreCliente='" + objDatos.nombreCliente + "'," +
+                "apellidos='" + objDatos.apellidos + "',telefono='"+objDatos.telefono+"',direccion='"+objDatos.direccion+"',email='" + objDatos.email + "',clave='" + objDatos.clave + "' where idCliente=" + objDatos.idCliente + "";
+
+            ClConexion objConexion = new ClConexion();
+            int result = objConexion.mtdConectado(sql);
+            return result;
+        }
+
+       
     }
+
 }

@@ -1787,6 +1787,7 @@
     <Content Include="Presentacion\recursos\images\o2.jpg" />
     <Content Include="Presentacion\recursos\js\bootstrap.js" />
     <Content Include="Presentacion\recursos\js\custom.js" />
+    <Content Include="Presentacion\recursos\js\Datos.js" />
     <Content Include="Presentacion\recursos\js\jquery-3.4.1.min.js" />
     <Content Include="Presentacion\recursos\js\sweetalert2.js" />
     <Content Include="Presentacion\frmLogin.aspx" />

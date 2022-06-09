@@ -11,14 +11,10 @@ namespace ManageYourBussines.Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           //lblUsuario.Text = Session["empleado"].ToString();
-            //lblUsuario.Text= Session["idCliente"].ToString();
+            //lblUsuario.Text = Session["empleado"].ToString();
+            //lblUsuario1.Text = Session["cliente"].ToString();
         }
 
-        protected void btnCerrarSesion_Click(object sender, EventArgs e)
-        {
-            Session.RemoveAll();
-            Response.Redirect("../index.aspx");
-        }
+       
     }
 }

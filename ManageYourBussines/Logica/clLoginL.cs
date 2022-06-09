@@ -9,6 +9,7 @@ namespace ManageYourBussines.Logica
 {
     public class clLoginL
     {
+        //metodo de login clientes en logicas
         public clUsuarioE mtdLoginUsuario(clUsuarioE objDatosU) 
         {
             clLoginD objLoginD = new clLoginD();
@@ -19,17 +20,24 @@ namespace ManageYourBussines.Logica
 
         
         }
-        public int mtdLoginEmpleado(clEmpleadoE objDatosEm) 
+        //metodo de login en logica para empleados 
+        public clEmpleadoE mtdLoginEmpleado(clEmpleadoE objDatosEm) 
         { 
             clLoginD objLoginEn= new clLoginD();
             clEmpleadoE objDatosE= new clEmpleadoE();
-            //objDatosE = objLoginEn.mtdLoginEmpleado(objDatosEm);
-            int va = objLoginEn.mtdLoginEmpleado(objDatosEm);
-            return va;
+            objDatosE = objLoginEn.mtdLoginEmpleado(objDatosEm);
+            return objDatosEm;
 
 
         }
 
+        //metodo para editar  los cliente s
+        public int mtdEditarPersona(clUsuarioE objDatos)
+        {
+            clLoginD objUsuarioD = new clLoginD();
+            int r = objUsuarioD.mtdEditar(objDatos);
+            return r;
+        }
 
     }
 }

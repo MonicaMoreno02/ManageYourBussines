@@ -24,6 +24,8 @@ namespace ManageYourBussines
             Session["idCliente"]=null ;
             Session["nombreEmpleado"]=null;
             Session["apellidosEmple"] = null;
+            //Session["nombreCliente"] = null;
+            //Session["apellidosCliente"] = null;
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)
@@ -45,6 +47,15 @@ namespace ManageYourBussines
         {
             Session["empleado"] = null;
             Session["idEmpleado"] = null;
+
+
+
+            Session["usuarioPersona"] = null;
+            Session["idUsuarioPersona"] = null;
+            Session["cliente"] = null;
+            Session["idCliente"] = null;
+            Session["nombreEmpleado"] = null;
+            Session["apellidosEmple"] = null;
         }
 
         protected void Application_End(object sender, EventArgs e)

@@ -15,12 +15,13 @@ namespace ManageYourBussines
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["cliente"] != null || Session["idCliente"] != null || Session["empleado"] != null
-                 || Session["idCliente"] != null)
+                 || Session["idEmpleado"] != null)
             {
-                Response.Redirect("Presentacion/frmHome.aspx");
+                //Response.Redirect("Presentacion/frmHome.aspx");
 
 
             }
+            //Session["cliente"] = null;
         }
 
         protected void btnIngresar_Click(object sender, EventArgs e)
@@ -45,24 +46,31 @@ namespace ManageYourBussines
                 if (idTipoUsuario.SelectedValue == "Cliente")
                 {
                     clUsuarioE objDatosE = new clUsuarioE();
-                    clLoginL objLoginL = new clLoginL();
-                    clUsuarioE objDatossele = new clUsuarioE();
+
                     objDatosE.email = txtEmail.Text;
                     objDatosE.clave = txtClave.Text;
+
+                    clLoginL objLoginL = new clLoginL();
+                    clUsuarioE objDatossele = new clUsuarioE();
+                   
                     objDatossele = objLoginL.mtdLoginUsuario(objDatosE);
 
                     if (objDatossele != null)
                     {
                         if (objDatossele.clave == txtClave.Text)
                         {
-                            Session["cliente"] = " " + objDatossele.nombreCliente;
-                            Session["idCliente"] = objDatossele.idCliente;
+                            //Session["cliente"] = " " + objDatossele.nombreCliente;
+                            //Session["idCliente"] = objDatossele.idCliente;
                             //Session["idTipoRol"] = objDatossele.idTipoRol;
+
+                            Session["nombreCliente"] = objDatossele.nombreCliente;
+                            Session["apellidosCliente"] = objDatossele.apellidos;
+
                             Response.Redirect("Presentacion/frmHome.aspx");
                         }
                         else
                         {
-                            ClientScript.RegisterStartupScript(this.GetType(), "mensaje", "<script>swal('Alerta!', 'Clave incorrecta!', 'info')</script>");
+                            ClientScript.RegisterStartupScript(this.GetType(), "mensaje", "<script>swal('Alerta!', 'Contraseña incorrecta!', 'info')</script>");
                         }
 
 
@@ -83,10 +91,9 @@ namespace ManageYourBussines
                     clEmpleadoE objLLoginEmple = new clEmpleadoE();
                     objDatosE.emailEmpleado = txtEmail.Text;
                     objDatosE.claveEmpleado = txtClave.Text;
-                    //objLLoginEmple = objLoginL.mtdLoginEmpleado(objDatosE);
-                    int re = objLoginL.mtdLoginEmpleado(objDatosE);
+                    objLLoginEmple = objLoginL.mtdLoginEmpleado(objDatosE);
 
-                    if (re != 0)
+                    if (objLLoginEmple != null)
                     {
                         if (objLLoginEmple.claveEmpleado == txtClave.Text)
                         {

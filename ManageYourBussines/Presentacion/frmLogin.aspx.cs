@@ -17,35 +17,35 @@ namespace ManageYourBussines.Presentacion
         }
 
 
-        protected void btnIngresar_Click(object sender, EventArgs e)
-        {
+        //protected void btnIngresar_Click(object sender, EventArgs e)
+        //{
 
-            clUsuarioE objDatos = new clUsuarioE();
-            objDatos.email = txtEmail.Text;
-            objDatos.clave = txtClave.Text;
+        //    clUsuarioE objDatos = new clUsuarioE();
+        //    objDatos.email = txtEmail.Text;
+        //    objDatos.clave = txtClave.Text;
 
-            clUsuarioL objUsuariosL = new clUsuarioL();
+        //    clUsuarioL objUsuariosL = new clUsuarioL();
 
-            objDatos = objUsuariosL.mtdLogin(objDatos);
-            if (objDatos != null)
-            {
+        //    objDatos = objUsuariosL.mtdLogin(objDatos);
+        //    if (objDatos != null)
+        //    {
 
 
 
                
 
-                Session["usuario"] = objDatos.nombreCliente + " " + objDatos.apellidos;
-                Response.Redirect("frmProductos.aspx");
+        //        Session["usuario"] = objDatos.nombreCliente + " " + objDatos.apellidos;
+        //        Response.Redirect("frmProductos.aspx");
 
 
 
 
-            }
-            else
-            {
-                lblMensaje.Text = "usuario no Registrado ";
-            }
+        //    }
+        //    else
+        //    {
+        //        lblMensaje.Text = "usuario no Registrado ";
+        //    }
 
-        }
+        //}
     }
 }

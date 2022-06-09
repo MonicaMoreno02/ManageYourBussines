@@ -11,34 +11,34 @@ namespace ManageYourBussines.Datos
     public class clUsuarioD
     {
 
-        public clUsuarioE mtdLogin(clUsuarioE objDatos)
-        {
+        //public clUsuarioE mtdLogin(clUsuarioE objDatos)
+        //{
 
-            string consulta = "select * from  cliente  where email='" + objDatos.email + "' and clave='" + objDatos.clave + "'";
-            ClConexion objConexion = new ClConexion();
-            DataTable tblDatos = new DataTable();
-            tblDatos = objConexion.mtdDesconectado(consulta);
-            clUsuarioE objDatosCliente = new clUsuarioE();
-            //int valor = tblDatos.Rows.Count;
-            if (tblDatos.Rows.Count == 1)
-            {
-                objDatosCliente.idCliente = int.Parse(tblDatos.Rows[0]["idCliente"].ToString());
-                objDatosCliente.documento = tblDatos.Rows[0]["documento"].ToString();
-                objDatosCliente.nombreCliente = tblDatos.Rows[0]["nombreCliente"].ToString();
-                objDatosCliente.telefono = tblDatos.Rows[0]["telefono"].ToString();
-                objDatosCliente.apellidos = tblDatos.Rows[0]["apellidos"].ToString();
-                objDatosCliente.direccion = tblDatos.Rows[0]["direccion"].ToString();
-                objDatosCliente.email = tblDatos.Rows[0]["email"].ToString();
-                objDatosCliente.clave = tblDatos.Rows[0]["clave"].ToString();
+        //    string consulta = "select * from  cliente  where email='" + objDatos.email + "' and clave='" + objDatos.clave + "'";
+        //    ClConexion objConexion = new ClConexion();
+        //    DataTable tblDatos = new DataTable();
+        //    tblDatos = objConexion.mtdDesconectado(consulta);
+        //    clUsuarioE objDatosCliente = new clUsuarioE();
+        //    //int valor = tblDatos.Rows.Count;
+        //    if (tblDatos.Rows.Count == 1)
+        //    {
+        //        objDatosCliente.idCliente = int.Parse(tblDatos.Rows[0]["idCliente"].ToString());
+        //        objDatosCliente.documento = tblDatos.Rows[0]["documento"].ToString();
+        //        objDatosCliente.nombreCliente = tblDatos.Rows[0]["nombreCliente"].ToString();
+        //        objDatosCliente.telefono = tblDatos.Rows[0]["telefono"].ToString();
+        //        objDatosCliente.apellidos = tblDatos.Rows[0]["apellidos"].ToString();
+        //        objDatosCliente.direccion = tblDatos.Rows[0]["direccion"].ToString();
+        //        objDatosCliente.email = tblDatos.Rows[0]["email"].ToString();
+        //        objDatosCliente.clave = tblDatos.Rows[0]["clave"].ToString();
 
-            }
-            else
-            {
-                objDatosCliente = null;
+        //    }
+        //    else
+        //    {
+        //        objDatosCliente = null;
 
-            }
-            return objDatosCliente;
-        }
+        //    }
+        //    return objDatosCliente;
+        //}
 
 
 
