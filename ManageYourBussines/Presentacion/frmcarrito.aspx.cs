@@ -167,7 +167,7 @@ namespace ManageYourBussines.Presentacion
                 string valor = gvCar.Rows[lista].Cells[5].Text;
                 int cantidad = int.Parse(valor);
                 cantidad = cantidad - 1;
-                if (cantidad>=0)
+                if (cantidad>=1)
                 {
                     string idc = Convert.ToString(Session["idc"]);
                     int idClien = int.Parse(idc);
