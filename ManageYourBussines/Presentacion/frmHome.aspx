@@ -52,7 +52,7 @@
 
                                     </li>
 
-                                    <li><a class="dropdown-item" href="../index.aspx">cerar sesion </a></li>
+                                    <li><a class="dropdown-item" href="../index.aspx">cerrar sesion </a></li>
 
                                 </ul>
 
@@ -122,11 +122,11 @@
                        <%--     <asp:Button ID="btncarrito" runat="server" Text="carrito" OnClick="btncarrito_Click" CssClass="btn btn-warning"  />--%>
                              <asp:Label ID="lbnumero" runat="server" Text=""></asp:Label>
 
-                            <form class="form-inline">
+                         <%--   <form class="form-inline">
                                 <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
                                     <i class="fa fa-search" aria-hidden="true"></i>
                                 </button>
-                            </form>
+                            </form>--%>
 
                             </a>
                         </div>

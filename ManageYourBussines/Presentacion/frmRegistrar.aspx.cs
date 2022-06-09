@@ -21,7 +21,7 @@ namespace ManageYourBussines.Presentacion
             clUsuarioE objClientesE = new clUsuarioE();
 
             objClientesE.documento = txtDocumento.Text;
-            objClientesE.nombres = txtNombres.Text;
+            objClientesE.nombreCliente = txtNombres.Text;
             objClientesE.apellidos = txtApellidos.Text;
             objClientesE.telefono = txtTelefono.Text;
             objClientesE.direccion = txtDireccion.Text;

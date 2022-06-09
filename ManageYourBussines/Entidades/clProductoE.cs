@@ -19,6 +19,7 @@ namespace ManageYourBussines.Entidades
         public string profundidad { get; set; }
         public string material { get; set; }
         public string caracteristicas { get; set; }
+   
         public string imagen { get; set; }
 
        

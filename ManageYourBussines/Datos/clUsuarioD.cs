@@ -22,7 +22,7 @@ namespace ManageYourBussines.Datos
             {
                 objDatosCliente.idCliente = int.Parse(tblDatos.Rows[0]["idCliente"].ToString());
                 objDatosCliente.documento = tblDatos.Rows[0]["documento"].ToString();
-                objDatosCliente.nombres = tblDatos.Rows[0]["nombreCliente"].ToString();
+                objDatosCliente.nombreCliente = tblDatos.Rows[0]["nombreCliente"].ToString();
                 objDatosCliente.telefono = tblDatos.Rows[0]["telefono"].ToString();
                 objDatosCliente.apellidos = tblDatos.Rows[0]["apellidos"].ToString();
                 objDatosCliente.direccion = tblDatos.Rows[0]["direccion"].ToString();
@@ -41,7 +41,7 @@ namespace ManageYourBussines.Datos
         public int mtdRegistrar(clUsuarioE objDatosCliente)
         {
             string sql = "insert into cliente(documento,nombreCliente,apellidos,telefono,direccion,email,clave)" +
-                "values ('" + objDatosCliente.documento + "' ,'" + objDatosCliente.nombres + "','" + objDatosCliente.apellidos + "','" + objDatosCliente.telefono + "','" + objDatosCliente.direccion + "','" + objDatosCliente.email + "' ,'" + objDatosCliente.clave + "')";
+                "values ('" + objDatosCliente.documento + "' ,'" + objDatosCliente.nombreCliente + "','" + objDatosCliente.apellidos + "','" + objDatosCliente.telefono + "','" + objDatosCliente.direccion + "','" + objDatosCliente.email + "' ,'" + objDatosCliente.clave + "')";
 
             clConexion objConexion = new clConexion();
 
