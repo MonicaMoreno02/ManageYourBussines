@@ -12,7 +12,7 @@ namespace ManageYourBussines.Datos
     {
         public clUsuarioE mtdLogin(clUsuarioE objDatos)
         {
-            string consulta = "select * from  cliente  where email='" + objDatos.email + "' and clave='" + objDatos.clave + "'";
+            string consulta = "select * from  cliente  where emailCliente='" + objDatos.email + "' and claveCliente='" + objDatos.clave + "'";
             clConexion objConexion = new clConexion();
             DataTable tblDatos = new DataTable();
             tblDatos = objConexion.mtdDesconectado(consulta);
@@ -26,8 +26,8 @@ namespace ManageYourBussines.Datos
                 objDatosCliente.telefono = tblDatos.Rows[0]["telefono"].ToString();
                 objDatosCliente.apellidos = tblDatos.Rows[0]["apellidos"].ToString();
                 objDatosCliente.direccion = tblDatos.Rows[0]["direccion"].ToString();
-                objDatosCliente.email = tblDatos.Rows[0]["email"].ToString();
-                objDatosCliente.clave = tblDatos.Rows[0]["clave"].ToString();
+                objDatosCliente.email = tblDatos.Rows[0]["emailCliente"].ToString();
+                objDatosCliente.clave = tblDatos.Rows[0]["claveCliente"].ToString();
 
             }
             else
