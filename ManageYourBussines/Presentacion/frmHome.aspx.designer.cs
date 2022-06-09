@@ -15,22 +15,22 @@ namespace ManageYourBussines.Presentacion
     {
 
         /// <summary>
-        /// Control Button1.
+        /// Control LbidC.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Label LbidC;
 
         /// <summary>
-        /// Control btncarrito.
+        /// Control ImageButton1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btncarrito;
+        protected global::System.Web.UI.WebControls.ImageButton ImageButton1;
 
         /// <summary>
         /// Control lbnumero.
