@@ -44,7 +44,7 @@ namespace ManageYourBussines.Datos
         public List<clVentaE> mtdRegistrar(clVentaE objDatosV)
         {
             string sql = "insert into venta ( fechaVenta,codigoVenta,totalVenta,idCliente)" +
-                "  values('" + objDatosV.fechaVen + "','" + objDatosV.codigoVenta + "'," + objDatosV.totalVenta + "," + objDatosV.idCliente + ")";
+                "  values('" + objDatosV.fechaVen + "','" + objDatosV.codigoVenta + "'," + objDatosV.valorTotal + "," + objDatosV.idCliente + ")";
 
 
             clConexion objConexion = new clConexion();

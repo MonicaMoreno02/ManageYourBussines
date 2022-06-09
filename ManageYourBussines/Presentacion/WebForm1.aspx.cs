@@ -54,7 +54,7 @@ namespace ManageYourBussines.Presentacion
             objVenta.fechaVen = fechaVen;
             objVenta.codigoVenta = codigoVent;
             objVenta.valorTotal = valortotal;
-            objVenta.idCliente = idClien;
+             objVenta.idCliente = idClien;
 
             clVentaL objVehiculoL = new clVentaL();
             List<clVentaE> lisDetalles = new List<clVentaE>();
