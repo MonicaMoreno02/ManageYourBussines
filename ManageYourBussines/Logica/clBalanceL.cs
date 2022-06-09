@@ -9,11 +9,11 @@ namespace ManageYourBussines.Logica
 {
     public class clBalanceL
     {
-        public List<clBalanceE> mtdListarBal()
+        public List<clBalanceE> mtdListarBal(clBalanceE objbalance)
         {
             clBalanceD objBalanceD = new clBalanceD();
             List<clBalanceE> listaClientes = new List<clBalanceE>();
-            listaClientes = objBalanceD.mtdListar();
+            listaClientes = objBalanceD.mtdListar(objbalance);
             return listaClientes;
 
         }
@@ -26,5 +26,14 @@ namespace ManageYourBussines.Logica
             return listaClientes;
 
         }
+        public List<clBalanceE> mtdListarBalC()
+        {
+            clBalanceD objBalanceD = new clBalanceD();
+            List<clBalanceE> listaClientes = new List<clBalanceE>();
+            listaClientes = objBalanceD.mtdListarBal();
+            return listaClientes;
+
+        }
+
     }
 }

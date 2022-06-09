@@ -5,13 +5,22 @@ using System.Web;
 
 namespace ManageYourBussines.Entidades
 {
-    public class clVentaE
+    public class clVentaE:clProductoE
     {
-        int idVenta { get; set; }
-        DateTime fechaVenta { get; set; }
-        string codigoVenta { get; set; }
-        float totalVenta { get; set; }
-        int idCliente { get; set; }
-        int idEmpleado { get; set; }
+        public int idVenta { get; set; }
+        public DateTime fechaVenta { get; set; }
+        public string codigoVenta { get; set; }
+        public float totalVenta { get; set; }
+        public int idCliente { get; set; }
+        public int idEmpleado { get; set; }
+
+        public int idDetallesVenta { get; set; }
+    
+        public int cantidad { get; set; }
+        public float valorTotal { get; set; }
+        
+        public string fechaVen { get; set; }
+        public int filas { get; set; }
+
     }
 }

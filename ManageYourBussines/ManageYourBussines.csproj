@@ -93,6 +93,7 @@
     <Content Include="Presentacion\frmEstadisticas.aspx" />
     <Content Include="Presentacion\frmProductos2.aspx" />
     <Content Include="Presentacion\frmRegistrar.aspx" />
+    <Content Include="Presentacion\frmVenta.aspx" />
     <Content Include="Presentacion\recursos\css\bootstrap.css" />
     <Content Include="Presentacion\recursos\css\estilosEmple.css" />
     <Content Include="Presentacion\recursos\css\font-awesome.min.css" />
@@ -100,6 +101,7 @@
     <Content Include="Presentacion\recursos\css\sb-admin-2.css" />
     <Content Include="Presentacion\recursos\css\sb-admin-2.min.css" />
     <Content Include="Presentacion\recursos\css\style.css" />
+    <Content Include="Presentacion\recursos\css\style2.css" />
     <Content Include="Presentacion\recursos\images\about-img.png" />
     <Content Include="Presentacion\recursos\images\anadir-al-carrito %281%29.png" />
     <Content Include="Presentacion\recursos\images\base.jpg" />
@@ -288,6 +290,7 @@
     <Compile Include="Logica\clCarritoL.cs" />
     <Compile Include="MailServices1\MasterMailServer.cs" />
     <Compile Include="MailServices1\systemSupportMail.cs" />
+    <Compile Include="Logica\clVentaL.cs" />
     <Compile Include="Presentacion\frmAbout.aspx.cs">
       <DependentUpon>frmAbout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -379,12 +382,26 @@
     <Compile Include="Presentacion\frmRegistrar.aspx.designer.cs">
       <DependentUpon>frmRegistrar.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\frmVenta.aspx.cs">
+      <DependentUpon>frmVenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmVenta.aspx.designer.cs">
+      <DependentUpon>frmVenta.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentacion\Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Site2.Master.cs">
       <DependentUpon>Site2.Master</DependentUpon>

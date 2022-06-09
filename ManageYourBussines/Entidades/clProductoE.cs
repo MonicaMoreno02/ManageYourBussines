@@ -27,6 +27,10 @@ namespace ManageYourBussines.Entidades
         public string imagen { get; set; }
 
        
+   
+        public string imagen { get; set; }
+
+       
 
 
     }
