@@ -13,9 +13,9 @@
            <Columns>
                <asp:BoundField DataField="#" HeaderText="#" />
                <asp:BoundField DataField="nombre" HeaderText="nombre" />
+                <asp:BoundField DataField="codigoVenta" HeaderText="codigoVenta" />
                <asp:BoundField DataField="precio" HeaderText="precio" />
                <asp:BoundField DataField="cantidad" HeaderText="cantidad" />
-               <asp:BoundField DataField="codigoVenta" HeaderText="codigoVenta" />
                 <asp:BoundField DataField="total" HeaderText="total" />
            </Columns>
        </asp:GridView>
