@@ -174,7 +174,7 @@ namespace ManageYourBussines.Presentacion
             ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Archivo creado correctamente guardado en: D:/report.xlsx');", true);
         }
 
-        protected void btnpdf_Click(object sender, EventArgs e)c
+        protected void btnpdf_Click(object sender, EventArgs e)
         {
             SpreadsheetInfo.SetLicense("FREE-LIMITED-KEY");
 
