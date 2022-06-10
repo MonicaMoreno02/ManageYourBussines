@@ -41,7 +41,7 @@ namespace ManageYourBussines.servicioEmail
                 mailMessage.Priority = MailPriority.Normal;
                 smtpClient.Send(mailMessage);//Enviar mensaje
             }
-            catch (Exception ex) { }
+            catch (Exception e) { }
             finally
             {
                 mailMessage.Dispose();
