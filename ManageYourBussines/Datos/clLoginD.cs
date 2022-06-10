@@ -46,7 +46,7 @@ namespace ManageYourBussines.Datos
         //metodo de login para empleados
         public clEmpleadoE mtdLoginEmpleado(clEmpleadoE objDatosEmple)
         {
-            string consulta = "select * from empleado where emailEmpleado='" + objDatosEmple.emailEmpleado + "'";
+            string consulta = "select * from empleado where email='" + objDatosEmple.emailEmpleado + "'";
             ClConexion objConexion = new ClConexion();
             DataTable tblDatos = new DataTable();
             tblDatos = objConexion.mtdDesconectado(consulta);
@@ -56,13 +56,13 @@ namespace ManageYourBussines.Datos
             if (tblDatos.Rows.Count == 1)
             {
                 objDatosEmple.idEmpleado = int.Parse(tblDatos.Rows[0]["idEmpleado"].ToString());
-                objDatosEmple.documentoE = tblDatos.Rows[0]["documentoE"].ToString();
+                objDatosEmple.documentoE = tblDatos.Rows[0]["documento"].ToString();
                 objDatosEmple.nombreEmpleado = tblDatos.Rows[0]["nombreEmpleado"].ToString();
-                objDatosEmple.apellidosEmple = tblDatos.Rows[0]["apellidosEmple"].ToString();
+                objDatosEmple.apellidosEmple = tblDatos.Rows[0]["apellidos"].ToString();
                 objDatosEmple.tipoEmpleado = tblDatos.Rows[0]["tipoEmpleado"].ToString();
 
-                objDatosEmple.emailEmpleado = tblDatos.Rows[0]["emailEmpleado"].ToString();
-                objDatosEmple.claveEmpleado = tblDatos.Rows[0]["claveEmpleado"].ToString();
+                objDatosEmple.emailEmpleado = tblDatos.Rows[0]["email"].ToString();
+                objDatosEmple.claveEmpleado = tblDatos.Rows[0]["clave"].ToString();
             }
             else
             {

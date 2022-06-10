@@ -11,8 +11,8 @@ namespace ManageYourBussines.Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            lblNombres.Text = Session["nombreEmpleado"].ToString();
-            lblUsuario.Text=Session["apellidosEmple"].ToString();
+        //    lblNombres.Text = Session["nombreEmpleado"].ToString();
+            //lblUsuario.Text=Session["apellidosEmple"].ToString();
 
         }
     }
