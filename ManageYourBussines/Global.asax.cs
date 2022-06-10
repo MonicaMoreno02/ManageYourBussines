@@ -20,8 +20,8 @@ namespace ManageYourBussines
 
             Session["usuarioPersona"] = null;
             Session["idUsuarioPersona"] = null;
-            Session["cliente"]=null;
-            Session["idCliente"]=null ;
+            Session["cliente"] = null;
+            Session["idCliente"] = null;
             Session["nombreEmpleado"]=null;
             Session["apellidosEmple"] = null;
             //Session["nombreCliente"] = null;

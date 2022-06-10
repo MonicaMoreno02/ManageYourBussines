@@ -59,12 +59,12 @@ namespace ManageYourBussines
                     {
                         if (objDatossele.clave == txtClave.Text)
                         {
-                            //Session["cliente"] = " " + objDatossele.nombreCliente;
-                            //Session["idCliente"] = objDatossele.idCliente;
+                            Session["cliente"] = " " + objDatossele.nombreCliente;
+                            Session["idCliente"] = objDatossele.idCliente;
                             //Session["idTipoRol"] = objDatossele.idTipoRol;
 
-                            Session["nombreCliente"] = objDatossele.nombreCliente;
-                            Session["apellidosCliente"] = objDatossele.apellidos;
+                            //Session["nombreCliente"] = objDatossele.nombreCliente;
+                            //Session["apellidosCliente"] = objDatossele.apellidos;
 
                             Response.Redirect("Presentacion/frmHome.aspx");
                         }

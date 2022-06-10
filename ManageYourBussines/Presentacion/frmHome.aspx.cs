@@ -14,15 +14,15 @@ namespace ManageYourBussines.Presentacion
         protected void Page_Load(object sender, EventArgs e)
         {
             ////lblCliente.Text = Session["idCliente"].ToString();
-            //lblUsuario1.Text = Session["cliente"].ToString();
+            lblUsuario1.Text = Session["idCliente"].ToString();
             //lblnombres.Text = Session["nombreCliente"].ToString();
             //lblApellidos.Text = Session["apellidosCliente"].ToString();
 
 
+            //crearEvento.Visible = false;
 
 
-
-            txtID.Attributes.Add("style", "DISPLAY:none");
+            //txtID.Attributes.Add("style", "DISPLAY:none");
         }
 
         protected void btnCerrarSesion_Click(object sender, EventArgs e)
