@@ -13,8 +13,8 @@ namespace ManageYourBussines.Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            string valor = Convert.ToString(Request.QueryString["idP"]);
+          
+                string valor = Convert.ToString(Request.QueryString["idP"]);
             lblID.Attributes.Add("style", "DISPLAY:none");
             lblID.Text = valor;
             int idProducto = int.Parse(valor);
