@@ -11,9 +11,9 @@
     <form id="form1" runat="server">
         <div>
             <h1>FORMULARIO DE  EMPLEADOS</h1>
-                                            <asp:Label ID="lblUsuario" runat="server" class="nav-link dropdown-toggle fa fa-user me-3" data-bs-toggle="dropdown" Text=""></asp:Label>
-                                                        <asp:Label ID="lblNombres" runat="server" class="nav-link dropdown-toggle fa fa-user me-3" data-bs-toggle="dropdown" Text=""></asp:Label>
 
+            <asp:Label ID="lblEmpleadosVendor" runat="server" Text=""></asp:Label>
+                                         
         </div>
     </form>
 </body>

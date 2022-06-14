@@ -18,14 +18,16 @@ namespace ManageYourBussines
         protected void Session_Start(object sender, EventArgs e)
         {
 
-            Session["usuarioPersona"] = null;
-            Session["idUsuarioPersona"] = null;
-            Session["cliente"] = null;
-            Session["idCliente"] = null;
-            Session["nombreEmpleado"]=null;
-            Session["apellidosEmple"] = null;
-            //Session["nombreCliente"] = null;
-            //Session["apellidosCliente"] = null;
+            //Session["usuarioPersona"] = null;
+            //Session["idUsuarioPersona"] = null;
+            //Session["cliente"] = null;
+            //Session["idCliente"] = null;
+            //Session["nombreEmpleado"]=null;
+            //Session["apellidosEmple"] = null;
+            ////Session["nombreCliente"] = null;
+            ////Session["apellidosCliente"] = null;
+            ///=
+            Session["EmpleadosVen"] = "";
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)

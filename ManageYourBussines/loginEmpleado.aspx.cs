@@ -35,9 +35,9 @@ namespace ManageYourBussines
 
 
 
-                //Session["nombreEmpleado"] = objDatos.nombreEmpleado + " " + objDatos.apellidosEmple;
-                Session["nombreEmpleado"] = objDatosClien.nombreEmpleado;
-                Session["apellidos"] = objDatosClien.apellidosEmple;
+                Session["EmpleadosVen"] = objDatos.nombreEmpleado + " " + objDatos.apellidosEmple;
+                //Session["nombreEmpleado"] = objDatosClien.nombreEmpleado;
+                //Session["apellidos"] = objDatosClien.apellidosEmple;
                 Response.Redirect("Presentacion/frmEmpleados.aspx");
 
 

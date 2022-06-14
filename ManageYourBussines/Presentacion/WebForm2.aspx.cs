@@ -7,14 +7,10 @@ using System.Web.UI.WebControls;
 
 namespace ManageYourBussines.Presentacion
 {
-    public partial class frmEmpleados : System.Web.UI.Page
+    public partial class WebForm2 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-
         {
-            lblEmpleadosVendor.Text = Session["EmpleadosVen"].ToString();   
-            //lblNombres.Text = Session["nombreEmpleado"].ToString();
-            //lblUsuario.Text = Session["apellidosEmple"].ToString();
 
         }
     }
