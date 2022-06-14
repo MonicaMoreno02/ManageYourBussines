@@ -30,15 +30,15 @@ namespace ManageYourBussines.Presentacion
 
 
 
-            //lblEmpleado.Text = objDatosReci.documento;
-            //    lblApellidos.Text = objDatosReci.nombreCliente;
-            //    lblCorreo.Text = objDatosReci.apellidos;
-            //    lblTipoDocumento.Text = objDatosReci.telefono;
-            //    lblDocumento.Text = objDatosReci.direccion;
-            //    lblTelefono.Text = objDatosReci.email;
-            //    lblCargo.Text = objDatosReci.clave;
- 
-            }
+            lblEmpleado.Text = objDatosReci.documento;
+            lblApellidos.Text = objDatosReci.nombreCliente;
+            lblCorreo.Text = objDatosReci.apellidos;
+            lblTipoDocumento.Text = objDatosReci.telefono;
+            lblDocumento.Text = objDatosReci.direccion;
+            lblTelefono.Text = objDatosReci.email;
+            lblCargo.Text = objDatosReci.clave;
+
+        }
 
             protected void btnActualizar_Click(object sender, EventArgs e)
             {
@@ -47,7 +47,7 @@ namespace ManageYourBussines.Presentacion
 
                 clUsuarioE objUsurrioE = new clUsuarioE();
 
-            objUsurrioE.idCliente = int.Parse(Session["idUser"].ToString());
+            objUsurrioE.idCliente = int.Parse(Session["cliente"].ToString());
             objUsurrioE.documento = txtNombres.Text;
             objUsurrioE.nombreCliente = txtApellidos.Text;
             objUsurrioE.apellidos = ddlTipoDocumento.Text;

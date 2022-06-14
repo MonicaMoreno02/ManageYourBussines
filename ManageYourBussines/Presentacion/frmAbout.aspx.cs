@@ -19,7 +19,7 @@ namespace ManageYourBussines.Presentacion
             HtmlAnchor crearCuenta = (HtmlAnchor)this.Master.FindControl("crearCuenta");
             HtmlAnchor crearEvento = (HtmlAnchor)this.Master.FindControl("crearEvento");
 
-            //crearEvento.Visible = true ;
+            crearEvento.Visible = true;
 
             if (Session["cliente"] == null && Session["idCliente"] == null && Session["empleado"] == null
                 && Session["idEmpleado"] == null)
@@ -37,7 +37,7 @@ namespace ManageYourBussines.Presentacion
                 if (Session["cliente"] == null)
                 {
                     lblUsuario.Text = Session["empleado"].ToString();
-                    //crearCuenta.Visible = true;
+                    crearCuenta.Visible = true;
 
 
                     //if (Session["idTipoRol"].ToString() == "3")
@@ -49,7 +49,7 @@ namespace ManageYourBussines.Presentacion
                 else
                 {
                     lblUsuario.Text = Session["cliente"].ToString();
-                    crearCuenta.Visible = false;
+                    //crearCuenta.Visible = false;
 
 
                     //if (Session["idTipoRol"].ToString() == "3")
