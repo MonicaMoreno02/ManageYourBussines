@@ -8,6 +8,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 
 
+
 namespace ManageYourBussines
 {
     public partial class index : System.Web.UI.Page
@@ -22,6 +23,8 @@ namespace ManageYourBussines
 
             }
             //Session["cliente"] = null;
+
+
         }
 
         protected void btnIngresar_Click(object sender, EventArgs e)
@@ -44,14 +47,19 @@ namespace ManageYourBussines
             else
             {
                 if (idTipoUsuario.SelectedValue == "Cliente")
-                {
+
+
+                { 
+
                     clUsuarioE objDatosE = new clUsuarioE();
+                    clLoginL objLoginL = new clLoginL();
+                    clUsuarioE objDatossele = new clUsuarioE();
 
                     objDatosE.email = txtEmail.Text;
                     objDatosE.clave = txtClave.Text;
 
-                    clLoginL objLoginL = new clLoginL();
-                    clUsuarioE objDatossele = new clUsuarioE();
+          
+                 
                    
                     objDatossele = objLoginL.mtdLoginUsuario(objDatosE);
 
@@ -59,7 +67,7 @@ namespace ManageYourBussines
                     {
                         if (objDatossele.clave == txtClave.Text)
                         {
-                            Session["cliente"] = " " + objDatossele.nombreCliente;
+                            Session["cliente"] = " " + objDatossele.idCliente;
                             Session["idCliente"] = objDatossele.idCliente;
                             //Session["idTipoRol"] = objDatossele.idTipoRol;
 
@@ -159,3 +167,7 @@ namespace ManageYourBussines
     }
 
 }
+
+
+
+

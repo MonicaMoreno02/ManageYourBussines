@@ -3,8 +3,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>pagina de empleados </h1>
-                                                <asp:Label ID="lblUsuario" runat="server" class="nav-link dropdown-toggle fa fa-user me-3" data-bs-toggle="dropdown" Text=""></asp:Label>
-          <div class="user_option">
+<%--                                                <asp:Label ID="lblUsuario" runat="server" class="nav-link dropdown-toggle fa fa-user me-3" data-bs-toggle="dropdown" Text=""></asp:Label>--%>
+          <%--<%--<%--<%--<%--<div class="user_option">
 
                 <div class="dropdown">
                     <button type="button" class="btn btn-dark  dropdown-toggle" data-bs-toggle="dropdown">
@@ -14,13 +14,13 @@
                     <ul class="dropdown-menu">
                         <%--<li><a class="dropdown-item" href="#">Datos Personales</a>--%>
                         <!-- Button to Open the Modal -->
-                                        <asp:Button ID="btnCerrarSesion" runat="server" Text="Cerrar Sesión" class="dropdown-item" onClick="btnCerrarSesion_Click" />
+                                        <%--<asp:Button ID="btnCerrarSesion" runat="server" Text="Cerrar Sesión" class="dropdown-item" onClick="btnCerrarSesion_Click" />
 
 
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
                             Open modal
                         </button>
-                </div>
+                </div>--%>
 
                 <!-- The Modal -->
                 <div class="modal fade" id="myModal">

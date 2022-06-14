@@ -18,15 +18,9 @@ namespace ManageYourBussines
         protected void Session_Start(object sender, EventArgs e)
         {
 
-            //Session["usuarioPersona"] = null;
-            //Session["idUsuarioPersona"] = null;
-            //Session["cliente"] = null;
-            //Session["idCliente"] = null;
-            //Session["nombreEmpleado"]=null;
-            //Session["apellidosEmple"] = null;
-            ////Session["nombreCliente"] = null;
-            ////Session["apellidosCliente"] = null;
-            ///=
+
+            Session["cliente"] = "";
+
             Session["EmpleadosVen"] = "";
         }
 
@@ -47,17 +41,8 @@ namespace ManageYourBussines
 
         protected void Session_End(object sender, EventArgs e)
         {
-            Session["empleado"] = null;
-            Session["idEmpleado"] = null;
-
-
-
-            Session["usuarioPersona"] = null;
-            Session["idUsuarioPersona"] = null;
-            Session["cliente"] = null;
-            Session["idCliente"] = null;
-            Session["nombreEmpleado"] = null;
-            Session["apellidosEmple"] = null;
+            
+            
         }
 
         protected void Application_End(object sender, EventArgs e)

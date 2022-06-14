@@ -89,6 +89,7 @@
     <Content Include="plantilla 2\readme.txt" />
     <Content Include="plantilla 2\vendor\jquery\jquery-ui.min.js" />
     <Content Include="plantilla 2\vendor\jquery\jquery.min.js" />
+    <Content Include="Presentacion\editarDatos.aspx" />
     <Content Include="Presentacion\frmAbout.aspx" />
     <Content Include="Presentacion\frmEmpleados.aspx" />
     <Content Include="Presentacion\frmHome.aspx" />
@@ -1863,6 +1864,13 @@
     </Compile>
     <Compile Include="loginEmpleado.aspx.designer.cs">
       <DependentUpon>loginEmpleado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\editarDatos.aspx.cs">
+      <DependentUpon>editarDatos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\editarDatos.aspx.designer.cs">
+      <DependentUpon>editarDatos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmAbout.aspx.cs">
       <DependentUpon>frmAbout.aspx</DependentUpon>

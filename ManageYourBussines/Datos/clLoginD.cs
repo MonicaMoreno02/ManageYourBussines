@@ -13,7 +13,7 @@ namespace ManageYourBussines.Datos
         {
              //metodo de login para  el clientes 
 
-            string consulta = "select * from cliente where email='" + objDatoscli.email + "'";
+            string consulta = "select * from cliente where emailCliente='" + objDatoscli.email + "'";
             ClConexion objConexion = new ClConexion();
             DataTable tblDatos = new DataTable();
             tblDatos = objConexion.mtdDesconectado(consulta);
@@ -28,8 +28,8 @@ namespace ManageYourBussines.Datos
                 objDatosCliente.telefono = tblDatos.Rows[0]["telefono"].ToString();
                 objDatosCliente.apellidos = tblDatos.Rows[0]["apellidos"].ToString();
                 objDatosCliente.direccion = tblDatos.Rows[0]["direccion"].ToString();
-                objDatosCliente.email = tblDatos.Rows[0]["email"].ToString();
-                objDatosCliente.clave = tblDatos.Rows[0]["clave"].ToString();
+                objDatosCliente.email = tblDatos.Rows[0]["emailCliente"].ToString();
+                objDatosCliente.clave = tblDatos.Rows[0]["claveCliente"].ToString();
 
             }
             else
@@ -82,8 +82,33 @@ namespace ManageYourBussines.Datos
             int result = objConexion.mtdConectado(sql);
             return result;
         }
+        public clUsuarioE mtdEmpleado(clUsuarioE objDatos)
+        {
 
-       
+            string consulta = "SELECT * FROM cliente WHERE idCliente = " + objDatos.idCliente + "";
+            ClConexion objConexion = new ClConexion();
+            DataTable tblDatos = new DataTable();
+            tblDatos = objConexion.mtdDesconectado(consulta);
+            clUsuarioE objDatosUsuario = new clUsuarioE();
+
+            if (tblDatos.Rows.Count == 1)
+            {
+
+                objDatosUsuario.documento = tblDatos.Rows[0]["documento"].ToString();
+                objDatosUsuario.nombreCliente = tblDatos.Rows[0]["nombreCliente"].ToString();
+                objDatosUsuario.apellidos = tblDatos.Rows[0]["apellidos"].ToString();
+                objDatosUsuario.telefono = tblDatos.Rows[0]["telefono"].ToString();
+                objDatosUsuario.direccion = tblDatos.Rows[0]["direccion"].ToString();
+                objDatosUsuario.email = tblDatos.Rows[0]["emailCliente"].ToString();
+                objDatosUsuario.clave = tblDatos.Rows[0]["claveCliente"].ToString();
+                 }
+            else
+            {
+                objDatosUsuario = null;
+            }
+            return objDatosUsuario;
+        }
+
     }
 
 }
