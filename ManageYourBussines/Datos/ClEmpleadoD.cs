@@ -14,7 +14,7 @@ namespace ManageYourBussines.Datos
         public clEmpleadoE mtdLogin(clEmpleadoE objDatos)
         {
 
-            string consulta = "select * from  empleado  where email='" + objDatos.email+ "' and clave='" + objDatos.clave + "'";
+            string consulta = "select * from  empleado  where emailEmpleado='" + objDatos.email+ "' and claveEmpleado='" + objDatos.clave + "'";
             clConexion objConexion = new clConexion();
             DataTable tblDatos = new DataTable();
             tblDatos = objConexion.mtdDesconectado(consulta);
@@ -33,8 +33,8 @@ namespace ManageYourBussines.Datos
                     objDatosEmple.apellidos = tblDatos.Rows[0]["apellidosEmple"].ToString();
                     objDatosEmple.tipoEmpleado = tblDatos.Rows[0]["tipoEmpleado"].ToString();
 
-                    objDatosEmple.email = tblDatos.Rows[0]["email"].ToString();
-                    objDatosEmple.clave = tblDatos.Rows[0]["clave"].ToString();
+                    objDatosEmple.email = tblDatos.Rows[0]["emailEmpleado"].ToString();
+                    objDatosEmple.clave = tblDatos.Rows[0]["claveEmpleado"].ToString();
 
                 }
 
@@ -73,8 +73,8 @@ namespace ManageYourBussines.Datos
                 objEmpleado.nombreEmpleado = tblEmpleados.Rows[i]["nombreEmpleado"].ToString();
                 objEmpleado.apellidos = tblEmpleados.Rows[i]["apellidos"].ToString();
                 objEmpleado.tipoEmpleado = tblEmpleados.Rows[i]["TipoEmpleado"].ToString();
-                objEmpleado.email = tblEmpleados.Rows[i]["email"].ToString();
-                objEmpleado.clave = tblEmpleados.Rows[i]["clave"].ToString();
+                objEmpleado.email = tblEmpleados.Rows[i]["emailEmpleado"].ToString();
+                objEmpleado.clave = tblEmpleados.Rows[i]["claveEmpleado"].ToString();
 
                 ListaEmpleados.Add(objEmpleado);
             }
