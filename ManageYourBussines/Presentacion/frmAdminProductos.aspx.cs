@@ -51,7 +51,7 @@ namespace ManageYourBussines.Presentacion
 
             if (ext != "")
             {
-                if (ext == ".jpeg")
+                if (ext == ".jpeg" || ext == ".jpg")
                 {
                     string imagen = objDatosProducto.precio + ext;
 
@@ -150,7 +150,7 @@ namespace ManageYourBussines.Presentacion
 
             if (ext != "")
             {
-                if (ext == ".jpeg")
+                if (ext == ".jpeg" || ext == ".jpg")
                 {
                     string imagen = objDatosE.precio + ext;
 
