@@ -25,8 +25,8 @@ namespace ManageYourBussines.Presentacion
             objClientesE.apellidos = txtApellidos.Text;
             objClientesE.telefono = txtTelefono.Text;
             objClientesE.direccion = txtDireccion.Text;
-            objClientesE.email = txtEmail.Text;
-            objClientesE.clave = txtClave.Text;
+            objClientesE.emailCliente = txtEmail.Text;
+            objClientesE.claveCliente = txtClave.Text;
 
 
             Random rdn = new Random();
@@ -78,8 +78,8 @@ namespace ManageYourBussines.Presentacion
           
             
                 clUsuarioE objDatos = new clUsuarioE();
-                objDatos.email = txtCorreo.Text;
-                objDatos.clave = txtClaves.Text;
+                objDatos.emailCliente = txtCorreo.Text;
+                objDatos.claveCliente = txtClaves.Text;
 
                 clUsuarioL objUsuariosL = new clUsuarioL();
                 clUsuarioE objDatosClien = new clUsuarioE();

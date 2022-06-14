@@ -34,8 +34,8 @@ namespace ManageYourBussines.Datos
                 objDatosClientes.apellidos = tblCliente.Rows[i]["apellidos"].ToString();
                 objDatosClientes.telefono = tblCliente.Rows[i]["telefono"].ToString();
                 objDatosClientes.direccion = tblCliente.Rows[i]["direccion"].ToString();
-                objDatosClientes.email = tblCliente.Rows[i]["emailCliente"].ToString();
-                objDatosClientes.clave = tblCliente.Rows[i]["claveCliente"].ToString();
+                objDatosClientes.emailCliente = tblCliente.Rows[i]["emailCliente"].ToString();
+                objDatosClientes.claveCliente = tblCliente.Rows[i]["claveCliente"].ToString();
 
 
                 listarCliente.Add(objDatosClientes);

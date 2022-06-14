@@ -36,7 +36,7 @@
                  <asp:Label ID="LabelDato" runat="server" Visible="false" Text='<%#Eval("idProducto")%>'> </asp:Label>
 
 				<asp:Literal ID="Imagen" runat="server" /><img src="<%#Eval("imagen") %>" width="190" height="190" /></td></tr><br>
-                <asp:Literal ID="nombre" runat="server" /> <%#Eval("nombre") %><br>
+                <asp:Literal ID="nombre" runat="server" /> <%#Eval("nombreProducto") %><br>
                 <asp:Literal ID="precio" runat="server" />$ <%#Eval("precio") %><br>
                 <asp:Button ID="btnDetalles" runat="server" Text="Detalles:" CssClass="btn btn-success" OnClick="btnDetalles_Click"/>
              <asp:Button ID="idcarrito" runat="server" Text="carrito:" OnClick="Getcarrito" CssClass="btn btn-warning" />

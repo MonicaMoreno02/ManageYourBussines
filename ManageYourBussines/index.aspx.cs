@@ -37,8 +37,8 @@ namespace ManageYourBussines
         protected void btnIngresar_Click(object sender, EventArgs e)
         {
             clUsuarioE objDatos = new clUsuarioE();
-            objDatos.email = txtEmail.Text;
-            objDatos.clave = txtClave.Text;
+            objDatos.emailCliente = txtEmail.Text;
+            objDatos.claveCliente = txtClave.Text;
 
             clUsuarioL objUsuariosL = new clUsuarioL();
             clUsuarioE objDatosClien = new clUsuarioE();

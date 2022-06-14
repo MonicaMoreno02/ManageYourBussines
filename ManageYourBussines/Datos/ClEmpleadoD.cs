@@ -97,7 +97,7 @@ namespace ManageYourBussines.Datos
                 objSeguridad.porcentajePension = float.Parse(tblSeguridad.Rows[i]["porcentajePension"].ToString());
                 objSeguridad.porcentajeSalud = float.Parse(tblSeguridad.Rows[i]["porcentajeSalud"].ToString());
                 objSeguridad.smlv = float.Parse(tblSeguridad.Rows[i]["smlv"].ToString());
-                objSeguridad.año = int.Parse(tblSeguridad.Rows[i]["año"].ToString());
+                objSeguridad.año = int.Parse(tblSeguridad.Rows[i]["fecha"].ToString());
                 
 
                 ListaSeguridad.Add(objSeguridad);

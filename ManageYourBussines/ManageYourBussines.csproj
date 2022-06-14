@@ -81,6 +81,7 @@
   <ItemGroup>
     <Content Include="index.aspx" />
     <Content Include="Presentacion\frmAbout.aspx" />
+    <Content Include="Presentacion\frmAdminProductos.aspx" />
     <Content Include="Presentacion\frmbalance.aspx" />
     <Content Include="Presentacion\frmcarrito.aspx" />
     <Content Include="Presentacion\frmClientes.aspx" />
@@ -93,6 +94,7 @@
     <Content Include="Presentacion\frmEstadisticas.aspx" />
     <Content Include="Presentacion\frmProductos2.aspx" />
     <Content Include="Presentacion\frmRegistrar.aspx" />
+    <Content Include="Presentacion\frmSugerencias.aspx" />
     <Content Include="Presentacion\frmVenta.aspx" />
     <Content Include="Presentacion\recursos\css\bootstrap.css" />
     <Content Include="Presentacion\recursos\css\estilosEmple.css" />
@@ -172,6 +174,8 @@
     <Content Include="Presentacion\recursos\js\main.js" />
     <Content Include="Presentacion\recursos\js\sb-admin-2.js" />
     <Content Include="Presentacion\recursos\js\sb-admin-2.min.js" />
+    <Content Include="Presentacion\recursos\js\sugerenciasJs.js" />
+    <Content Include="Presentacion\recursos\js\tablaJs.js" />
     <Content Include="Presentacion\recursos\vendor\datatables\dataTables.bootstrap4.css" />
     <Content Include="Presentacion\recursos\vendor\datatables\dataTables.bootstrap4.js" />
     <Content Include="Presentacion\recursos\vendor\datatables\dataTables.bootstrap4.min.css" />
@@ -264,6 +268,7 @@
     <Compile Include="Datos\clConexion.cs" />
     <Compile Include="Datos\clEmpleadoD.cs" />
     <Compile Include="Datos\clProductoD.cs" />
+    <Compile Include="Datos\clSugerenciasD.cs" />
     <Compile Include="Datos\clUserDao.cs" />
     <Compile Include="Datos\clUsuarioD.cs" />
     <Compile Include="Datos\clVentaD.cs" />
@@ -273,6 +278,7 @@
     <Compile Include="Entidades\clEmpleadoE.cs" />
     <Compile Include="Entidades\clProductoE.cs" />
     <Compile Include="Entidades\clSeguridadE.cs" />
+    <Compile Include="Entidades\clSugerenciasE.cs" />
     <Compile Include="Entidades\clUsuarioE.cs" />
     <Compile Include="Entidades\clVentaE.cs" />
     <Compile Include="index.aspx.cs">
@@ -286,6 +292,7 @@
     <Compile Include="Logica\clEmpleadoL.cs" />
     <Compile Include="Logica\clBalanceL.cs" />
     <Compile Include="Logica\clProductoL.cs" />
+    <Compile Include="Logica\clSugerenciasL.cs" />
     <Compile Include="Logica\clUsuarioL.cs" />
     <Compile Include="Logica\clCarritoL.cs" />
     <Compile Include="MailServices1\MasterMailServer.cs" />
@@ -297,6 +304,13 @@
     </Compile>
     <Compile Include="Presentacion\frmAbout.aspx.designer.cs">
       <DependentUpon>frmAbout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmAdminProductos.aspx.cs">
+      <DependentUpon>frmAdminProductos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmAdminProductos.aspx.designer.cs">
+      <DependentUpon>frmAdminProductos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmbalance.aspx.cs">
       <DependentUpon>frmbalance.aspx</DependentUpon>
@@ -381,6 +395,13 @@
     </Compile>
     <Compile Include="Presentacion\frmRegistrar.aspx.designer.cs">
       <DependentUpon>frmRegistrar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmSugerencias.aspx.cs">
+      <DependentUpon>frmSugerencias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmSugerencias.aspx.designer.cs">
+      <DependentUpon>frmSugerencias.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmVenta.aspx.cs">
       <DependentUpon>frmVenta.aspx</DependentUpon>

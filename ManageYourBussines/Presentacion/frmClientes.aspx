@@ -5,11 +5,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <form runat="server">
-        <div class="container-fluid">
-            <h1>Lista de Clientes</h1>
-            <div class="card shadow mb-4">
+       
                 <%--PAOLA: creo la tabla donde mostramos los datos del cliente --%>
-                <div class="card-body">
+          -     <div class="card-body">
                     <div class="table-responsive">
 
                         <table class=" table table-bordered table-dark" id="dtCliente" width="100%" cellsapcing="0">
@@ -81,7 +79,12 @@
             </div>
         </div>
         <%--PAOLA: modal ver detalles FIN --%>
+
+      
+
+
     </form>
+
 
     <script src="recursos/js/jquery-3.4.1.min.js"></script>
     <script src="recursos/js/JavaClientes.js"></script>
