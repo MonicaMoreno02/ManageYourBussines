@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Web;
-using static ManageYourBussines.Datos.ClConexion;
+using static ManageYourBussines.Datos.clConexion;
 
 namespace ManageYourBussines.Datos
 {
@@ -24,7 +24,7 @@ namespace ManageYourBussines.Datos
                 sql = "select * from venta  where fechaVenta  BETWEEN '" + fec1 + "' and '" + fec2 + "'";
 
             }
-            clConexion objConexion = new clConexion();
+            clConexion.clConexion objConexion = new clConexion.clConexion();
             DataTable tblBalance = new DataTable();
             tblBalance = objConexion.mtdDesconectado(sql);
 
@@ -50,7 +50,7 @@ namespace ManageYourBussines.Datos
         public List<clBalanceE> mtdListarDeta(clBalanceE objdetalles)
         {
             string sql = "select * from detallesVenta where idVenta=" + objdetalles.idventa;
-            clConexion objConexion = new clConexion();
+            clConexion.clConexion objConexion = new clConexion.clConexion();
             DataTable tblBalance = new DataTable();
             tblBalance = objConexion.mtdDesconectado(sql);
 
@@ -76,7 +76,7 @@ namespace ManageYourBussines.Datos
         public List<clBalanceE> mtdListarBal()
         {
             string sql = "select * from venta inner join detallesVenta on venta.idVenta=detallesVenta.idVenta inner join producto on detallesVenta.idProducto=producto.idProducto";
-            clConexion objConexion = new clConexion();
+            clConexion.clConexion objConexion = new clConexion.clConexion();
             DataTable tblBalance = new DataTable();
             tblBalance = objConexion.mtdDesconectado(sql);
 

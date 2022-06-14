@@ -10,7 +10,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using static ManageYourBussines.Datos.ClConexion;
+using static ManageYourBussines.Datos.clConexion;
 
 namespace ManageYourBussines
 {

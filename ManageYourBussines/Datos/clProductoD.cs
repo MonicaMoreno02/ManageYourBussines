@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Web;
-using static ManageYourBussines.Datos.ClConexion;
+using static ManageYourBussines.Datos.clConexion;
 
 namespace ManageYourBussines.Datos
 {
@@ -16,7 +16,7 @@ namespace ManageYourBussines.Datos
         public List<clProductoE> mtdListar()
         {
             string sql = "SELECT * FROM producto WHERE idProducto <= 12; ";
-            clConexion objConexion = new clConexion();
+            clConexion.clConexion objConexion = new clConexion.clConexion();
             DataTable tblProducto = new DataTable();
             tblProducto = objConexion.mtdDesconectado(sql);
 
@@ -50,7 +50,7 @@ namespace ManageYourBussines.Datos
         public List<clProductoE> mtdListarDetalles(clProductoE objdatos)
         {
             string sql = "select * from producto where idProducto ="+objdatos.idProducto+"";
-            clConexion objConexion = new clConexion();
+            clConexion.clConexion objConexion = new clConexion.clConexion();
             DataTable tblProducto = new DataTable();
             tblProducto = objConexion.mtdDesconectado(sql);
 
@@ -81,7 +81,7 @@ namespace ManageYourBussines.Datos
         public List<clProductoE> mtdList(clProductoE objproductos)
         {
             string sql = "select * from producto where idProducto =" + objproductos.idProducto + "";
-            clConexion objConexion = new clConexion();
+            clConexion.clConexion objConexion = new clConexion.clConexion();
             DataTable tblProducto = new DataTable();
             tblProducto = objConexion.mtdDesconectado(sql);
 
@@ -110,7 +110,7 @@ namespace ManageYourBussines.Datos
         public List<clProductoE> mtdListarProducto()
         {
             string sql = "SELECT * FROM producto ";
-            clConexion objConexion = new clConexion();
+            clConexion.clConexion objConexion = new clConexion.clConexion();
             DataTable tblProducto = new DataTable();
             tblProducto = objConexion.mtdDesconectado(sql);
 

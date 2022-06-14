@@ -7,7 +7,7 @@ using System.Web;
 
 namespace ManageYourBussines.Datos
 {
-    public class ClConexion
+    public class clConexion
     {
         public class clConexion
         {

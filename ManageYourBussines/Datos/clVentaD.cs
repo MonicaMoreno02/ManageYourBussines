@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Web;
-using static ManageYourBussines.Datos.ClConexion;
+using static ManageYourBussines.Datos.clConexion;
 
 namespace ManageYourBussines.Datos
 {
@@ -13,7 +13,7 @@ namespace ManageYourBussines.Datos
         public List<clVentaE> mtdListarVenta(clVentaE objfactura)
         {
             string sql = "select * from venta inner join detallesVenta on venta.idVenta=detallesVenta.idVenta inner join producto on detallesVenta.idProducto = producto.idProducto where (idCliente=" + objfactura.idCliente + ") and(codigoVenta = '" + objfactura.codigoVenta + "')";
-            clConexion objConexion = new clConexion();
+            clConexion.clConexion objConexion = new clConexion.clConexion();
             DataTable tblVenta = new DataTable();
             tblVenta = objConexion.mtdDesconectado(sql);
 
@@ -47,14 +47,14 @@ namespace ManageYourBussines.Datos
                 "  values('" + objDatosV.fechaVen + "','" + objDatosV.codigoVenta + "'," + objDatosV.valorTotal + "," + objDatosV.idCliente + ")";
 
 
-            clConexion objConexion = new clConexion();
+            clConexion.clConexion objConexion = new clConexion.clConexion();
             int resutado = objConexion.mtdConectado(sql);
             //return resutado;
 
             sql = "";
 
             sql = " select IDENT_CURRENT('Venta')";
-            clConexion objConexion1 = new clConexion();
+            clConexion.clConexion objConexion1 = new clConexion.clConexion();
             DataTable tblVenta = new DataTable();
             tblVenta = objConexion1.mtdDesconectado(sql);
 
@@ -74,17 +74,17 @@ namespace ManageYourBussines.Datos
                 "  values(" + objDatosV.idVenta + "," + objDatosV.idProducto + "," + objDatosV.cantidad + "," + objDatosV.valorTotal + ")";
 
 
-            clConexion objConexion = new clConexion();
+            clConexion.clConexion objConexion = new clConexion.clConexion();
             int resutado = objConexion.mtdConectado(sql);
             return resutado;
         }
         public int mtdElim(clVentaE objDatosV)
         {
             string sql = "delete carrito where idCliente=" + objDatosV.idCliente;
-              
 
 
-            clConexion objConexion = new clConexion();
+
+            clConexion.clConexion objConexion = new clConexion.clConexion();
             int resutado = objConexion.mtdConectado(sql);
             return resutado;
         }

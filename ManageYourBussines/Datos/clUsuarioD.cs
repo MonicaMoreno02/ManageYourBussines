@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Web;
-using static ManageYourBussines.Datos.ClConexion;
+using static ManageYourBussines.Datos.clConexion;
 
 namespace ManageYourBussines.Datos
 {
@@ -13,7 +13,7 @@ namespace ManageYourBussines.Datos
         public clUsuarioE mtdLogin(clUsuarioE objDatos)
         {
             string consulta = "select * from  cliente  where emailCliente='" + objDatos.email + "' and claveCliente='" + objDatos.clave + "'";
-            clConexion objConexion = new clConexion();
+            clConexion.clConexion objConexion = new clConexion.clConexion();
             DataTable tblDatos = new DataTable();
             tblDatos = objConexion.mtdDesconectado(consulta);
             clUsuarioE objDatosCliente = new clUsuarioE();
@@ -43,7 +43,7 @@ namespace ManageYourBussines.Datos
             string sql = "insert into cliente(documento,nombreCliente,apellidos,telefono,direccion,email,clave)" +
                 "values ('" + objDatosCliente.documento + "' ,'" + objDatosCliente.nombreCliente + "','" + objDatosCliente.apellidos + "','" + objDatosCliente.telefono + "','" + objDatosCliente.direccion + "','" + objDatosCliente.email + "' ,'" + objDatosCliente.clave + "')";
 
-            clConexion objConexion = new clConexion();
+            clConexion.clConexion objConexion = new clConexion.clConexion();
 
             int resulatdo = objConexion.mtdConectado(sql);
             return resulatdo;

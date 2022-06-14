@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Web;
-using static ManageYourBussines.Datos.ClConexion;
+using static ManageYourBussines.Datos.clConexion;
 
 namespace ManageYourBussines.Datos
 {
@@ -15,7 +15,7 @@ namespace ManageYourBussines.Datos
         public List<clUsuarioE> mtdListarD()
         {
             string sql = "select * from cliente";
-            clConexion objConexion = new clConexion();
+            clConexion.clConexion objConexion = new clConexion.clConexion();
             DataTable tblCliente = new DataTable();
             tblCliente = objConexion.mtdDesconectado(sql);
 
@@ -50,7 +50,7 @@ namespace ManageYourBussines.Datos
                 " from cliente inner join venta on cliente.idCliente = venta.idCliente inner join empleado on venta.idEmpleado = empleado.idEmpleado" + 
                 " inner join detallesVenta on detallesVenta.idVenta = venta.idVenta"+
                 " inner join producto on producto.idProducto = detallesVenta.idProducto where cliente.idCliente="+idCliente+"";
-            clConexion objConexion = new clConexion();
+            clConexion.clConexion objConexion = new clConexion.clConexion();
             DataTable tblDetallesVenta = new DataTable();
             tblDetallesVenta = objConexion.mtdDesconectado(sql);
 

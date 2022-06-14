@@ -265,6 +265,7 @@
     <Compile Include="Datos\clClienteD.cs" />
     <Compile Include="Datos\clConexion.cs" />
     <Compile Include="Datos\clEmpleadoD.cs" />
+    <Compile Include="Datos\clEmpleDao.cs" />
     <Compile Include="Datos\clProductoD.cs" />
     <Compile Include="Datos\clUserDao.cs" />
     <Compile Include="Datos\clUsuarioD.cs" />
