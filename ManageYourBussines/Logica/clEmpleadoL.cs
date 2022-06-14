@@ -27,8 +27,8 @@ namespace ManageYourBussines.Logica
 
         public clEmpleadoE recoverPassword(clEmpleadoE empleRequesting)
         {
-            clEmpleDao userDao = new clEmpleDao();
-            return userDao.recoverPassword(empleRequesting);
+            clEmpleDao clEmpleDao = new clEmpleDao();
+            return clEmpleDao.recoverPassword(empleRequesting);
         }
 
 

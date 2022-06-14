@@ -35,7 +35,7 @@ namespace ManageYourBussines
                    );
 
 
-                //ScriptManager.RegisterClientScriptBlock(this.Page, this.GetType(), "AlertaLoginContrasenia", "window.onload = function(){ alert('se envio su contrasena a su correo .'); };", true);
+                ScriptManager.RegisterClientScriptBlock(this.Page, this.GetType(), "AlertaLoginContrasenia", "window.onload = function(){ alert('se envio su contrasena a su correo .'); };", true);
                 Response.Redirect("index.aspx");
 
             }
