@@ -82,6 +82,21 @@
   <ItemGroup>
     <Content Include="index.aspx" />
     <Content Include="loginEmpleado.aspx" />
+    <Content Include="plantilla 2\css\style.css" />
+    <Content Include="plantilla 2\fonts\material-icon\css\material-design-iconic-font.css" />
+    <Content Include="plantilla 2\fonts\material-icon\css\material-design-iconic-font.min.css" />
+    <Content Include="plantilla 2\fonts\material-icon\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="plantilla 2\fonts\roboto-slab\roboto-slab-v7-latin-300.svg" />
+    <Content Include="plantilla 2\fonts\roboto-slab\roboto-slab-v7-latin-700.svg" />
+    <Content Include="plantilla 2\fonts\roboto-slab\roboto-slab-v7-latin-regular.svg" />
+    <Content Include="plantilla 2\images\body-bg.jpg" />
+    <Content Include="plantilla 2\images\fondo.jpg" />
+    <Content Include="plantilla 2\images\form-img.jpg" />
+    <Content Include="plantilla 2\index.html" />
+    <Content Include="plantilla 2\js\main.js" />
+    <Content Include="plantilla 2\readme.txt" />
+    <Content Include="plantilla 2\vendor\jquery\jquery-ui.min.js" />
+    <Content Include="plantilla 2\vendor\jquery\jquery.min.js" />
     <Content Include="Presentacion\frmAbout.aspx" />
     <Content Include="Presentacion\frmbalance.aspx" />
     <Content Include="Presentacion\frmcarrito.aspx" />
@@ -95,6 +110,7 @@
     <Content Include="Presentacion\frmEstadisticas.aspx" />
     <Content Include="Presentacion\frmProductos2.aspx" />
     <Content Include="Presentacion\frmRegistrar.aspx" />
+    <Content Include="Presentacion\frmVendedor.aspx" />
     <Content Include="Presentacion\frmVenta.aspx" />
     <Content Include="Presentacion\recursos\css\bootstrap.css" />
     <Content Include="Presentacion\recursos\css\estilosEmple.css" />
@@ -392,6 +408,13 @@
     <Compile Include="Presentacion\frmRegistrar.aspx.designer.cs">
       <DependentUpon>frmRegistrar.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\frmVendedor.aspx.cs">
+      <DependentUpon>frmVendedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmVendedor.aspx.designer.cs">
+      <DependentUpon>frmVendedor.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\frmVenta.aspx.cs">
       <DependentUpon>frmVenta.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -435,6 +458,8 @@
     <Compile Include="recuperarEmple.aspx.designer.cs">
       <DependentUpon>recuperarEmple.aspx</DependentUpon>
     </Compile>
+    <Compile Include="servicioEmail\MasterServicoMail.cs" />
+    <Compile Include="servicioEmail\systemSupportMail.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -482,6 +507,63 @@
     <Content Include="Presentacion\recursos\vendor\mdi-font\fonts\Material-Design-Iconic-Font.ttf" />
     <Content Include="Presentacion\recursos\vendor\mdi-font\fonts\Material-Design-Iconic-Font.woff" />
     <Content Include="Presentacion\recursos\vendor\mdi-font\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="plantilla 2\.sass-cache\0717b98c6a6bd391fb4f8df76acf1fcea07f5d98\style.scssc" />
+    <Content Include="plantilla 2\.sass-cache\21880c0ffe15753a53f8402e9f64e1077e071510\style.scssc" />
+    <Content Include="plantilla 2\.sass-cache\25faf4a967da51e59251c020bd6e9fa9d1fb23e3\extend.scssc" />
+    <Content Include="plantilla 2\.sass-cache\25faf4a967da51e59251c020bd6e9fa9d1fb23e3\fonts.scssc" />
+    <Content Include="plantilla 2\.sass-cache\25faf4a967da51e59251c020bd6e9fa9d1fb23e3\global.scssc" />
+    <Content Include="plantilla 2\.sass-cache\25faf4a967da51e59251c020bd6e9fa9d1fb23e3\minxi.scssc" />
+    <Content Include="plantilla 2\.sass-cache\25faf4a967da51e59251c020bd6e9fa9d1fb23e3\variables.scssc" />
+    <Content Include="plantilla 2\.sass-cache\2866be86c578bb583fbf023501bb9fd24cc3bf22\extend.scssc" />
+    <Content Include="plantilla 2\.sass-cache\2866be86c578bb583fbf023501bb9fd24cc3bf22\fonts.scssc" />
+    <Content Include="plantilla 2\.sass-cache\2866be86c578bb583fbf023501bb9fd24cc3bf22\global.scssc" />
+    <Content Include="plantilla 2\.sass-cache\2866be86c578bb583fbf023501bb9fd24cc3bf22\minxi.scssc" />
+    <Content Include="plantilla 2\.sass-cache\2866be86c578bb583fbf023501bb9fd24cc3bf22\variables.scssc" />
+    <Content Include="plantilla 2\.sass-cache\3948936f84e1a30385e73a9be140b58b48c82e15\style.scssc" />
+    <Content Include="plantilla 2\.sass-cache\643489b018602f15119d8f44aeb7fc79468873a9\main.scssc" />
+    <Content Include="plantilla 2\.sass-cache\643489b018602f15119d8f44aeb7fc79468873a9\responsive.scssc" />
+    <Content Include="plantilla 2\.sass-cache\7643c8aa2e335ff5e104bc47d8dd7f1a0693bb39\extend.scssc" />
+    <Content Include="plantilla 2\.sass-cache\7643c8aa2e335ff5e104bc47d8dd7f1a0693bb39\fonts.scssc" />
+    <Content Include="plantilla 2\.sass-cache\7643c8aa2e335ff5e104bc47d8dd7f1a0693bb39\global.scssc" />
+    <Content Include="plantilla 2\.sass-cache\7643c8aa2e335ff5e104bc47d8dd7f1a0693bb39\minxi.scssc" />
+    <Content Include="plantilla 2\.sass-cache\7643c8aa2e335ff5e104bc47d8dd7f1a0693bb39\variables.scssc" />
+    <Content Include="plantilla 2\.sass-cache\9dc767a56f3dc2f8a933300255cd2265f13191d4\main.scssc" />
+    <Content Include="plantilla 2\.sass-cache\9dc767a56f3dc2f8a933300255cd2265f13191d4\responsive.scssc" />
+    <Content Include="plantilla 2\.sass-cache\c36f88b26093e3516ab62f7245605adc5c11410b\main.scssc" />
+    <Content Include="plantilla 2\.sass-cache\c36f88b26093e3516ab62f7245605adc5c11410b\responsive.scssc" />
+    <Content Include="plantilla 2\.sass-cache\cec26e9170155d08bca7be48ab33ee76eb89985a\style.scssc" />
+    <Content Include="plantilla 2\.sass-cache\de43089b9300c63e94c69b4ea0269a5b0e6e6a33\main.scssc" />
+    <Content Include="plantilla 2\.sass-cache\de43089b9300c63e94c69b4ea0269a5b0e6e6a33\responsive.scssc" />
+    <Content Include="plantilla 2\.sass-cache\f71149907399ab955d3d70a25ac6bfed8a6004f4\extend.scssc" />
+    <Content Include="plantilla 2\.sass-cache\f71149907399ab955d3d70a25ac6bfed8a6004f4\fonts.scssc" />
+    <Content Include="plantilla 2\.sass-cache\f71149907399ab955d3d70a25ac6bfed8a6004f4\global.scssc" />
+    <Content Include="plantilla 2\.sass-cache\f71149907399ab955d3d70a25ac6bfed8a6004f4\minxi.scssc" />
+    <Content Include="plantilla 2\.sass-cache\f71149907399ab955d3d70a25ac6bfed8a6004f4\variables.scssc" />
+    <Content Include="plantilla 2\css\style.css.map" />
+    <Content Include="plantilla 2\fonts\material-icon\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="plantilla 2\fonts\material-icon\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="plantilla 2\fonts\material-icon\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="plantilla 2\fonts\material-icon\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="plantilla 2\fonts\roboto-slab\roboto-slab-v7-latin-300.eot" />
+    <Content Include="plantilla 2\fonts\roboto-slab\roboto-slab-v7-latin-300.ttf" />
+    <Content Include="plantilla 2\fonts\roboto-slab\roboto-slab-v7-latin-300.woff" />
+    <Content Include="plantilla 2\fonts\roboto-slab\roboto-slab-v7-latin-300.woff2" />
+    <Content Include="plantilla 2\fonts\roboto-slab\roboto-slab-v7-latin-700.eot" />
+    <Content Include="plantilla 2\fonts\roboto-slab\roboto-slab-v7-latin-700.ttf" />
+    <Content Include="plantilla 2\fonts\roboto-slab\roboto-slab-v7-latin-700.woff" />
+    <Content Include="plantilla 2\fonts\roboto-slab\roboto-slab-v7-latin-700.woff2" />
+    <Content Include="plantilla 2\fonts\roboto-slab\roboto-slab-v7-latin-regular.eot" />
+    <Content Include="plantilla 2\fonts\roboto-slab\roboto-slab-v7-latin-regular.ttf" />
+    <Content Include="plantilla 2\fonts\roboto-slab\roboto-slab-v7-latin-regular.woff" />
+    <Content Include="plantilla 2\fonts\roboto-slab\roboto-slab-v7-latin-regular.woff2" />
+    <Content Include="plantilla 2\scss\common\extend.scss" />
+    <Content Include="plantilla 2\scss\common\fonts.scss" />
+    <Content Include="plantilla 2\scss\common\global.scss" />
+    <Content Include="plantilla 2\scss\common\minxi.scss" />
+    <Content Include="plantilla 2\scss\common\variables.scss" />
+    <Content Include="plantilla 2\scss\layouts\main.scss" />
+    <Content Include="plantilla 2\scss\layouts\responsive.scss" />
+    <Content Include="plantilla 2\scss\style.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

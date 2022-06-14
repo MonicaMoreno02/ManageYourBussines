@@ -8,7 +8,7 @@ using static ManageYourBussines.Datos.clConexion;
 
 namespace ManageYourBussines.Datos
 {
-    public class clUserDao: clConexion.clConexion
+    public class clUserDao: clConexion
     {
         public clUsuarioE recoverPassword(clUsuarioE userRequesting)
         {

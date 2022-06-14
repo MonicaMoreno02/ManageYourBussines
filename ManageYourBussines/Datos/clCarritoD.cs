@@ -20,7 +20,7 @@ namespace ManageYourBussines.Datos
                   "'" + objDatosCarrito.catidad + "','" + objDatosCarrito.Imagen + "'," +
               "'" + objDatosCarrito.idcliente + "')";
 
-            clConexion.clConexion objConexion = new clConexion.clConexion();
+            clConexion objConexion = new clConexion();
             int resutado = objConexion.mtdConectado(sql);
             return resutado;
 
@@ -29,7 +29,7 @@ namespace ManageYourBussines.Datos
         {
             int numer = 2;
             string sql = "select count(*) from carrito where idcliente=" + objDatosPro.idcliente;
-            clConexion.clConexion objConexion = new clConexion.clConexion();
+            clConexion objConexion = new clConexion();
             DataTable tblCAR = new DataTable();
             tblCAR = objConexion.mtdDesconectado(sql);
 
@@ -55,7 +55,7 @@ namespace ManageYourBussines.Datos
         {
             int numer = 2;
             string sql = " select count(*) carrito from carrito where idcliente =" + objDatosPro.idcliente + "and  idproducto=" + objDatosPro.idproducto;
-            clConexion.clConexion objConexion = new clConexion.clConexion();
+            clConexion objConexion = new clConexion();
             DataTable tblCAR = new DataTable();
             tblCAR = objConexion.mtdDesconectado(sql);
 
@@ -80,7 +80,7 @@ namespace ManageYourBussines.Datos
         public List<clCarritoE> mtdListar(clCarritoE objDatosCli)
         {
             string sql = "select * from carrito where idCliente="+objDatosCli.idcliente;
-            clConexion.clConexion objConexion = new clConexion.clConexion();
+            clConexion objConexion = new clConexion();
             DataTable tblCarrito = new DataTable();
             tblCarrito = objConexion.mtdDesconectado(sql);
 
@@ -116,7 +116,7 @@ namespace ManageYourBussines.Datos
             string sql = "DELETE FROM  carrito where (idproducto = " + objDatoscar.idproducto + ")and idcliente =(" + objDatoscar.idcliente + ")";
 
 
-            clConexion.clConexion objConexion = new clConexion.clConexion();
+            clConexion objConexion = new clConexion();
             int resutado = objConexion.mtdConectado(sql);
             return resutado;
         }
@@ -128,7 +128,7 @@ namespace ManageYourBussines.Datos
 
 
 
-            clConexion.clConexion objConexion = new clConexion.clConexion();
+            clConexion objConexion = new clConexion();
             int resutado = objConexion.mtdConectado(sql);
             return resutado;
         }

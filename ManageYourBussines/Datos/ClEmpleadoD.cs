@@ -15,7 +15,7 @@ namespace ManageYourBussines.Datos
         {
 
             string consulta = "select * from  empleado  where email='" + objDatos.email+ "' and clave='" + objDatos.clave + "'";
-            clConexion.clConexion objConexion = new clConexion.clConexion();
+            clConexion objConexion = new clConexion();
             DataTable tblDatos = new DataTable();
             tblDatos = objConexion.mtdDesconectado(consulta);
             clEmpleadoE objDatosEmple = new clEmpleadoE();
@@ -56,7 +56,7 @@ namespace ManageYourBussines.Datos
         {
          
             string sql = "select * from empleado";
-            clConexion.clConexion objConexion = new clConexion.clConexion();
+            clConexion objConexion = new clConexion ();
             DataTable tblEmpleados = new DataTable();
             tblEmpleados = objConexion.mtdDesconectado(sql);
 
@@ -73,8 +73,8 @@ namespace ManageYourBussines.Datos
                 objEmpleado.nombreEmpleado = tblEmpleados.Rows[i]["nombreEmpleado"].ToString();
                 objEmpleado.apellidos = tblEmpleados.Rows[i]["apellidos"].ToString();
                 objEmpleado.tipoEmpleado = tblEmpleados.Rows[i]["TipoEmpleado"].ToString();
-                objEmpleado.email = tblEmpleados.Rows[i]["emailEmpleado"].ToString();
-                objEmpleado.clave = tblEmpleados.Rows[i]["claveEmpleado"].ToString();
+                objEmpleado.email = tblEmpleados.Rows[i]["email"].ToString();
+                objEmpleado.clave = tblEmpleados.Rows[i]["clave"].ToString();
 
                 ListaEmpleados.Add(objEmpleado);
             }
@@ -91,7 +91,7 @@ namespace ManageYourBussines.Datos
                 ",'" + objDatosEmpleados.apellidos + "','" + objDatosEmpleados.tipoEmpleado + "'," +
                 "'" + objDatosEmpleados.email + "','" + objDatosEmpleados.clave + "')";
 
-            clConexion.clConexion objConexion = new clConexion.clConexion();
+            clConexion objConexion = new clConexion();
             int resultado = objConexion.mtdConectado(sql);
 
             return resultado;
@@ -103,7 +103,7 @@ namespace ManageYourBussines.Datos
                 "apellidos='" + objDatos.apellidos + "',tipoEmpleado='" + objDatos.tipoEmpleado + "',emailEmpleado='" + objDatos.email + "',claveEmpleado='" +
                 objDatos.clave + "' where idEmpleado=" + objDatos.idEmpleado +  "";
 
-            clConexion.clConexion objConexion = new clConexion.clConexion();
+            clConexion objConexion = new clConexion();
             int result = objConexion.mtdConectado(sql);
             return result;
         }
@@ -113,7 +113,7 @@ namespace ManageYourBussines.Datos
         {
             string sql = "delete from empleado where idEmpleado=" + idEmpleado + "";
 
-            clConexion.clConexion objConexion = new clConexion.clConexion();
+            clConexion objConexion = new clConexion();
             int result = objConexion.mtdConectado(sql);
             return result;
         }
@@ -122,7 +122,7 @@ namespace ManageYourBussines.Datos
         {
 
             string sql = "select * from seguridadSocial";
-            clConexion.clConexion objConexion = new clConexion.clConexion();
+            clConexion objConexion = new clConexion();
             DataTable tblSeguridad = new DataTable();
             tblSeguridad = objConexion.mtdDesconectado(sql);
 

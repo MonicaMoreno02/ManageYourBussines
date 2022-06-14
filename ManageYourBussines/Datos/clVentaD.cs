@@ -13,7 +13,7 @@ namespace ManageYourBussines.Datos
         public List<clVentaE> mtdListarVenta(clVentaE objfactura)
         {
             string sql = "select * from venta inner join detallesVenta on venta.idVenta=detallesVenta.idVenta inner join producto on detallesVenta.idProducto = producto.idProducto where (idCliente=" + objfactura.idCliente + ") and(codigoVenta = '" + objfactura.codigoVenta + "')";
-            clConexion.clConexion objConexion = new clConexion.clConexion();
+            clConexion objConexion = new clConexion();
             DataTable tblVenta = new DataTable();
             tblVenta = objConexion.mtdDesconectado(sql);
 
@@ -47,14 +47,14 @@ namespace ManageYourBussines.Datos
                 "  values('" + objDatosV.fechaVen + "','" + objDatosV.codigoVenta + "'," + objDatosV.valorTotal + "," + objDatosV.idCliente + ")";
 
 
-            clConexion.clConexion objConexion = new clConexion.clConexion();
+            clConexion objConexion = new clConexion();
             int resutado = objConexion.mtdConectado(sql);
             //return resutado;
 
             sql = "";
 
             sql = " select IDENT_CURRENT('Venta')";
-            clConexion.clConexion objConexion1 = new clConexion.clConexion();
+            clConexion objConexion1 = new clConexion();
             DataTable tblVenta = new DataTable();
             tblVenta = objConexion1.mtdDesconectado(sql);
 
@@ -74,7 +74,7 @@ namespace ManageYourBussines.Datos
                 "  values(" + objDatosV.idVenta + "," + objDatosV.idProducto + "," + objDatosV.cantidad + "," + objDatosV.valorTotal + ")";
 
 
-            clConexion.clConexion objConexion = new clConexion.clConexion();
+            clConexion objConexion = new clConexion();
             int resutado = objConexion.mtdConectado(sql);
             return resutado;
         }
@@ -84,7 +84,7 @@ namespace ManageYourBussines.Datos
 
 
 
-            clConexion.clConexion objConexion = new clConexion.clConexion();
+            clConexion objConexion = new clConexion();
             int resutado = objConexion.mtdConectado(sql);
             return resutado;
         }
