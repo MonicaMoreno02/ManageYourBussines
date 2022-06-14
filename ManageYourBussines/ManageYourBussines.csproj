@@ -81,6 +81,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.aspx" />
+    <Content Include="loginEmpleado.aspx" />
     <Content Include="Presentacion\frmAbout.aspx" />
     <Content Include="Presentacion\frmbalance.aspx" />
     <Content Include="Presentacion\frmcarrito.aspx" />
@@ -194,6 +195,7 @@
     <Content Include="Presentacion\recursos\vendor\select2\select2.min.css" />
     <Content Include="Presentacion\recursos\vendor\select2\select2.min.js" />
     <Content Include="recuperar.aspx" />
+    <Content Include="recuperarEmple.aspx" />
     <Content Include="recursos\css\bootstrap.css" />
     <Content Include="recursos\css\font-awesome.min.css" />
     <Content Include="Presentacion\recursos\css\main.css" />
@@ -288,6 +290,13 @@
     <Compile Include="Logica\clProductoL.cs" />
     <Compile Include="Logica\clUsuarioL.cs" />
     <Compile Include="Logica\clCarritoL.cs" />
+    <Compile Include="loginEmpleado.aspx.cs">
+      <DependentUpon>loginEmpleado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="loginEmpleado.aspx.designer.cs">
+      <DependentUpon>loginEmpleado.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MailServices1\MasterMailServer.cs" />
     <Compile Include="MailServices1\systemSupportMail.cs" />
     <Compile Include="Logica\clVentaL.cs" />
@@ -417,6 +426,13 @@
     </Compile>
     <Compile Include="recuperar.aspx.designer.cs">
       <DependentUpon>recuperar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="recuperarEmple.aspx.cs">
+      <DependentUpon>recuperarEmple.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="recuperarEmple.aspx.designer.cs">
+      <DependentUpon>recuperarEmple.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

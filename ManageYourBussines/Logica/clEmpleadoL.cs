@@ -7,8 +7,33 @@ using System.Web;
 
 namespace ManageYourBussines.Logica
 {
+
     public class clEmpleadoL
     {
+
+        //metodo de recuperacion de contraseña del empleado y metodo de el login del empleado
+
+        public clEmpleadoE mtdLogin(clEmpleadoE objDatos)
+        {
+            clEmpleadoD objDatosUsuarios = new clEmpleadoD();
+            clEmpleadoE objDatosEmpleD = new clEmpleadoE();
+
+            objDatosEmpleD = objDatosUsuarios.mtdLogin(objDatos);
+            return objDatosEmpleD;
+
+
+
+        }
+
+        public clEmpleadoE recoverPassword(clEmpleadoE empleRequesting)
+        {
+            clEmpleDao userDao = new clEmpleDao();
+            return userDao.recoverPassword(empleRequesting);
+        }
+
+
+
+
 
         //Metodo para listar los empleados
         public List<clEmpleadoE> mtdListarEmpleadoL()
