@@ -129,10 +129,10 @@
                                                     </div>
                                                 </div>
                                                 <center>
-                                                    <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" CssClass="btn btn-success" onClick="btnIngresar_Click" /></center>
+                                                    <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" CssClass="btn btn-dark" onClick="btnIngresar_Click" /></center>
                                                 <br />
                                                 <center>
-                                                    <asp:Button ID="btnRecuperar" runat="server" Text="Recuperar Contraseña" CssClass="btn btn-success" onClick="btnRecuperar_Click" />
+                                                    <asp:Button ID="btnRecuperar" runat="server" Text="Recuperar Contraseña" CssClass="btn btn-dark" onClick="btnRecuperar_Click" />
                                          
 
 
@@ -140,7 +140,7 @@
 
                                         <!-- Modal footer --->
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                                         </div>
 
                                     </div>
@@ -466,7 +466,7 @@
 				<asp:Literal ID="Imagen" runat="server" /><img src="<%#Eval("imagen") %>" width="200" height="200" /></td></tr><br>
                 <asp:Literal ID="nombre" runat="server" /> <%#Eval("nombre") %><br>
                 <asp:Literal ID="precio" runat="server" />$ <%#Eval("precio") %><br>
-                <asp:Button ID="btnDetalles" runat="server" Text="Detalles:" CssClass="btn btn-success" Onclick="btnDetalles_Click"/>
+                <asp:Button ID="btnDetalles" runat="server" Text="Detalles:" CssClass="btn btn-success" Onclick="btnDetalles_Click1"/>
 			</div>				
 		</ItemTemplate>
 	</asp:Repeater>

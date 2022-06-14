@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Presentacion/Site1.Master" AutoEventWireup="true" CodeBehind="frmAbout.aspx.cs" Inherits="ManageYourBussines.Presentacion.frmAbout" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Presentacion/Site1.Master" AutoEventWireup="true" CodeBehind="frmSobreNosotros.aspx.cs" Inherits="ManageYourBussines.Presentacion.frmAbout" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -178,46 +178,39 @@
     </div>
   </section>
 
-    <center><h1>Creadores de la Pagina</h1></center>
+  <br />
+  <br />
     <div class="container">
 
 <div class="row">
 
 <div class="col-md-4">
 <div class="card">
-<img class="card-img-top" src="../recursos/images/icono-ejecutivo-joven-del-perfil-de-la-mujer-81933530.jpg" alt="Mi Imagen">
 <div class="card-body">
 
-<p class="card-text">Lina Paola Vega Avella</p>
+<p class="card-text">Misión</p>
 
 </div>
 </div>
 </div>
 <div class="col-md-4">
 <div class="card">
-<img class="card-img-top" src="../recursos/images/49c8e403cd1929e9e7b02126824ff831.jpg" alt="Mi Imagen">
+
 <div class="card-body">
 
-<p class="card-text">Cristian Ivan Salcedo Guecha</p>
+<p class="card-text">Visión</p>
 
 </div>
-</div> </div>
-<div class="col-md-4">
-<div class="card">
-<img class="card-img-top" src="../recursos/images/icono-ejecutivo-joven-del-perfil-de-la-mujer-81933191.jpg" alt="Mi Imagen">
-<div class="card-body">
-
-<p class="card-text">Maria Alejandra Alba</p>
+</div> 
 
 </div>
-</div>
+
 
 </div>
 
 </div>
-
-</div>
-
+<br />
+<br />
   <!-- end about section -->
 
   <!-- footer section -->

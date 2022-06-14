@@ -31,7 +31,7 @@
                                 <a class="nav-link" href="frmdetalles.aspx">Productos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="frmAbout.aspx">Sobre Nosotros</a>
+                                <a class="nav-link" href="frmSobreNosotros.aspx">Sobre Nosotros</a>
                             </li>
                              <li class="nav-item">
                                 <a class="nav-link" href="frmContactenos.aspx">Contactenos</a>
@@ -152,7 +152,7 @@
                                             En muebles San José te brindamos lo mejor en ebanistería ya que trabajamos con la mayor calidad usando excelentes materiales como pino, flor morado, cedro, MDF y muchos mas. 
                                         </p>
                                         <div class="btn-box">
-                                            <a href="" class="btn1">Hacer pedido
+                                            <a href="frmdetalles.aspx" class="btn1">Hacer pedido
                                             </a>
                                         </div>
                                     </div>
@@ -171,7 +171,7 @@
                                             Puedes hacer tu pedido desde celular, tablet o laptop, ordenar la cantidad que necesites y con las especificaciones que requieras, para ello puedes comunicarte con nuestros asesores en el CHAT EN VIVO.
                                         </p>
                                         <div class="btn-box">
-                                            <a href="" class="btn1">Hacer pedido
+                                            <a href="frmdetalles.aspx" class="btn1">Hacer pedido
                                             </a>
                                         </div>
                                     </div>
@@ -194,21 +194,12 @@
                                                         </h2>
                                                     </div>
                                                     <p>
-                                                        Fabricamos los muebles y decoración para tu hogar, oficina, exteriores y otros.
-             <br />
-                                                        Diferentes lineas de acabados: 
-             <br />
-                                                        - Linea de muebles rústicos
-             <br />
-                                                        - Linea de moderno
-             <br />
-                                                        -Linea en forja
-            <br />
+                                                        
                                                         Dale un toque diferente a tus lugares, con nuestras alcobas, comedores, salas, muebles auxiliares, muebles de exterior.
        
                                                     </p>
                                                     <div class="btn-box">
-                                                        <a href="" class="btn1">Hacer pedido
+                                                        <a href="frmdetalles.aspx" class="btn1">Hacer pedido
                                                         </a>
                                                     </div>
                                                 </div>

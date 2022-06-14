@@ -28,12 +28,12 @@
   <!-- nice select  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
   <!-- font awesome style -->
-  <link href="recursos/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="../recursos/css/font-awesome.min.css" rel="stylesheet" />
 
   <!-- Custom styles for this template -->
-  <link href="recursos/css/style.css" rel="stylesheet" />
+  <link href="../recursos/css/style.css" rel="stylesheet" />
   <!-- responsive style -->
-  <link href="recursos/css/responsive.css" rel="stylesheet" />
+  <link href="../recursos/css/responsive.css" rel="stylesheet" />
 
 </head>
 
@@ -45,7 +45,7 @@
         <nav class="navbar navbar-expand-lg custom_nav-container ">
           <a class="navbar-brand" href="index.html">
             <span>
-              Feane
+              Muebles San José
             </span>
           </a>
 
@@ -163,7 +163,7 @@
                                <ItemStyle Height="100px" Width="100px" />
                            </asp:ImageField>
                            <asp:BoundField DataField="nombre" HeaderText="nombre" />
-                           <asp:BoundField DataField="describcion" HeaderText="describcion" />
+                           <asp:BoundField DataField="describcion" HeaderText="descripción" />
                            <asp:BoundField DataField="precio" HeaderText="precio" />
                            <asp:BoundField DataField="cantidad" HeaderText="cantidad" />
                            <asp:ButtonField ButtonType="Button" CommandName="aumentar" Text="+"  />

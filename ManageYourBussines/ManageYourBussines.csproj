@@ -80,7 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.aspx" />
-    <Content Include="Presentacion\frmAbout.aspx" />
+    <Content Include="Presentacion\frmSobreNosotros.aspx" />
     <Content Include="Presentacion\frmbalance.aspx" />
     <Content Include="Presentacion\frmcarrito.aspx" />
     <Content Include="Presentacion\frmContactenos.aspx" />
@@ -155,6 +155,7 @@
     <Content Include="recursos\css\responsive.css" />
     <Content Include="recursos\css\style.css" />
     <Content Include="recursos\images\49c8e403cd1929e9e7b02126824ff831.jpg" />
+    <Content Include="recursos\images\cama.jpg" />
     <Content Include="recursos\images\casa.png" />
     <Content Include="recursos\images\icono-ejecutivo-joven-del-perfil-de-la-mujer-81933191.jpg" />
     <Content Include="recursos\images\icono-ejecutivo-joven-del-perfil-de-la-mujer-81933530.jpg" />
@@ -258,12 +259,12 @@
     <Compile Include="MailServices1\MasterMailServer.cs" />
     <Compile Include="MailServices1\systemSupportMail.cs" />
     <Compile Include="Logica\clVentaL.cs" />
-    <Compile Include="Presentacion\frmAbout.aspx.cs">
-      <DependentUpon>frmAbout.aspx</DependentUpon>
+    <Compile Include="Presentacion\frmSobreNosotros.aspx.cs">
+      <DependentUpon>frmSobreNosotros.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Presentacion\frmAbout.aspx.designer.cs">
-      <DependentUpon>frmAbout.aspx</DependentUpon>
+    <Compile Include="Presentacion\frmSobreNosotros.aspx.designer.cs">
+      <DependentUpon>frmSobreNosotros.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmbalance.aspx.cs">
       <DependentUpon>frmbalance.aspx</DependentUpon>

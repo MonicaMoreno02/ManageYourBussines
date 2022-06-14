@@ -392,7 +392,7 @@
     <div class="invalid-feedback">Complete este Campo.</div>--%>
 
   <center>
-                                <asp:Button ID="btnRegistrar" runat="server" Text="Registrarse" cssclass="btn btn-success" OnClick="btnRegistrar_Click" />  <center>
+                                <asp:Button ID="btnRegistrar" runat="server" Text="Registrarse" cssclass="btn btn-dark" OnClick="btnRegistrar_Click" />  <center>
 
                             </div>
                         </div>

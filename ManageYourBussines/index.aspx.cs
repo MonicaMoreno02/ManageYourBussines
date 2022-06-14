@@ -29,10 +29,7 @@ namespace ManageYourBussines
 
         }
 
-        protected void btnDetalles_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("~/Presentacion/frmDetalles.aspx");
-        }
+     
 
         protected void btnIngresar_Click(object sender, EventArgs e)
         {
@@ -70,6 +67,20 @@ namespace ManageYourBussines
         protected void btnRecuperar_Click(object sender, EventArgs e)
         {
             Response.Redirect("Recuperar.aspx");
+        }
+
+        protected void btnDetalles_Click1(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                Response.Redirect("Presentacion/frmdetalles.aspx");
+            }
+            else
+            {
+                //process submitted data;
+            }
+
+            //Response.Redirect("Presentacion/frmdetalles.aspx");
         }
     }
 
