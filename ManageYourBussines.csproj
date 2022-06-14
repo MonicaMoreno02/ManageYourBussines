@@ -44,18 +44,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
-      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
-    </Reference>
-    <Reference Include="GemBox.Spreadsheet, Version=49.0.0.1017, Culture=neutral, PublicKeyToken=b1b72c69714d4847, processorArchitecture=MSIL">
-      <HintPath>..\packages\GemBox.Spreadsheet.49.0.1017\lib\net35\GemBox.Spreadsheet.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="PresentationCore" />
-    <Reference Include="PresentationFramework" />
-    <Reference Include="ReachFramework" />
-    <Reference Include="System.Printing" />
-    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -65,13 +54,10 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
@@ -80,32 +66,23 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.aspx" />
+    <Content Include="Logica\clEmpleadosL.html" />
     <Content Include="Presentacion\frmAbout.aspx" />
-    <Content Include="Presentacion\frmbalance.aspx" />
     <Content Include="Presentacion\frmcarrito.aspx" />
     <Content Include="Presentacion\frmdetalles.aspx" />
+    <Content Include="Presentacion\frmEmpleadoss.aspx" />
     <Content Include="Presentacion\frmHome.aspx" />
-    <Content Include="Presentacion\frmInventario.aspx" />
-    <Content Include="Presentacion\frmNomina.aspx" />
     <Content Include="Presentacion\frmProductos.aspx" />
     <Content Include="Presentacion\frmEstadisticas.aspx" />
-    <Content Include="Presentacion\frmProductos2.aspx" />
-    <Content Include="Presentacion\frmRegistrar.aspx" />
+    <Content Include="Presentacion\FrmRegistro.aspx" />
+    <Content Include="Presentacion\frmTareas.aspx" />
     <Content Include="Presentacion\recursos\css\bootstrap.css" />
     <Content Include="Presentacion\recursos\css\font-awesome.min.css" />
     <Content Include="Presentacion\recursos\css\responsive.css" />
     <Content Include="Presentacion\recursos\css\style.css" />
     <Content Include="Presentacion\recursos\images\about-img.png" />
-    <Content Include="Presentacion\recursos\images\anadir-al-carrito %281%29.png" />
-    <Content Include="Presentacion\recursos\images\base.jpg" />
-    <Content Include="Presentacion\recursos\images\baseg.jpg" />
     <Content Include="Presentacion\recursos\images\biblioteca1.png" />
-    <Content Include="Presentacion\recursos\images\cama.jpg" />
-    <Content Include="Presentacion\recursos\images\carrito-de-compras.png" />
-    <Content Include="Presentacion\recursos\images\comedor.jpeg" />
-    <Content Include="Presentacion\recursos\images\comedor2.jpeg" />
     <Content Include="Presentacion\recursos\images\dinosaurio.png" />
-    <Content Include="Presentacion\recursos\images\elefante.jpg" />
     <Content Include="Presentacion\recursos\images\Escritorio1.png" />
     <Content Include="Presentacion\recursos\images\Escritorio2.png" />
     <Content Include="Presentacion\recursos\images\estante2.png" />
@@ -116,48 +93,32 @@
     <Content Include="Presentacion\recursos\images\icono3.png" />
     <Content Include="Presentacion\recursos\images\iconoEscritorio.png" />
     <Content Include="Presentacion\recursos\images\iconoSofa.png" />
-    <Content Include="Presentacion\recursos\images\icons8-casa-16.png" />
     <Content Include="Presentacion\recursos\images\logo.jpg" />
     <Content Include="Presentacion\recursos\images\logo.png" />
-    <Content Include="Presentacion\recursos\images\matero.jpg" />
-    <Content Include="Presentacion\recursos\images\matero3.jpg" />
     <Content Include="Presentacion\recursos\images\mesaclasica.png" />
     <Content Include="Presentacion\recursos\images\mesadejardin.png" />
     <Content Include="Presentacion\recursos\images\mesamoderna.png" />
     <Content Include="Presentacion\recursos\images\mesaportable.jpeg" />
     <Content Include="Presentacion\recursos\images\organizador.jpeg" />
-    <Content Include="Presentacion\recursos\images\organizador.jpg" />
-    <Content Include="Presentacion\recursos\images\paraguero.jpg" />
     <Content Include="Presentacion\recursos\images\perrito.jpeg" />
-    <Content Include="Presentacion\recursos\images\portacepillos.jpg" />
-    <Content Include="Presentacion\recursos\images\repflotante.jpg" />
     <Content Include="Presentacion\recursos\images\repisa.jpeg" />
-    <Content Include="Presentacion\recursos\images\repisaB.jpg" />
-    <Content Include="Presentacion\recursos\images\repisam.jpg" />
-    <Content Include="Presentacion\recursos\images\repisaN.jpg" />
-    <Content Include="Presentacion\recursos\images\repisaSp.jpg" />
-    <Content Include="Presentacion\recursos\images\sala.jpeg" />
     <Content Include="Presentacion\recursos\images\sillaclasica.png" />
     <Content Include="Presentacion\recursos\images\sillaIcono.png" />
     <Content Include="Presentacion\recursos\images\sillamesedora.png" />
-    <Content Include="Presentacion\recursos\images\sopgamer.jpg" />
     <Content Include="Presentacion\recursos\images\soportelefante.png" />
     <Content Include="Presentacion\recursos\images\Taburetes.png" />
     <Content Include="Presentacion\recursos\js\bootstrap.js" />
     <Content Include="Presentacion\recursos\js\custom.js" />
     <Content Include="Presentacion\recursos\js\jquery-3.4.1.min.js" />
     <Content Include="Presentacion\Recursos\js\datosDatable.js" />
-    <Content Include="recuperar.aspx" />
+    <Content Include="Presentacion\registrarTareas.aspx" />
     <Content Include="recursos\css\bootstrap.css" />
     <Content Include="recursos\css\font-awesome.min.css" />
     <Content Include="recursos\css\responsive.css" />
     <Content Include="recursos\css\style.css" />
-    <Content Include="recursos\images\Imagen1.png" />
     <Content Include="recursos\images\arquilla.jpeg" />
     <Content Include="recursos\images\baseparacelular.jpeg" />
-    <Content Include="Presentacion\recursos\images\butaca.jpg" />
     <Content Include="recursos\images\carretilla.jpeg" />
-    <Content Include="recursos\images\carrito-de-compras.png" />
     <Content Include="recursos\images\decoracion.jpeg" />
     <Content Include="recursos\images\about-img.png" />
     <Content Include="recursos\images\client1.jpg" />
@@ -186,24 +147,16 @@
     <Content Include="recursos\images\fondo5.jpeg" />
     <Content Include="recursos\images\icono3.png" />
     <Content Include="recursos\images\iconoSofa.png" />
-    <Content Include="recursos\images\icons8-casa-48.png">
-      <BrowseToURL>recursos\images\icons8-casa-48.png</BrowseToURL>
-    </Content>
     <Content Include="recursos\images\imagen.jpeg" />
     <Content Include="recursos\images\iconoEscritorio.png" />
-    <Content Include="recursos\images\isla.jpg" />
-    <Content Include="Presentacion\recursos\images\isla2.jpg" />
-    <Content Include="Presentacion\recursos\images\jabonero.jpg" />
     <Content Include="recursos\images\logo.jpg" />
     <Content Include="recursos\images\logo.png" />
-    <Content Include="Presentacion\recursos\images\matero2.jpg" />
     <Content Include="recursos\images\mesaclasica.png" />
     <Content Include="recursos\images\mesadejardin.png" />
     <Content Include="recursos\images\mesamoderna.png" />
-    <Content Include="Presentacion\recursos\images\paticos.jpg" />
+    <Content Include="recursos\images\Nominaaa.jpeg" />
     <Content Include="recursos\images\perrito.jpeg" />
     <Content Include="recursos\images\dinosaurio.png" />
-    <Content Include="Presentacion\recursos\images\puerta.jpg" />
     <Content Include="recursos\images\sillaclasica.png" />
     <Content Include="recursos\images\sillaIcono.png" />
     <Content Include="recursos\images\sillamesedora.png" />
@@ -224,20 +177,27 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Datos\clBalanceD.cs" />
     <Compile Include="Datos\clCarritoD.cs" />
     <Compile Include="Datos\clConexion.cs" />
-    <Compile Include="Datos\clNominaD.cs" />
+    <Compile Include="Datos\clEmpleadoD.cs" />
     <Compile Include="Datos\clProductoD.cs" />
-    <Compile Include="Datos\clUserDao.cs" />
+
+    <Compile Include="Datos\clRegistroD.cs" />
+=======
+    <Compile Include="Datos\clRegistroTareasD.cs" />
+>>>>>>> 8f261e408640d8a56e2d55601d9a649276b7428d
+    <Compile Include="Datos\clTareasD.cs" />
     <Compile Include="Datos\clUsuarioD.cs" />
-    <Compile Include="Datos\clVentaD.cs" />
-    <Compile Include="Entidades\clBalanceE.cs" />
     <Compile Include="Entidades\clCarritoE.cs" />
-    <Compile Include="Entidades\clNominaE.cs" />
+    <Compile Include="Entidades\clEmpleadoE.cs" />
     <Compile Include="Entidades\clProductoE.cs" />
+
+    <Compile Include="Entidades\clRegistroE.cs" />
+=======
+    <Compile Include="Entidades\clRegistrotareasE.cs" />
+>>>>>>> 8f261e408640d8a56e2d55601d9a649276b7428d
+    <Compile Include="Entidades\clTareasE.cs" />
     <Compile Include="Entidades\clUsuarioE.cs" />
-    <Compile Include="Entidades\clVentaE.cs" />
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -245,26 +205,23 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Logica\clBalanceL.cs" />
-    <Compile Include="Logica\clNominaL.cs" />
+    <Compile Include="Logica\ClEmpleadoL.cs" />
     <Compile Include="Logica\clProductoL.cs" />
+
+    <Compile Include="Logica\clRegistroL.cs" />
+=======
+    <Compile Include="Logica\clRegistroTareasL.cs" />
+>>>>>>> 8f261e408640d8a56e2d55601d9a649276b7428d
+    <Compile Include="Logica\clTareasL.cs" />
     <Compile Include="Logica\clUsuarioL.cs" />
     <Compile Include="Logica\clCarritoL.cs" />
-    <Compile Include="MailServices1\MasterMailServer.cs" />
-    <Compile Include="MailServices1\systemSupportMail.cs" />
+    <Compile Include="Presentacion\clEmpleadosL.cs" />
     <Compile Include="Presentacion\frmAbout.aspx.cs">
       <DependentUpon>frmAbout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentacion\frmAbout.aspx.designer.cs">
       <DependentUpon>frmAbout.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Presentacion\frmbalance.aspx.cs">
-      <DependentUpon>frmbalance.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Presentacion\frmbalance.aspx.designer.cs">
-      <DependentUpon>frmbalance.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmcarrito.aspx.cs">
       <DependentUpon>frmcarrito.aspx</DependentUpon>
@@ -280,26 +237,19 @@
     <Compile Include="Presentacion\frmdetalles.aspx.designer.cs">
       <DependentUpon>frmdetalles.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\frmEmpleadoss.aspx.cs">
+      <DependentUpon>frmEmpleadoss.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmEmpleadoss.aspx.designer.cs">
+      <DependentUpon>frmEmpleadoss.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\frmHome.aspx.cs">
       <DependentUpon>frmHome.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentacion\frmHome.aspx.designer.cs">
       <DependentUpon>frmHome.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Presentacion\frmInventario.aspx.cs">
-      <DependentUpon>frmInventario.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Presentacion\frmInventario.aspx.designer.cs">
-      <DependentUpon>frmInventario.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Presentacion\frmNomina.aspx.cs">
-      <DependentUpon>frmNomina.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Presentacion\frmNomina.aspx.designer.cs">
-      <DependentUpon>frmNomina.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmProductos.aspx.cs">
       <DependentUpon>frmProductos.aspx</DependentUpon>
@@ -315,19 +265,26 @@
     <Compile Include="Presentacion\frmEstadisticas.aspx.designer.cs">
       <DependentUpon>frmEstadisticas.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\frmProductos2.aspx.cs">
-      <DependentUpon>frmProductos2.aspx</DependentUpon>
+    <Compile Include="Presentacion\FrmRegistro.aspx.cs">
+      <DependentUpon>FrmRegistro.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Presentacion\frmProductos2.aspx.designer.cs">
-      <DependentUpon>frmProductos2.aspx</DependentUpon>
+    <Compile Include="Presentacion\FrmRegistro.aspx.designer.cs">
+      <DependentUpon>FrmRegistro.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\frmRegistrar.aspx.cs">
-      <DependentUpon>frmRegistrar.aspx</DependentUpon>
+    <Compile Include="Presentacion\frmTareas.aspx.cs">
+      <DependentUpon>frmTareas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Presentacion\frmRegistrar.aspx.designer.cs">
-      <DependentUpon>frmRegistrar.aspx</DependentUpon>
+    <Compile Include="Presentacion\frmTareas.aspx.designer.cs">
+      <DependentUpon>frmTareas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\registrarTareas.aspx.cs">
+      <DependentUpon>registrarTareas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\registrarTareas.aspx.designer.cs">
+      <DependentUpon>registrarTareas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
@@ -337,13 +294,6 @@
       <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="recuperar.aspx.cs">
-      <DependentUpon>recuperar.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="recuperar.aspx.designer.cs">
-      <DependentUpon>recuperar.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -358,6 +308,7 @@
     <Content Include="Presentacion\recursos\fonts\fontawesome-webfont.ttf" />
     <Content Include="Presentacion\recursos\fonts\fontawesome-webfont.woff" />
     <Content Include="Presentacion\recursos\fonts\fontawesome-webfont.woff2" />
+    <Content Include="recursos\images\Nomina.webp" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
