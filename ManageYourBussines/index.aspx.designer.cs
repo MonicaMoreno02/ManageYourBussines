@@ -51,13 +51,13 @@ namespace ManageYourBussines
         protected global::System.Web.UI.WebControls.TextBox txtClave;
 
         /// <summary>
-        /// Control idTipoUsuario.
+        /// Control btnEmpleado.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList idTipoUsuario;
+        protected global::System.Web.UI.WebControls.Button btnEmpleado;
 
         /// <summary>
         /// Control lblMensaje.

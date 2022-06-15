@@ -20,7 +20,7 @@ namespace ManageYourBussines
 
 
             Session["cliente"] = "";
-
+            Session["empleado"] = "";
             Session["EmpleadosVen"] = "";
         }
 

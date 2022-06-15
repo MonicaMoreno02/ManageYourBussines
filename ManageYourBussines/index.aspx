@@ -122,17 +122,19 @@
                               <asp:TextBox ID="txtClave" runat="server" CssClass="form-control" placeholder="password" TextMode="Password"></asp:TextBox>
                               <br />
 
-                              <div class="form-group">
+
+                               <asp:Button ID="btnCliente" runat="server" Text="cliente"onClick="btnCliente_Click"/>
+                              <asp:Button ID="btnEmpleado" runat="server" Text="empleado" onClick="btnEmpleado_Click"/>
+                              
+                             <%-- <div class="form-group">
                                             <asp:DropDownList ID="idTipoUsuario" runat="server" class="form-select">
                                                 <asp:ListItem Value="Tipo usuario"></asp:ListItem>
                                                 <asp:ListItem Value="Cliente"></asp:ListItem>
                                                 <asp:ListItem Value="Empleado"></asp:ListItem>
                                             </asp:DropDownList>
-                                        </div>
+                                        </div>--%>
 
-
-
-                              <div class="container mt-3">
+                             <div class="container mt-3">
 
                                   
                               </div>

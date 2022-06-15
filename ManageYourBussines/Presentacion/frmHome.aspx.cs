@@ -49,7 +49,7 @@ namespace ManageYourBussines.Presentacion
                 else
                 {
                     lblUsuario.Text = Session["empleado"].ToString();
-                    crearCuenta.Visible = false;
+                    //crearCuenta.Visible = false;
 
 
                     //if (Session["idTipoRol"].ToString() == "3")

@@ -19,7 +19,7 @@ namespace ManageYourBussines.Presentacion
             HtmlAnchor crearCuenta = (HtmlAnchor)this.Master.FindControl("crearCuenta");
             HtmlAnchor crearEvento = (HtmlAnchor)this.Master.FindControl("crearEvento");
 
-            crearEvento.Visible = true;
+            //crearEvento.Visible = true;
 
             if (Session["cliente"] == null && Session["idCliente"] == null && Session["empleado"] == null
                 && Session["idEmpleado"] == null)
