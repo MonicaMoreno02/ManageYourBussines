@@ -165,7 +165,10 @@ namespace ManageYourBussines
             Response.Redirect("Recuperar.aspx");
         }
 
-        protected void btnCliente_Click(object sender, EventArgs e)
+      
+    
+
+        protected void cliente_Click(object sender, EventArgs e)
         {
 
         }

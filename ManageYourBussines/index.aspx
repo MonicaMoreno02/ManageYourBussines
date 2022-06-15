@@ -48,7 +48,7 @@
         <nav class="navbar navbar-expand-lg custom_nav-container ">
           <a class="navbar-brand" href="index.html">
             <span>
-              Feane
+              muebles san jose 
             </span>
           </a>
 
@@ -123,8 +123,7 @@
                               <br />
 
 
-                               <asp:Button ID="btnCliente" runat="server" Text="cliente"onClick="btnCliente_Click"/>
-                              <asp:Button ID="btnEmpleado" runat="server" Text="empleado" onClick="btnEmpleado_Click"/>
+                          
                               
                              <%-- <div class="form-group">
                                             <asp:DropDownList ID="idTipoUsuario" runat="server" class="form-select">
@@ -151,6 +150,12 @@
                           </div>
                           <center>
                               <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" OnClick="btnIngresar_Click" /></center>
+                           <asp:Button ID="btncliente" runat="server" Text="cliente" onClick="cliente_Click" />
+                          <asp:Button ID="btnEmpleado" runat="server" Text="cliente" onClick="btnEmpleado_Click" />
+                             
+                           
+
+
                           <br />
                           <center>
                               <asp:Button ID="btnRecuperar" runat="server" Text="Recuperar Contraseña"  OnClick="btnRecuperar_Click"/></center>
