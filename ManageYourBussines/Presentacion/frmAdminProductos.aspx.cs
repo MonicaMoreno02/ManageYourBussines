@@ -144,6 +144,21 @@ namespace ManageYourBussines.Presentacion
             objDatosE.material = txtMaterialEditar.Text;
             objDatosE.caracteristicas = txtCaracteristicasEditar.Text;
 
+            txtNombreEditar.Text.Trim();
+            txtDescripcionEditar.Text.Trim();
+            txtPrecioEditar.Text.Trim();
+            txtCantidadStockEditar.Text.Trim();
+            txtLargoEditar.Text.Trim();
+            txtAnchoEditar.Text.Trim();
+            txtProfundidadEditar.Text.Trim();
+            txtMaterialEditar.Text.Trim();
+            txtCaracteristicasEditar.Text.Trim();
+
+
+
+
+
+
             //Sacamos le url y guardamos la imagen en la base de datos Cristian Salcedo
 
             string ext = Path.GetExtension(FuEditarImagen.FileName);
@@ -199,6 +214,7 @@ namespace ManageYourBussines.Presentacion
 
                 }
             }
+           
 
         }
     }

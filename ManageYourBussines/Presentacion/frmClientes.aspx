@@ -26,8 +26,7 @@
                         </table>
                     </div>
                 </div>
-            </div>
-        </div>
+           
         <%--PAOLA: creo la tabla donde mostramos los datos del cliente FIN --%>
 
 

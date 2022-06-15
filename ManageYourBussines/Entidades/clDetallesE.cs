@@ -11,7 +11,7 @@ namespace ManageYourBussines.Entidades
        
         public string nombreCliente { get; set; }
         public DateTime  fechaVenta{ get; set; }
-        public int  codigoVenta{ get; set; }
+        public string  codigoVenta{ get; set; }
         public float  totalVenta{ get; set; }
         public string  nombreEmpleado{ get; set; }
         public int  cantidad{ get; set; }

@@ -57,7 +57,7 @@
 
 
         <!--PAOLA: tabla de Seguridad Social -->
-        <div class="card shadow mb-4">
+        <%--<div class="card shadow mb-4">
             <div class="card-body">
                 <div class="table-responsive">
                     <div class="fa-3x">
@@ -80,7 +80,7 @@
                     </table>
                 </div>
             </div>
-        </div>
+        </div>--%>
        
          <!--PAOLA: tabla de Seguridad Social -->
 
@@ -315,7 +315,7 @@
 
 
     <script src="recursos/js/JavaEmpleados.js"></script>
-    <script src="recursos/js/JavaSeguridad.js"></script>
+
 
     <script src="recursos/js/jquery-3.4.1.min.js"></script>
 

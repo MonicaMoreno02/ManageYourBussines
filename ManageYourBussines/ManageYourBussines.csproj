@@ -95,6 +95,7 @@
     <Content Include="Presentacion\frmEstadisticas.aspx" />
     <Content Include="Presentacion\frmProductos2.aspx" />
     <Content Include="Presentacion\frmRegistrar.aspx" />
+    <Content Include="Presentacion\frmSeguridadSocial.aspx" />
     <Content Include="Presentacion\frmSugerencias.aspx" />
     <Content Include="Presentacion\frmVenta.aspx" />
     <Content Include="Presentacion\recursos\css\bootstrap.css" />
@@ -396,6 +397,13 @@
     </Compile>
     <Compile Include="Presentacion\frmRegistrar.aspx.designer.cs">
       <DependentUpon>frmRegistrar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmSeguridadSocial.aspx.cs">
+      <DependentUpon>frmSeguridadSocial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmSeguridadSocial.aspx.designer.cs">
+      <DependentUpon>frmSeguridadSocial.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmSugerencias.aspx.cs">
       <DependentUpon>frmSugerencias.aspx</DependentUpon>

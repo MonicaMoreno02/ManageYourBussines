@@ -65,7 +65,7 @@ namespace ManageYourBussines.Datos
               
                 objDatosDetalle.nombreCliente = tblDetallesVenta.Rows[i]["nombreCliente"].ToString();
                 objDatosDetalle.fechaVenta = DateTime.Parse(tblDetallesVenta.Rows[i]["fechaVenta"].ToString());
-                objDatosDetalle.codigoVenta = int.Parse(tblDetallesVenta.Rows[i]["codigoVenta"].ToString());
+                objDatosDetalle.codigoVenta = tblDetallesVenta.Rows[i]["codigoVenta"].ToString();
                 objDatosDetalle.totalVenta = float.Parse(tblDetallesVenta.Rows[i]["totalVenta"].ToString());
                 objDatosDetalle.nombreEmpleado = tblDetallesVenta.Rows[i]["nombreEmpleado"].ToString();
                 objDatosDetalle.cantidad = int.Parse(tblDetallesVenta.Rows[i]["cantidad"].ToString());

@@ -206,8 +206,8 @@ namespace ManageYourBussines.Datos
 
         public int mtdEditarD(clProductoE objDatosE)
         {
-            if (objDatosE.imagen != "")
-            {
+            //if (objDatosE.imagen != "")
+            //{
 
                 string sql = "update producto " +
                     "set nombreProducto='" + objDatosE.nombreProducto + "',descripcion='" + objDatosE.descripcion + "',precio=" + objDatosE.precio + "" +
@@ -217,18 +217,18 @@ namespace ManageYourBussines.Datos
                 clConexion objConexionS = new clConexion();
                 int resultadoS = objConexionS.mtdConectado(sql);
                 return resultadoS;
-            }
-            else
-            {
-                string sqlN = "update producto " +
-                   "set nombreProducto='" + objDatosE.nombreProducto + "',descripcion='" + objDatosE.descripcion + "',precio=" + objDatosE.precio + "" +
-                   ",cantidadStock=" + objDatosE.cantidadStock + ",largo='" + objDatosE.largo + "',ancho=" + objDatosE.ancho + "," +
-                   "profundidad='" + objDatosE.profundidad + "',material='" + objDatosE.material + "',caracteristicas='" + objDatosE.caracteristicas + "' where idProducto = " + objDatosE.idProducto + "";
+            //}
+            //else
+            //{
+            //    string sqlN = "update producto " +
+            //       "set nombreProducto='" + objDatosE.nombreProducto + "',descripcion='" + objDatosE.descripcion + "',precio=" + objDatosE.precio + "" +
+            //       ",cantidadStock=" + objDatosE.cantidadStock + ",largo='" + objDatosE.largo + "',ancho=" + objDatosE.ancho + "," +
+            //       "profundidad='" + objDatosE.profundidad + "',material='" + objDatosE.material + "',caracteristicas='" + objDatosE.caracteristicas + "' where idProducto = " + objDatosE.idProducto + "";
 
-                clConexion objConexion = new clConexion();
-                int resultado = objConexion.mtdConectado(sqlN);
-                return resultado;
-            }
+            //    clConexion objConexion = new clConexion();
+            //    int resultado = objConexion.mtdConectado(sqlN);
+            //    return resultado;
+            //}
         }
 
     }
