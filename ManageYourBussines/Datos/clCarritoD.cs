@@ -12,10 +12,10 @@ namespace ManageYourBussines.Datos
     {
         public int mtdRegistrar(clCarritoE objDatosCarrito)
         {
-            string sql = "insert into carrito (idproducto,nombre,describcion,precio,cantidadstock,cantidad," +
+            string sql = "insert into carrito (idproducto,nombreProducto,describcion,precio,cantidadstock,cantidad," +
                   "Imagen,idcliente)" +
 
-                  "values('" + objDatosCarrito.idproducto + "','" + objDatosCarrito.nombre + "'," +
+                  "values('" + objDatosCarrito.idproducto + "','" + objDatosCarrito.nombreProducto + "'," +
                   "'" + objDatosCarrito.describcion + "','" + objDatosCarrito.precio + "','" + objDatosCarrito.cantidadstock + "'," +
                   "'" + objDatosCarrito.catidad + "','" + objDatosCarrito.Imagen + "'," +
               "'" + objDatosCarrito.idcliente + "')";
@@ -99,7 +99,7 @@ namespace ManageYourBussines.Datos
                 objDatoscarrito.precio = float.Parse(tblCarrito.Rows[i]["precio"].ToString());
                 objDatoscarrito.describcion = tblCarrito.Rows[i]["describcion"].ToString();
                 objDatoscarrito.Imagen = tblCarrito.Rows[i]["imagen"].ToString();
-                objDatoscarrito.nombre = tblCarrito.Rows[i]["nombre"].ToString();
+                objDatoscarrito.nombreProducto = tblCarrito.Rows[i]["nombreProducto"].ToString();
 
 
 

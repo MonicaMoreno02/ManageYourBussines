@@ -26,8 +26,8 @@ namespace ManageYourBussines.Presentacion
             listarProductos = objProductos.mtdListarD(objProducto);
 
 
-            string nombre = listarProductos[0].nombre;
-            lbnombre.Text = nombre;
+            string nombreProducto = listarProductos[0].nombreProducto;
+            lbnombre.Text = nombreProducto;
             string imagen = listarProductos[0].imagen;
             Image1.ImageUrl = imagen;
             string descripcion = listarProductos[0].descripcion;

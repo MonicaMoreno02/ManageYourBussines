@@ -14,8 +14,8 @@ namespace ManageYourBussines.Entidades
         public string apellidos { get; set; }
         public string telefono { get; set; }
         public string direccion { get; set; }
-        public string email { get; set; }
-        public string clave { get; set; }
+        public string emailCliente { get; set; }
+        public string claveCliente { get; set; }
 
 
     }
