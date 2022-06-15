@@ -15,7 +15,11 @@
                     <i class="icon-angle-down">^</i>
                     </button>
                 <span>¿Cuales son los gastos de los envios de la tienda online?</span>
-
+                <div class="accordion-inner" style="display:block;">
+                <p>
+                    Dependiendo del lugar que usted se encuentre se calcula el envío según lo que cobra la empresa de DOMICILIOS, usualmente el costo no supera los $10.000 Pesos y no es inferior a los $3.000.
+                </p>
+                </div>
             </a>
         </div>
     </div>
