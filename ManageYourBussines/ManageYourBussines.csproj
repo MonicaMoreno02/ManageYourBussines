@@ -126,6 +126,12 @@
     <Content Include="Presentacion\recursos\images\mesadejardin.png" />
     <Content Include="Presentacion\recursos\images\mesamoderna.png" />
     <Content Include="Presentacion\recursos\images\mesaportable.jpeg" />
+    <Content Include="Presentacion\recursos\images\mision2.png" />
+    <Content Include="Presentacion\recursos\images\mision3.jpg" />
+    <Content Include="Presentacion\recursos\images\mision6.png" />
+    <Content Include="Presentacion\recursos\images\mision7.png" />
+    <Content Include="Presentacion\recursos\images\mision8.png" />
+    <Content Include="Presentacion\recursos\images\MM_mision.jpg" />
     <Content Include="Presentacion\recursos\images\organizador.jpeg" />
     <Content Include="Presentacion\recursos\images\organizador.jpg" />
     <Content Include="Presentacion\recursos\images\paraguero.jpg" />
@@ -144,6 +150,10 @@
     <Content Include="Presentacion\recursos\images\sopgamer.jpg" />
     <Content Include="Presentacion\recursos\images\soportelefante.png" />
     <Content Include="Presentacion\recursos\images\Taburetes.png" />
+    <Content Include="Presentacion\recursos\images\vision2.jpg" />
+    <Content Include="Presentacion\recursos\images\vision3.png" />
+    <Content Include="Presentacion\recursos\images\vision4.png" />
+    <Content Include="Presentacion\recursos\images\vision5.jpg" />
     <Content Include="Presentacion\recursos\js\bootstrap.js" />
     <Content Include="Presentacion\recursos\js\custom.js" />
     <Content Include="Presentacion\recursos\js\jquery-3.4.1.min.js" />
@@ -208,6 +218,7 @@
     <Content Include="recursos\images\mesadejardin.png" />
     <Content Include="recursos\images\mesamoderna.png" />
     <Content Include="Presentacion\recursos\images\paticos.jpg" />
+    <Content Include="recursos\images\mision.png" />
     <Content Include="recursos\images\muebles.jpeg" />
     <Content Include="recursos\images\pdf.png" />
     <Content Include="recursos\images\perrito.jpeg" />
@@ -227,6 +238,7 @@
     <Content Include="recursos\images\repisa.jpeg" />
     <Content Include="recursos\images\silla.jpg" />
     <Content Include="recursos\images\sillas.jpeg" />
+    <Content Include="recursos\images\vision.png" />
     <Content Include="recursos\js\bootstrap.js" />
     <Content Include="recursos\js\custom.js" />
     <Content Include="recursos\js\jquery-3.4.1.min.js" />
@@ -368,8 +380,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <Content Include="recursos\css\style.css.map" />
-    <Content Include="recursos\css\style.scss" />
     <Content Include="recursos\fonts\fontawesome-webfont.ttf" />
     <Content Include="recursos\fonts\fontawesome-webfont.woff" />
     <Content Include="recursos\fonts\fontawesome-webfont.woff2" />
@@ -380,6 +390,8 @@
     <Content Include="Presentacion\recursos\fonts\fontawesome-webfont.woff" />
     <Content Include="Presentacion\recursos\fonts\fontawesome-webfont.woff2" />
     <Content Include="recursos\images\icono.jpg.webp" />
+    <Content Include="recursos\css\style.css.map" />
+    <Content Include="recursos\css\style.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

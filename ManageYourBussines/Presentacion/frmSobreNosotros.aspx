@@ -4,6 +4,59 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="images/favicon.png" type="">
+
+  <title> Feane </title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- nice select  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
+  <!-- font awesome style -->
+  <link href="recursos/css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="recursos/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="recursos/css/responsive.css" rel="stylesheet" />
+
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <img src="recursos/images/icono3.png" />
+  <a class="navbar-brand" href="#">Muebles San José</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="frmHome.aspx">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="frmdetalles.aspx">Productos</a>
+      </li>
+   
+</nav>
+    <!-- header section strats -->
+   
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
   <div class="container-fluid">
   <img src="recursos/images/icono3.png" widt="20" height="20" />
@@ -51,10 +104,10 @@
               </h2>
             </div>
             <p>
-              Fabricamos los muebles y decoración para tu hogar, oficina, exteriores y otros.
-            Diferentes lineas de acabados: 
+              Fabricamos los muebles y decoración para tu hogar, oficina, exteriores y otros.<br />
+            Diferentes lineas de acabados: <br />
              - Linea de muebles rústicos
-              - Linea de moderno
+              - Linea de moderno<br />
              -Linea en forja
   Dale un toque diferente a tus lugares, con nuestras alcobas, comedores, salas, muebles auxiliares, muebles de exterior.
             </p>
@@ -63,41 +116,40 @@
         </div>
       </div>
     </div>
-  </section>
-
+</section>
   <br />
-  <br />
-    <div class="container">
 
-<div class="row">
+  <div class="container">   
+    <div class="card-deck mt-3">
 
-<div class="col-md-4">
-<div class="card">
-<div class="card-body">
+      <div class="card text-center border-dark">
+          
+        <div class="card-body">
+          <img src="recursos/images/mision8.png" width="100" />
 
-<p class="card-text">Misión</p>
+          <h4 class="card-title">Misión</h4>
+            <p class="card-text">Ofrecer a cada uno de los clientes una experiencia de productos y servicios de calidad, llenos de innovación, junto a un gran portafolio de diseños, asesorías personalizadas, puntualidad y compromiso en las entregas. Apoyados de un excelente personal, garantizando la satisfacción del cliente </p>
+       
+        
+        
+        </div>
+      </div>          
 
-</div>
-</div>
-</div>
-<div class="col-md-4">
-<div class="card">
-
-<div class="card-body">
-
-<p class="card-text">Visión</p>
-
-</div>
-</div> 
-
-</div>
-
-
-</div>
-
+      <div class="card text-center border-dark">
+        <div class="card-body">
+            <img src="recursos/images/vision5.jpg" width="100"/>
+          <h4 class="card-title">Visión</h4>
+         
+         <p class="card-text">Mantener el liderazgo e innovación en el mercado de muebles, accesorios; en nuestras diferentes líneas de terminaciones. Llevar a los hogares una restauración satisfactoria para nuestros clientes.
+Mediante productos y servicios de alta calidad, a la vanguardia de la constante innovación. </p>
+        </div>
+      </div>          
+  </div>
 </div>
 <br />
 <br />
+     
+     
   <!-- end about section -->
 
   <!-- footer section -->
