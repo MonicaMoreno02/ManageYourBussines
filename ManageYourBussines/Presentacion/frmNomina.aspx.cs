@@ -26,8 +26,8 @@ namespace ManageYourBussines.Presentacion
             empleado.Columns.Add(new DataColumn("Nombres", typeof(string)));
             empleado.Columns.Add(new DataColumn("Apellidos", typeof(string)));
             empleado.Columns.Add(new DataColumn("tipoEmpleado", typeof(string)));
-            empleado.Columns.Add(new DataColumn("porcentajePension", typeof(float)));
-            empleado.Columns.Add(new DataColumn("porcentajeSalud", typeof(float)));
+            //empleado.Columns.Add(new DataColumn("porcentajePension", typeof(float)));
+            //empleado.Columns.Add(new DataColumn("porcentajeSalud", typeof(float)));
             empleado.Columns.Add(new DataColumn("Salariominimo", typeof(float)));
 
 
@@ -60,13 +60,14 @@ namespace ManageYourBussines.Presentacion
                     row["nombres"] = Nombres;
                     row["apellidos"] = Apellidos;
                     row["tipoEmpleado"] = tipoEmpleado;
-                    row["porcentajePension"] = porcentajePension;
-                    row["porcentajeSalud"] = porcentajeSalud;
+                    //row["porcentajePension"] = porcentajePension;
+                    //row["porcentajeSalud"] = porcentajeSalud;
                     row["Salariominimo"] = stot;
 
                     empleado.Rows.Add(row);
                 }
-
+                Label1.Text = "porcentaje Pension: "+ listarEmpleado[0].porcentajePension+"%";
+                Label2.Text = "porcentaje Salud: " + listarEmpleado[0].porcentajeSalud+"%";
 
                 GridView1.DataSource = empleado;
                 GridView1.DataBind();

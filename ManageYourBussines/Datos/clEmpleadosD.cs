@@ -12,7 +12,7 @@ namespace ManageYourBussines.Datos
     {
         public List<clEmpleadosE> mtdListarEmpleado()
         {
-            string sql = "select EMPLEADO.documentoE,empleado.nombreEmpleados,empleado.apellidosEmple,empleado.tipoEmpleado,seguridadSocial.porcentajePension,seguridadSocial.porcentajeSalud from empleado, seguridadSocial where seguridadSocial.idSeguridadSocial = empleado.idSeguridadSocial";
+            string sql = "select *from empleados inner join seguridadSocial on empleados.idSeguridadSocial
             clConexion objConexion = new clConexion();
             DataTable tblEmpleado = new DataTable();
             tblEmpleado = objConexion.mtdDesconectado(sql);
@@ -36,7 +36,8 @@ namespace ManageYourBussines.Datos
                 objDatosEmpleado.tipoEmpleado = tblEmpleado.Rows[i]["tipoEmpleado"].ToString();
                 objDatosEmpleado.porcentajePension = tblseguridadSocial.Rows[i]["porcentajePension"].ToString();
                 objDatosEmpleado.porcentajeSalud = tblseguridadSocial.Rows[i]["porcentajePension"].ToString();
-
+                //objDatosEmpleado.año = tblseguridadSocial.Rows[i]["año"].ToString();
+                //objDatosEmpleado.salario = float.Parse(tblseguridadSocial.Rows[i]["salario"].ToString());
 
                 listarEmpleado.Add(objDatosEmpleado);
             }

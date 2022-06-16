@@ -15,6 +15,9 @@ namespace ManageYourBussines.Entidades
         public string porcentajePension { get; set; }
         public string porcentajeSalud { get; set; }
         public int idseguridadSocial { get; set; }
+        public int idAño { get; set; }
+        public string año { get; set; }
+        public float salario { get; set; }
 
     }
 }

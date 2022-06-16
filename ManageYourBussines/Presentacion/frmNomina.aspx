@@ -5,10 +5,11 @@
      <section class="about_section layout_padding">
           
          <h1>Nómina empleados</h1>
-         
+          <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label><br />
+         <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+              
 <asp:GridView ID="GridView1" runat="server"></asp:GridView>
-         
-              <%-- </ContentTemplate>
+       <%-- </ContentTemplate>
            </asp:UpdatePanel>--%>
    
 
