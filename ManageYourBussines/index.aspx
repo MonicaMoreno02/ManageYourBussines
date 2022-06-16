@@ -153,6 +153,9 @@
           <a class="nav-link" href="Presentacion/frmRegistrar.aspx">Registrarse</a>
       </li>
 
+                                                        <li class="nav-item">
+          <a class="nav-link" href="loginEmpleado.aspx">Ingresar como empleado</a>
+      </li>
                 
                         </ul>
                         <div class="user_option">
