@@ -13,23 +13,31 @@ namespace ManageYourBussines.Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            string idc = Convert.ToString(Session["idc"]);
-            int idClien = int.Parse(idc);
-         
-
-            
-            clCarritoE objcarrito = new clCarritoE();
-            objcarrito.idcliente = idClien;
-            clCarritoL objCarritoL = new clCarritoL();
-            DataTable carrito = new DataTable();
-            List<clCarritoE> listarCar = new List<clCarritoE>();
-            //Session["objeto"] = objCarritoL.mtdListcar();
-            carrito = objCarritoL.mtdListcar(objcarrito);
+            if (Session["idc"] != null)
+            {
 
 
-            gvCar.DataSource = carrito;
-            gvCar.DataBind();
+                string idc = Convert.ToString(Session["idc"]);
+                int idClien = int.Parse(idc);
+
+
+
+                clCarritoE objcarrito = new clCarritoE();
+                objcarrito.idcliente = idClien;
+                clCarritoL objCarritoL = new clCarritoL();
+                DataTable carrito = new DataTable();
+                List<clCarritoE> listarCar = new List<clCarritoE>();
+                //Session["objeto"] = objCarritoL.mtdListcar();
+                carrito = objCarritoL.mtdListcar(objcarrito);
+
+
+                gvCar.DataSource = carrito;
+                gvCar.DataBind();
+            }
+            else
+            {
+                Response.Redirect("~/index.aspx");
+            }
 
         }
 
@@ -167,7 +175,7 @@ namespace ManageYourBussines.Presentacion
                 string valor = gvCar.Rows[lista].Cells[5].Text;
                 int cantidad = int.Parse(valor);
                 cantidad = cantidad - 1;
-                if (cantidad>=0)
+                if (cantidad>=1)
                 {
                     string idc = Convert.ToString(Session["idc"]);
                     int idClien = int.Parse(idc);

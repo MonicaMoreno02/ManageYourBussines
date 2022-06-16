@@ -37,7 +37,7 @@
           <p class="card-text" align="center"><asp:Label ID="lbnombre" runat="server" Text="nombre:"></asp:Label>
           <p class="card-text" align="center"><asp:Label ID="lbDescripcion" runat="server" Text="Label"></asp:Label>
           <p class="card-text" align="center"><asp:Label ID="lbMaterial" runat="server" Text="Label"></asp:Label></p>
-          <asp:Button ID="Button1" runat="server" Text="Agregar al Carrito" CssClass="btn btn-warning" />
+          <asp:Button ID="Button1" runat="server" Text="Agregar al Carrito" CssClass="btn btn-warning" OnClick="Button1_Click" />
           <asp:Button ID="Button2" runat="server" Text="Productos:" CssClass="btn btn-primary" onclick="btnHome_Click"/>
 
             </div>
