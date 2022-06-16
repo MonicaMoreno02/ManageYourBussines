@@ -148,11 +148,17 @@
 
                               </div>
                           </div>
-                          <center>
-                              <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" OnClick="btnIngresar_Click" /></center>
-                           <asp:Button ID="btncliente" runat="server" Text="cliente" onClick="cliente_Click" />
-                          <asp:Button ID="btnEmpleado" runat="server" Text="cliente" onClick="btnEmpleado_Click" />
-                             
+                        
+                              <asp:Label ID="Label3" runat="server" Text="Seleccione el tipo de Usuario que desea Ingresar"></asp:Label>
+                              <br />
+                          <br />
+
+                                           <center> <asp:Button ID="btncliente" runat="server" Text="cliente" onClick="cliente_Click" />
+                          <asp:Button ID="btnEmpleado" runat="server" Text="Empleado"  />
+                             <br />
+                                               <br />
+                             <%-- <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" OnClick="btnIngresar_Click" /></center>--%>
+               
                            
 
 

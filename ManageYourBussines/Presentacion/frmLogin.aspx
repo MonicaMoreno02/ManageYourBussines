@@ -103,7 +103,7 @@
                                                 </div>
                                             </div>
                                             <center>
-                                                <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" OnClick="btnIngresar_Click" /></center>
+<%--                                                <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" OnClick="btnIngresar_Click" /></center>--%>
 
                                             <%-- <a href="index.html" class="btn btn-primary btn-user btn-block">
                                             INGRESAR

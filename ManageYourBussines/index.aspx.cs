@@ -14,14 +14,14 @@ namespace ManageYourBussines
     public partial class index : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-            if (Session["cliente"] != null || Session["idCliente"] != null || Session["empleado"] != null
-                 || Session["idEmpleado"] != null)
-            {
-                //Response.Redirect("Presentacion/frmHome.aspx");
+        { 
+        //    if (Session["cliente"] != null || Session["idCliente"] != null || Session["empleado"] != null
+        //         || Session["idEmpleado"] != null)
+        //    {
+        //        //Response.Redirect("Presentacion/frmHome.aspx");
 
 
-            }
+        //    }
             //Session["cliente"] = null;
 
 
@@ -31,13 +31,13 @@ namespace ManageYourBussines
         {
 
 
-            if (txtEmail.Text == "" || txtClave.Text == "")
-            {
+            //if (txtEmail.Text == "" || txtClave.Text == "")
+            //{
 
-                ClientScript.RegisterStartupScript(this.GetType(), "mensaje", "<script>swal('Alerta!', 'Los datos debe estar completos!', 'info')</script>");
+            //    ClientScript.RegisterStartupScript(this.GetType(), "mensaje", "<script>swal('Alerta!', 'Los datos debe estar completos!', 'info')</script>");
 
-            }
-            //else if (idTipoUsuario.SelectedValue == "Tipo usuario")
+            //}
+            ////else if (idTipoUsuario.SelectedValue == "Tipo usuario")
             ////{
 
             //    ClientScript.RegisterStartupScript(this.GetType(), "mensaje", "<script>swal('Alerta!', 'Seleccione tipo de Usuario!', 'info')</script>");
@@ -165,21 +165,79 @@ namespace ManageYourBussines
             Response.Redirect("Recuperar.aspx");
         }
 
-      
-    
+
+
 
         protected void cliente_Click(object sender, EventArgs e)
         {
 
+           
+
+            clUsuarioE objDatos = new clUsuarioE();
+            objDatos.email = txtEmail.Text;
+            objDatos.clave = txtClave.Text;
+
+            clLoginL objUsuariosL = new clLoginL();
+            clUsuarioE bjDatosClien = new clUsuarioE();
+            bjDatosClien = objUsuariosL.mtdLoginUsuario(objDatos);
+            if (bjDatosClien != null)
+            {
+
+
+
+                Session["cliennte"] = objDatos.nombreCliente + " " + objDatos.apellidos;
+                //Session["nombreEmpleado"] = objDatosClien.nombreEmpleado;
+                //Session["apellidos"] = objDatosClien.apellidosEmple;
+                Response.Redirect("Presentacion/frmHome.aspx");
+
+
+
+
+
+
+            }
+            else
+            {
+                lblMensaje.Text = "usuario no Registrado ";
+            }
+
+
+
         }
 
-        protected void btnEmpleado_Click(object sender, EventArgs e)
-        {
+        //protected void btnEmpleado_Click(object sender, EventArgs e)
+        //{
+        //    clEmpleadoE objDatos = new clEmpleadoE();
+        //    objDatos.emailEmpleado = txtEmail.Text;
+        //    objDatos.claveEmpleado = txtClave.Text;
 
+        //    clLoginL objUsuariosL = new clLoginL();
+        //    clEmpleadoE objDatosClien = new clEmpleadoE();
+        //    objDatosClien = objUsuariosL.mtdLoginEmpleado(objDatos);
+        //    if (objDatosClien != null)
+        //    {
+
+
+
+        //        Session["EmpleadosVen"] = objDatos.nombreEmpleado + " " + objDatos.apellidosEmple;
+        //        Session["nombreEmpleado"] = objDatosClien.nombreEmpleado;
+        //        Session["apellidos"] = objDatosClien.apellidosEmple;
+        //        Response.Redirect("Presentacion/frmLogin.aspx");
+
+
+
+
+
+
+        //    }
+        //    else
+        //    {
+        //        lblMensaje.Text = "usuario no Registrado ";
+        //    }
         }
     }
 
-}
+
 
 
 
