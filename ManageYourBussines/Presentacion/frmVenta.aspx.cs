@@ -52,7 +52,7 @@ namespace ManageYourBussines.Presentacion
                     if (i != cuenta)
                     {
                         int numero = i + 1;
-                        string nombre = lista[i].nombre;
+                        string nombre = lista[i].nombreProducto;
                         string codigoVenta = lista[i].codigoVenta;
                         float precio = lista[i].precio;
                         int cantidad = lista[i].cantidad;
@@ -61,7 +61,7 @@ namespace ManageYourBussines.Presentacion
                         vtot = vtot + total;
                         DataRow row = datos.NewRow();
                         row["#"] = numero;
-                        row["nombre"] = nombre;
+                        row["nombreProducto"] = nombre;
                         row["codigoVenta"] = codigoVenta;
                         row["precio"] = precio;
                         row["cantidad"] = cantidad;
@@ -76,7 +76,7 @@ namespace ManageYourBussines.Presentacion
                         vtot = vtot + total;
                         DataRow row = datos.NewRow();
                         row["#"] = i + 1;
-                        row["nombre"] = fech;
+                        row["nombreProducto"] = fech;
                         row["codigoVenta"] = "";
                         row["precio"] = 0;
                         row["cantidad"] = 0;
