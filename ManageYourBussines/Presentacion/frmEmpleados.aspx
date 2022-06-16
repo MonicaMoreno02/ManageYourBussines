@@ -18,10 +18,7 @@
             <div class="card shadow mb-4">
                 <div class="card-body">
                     <div class="table-responsive">
-                        <div class="fa-3x">
-                            <i class="fa-solid fa-cog fa-spin"></i>
-
-                        </div>
+                  
                         <table class="table table-bordered table-dark" id="dtEmpleado" width="100%" cellspacing="0">
 
                             <thead>
@@ -81,8 +78,8 @@
                 </div>
             </div>
         </div>--%>
-       
-         <!--PAOLA: tabla de Seguridad Social -->
+
+        <!--PAOLA: tabla de Seguridad Social -->
 
         <%--PAOLA: modal para eliminar--%>
         <div class="modal fade" id="ModalEliminar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -170,11 +167,6 @@
                                     <label for="txtClave" class="col-form-label">Clave</label>
                                     <asp:TextBox ID="txtClave" class="form-control" runat="server"></asp:TextBox>
                                 </div>
-                                <div class="form-group">
-                                    <label for="txtSeguridadSocial" class="col-form-label">Clave</label>
-                                    <asp:TextBox ID="txtSeguridadSocial" class="form-control" runat="server"></asp:TextBox>
-                                </div>
-
 
                             </div>
                             <div class="modal-footer">
@@ -207,7 +199,7 @@
                     <div class="value">
                         <div class="input-group">
                             <div class="input--style-5" style="border: thin double #000000; margin: auto; padding: inherit;">
-                                <asp:TextBox ID="txtDocumentoRegis" type="text" runat="server" BackColor="#E5E5E5"></asp:TextBox>
+                                <asp:TextBox ID="txtDocumentoRegis" type="text" runat="server" BackColor="#E5E5E5" Height="22px" Width="1656px"></asp:TextBox>
                                 <br />
                             </div>
                         </div>
@@ -222,7 +214,7 @@
                     <div class="value">
                         <div class="input-group">
                             <div class="input--style-5" style="border: thin double #000000">
-                                <asp:TextBox ID="txtNombreRegis" runat="server" ValidateRequestMode="Enabled" BackColor="#E5E5E5"></asp:TextBox>
+                                <asp:TextBox ID="txtNombreRegis" runat="server" ValidateRequestMode="Enabled" BackColor="#E5E5E5" Width="1623px"></asp:TextBox>
                                 <br />
                             </div>
 
@@ -237,7 +229,7 @@
                     <div class="value">
                         <div class="input-group">
                             <div class="input--style-5" style="border: thin double #000000">
-                                <asp:TextBox ID="txtApellidoRegis" runat="server" ValidateRequestMode="Enabled" BackColor="#E5E5E5"></asp:TextBox>
+                                <asp:TextBox ID="txtApellidoRegis" runat="server" ValidateRequestMode="Enabled" BackColor="#E5E5E5" Width="1631px"></asp:TextBox>
                             </div>
 
                         </div>
@@ -252,7 +244,7 @@
                     <div class="value">
                         <div class="input-group">
 
-                            <asp:DropDownList ID="ddlTipoEmpleado" runat="server">
+                            <asp:DropDownList ID="ddlTipoEmpleado" runat="server" Height="37px" Width="126px">
                                 <asp:ListItem>Seleccione...</asp:ListItem>
                                 <asp:ListItem>Vendedor</asp:ListItem>
                                 <asp:ListItem>Productor</asp:ListItem>
@@ -272,7 +264,7 @@
                     <div class="value">
                         <div class="input-group">
                             <div class="input--style-5" style="border: thin double #000000">
-                                <asp:TextBox ID="txtEmailRegis" runat="server" ValidateRequestMode="Enabled" BackColor="#E5E5E5"></asp:TextBox>
+                                <asp:TextBox ID="txtEmailRegis" runat="server" ValidateRequestMode="Enabled" BackColor="#E5E5E5" Width="1620px"></asp:TextBox>
                             </div>
 
                         </div>
@@ -287,17 +279,16 @@
                     <div class="value">
                         <div class="input-group">
                             <div class="input--style-5" style="border: thin double #000000">
-                                <asp:TextBox ID="txtClaveRegis" runat="server" ValidateRequestMode="Enabled" BackColor="#E5E5E5"></asp:TextBox>
+                                <asp:TextBox ID="txtClaveRegis" runat="server" ValidateRequestMode="Enabled" BackColor="#E5E5E5" Width="1625px" ></asp:TextBox>
                             </div>
 
                         </div>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtNombreRegis" ErrorMessage="Campo Obligatorio" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtClaveRegis" ErrorMessage="Campo Obligatorio" ForeColor="Red"></asp:RequiredFieldValidator>
                     </div>
                 </div>
 
 
                 <asp:Button ID="btnRegistrar" class="btn btn-primary" runat="server" Text="Registrar" OnClick="btnRegistrar_Click" Height="73px" Width="271px" />
-
 
                 <br />
                 <br />
