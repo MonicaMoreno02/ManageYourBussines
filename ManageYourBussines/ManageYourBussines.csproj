@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.aspx" />
+    <Content Include="Presentacion\frmNomina.aspx" />
     <Content Include="Presentacion\frmSobreNosotros.aspx" />
     <Content Include="Presentacion\frmbalance.aspx" />
     <Content Include="Presentacion\frmcarrito.aspx" />
@@ -248,12 +249,14 @@
     <Compile Include="Datos\clBalanceD.cs" />
     <Compile Include="Datos\clCarritoD.cs" />
     <Compile Include="Datos\clConexion.cs" />
+    <Compile Include="Datos\clEmpleadosD.cs" />
     <Compile Include="Datos\clProductoD.cs" />
     <Compile Include="Datos\clUserDao.cs" />
     <Compile Include="Datos\clUsuarioD.cs" />
     <Compile Include="Datos\clVentaD.cs" />
     <Compile Include="Entidades\clBalanceE.cs" />
     <Compile Include="Entidades\clCarritoE.cs" />
+    <Compile Include="Entidades\clEmpleadosE.cs" />
     <Compile Include="Entidades\clProductoE.cs" />
     <Compile Include="Entidades\clUsuarioE.cs" />
     <Compile Include="Entidades\clVentaE.cs" />
@@ -265,12 +268,20 @@
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Logica\clBalanceL.cs" />
+    <Compile Include="Logica\clEmpleadosL.cs" />
     <Compile Include="Logica\clProductoL.cs" />
     <Compile Include="Logica\clUsuarioL.cs" />
     <Compile Include="Logica\clCarritoL.cs" />
     <Compile Include="MailServices1\MasterMailServer.cs" />
     <Compile Include="MailServices1\systemSupportMail.cs" />
     <Compile Include="Logica\clVentaL.cs" />
+    <Compile Include="Presentacion\frmNomina.aspx.cs">
+      <DependentUpon>frmNomina.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmNomina.aspx.designer.cs">
+      <DependentUpon>frmNomina.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\frmSobreNosotros.aspx.cs">
       <DependentUpon>frmSobreNosotros.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
