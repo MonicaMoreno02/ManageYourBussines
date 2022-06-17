@@ -12,7 +12,7 @@ namespace ManageYourBussines.Datos
     {
         public List<clEmpleadosE> mtdListarEmpleado()
         {
-            string sql = "select *from empleados inner join seguridadSocial on empleados.idSeguridadSocial
+            string sql = "select *from empleados inner join seguridadSocial on empleados.idSeguridadSocial";
             clConexion objConexion = new clConexion();
             DataTable tblEmpleado = new DataTable();
             tblEmpleado = objConexion.mtdDesconectado(sql);

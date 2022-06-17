@@ -92,6 +92,7 @@
     <Content Include="Presentacion\frmEstadisticas.aspx" />
     <Content Include="Presentacion\frmProductos2.aspx" />
     <Content Include="Presentacion\frmRegistrar.aspx" />
+    <Content Include="Presentacion\frmTareas.aspx" />
     <Content Include="Presentacion\frmVenta.aspx" />
     <Content Include="Presentacion\recursos\css\bootstrap.css" />
     <Content Include="Presentacion\recursos\css\font-awesome.min.css" />
@@ -157,6 +158,7 @@
     <Content Include="Presentacion\recursos\images\vision5.jpg" />
     <Content Include="Presentacion\recursos\js\bootstrap.js" />
     <Content Include="Presentacion\recursos\js\custom.js" />
+    <Content Include="Presentacion\recursos\js\datosDataTable2.js" />
     <Content Include="Presentacion\recursos\js\jquery-3.4.1.min.js" />
     <Content Include="Presentacion\Recursos\js\datosDatable.js" />
     <Content Include="Presentacion\WebForm1.aspx" />
@@ -251,6 +253,7 @@
     <Compile Include="Datos\clConexion.cs" />
     <Compile Include="Datos\clEmpleadosD.cs" />
     <Compile Include="Datos\clProductoD.cs" />
+    <Compile Include="Datos\clTareasD.cs" />
     <Compile Include="Datos\clUserDao.cs" />
     <Compile Include="Datos\clUsuarioD.cs" />
     <Compile Include="Datos\clVentaD.cs" />
@@ -258,6 +261,7 @@
     <Compile Include="Entidades\clCarritoE.cs" />
     <Compile Include="Entidades\clEmpleadosE.cs" />
     <Compile Include="Entidades\clProductoE.cs" />
+    <Compile Include="Entidades\clTareasE.cs" />
     <Compile Include="Entidades\clUsuarioE.cs" />
     <Compile Include="Entidades\clVentaE.cs" />
     <Compile Include="index.aspx.cs">
@@ -270,6 +274,7 @@
     <Compile Include="Logica\clBalanceL.cs" />
     <Compile Include="Logica\clEmpleadosL.cs" />
     <Compile Include="Logica\clProductoL.cs" />
+    <Compile Include="Logica\clTareasL.cs" />
     <Compile Include="Logica\clUsuarioL.cs" />
     <Compile Include="Logica\clCarritoL.cs" />
     <Compile Include="MailServices1\MasterMailServer.cs" />
@@ -358,6 +363,13 @@
     </Compile>
     <Compile Include="Presentacion\frmRegistrar.aspx.designer.cs">
       <DependentUpon>frmRegistrar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmTareas.aspx.cs">
+      <DependentUpon>frmTareas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmTareas.aspx.designer.cs">
+      <DependentUpon>frmTareas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmVenta.aspx.cs">
       <DependentUpon>frmVenta.aspx</DependentUpon>
