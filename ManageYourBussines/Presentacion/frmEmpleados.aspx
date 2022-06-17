@@ -29,7 +29,7 @@
                                     <th>Documento</th>
                                     <th>Nombres</th>
                                     <th>Apellidos</th>
-                                    <th>Tipo Empleado</th>
+                                    <th>Tipo Empleado</th>.
                                     <th>Email</th>
                                     <th>Clave</th>
                                     <th>Editar</th>
