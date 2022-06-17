@@ -65,6 +65,13 @@ namespace ManageYourBussines.Presentacion
             //}
         }
 
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("editarDatos.aspx");
+
+
+        }
+
 
 
         //protected void btnEditar_Click(object sender, EventArgs e)
@@ -95,7 +102,7 @@ namespace ManageYourBussines.Presentacion
         //    }
 
 
-        }
+    }
 
         //    protected void btnCerrarSesion_Click1(object sender, EventArgs e)
         //    {
