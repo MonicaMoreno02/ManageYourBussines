@@ -154,7 +154,9 @@
                           <br />
 
                                            <center> <asp:Button ID="btncliente" runat="server" Text="cliente" onClick="cliente_Click" />
-                          <asp:Button ID="btnEmpleado" runat="server" Text="Empleado"  />
+                          <asp:Button ID="btnEmpleado" runat="server" Text="Empleado" onClick="btnEmpleado_Click" />
+<%--                                               <asp:Button ID="btnEmpleados" runat="server" Text="Empleado"onClick="btnEmpleados_Click" />--%>
+
                              <br />
                                                <br />
                              <%-- <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" OnClick="btnIngresar_Click" /></center>--%>

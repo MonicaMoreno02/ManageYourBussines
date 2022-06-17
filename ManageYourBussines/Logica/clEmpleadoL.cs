@@ -9,12 +9,12 @@ namespace ManageYourBussines.Logica
 {
     public class clEmpleadoL
     {
-        public clEmpleadoE mtdLogin(clEmpleadoE objDatos)
+        public clEmpleadoE mtdLoginE(clEmpleadoE objDatos)
         {
             clEmpleadoD objDatosUsuarios = new clEmpleadoD();
             clEmpleadoE objDatosEmpleD = new clEmpleadoE();
 
-            objDatosEmpleD = objDatosUsuarios.mtdLogin(objDatos);
+            objDatosEmpleD = objDatosUsuarios.mtdLoginE(objDatos);
             return objDatosEmpleD;
 
 

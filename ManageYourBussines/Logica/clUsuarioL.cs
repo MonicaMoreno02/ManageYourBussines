@@ -9,26 +9,26 @@ namespace ManageYourBussines.Logica
 {
     public class clUsuarioL
     {
-        //public clUsuarioE mtdLogin(clUsuarioE objDatos)
-        //{
-        //    clUsuarioD objDatosClienteD = new clUsuarioD();
-         
-        //    clUsuarioE objDatosCliente = new clUsuarioE();
-        //    objDatosCliente = objDatosClienteD.mtdLogin(objDatos);
-        //    //int va = objDatosClienteD.mtdLogin(objDatos);
-        //    return objDatosCliente;
+        public clUsuarioE mtdLogin(clUsuarioE objDatos)
+        {
+            clUsuarioD objDatosClienteD = new clUsuarioD();
 
-            
-
-        //}
-
-        //public string recuperaContraseña(string usuarioRequerido)
-        //{
-        //    //return clClienteD.usuarioRequerido(usuarioRequerido);
-        //}
+            clUsuarioE objDatosCliente = new clUsuarioE();
+            objDatosCliente = objDatosClienteD.mtdLogin(objDatos);
+            //int va = objDatosClienteD.mtdLogin(objDatos);
+            return objDatosCliente;
 
 
-        public int mtdRegistrarCliente(clUsuarioE objdatosClien)
+
+            }
+
+            //public string recuperaContraseña(string usuarioRequerido)
+            //{
+            //    //return clClienteD.usuarioRequerido(usuarioRequerido);
+            //}
+
+
+            public int mtdRegistrarCliente(clUsuarioE objdatosClien)
         {
             clUsuarioD objClientesD = new clUsuarioD();
             int resultado = objClientesD.mtdRegistrar(objdatosClien);

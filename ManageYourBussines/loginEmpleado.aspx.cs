@@ -29,7 +29,7 @@ namespace ManageYourBussines
 
             clEmpleadoL objUsuariosL = new clEmpleadoL();
             clEmpleadoE objDatosClien = new clEmpleadoE();
-            objDatosClien = objUsuariosL.mtdLogin(objDatos);
+            objDatosClien = objUsuariosL.mtdLoginE(objDatos);
             if (objDatosClien != null)
             {
 

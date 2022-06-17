@@ -10,16 +10,16 @@ namespace ManageYourBussines.Logica
     public class clLoginL
     {
         //metodo de login clientes en logicas
-        public clUsuarioE mtdLoginUsuario(clUsuarioE objDatosU) 
-        {
-            clLoginD objLoginD = new clLoginD();
+        //public clUsuarioE mtdLoginUsuario(clUsuarioE objDatosU) 
+        //{
+        //    clLoginD objLoginD = new clLoginD();
 
-            clUsuarioE objLoginE = new clUsuarioE();
-            objLoginE = objLoginD.mtdLoginUsuario(objDatosU);
-            return objDatosU;
+        //    clUsuarioE objLoginE = new clUsuarioE();
+        //    objLoginE = objLoginD.mtdLoginUsuario(objDatosU);
+        //    return objDatosU;
 
         
-        }
+        //}
         //metodo de login en logica para empleados 
         public clEmpleadoE mtdLoginEmpleado(clEmpleadoE objDatosEm) 
         { 
