@@ -40,16 +40,19 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-<body>
+<body class="bg-gradient-secondary" 
+ 
+>
 
 
     
                                   
     <form id="form1" runat="server" class="was-validated">
         <div>
-              <asp:Label ForeColor="White" ID="lblEmpleado" runat="server"></asp:Label>
-                                    <asp:Label ForeColor="White" ID="lblApellidos" runat="server"></asp:Label>
-                                  
+             <asp:Label ForeColor="White" ID="lblEmpleado" runat="server"></asp:Label>
+             <asp:Label ForeColor="White" ID="lblEmpleado1" runat="server"></asp:Label>
+               <asp:Label ForeColor="White" ID="lblApellidos" runat="server"></asp:Label>
+                                                         
 
                                     <asp:LinkButton runat="server" onClick="Unnamed_Click" class="dropdown-item preview-item"></asp:LinkButton>
 
@@ -57,7 +60,7 @@
 
 
             <div class="nav-item dropdown">
-                                <asp:Label ID="lblUsuario" runat="server" class="nav-link dropdown-toggle fa fa-user me-3" data-bs-toggle="dropdown" Text=""></asp:Label>
+<%--                                <asp:Label ID="lblUsuario" runat="server" class="nav-link dropdown-toggle fa fa-user me-3" data-bs-toggle="dropdown" Text=""></asp:Label>--%>
                                 <div id="idOpciones" class="dropdown-menu m-0">
 
 

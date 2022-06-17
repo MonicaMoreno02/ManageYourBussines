@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>pagina de clientes</h1>
                                         
-    
+    <asp:Label ForeColor="White" ID="lblEmpleado" runat="server"></asp:Label>
     
     
 <%--                                                <asp:Label ID="lblUsuario1" runat="server" class="nav-link dropdown-toggle fa fa-user me-3" data-bs-toggle="dropdown" Text=""></asp:Label>--%>

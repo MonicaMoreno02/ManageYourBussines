@@ -181,14 +181,16 @@ namespace ManageYourBussines
             clUsuarioL objUsuariosL = new clUsuarioL();
             clUsuarioE bjDatosClien = new clUsuarioE();
             bjDatosClien = objUsuariosL.mtdLogin(objDatos);
+           
             if (bjDatosClien != null)
             {
 
+                Session["usuario"] = bjDatosClien.nombreCliente + " " + bjDatosClien.apellidos;
+                Session["idUser"] = bjDatosClien.idCliente;
 
 
-                Session["cliente"] = objDatos.nombreCliente + " " + objDatos.apellidos;
-                //Session["nombreEmpleado"] = objDatosClien.nombreEmpleado;
-                //Session["apellidos"] = objDatosClien.apellidosEmple;
+                //Session["user"] = bjDatosClien.nombreCliente + " " + bjDatosClien.apellidos;
+                //Session["idUser"] = bjDatosClien.idCliente;
                 Response.Redirect("Presentacion/frmHome.aspx");
 
 
@@ -199,7 +201,9 @@ namespace ManageYourBussines
             }
             else
             {
-                lblMensaje.Text = "usuario no Registrado ";
+                //lblMensaje.Text = "usuario no Registrado ";
+                ScriptManager.RegisterClientScriptBlock(this.Page, this.GetType(), "AlertaLoginContrasenia", "window.onload = function(){ alert(' el email o La contraseña  es incorrecta.'); };", true);
+
             }
 
 
@@ -220,8 +224,8 @@ namespace ManageYourBussines
 
 
 
-                Session["EmpleadosVen"] = objDatos.nombreEmpleado + " " + objDatos.apellidosEmple;
-                Session["nombreEmpleado"] = objDatosClien.nombreEmpleado;
+                Session["empleado"] = objDatosClien.nombreEmpleado + " " + objDatos.apellidosEmple;
+          
                 Session["apellidos"] = objDatosClien.apellidosEmple;
                 Response.Redirect("Presentacion/frmLogin.aspx");
 
@@ -233,7 +237,9 @@ namespace ManageYourBussines
             }
             else
             {
-                lblMensaje.Text = "usuario no Registrado ";
+                ScriptManager.RegisterClientScriptBlock(this.Page, this.GetType(), "AlertaLoginContrasenia", "window.onload = function(){ alert(' el email o La contraseña es incorrecta.'); };", true);
+
+                //lblMensaje.Text = "usuario no Registrado ";
             }
         }
 

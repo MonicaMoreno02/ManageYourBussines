@@ -28,21 +28,21 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
-<body class="bg-gradient-primary">
+<body class="bg-gradient-secondary">
 
 
 
 
 
       
- 
+ <asp:Label ForeColor="White" ID="Label1" runat="server">llll</asp:Label>
      
+       <asp:Label ForeColor="White" ID="lblEmpleado1" runat="server"></asp:Label>
 
 
 
 
-
-    <div class="container">
+<%--    <div class="container">
 
         <!-- Outer Row -->
         <div class="row justify-content-center">
@@ -60,48 +60,14 @@
                                         <h1 class="h4 text-gray-900 mb-4">Iniciar Sesion !</h1>
                                     </div>
                                     <form class="user" runat="server">
-                                        <div class="form-group">
-
-
-
-                                            <div class="mb-3 mt-3">
-                                                <label for="email" class="form-label">Email:</label>
-
-                                                <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="Email usuario" TextMode="Email"></asp:TextBox>
-
-
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="pwd" class="form-label">Password:</label>
-
-
-                                                <asp:TextBox ID="txtClave" runat="server" CssClass="form-control" placeholder="password" TextMode="Password"></asp:TextBox>
-
-
-                                                <div class="container mt-3">
-                                              
-                                                   <div class="dropdown">
-                                                        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-                                                           elija el usuario para ingresar
-                                                        </button>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a class="dropdown-item" href="#">Cliente</a></li>
-                                                            <li><a class="dropdown-item" href="#">Administrado</a></li>
-                                                      
-                                                        </ul>
-                                                    </div>
-                                                </div>
-
+                                     
                                                 <div class=" col mt-3 mb-3">
                                                     <asp:Label ID="lblMensaje" runat="server" Text=""></asp:Label>
 
-
-
-
-
+                                                   
 
                                                 </div>
-                                            </div>
+                                            
                                             <center>
 <%--                                                <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" OnClick="btnIngresar_Click" /></center>--%>
 
@@ -131,7 +97,7 @@
 
             </div>
 
-        </div>
+        </div>--%>
 
     </div>
 

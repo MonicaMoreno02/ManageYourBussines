@@ -14,55 +14,55 @@ namespace ManageYourBussines.Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            lblEmpleado.Text = Session["usuario"].ToString();
+            //Label lblUsuario = this.Master.FindControl("lblUsuario") as Label;
+            //HtmlAnchor crearCuenta = (HtmlAnchor)this.Master.FindControl("crearCuenta");
+            //HtmlAnchor crearEvento = (HtmlAnchor)this.Master.FindControl("crearEvento");
 
-            Label lblUsuario = this.Master.FindControl("lblUsuario") as Label;
-            HtmlAnchor crearCuenta = (HtmlAnchor)this.Master.FindControl("crearCuenta");
-            HtmlAnchor crearEvento = (HtmlAnchor)this.Master.FindControl("crearEvento");
+            ////crearEvento.Visible = false;
 
-            //crearEvento.Visible = false;
-
-            if (Session["cliente"] == null && Session["idCliente"] == null && Session["empleado"] == null
-                && Session["idEmpleado"] == null)
-            {
-                lblUsuario.Visible = false;
-
-
-            }
-            else
-            {
-
-                lblUsuario.Visible = true;
-                //btnIngresarLogin.Visible = false;
-
-                if (Session["empleado"] == null)
-                {
-                    lblUsuario.Text = Session["cliente"].ToString();
-                    //crearCuenta.Visible = false;
+            //if (Session["cliente"] == null && Session["idCliente"] == null && Session["empleado"] == null
+            //    && Session["idEmpleado"] == null)
+            //{
+            //    lblUsuario.Visible = false;
 
 
-                    //if (Session["idTipoRol"].ToString() == "3")
-                    //{
-                    //    crearEvento.Visible = true;
-                    //}
+            //}
+            //else
+            //{
 
-                }
-                else
-                {
-                    lblUsuario.Text = Session["empleado"].ToString();
-                    //crearCuenta.Visible = false;
+            //    lblUsuario.Visible = true;
+            //    //btnIngresarLogin.Visible = false;
 
-
-                    //if (Session["idTipoRol"].ToString() == "3")
-                    //{
-                    //    crearEvento.Visible = true;
-                    //}
-                }
+            //    if (Session["empleado"] == null)
+            //    {
+            //        lblUsuario.Text = Session["cliente"].ToString();
+            //        //crearCuenta.Visible = false;
 
 
+            //        //if (Session["idTipoRol"].ToString() == "3")
+            //        //{
+            //        //    crearEvento.Visible = true;
+            //        //}
+
+            //    }
+            //    else
+            //    {
+            //        lblUsuario.Text = Session["empleado"].ToString();
+            //        //crearCuenta.Visible = false;
 
 
-                //txtID.Attributes.Add("style", "DISPLAY:none");
-            }
+            //        //if (Session["idTipoRol"].ToString() == "3")
+            //        //{
+            //        //    crearEvento.Visible = true;
+            //        //}
+            //    }
+
+
+
+
+            //    //txtID.Attributes.Add("style", "DISPLAY:none");
+            //}
         }
 
 

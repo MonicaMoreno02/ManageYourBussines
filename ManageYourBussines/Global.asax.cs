@@ -18,10 +18,16 @@ namespace ManageYourBussines
         protected void Session_Start(object sender, EventArgs e)
         {
 
+            Session["usuario"] = "";
+            Session["apellidos"] = "";
 
-            Session["cliente"] = "";
             Session["empleado"] = "";
-            Session["EmpleadosVen"] = "";
+            Session["apellidos"] = "";
+
+
+            //Session["cliente"] = "";
+            //Session["empleado"] = "";
+            //Session["EmpleadosVen"] = "";
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)

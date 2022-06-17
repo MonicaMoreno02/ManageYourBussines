@@ -42,6 +42,15 @@ namespace ManageYourBussines.Presentacion
         protected global::System.Web.UI.WebControls.Label lblEmpleado;
 
         /// <summary>
+        /// Control lblEmpleado1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblEmpleado1;
+
+        /// <summary>
         /// Control lblApellidos.
         /// </summary>
         /// <remarks>
@@ -49,15 +58,6 @@ namespace ManageYourBussines.Presentacion
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblApellidos;
-
-        /// <summary>
-        /// Control lblUsuario.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblUsuario;
 
         /// <summary>
         /// Control btnEditar.

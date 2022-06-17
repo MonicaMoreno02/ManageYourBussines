@@ -13,6 +13,7 @@ namespace ManageYourBussines.Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            lblEmpleado1.Text = Session["empleado"].ToString();
 
         }
 
