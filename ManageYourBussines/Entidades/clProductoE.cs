@@ -10,7 +10,7 @@ namespace ManageYourBussines.Entidades
     public class clProductoE
     {
         public int idProducto { get; set; }
-        public string nombre { get; set; }
+        public string nombreProducto { get; set; }
         public string descripcion { get; set; }
         public float precio { get; set; }
         public int cantidadStock { get; set; }
@@ -20,9 +20,6 @@ namespace ManageYourBussines.Entidades
         public string material { get; set; }
         public string caracteristicas { get; set; }
         public string imagen { get; set; }
-
-       
-
 
     }
 }

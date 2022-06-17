@@ -24,7 +24,7 @@ namespace ManageYourBussines.Presentacion
             DataTable inventario = new DataTable();
             inventario.Columns.Add(new DataColumn("#", typeof(int)));
             inventario.Columns.Add(new DataColumn("idproducto", typeof(string)));
-            inventario.Columns.Add(new DataColumn("nombre", typeof(string)));
+            inventario.Columns.Add(new DataColumn("nombreProducto", typeof(string)));
             inventario.Columns.Add(new DataColumn("descripcion", typeof(string)));
             inventario.Columns.Add(new DataColumn("precio", typeof(float)));
             inventario.Columns.Add(new DataColumn("cantidadStock", typeof(int)));
@@ -42,7 +42,7 @@ namespace ManageYourBussines.Presentacion
                 {
                     int numero = i + 1;
                     int idproducto = listInvent[i].idProducto;
-                    string nombre = listInvent[i].nombre;
+                    string nombreProducto = listInvent[i].nombreProducto;
                     string describcion = listInvent[i].descripcion;
                     float precio = listInvent[i].precio;
                     int cantidadstok = listInvent[i].cantidadStock;
@@ -53,7 +53,7 @@ namespace ManageYourBussines.Presentacion
                     row["#"] = numero;
                     row["idproducto"] = idproducto;
                     ;
-                    row["nombre"] = nombre;
+                    row["nombreProducto"] = nombreProducto;
                     row["descripcion"] = describcion;
                     row["precio"] = precio;
 
@@ -74,7 +74,7 @@ namespace ManageYourBussines.Presentacion
                     DataRow row = inventario.NewRow();
                     row["#"] = i + 1;
 
-                    row["nombre"] = "vtotal";
+                    row["nombreProducto"] = "vtotal";
                     row["descripcion"] = "";
                     row["precio"] = 0;
 
@@ -90,7 +90,7 @@ namespace ManageYourBussines.Presentacion
                 //int cuenta=listInvent.Count;
                 //for (int i = 0; i < cuenta; i++)
                 //{
-                //    string producto = listInvent[i].nombre;
+                //    string producto = listInvent[i].nombreProducto;
                 //    string idproducto= listInvent[i].idProducto.ToString();
                 //    ListItem j;
                 //    j = new ListItem(producto,idproducto);
@@ -117,7 +117,7 @@ namespace ManageYourBussines.Presentacion
                 DataTable dataTable = new DataTable("Table " + (i + 1));
                 dataTable.Columns.Add(new DataColumn("#", typeof(int)));
                 dataTable.Columns.Add(new DataColumn("idproducto", typeof(string)));
-                dataTable.Columns.Add(new DataColumn("nombre", typeof(string)));
+                dataTable.Columns.Add(new DataColumn("nombreProducto", typeof(string)));
                 dataTable.Columns.Add(new DataColumn("describcion", typeof(string)));
                 dataTable.Columns.Add(new DataColumn("precio", typeof(float)));
                 dataTable.Columns.Add(new DataColumn("cantidadStock", typeof(int)));
@@ -133,14 +133,14 @@ namespace ManageYourBussines.Presentacion
                     {
                         int numero = j + 1;
                         int idproducto = listInvent[j].idProducto;
-                        string nombre = listInvent[j].nombre;
+                        string nombreProducto = listInvent[j].nombreProducto;
                         string describcion = listInvent[j].descripcion;
                         float precio = listInvent[j].precio;
                         int cantidadstok = listInvent[j].cantidadStock;
                         total = precio * cantidadstok;
                         vtot = vtot + total;
 
-                        dataTable.Rows.Add(new object[] { numero, idproducto, nombre, describcion, precio, cantidadstok, total });
+                        dataTable.Rows.Add(new object[] { numero, idproducto, nombreProducto, describcion, precio, cantidadstok, total });
                     }
                     else
                     {
@@ -189,7 +189,7 @@ namespace ManageYourBussines.Presentacion
                 DataTable dataTable = new DataTable("Table " + (i + 1));
                 dataTable.Columns.Add(new DataColumn("#", typeof(int)));
                 dataTable.Columns.Add(new DataColumn("idproducto", typeof(string)));
-                dataTable.Columns.Add(new DataColumn("nombre", typeof(string)));
+                dataTable.Columns.Add(new DataColumn("nombreProducto", typeof(string)));
                 dataTable.Columns.Add(new DataColumn("describcion", typeof(string)));
                 dataTable.Columns.Add(new DataColumn("precio", typeof(float)));
                 dataTable.Columns.Add(new DataColumn("cantidadStock", typeof(int)));
@@ -205,14 +205,14 @@ namespace ManageYourBussines.Presentacion
                     {
                         int numero = j + 1;
                         int idproducto = listInvent[j].idProducto;
-                        string nombre = listInvent[j].nombre;
+                        string nombreProducto = listInvent[j].nombreProducto;
                         string describcion = listInvent[j].descripcion;
                         float precio = listInvent[j].precio;
                         int cantidadstok = listInvent[j].cantidadStock;
                         total = precio * cantidadstok;
                         vtot = vtot + total;
 
-                        dataTable.Rows.Add(new object[] { numero, idproducto, nombre, describcion, precio, cantidadstok, total });
+                        dataTable.Rows.Add(new object[] { numero, idproducto, nombreProducto, describcion, precio, cantidadstok, total });
                     }
                     else
                     {
@@ -245,6 +245,11 @@ namespace ManageYourBussines.Presentacion
             workbook.Save("D:/report.pdf");
 
             ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Archivo creado correctamente guardado en: D:/report.pdf');", true);
+        }
+
+        protected void btnregresar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("frmAdmin.aspx");
         }
     }
     }

@@ -31,62 +31,72 @@ namespace ManageYourBussines.Presentacion
             List<clVentaE> lista = new List<clVentaE>();
             DataTable datos = new  DataTable();
             lista = objVentaL.mtdListarVenta(objfactura);
+           
             datos.Columns.Add(new DataColumn("#", typeof(int)));
-            datos.Columns.Add(new DataColumn("nombre", typeof(string)));
+            datos.Columns.Add(new DataColumn("nombreProducto", typeof(string)));
             datos.Columns.Add(new DataColumn("codigoVenta", typeof(string)));
             datos.Columns.Add(new DataColumn("precio", typeof(float)));
             datos.Columns.Add(new DataColumn("cantidad", typeof(int)));
             datos.Columns.Add(new DataColumn("total", typeof(float)));
 
             int cuenta = lista.Count;
-            int num = cuenta + 1;
-            float vtot = 0;
-            float total = 0;
-            for (int i = 0; i < num; i++)
+            if (cuenta != 0)
             {
-                if (i!=cuenta)
+
+
+                int num = cuenta + 1;
+                float vtot = 0;
+                float total = 0;
+                for (int i = 0; i < num; i++)
                 {
-                    int numero = i + 1;
-                    string nombre = lista[i].nombre;
-                    string codigoVenta = lista[i].codigoVenta;
-                    float precio = lista[i].precio;
-                    int cantidad = lista[i].cantidad;
-                    total = precio*cantidad;
-                 
-                    vtot = vtot + total;
-                    DataRow row = datos.NewRow();
-                    row["#"] = numero;
-                    row["nombre"] = nombre;
-                    row["codigoVenta"] = codigoVenta;
-                    row["precio"] = precio;
-                    row["cantidad"] = cantidad;
-                    row["total"] = total;
-                    datos.Rows.Add(row);
+                    if (i != cuenta)
+                    {
+                        int numero = i + 1;
+                        string nombre = lista[i].nombreProducto;
+                        string codigoVenta = lista[i].codigoVenta;
+                        float precio = lista[i].precio;
+                        int cantidad = lista[i].cantidad;
+                        total = precio * cantidad;
+
+                        vtot = vtot + total;
+                        DataRow row = datos.NewRow();
+                        row["#"] = numero;
+                        row["nombreProducto"] = nombre;
+                        row["codigoVenta"] = codigoVenta;
+                        row["precio"] = precio;
+                        row["cantidad"] = cantidad;
+                        row["total"] = total;
+                        datos.Rows.Add(row);
+
+                    }
+                    else
+                    {
+                        string fech = lista[0].fechaVenta.ToString("yyyy/MM/dd");
+
+                        vtot = vtot + total;
+                        DataRow row = datos.NewRow();
+                        row["#"] = i + 1;
+                        row["nombreProducto"] = fech;
+                        row["codigoVenta"] = "";
+                        row["precio"] = 0;
+                        row["cantidad"] = 0;
+                        row["total"] = vtot;
+                        datos.Rows.Add(row);
+
+
+                    }
 
                 }
-                else
-                {
-                    string fech = lista[0].fechaVenta.ToString("yyyy/MM/dd");
 
-                    //vtot = vtot + total;
-                    DataRow row = datos.NewRow();
-                    row["#"] = i+1;
-                    row["nombre"] = fech;
-                     row["codigoVenta"] = "";
-                    row["precio"] = 0;
-                    row["cantidad"] =0;
-                    row["total"] = vtot;
-                    datos.Rows.Add(row);
-
-
-                }
-
+                GridView1.DataSource = datos;
+                GridView1.DataBind();
+                GridView1.UseAccessibleHeader = true;
+                //GridView1.HeaderRow.TableSection = TableRowSection.TableHeader;
             }
-
-            GridView1.DataSource = datos;
-            GridView1.DataBind();
-            GridView1.UseAccessibleHeader = true;
-            //GridView1.HeaderRow.TableSection = TableRowSection.TableHeader;
+            else
+            {
+                Response.Redirect("frmHome.aspx");
+            }
         }
 
         protected void btnPdf_Click(object sender, EventArgs e)
@@ -110,7 +120,7 @@ namespace ManageYourBussines.Presentacion
 
                 DataTable dataTable = new DataTable("Table " + (i + 1));
                 dataTable.Columns.Add(new DataColumn("#", typeof(int)));
-                dataTable.Columns.Add(new DataColumn("nombre", typeof(string)));
+                dataTable.Columns.Add(new DataColumn("nombreProducto", typeof(string)));
                 dataTable.Columns.Add(new DataColumn("codigoVenta", typeof(string)));
                 dataTable.Columns.Add(new DataColumn("precio", typeof(float)));
                 dataTable.Columns.Add(new DataColumn("cantidad", typeof(int)));
@@ -125,23 +135,23 @@ namespace ManageYourBussines.Presentacion
                     if (i != cuenta)
                     {
                         int numero = j + 1;
-                        string nombre = listVenta[j].nombre;
+                        string nombreProducto = listVenta[j].nombreProducto;
                         string codigoVenta = listVenta[j].codigoVenta;
                         float precio = listVenta[j].precio;
                         int cantidad = listVenta[j].cantidad;
                         total = precio * cantidad;
                         vtot = vtot + total;
-                        dataTable.Rows.Add(new object[] { numero, nombre, codigoVenta, precio, cantidad, total });
+                        dataTable.Rows.Add(new object[] { numero, nombreProducto, codigoVenta, precio, cantidad, total });
                     }
                     else
                     {
                         int numero=0;
-                        string nombre = "";
+                        string nombreProducto = "";
                         string codigoVenta = "";
                         float precio = 0;
                         int cantidad = 0;
                         total = vtot;
-                        dataTable.Rows.Add(new object[] { numero, nombre, codigoVenta, precio, cantidad, vtot });
+                        dataTable.Rows.Add(new object[] { numero, nombreProducto, codigoVenta, precio, cantidad, vtot });
                     }
                 }
                 dataset.Tables.Add(dataTable);

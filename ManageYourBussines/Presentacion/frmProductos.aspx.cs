@@ -13,8 +13,8 @@ namespace ManageYourBussines.Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            string valor = Convert.ToString(Request.QueryString["idP"]);
+          
+                string valor = Convert.ToString(Request.QueryString["idP"]);
             lblID.Attributes.Add("style", "DISPLAY:none");
             lblID.Text = valor;
             int idProducto = int.Parse(valor);
@@ -27,7 +27,7 @@ namespace ManageYourBussines.Presentacion
             listarProductos = objProductos.mtdListarD(objProducto);
 
 
-            string nombre = listarProductos[0].nombre;
+            string nombre = listarProductos[0].nombreProducto;
             lbnombre.Text = nombre;
             string imagen = listarProductos[0].imagen;
             Image1.ImageUrl = imagen;
@@ -65,7 +65,7 @@ namespace ManageYourBussines.Presentacion
                 List<clProductoE> listar = new List<clProductoE>();
                 listar = objProductoL.mtdListarProd(objProducto);
 
-                string nombre = listar[0].nombre;
+                string nombre = listar[0].nombreProducto;
                 string describsion = listar[0].descripcion;
                 float precio = listar[0].precio;
                 int cantidadstock = listar[0].cantidadStock;
@@ -88,7 +88,7 @@ namespace ManageYourBussines.Presentacion
                 objcarrito.precio = precio;
                 objcarrito.cantidadstock = cantidadstock;
                 objcarrito.catidad = catidad;
-                objcarrito.nombre = nombre;
+                objcarrito.nombreProducto = nombre;
                 objcarrito.Imagen = Imagen;
 
                 clCarritoL objCarritoL = new clCarritoL();

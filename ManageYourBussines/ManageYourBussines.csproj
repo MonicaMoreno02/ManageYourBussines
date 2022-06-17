@@ -54,6 +54,7 @@
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="ReachFramework" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Printing" />
     <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
@@ -80,12 +81,31 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.aspx" />
-    <Content Include="Presentacion\frmNomina.aspx" />
-    <Content Include="Presentacion\frmSobreNosotros.aspx" />
+    <Content Include="loginEmpleado.aspx" />
+    <Content Include="plantilla 2\css\style.css" />
+    <Content Include="plantilla 2\fonts\material-icon\css\material-design-iconic-font.css" />
+    <Content Include="plantilla 2\fonts\material-icon\css\material-design-iconic-font.min.css" />
+    <Content Include="plantilla 2\fonts\material-icon\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="plantilla 2\fonts\roboto-slab\roboto-slab-v7-latin-300.svg" />
+    <Content Include="plantilla 2\fonts\roboto-slab\roboto-slab-v7-latin-700.svg" />
+    <Content Include="plantilla 2\fonts\roboto-slab\roboto-slab-v7-latin-regular.svg" />
+    <Content Include="plantilla 2\images\body-bg.jpg" />
+    <Content Include="plantilla 2\images\fondo.jpg" />
+    <Content Include="plantilla 2\images\form-img.jpg" />
+    <Content Include="plantilla 2\index.html" />
+    <Content Include="plantilla 2\js\main.js" />
+    <Content Include="plantilla 2\readme.txt" />
+    <Content Include="plantilla 2\vendor\jquery\jquery-ui.min.js" />
+    <Content Include="plantilla 2\vendor\jquery\jquery.min.js" />
+    <Content Include="Presentacion\frmAbout.aspx" />
+    <Content Include="Presentacion\frmAdminProductos.aspx" />
     <Content Include="Presentacion\frmbalance.aspx" />
     <Content Include="Presentacion\frmcarrito.aspx" />
+    <Content Include="Presentacion\frmClientes.aspx" />
     <Content Include="Presentacion\frmContactenos.aspx" />
     <Content Include="Presentacion\frmdetalles.aspx" />
+    <Content Include="Presentacion\frmAdmin.aspx" />
+    <Content Include="Presentacion\frmEmpleados.aspx" />
     <Content Include="Presentacion\frmHome.aspx" />
     <Content Include="Presentacion\frmInventario.aspx" />
     <Content Include="Presentacion\frmProductos.aspx" />
@@ -95,13 +115,18 @@
     <Content Include="Presentacion\frmTareas.aspx" />
     <Content Include="Presentacion\frmVenta.aspx" />
     <Content Include="Presentacion\recursos\css\bootstrap.css" />
+    <Content Include="Presentacion\recursos\css\estilosEmple.css" />
     <Content Include="Presentacion\recursos\css\font-awesome.min.css" />
     <Content Include="Presentacion\recursos\css\responsive.css" />
+    <Content Include="Presentacion\recursos\css\sb-admin-2.css" />
+    <Content Include="Presentacion\recursos\css\sb-admin-2.min.css" />
     <Content Include="Presentacion\recursos\css\style.css" />
+    <Content Include="Presentacion\recursos\css\style2.css" />
     <Content Include="Presentacion\recursos\images\about-img.png" />
     <Content Include="Presentacion\recursos\images\anadir-al-carrito %281%29.png" />
     <Content Include="Presentacion\recursos\images\base.jpg" />
     <Content Include="Presentacion\recursos\images\baseg.jpg" />
+    <Content Include="Presentacion\recursos\css\style2.css" />
     <Content Include="Presentacion\recursos\images\biblioteca1.png" />
     <Content Include="Presentacion\recursos\images\cama.jpg" />
     <Content Include="Presentacion\recursos\images\carrito-de-compras.png" />
@@ -158,13 +183,55 @@
     <Content Include="Presentacion\recursos\images\vision5.jpg" />
     <Content Include="Presentacion\recursos\js\bootstrap.js" />
     <Content Include="Presentacion\recursos\js\custom.js" />
+    <Content Include="Presentacion\recursos\js\datatables\dataTables.bootstrap4.css" />
+    <Content Include="Presentacion\recursos\js\datatables\dataTables.bootstrap4.js" />
+    <Content Include="Presentacion\recursos\js\datatables\dataTables.bootstrap4.min.css" />
+    <Content Include="Presentacion\recursos\js\datatables\dataTables.bootstrap4.min.js" />
+    <Content Include="Presentacion\recursos\js\datatables\jquery.dataTables.js" />
+    <Content Include="Presentacion\recursos\js\datatables\jquery.dataTables.min.js" />
+    <Content Include="Presentacion\recursos\js\demo\chart-area-demo.js" />
+    <Content Include="Presentacion\recursos\js\demo\chart-bar-demo.js" />
+    <Content Include="Presentacion\recursos\js\demo\chart-pie-demo.js" />
+    <Content Include="Presentacion\recursos\js\demo\datatables-demo.js" />
+    <Content Include="Presentacion\recursos\js\formulario.js" />
+    <Content Include="Presentacion\recursos\js\JavaEmpleados.js" />
+    <Content Include="Presentacion\recursos\js\JavaClientes.js" />
+    <Content Include="Presentacion\recursos\js\JavaSeguridad.js" />
     <Content Include="Presentacion\recursos\js\datosDataTable2.js" />
     <Content Include="Presentacion\recursos\js\jquery-3.4.1.min.js" />
     <Content Include="Presentacion\Recursos\js\datosDatable.js" />
-    <Content Include="Presentacion\WebForm1.aspx" />
+    <Content Include="Presentacion\recursos\js\main.js" />
+    <Content Include="Presentacion\recursos\js\sb-admin-2.js" />
+    <Content Include="Presentacion\recursos\js\sb-admin-2.min.js" />
+    <Content Include="Presentacion\recursos\js\sugerenciasJs.js" />
+    <Content Include="Presentacion\recursos\js\tablaJs.js" />
+    <Content Include="Presentacion\recursos\vendor\datatables\dataTables.bootstrap4.css" />
+    <Content Include="Presentacion\recursos\vendor\datatables\dataTables.bootstrap4.js" />
+    <Content Include="Presentacion\recursos\vendor\datatables\dataTables.bootstrap4.min.css" />
+    <Content Include="Presentacion\recursos\vendor\datatables\dataTables.bootstrap4.min.js" />
+    <Content Include="Presentacion\recursos\vendor\datatables\jquery.dataTables.js" />
+    <Content Include="Presentacion\recursos\vendor\datatables\jquery.dataTables.min.js" />
+    <Content Include="Presentacion\recursos\vendor\datepicker\daterangepicker.css" />
+    <Content Include="Presentacion\recursos\vendor\datepicker\daterangepicker.js" />
+    <Content Include="Presentacion\recursos\vendor\datepicker\moment.min.js" />
+    <Content Include="Presentacion\recursos\vendor\font-awesome-4.7\css\all.min.css" />
+    <Content Include="Presentacion\recursos\vendor\font-awesome-4.7\css\font-awesome.css" />
+    <Content Include="Presentacion\recursos\vendor\font-awesome-4.7\css\font-awesome.min.css" />
+    <Content Include="Presentacion\recursos\vendor\font-awesome-4.7\fonts\fontawesome-webfont.svg" />
+    <Content Include="Presentacion\recursos\vendor\font-awesome-4.7\HELP-US-OUT.txt" />
+    <Content Include="Presentacion\recursos\vendor\jquery\jquery.js" />
+    <Content Include="Presentacion\recursos\vendor\jquery\jquery.min.js" />
+    <Content Include="Presentacion\recursos\vendor\mdi-font\css\material-design-iconic-font.css" />
+    <Content Include="Presentacion\recursos\vendor\mdi-font\css\material-design-iconic-font.min.css" />
+    <Content Include="Presentacion\recursos\vendor\mdi-font\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="Presentacion\recursos\vendor\select2\select2.min.css" />
+    <Content Include="Presentacion\recursos\vendor\select2\select2.min.js" />
     <Content Include="recuperar.aspx" />
+    <Content Include="recuperarEmple.aspx" />
     <Content Include="recursos\css\bootstrap.css" />
     <Content Include="recursos\css\font-awesome.min.css" />
+    <Content Include="Presentacion\recursos\css\main.css" />
+    <Content Include="Presentacion\recursos\css\main.min.css" />
     <Content Include="recursos\css\responsive.css" />
     <Content Include="recursos\css\style.css" />
     <Content Include="recursos\images\49c8e403cd1929e9e7b02126824ff831.jpg" />
@@ -179,23 +246,9 @@
     <Content Include="recursos\images\carretilla.jpeg" />
     <Content Include="recursos\images\carrito-de-compras.png" />
     <Content Include="recursos\images\decoracion.jpeg" />
-    <Content Include="recursos\images\about-img.png" />
-    <Content Include="recursos\images\client1.jpg" />
-    <Content Include="recursos\images\client2.jpg" />
     <Content Include="recursos\images\comedores.jpg" />
     <Content Include="recursos\images\decoración2.jpeg" />
     <Content Include="recursos\images\escritorio.jpg" />
-    <Content Include="recursos\images\f1.png" />
-    <Content Include="recursos\images\f2.png" />
-    <Content Include="recursos\images\f3.png" />
-    <Content Include="recursos\images\f4.png" />
-    <Content Include="recursos\images\f5.png" />
-    <Content Include="recursos\images\f6.png" />
-    <Content Include="recursos\images\f7.png" />
-    <Content Include="recursos\images\f8.png" />
-    <Content Include="recursos\images\f9.png" />
-    <Content Include="recursos\images\favicon.png" />
-    <Content Include="recursos\images\hero-bg.jpg" />
     <Content Include="recursos\images\biblioteca1.png" />
     <Content Include="recursos\images\Escritorio1.png" />
     <Content Include="recursos\images\Escritorio2.png" />
@@ -209,7 +262,6 @@
     <Content Include="recursos\images\icons8-casa-48.png">
       <BrowseToURL>recursos\images\icons8-casa-48.png</BrowseToURL>
     </Content>
-    <Content Include="recursos\images\imagen.jpeg" />
     <Content Include="recursos\images\iconoEscritorio.png" />
     <Content Include="recursos\images\isla.jpg" />
     <Content Include="Presentacion\recursos\images\isla2.jpg" />
@@ -244,23 +296,32 @@
     <Content Include="recursos\images\vision.png" />
     <Content Include="recursos\js\bootstrap.js" />
     <Content Include="recursos\js\custom.js" />
+    <Content Include="Presentacion\recursos\js\global.js" />
     <Content Include="recursos\js\jquery-3.4.1.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\clBalanceD.cs" />
     <Compile Include="Datos\clCarritoD.cs" />
+    <Compile Include="Datos\clClienteD.cs" />
     <Compile Include="Datos\clConexion.cs" />
+    <Compile Include="Datos\clEmpleadoD.cs" />
+    <Compile Include="Datos\clEmpleDao.cs" />
     <Compile Include="Datos\clEmpleadosD.cs" />
     <Compile Include="Datos\clProductoD.cs" />
     <Compile Include="Datos\clTareasD.cs" />
+    <Compile Include="Datos\clSugerenciasD.cs" />
     <Compile Include="Datos\clUserDao.cs" />
     <Compile Include="Datos\clUsuarioD.cs" />
     <Compile Include="Datos\clVentaD.cs" />
     <Compile Include="Entidades\clBalanceE.cs" />
     <Compile Include="Entidades\clCarritoE.cs" />
+    <Compile Include="Entidades\clDetallesE.cs" />
+    <Compile Include="Entidades\clEmpleadoE.cs" />
     <Compile Include="Entidades\clEmpleadosE.cs" />
     <Compile Include="Entidades\clProductoE.cs" />
+    <Compile Include="Entidades\clSeguridadE.cs" />
+    <Compile Include="Entidades\clSugerenciasE.cs" />
     <Compile Include="Entidades\clTareasE.cs" />
     <Compile Include="Entidades\clUsuarioE.cs" />
     <Compile Include="Entidades\clVentaE.cs" />
@@ -271,12 +332,22 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Logica\clClienteL.cs" />
+    <Compile Include="Logica\clEmpleadoL.cs" />
     <Compile Include="Logica\clBalanceL.cs" />
     <Compile Include="Logica\clEmpleadosL.cs" />
     <Compile Include="Logica\clProductoL.cs" />
+    <Compile Include="Logica\clSugerenciasL.cs" />
     <Compile Include="Logica\clTareasL.cs" />
     <Compile Include="Logica\clUsuarioL.cs" />
     <Compile Include="Logica\clCarritoL.cs" />
+    <Compile Include="loginEmpleado.aspx.cs">
+      <DependentUpon>loginEmpleado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="loginEmpleado.aspx.designer.cs">
+      <DependentUpon>loginEmpleado.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MailServices1\MasterMailServer.cs" />
     <Compile Include="MailServices1\systemSupportMail.cs" />
     <Compile Include="Logica\clVentaL.cs" />
@@ -294,6 +365,13 @@
     <Compile Include="Presentacion\frmSobreNosotros.aspx.designer.cs">
       <DependentUpon>frmSobreNosotros.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\frmAdminProductos.aspx.cs">
+      <DependentUpon>frmAdminProductos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmAdminProductos.aspx.designer.cs">
+      <DependentUpon>frmAdminProductos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\frmbalance.aspx.cs">
       <DependentUpon>frmbalance.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -308,6 +386,13 @@
     <Compile Include="Presentacion\frmcarrito.aspx.designer.cs">
       <DependentUpon>frmcarrito.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\frmClientes.aspx.cs">
+      <DependentUpon>frmClientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmClientes.aspx.designer.cs">
+      <DependentUpon>frmClientes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\frmContactenos.aspx.cs">
       <DependentUpon>frmContactenos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -321,6 +406,20 @@
     </Compile>
     <Compile Include="Presentacion\frmdetalles.aspx.designer.cs">
       <DependentUpon>frmdetalles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmAdmin.aspx.cs">
+      <DependentUpon>frmAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmAdmin.aspx.designer.cs">
+      <DependentUpon>frmAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmEmpleados.aspx.cs">
+      <DependentUpon>frmEmpleados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmEmpleados.aspx.designer.cs">
+      <DependentUpon>frmEmpleados.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmHome.aspx.cs">
       <DependentUpon>frmHome.aspx</DependentUpon>
@@ -364,6 +463,27 @@
     <Compile Include="Presentacion\frmRegistrar.aspx.designer.cs">
       <DependentUpon>frmRegistrar.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\frmSeguridadSocial.aspx.cs">
+      <DependentUpon>frmSeguridadSocial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmSeguridadSocial.aspx.designer.cs">
+      <DependentUpon>frmSeguridadSocial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmSugerencias.aspx.cs">
+      <DependentUpon>frmSugerencias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmSugerencias.aspx.designer.cs">
+      <DependentUpon>frmSugerencias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmVendedor.aspx.cs">
+      <DependentUpon>frmVendedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmVendedor.aspx.designer.cs">
+      <DependentUpon>frmVendedor.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\frmTareas.aspx.cs">
       <DependentUpon>frmTareas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -392,6 +512,13 @@
     <Compile Include="Presentacion\WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\Site2.Master.cs">
+      <DependentUpon>Site2.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Site2.Master.designer.cs">
+      <DependentUpon>Site2.Master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="recuperar.aspx.cs">
       <DependentUpon>recuperar.aspx</DependentUpon>
@@ -400,6 +527,15 @@
     <Compile Include="recuperar.aspx.designer.cs">
       <DependentUpon>recuperar.aspx</DependentUpon>
     </Compile>
+    <Compile Include="recuperarEmple.aspx.cs">
+      <DependentUpon>recuperarEmple.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="recuperarEmple.aspx.designer.cs">
+      <DependentUpon>recuperarEmple.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="servicioEmail\MasterServicoMail.cs" />
+    <Compile Include="servicioEmail\systemSupportMail.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -412,6 +548,96 @@
     <Content Include="Presentacion\recursos\fonts\fontawesome-webfont.ttf" />
     <Content Include="Presentacion\recursos\fonts\fontawesome-webfont.woff" />
     <Content Include="Presentacion\recursos\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Presentacion\Site2.Master" />
+    <Content Include="Presentacion\recursos\scss\navs\_global.scss" />
+    <Content Include="Presentacion\recursos\scss\navs\_sidebar.scss" />
+    <Content Include="Presentacion\recursos\scss\navs\_topbar.scss" />
+    <Content Include="Presentacion\recursos\scss\sb-admin-2.scss" />
+    <Content Include="Presentacion\recursos\scss\utilities\_animation.scss" />
+    <Content Include="Presentacion\recursos\scss\utilities\_background.scss" />
+    <Content Include="Presentacion\recursos\scss\utilities\_border.scss" />
+    <Content Include="Presentacion\recursos\scss\utilities\_display.scss" />
+    <Content Include="Presentacion\recursos\scss\utilities\_progress.scss" />
+    <Content Include="Presentacion\recursos\scss\utilities\_rotate.scss" />
+    <Content Include="Presentacion\recursos\scss\utilities\_text.scss" />
+    <Content Include="Presentacion\recursos\scss\_buttons.scss" />
+    <Content Include="Presentacion\recursos\scss\_cards.scss" />
+    <Content Include="Presentacion\recursos\scss\_charts.scss" />
+    <Content Include="Presentacion\recursos\scss\_dropdowns.scss" />
+    <Content Include="Presentacion\recursos\scss\_error.scss" />
+    <Content Include="Presentacion\recursos\scss\_footer.scss" />
+    <Content Include="Presentacion\recursos\scss\_global.scss" />
+    <Content Include="Presentacion\recursos\scss\_login.scss" />
+    <Content Include="Presentacion\recursos\scss\_mixins.scss" />
+    <Content Include="Presentacion\recursos\scss\_navs.scss" />
+    <Content Include="Presentacion\recursos\scss\_utilities.scss" />
+    <Content Include="Presentacion\recursos\scss\_variables.scss" />
+    <Content Include="Presentacion\recursos\vendor\font-awesome-4.7\fonts\fontawesome-webfont.eot" />
+    <Content Include="Presentacion\recursos\vendor\font-awesome-4.7\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Presentacion\recursos\vendor\font-awesome-4.7\fonts\fontawesome-webfont.woff" />
+    <Content Include="Presentacion\recursos\vendor\font-awesome-4.7\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Presentacion\recursos\vendor\font-awesome-4.7\fonts\FontAwesome.otf" />
+    <Content Include="Presentacion\recursos\vendor\mdi-font\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="Presentacion\recursos\vendor\mdi-font\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="Presentacion\recursos\vendor\mdi-font\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="Presentacion\recursos\vendor\mdi-font\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="plantilla 2\.sass-cache\0717b98c6a6bd391fb4f8df76acf1fcea07f5d98\style.scssc" />
+    <Content Include="plantilla 2\.sass-cache\21880c0ffe15753a53f8402e9f64e1077e071510\style.scssc" />
+    <Content Include="plantilla 2\.sass-cache\25faf4a967da51e59251c020bd6e9fa9d1fb23e3\extend.scssc" />
+    <Content Include="plantilla 2\.sass-cache\25faf4a967da51e59251c020bd6e9fa9d1fb23e3\fonts.scssc" />
+    <Content Include="plantilla 2\.sass-cache\25faf4a967da51e59251c020bd6e9fa9d1fb23e3\global.scssc" />
+    <Content Include="plantilla 2\.sass-cache\25faf4a967da51e59251c020bd6e9fa9d1fb23e3\minxi.scssc" />
+    <Content Include="plantilla 2\.sass-cache\25faf4a967da51e59251c020bd6e9fa9d1fb23e3\variables.scssc" />
+    <Content Include="plantilla 2\.sass-cache\2866be86c578bb583fbf023501bb9fd24cc3bf22\extend.scssc" />
+    <Content Include="plantilla 2\.sass-cache\2866be86c578bb583fbf023501bb9fd24cc3bf22\fonts.scssc" />
+    <Content Include="plantilla 2\.sass-cache\2866be86c578bb583fbf023501bb9fd24cc3bf22\global.scssc" />
+    <Content Include="plantilla 2\.sass-cache\2866be86c578bb583fbf023501bb9fd24cc3bf22\minxi.scssc" />
+    <Content Include="plantilla 2\.sass-cache\2866be86c578bb583fbf023501bb9fd24cc3bf22\variables.scssc" />
+    <Content Include="plantilla 2\.sass-cache\3948936f84e1a30385e73a9be140b58b48c82e15\style.scssc" />
+    <Content Include="plantilla 2\.sass-cache\643489b018602f15119d8f44aeb7fc79468873a9\main.scssc" />
+    <Content Include="plantilla 2\.sass-cache\643489b018602f15119d8f44aeb7fc79468873a9\responsive.scssc" />
+    <Content Include="plantilla 2\.sass-cache\7643c8aa2e335ff5e104bc47d8dd7f1a0693bb39\extend.scssc" />
+    <Content Include="plantilla 2\.sass-cache\7643c8aa2e335ff5e104bc47d8dd7f1a0693bb39\fonts.scssc" />
+    <Content Include="plantilla 2\.sass-cache\7643c8aa2e335ff5e104bc47d8dd7f1a0693bb39\global.scssc" />
+    <Content Include="plantilla 2\.sass-cache\7643c8aa2e335ff5e104bc47d8dd7f1a0693bb39\minxi.scssc" />
+    <Content Include="plantilla 2\.sass-cache\7643c8aa2e335ff5e104bc47d8dd7f1a0693bb39\variables.scssc" />
+    <Content Include="plantilla 2\.sass-cache\9dc767a56f3dc2f8a933300255cd2265f13191d4\main.scssc" />
+    <Content Include="plantilla 2\.sass-cache\9dc767a56f3dc2f8a933300255cd2265f13191d4\responsive.scssc" />
+    <Content Include="plantilla 2\.sass-cache\c36f88b26093e3516ab62f7245605adc5c11410b\main.scssc" />
+    <Content Include="plantilla 2\.sass-cache\c36f88b26093e3516ab62f7245605adc5c11410b\responsive.scssc" />
+    <Content Include="plantilla 2\.sass-cache\cec26e9170155d08bca7be48ab33ee76eb89985a\style.scssc" />
+    <Content Include="plantilla 2\.sass-cache\de43089b9300c63e94c69b4ea0269a5b0e6e6a33\main.scssc" />
+    <Content Include="plantilla 2\.sass-cache\de43089b9300c63e94c69b4ea0269a5b0e6e6a33\responsive.scssc" />
+    <Content Include="plantilla 2\.sass-cache\f71149907399ab955d3d70a25ac6bfed8a6004f4\extend.scssc" />
+    <Content Include="plantilla 2\.sass-cache\f71149907399ab955d3d70a25ac6bfed8a6004f4\fonts.scssc" />
+    <Content Include="plantilla 2\.sass-cache\f71149907399ab955d3d70a25ac6bfed8a6004f4\global.scssc" />
+    <Content Include="plantilla 2\.sass-cache\f71149907399ab955d3d70a25ac6bfed8a6004f4\minxi.scssc" />
+    <Content Include="plantilla 2\.sass-cache\f71149907399ab955d3d70a25ac6bfed8a6004f4\variables.scssc" />
+    <Content Include="plantilla 2\css\style.css.map" />
+    <Content Include="plantilla 2\fonts\material-icon\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="plantilla 2\fonts\material-icon\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="plantilla 2\fonts\material-icon\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="plantilla 2\fonts\material-icon\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="plantilla 2\fonts\roboto-slab\roboto-slab-v7-latin-300.eot" />
+    <Content Include="plantilla 2\fonts\roboto-slab\roboto-slab-v7-latin-300.ttf" />
+    <Content Include="plantilla 2\fonts\roboto-slab\roboto-slab-v7-latin-300.woff" />
+    <Content Include="plantilla 2\fonts\roboto-slab\roboto-slab-v7-latin-300.woff2" />
+    <Content Include="plantilla 2\fonts\roboto-slab\roboto-slab-v7-latin-700.eot" />
+    <Content Include="plantilla 2\fonts\roboto-slab\roboto-slab-v7-latin-700.ttf" />
+    <Content Include="plantilla 2\fonts\roboto-slab\roboto-slab-v7-latin-700.woff" />
+    <Content Include="plantilla 2\fonts\roboto-slab\roboto-slab-v7-latin-700.woff2" />
+    <Content Include="plantilla 2\fonts\roboto-slab\roboto-slab-v7-latin-regular.eot" />
+    <Content Include="plantilla 2\fonts\roboto-slab\roboto-slab-v7-latin-regular.ttf" />
+    <Content Include="plantilla 2\fonts\roboto-slab\roboto-slab-v7-latin-regular.woff" />
+    <Content Include="plantilla 2\fonts\roboto-slab\roboto-slab-v7-latin-regular.woff2" />
+    <Content Include="plantilla 2\scss\common\extend.scss" />
+    <Content Include="plantilla 2\scss\common\fonts.scss" />
+    <Content Include="plantilla 2\scss\common\global.scss" />
+    <Content Include="plantilla 2\scss\common\minxi.scss" />
+    <Content Include="plantilla 2\scss\common\variables.scss" />
+    <Content Include="plantilla 2\scss\layouts\main.scss" />
+    <Content Include="plantilla 2\scss\layouts\responsive.scss" />
+    <Content Include="plantilla 2\scss\style.scss" />
     <Content Include="recursos\images\icono.jpg.webp" />
     <Content Include="recursos\css\style.css.map" />
     <Content Include="recursos\css\style.scss" />

@@ -28,8 +28,9 @@ namespace ManageYourBussines.Presentacion
             //Session["objeto"] = objCarritoL.mtdListcar();
             carrito = objCarritoL.mtdListcar(objcarrito);
 
-            int cuen = carrito.Rows.Count - 1;
-            int cue = cuen - 1;
+           
+            int cue = carrito.Rows.Count;
+            int cuen = cue - 1;
 
             string fechaVen = DateTime.Now.ToString("yyyy-MM-dd");
 
@@ -53,7 +54,7 @@ namespace ManageYourBussines.Presentacion
             objVenta.fechaVen = fechaVen;
             objVenta.codigoVenta = codigoVent;
             objVenta.valorTotal = valortotal;
-            objVenta.idCliente = idClien;
+             objVenta.idCliente = idClien;
 
             clVentaL objVehiculoL = new clVentaL();
             List<clVentaE> lisDetalles = new List<clVentaE>();

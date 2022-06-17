@@ -7,15 +7,15 @@ using System.Web;
 
 namespace ManageYourBussines.Datos
 {
-    public class ClConexion
+    public class clConexion
     {
-        public class clConexion
-        {
+       
+        
             SqlConnection conexion = null;
             public clConexion()
             {
 
-                conexion = new SqlConnection("Data Source=SOGAPRRBCFSD546\\SQLEXPRESS;Initial Catalog=dbManage;Integrated Security=True");
+                conexion = new SqlConnection("Data Source=.;Initial Catalog=dbManage;Integrated Security=True");
                 conexion.Open();
             }
 
@@ -35,6 +35,6 @@ namespace ManageYourBussines.Datos
                 conexion.Close();
                 return filasAfectadas;
             }
-        }
+        
     }
 }

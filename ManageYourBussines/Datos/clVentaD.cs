@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Web;
-using static ManageYourBussines.Datos.ClConexion;
+using static ManageYourBussines.Datos.clConexion;
 
 namespace ManageYourBussines.Datos
 {
@@ -33,7 +33,7 @@ namespace ManageYourBussines.Datos
                 objDatosVenta.idProducto = int.Parse(tblVenta.Rows[i]["idProducto"].ToString());
                 objDatosVenta.cantidad = int.Parse(tblVenta.Rows[i]["cantidad"].ToString());
                 objDatosVenta.valorTotal = float.Parse(tblVenta.Rows[i]["valorTotal"].ToString());
-                objDatosVenta.nombre = (tblVenta.Rows[i]["nombreProducto"].ToString());
+                objDatosVenta.nombreProducto = (tblVenta.Rows[i]["nombreProducto"].ToString());
                 objDatosVenta.precio = float.Parse(tblVenta.Rows[i]["precio"].ToString());
 
 
@@ -44,7 +44,7 @@ namespace ManageYourBussines.Datos
         public List<clVentaE> mtdRegistrar(clVentaE objDatosV)
         {
             string sql = "insert into venta ( fechaVenta,codigoVenta,totalVenta,idCliente)" +
-                "  values('" + objDatosV.fechaVen + "','" + objDatosV.codigoVenta + "'," + objDatosV.totalVenta + "," + objDatosV.idCliente + ")";
+                "  values('" + objDatosV.fechaVen + "','" + objDatosV.codigoVenta + "'," + objDatosV.valorTotal + "," + objDatosV.idCliente + ")";
 
 
             clConexion objConexion = new clConexion();
@@ -81,7 +81,7 @@ namespace ManageYourBussines.Datos
         public int mtdElim(clVentaE objDatosV)
         {
             string sql = "delete carrito where idCliente=" + objDatosV.idCliente;
-              
+
 
 
             clConexion objConexion = new clConexion();

@@ -14,27 +14,32 @@ namespace ManageYourBussines.Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            string idc = Convert.ToString(Session["idc"]);
-            LbidC.Text = idc;
-
-            //int idClien = int.Parse(idc);
-
-           
-
-            
-
-            clCarritoE objDatosPro = new clCarritoE();
-            //objDatosPro.idcliente = idClien;
-            clCarritoL objCarL = new clCarritoL();
-            int numer = objCarL.Mtdcar(objDatosPro);
-            lbnumero.Text = numer.ToString();
-
-            if (!this.IsPostBack)
+            if (Session["idc"] != null)
             {
-                this.BindRepeater();
-            }
+                string idc = Convert.ToString(Session["idc"]);
+                LbidC.Text = idc;
 
+                int idClien = int.Parse(idc);
+
+
+
+
+
+                clCarritoE objDatosPro = new clCarritoE();
+                objDatosPro.idcliente = idClien;
+                clCarritoL objCarL = new clCarritoL();
+                int numer = objCarL.Mtdcar(objDatosPro);
+                lbnumero.Text = numer.ToString();
+
+                if (!this.IsPostBack)
+                {
+                    this.BindRepeater();
+                }
+            }
+            else
+            {
+                Response.Redirect("~/index.aspx");
+            }
        
 
         }
@@ -54,7 +59,7 @@ namespace ManageYourBussines.Presentacion
         {  ///boton carrito
 
            
-
+            
             Button btn = (Button)sender;
             RepeaterItem item = (RepeaterItem)btn.NamingContainer;
 
@@ -83,7 +88,7 @@ namespace ManageYourBussines.Presentacion
                 List<clProductoE> listar = new List<clProductoE>();
                 listar = objProductoL.mtdListarProd(objProducto);
 
-                string nombre = listar[0].nombre;
+                string nombre = listar[0].nombreProducto;
                 string describsion = listar[0].descripcion;
                 float precio = listar[0].precio;
                 int cantidadstock = listar[0].cantidadStock;
@@ -106,7 +111,7 @@ namespace ManageYourBussines.Presentacion
                 objcarrito.precio = precio;
                 objcarrito.cantidadstock = cantidadstock;
                 objcarrito.catidad = catidad;
-                objcarrito.nombre = nombre;
+                objcarrito.nombreProducto = nombre;
                 objcarrito.Imagen = Imagen;
 
                 clCarritoL objCarritoL = new clCarritoL();
@@ -153,9 +158,27 @@ namespace ManageYourBussines.Presentacion
             Response.Redirect("frmcarrito.aspx");
         }
 
+        //Boton que envia la sugerencia a Logica Cristian Salcedo
+        protected void btnEnviar_Click(object sender, EventArgs e)
+        {
 
+            clSugerenciasE objDatosS = new clSugerenciasE();
+            objDatosS.opinion = txtSugerencia.Text;
+            //objDatosS.idCliente = int.Parse(Session["idCliente"].ToString()); no se ha implementado por que se debe hacer merge con Paty 
+            objDatosS.idCliente = 1;
+            clSugerenciasL objDatosL = new clSugerenciasL();
+            int filas = objDatosL.mtdAgregar(objDatosS);
+            if (filas != 0)
+            {
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Gracias por compartir tu opinion con nosotros');", true);
 
+            }
+            else
+            {
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Algo ha salido mal y no hemos guardado tu opinion :(');", true);
 
+            }
+        }
     }
 
 }
