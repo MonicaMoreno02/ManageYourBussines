@@ -5,7 +5,9 @@
     <h1>pagina de clientes</h1>
                                         
     <asp:Label ForeColor="White" ID="lblEmpleado" runat="server"></asp:Label>
-    
+                         <asp:Label ForeColor="White" ID="lblApellidos" runat="server"></asp:Label>
+
+
     <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
 <%--                                                <asp:Label ID="lblUsuario1" runat="server" class="nav-link dropdown-toggle fa fa-user me-3" data-bs-toggle="dropdown" Text=""></asp:Label>--%>
     

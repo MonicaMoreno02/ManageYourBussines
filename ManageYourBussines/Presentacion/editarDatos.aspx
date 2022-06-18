@@ -105,22 +105,23 @@
                             <div class="form-group">
                                 <label for="exampleInputEmail1">direccion</label>
 
-                                <asp:TextBox type="email" class="form-control" ID="txtDireccion" runat="server"></asp:TextBox>
+                                <asp:TextBox type="exampleInputName1" class="form-control" ID="txtDireccion" runat="server"></asp:TextBox>
                             </div>
                          
                                 <label for="email">Email</label>
-                                <asp:TextBox type="password" class="form-control" ID="txtEmail" placeholder="Contraseña" runat="server"></asp:TextBox>
+                                <asp:TextBox type="email" class="form-control" ID="txtEmail" placeholder="Contraseña" runat="server"></asp:TextBox>
                             </div>
                         
                                 <label for="pasword">clave</label>
                                 <asp:TextBox type="password" class="form-control" ID="txtClave" placeholder="Contraseña" runat="server"></asp:TextBox>
                             </div>
-
                             <div>
-                                <%--                             <asp:Button ID="btnActualizar" type="submit" class="btn btn-primary mr-2" runat="server" Text="Actualizar" OnClick="btnActualizar_Click" />--%>
-                            </div>
-                        </div>
+                                <asp:Button ID="btnActualizar" runat="server" Text="acTualizar" OnClick="btnActualizar_Click" />
+
+                                 </div>
                     </div>
+
+
                 </div>
 
 

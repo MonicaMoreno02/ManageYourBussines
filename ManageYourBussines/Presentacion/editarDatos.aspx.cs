@@ -13,108 +13,104 @@ namespace ManageYourBussines.Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //    if (Session["cliente"].ToString() != "0")
-            //    {
-            //        Consultar();
-
-            //    }
-            //        protected void Consultar()
-            //        {
-            //            clUsuarioE objDatos = new clUsuarioE();
-            //            objDatos.idCliente = int.Parse(Session["cliente"].ToString());
-
-            //            clLoginL objEmpleadoL = new clLoginL();
-            //            clUsuarioE objDatosReci = new clUsuarioE();
-            //            objDatosReci = objEmpleadoL.mtdEmpleado(objDatos);
-
-
-
-
-            //        lblEmpleado.Text = objDatosReci.documento;
-            //        lblApellidos.Text = objDatosReci.nombreCliente;
-            //        lblCorreo.Text = objDatosReci.apellidos;
-            //        lblTipoDocumento.Text = objDatosReci.telefono;
-            //        lblDocumento.Text = objDatosReci.direccion;
-            //        lblTelefono.Text = objDatosReci.email;
-            //        lblCargo.Text = objDatosReci.clave;
-
-            //    }
-
-            //        protected void btnActualizar_Click(object sender, EventArgs e)
-            //        {
-
-
-
-            //            clUsuarioE objUsurrioE = new clUsuarioE();
-
-            //        objUsurrioE.idCliente = int.Parse(Session["cliente"].ToString());
-            //        objUsurrioE.documento = txtNombres.Text;
-            //        objUsurrioE.nombreCliente = txtApellidos.Text;
-            //        objUsurrioE.apellidos = ddlTipoDocumento.Text;
-            //        objUsurrioE.telefono = txtNumeroDocumento.Text;
-            //        objUsurrioE.direccion = txtNumeroTelefonico.Text;
-
-            //        //string FileName = txtNumeroDocumento.Text;
-
-
-
-            //        objUsurrioE.email = txtCorreo.Text;
-            //        objUsurrioE.clave = txtClave.Text;
-
-
-
-            //            clLoginL objActualizar = new clLoginL();
-
-            //            int filas = objActualizar.mtdEditarPersona(objUsurrioE);
-            //            if (filas > 0)
-            //            {
-            //                Session["user"] = txtNombres.Text;
-            //                Response.Redirect("frmConfiguracionEmpleados.aspx");
-            //                ClientScript.RegisterClientScriptBlock(this.GetType(), "k", "swal('Habitación Editada','Vuelva a cargar la página y compruebe la inserción','success')", true);
-
-            //            }
-            //            else
-            //            {
-
-            //            }
-            //        }
-
-            //        protected void Button1_Click(object sender, EventArgs e)
-            //        {
-
-            //        }
-
-            //    protected void Button1_Click1(object sender, EventArgs e)
-            //    {
-            //        clUsuarioE objDatos = new clUsuarioE();
-            //        objDatos.idCliente = int.Parse(Session["cliente"].ToString());
-
-            //        clLoginL objEmpleadoL = new clLoginL();
-            //        clUsuarioE objDatosReci = new clUsuarioE();
-            //        objDatosReci = objEmpleadoL.mtdEmpleado(objDatos);
-
-            //        txtNombres.Text = objDatosReci.documento;
-            //        txtApellidos.Text = objDatosReci.nombreCliente;
-            //        ddlTipoDocumento.Text = objDatosReci.apellidos;
-            //        txtNumeroDocumento.Text = objDatosReci.telefono;
-            //        txtCorreo.Text = objDatosReci.direccion;
-            //        txtNumeroTelefonico.Text = objDatosReci.email;
-            //        txtClave.Text = objDatosReci.clave;
-
-            //    }
-            //}}
+            consultar();
         }
-    
-
-       
-
-        
-
-        protected void btnDatos_Click1(object sender, EventArgs e)
+        protected void consultar()
         {
-            clUsuarioE objDatosu = new clUsuarioE();
-            //objDatosu.idCliente=int.Parse(Session["usuario"]).ToString());
+            clUsuarioE objDatos = new clUsuarioE();
+            objDatos.idCliente = int.Parse(Session["idCliente"].ToString());
+
+            clUsuarioL objUsuarioL = new clUsuarioL();
+            clUsuarioE objDatosReci = new clUsuarioE();
+            objDatosReci = objUsuarioL.mtdEmpleado(objDatos);
+
+
+            txtDocumento.Text = objDatosReci.documento;
+            txtnombreCliente.Text = objDatosReci.nombreCliente;
+            txtapellidos.Text = objDatosReci.apellidos;
+            txttelefono.Text = objDatosReci.telefono;
+            txtDireccion.Text = objDatosReci.direccion;
+            txtEmail.Text = objDatosReci.email;
+            txtClave.Text = objDatosReci.clave;
+
 
         }
-    }
+
+
+
+
+
+
+
+
+        protected void btnActualizar_Click(object sender, EventArgs e)
+        {
+            clUsuarioE objUsuarioE = new clUsuarioE();
+
+            objUsuarioE.idCliente = int.Parse(Session["idCliente"].ToString());
+            objUsuarioE.documento = txtDocumento.Text;
+            objUsuarioE.nombreCliente = txtnombreCliente.Text;
+            objUsuarioE.apellidos = txtapellidos.Text;
+            objUsuarioE.telefono = txttelefono.Text;
+            objUsuarioE.direccion = txtDireccion.Text;
+            objUsuarioE.email = txtEmail.Text;
+            objUsuarioE.clave = txtClave.Text;
+
+
+
+            //string FileName = txtNumeroDocumento.Text;
+            //string nombreArchivo = fCargaImagen.FileName;
+
+            //string ruta = "~/Presentacion/Recursos/assets/images/faces/" + nombreArchivo;
+            ////string ruta1 = "~/Presentacion/Recursos/assets/images/faces/" + txtNumeroDocumento.Text;
+
+
+
+
+            //fCargaImagen.SaveAs(Server.MapPath(ruta) + txtNumeroDocumento.Text);
+            //objEmpleadoE.email = txtCorreo.Text;
+            //objEmpleadoE.clave = txtClave.Text;
+            //objEmpleadoE.imagen = nombreArchivo;
+
+
+
+            clUsuarioL objUusarios = new clUsuarioL();
+
+            int filas = objUusarios.mtdEditarPersona(objUsuarioE);
+            if (filas > 0)
+            {
+                Session["usuario"] = txtnombreCliente.Text;
+                Response.Redirect("editarDatos.aspx");
+                ClientScript.RegisterClientScriptBlock(this.GetType(), "k", "swal('Habitación Editada','Vuelva a cargar la página y compruebe la inserción','success')", true);
+
+            }
+            else
+            {
+
+            }
+        }
+            protected void btnDatos_Click1(object sender, EventArgs e)
+            {
+                clUsuarioE objDatos = new clUsuarioE();
+                objDatos.idCliente = int.Parse(Session["idCliente"].ToString());
+
+
+
+                clUsuarioL objDatosUser = new clUsuarioL();
+                clUsuarioE objDatosReci = new clUsuarioE();
+                objDatosReci = objDatosUser.mtdEmpleado(objDatos);
+
+                txtDocumento.Text = objDatosReci.documento;
+                txtnombreCliente.Text = objDatosReci.nombreCliente;
+                txtapellidos.Text = objDatosReci.apellidos;
+                txttelefono.Text = objDatosReci.telefono;
+                txtDireccion.Text = objDatosReci.direccion;
+                txtEmail.Text = objDatosReci.email;
+                txtClave.Text = objDatosReci.clave;
+
+
+            }
+        }
+
+    
 }

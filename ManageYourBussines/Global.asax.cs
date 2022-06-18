@@ -19,7 +19,7 @@ namespace ManageYourBussines
         {
 
             Session["usuario"] = "";
-            Session["apellidos"] = "";
+            Session["idCliente"] = "";
 
             Session["empleado"] = "";
             Session["apellidos"] = "";

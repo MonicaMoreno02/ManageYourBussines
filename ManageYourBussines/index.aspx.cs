@@ -186,7 +186,7 @@ namespace ManageYourBussines
             {
 
                 Session["usuario"] = bjDatosClien.nombreCliente + " " + bjDatosClien.apellidos;
-                Session["idUser"] = bjDatosClien.idCliente;
+                Session["idCliente"] = bjDatosClien.idCliente;
 
 
                 //Session["user"] = bjDatosClien.nombreCliente + " " + bjDatosClien.apellidos;

@@ -93,5 +93,47 @@ namespace ManageYourBussines.Datos
 
 
         }
+
+
+
+        public int mtdEditar(clUsuarioE objDatos)
+        {
+            string sql = "Update cliente set documento='" + objDatos.documento + "', nombreCliente='" + objDatos.nombreCliente + "'," +
+                "apellidos='" + objDatos.apellidos + "',telefono='" + objDatos.telefono + "',direccion='" + objDatos.direccion + "',emailCliente='" + objDatos.email + "',claveCliente='" + objDatos.clave + "' where idCliente=" + objDatos.idCliente + "";
+
+            ClConexion objConexion = new ClConexion();
+            int result = objConexion.mtdConectado(sql);
+            return result;
+        }
+
+
+
+
+        public clUsuarioE mtdEmpleado(clUsuarioE objDatos)
+        {
+
+            string consulta = "SELECT * FROM cliente WHERE idCliente = " + objDatos.idCliente + "";
+            ClConexion objConexion = new ClConexion();
+            DataTable tblDatos = new DataTable();
+            tblDatos = objConexion.mtdDesconectado(consulta);
+            clUsuarioE objDatosUsuario = new clUsuarioE();
+
+            if (tblDatos.Rows.Count == 1)
+            {
+
+                objDatosUsuario.documento = tblDatos.Rows[0]["documento"].ToString();
+                objDatosUsuario.nombreCliente = tblDatos.Rows[0]["nombreCliente"].ToString();
+                objDatosUsuario.apellidos = tblDatos.Rows[0]["apellidos"].ToString();
+                objDatosUsuario.telefono = tblDatos.Rows[0]["telefono"].ToString();
+                objDatosUsuario.direccion = tblDatos.Rows[0]["direccion"].ToString();
+                objDatosUsuario.email = tblDatos.Rows[0]["emailCliente"].ToString();
+                objDatosUsuario.clave = tblDatos.Rows[0]["claveCliente"].ToString();
+            }
+            else
+            {
+                objDatosUsuario = null;
+            }
+            return objDatosUsuario;
+        }
     }
 }
