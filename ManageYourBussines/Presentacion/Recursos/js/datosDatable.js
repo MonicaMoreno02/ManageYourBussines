@@ -32,3 +32,9 @@ function senDataAjax() {
         }
     });
   }
+function senDataAjax() {
+    $.ajax({
+        type: "POST",
+        url: "frmTareas.aspx/"
+    }
+}

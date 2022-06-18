@@ -28,44 +28,32 @@
 
 
             <!-- DataTales Example -->
+               
             <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Listado</h6>
-                </div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-bordered" id="dtDatosPersonal" width="100%" cellspacing="0">
+                        <table class="table table-bordered table-dark" id="dtDatosPersonal" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th>id</th>
+                                    <th>N°Tarea</th>
                                     <th>Nombre Tareas</th>
-                                    <th>Descripción de Tareas</th>
-                                    <th>Estado</th>
-                                    <th>Tiempo de Duración</th>
+                                    <th>Descripción Tareas</th>
+                                    <th>estado</th>
+                                    <th>tiempo</th>
                                     <th>Editar</th>
                                     <th>Eliminar</th>
-                          
                                 </tr>
                             </thead>
-                            <tfoot>
-                                <tr>
-                                    <th>id</th>
-                                    <th>Nombre Tareas</th>
-                                    <th>Descripcion de Tareas</th>
-                                    <th>Estado</th>
-                                    <th>Tiempo de Duración</th>
-                                    <th>Editar</th>
-                                    <th>Eliminar</th>
-                                </tr>
-                            </tfoot>
-                            <tbody>
-                            </tbody>
                         </table>
                     </div>
                 </div>
             </div>
-
         </div>
-
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+    <script src="recursos/js/jquery-3.4.1.min.js"></script>
     <script src="recursos/js/datosDataTable2.js"></script>
 </asp:Content>

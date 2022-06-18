@@ -65,7 +65,7 @@ namespace ManageYourBussines.Datos
                
                 objDatosProductos.idProducto = int.Parse(tblProducto.Rows[i]["idProducto"].ToString());
                 objDatosProductos.imagen = tblProducto.Rows[i]["imagen"].ToString();
-                objDatosProductos.nombreProducto = tblProducto.Rows[i]["nombreProductoProductoProducto"].ToString();
+                objDatosProductos.nombreProducto = tblProducto.Rows[i]["nombreProducto"].ToString();
                 objDatosProductos.precio = float.Parse(tblProducto.Rows[i]["precio"].ToString());
                 objDatosProductos.descripcion = tblProducto.Rows[i]["descripcion"].ToString();
                 objDatosProductos.material = tblProducto.Rows[i]["material"].ToString();

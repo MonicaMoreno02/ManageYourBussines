@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Web;
-using static ManageYourBussines.Datos.ClConexion;
+using static ManageYourBussines.Datos.clConexion;
 
 namespace ManageYourBussines.Datos
 {
@@ -31,10 +31,10 @@ namespace ManageYourBussines.Datos
             {
                 clTareasE objDatosTarea = new clTareasE();
                 objDatosTarea.idTareas = int.Parse(tblTarea.Rows[i]["idTareas"].ToString());
-                objDatosTarea.nombreTareas = tblTarea.Rows[i]["nombreTareas"].ToString();
-                objDatosTarea.descripcionTareas = tblTarea.Rows[i]["descripcionTareas"].ToString();
+                objDatosTarea.nombreTareas = tblTarea.Rows[i]["nombreTarea"].ToString();
+                objDatosTarea.descripcionTareas = tblTarea.Rows[i]["descripcionTarea"].ToString();
                 objDatosTarea.estado = tblTarea.Rows[i]["estado"].ToString();
-                objDatosTarea.tiempo = int.Parse(tblTarea.Rows[i]["nombreTareas"].ToString());
+                objDatosTarea.tiempo = int.Parse(tblTarea.Rows[i]["tiempo"].ToString());
 
                 listarTarea.Add(objDatosTarea);
             }
