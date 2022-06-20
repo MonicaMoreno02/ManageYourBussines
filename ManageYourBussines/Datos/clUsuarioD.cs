@@ -84,7 +84,7 @@ namespace ManageYourBussines.Datos
 
         public int mtdRegistrar(clUsuarioE objDatosCliente)
         {
-            string sql = "insert into cliente(documento,nombreCliente,apellidos,telefono,direccion,email,clave)" +
+            string sql = "insert into cliente(documento,nombreCliente,apellidos,telefono,direccion,emailCliente,claveCliente)" +
                 "values ('" + objDatosCliente.documento + "' ,'" + objDatosCliente.nombreCliente + "','" + objDatosCliente.apellidos + "','"+ objDatosCliente.telefono+"','"+objDatosCliente.direccion+"','" + objDatosCliente.email + "' ,'" + objDatosCliente.clave + "')";
             ClConexion objConexion = new ClConexion();
             int resulatdo = objConexion.mtdConectado(sql);

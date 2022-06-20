@@ -58,19 +58,7 @@ namespace ManageYourBussines.Presentacion
 
 
 
-            //string FileName = txtNumeroDocumento.Text;
-            //string nombreArchivo = fCargaImagen.FileName;
-
-            //string ruta = "~/Presentacion/Recursos/assets/images/faces/" + nombreArchivo;
-            ////string ruta1 = "~/Presentacion/Recursos/assets/images/faces/" + txtNumeroDocumento.Text;
-
-
-
-
-            //fCargaImagen.SaveAs(Server.MapPath(ruta) + txtNumeroDocumento.Text);
-            //objEmpleadoE.email = txtCorreo.Text;
-            //objEmpleadoE.clave = txtClave.Text;
-            //objEmpleadoE.imagen = nombreArchivo;
+            
 
 
 
@@ -81,7 +69,7 @@ namespace ManageYourBussines.Presentacion
             {
                 Session["usuario"] = txtnombreCliente.Text;
                 Response.Redirect("editarDatos.aspx");
-                ClientScript.RegisterClientScriptBlock(this.GetType(), "k", "swal('Habitación Editada','Vuelva a cargar la página y compruebe la inserción','success')", true);
+                ClientScript.RegisterClientScriptBlock(this.GetType(), "k", "swal('info clente','Vuelva a cargar la página y compruebe la inserción','success')", true);
 
             }
             else

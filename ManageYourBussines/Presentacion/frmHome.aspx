@@ -8,11 +8,32 @@
                          <asp:Label ForeColor="White" ID="lblApellidos" runat="server"></asp:Label>
 
 
-    <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
+    <asp:Button ID="Button1" runat="server" Text="Datos Personales " OnClick="Button1_Click" />
 <%--                                                <asp:Label ID="lblUsuario1" runat="server" class="nav-link dropdown-toggle fa fa-user me-3" data-bs-toggle="dropdown" Text=""></asp:Label>--%>
     
    <%-- 
   datos personales y editar datos de  clientes --%>
+
+
+
+                                                  
+  <div class="user_option">
+
+                <div class="dropdown">
+                    <button type="button" class="btn btn-dark  dropdown-toggle" data-bs-toggle="dropdown">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <i>Mi perfil</i>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Datos Personales</a>
+                       
+                        <asp:Button ID="btnCerrar" runat="server" Text="Cerrar Sesión" class="dropdown-item" onClick="btnCerrar_Click" />
+                            <asp:Button ID="btnEditar" runat="server" Text="editar" class="dropdown-item" OnClick="btnEditar_Click"/>
+
+
+                            </li>
+                        </ul>
+                        </div>
                                                    
  <%-- <div class="user_option">
 
