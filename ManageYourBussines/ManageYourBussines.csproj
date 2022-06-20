@@ -102,14 +102,17 @@
     <Content Include="Presentacion\frmbalance.aspx" />
     <Content Include="Presentacion\frmcarrito.aspx" />
     <Content Include="Presentacion\frmClientes.aspx" />
+    <Content Include="Presentacion\frmClientesVendedor.aspx" />
     <Content Include="Presentacion\frmdetalles.aspx" />
     <Content Include="Presentacion\frmAdmin.aspx" />
     <Content Include="Presentacion\frmEmpleados.aspx" />
     <Content Include="Presentacion\frmHome.aspx" />
+    <Content Include="Presentacion\frmInicio.aspx" />
     <Content Include="Presentacion\frmInventario.aspx" />
     <Content Include="Presentacion\frmProductos.aspx" />
     <Content Include="Presentacion\frmEstadisticas.aspx" />
     <Content Include="Presentacion\frmProductos2.aspx" />
+    <Content Include="Presentacion\frmProductosVendedor.aspx" />
     <Content Include="Presentacion\frmRegistrar.aspx" />
     <Content Include="Presentacion\frmSeguridadSocial.aspx" />
     <Content Include="Presentacion\frmSugerencias.aspx" />
@@ -361,6 +364,13 @@
     <Compile Include="Presentacion\frmClientes.aspx.designer.cs">
       <DependentUpon>frmClientes.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\frmClientesVendedor.aspx.cs">
+      <DependentUpon>frmClientesVendedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmClientesVendedor.aspx.designer.cs">
+      <DependentUpon>frmClientesVendedor.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\frmdetalles.aspx.cs">
       <DependentUpon>frmdetalles.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -389,6 +399,13 @@
     <Compile Include="Presentacion\frmHome.aspx.designer.cs">
       <DependentUpon>frmHome.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\frmInicio.aspx.cs">
+      <DependentUpon>frmInicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmInicio.aspx.designer.cs">
+      <DependentUpon>frmInicio.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\frmInventario.aspx.cs">
       <DependentUpon>frmInventario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -416,6 +433,13 @@
     </Compile>
     <Compile Include="Presentacion\frmProductos2.aspx.designer.cs">
       <DependentUpon>frmProductos2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmProductosVendedor.aspx.cs">
+      <DependentUpon>frmProductosVendedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmProductosVendedor.aspx.designer.cs">
+      <DependentUpon>frmProductosVendedor.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmRegistrar.aspx.cs">
       <DependentUpon>frmRegistrar.aspx</DependentUpon>
