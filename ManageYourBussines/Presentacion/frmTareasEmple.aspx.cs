@@ -254,6 +254,66 @@ namespace ManageYourBussines.Presentacion
 
             }
 
+
+        }
+
+        protected void btnAceptar_Click(object sender, EventArgs e)
+        {
+            int idtarea = int.Parse(lbidtarea.Text);
+            int cuenta = gvmateriales.Rows.Count;
+            for (int i = 0; i < cuenta; i++)
+            {
+
+                string valor = gvmateriales.Rows[i].Cells[1].Text;
+                int idmat = int.Parse(valor);
+
+                string valor1 = gvmateriales.Rows[i].Cells[4].Text;
+                int cantidad = int.Parse(valor);
+
+                string valor2 = gvmateriales.Rows[i].Cells[3].Text;
+                float precio = float.Parse(valor2);
+
+                float tot = precio * cantidad;
+                if (cantidad > 0)
+                {
+                    clTareaEpleE objmat = new clTareaEpleE();
+                    objmat.idTareas = idtarea;
+                    objmat.idmaterial = idmat;
+                    objmat.cantidad = cantidad;
+                    objmat.totalmat = tot;
+
+                    clTareaEpleL objmeterial=new clTareaEpleL();
+                    int filas = objmeterial.mtdlistarmat(objmat);
+
+                    if (filas > 0)
+                    {
+
+                        ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('la tare seasigno correctamente ');", true);
+
+
+                        int idemple = 1;
+                        clTareasE objTarea = new clTareasE();
+                        objTarea.idTareas = idemple;
+
+                        tareasL objtareaL = new tareasL();
+                        DataTable tareas = new DataTable();
+                        List<clTareasE> listartarea = new List<clTareasE>();
+                        //Session["objeto"] = objCarritoL.mtdListcar();
+                        listartarea = objtareaL.mtdList(objTarea);
+
+
+                        gvtareas.DataSource = listartarea;
+                        gvtareas.DataBind();
+
+                    }
+                    else
+                    {
+                        ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('jhhh');", true);
+                    }
+
+
+                }
+            }
         }
     }
-    }
+}

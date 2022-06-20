@@ -17,5 +17,6 @@ namespace ManageYourBussines.Logica
             listaClientes = objClienteD.mtdListaD(objid);
             return listaClientes;
         }
+
     }
 }

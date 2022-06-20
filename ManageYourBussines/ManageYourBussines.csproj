@@ -266,6 +266,7 @@
     <Compile Include="Datos\clEmpleadoD.cs" />
     <Compile Include="Datos\clMarerialesD.cs" />
     <Compile Include="Datos\clProductoD.cs" />
+    <Compile Include="Datos\clTareaEpleD.cs" />
     <Compile Include="Datos\clTareasD.cs" />
     <Compile Include="Datos\clUserDao.cs" />
     <Compile Include="Datos\clUsuarioD.cs" />
@@ -277,6 +278,7 @@
     <Compile Include="Entidades\clMaterialesE.cs" />
     <Compile Include="Entidades\clProductoE.cs" />
     <Compile Include="Entidades\clSeguridadE.cs" />
+    <Compile Include="Entidades\clTareaEpleE.cs" />
     <Compile Include="Entidades\clTareasE.cs" />
     <Compile Include="Entidades\clUsuarioE.cs" />
     <Compile Include="Entidades\clVentaE.cs" />
@@ -292,6 +294,7 @@
     <Compile Include="Logica\clBalanceL.cs" />
     <Compile Include="Logica\clMaterialesL.cs" />
     <Compile Include="Logica\clProductoL.cs" />
+    <Compile Include="Logica\clTareaEpleL.cs" />
     <Compile Include="Logica\clUsuarioL.cs" />
     <Compile Include="Logica\clCarritoL.cs" />
     <Compile Include="Logica\tareasL.cs" />
