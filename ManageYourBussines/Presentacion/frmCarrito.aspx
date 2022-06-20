@@ -162,7 +162,7 @@
                                <ControlStyle Height="60px" Width="60px" />
                                <ItemStyle Height="100px" Width="100px" />
                            </asp:ImageField>
-                           <asp:BoundField DataField="nombre" HeaderText="nombre" />
+                           <asp:BoundField DataField="nombreProducto" HeaderText="nombre" />
                            <asp:BoundField DataField="describcion" HeaderText="describcion" />
                            <asp:BoundField DataField="precio" HeaderText="precio" />
                            <asp:BoundField DataField="cantidad" HeaderText="cantidad" />

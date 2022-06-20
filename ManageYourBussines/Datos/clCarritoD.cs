@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Web;
-using static ManageYourBussines.Datos.ClConexion;
+using static ManageYourBussines.Datos.clConexion;
 
 namespace ManageYourBussines.Datos
 {
@@ -12,7 +12,7 @@ namespace ManageYourBussines.Datos
     {
         public int mtdRegistrar(clCarritoE objDatosCarrito)
         {
-            string sql = "insert into carrito (idproducto,nombreProducto,describcion,precio,cantidadstock,cantidad," +
+            string sql = "insert into carrito (idproducto,nombre,describcion,precio,cantidadstock,cantidad," +
                   "Imagen,idcliente)" +
 
                   "values('" + objDatosCarrito.idproducto + "','" + objDatosCarrito.nombreProducto + "'," +
@@ -99,7 +99,7 @@ namespace ManageYourBussines.Datos
                 objDatoscarrito.precio = float.Parse(tblCarrito.Rows[i]["precio"].ToString());
                 objDatoscarrito.describcion = tblCarrito.Rows[i]["describcion"].ToString();
                 objDatoscarrito.Imagen = tblCarrito.Rows[i]["imagen"].ToString();
-                objDatoscarrito.nombreProducto = tblCarrito.Rows[i]["nombreProducto"].ToString();
+                objDatoscarrito.nombreProducto = tblCarrito.Rows[i]["nombre"].ToString();
 
 
 

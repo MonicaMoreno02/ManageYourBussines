@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Web;
-using static ManageYourBussines.Datos.ClConexion;
+using static ManageYourBussines.Datos.clConexion;
 
 namespace ManageYourBussines.Datos
 {
@@ -15,7 +15,7 @@ namespace ManageYourBussines.Datos
         public List<clUsuarioE> mtdListarD()
         {
             string sql = "select * from cliente";
-            clConexion objConexion = new clConexion();
+            clConexion objConexion = new clConexion ();
             DataTable tblCliente = new DataTable();
             tblCliente = objConexion.mtdDesconectado(sql);
 

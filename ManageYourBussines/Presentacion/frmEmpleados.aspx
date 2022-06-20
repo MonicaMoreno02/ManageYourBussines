@@ -103,9 +103,10 @@
                                 </div>
                             </div>
 
+                            <asp:Button ID="btnBorrar" runat="server" Text="Borrar" OnClick="btnBorrar_Click" />
 
                             <div class="modal-footer">
-                                <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" class="btn btn-danger" OnClick="btnEliminar_Click" />
+                                <%--                                <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" class="btn btn-danger" OnClick="btnEliminar_Click"/>--%>
                             </div>
                         </ContentTemplate>
                     </asp:UpdatePanel>
@@ -115,7 +116,7 @@
                     <ContentTemplate>
                     </ContentTemplate>
                     <Triggers>
-                        <asp:AsyncPostBackTrigger ControlID="btnEliminar" EventName="Click" />
+                        <asp:AsyncPostBackTrigger ControlID="btnBorrar" EventName="Click" />
                     </Triggers>
                 </asp:UpdatePanel>
 

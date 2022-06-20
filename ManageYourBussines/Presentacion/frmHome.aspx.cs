@@ -14,27 +14,32 @@ namespace ManageYourBussines.Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            string idc = Convert.ToString(Session["idc"]);
-            LbidC.Text = idc;
-
-            int idClien = int.Parse(idc);
-
-           
-
-            
-
-            clCarritoE objDatosPro = new clCarritoE();
-            objDatosPro.idcliente = idClien;
-            clCarritoL objCarL = new clCarritoL();
-            int numer = objCarL.Mtdcar(objDatosPro);
-            lbnumero.Text = numer.ToString();
-
-            if (!this.IsPostBack)
+            if (Session["idc"] != null)
             {
-                this.BindRepeater();
-            }
+                string idc = Convert.ToString(Session["idc"]);
+                LbidC.Text = idc;
 
+                int idClien = int.Parse(idc);
+
+
+
+
+
+                clCarritoE objDatosPro = new clCarritoE();
+                objDatosPro.idcliente = idClien;
+                clCarritoL objCarL = new clCarritoL();
+                int numer = objCarL.Mtdcar(objDatosPro);
+                lbnumero.Text = numer.ToString();
+
+                if (!this.IsPostBack)
+                {
+                    this.BindRepeater();
+                }
+            }
+            else
+            {
+                Response.Redirect("~/index.aspx");
+            }
        
 
         }

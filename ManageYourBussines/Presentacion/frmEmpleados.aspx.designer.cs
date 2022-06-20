@@ -42,13 +42,13 @@ namespace ManageYourBussines.Presentacion
         protected global::System.Web.UI.WebControls.TextBox txtIDEmpleadoB;
 
         /// <summary>
-        /// Control btnEliminar.
+        /// Control btnBorrar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEliminar;
+        protected global::System.Web.UI.WebControls.Button btnBorrar;
 
         /// <summary>
         /// Control UpdatePanel2.

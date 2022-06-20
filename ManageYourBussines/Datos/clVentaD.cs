@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Web;
-using static ManageYourBussines.Datos.ClConexion;
+using static ManageYourBussines.Datos.clConexion;
 
 namespace ManageYourBussines.Datos
 {
@@ -81,7 +81,7 @@ namespace ManageYourBussines.Datos
         public int mtdElim(clVentaE objDatosV)
         {
             string sql = "delete carrito where idCliente=" + objDatosV.idCliente;
-              
+
 
 
             clConexion objConexion = new clConexion();

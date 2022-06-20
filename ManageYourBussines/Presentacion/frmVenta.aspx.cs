@@ -31,6 +31,7 @@ namespace ManageYourBussines.Presentacion
             List<clVentaE> lista = new List<clVentaE>();
             DataTable datos = new  DataTable();
             lista = objVentaL.mtdListarVenta(objfactura);
+           
             datos.Columns.Add(new DataColumn("#", typeof(int)));
             datos.Columns.Add(new DataColumn("nombreProducto", typeof(string)));
             datos.Columns.Add(new DataColumn("codigoVenta", typeof(string)));
@@ -39,54 +40,63 @@ namespace ManageYourBussines.Presentacion
             datos.Columns.Add(new DataColumn("total", typeof(float)));
 
             int cuenta = lista.Count;
-            int num = cuenta + 1;
-            float vtot = 0;
-            float total = 0;
-            for (int i = 0; i < num; i++)
+            if (cuenta != 0)
             {
-                if (i!=cuenta)
+
+
+                int num = cuenta + 1;
+                float vtot = 0;
+                float total = 0;
+                for (int i = 0; i < num; i++)
                 {
-                    int numero = i + 1;
-                    string nombreProducto = lista[i].nombreProducto;
-                    string codigoVenta = lista[i].codigoVenta;
-                    float precio = lista[i].precio;
-                    int cantidad = lista[i].cantidad;
-                    total = precio*cantidad;
-                 
-                    vtot = vtot + total;
-                    DataRow row = datos.NewRow();
-                    row["#"] = numero;
-                    row["nombreProducto"] = nombreProducto;
-                    row["codigoVenta"] = codigoVenta;
-                    row["precio"] = precio;
-                    row["cantidad"] = cantidad;
-                    row["total"] = total;
-                    datos.Rows.Add(row);
+                    if (i != cuenta)
+                    {
+                        int numero = i + 1;
+                        string nombre = lista[i].nombreProducto;
+                        string codigoVenta = lista[i].codigoVenta;
+                        float precio = lista[i].precio;
+                        int cantidad = lista[i].cantidad;
+                        total = precio * cantidad;
+
+                        vtot = vtot + total;
+                        DataRow row = datos.NewRow();
+                        row["#"] = numero;
+                        row["nombreProducto"] = nombre;
+                        row["codigoVenta"] = codigoVenta;
+                        row["precio"] = precio;
+                        row["cantidad"] = cantidad;
+                        row["total"] = total;
+                        datos.Rows.Add(row);
+
+                    }
+                    else
+                    {
+                        string fech = lista[0].fechaVenta.ToString("yyyy/MM/dd");
+
+                        vtot = vtot + total;
+                        DataRow row = datos.NewRow();
+                        row["#"] = i + 1;
+                        row["nombreProducto"] = fech;
+                        row["codigoVenta"] = "";
+                        row["precio"] = 0;
+                        row["cantidad"] = 0;
+                        row["total"] = vtot;
+                        datos.Rows.Add(row);
+
+
+                    }
 
                 }
-                else
-                {
-                    string fech = lista[0].fechaVenta.ToString("yyyy/MM/dd");
 
-                    vtot = vtot + total;
-                    DataRow row = datos.NewRow();
-                    row["#"] = i+1;
-                    row["nombreProducto"] = fech;
-                    row["codigoVenta"] = "";
-                    row["precio"] = 0;
-                    row["cantidad"] =0;
-                    row["total"] = vtot;
-                    datos.Rows.Add(row);
-
-
-                }
-
+                GridView1.DataSource = datos;
+                GridView1.DataBind();
+                GridView1.UseAccessibleHeader = true;
+                //GridView1.HeaderRow.TableSection = TableRowSection.TableHeader;
             }
-
-            GridView1.DataSource = datos;
-            GridView1.DataBind();
-            GridView1.UseAccessibleHeader = true;
-            //GridView1.HeaderRow.TableSection = TableRowSection.TableHeader;
+            else
+            {
+                Response.Redirect("frmHome.aspx");
+            }
         }
 
         protected void btnPdf_Click(object sender, EventArgs e)

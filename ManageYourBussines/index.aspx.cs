@@ -10,7 +10,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using static ManageYourBussines.Datos.ClConexion;
+using static ManageYourBussines.Datos.clConexion;
 
 namespace ManageYourBussines
 {
@@ -19,20 +19,19 @@ namespace ManageYourBussines
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //------cargar Repeater
-            clProductoL objProductoL = new clProductoL();
-            Repeater2.DataSource = objProductoL.mtdListarP();
-            Repeater2.DataBind();
+            if (!IsPostBack)
+            {
+                clProductoL objProductoL = new clProductoL();
+                Repeater2.DataSource = objProductoL.mtdListarProducto();
+                Repeater2.DataBind();
+            }
 
 
 
 
         }
 
-        protected void btnDetalles_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("~/Presentacion/frmDetalles.aspx");
-        }
+      
 
         protected void btnIngresar_Click(object sender, EventArgs e)
         {
@@ -70,6 +69,19 @@ namespace ManageYourBussines
         protected void btnRecuperar_Click(object sender, EventArgs e)
         {
             Response.Redirect("Recuperar.aspx");
+        }
+
+        protected void btnDetalles_Click(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            RepeaterItem item = (RepeaterItem)btn.NamingContainer;
+
+            // Buscamos el control en ese item 
+            Label lbl = (Label)item.FindControl("LabelDato");
+
+            int idProducto = int.Parse(lbl.Text);
+
+            Response.Redirect("Presentacion/frmProductos2.aspx?idP=" + idProducto);
         }
     }
 
