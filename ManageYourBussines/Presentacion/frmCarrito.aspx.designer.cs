@@ -39,7 +39,7 @@ namespace ManageYourBussines.Presentacion
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.ScriptManager ScriptManager1;
+        
 
         /// <summary>
         /// Control UpdatePanel1.
@@ -48,7 +48,7 @@ namespace ManageYourBussines.Presentacion
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+      
 
         /// <summary>
         /// Control gvCar.

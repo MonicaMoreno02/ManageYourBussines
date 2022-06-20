@@ -21,7 +21,7 @@ namespace ManageYourBussines.Presentacion
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.ScriptManager ScriptManager1;
+      
 
         /// <summary>
         /// Control UpdatePanel1.
@@ -30,7 +30,7 @@ namespace ManageYourBussines.Presentacion
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        
 
         /// <summary>
         /// Control txtIDEmpleadoB.
@@ -57,7 +57,7 @@ namespace ManageYourBussines.Presentacion
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel2;
+        
 
         /// <summary>
         /// Control UpdatePanel3.
@@ -66,7 +66,7 @@ namespace ManageYourBussines.Presentacion
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel3;
+     
 
         /// <summary>
         /// Control txtIDEmpleado.
@@ -156,7 +156,7 @@ namespace ManageYourBussines.Presentacion
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel4;
+      
 
         /// <summary>
         /// Control txtDocumentoRegis.
