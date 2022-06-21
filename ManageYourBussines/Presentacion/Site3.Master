@@ -1,27 +1,87 @@
-﻿
-<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site3.master.cs" Inherits="ManageYourBussines.Presentacion.Site3" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site3.master.cs" Inherits="ManageYourBussines.Presentacion.Site3" %>
 
 <!DOCTYPE html>
 
 <html>
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    
+<%--    recursos de appPlantilla--%>
+    <link href="recursos/vendor/font-awesome-4.7/css/all.min.css" rel="stylesheet" />
+    <link href="recursos/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" />
+
+    <link href="recursos/css/sb-admin-2.min.css" rel="stylesheet" />
+<%--    recursos de appPlantilla--%>
+
+    	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+
+
+    <link href="recursos/css/main.css" rel="stylesheet" />
+    <link href="recursos/css/main.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+      <!-- Jquery JS-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/datepicker/moment.min.js"></script>
+    <script src="vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <%--<script src="js/global.js"></script>--%>
+
+      <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+
+
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/main.css" rel="stylesheet" media="all">
+    <link href="recursos/css/cssbarra/main.css" rel="stylesheet" />
+
+
+    <!--Boostrap css-->
+    
+    <link href="recursos/js/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" />
+
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
-            <div><lu>
-                <li><a href="frmInicio.aspx">Home</a></li>
-                <li><a href="frmProductosVendedor.aspx">Productos</a></li>
-                <li><a href="frmClientesVendedor.aspx">Clientes</a></li>
+            <div>
+                <lu>
+                    <li><a href="frmInicio.aspx">Home</a></li>
+                    <li><a href="frmProductosVendedor.aspx">Productos</a></li>
+                    <li><a href="frmClientesVendedor.aspx">Clientes</a></li>
 
-             </lu></div>
+                </lu>
+            </div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
+
         </div>
     </form>
+
+    <script src="recursos/js/sb-admin-2.min.js"></script>
+
+    <!--Boostrap js-->
+    <script src="recursos/js/datatables/jquery.dataTables.min.js"></script>
+    <script src="recursos/js/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="recursos/js/demo/datatables-demo.js"></script>
+
 </body>
 </html>
