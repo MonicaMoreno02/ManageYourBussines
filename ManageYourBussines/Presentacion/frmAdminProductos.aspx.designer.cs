@@ -231,13 +231,13 @@ namespace ManageYourBussines.Presentacion
         protected global::System.Web.UI.WebControls.Button btnActualizar;
 
         /// <summary>
-        /// Control txtIdProducto.
+        /// Control txtIdTareaEditar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtIdProducto;
+        protected global::System.Web.UI.WebControls.TextBox txtIdTareaEditar;
 
         /// <summary>
         /// Control Label1.

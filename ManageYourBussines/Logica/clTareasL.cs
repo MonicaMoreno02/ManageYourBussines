@@ -22,5 +22,20 @@ namespace ManageYourBussines.Logica
             objVentaD = objVenta.mtdListarTar();
             return objVentaD;
         }
+        public int mtdEditar(clTareasE objDatosEmpleado)
+        {
+            clTareasD objEmpleadoD = new clTareasD();
+            int resultado = objEmpleadoD.mtdEditar(objDatosEmpleado);
+
+            return resultado;
+        }
+        public int mtdEliminar(int idTareas)
+        {
+            clTareasD objEmpleadoD = new clTareasD();
+            int resultado = objEmpleadoD.mtdEliminar(idTareas);
+
+            return resultado;
+        }
+
     }
 }

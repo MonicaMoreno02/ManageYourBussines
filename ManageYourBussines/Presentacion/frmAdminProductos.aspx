@@ -176,7 +176,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <asp:TextBox ID="txtIdProducto" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtIdTareaEditar" runat="server"></asp:TextBox>
                         <asp:Label ID="Label1" runat="server" Text="¿Estas seguro de eliminar este registro?"></asp:Label>
                     </div>
                     <div class="modal-footer">

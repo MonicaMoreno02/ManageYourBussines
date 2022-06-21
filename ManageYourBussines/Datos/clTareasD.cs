@@ -13,7 +13,7 @@ namespace ManageYourBussines.Datos
         public int mtdRegistrarTarea(clTareasE objDatosTarea)
         {
             string sql = "insert into tareas(nombreTarea,descripcionTarea,estado,tiempo)" +
-             "values ('" + objDatosTarea.nombreTareas + "' ,'" + objDatosTarea.descripcionTareas + "','"+objDatosTarea.estado+"','"+objDatosTarea.tiempo+"')";
+             "values ('" + objDatosTarea.nombreTarea + "' ,'" + objDatosTarea.descripcionTarea + "','" + objDatosTarea.estado + "','" + objDatosTarea.tiempo + "')";
             clConexion objConexion = new clConexion();
             int resulatdo = objConexion.mtdConectado(sql);
             return resulatdo;
@@ -31,14 +31,31 @@ namespace ManageYourBussines.Datos
             {
                 clTareasE objDatosTarea = new clTareasE();
                 objDatosTarea.idTareas = int.Parse(tblTarea.Rows[i]["idTareas"].ToString());
-                objDatosTarea.nombreTareas = tblTarea.Rows[i]["nombreTarea"].ToString();
-                objDatosTarea.descripcionTareas = tblTarea.Rows[i]["descripcionTarea"].ToString();
+                objDatosTarea.nombreTarea = tblTarea.Rows[i]["nombreTarea"].ToString();
+                objDatosTarea.descripcionTarea = tblTarea.Rows[i]["descripcionTarea"].ToString();
                 objDatosTarea.estado = tblTarea.Rows[i]["estado"].ToString();
                 objDatosTarea.tiempo = int.Parse(tblTarea.Rows[i]["tiempo"].ToString());
 
                 listarTarea.Add(objDatosTarea);
             }
             return listarTarea;
+        }
+        public int mtdEditar(clTareasE objDatos)
+        {
+            string sql = "Update tareas set nombreTarea='" + objDatos.nombreTarea + "', descripcionTarea='" + objDatos.descripcionTarea + "'," +
+               "estado='" + objDatos.estado + "',tiempo='" + objDatos.tiempo + "' where idTareas=" + objDatos.idTareas + "";
+
+            clConexion objConexion = new clConexion();
+            int result = objConexion.mtdConectado(sql);
+            return result;
+        }
+        public int mtdEliminar(int idTareas)
+        {
+            string sql = "delete from tareas where idTareas=" + idTareas + "";
+
+            clConexion objConexion = new clConexion();
+            int result = objConexion.mtdConectado(sql);
+            return result;
         }
     }
 }

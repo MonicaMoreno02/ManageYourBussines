@@ -112,7 +112,7 @@
     <Content Include="Presentacion\frmEstadisticas.aspx" />
     <Content Include="Presentacion\frmProductos2.aspx" />
     <Content Include="Presentacion\frmRegistrar.aspx" />
-    <Content Include="Presentacion\frmTareas.aspx" />
+    <Content Include="Presentacion\frmTarea.aspx" />
     <Content Include="Presentacion\frmVenta.aspx" />
     <Content Include="Presentacion\recursos\css\bootstrap.css" />
     <Content Include="Presentacion\recursos\css\estilosEmple.css" />
@@ -123,6 +123,7 @@
     <Content Include="Presentacion\recursos\css\style.css" />
     <Content Include="Presentacion\recursos\css\style2.css" />
     <Content Include="Presentacion\recursos\images\about-img.png" />
+    <Content Include="Presentacion\recursos\images\advertencia.png" />
     <Content Include="Presentacion\recursos\images\anadir-al-carrito %281%29.png" />
     <Content Include="Presentacion\recursos\images\base.jpg" />
     <Content Include="Presentacion\recursos\images\baseg.jpg" />
@@ -198,6 +199,7 @@
     <Content Include="Presentacion\recursos\js\JavaClientes.js" />
     <Content Include="Presentacion\recursos\js\JavaSeguridad.js" />
     <Content Include="Presentacion\recursos\js\datosDataTable2.js" />
+    <Content Include="Presentacion\recursos\js\JavaTarea.js" />
     <Content Include="Presentacion\recursos\js\jquery-3.4.1.min.js" />
     <Content Include="Presentacion\Recursos\js\datosDatable.js" />
     <Content Include="Presentacion\recursos\js\main.js" />
@@ -477,19 +479,19 @@
     <Compile Include="Presentacion\frmSugerencias.aspx.designer.cs">
       <DependentUpon>frmSugerencias.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\frmTarea.aspx.cs">
+      <DependentUpon>frmTarea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmTarea.aspx.designer.cs">
+      <DependentUpon>frmTarea.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\frmVendedor.aspx.cs">
       <DependentUpon>frmVendedor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentacion\frmVendedor.aspx.designer.cs">
       <DependentUpon>frmVendedor.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Presentacion\frmTareas.aspx.cs">
-      <DependentUpon>frmTareas.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Presentacion\frmTareas.aspx.designer.cs">
-      <DependentUpon>frmTareas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmVenta.aspx.cs">
       <DependentUpon>frmVenta.aspx</DependentUpon>

@@ -122,7 +122,7 @@ namespace ManageYourBussines.Presentacion
         protected void txtEliminar_Click(object sender, EventArgs e)
         {
             
-                idProductos = int.Parse(txtIdProducto.Text);
+                //idProductos = int.Parse(txtIdProducto.Text);
                 clProductoL objDatosL = new clProductoL();
                 int resultado = objDatosL.mtdEliminar(idProductos);
             
