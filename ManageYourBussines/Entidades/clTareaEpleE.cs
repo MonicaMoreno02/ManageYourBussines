@@ -13,6 +13,12 @@ namespace ManageYourBussines.Entidades
         public int cantidad { get; set; }
 
         public float totalmat { get; set; }
+      
+        public int idEmpleado { get; set; }
+
+        public int pos { get; set; }
+        public int num { get; set; }
+      
 
     }
 }

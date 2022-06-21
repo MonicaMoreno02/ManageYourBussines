@@ -36,10 +36,11 @@ namespace ManageYourBussines.Presentacion
             {
                 int lista = Convert.ToInt32(e.CommandArgument);
                 GridViewRow row = gvtareas.Rows[lista];
+
                 string valor = gvtareas.Rows[lista].Cells[1].Text;
                 int cantidades = int.Parse(valor);
                 lbidtarea.Text = valor.ToString();
-
+                lbpocicion.Text=lista.ToString();
 
 
                 clMaterialesL objmateriales = new clMaterialesL();
@@ -259,7 +260,9 @@ namespace ManageYourBussines.Presentacion
 
         protected void btnAceptar_Click(object sender, EventArgs e)
         {
+            int idemple = 1;
             int idtarea = int.Parse(lbidtarea.Text);
+            int pocicion = int.Parse(lbpocicion.Text);
             int cuenta = gvmateriales.Rows.Count;
             for (int i = 0; i < cuenta; i++)
             {
@@ -267,20 +270,28 @@ namespace ManageYourBussines.Presentacion
                 string valor = gvmateriales.Rows[i].Cells[1].Text;
                 int idmat = int.Parse(valor);
 
+                string pocicicion = gvtareas.Rows[pocicion].Cells[4].Text;
+                int pos = int.Parse(valor);
+
                 string valor1 = gvmateriales.Rows[i].Cells[4].Text;
                 int cantidad = int.Parse(valor);
 
                 string valor2 = gvmateriales.Rows[i].Cells[3].Text;
                 float precio = float.Parse(valor2);
-
-                float tot = precio * cantidad;
+                int num = 0;
+;                float tot = precio * cantidad;
                 if (cantidad > 0)
                 {
+                    num = num + 1;
                     clTareaEpleE objmat = new clTareaEpleE();
                     objmat.idTareas = idtarea;
                     objmat.idmaterial = idmat;
                     objmat.cantidad = cantidad;
                     objmat.totalmat = tot;
+                    objmat.idEmpleado = idemple;
+                    objmat.pos = pos;
+                    objmat.num = num;
+                    
 
                     clTareaEpleL objmeterial=new clTareaEpleL();
                     int filas = objmeterial.mtdlistarmat(objmat);
@@ -291,7 +302,7 @@ namespace ManageYourBussines.Presentacion
                         ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('la tare seasigno correctamente ');", true);
 
 
-                        int idemple = 1;
+                     
                         clTareasE objTarea = new clTareasE();
                         objTarea.idTareas = idemple;
 

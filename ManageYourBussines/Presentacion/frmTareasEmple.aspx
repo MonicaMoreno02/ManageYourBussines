@@ -24,5 +24,6 @@
          
        
       <asp:Label ID="lbidtarea" runat="server" Text="Label"></asp:Label>
+     <asp:Label ID="lbpocicion" runat="server" Text="Label"></asp:Label>
     <asp:Button ID="btnAceptar" runat="server" Text="aceptar" OnClick="btnAceptar_Click" />
 </asp:Content>
