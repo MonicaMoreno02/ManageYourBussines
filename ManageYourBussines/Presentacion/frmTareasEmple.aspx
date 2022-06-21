@@ -2,11 +2,17 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+    <asp:Button ID="btnpendiente" runat="server" Text="pendiente" OnClick="btnpendiente_Click" />
+    <asp:Button ID="btnprogreso" runat="server" Text="progreso" OnClick="btnprogreso_Click" />
+    <asp:Button ID="btnterminado" runat="server" Text="terminado" OnClick="btnterminado_Click" />
      <asp:GridView ID="gvtareas" runat="server" OnRowCommand="gvtareas_RowCommand">
          <Columns>
              <asp:ButtonField ButtonType="Button" CommandName="aceptar" Text="aceptar tareas" />
          </Columns>
      </asp:GridView>
+    <asp:GridView ID="gvprogreso" runat="server"></asp:GridView>
+
 
     <asp:GridView ID="gvmateriales" runat="server" AutoGenerateColumns="False" OnRowCommand="gvmateriales_RowCommand">
          <Columns>

@@ -271,6 +271,7 @@
     <Compile Include="Datos\clUserDao.cs" />
     <Compile Include="Datos\clUsuarioD.cs" />
     <Compile Include="Datos\clVentaD.cs" />
+    <Compile Include="Datos\estadoTareaD.cs" />
     <Compile Include="Entidades\clBalanceE.cs" />
     <Compile Include="Entidades\clCarritoE.cs" />
     <Compile Include="Entidades\clDetallesE.cs" />
@@ -282,6 +283,7 @@
     <Compile Include="Entidades\clTareasE.cs" />
     <Compile Include="Entidades\clUsuarioE.cs" />
     <Compile Include="Entidades\clVentaE.cs" />
+    <Compile Include="Entidades\estadoTareaE.cs" />
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -297,6 +299,7 @@
     <Compile Include="Logica\clTareaEpleL.cs" />
     <Compile Include="Logica\clUsuarioL.cs" />
     <Compile Include="Logica\clCarritoL.cs" />
+    <Compile Include="Logica\estadoTareaL.cs" />
     <Compile Include="Logica\tareasL.cs" />
     <Compile Include="MailServices1\MasterMailServer.cs" />
     <Compile Include="MailServices1\systemSupportMail.cs" />

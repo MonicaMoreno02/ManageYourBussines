@@ -326,5 +326,60 @@ namespace ManageYourBussines.Presentacion
                 }
             }
         }
+
+        protected void btnpendiente_Click(object sender, EventArgs e)
+        {
+
+            int idemple = 1;
+            clTareasE objTarea = new clTareasE();
+            objTarea.idTareas = idemple;
+
+            tareasL objtareaL = new tareasL();
+            DataTable tareas = new DataTable();
+            List<clTareasE> listartarea = new List<clTareasE>();
+            //Session["objeto"] = objCarritoL.mtdListcar();
+            listartarea = objtareaL.mtdList(objTarea);
+
+
+            gvtareas.DataSource = listartarea;
+            gvtareas.DataBind();
+
+        }
+
+        protected void btnprogreso_Click(object sender, EventArgs e)
+        {
+            int idemple = 1;
+            string progreso = "progreso";
+            estadoTareaE objTareas = new estadoTareaE();
+            objTareas.idEmpleado = idemple;
+            objTareas.estado = progreso;
+
+
+            estadoTareaL objtareaL = new estadoTareaL();
+            DataTable tareas = new DataTable();
+            List<estadoTareaE> listartarea = new List<estadoTareaE>();
+            //Session["objeto"] = objCarritoL.mtdListcar();
+            listartarea = objtareaL.mtdList(objTareas);
+          gvprogreso.DataSource=listartarea;
+            gvprogreso.DataBind();
+        }
+
+        protected void btnterminado_Click(object sender, EventArgs e)
+        {
+            int idemple = 1;
+            string progreso = "terminado";
+            estadoTareaE objTareas = new estadoTareaE();
+            objTareas.idEmpleado = idemple;
+            objTareas.estado = progreso;
+
+
+            estadoTareaL objtareaL = new estadoTareaL();
+            DataTable tareas = new DataTable();
+            List<estadoTareaE> listartarea = new List<estadoTareaE>();
+            //Session["objeto"] = objCarritoL.mtdListcar();
+            listartarea = objtareaL.mtdList(objTareas);
+            gvprogreso.DataSource = listartarea;
+            gvprogreso.DataBind();
+        }
     }
 }
