@@ -24,8 +24,8 @@ namespace ManageYourBussines
 
             //}
             clEmpleadoE objDatos = new clEmpleadoE();
-            objDatos.email = txtEmailEmpledo.Text;
-            objDatos.clave = txtClaveEmpleado.Text;
+            objDatos.emailEmpleado = txtEmailEmpledo.Text;
+            objDatos.claveEmpleado = txtClaveEmpleado.Text;
 
             clEmpleadoL objUsuariosL = new clEmpleadoL();
             clEmpleadoE objDatosClien = new clEmpleadoE();
@@ -35,7 +35,7 @@ namespace ManageYourBussines
 
 
 
-                Session["EmpleadosVen"] = objDatos.nombreEmpleado + " " + objDatos.apellidos;
+                Session["EmpleadosVen"] = objDatos.nombreEmpleado + " " + objDatos.apellidoEmpleado;
                 //Session["nombreEmpleado"] = objDatosClien.nombreEmpleado;
                 //Session["apellidos"] = objDatosClien.apellidosEmple;
                 Response.Redirect("Presentacion/frmvendedor.aspx");

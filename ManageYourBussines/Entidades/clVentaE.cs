@@ -13,14 +13,10 @@ namespace ManageYourBussines.Entidades
         public float totalVenta { get; set; }
         public int idCliente { get; set; }
         public int idEmpleado { get; set; }
-
-        public int idDetallesVenta { get; set; }
-    
+        public int idDetallesVenta { get; set; }    
         public int cantidad { get; set; }
-        public float valorTotal { get; set; }
-        
+        public float valorTotal { get; set; }        
         public string fechaVen { get; set; }
         public int filas { get; set; }
-
     }
 }

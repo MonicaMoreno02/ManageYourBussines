@@ -17,8 +17,8 @@ namespace ManageYourBussines.Logica
             return listaClientes;
 
         }
-        
-            public List<clBalanceE> mtdListarDetalles(clBalanceE objdtalles)
+
+        public List<clBalanceE> mtdListarDetalles(clBalanceE objdtalles)
         {
             clBalanceD objBalanceD = new clBalanceD();
             List<clBalanceE> listaClientes = new List<clBalanceE>();
@@ -34,6 +34,15 @@ namespace ManageYourBussines.Logica
             return listaClientes;
 
         }
+
+        public List<clBalanceE> mtdListarGraficasL(clBalanceE objDatosGraficas)
+        {
+            clBalanceD objBalanceD = new clBalanceD();
+            List<clBalanceE> listaGraficas = new List<clBalanceE>();
+            listaGraficas = objBalanceD.mtdlistargraficos1(objDatosGraficas);
+            return listaGraficas;
+        }
+
 
     }
 }

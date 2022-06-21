@@ -14,7 +14,7 @@ namespace ManageYourBussines.Datos
         public clEmpleadoE mtdLogin(clEmpleadoE objDatos)
         {
 
-            string consulta = "select * from  empleado  where email='" + objDatos.email+ "' and clave='" + objDatos.clave + "'";
+            string consulta = "select * from  empleado  where emailEmpleado='" + objDatos.emailEmpleado+ "' and claveEmpleado='" + objDatos.claveEmpleado + "'";
             clConexion objConexion = new clConexion();
             DataTable tblDatos = new DataTable();
             tblDatos = objConexion.mtdDesconectado(consulta);
@@ -28,13 +28,12 @@ namespace ManageYourBussines.Datos
                 if (tblDatos.Rows[0][4].ToString() == "Vendedor")
                 {
                     objDatosEmple.idEmpleado = int.Parse(tblDatos.Rows[0]["idEmpleado"].ToString());
-                    objDatosEmple.documento = tblDatos.Rows[0]["documentoE"].ToString();
-                    objDatosEmple.nombreEmpleado = tblDatos.Rows[0]["nombreEmpleado"].ToString();
-                    objDatosEmple.apellidos = tblDatos.Rows[0]["apellidosEmple"].ToString();
+                    objDatosEmple.documentoEmpleado = tblDatos.Rows[0]["documento"].ToString();
+                    objDatosEmple.nombreEmpleado = tblDatos.Rows[0]["nombresEmpleado"].ToString();
+                    objDatosEmple.apellidoEmpleado = tblDatos.Rows[0]["apellidosEmpleado"].ToString();
                     objDatosEmple.tipoEmpleado = tblDatos.Rows[0]["tipoEmpleado"].ToString();
-
-                    objDatosEmple.email = tblDatos.Rows[0]["email"].ToString();
-                    objDatosEmple.clave = tblDatos.Rows[0]["clave"].ToString();
+                    objDatosEmple.emailEmpleado = tblDatos.Rows[0]["emailEmpleado"].ToString();
+                    objDatosEmple.claveEmpleado = tblDatos.Rows[0]["claveEmpleado"].ToString();
 
                 }
 
@@ -69,12 +68,12 @@ namespace ManageYourBussines.Datos
                 clEmpleadoE objEmpleado = new clEmpleadoE();
 
                 objEmpleado.idEmpleado = int.Parse(tblEmpleados.Rows[i]["idEmpleado"].ToString());
-                objEmpleado.documento = tblEmpleados.Rows[i]["documento"].ToString();
-                objEmpleado.nombreEmpleado = tblEmpleados.Rows[i]["nombreEmpleado"].ToString();
-                objEmpleado.apellidos = tblEmpleados.Rows[i]["apellidos"].ToString();
+                objEmpleado.documentoEmpleado = tblEmpleados.Rows[i]["documentoEmpleado"].ToString();
+                objEmpleado.nombreEmpleado = tblEmpleados.Rows[i]["nombresEmpleado"].ToString();
+                objEmpleado.apellidoEmpleado = tblEmpleados.Rows[i]["apellidoEmpleado "].ToString();
                 objEmpleado.tipoEmpleado = tblEmpleados.Rows[i]["TipoEmpleado"].ToString();
-                objEmpleado.email = tblEmpleados.Rows[i]["emailEmpleado"].ToString();
-                objEmpleado.clave = tblEmpleados.Rows[i]["claveEmpleado"].ToString();
+                objEmpleado.emailEmpleado = tblEmpleados.Rows[i]["emailEmpleado"].ToString();
+                objEmpleado.claveEmpleado = tblEmpleados.Rows[i]["claveEmpleado"].ToString();
 
                 ListaEmpleados.Add(objEmpleado);
             }
@@ -85,11 +84,11 @@ namespace ManageYourBussines.Datos
 
         public int mtdRegistrar(clEmpleadoE objDatosEmpleados)
         {
-            string sql = "insert into empleado(documento,nombreEmpleado,apellidos," +
+            string sql = "insert into empleado(documentoEmpleado,nombreEmpleado,apellidosEmpleado," +
                 "tipoEmpleado,emailEmpleado,claveEmpleado)" +
-                "values('" + objDatosEmpleados.documento + "','" + objDatosEmpleados.nombreEmpleado + "'" +
-                ",'" + objDatosEmpleados.apellidos + "','" + objDatosEmpleados.tipoEmpleado + "'," +
-                "'" + objDatosEmpleados.email + "','" + objDatosEmpleados.clave + "')";
+                "values('" + objDatosEmpleados.documentoEmpleado + "','" + objDatosEmpleados.nombreEmpleado + "'" +
+                ",'" + objDatosEmpleados.apellidoEmpleado + "','" + objDatosEmpleados.tipoEmpleado + "'," +
+                "'" + objDatosEmpleados.emailEmpleado + "','" + objDatosEmpleados.claveEmpleado + "')";
 
             clConexion objConexion = new clConexion();
             int resultado = objConexion.mtdConectado(sql);
@@ -99,9 +98,9 @@ namespace ManageYourBussines.Datos
 
         public int mtdEditar(clEmpleadoE objDatos)
         {
-            string sql = "Update Empleado set documento='" + objDatos.documento + "', nombreEmpleado='" + objDatos.nombreEmpleado + "'," +
-                "apellidos='" + objDatos.apellidos + "',tipoEmpleado='" + objDatos.tipoEmpleado + "',emailEmpleado='" + objDatos.email + "',claveEmpleado='" +
-                objDatos.clave + "' where idEmpleado=" + objDatos.idEmpleado +  "";
+            string sql = "Update Empleado set documentoEmpleado='" + objDatos.documentoEmpleado + "', nombreEmpleado='" + objDatos.nombreEmpleado + "'," +
+                "apellidoEmpleado='" + objDatos.apellidoEmpleado + "',tipoEmpleado='" + objDatos.tipoEmpleado + "',emailEmpleado='" + objDatos.emailEmpleado + "',claveEmpleado='" +
+                objDatos.claveEmpleado + "' where idEmpleado=" + objDatos.idEmpleado +  "";
 
             clConexion objConexion = new clConexion();
             int result = objConexion.mtdConectado(sql);
@@ -138,7 +137,7 @@ namespace ManageYourBussines.Datos
                 objSeguridad.porcentajePension = float.Parse(tblSeguridad.Rows[i]["porcentajePension"].ToString());
                 objSeguridad.porcentajeSalud = float.Parse(tblSeguridad.Rows[i]["porcentajeSalud"].ToString());
                 objSeguridad.smlv = float.Parse(tblSeguridad.Rows[i]["smlv"].ToString());
-                objSeguridad.fecha = DateTime.Parse(tblSeguridad.Rows[i]["fecha"].ToString());
+                objSeguridad.fecha = int.Parse(tblSeguridad.Rows[i]["fecha"].ToString());
                 
 
                 ListaSeguridad.Add(objSeguridad);

@@ -28,5 +28,18 @@ namespace ManageYourBussines.Presentacion
 
             return listaSeguridad;
         }
+
+
+        //PAOLA:listar empleados
+        //[WebMethod]
+        //public static List<clEmpleadoE> mtdListar()
+        //{
+        //    clEmpleadoL objEmpleado = new clEmpleadoL();
+        //    List<clEmpleadoE> listaEmpleados = new List<clEmpleadoE>();
+
+        //    listaEmpleados = objEmpleado.mtdListarEmpleadoL();
+
+        //    return listaEmpleados;
+        //}
     }
 }

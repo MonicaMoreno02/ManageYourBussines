@@ -1,7 +1,7 @@
 ﻿var table, dato
-sendDataAjaxS();
+sendDataAjax();
 
-function agregarFilasS(datos) {
+function agregarFilasS(dato) {
     console.log(dato);
     table = $("#dtSeguridad").dataTable();
     for (var i = 0; i < dato.length; i++) {
@@ -17,7 +17,7 @@ function agregarFilasS(datos) {
 }
 
 
-function sendDataAjaxS() {
+function sendDataAjax() {
     $.ajax({
         type: "POST",
         url: "frmSeguridadSocial.aspx/mtdListarSeguridad",
@@ -26,7 +26,7 @@ function sendDataAjaxS() {
         dataType: "json",
 
         success: function (dato) {
-            agregarFilas(dato.d);
+            agregarFilasS(dato.d);
         },
         failure: function (response) {
             alert(response);

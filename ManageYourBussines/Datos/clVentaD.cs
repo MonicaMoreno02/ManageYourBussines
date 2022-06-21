@@ -12,7 +12,7 @@ namespace ManageYourBussines.Datos
     {
         public List<clVentaE> mtdListarVenta(clVentaE objfactura)
         {
-            string sql = "select * from venta inner join detallesVenta on venta.idVenta=detallesVenta.idVenta inner join producto on detallesVenta.idProducto = producto.idProducto where (idCliente=" + objfactura.idCliente + ") and(codigoVenta = '" + objfactura.codigoVenta + "')";
+            string sql = "select * from venta inner join detallesVenta on venta.idVenta=detallesVenta.idVenta inner join producto on detallesVenta.idProducto = producto.idProducto where (idCliente=" + objfactura.idCliente + ") and(codigoVenta = '" + objfactura.codigoVenta + "')" ;
             clConexion objConexion = new clConexion();
             DataTable tblVenta = new DataTable();
             tblVenta = objConexion.mtdDesconectado(sql);
@@ -88,6 +88,8 @@ namespace ManageYourBussines.Datos
             int resutado = objConexion.mtdConectado(sql);
             return resutado;
         }
+
+
     }
 
 }

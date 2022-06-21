@@ -43,7 +43,7 @@ namespace ManageYourBussines.Datos
             return listarCliente;
         }
 
-        //Listar Detalles de venta
+        //PAOLA: Listar Detalles de venta
         public List<clDetallesE> mtdListarDetallesD(int idCliente)
         {
             string sql = "select cliente.nombreCliente , venta.fechaVenta, venta.codigoVenta, venta.totalVenta, empleado.nombreEmpleado, detallesVenta.cantidad, detallesVenta.valorTotal, producto.nombreProducto"+

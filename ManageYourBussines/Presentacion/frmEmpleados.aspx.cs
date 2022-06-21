@@ -14,9 +14,9 @@ namespace ManageYourBussines.Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //PAOLA: vuelve invisible los txt
-              //txtIDEmpleado.Attributes.Add("style", "DISPLAY:none");
-              //txtIDEmpleadoB.Attributes.Add("style", "DISPLAY:none");
+             //PAOLA: vuelve invisible los txt
+              txtIDEmpleado.Attributes.Add("style", "DISPLAY:none");
+              txtIDEmpleadoB.Attributes.Add("style", "DISPLAY:none");
         }
 
 
@@ -32,7 +32,7 @@ namespace ManageYourBussines.Presentacion
             return listaEmpleados;
         }
 
-       
+      
 
 
         //PAOLA:editar empleados
@@ -41,12 +41,12 @@ namespace ManageYourBussines.Presentacion
         {
             clEmpleadoE objDatos = new clEmpleadoE();
             objDatos.idEmpleado = int.Parse(txtIDEmpleado.Text);
-            objDatos.documento = txtDocumento.Text;
+            objDatos.documentoEmpleado = txtDocumento.Text;
             objDatos.nombreEmpleado = txtNombreEmpleado.Text;
-            objDatos.apellidos = txtApellidos.Text;
+            objDatos.apellidoEmpleado = txtApellidos.Text;
             objDatos.tipoEmpleado = txtTipoEmpleado.Text;
-            objDatos.email = txtEmail.Text;
-            objDatos.clave = txtClave.Text;
+            objDatos.emailEmpleado = txtEmail.Text;
+            objDatos.claveEmpleado = txtClave.Text;
 
             clEmpleadoL objEmpleadoL = new clEmpleadoL();
             int resultado = objEmpleadoL.mtdEditar(objDatos);
@@ -64,48 +64,16 @@ namespace ManageYourBussines.Presentacion
            
         }
 
-        //PAOLA:registrar empleados
-        protected void btnRegistrar_Click(object sender, EventArgs e)
+        
+
+
+        protected void btnRegistrarE_Click(object sender, EventArgs e)
         {
-            LblTipoEmpleado.Text = ddlTipoEmpleado.SelectedValue.ToString();
-
-            clEmpleadoE objEmpleadoE = new clEmpleadoE();
-            objEmpleadoE.documento = txtDocumentoRegis.Text;
-            objEmpleadoE.nombreEmpleado = txtNombreRegis.Text;
-            objEmpleadoE.apellidos = txtApellidoRegis.Text;
-            objEmpleadoE.tipoEmpleado = LblTipoEmpleado.Text;
-            objEmpleadoE.email = txtEmailRegis.Text;
-            objEmpleadoE.clave = txtClaveRegis.Text;
-
-
-            clEmpleadoL objDatosEmpleado = new clEmpleadoL();
-            int resultado =  objDatosEmpleado.mtdRegistrarEmple(objEmpleadoE);
-
-            if (resultado!=0)
-            {
-                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Registro guardado correctamente:(');", true);
-            }
-            else
-            {
-                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Algo ha salido mal y no hemos guardado tu registro :(');", true);
-            }
-
-            txtDocumentoRegis.Text = " ";
-            txtNombreRegis.Text = " ";
-            txtApellidoRegis.Text = " ";
-            LblTipoEmpleado.Text = " ";
-            txtEmailRegis.Text = " ";
-            txtClaveRegis.Text = " ";
-            
+            Response.Redirect("frmRegisEmpleados.aspx");
         }
 
-        //protected void btnEliminar_Click(object sender, EventArgs e)
-        //{
-        //}
-
-        protected void btnBorrar_Click(object sender, EventArgs e)
+        protected void btnEliminar_Click(object sender, EventArgs e)
         {
-
             int id = int.Parse(txtIDEmpleadoB.Text);
 
             clEmpleadoL objEmpleadoL = new clEmpleadoL();
@@ -124,10 +92,6 @@ namespace ManageYourBussines.Presentacion
         }
 
         //PAOLA:eliminar empleados
-
-
-        //PAOLA: Listar seguridad social
-
 
     }
 }

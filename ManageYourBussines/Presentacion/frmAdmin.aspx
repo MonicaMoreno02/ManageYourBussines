@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <form runat="server" style="background-color:black">
+    <form runat="server" class="fondoo">
         <asp:Button ID="BtnInicio" runat="server" Text="INICIO" Height="96px" OnClick="BtnInicio_Click" Width="135px" BackColor="#AB8365" BorderColor="Black" BorderStyle="Outset" BorderWidth="2px" />
         <br />
         <br />
@@ -22,12 +22,12 @@
             </div>
         </a>
 
-        <a class="btn link">
+        <a class="btn link" href="frmVenta.aspx">
             <div class="btn from-left">
                 Ventas     
             </div>
         </a>
-
+      
         <a class="btn link" href="frmClientes.aspx">
             <div class="btn from-right">
                 Clientes     
@@ -43,6 +43,7 @@
                 Balance 
             </div>
         </a>
+       
     </form>
 
 </asp:Content>

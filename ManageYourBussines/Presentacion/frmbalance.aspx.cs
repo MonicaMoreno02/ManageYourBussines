@@ -451,15 +451,23 @@ namespace ManageYourBussines.Presentacion
 
                     }
 
-
-
-
-
                 }
 
                 gvBalance.DataSource = dtBal;
                 gvBalance.DataBind();
             }
         }
+
+        //PAOLA: listar graficas de ventas
+
+
+        public List<clBalanceE> mtdListarGracifasD(clBalanceE objGraficas)
+        {
+            clBalanceL objBalance = new clBalanceL();
+            List<clBalanceE> listaGraficas = new List<clBalanceE>();
+            listaGraficas = objBalance.mtdListarGraficasL(objGraficas);
+            return listaGraficas;
+        }
+
     }
 }
