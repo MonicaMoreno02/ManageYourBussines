@@ -49,10 +49,9 @@ namespace ManageYourBussines.Presentacion
             ///auto posbak
 
             clProductoL objProductoL = new clProductoL();
-            repeater2.DataSource = objProductoL.mtdListarP();
+            repeater2.DataSource = objProductoL.mtdListarPro();
             repeater2.DataBind();
            
-
 
         }
         public void Getcarrito(object sender, EventArgs e)

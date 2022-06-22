@@ -22,7 +22,7 @@ namespace ManageYourBussines
             if (!IsPostBack)
             {
                 clProductoL objProductoL = new clProductoL();
-                Repeater2.DataSource = objProductoL.mtdListarProducto();
+                Repeater2.DataSource = objProductoL.mtdListarPro();
                 Repeater2.DataBind();
             }
 

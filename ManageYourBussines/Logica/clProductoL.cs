@@ -12,6 +12,14 @@ namespace ManageYourBussines.Logica
      /// 
      /// </summary>
      /// <returns></returns>
+     /// 
+        public List<clProductoE> mtdListarPro()
+        {
+            clProductoD objProductoD = new clProductoD();
+            List<clProductoE> objProducto = new List<clProductoE>();
+            objProducto = objProductoD.mtdListar();
+            return objProducto;
+        }
         public List<clProductoE> mtdListarP()
         {
             clProductoD objProducto = new clProductoD();
