@@ -14,7 +14,7 @@ namespace ManageYourBussines.Presentacion
 
             lblEmpleado.Text = Session["usuario"].ToString();
             lblApellidos.Text = Session["idCliente"].ToString();
-            lblEmpleado1.Text = Session["empleado"].ToString();
+            //lblEmpleado1.Text = Session["empleado"].ToString();
         }
       
 
