@@ -9,7 +9,7 @@ function agregarFilas(datos) {
             datos[i].idCliente,
             datos[i].documento,
             datos[i].nombreCliente,
-            datos[i].apellidos,
+            datos[i].apellidosCliente,
             datos[i].telefono,
             datos[i].direccion,
             datos[i].emailCliente,

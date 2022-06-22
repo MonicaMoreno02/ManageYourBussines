@@ -28,7 +28,7 @@ namespace ManageYourBussines.Datos
                 if (tblDatos.Rows[0][4].ToString() == "Vendedor")
                 {
                     objDatosEmple.idEmpleado = int.Parse(tblDatos.Rows[0]["idEmpleado"].ToString());
-                    objDatosEmple.documentoEmpleado = tblDatos.Rows[0]["documento"].ToString();
+                    objDatosEmple.documentoEmpleado = tblDatos.Rows[0]["documentoEmpleado"].ToString();
                     objDatosEmple.nombreEmpleado = tblDatos.Rows[0]["nombresEmpleado"].ToString();
                     objDatosEmple.apellidoEmpleado = tblDatos.Rows[0]["apellidosEmpleado"].ToString();
                     objDatosEmple.tipoEmpleado = tblDatos.Rows[0]["tipoEmpleado"].ToString();
@@ -70,7 +70,7 @@ namespace ManageYourBussines.Datos
                 objEmpleado.idEmpleado = int.Parse(tblEmpleados.Rows[i]["idEmpleado"].ToString());
                 objEmpleado.documentoEmpleado = tblEmpleados.Rows[i]["documentoEmpleado"].ToString();
                 objEmpleado.nombreEmpleado = tblEmpleados.Rows[i]["nombresEmpleado"].ToString();
-                objEmpleado.apellidoEmpleado = tblEmpleados.Rows[i]["apellidoEmpleado"].ToString();
+                objEmpleado.apellidoEmpleado = tblEmpleados.Rows[i]["apellidosEmpleado"].ToString();
                 objEmpleado.tipoEmpleado = tblEmpleados.Rows[i]["TipoEmpleado"].ToString();
                 objEmpleado.emailEmpleado = tblEmpleados.Rows[i]["emailEmpleado"].ToString();
                 objEmpleado.claveEmpleado = tblEmpleados.Rows[i]["claveEmpleado"].ToString();
@@ -84,7 +84,7 @@ namespace ManageYourBussines.Datos
 
         public int mtdRegistrar(clEmpleadoE objDatosEmpleados)
         {
-            string sql = "insert into empleado(documentoEmpleado,nombreEmpleado,apellidosEmpleado," +
+            string sql = "insert into empleado(documentoEmpleado,nombresEmpleado,apellidosEmpleado," +
                 "tipoEmpleado,emailEmpleado,claveEmpleado)" +
                 "values('" + objDatosEmpleados.documentoEmpleado + "','" + objDatosEmpleados.nombreEmpleado + "'" +
                 ",'" + objDatosEmpleados.apellidoEmpleado + "','" + objDatosEmpleados.tipoEmpleado + "'," +

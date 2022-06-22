@@ -31,7 +31,7 @@ namespace ManageYourBussines.Datos
                 objDatosClientes.idCliente = int.Parse(tblCliente.Rows[i]["idCliente"].ToString());
                 objDatosClientes.documento = tblCliente.Rows[i]["documento"].ToString();
                 objDatosClientes.nombreCliente = tblCliente.Rows[i]["nombreCliente"].ToString();
-                objDatosClientes.apellidos = tblCliente.Rows[i]["apellidos"].ToString();
+                objDatosClientes.apellidosCliente = tblCliente.Rows[i]["apellidoCliente"].ToString();
                 objDatosClientes.telefono = tblCliente.Rows[i]["telefono"].ToString();
                 objDatosClientes.direccion = tblCliente.Rows[i]["direccion"].ToString();
                 objDatosClientes.emailCliente = tblCliente.Rows[i]["emailCliente"].ToString();
@@ -46,7 +46,7 @@ namespace ManageYourBussines.Datos
         //PAOLA: Listar Detalles de venta
         public List<clDetallesE> mtdListarDetallesD(int idCliente)
         {
-            string sql = "select cliente.nombreCliente , venta.fechaVenta, venta.codigoVenta, venta.totalVenta, empleado.nombreEmpleado, detallesVenta.cantidad, detallesVenta.valorTotal, producto.nombreProducto"+
+            string sql = "select cliente.nombreCliente , venta.fechaVenta, venta.codigoVenta, venta.totalVenta, empleado.nombresEmpleado, detallesVenta.cantidad, detallesVenta.valorTotal, producto.nombreProducto"+
                 " from cliente inner join venta on cliente.idCliente = venta.idCliente inner join empleado on venta.idEmpleado = empleado.idEmpleado" + 
                 " inner join detallesVenta on detallesVenta.idVenta = venta.idVenta"+
                 " inner join producto on producto.idProducto = detallesVenta.idProducto where cliente.idCliente="+idCliente+"";
@@ -67,7 +67,7 @@ namespace ManageYourBussines.Datos
                 objDatosDetalle.fechaVenta = DateTime.Parse(tblDetallesVenta.Rows[i]["fechaVenta"].ToString());
                 objDatosDetalle.codigoVenta = tblDetallesVenta.Rows[i]["codigoVenta"].ToString();
                 objDatosDetalle.totalVenta = float.Parse(tblDetallesVenta.Rows[i]["totalVenta"].ToString());
-                objDatosDetalle.nombreEmpleado = tblDetallesVenta.Rows[i]["nombreEmpleado"].ToString();
+                objDatosDetalle.nombreEmpleado = tblDetallesVenta.Rows[i]["nombresEmpleado"].ToString();
                 objDatosDetalle.cantidad = int.Parse(tblDetallesVenta.Rows[i]["cantidad"].ToString());
                 objDatosDetalle.valorTotal = float.Parse(tblDetallesVenta.Rows[i]["valorTotal"].ToString());
                 objDatosDetalle.nombreProducto = tblDetallesVenta.Rows[i]["nombreProducto"].ToString();

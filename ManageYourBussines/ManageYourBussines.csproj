@@ -144,6 +144,7 @@
     <Content Include="Presentacion\recursos\images\estante2.png" />
     <Content Include="Presentacion\recursos\images\fondo1.jpg" />
     <Content Include="Presentacion\recursos\images\fondo2.jpeg" />
+    <Content Include="Presentacion\recursos\images\fondo2admin.jpeg" />
     <Content Include="Presentacion\recursos\images\fondo3.jpg" />
     <Content Include="Presentacion\recursos\images\fondo5.jpeg" />
     <Content Include="Presentacion\recursos\images\icono3.png" />

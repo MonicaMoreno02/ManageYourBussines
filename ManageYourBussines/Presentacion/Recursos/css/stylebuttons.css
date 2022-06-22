@@ -175,7 +175,16 @@
 }
 
 
-/* ~~~~~~~~~~~~ GLOBAL SETTINGS ~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~ GLOBAL SETTINGS 
+	declaracion de vinculacion
+	conflictos de intereses
+
+	documentos contractuales para firma
+	3 archivos 
+	1)proteccion de datos
+	2)acuerdo de confidencialidad
+	3)contrato de aprendizaje
+	~~~~~~~~~~~~ */
 
 *, *:before, *:after {
 	box-sizing: border-box;
@@ -195,9 +204,8 @@ body {
 	flex-direction: column;
 	height: 100vh;
 	width: 100%;
-	background-image: url('../images/fondo5.jpeg');
-	background-size:cover;
-	
+	background-image: url('../images/fondo2admin.jpeg');
+	background-size: cover;
 }
 
 html {
