@@ -14,6 +14,7 @@ namespace ManageYourBussines.Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            lblEmpleado.Text = Session["usuario"].ToString();
             if (Session["idc"] != null)
             {
                 string idc = Convert.ToString(Session["idc"]);

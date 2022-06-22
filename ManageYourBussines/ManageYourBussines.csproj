@@ -80,6 +80,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Global.asax" />
     <Content Include="index.aspx" />
     <Content Include="loginEmpleado.aspx" />
     <Content Include="plantilla 2\css\style.css" />
@@ -89,7 +90,10 @@
     <Content Include="plantilla 2\fonts\roboto-slab\roboto-slab-v7-latin-300.svg" />
     <Content Include="plantilla 2\fonts\roboto-slab\roboto-slab-v7-latin-700.svg" />
     <Content Include="plantilla 2\fonts\roboto-slab\roboto-slab-v7-latin-regular.svg" />
+    <Content Include="plantilla 2\images\admin_person_user_man_2839.ico" />
+    <Content Include="plantilla 2\images\admin_person_user_man_2839.png" />
     <Content Include="plantilla 2\images\body-bg.jpg" />
+    <Content Include="plantilla 2\images\customer_person_people_man_user_client_1629.ico" />
     <Content Include="plantilla 2\images\fondo.jpg" />
     <Content Include="plantilla 2\images\form-img.jpg" />
     <Content Include="plantilla 2\index.html" />
@@ -302,6 +306,9 @@
     <Compile Include="Entidades\clSugerenciasE.cs" />
     <Compile Include="Entidades\clUsuarioE.cs" />
     <Compile Include="Entidades\clVentaE.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

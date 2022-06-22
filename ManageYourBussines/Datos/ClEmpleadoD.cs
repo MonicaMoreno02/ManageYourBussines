@@ -11,7 +11,7 @@ namespace ManageYourBussines.Datos
     public class clEmpleadoD
     {
         //metodo de login  del empleado
-        public clEmpleadoE mtdLogin(clEmpleadoE objDatos)
+        public clEmpleadoE mtdLoginE(clEmpleadoE objDatos)
         {
 
             string consulta = "select * from  empleado  where email='" + objDatos.email+ "' and clave='" + objDatos.clave + "'";

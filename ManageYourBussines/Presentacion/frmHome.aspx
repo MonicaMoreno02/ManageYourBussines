@@ -43,7 +43,8 @@
                 <a class="nav-link" href="book.html">Book Table</a>
               </li>-->
                         </ul>
-
+                        <asp:Label ForeColor="White" ID="lblEmpleado" runat="server"></asp:Label>
+                         <asp:Label ForeColor="White" ID="lblApellidos" runat="server"></asp:Label>
 
                         <div class="user_option">
 
