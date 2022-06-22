@@ -67,7 +67,7 @@ namespace ManageYourBussines.Presentacion
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("editarDatos.aspx");
+          
 
 
         }
@@ -92,6 +92,11 @@ namespace ManageYourBussines.Presentacion
  
                Response.Redirect("chat.aspx");
 
+        }
+
+        protected void Datos_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("editarDatos.aspx");
         }
 
 
