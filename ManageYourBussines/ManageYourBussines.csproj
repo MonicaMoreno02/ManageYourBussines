@@ -101,6 +101,19 @@
     <Content Include="plantilla 2\readme.txt" />
     <Content Include="plantilla 2\vendor\jquery\jquery-ui.min.js" />
     <Content Include="plantilla 2\vendor\jquery\jquery.min.js" />
+    <Content Include="Presentacion\ediar\css\style.css" />
+    <Content Include="Presentacion\ediar\fonts\material-icon\css\material-design-iconic-font.css" />
+    <Content Include="Presentacion\ediar\fonts\material-icon\css\material-design-iconic-font.min.css" />
+    <Content Include="Presentacion\ediar\fonts\material-icon\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="Presentacion\ediar\fonts\roboto-slab\roboto-slab-v7-latin-300.svg" />
+    <Content Include="Presentacion\ediar\fonts\roboto-slab\roboto-slab-v7-latin-700.svg" />
+    <Content Include="Presentacion\ediar\fonts\roboto-slab\roboto-slab-v7-latin-regular.svg" />
+    <Content Include="Presentacion\ediar\images\body-bg.jpg" />
+    <Content Include="Presentacion\ediar\images\form-img.jpg" />
+    <Content Include="Presentacion\ediar\js\main.js" />
+    <Content Include="Presentacion\ediar\vendor\jquery\jquery-ui.min.js" />
+    <Content Include="Presentacion\ediar\vendor\jquery\jquery.min.js" />
+    <Content Include="Presentacion\editarDatos.aspx" />
     <Content Include="Presentacion\frmAbout.aspx" />
     <Content Include="Presentacion\frmAdminProductos.aspx" />
     <Content Include="Presentacion\frmbalance.aspx" />
@@ -333,6 +346,13 @@
     <Compile Include="MailServices1\MasterMailServer.cs" />
     <Compile Include="MailServices1\systemSupportMail.cs" />
     <Compile Include="Logica\clVentaL.cs" />
+    <Compile Include="Presentacion\editarDatos.aspx.cs">
+      <DependentUpon>editarDatos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\editarDatos.aspx.designer.cs">
+      <DependentUpon>editarDatos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\frmAbout.aspx.cs">
       <DependentUpon>frmAbout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -601,6 +621,63 @@
     <Content Include="plantilla 2\scss\layouts\main.scss" />
     <Content Include="plantilla 2\scss\layouts\responsive.scss" />
     <Content Include="plantilla 2\scss\style.scss" />
+    <Content Include="Presentacion\ediar\.sass-cache\0717b98c6a6bd391fb4f8df76acf1fcea07f5d98\style.scssc" />
+    <Content Include="Presentacion\ediar\.sass-cache\21880c0ffe15753a53f8402e9f64e1077e071510\style.scssc" />
+    <Content Include="Presentacion\ediar\.sass-cache\25faf4a967da51e59251c020bd6e9fa9d1fb23e3\extend.scssc" />
+    <Content Include="Presentacion\ediar\.sass-cache\25faf4a967da51e59251c020bd6e9fa9d1fb23e3\fonts.scssc" />
+    <Content Include="Presentacion\ediar\.sass-cache\25faf4a967da51e59251c020bd6e9fa9d1fb23e3\global.scssc" />
+    <Content Include="Presentacion\ediar\.sass-cache\25faf4a967da51e59251c020bd6e9fa9d1fb23e3\minxi.scssc" />
+    <Content Include="Presentacion\ediar\.sass-cache\25faf4a967da51e59251c020bd6e9fa9d1fb23e3\variables.scssc" />
+    <Content Include="Presentacion\ediar\.sass-cache\2866be86c578bb583fbf023501bb9fd24cc3bf22\extend.scssc" />
+    <Content Include="Presentacion\ediar\.sass-cache\2866be86c578bb583fbf023501bb9fd24cc3bf22\fonts.scssc" />
+    <Content Include="Presentacion\ediar\.sass-cache\2866be86c578bb583fbf023501bb9fd24cc3bf22\global.scssc" />
+    <Content Include="Presentacion\ediar\.sass-cache\2866be86c578bb583fbf023501bb9fd24cc3bf22\minxi.scssc" />
+    <Content Include="Presentacion\ediar\.sass-cache\2866be86c578bb583fbf023501bb9fd24cc3bf22\variables.scssc" />
+    <Content Include="Presentacion\ediar\.sass-cache\3948936f84e1a30385e73a9be140b58b48c82e15\style.scssc" />
+    <Content Include="Presentacion\ediar\.sass-cache\643489b018602f15119d8f44aeb7fc79468873a9\main.scssc" />
+    <Content Include="Presentacion\ediar\.sass-cache\643489b018602f15119d8f44aeb7fc79468873a9\responsive.scssc" />
+    <Content Include="Presentacion\ediar\.sass-cache\7643c8aa2e335ff5e104bc47d8dd7f1a0693bb39\extend.scssc" />
+    <Content Include="Presentacion\ediar\.sass-cache\7643c8aa2e335ff5e104bc47d8dd7f1a0693bb39\fonts.scssc" />
+    <Content Include="Presentacion\ediar\.sass-cache\7643c8aa2e335ff5e104bc47d8dd7f1a0693bb39\global.scssc" />
+    <Content Include="Presentacion\ediar\.sass-cache\7643c8aa2e335ff5e104bc47d8dd7f1a0693bb39\minxi.scssc" />
+    <Content Include="Presentacion\ediar\.sass-cache\7643c8aa2e335ff5e104bc47d8dd7f1a0693bb39\variables.scssc" />
+    <Content Include="Presentacion\ediar\.sass-cache\9dc767a56f3dc2f8a933300255cd2265f13191d4\main.scssc" />
+    <Content Include="Presentacion\ediar\.sass-cache\9dc767a56f3dc2f8a933300255cd2265f13191d4\responsive.scssc" />
+    <Content Include="Presentacion\ediar\.sass-cache\c36f88b26093e3516ab62f7245605adc5c11410b\main.scssc" />
+    <Content Include="Presentacion\ediar\.sass-cache\c36f88b26093e3516ab62f7245605adc5c11410b\responsive.scssc" />
+    <Content Include="Presentacion\ediar\.sass-cache\cec26e9170155d08bca7be48ab33ee76eb89985a\style.scssc" />
+    <Content Include="Presentacion\ediar\.sass-cache\de43089b9300c63e94c69b4ea0269a5b0e6e6a33\main.scssc" />
+    <Content Include="Presentacion\ediar\.sass-cache\de43089b9300c63e94c69b4ea0269a5b0e6e6a33\responsive.scssc" />
+    <Content Include="Presentacion\ediar\.sass-cache\f71149907399ab955d3d70a25ac6bfed8a6004f4\extend.scssc" />
+    <Content Include="Presentacion\ediar\.sass-cache\f71149907399ab955d3d70a25ac6bfed8a6004f4\fonts.scssc" />
+    <Content Include="Presentacion\ediar\.sass-cache\f71149907399ab955d3d70a25ac6bfed8a6004f4\global.scssc" />
+    <Content Include="Presentacion\ediar\.sass-cache\f71149907399ab955d3d70a25ac6bfed8a6004f4\minxi.scssc" />
+    <Content Include="Presentacion\ediar\.sass-cache\f71149907399ab955d3d70a25ac6bfed8a6004f4\variables.scssc" />
+    <Content Include="Presentacion\ediar\css\style.css.map" />
+    <Content Include="Presentacion\ediar\fonts\material-icon\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="Presentacion\ediar\fonts\material-icon\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="Presentacion\ediar\fonts\material-icon\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="Presentacion\ediar\fonts\material-icon\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="Presentacion\ediar\fonts\roboto-slab\roboto-slab-v7-latin-300.eot" />
+    <Content Include="Presentacion\ediar\fonts\roboto-slab\roboto-slab-v7-latin-300.ttf" />
+    <Content Include="Presentacion\ediar\fonts\roboto-slab\roboto-slab-v7-latin-300.woff" />
+    <Content Include="Presentacion\ediar\fonts\roboto-slab\roboto-slab-v7-latin-300.woff2" />
+    <Content Include="Presentacion\ediar\fonts\roboto-slab\roboto-slab-v7-latin-700.eot" />
+    <Content Include="Presentacion\ediar\fonts\roboto-slab\roboto-slab-v7-latin-700.ttf" />
+    <Content Include="Presentacion\ediar\fonts\roboto-slab\roboto-slab-v7-latin-700.woff" />
+    <Content Include="Presentacion\ediar\fonts\roboto-slab\roboto-slab-v7-latin-700.woff2" />
+    <Content Include="Presentacion\ediar\fonts\roboto-slab\roboto-slab-v7-latin-regular.eot" />
+    <Content Include="Presentacion\ediar\fonts\roboto-slab\roboto-slab-v7-latin-regular.ttf" />
+    <Content Include="Presentacion\ediar\fonts\roboto-slab\roboto-slab-v7-latin-regular.woff" />
+    <Content Include="Presentacion\ediar\fonts\roboto-slab\roboto-slab-v7-latin-regular.woff2" />
+    <Content Include="Presentacion\ediar\scss\common\extend.scss" />
+    <Content Include="Presentacion\ediar\scss\common\fonts.scss" />
+    <Content Include="Presentacion\ediar\scss\common\global.scss" />
+    <Content Include="Presentacion\ediar\scss\common\minxi.scss" />
+    <Content Include="Presentacion\ediar\scss\common\variables.scss" />
+    <Content Include="Presentacion\ediar\scss\layouts\main.scss" />
+    <Content Include="Presentacion\ediar\scss\layouts\responsive.scss" />
+    <Content Include="Presentacion\ediar\scss\style.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
