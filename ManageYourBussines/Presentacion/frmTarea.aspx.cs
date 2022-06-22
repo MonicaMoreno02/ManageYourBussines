@@ -15,6 +15,7 @@ namespace ManageYourBussines.Presentacion
         protected void Page_Load(object sender, EventArgs e)
         {
             txtIdTareaEditar.Attributes.Add("style", "DISPLAY:none");
+            txtIdTarea.Attributes.Add("style", "DISPLAY:none");
         }
         [WebMethod]
 
@@ -49,17 +50,18 @@ namespace ManageYourBussines.Presentacion
             }
 
         }
-
+        int idTareas = 0;
         protected void txtEliminar_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(txtIdTarea.Text);
 
-            clTareasL objEmpleadoL = new clTareasL();
-            int result = objEmpleadoL.mtdEliminar(id);
+            idTareas = int.Parse(txtIdTarea.Text);
+            clTareasL objDatosL = new clTareasL();
+            int resultado = objDatosL.mtdEliminar(idTareas);
 
-            if (result != 0)
+
+            if (resultado != 0)
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Registro eliminar correctamente:(');", true);
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Registro eliminar¿do correctamente:(');", true);
                 Response.Redirect("frmTarea.aspx");
             }
             else

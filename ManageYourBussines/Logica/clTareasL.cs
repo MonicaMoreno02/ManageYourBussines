@@ -31,10 +31,10 @@ namespace ManageYourBussines.Logica
         }
         public int mtdEliminar(int idTareas)
         {
-            clTareasD objEmpleadoD = new clTareasD();
-            int resultado = objEmpleadoD.mtdEliminar(idTareas);
-
+            clTareasD objDatosD = new clTareasD();
+            int resultado = objDatosD.mtdEliminarD(idTareas);
             return resultado;
+
         }
 
     }

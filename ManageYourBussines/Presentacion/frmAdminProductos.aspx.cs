@@ -121,9 +121,9 @@ namespace ManageYourBussines.Presentacion
         //Boton que elimina un producto Cristian Salcedo
         protected void txtEliminar_Click(object sender, EventArgs e)
         {
-            
-                //idProductos = int.Parse(txtIdProducto.Text);
-                clProductoL objDatosL = new clProductoL();
+
+            idProductos = int.Parse(txtIdProducto.Text);
+            clProductoL objDatosL = new clProductoL();
                 int resultado = objDatosL.mtdEliminar(idProductos);
             
         }

@@ -49,13 +49,12 @@ namespace ManageYourBussines.Datos
             int result = objConexion.mtdConectado(sql);
             return result;
         }
-        public int mtdEliminar(int idTareas)
+        public int mtdEliminarD(int idTareas)
         {
-            string sql = "delete from tareas where idTareas=" + idTareas + "";
-
+            string sql = "delete  from tareas where idTareas=" + idTareas + "";
             clConexion objConexion = new clConexion();
-            int result = objConexion.mtdConectado(sql);
-            return result;
+            int resultado = objConexion.mtdConectado(sql);
+            return resultado;
         }
     }
 }

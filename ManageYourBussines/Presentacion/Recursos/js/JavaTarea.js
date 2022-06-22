@@ -56,7 +56,7 @@ function senDataAjax() {
         var fila = $(this).parent().parent()[0];
         var datosFila = tabla.fnGetData(fila);
         var idTareas = datosFila[0];
-        $("#txtIdTareaEditar").val(idTareas);
+        $("#txtIdTarea").val(idTareas);
         alert(idTareas);
     });
 

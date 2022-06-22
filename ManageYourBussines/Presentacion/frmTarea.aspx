@@ -102,7 +102,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                         <asp:TextBox ID="txtIdTarea" Visible="false" runat="server"></asp:TextBox>
+                         <asp:TextBox ID="txtIdTarea" runat="server"></asp:TextBox>
                         <p align="center"><img src="recursos/images/advertencia.png" width="40" height="40" /></p><br />
                         <center><asp:Label ID="Label1" runat="server" Text="¿Estas seguro de eliminar este registro?"></asp:Label></center>
                     </div>
