@@ -63,13 +63,13 @@
     <form id="form1" runat="server">
         <div>
             <div>
-                <lu>
+               
 
                     <li><a href="frmInicio.aspx">Home</a></li>
                     <li><a href="frmProductosVendedor.aspx">Productos</a></li>
                     <li><a href="frmClientesVendedor.aspx">Clientes</a></li>
 
-                </lu>
+               
             </div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
