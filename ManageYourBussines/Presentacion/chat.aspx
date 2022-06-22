@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="chat.aspx.cs" Inherits="ManageYourBussines.Presentacion.chat" %>
 
-<%--<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -11,9 +11,7 @@
     <form id="form1" runat="server">
         <div>
         </div>
-    </form>
-</body>
-</html>--%>
+    
 <div class="container">
     <div class ="row">
         <div class="col-lg-12">
@@ -37,18 +35,38 @@
     </div>
     </div>
             <imput  type="hidden" id="displayname"/>
+        
 
 @section scripts{
-<script src="~/Scripts/jquerysignalR-2.2.3.js"></script>
-<script src="/signalR/hubs"></script>
+<script src="../Scripts/jquery.signalR-2.2.2.js"></script>
+
+<script src="/signalr/hubs"></script>
 <script type="text/javascript">
 
     $(function(){
         var chat = $.connection.chatHub;
-        chat.
+        chat.client.sendChat = function (name, message) {
+            var divName = $("<div/>").text(name).html();
+            var divMessage = $("<div/>").text.(message).html();
+            $("discussion").append("<li><strong>" + divName + "<strong>" + divMessage + "</li>");
+        };
+        var nameOwner = prompt("escribe tu nombre:", "");
+        $("#displayname").val(nameOwner);
+        $("#message").focus();
+        $.connection.hub.start().done(function () {
+
+            $("#sendMessage").click(function () {
+                var nameOwner = $("#displayname").val();
+                var messageText = $("#message").val();
+                chat.server.send(nameOwner, messageText);
+                $("message").val("").focus();
+            }
+        })
 
     }
 </script>
 
-}
- 
+
+ </form>
+</body>
+</html>

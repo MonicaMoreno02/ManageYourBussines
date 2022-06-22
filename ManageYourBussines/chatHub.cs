@@ -11,7 +11,7 @@ namespace ManageYourBussines
     {
         public void send (string name,string message)
         {
-            Clients.All.sendChart(name, message);
+            Clients.All.sendChat(name, message);
         }
     }
 }

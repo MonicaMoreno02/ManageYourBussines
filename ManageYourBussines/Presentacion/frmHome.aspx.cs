@@ -82,6 +82,18 @@ namespace ManageYourBussines.Presentacion
 
         }
 
+        protected void chat_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("chat.aspx");
+        }
+
+        protected void chat_Click1(object sender, EventArgs e)
+        {
+ 
+               Response.Redirect("chat.aspx");
+
+        }
+
 
 
         //protected void btnEditar_Click(object sender, EventArgs e)
