@@ -120,11 +120,14 @@
     <Content Include="Presentacion\recursos\css\bootstrap.css" />
     <Content Include="Presentacion\recursos\css\estilosEmple.css" />
     <Content Include="Presentacion\recursos\css\font-awesome.min.css" />
+    <Content Include="Presentacion\recursos\css\main.css" />
+    <Content Include="Presentacion\recursos\css\main.min.css" />
     <Content Include="Presentacion\recursos\css\responsive.css" />
     <Content Include="Presentacion\recursos\css\sb-admin-2.css" />
     <Content Include="Presentacion\recursos\css\sb-admin-2.min.css" />
     <Content Include="Presentacion\recursos\css\style.css" />
     <Content Include="Presentacion\recursos\css\style2.css" />
+    <Content Include="Presentacion\recursos\css\stylebuttons.css" />
     <Content Include="Presentacion\recursos\images\about-img.png" />
     <Content Include="Presentacion\recursos\images\anadir-al-carrito %281%29.png" />
     <Content Include="Presentacion\recursos\images\base.jpg" />
@@ -221,8 +224,6 @@
     <Content Include="recuperarEmple.aspx" />
     <Content Include="recursos\css\bootstrap.css" />
     <Content Include="recursos\css\font-awesome.min.css" />
-    <Content Include="Presentacion\recursos\css\main.css" />
-    <Content Include="Presentacion\recursos\css\main.min.css" />
     <Content Include="recursos\css\responsive.css" />
     <Content Include="recursos\css\style.css" />
     <Content Include="recursos\images\Imagen1.png" />

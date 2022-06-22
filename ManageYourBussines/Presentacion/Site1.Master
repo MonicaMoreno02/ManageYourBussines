@@ -78,10 +78,7 @@
 <body>
 
     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        <form id="form1" runat="server">
-            <div>
-            </div>
-        </form>
+        
     </asp:ContentPlaceHolder>
 
 </body>

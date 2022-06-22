@@ -3,6 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <form runat="server">
     <!--Añadimos el fondo-->
     <div class="hero_area">
         <div class="bg-box">
@@ -35,13 +36,6 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="frmdetalles.aspx">Productos</a>
                             </li>
-                            <%--   <li class="nav-item">
-                                <a class="nav-link" href="about.html">Sobre Nosotros</a>
-                            </li>--%>
-
-                            <!--<li class="nav-item">
-                <a class="nav-link" href="book.html">Book Table</a>
-              </li>-->
                         </ul>
 
 
@@ -273,7 +267,7 @@
                                 <h6>
                                     <span>15%</span> Off
                                 </h6>
-                                <a href="">Hacer Pedido
+                                <a href="frmRegistrar.aspx">Hacer Pedido
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background: new 0 0 456.029 456.029;" xml:space="preserve">
                                         <g>
                                             <g>
@@ -341,7 +335,7 @@
                                 <h6>
                                     <span>20%</span> Off
                                 </h6>
-                                <a href="">Hacer Pedido
+                                <a href="frmRegistrar.aspx">Hacer Pedido
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background: new 0 0 456.029 456.029;" xml:space="preserve">
                                         <g>
                                             <g>
@@ -545,10 +539,7 @@
     </script>
     <!-- End Google Map -->
 
-    </body>
 
-</html>
-
-   
+   </form>
  
 </asp:Content>

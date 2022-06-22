@@ -115,5 +115,10 @@
             </div>
         </div>
         <%--PAOLA: Modal para registrar los empleados --%>
+
+        <%-- Recursos para registro de empleados --%>
+        <link href="recursos/css/main.css" rel="stylesheet" />
+        <link href="recursos/css/main.min.css" rel="stylesheet" />
+
     </form>
 </asp:Content>

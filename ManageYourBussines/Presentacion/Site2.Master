@@ -19,17 +19,27 @@
     <link href="recursos/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" />
 
     <link href="recursos/css/sb-admin-2.min.css" rel="stylesheet" />
+
+     <!-- font awesome style -->
+    <link href="recursos/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="recursos/css/style.css" rel="stylesheet" />
+
 <%--    recursos de appPlantilla--%>
 
     	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 
+    <%--estilo para que sea responsive--%>
+    <link href="recursos/css/responsive.css" rel="stylesheet" />
 
-    <link href="recursos/css/main.css" rel="stylesheet" />
-    <link href="recursos/css/main.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+   <%-- Recursos para registro de empleados --%>
+    <link href="recursos/css/main.css" rel="stylesheet" />
+    <link href="recursos/css/main.min.css" rel="stylesheet" />
 
 
       <!-- Jquery JS-->

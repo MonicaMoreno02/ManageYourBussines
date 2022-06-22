@@ -70,7 +70,7 @@ namespace ManageYourBussines.Datos
                 objEmpleado.idEmpleado = int.Parse(tblEmpleados.Rows[i]["idEmpleado"].ToString());
                 objEmpleado.documentoEmpleado = tblEmpleados.Rows[i]["documentoEmpleado"].ToString();
                 objEmpleado.nombreEmpleado = tblEmpleados.Rows[i]["nombresEmpleado"].ToString();
-                objEmpleado.apellidoEmpleado = tblEmpleados.Rows[i]["apellidoEmpleado "].ToString();
+                objEmpleado.apellidoEmpleado = tblEmpleados.Rows[i]["apellidoEmpleado"].ToString();
                 objEmpleado.tipoEmpleado = tblEmpleados.Rows[i]["TipoEmpleado"].ToString();
                 objEmpleado.emailEmpleado = tblEmpleados.Rows[i]["emailEmpleado"].ToString();
                 objEmpleado.claveEmpleado = tblEmpleados.Rows[i]["claveEmpleado"].ToString();
