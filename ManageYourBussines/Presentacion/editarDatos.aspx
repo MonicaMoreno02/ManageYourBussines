@@ -40,19 +40,20 @@
                     <asp:Button ID="btnDatos" runat="server" Text="Datos" onClick="btnDatos_Click" />
 
 
-                    <label for="exampleInputName1">documento:</label>
-                    <asp:TextBox class="form-control" type="text" ID="txtDocumento" runat="server"></asp:TextBox>
+                    <center ><label for="exampleInputName1">documento:</label>
+                    <asp:TextBox class="form-control" type="text" ID="txtDocumento" runat="server"></asp:TextBox></center>
                 </div>
+                <center>
                 <div class="form-group col-sm-6">
                     <label for="exampleInputName1">NombreCliente</label>
                     <asp:TextBox class="form-control" type="text" ID="txtnombreCliente" runat="server"></asp:TextBox>
 
                 </div>
-
+                    <center>
                 <div class="form-group col-sm-8">
                     <label for="exampleInputName1">apellidos</label>
                     <asp:TextBox class="form-control" type="text" ID="txtapellidos" runat="server"></asp:TextBox>
-                </div>
+                </div></center>
 
                 <div class="form-group col-sm-6">
                     <label for="exampleInputName1">telefono:</label>
@@ -75,6 +76,7 @@
         <asp:TextBox type="password" class="form-control" ID="txtClave" placeholder="Contraseña" runat="server"></asp:TextBox>
    
         <asp:Button ID="btnActualizar" runat="server" Text="ACTUALIZAR" onClick="btnActualizar_Click" />
+                </center>
         </form>
             
      </div>
