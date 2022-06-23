@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <form runat="server">
+   
     <!--Añadimos el fondo-->
     <div class="hero_area">
         <div class="bg-box">
@@ -541,6 +541,6 @@
     <!-- End Google Map -->
 
 
-   </form>
+  
  
 </asp:Content>

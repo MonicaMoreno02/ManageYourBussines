@@ -91,7 +91,7 @@ namespace ManageYourBussines.Datos
 
                 objDatosUsuario.documento = tblDatos.Rows[0]["documento"].ToString();
                 objDatosUsuario.nombreCliente = tblDatos.Rows[0]["nombreCliente"].ToString();
-                objDatosUsuario.apellidosCliente = tblDatos.Rows[0]["apellidos"].ToString();
+                objDatosUsuario.apellidosCliente = tblDatos.Rows[0]["apellidosCliente"].ToString();
                 objDatosUsuario.telefono = tblDatos.Rows[0]["telefono"].ToString();
                 objDatosUsuario.direccion = tblDatos.Rows[0]["direccion"].ToString();
                 objDatosUsuario.emailCliente = tblDatos.Rows[0]["emailCliente"].ToString();
