@@ -119,8 +119,8 @@ namespace ManageYourBussines
         protected void btnEmpleado_Click(object sender, EventArgs e)
         {
             clEmpleadoE objDatos = new clEmpleadoE();
-            objDatos.email = txtEmail.Text;
-            objDatos.clave = txtClave.Text;
+            objDatos.emailEmpleado = txtEmail.Text;
+            objDatos.claveEmpleado = txtClave.Text;
 
             clEmpleadoL objUsuariosL = new clEmpleadoL();
             clEmpleadoE objDatosClien = new clEmpleadoE();
@@ -130,9 +130,9 @@ namespace ManageYourBussines
 
 
 
-                Session["empleado"] = objDatosClien.nombreEmpleado + " " + objDatos.apellidos;
+                Session["empleado"] = objDatosClien.nombreEmpleado + " " + objDatos.apellidoEmpleado;
 
-                Session["apellidos"] = objDatosClien.apellidos;
+                Session["apellidos"] = objDatosClien.apellidoEmpleado;
                 Response.Redirect("Presentacion/frmAdmin.aspx");
 
 
@@ -174,7 +174,7 @@ namespace ManageYourBussines
                 Session["idc"] = bjDatosClien.idCliente;
                 int idClient = bjDatosClien.idCliente;
 
-                Session["usuario"] = bjDatosClien.nombreCliente + " " + bjDatosClien.apellidos;
+                Session["usuario"] = bjDatosClien.nombreCliente + " " + bjDatosClien.apellidosCliente;
                 Session["idCliente"] = bjDatosClien.idCliente;
 
 

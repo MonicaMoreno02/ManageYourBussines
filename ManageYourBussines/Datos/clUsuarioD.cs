@@ -67,7 +67,7 @@ namespace ManageYourBussines.Datos
         public int mtdEditar(clUsuarioE objDatos)
         {
             string sql = "Update cliente set documento='" + objDatos.documento + "', nombreCliente='" + objDatos.nombreCliente + "'," +
-                "apellidos='" + objDatos.apellidos + "',telefono='" + objDatos.telefono + "',direccion='" + objDatos.direccion + "',emailCliente='" + objDatos.emailCliente + "',claveCliente='" + objDatos.claveCliente + "' where idCliente=" + objDatos.idCliente + "";
+                "apellidos='" + objDatos.apellidosCliente + "',telefono='" + objDatos.telefono + "',direccion='" + objDatos.direccion + "',emailCliente='" + objDatos.emailCliente + "',claveCliente='" + objDatos.claveCliente + "' where idCliente=" + objDatos.idCliente + "";
 
             clConexion objConexion = new clConexion();
             int result = objConexion.mtdConectado(sql);
@@ -91,7 +91,7 @@ namespace ManageYourBussines.Datos
 
                 objDatosUsuario.documento = tblDatos.Rows[0]["documento"].ToString();
                 objDatosUsuario.nombreCliente = tblDatos.Rows[0]["nombreCliente"].ToString();
-                objDatosUsuario.apellidos = tblDatos.Rows[0]["apellidos"].ToString();
+                objDatosUsuario.apellidosCliente = tblDatos.Rows[0]["apellidos"].ToString();
                 objDatosUsuario.telefono = tblDatos.Rows[0]["telefono"].ToString();
                 objDatosUsuario.direccion = tblDatos.Rows[0]["direccion"].ToString();
                 objDatosUsuario.emailCliente = tblDatos.Rows[0]["emailCliente"].ToString();

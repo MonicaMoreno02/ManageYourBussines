@@ -28,7 +28,7 @@ namespace ManageYourBussines.Presentacion
 
             txtDocumento.Text = objDatosReci.documento;
             txtnombreCliente.Text = objDatosReci.nombreCliente;
-            txtapellidos.Text = objDatosReci.apellidos;
+            txtapellidos.Text = objDatosReci.apellidosCliente;
             txttelefono.Text = objDatosReci.telefono;
             txtDireccion.Text = objDatosReci.direccion;
             txtEmail.Text = objDatosReci.emailCliente;
@@ -49,7 +49,7 @@ namespace ManageYourBussines.Presentacion
 
             txtDocumento.Text = objDatosReci.documento;
             txtnombreCliente.Text = objDatosReci.nombreCliente;
-            txtapellidos.Text = objDatosReci.apellidos;
+            txtapellidos.Text = objDatosReci.apellidosCliente;
             txttelefono.Text = objDatosReci.telefono;
             txtDireccion.Text = objDatosReci.direccion;
             txtEmail.Text = objDatosReci.emailCliente;
@@ -65,7 +65,7 @@ namespace ManageYourBussines.Presentacion
             objUsuarioE.idCliente = int.Parse(Session["idCliente"].ToString());
             objUsuarioE.documento = txtDocumento.Text;
             objUsuarioE.nombreCliente = txtnombreCliente.Text;
-            objUsuarioE.apellidos = txtapellidos.Text;
+            objUsuarioE.apellidosCliente = txtapellidos.Text;
             objUsuarioE.telefono = txttelefono.Text;
             objUsuarioE.direccion = txtDireccion.Text;
             objUsuarioE.emailCliente = txtEmail.Text;
