@@ -495,15 +495,16 @@ input[type="date" i] {
    #FORM
    ========================================================================== */
 input {
-  outline: none;
-  margin: 0;
-  border: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  width: 100%;
-  font-size: 14px;
-  font-family: inherit;
+  border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    outline: none;
+    margin: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    font-size: 14px;
+    font-family: inherit;
 }
 
 .radio-container {

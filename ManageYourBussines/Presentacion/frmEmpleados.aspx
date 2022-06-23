@@ -150,7 +150,7 @@
         </div>
         <%--PAOLA: Modal para editar empleados FIN--%>
 
-        <asp:Button ID="btnRegistrarE" runat="server" Text="REGISTRE AQUI UN NUEVO EMPLEADO" OnClick="btnRegistrarE_Click"/>
+        <asp:Button ID="btnRegistrarE" runat="server" cssClass="btn-primary" Text="REGISTRE AQUI UN NUEVO EMPLEADO" OnClick="btnRegistrarE_Click" Font-Names="Britannic Bold" Height="52px"/>
       
     </form>
 
