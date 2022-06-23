@@ -18,7 +18,7 @@ namespace ManageYourBussines
         protected void btnEnviarCorreoEmple_Click(object sender, EventArgs e)
         {
             clEmpleadoE objEmpleadoE = new clEmpleadoE();
-            objEmpleadoE.email = txtEmail.Text;
+            objEmpleadoE.emailEmpleado = txtEmail.Text;
             var user = new clEmpleadoL();
             var result = user.recoverPassword(objEmpleadoE);
             if (result != null)

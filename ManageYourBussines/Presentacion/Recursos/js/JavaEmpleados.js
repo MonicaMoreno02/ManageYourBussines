@@ -10,12 +10,12 @@ function agregarFilas(datos) {
     for (var i = 0; i < datos.length; i++) {
         tabla.fnAddData([
             datos[i].idEmpleado,
-            datos[i].documento,
+            datos[i].documentoEmpleado,
             datos[i].nombreEmpleado,
-            datos[i].apellidos,
+            datos[i].apellidosEmpleado,
             datos[i].tipoEmpleado,
-            datos[i].email,
-            datos[i].clave,
+            datos[i].emailEmpleado,
+            datos[i].claveEmpleado,
             '<button type="button" id="btnEditarD" class="btn btn-primary" data-toggle="modal" data-target="#ModalEditarEmpleado">Editar</button>',
             '<button type="button" id="btnEliminarD" class="btn btn-danger" data-toggle="modal" data-target="#ModalEliminar">Eliminar</button>'
 

@@ -12,6 +12,6 @@ namespace ManageYourBussines.Entidades
         public float porcentajePension { get; set; }
         public float porcentajeSalud { get; set; }
         public float smlv { get; set; }
-        public DateTime fecha { get; set; }
+        public int fecha { get; set; }
     }
 }

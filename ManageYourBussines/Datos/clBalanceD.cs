@@ -102,5 +102,29 @@ namespace ManageYourBussines.Datos
             }
             return listarBal;
         }
+
+        public List<clBalanceE> mtdlistargraficos1(clBalanceE objdatosgraficos)
+        {
+
+            string sql = "select producto.nombreproducto, detallesVenta.cantidad from producto inner join detallesVenta on producto.idproducto = '"+ objdatosgraficos.idProducto+"'";
+            clConexion objConexion = new clConexion();
+            DataTable tblGraficas = new DataTable();
+            tblGraficas = objConexion.mtdDesconectado(sql);
+
+            List<clBalanceE> listarGraficos = new List<clBalanceE>();
+
+            int catnReg = tblGraficas.Rows.Count;
+
+            for (int i = 0; i < catnReg; i++)
+            {
+                clBalanceE objbalance = new clBalanceE();
+                objbalance.idProducto = int.Parse(tblGraficas.Rows[i]["idProducto"].ToString());
+                objbalance.cantidad = int.Parse(tblGraficas.Rows[i]["cantidad"].ToString());
+
+                listarGraficos.Add(objbalance);
+            }
+            return listarGraficos;
+
+        }
     }
 }

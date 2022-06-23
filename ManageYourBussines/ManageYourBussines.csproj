@@ -13,7 +13,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ManageYourBussines</RootNamespace>
     <AssemblyName>ManageYourBussines</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort />
@@ -57,6 +57,7 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Printing" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -127,6 +128,7 @@
     <Content Include="Presentacion\frmProductos.aspx" />
     <Content Include="Presentacion\frmEstadisticas.aspx" />
     <Content Include="Presentacion\frmProductos2.aspx" />
+    <Content Include="Presentacion\frmRegisEmpleados.aspx" />
     <Content Include="Presentacion\frmRegistrar.aspx" />
     <Content Include="Presentacion\frmSeguridadSocial.aspx" />
     <Content Include="Presentacion\frmSugerencias.aspx" />
@@ -135,16 +137,18 @@
     <Content Include="Presentacion\recursos\css\bootstrap.css" />
     <Content Include="Presentacion\recursos\css\estilosEmple.css" />
     <Content Include="Presentacion\recursos\css\font-awesome.min.css" />
+    <Content Include="Presentacion\recursos\css\main.css" />
+    <Content Include="Presentacion\recursos\css\main.min.css" />
     <Content Include="Presentacion\recursos\css\responsive.css" />
     <Content Include="Presentacion\recursos\css\sb-admin-2.css" />
     <Content Include="Presentacion\recursos\css\sb-admin-2.min.css" />
     <Content Include="Presentacion\recursos\css\style.css" />
     <Content Include="Presentacion\recursos\css\style2.css" />
+    <Content Include="Presentacion\recursos\css\stylebuttons.css" />
     <Content Include="Presentacion\recursos\images\about-img.png" />
     <Content Include="Presentacion\recursos\images\anadir-al-carrito %281%29.png" />
     <Content Include="Presentacion\recursos\images\base.jpg" />
     <Content Include="Presentacion\recursos\images\baseg.jpg" />
-    <Content Include="Presentacion\recursos\css\style2.css" />
     <Content Include="Presentacion\recursos\images\biblioteca1.png" />
     <Content Include="Presentacion\recursos\images\cama.jpg" />
     <Content Include="Presentacion\recursos\images\carrito-de-compras.png" />
@@ -157,6 +161,7 @@
     <Content Include="Presentacion\recursos\images\estante2.png" />
     <Content Include="Presentacion\recursos\images\fondo1.jpg" />
     <Content Include="Presentacion\recursos\images\fondo2.jpeg" />
+    <Content Include="Presentacion\recursos\images\fondo2admin.jpeg" />
     <Content Include="Presentacion\recursos\images\fondo3.jpg" />
     <Content Include="Presentacion\recursos\images\fondo5.jpeg" />
     <Content Include="Presentacion\recursos\images\icono3.png" />
@@ -237,8 +242,6 @@
     <Content Include="recuperarEmple.aspx" />
     <Content Include="recursos\css\bootstrap.css" />
     <Content Include="recursos\css\font-awesome.min.css" />
-    <Content Include="Presentacion\recursos\css\main.css" />
-    <Content Include="Presentacion\recursos\css\main.min.css" />
     <Content Include="recursos\css\responsive.css" />
     <Content Include="recursos\css\style.css" />
     <Content Include="recursos\images\Imagen1.png" />
@@ -443,6 +446,13 @@
     </Compile>
     <Compile Include="Presentacion\frmProductos2.aspx.designer.cs">
       <DependentUpon>frmProductos2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmRegisEmpleados.aspx.cs">
+      <DependentUpon>frmRegisEmpleados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmRegisEmpleados.aspx.designer.cs">
+      <DependentUpon>frmRegisEmpleados.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmRegistrar.aspx.cs">
       <DependentUpon>frmRegistrar.aspx</DependentUpon>

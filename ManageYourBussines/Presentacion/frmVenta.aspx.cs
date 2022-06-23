@@ -18,10 +18,11 @@ namespace ManageYourBussines.Presentacion
         {
 
             string cod = Convert.ToString(Request.QueryString["cod"]);
-
+           
             string idc = Convert.ToString(Session["idc"]);
+          
             int idClien = int.Parse(idc);
-
+            
 
             clVentaE objfactura = new clVentaE();
             objfactura.idCliente = idClien;

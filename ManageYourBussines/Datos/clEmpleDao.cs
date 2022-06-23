@@ -12,7 +12,7 @@ namespace ManageYourBussines.Datos
     
     public clEmpleadoE recoverPassword(clEmpleadoE empleRequesting)
     {
-        string consulta = "SELECT * FROM empleado WHERE emailEmpleado='" + empleRequesting.email + "'";
+        string consulta = "SELECT * FROM empleado WHERE emailEmpleado='" + empleRequesting.emailEmpleado + "'";
         clConexion objConexion = new clConexion();
         DataTable tblDatos = new DataTable();
         tblDatos = objConexion.mtdDesconectado(consulta);
@@ -22,15 +22,15 @@ namespace ManageYourBussines.Datos
         {
             objDatosUsuario.idEmpleado = int.Parse(tblDatos.Rows[0]["idEmpleado"].ToString());
             objDatosUsuario.nombreEmpleado = tblDatos.Rows[0]["nombreEmpleado"].ToString();
-            objDatosUsuario.email = tblDatos.Rows[0]["emailEmpleado"].ToString();
-            objDatosUsuario.clave = tblDatos.Rows[0]["claveEmpleado"].ToString();
+            objDatosUsuario.emailEmpleado = tblDatos.Rows[0]["emailEmpleado"].ToString();
+            objDatosUsuario.claveEmpleado = tblDatos.Rows[0]["claveEmpleado"].ToString();
 
             var mailService = new servicioEmail.systemSupportMail();
             mailService.sendMail(
               subject: "Solicitud de recuperación de contraseña",
               body: "Hola, " + objDatosUsuario.nombreEmpleado + "\nUsted solicitó recuperar su contraseña.\n" +
-              "Tu contraseña actual es: " + objDatosUsuario.clave,
-              recipientMail: new List<string> { objDatosUsuario.email }
+              "Tu contraseña actual es: " + objDatosUsuario.claveEmpleado,
+              recipientMail: new List<string> { objDatosUsuario.emailEmpleado }
               );
         }
         else

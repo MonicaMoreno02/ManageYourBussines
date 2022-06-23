@@ -22,7 +22,7 @@ namespace ManageYourBussines.Presentacion
 
             objClientesE.documento = txtDocumento.Text;
             objClientesE.nombreCliente = txtNombres.Text;
-            objClientesE.apellidos = txtApellidos.Text;
+            objClientesE.apellidosCliente = txtApellidos.Text;
             objClientesE.telefono = txtTelefono.Text;
             objClientesE.direccion = txtDireccion.Text;
             objClientesE.emailCliente = txtEmail.Text;

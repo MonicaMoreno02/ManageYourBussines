@@ -8,8 +8,7 @@ function agregarFilas(datos) {
         tabla.fnAddData([
             datos[i].idSugerencias,
             datos[i].nombreCliente,
-            datos[i].opinion
-            
+            datos[i].opinion   
         ]);
     }
 }
