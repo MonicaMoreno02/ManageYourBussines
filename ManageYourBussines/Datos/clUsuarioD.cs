@@ -21,10 +21,10 @@ namespace ManageYourBussines.Datos
             if (tblDatos.Rows.Count == 1)
             {
                 objDatosCliente.idCliente = int.Parse(tblDatos.Rows[0]["idCliente"].ToString());
-                objDatosCliente.documento = tblDatos.Rows[0]["documento"].ToString();
+                objDatosCliente.documento = tblDatos.Rows[0]["documentoCliente"].ToString();
                 objDatosCliente.nombreCliente = tblDatos.Rows[0]["nombreCliente"].ToString();
                 objDatosCliente.telefono = tblDatos.Rows[0]["telefono"].ToString();
-                objDatosCliente.apellidosCliente = tblDatos.Rows[0]["apellidos"].ToString();
+                objDatosCliente.apellidosCliente = tblDatos.Rows[0]["apellidosCliente"].ToString();
                 objDatosCliente.direccion = tblDatos.Rows[0]["direccion"].ToString();
                 objDatosCliente.emailCliente = tblDatos.Rows[0]["emailCliente"].ToString();
                 objDatosCliente.claveCliente = tblDatos.Rows[0]["claveCliente"].ToString();
@@ -40,7 +40,7 @@ namespace ManageYourBussines.Datos
 
         public int mtdRegistrar(clUsuarioE objDatosCliente)
         {
-            string sql = "insert into cliente(documento,nombreCliente,apellidos,telefono,direccion,emailCliente,claveCliente)" +
+            string sql = "insert into cliente(documentoCliente,nombreCliente,apellidosCliente,telefono,direccion,emailCliente,claveCliente)" +
                 "values ('" + objDatosCliente.documento + "' ,'" + objDatosCliente.nombreCliente + "','" + objDatosCliente.apellidosCliente + "','" + objDatosCliente.telefono + "','" + objDatosCliente.direccion + "','" + objDatosCliente.emailCliente + "' ,'" + objDatosCliente.claveCliente + "')";
 
             clConexion objConexion = new clConexion();
@@ -55,19 +55,14 @@ namespace ManageYourBussines.Datos
 
 
        
-        
-
-
-
-       
-   
+      
 
 
 
         public int mtdEditar(clUsuarioE objDatos)
         {
-            string sql = "Update cliente set documento='" + objDatos.documento + "', nombreCliente='" + objDatos.nombreCliente + "'," +
-                "apellidos='" + objDatos.apellidosCliente + "',telefono='" + objDatos.telefono + "',direccion='" + objDatos.direccion + "',emailCliente='" + objDatos.emailCliente + "',claveCliente='" + objDatos.claveCliente + "' where idCliente=" + objDatos.idCliente + "";
+            string sql = "Update cliente set documentoCliente='" + objDatos.documento + "', nombreCliente='" + objDatos.nombreCliente + "'," +
+                "apellidosCliente='" + objDatos.apellidosCliente + "',telefono='" + objDatos.telefono + "',direccion='" + objDatos.direccion + "',emailCliente='" + objDatos.emailCliente + "',claveCliente='" + objDatos.claveCliente + "' where idCliente=" + objDatos.idCliente + "";
 
             clConexion objConexion = new clConexion();
             int result = objConexion.mtdConectado(sql);
@@ -89,7 +84,7 @@ namespace ManageYourBussines.Datos
             if (tblDatos.Rows.Count == 1)
             {
 
-                objDatosUsuario.documento = tblDatos.Rows[0]["documento"].ToString();
+                objDatosUsuario.documento = tblDatos.Rows[0]["documentoCliente"].ToString();
                 objDatosUsuario.nombreCliente = tblDatos.Rows[0]["nombreCliente"].ToString();
                 objDatosUsuario.apellidosCliente = tblDatos.Rows[0]["apellidosCliente"].ToString();
                 objDatosUsuario.telefono = tblDatos.Rows[0]["telefono"].ToString();
