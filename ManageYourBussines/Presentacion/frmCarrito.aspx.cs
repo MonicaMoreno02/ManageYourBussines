@@ -30,9 +30,9 @@ namespace ManageYourBussines.Presentacion
                 //Session["objeto"] = objCarritoL.mtdListcar();
                 carrito = objCarritoL.mtdListcar(objcarrito);
 
-
-                gvCar.DataSource = carrito;
-                gvCar.DataBind();
+               
+                //gvCar.DataSource = carrito;
+                //gvCar.DataBind();
             }
             else
             {
@@ -62,8 +62,8 @@ namespace ManageYourBussines.Presentacion
                 carrito = objCarritoL.mtdListcar(objcarrito);
 
                 int lista = Convert.ToInt32(e.CommandArgument);
-                GridViewRow row = gvCar.Rows[lista];
-             
+                //GridViewRow row = gvCar.Rows[lista];
+
                 int cuen = carrito.Rows.Count;
                 cuen = cuen - 2;
                 if (cuen >= lista)
@@ -89,21 +89,21 @@ namespace ManageYourBussines.Presentacion
                         ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('error');", true);
 
                     }
-                    
 
-                   
+
+
                     clCarritoE objcarrito1 = new clCarritoE();
                     objcarrito1.idcliente = idClien;
                     clCarritoL objCarritoL1 = new clCarritoL();
                     DataTable dt = new DataTable();
                     List<clCarritoE> listarCar1 = new List<clCarritoE>();
                     //Session["objeto"] = objCarritoL.mtdListcar();
-                   dt= objCarritoL.mtdListcar(objcarrito);
+                    dt = objCarritoL.mtdListcar(objcarrito);
 
 
 
-                    gvCar.DataSource = dt;
-                    gvCar.DataBind();
+                    //gvCar.DataSource = dt;
+                    //gvCar.DataBind();
                 }
 
 
@@ -112,18 +112,18 @@ namespace ManageYourBussines.Presentacion
             if (e.CommandName == "aumentar")
             {
                 int lista = Convert.ToInt32(e.CommandArgument);
-                GridViewRow row = gvCar.Rows[lista];
-                string valor = gvCar.Rows[lista].Cells[5].Text;
-                string stock = gvCar.Rows[lista].Cells[8].Text;
-                int cantidad = int.Parse(valor);
-                int stock1=int.Parse(stock);
-                cantidad = cantidad + 1;
-                if (stock1>=cantidad)
+                //GridViewRow row = gvCar.Rows[lista];
+                //string valor = gvCar.Rows[lista].Cells[5].Text;
+                //string stock = gvCar.Rows[lista].Cells[8].Text;
+                //int cantidad = int.Parse(valor);
+                //int stock1 = int.Parse(stock);
+                //cantidad = cantidad + 1;
+                //if (stock1 >= cantidad)
                 {
                     string idc = Convert.ToString(Session["idc"]);
                     int idClien = int.Parse(idc);
 
-                   
+
                     clCarritoE objcarrito = new clCarritoE();
                     objcarrito.idcliente = idClien;
                     clCarritoL objCarritoL = new clCarritoL();
@@ -144,7 +144,7 @@ namespace ManageYourBussines.Presentacion
                         clCarritoE objcarritos = new clCarritoE();
                         objcarritos.idproducto = idproducto;
                         objcarritos.idcliente = idcliente;
-                        objcarritos.catidad = cantidad;
+                        //objcarritos.catidad = cantidad;
                         clCarritoL objcarritoL = new clCarritoL();
 
                         int filas = objcarritoL.mtdaumentar(objcarritos);
@@ -166,16 +166,16 @@ namespace ManageYourBussines.Presentacion
 
                     }
                 }
-                
+
             }
             if (e.CommandName == "disminuir")
             {
                 int lista = Convert.ToInt32(e.CommandArgument);
-                GridViewRow row = gvCar.Rows[lista];
-                string valor = gvCar.Rows[lista].Cells[5].Text;
-                int cantidad = int.Parse(valor);
-                cantidad = cantidad - 1;
-                if (cantidad>=1)
+                //GridViewRow row = gvCar.Rows[lista];
+                //string valor = gvCar.Rows[lista].Cells[5].Text;
+                //int cantidad = int.Parse(valor);
+                //cantidad = cantidad - 1;
+                //if (cantidad >= 1)
                 {
                     string idc = Convert.ToString(Session["idc"]);
                     int idClien = int.Parse(idc);
@@ -198,12 +198,12 @@ namespace ManageYourBussines.Presentacion
                         clCarritoE objcarritos = new clCarritoE();
                         objcarritos.idproducto = idproducto;
                         objcarritos.idcliente = idcliente;
-                        objcarritos.catidad = cantidad;
+                        //objcarritos.catidad = cantidad;
                         clCarritoL objcarritoL = new clCarritoL();
 
                         int filas = objcarritoL.mtdaumentar(objcarritos);
 
-                      
+
                         clCarritoE objcarrito2 = new clCarritoE();
                         objcarrito2.idcliente = idClien;
                         clCarritoL objCarritoL2 = new clCarritoL();
@@ -214,7 +214,7 @@ namespace ManageYourBussines.Presentacion
                     }
                 }
 
-                
+
             }
 
 
@@ -224,4 +224,4 @@ namespace ManageYourBussines.Presentacion
     }
 
 
-    }
+}

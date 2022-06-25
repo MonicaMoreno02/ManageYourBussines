@@ -100,7 +100,7 @@
     <Content Include="Presentacion\frmAbout.aspx" />
     <Content Include="Presentacion\frmAdminProductos.aspx" />
     <Content Include="Presentacion\frmbalance.aspx" />
-    <Content Include="Presentacion\frmcarrito.aspx" />
+    <Content Include="Presentacion\frmCarrito.aspx" />
     <Content Include="Presentacion\frmClientes.aspx" />
     <Content Include="Presentacion\frmClientesVendedor.aspx" />
     <Content Include="Presentacion\frmdetalles.aspx" />
@@ -352,12 +352,12 @@
     <Compile Include="Presentacion\frmbalance.aspx.designer.cs">
       <DependentUpon>frmbalance.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\frmcarrito.aspx.cs">
-      <DependentUpon>frmcarrito.aspx</DependentUpon>
+    <Compile Include="Presentacion\frmCarrito.aspx.cs">
+      <DependentUpon>frmCarrito.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Presentacion\frmcarrito.aspx.designer.cs">
-      <DependentUpon>frmcarrito.aspx</DependentUpon>
+    <Compile Include="Presentacion\frmCarrito.aspx.designer.cs">
+      <DependentUpon>frmCarrito.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmClientes.aspx.cs">
       <DependentUpon>frmClientes.aspx</DependentUpon>

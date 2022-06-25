@@ -1,8 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Presentacion/Site1.Master" AutoEventWireup="true" CodeBehind="frmcarrito.aspx.cs" Inherits="ManageYourBussines.Presentacion.frmcarrito" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Presentacion/Site1.Master" AutoEventWireup="true" CodeBehind="frmCarrito.aspx.cs" Inherits="ManageYourBussines.Presentacion.frmCarrito" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-       <!DOCTYPE html>
+      <!DOCTYPE html>
     <html>
 
 <head>
@@ -152,7 +152,8 @@
            </asp:ScriptManager>
            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                <ContentTemplate>
-                   <asp:GridView ID="gvCar" runat="server" AutoGenerateColumns="False" class="table table-dark table-striped" OnRowCommand="gvCar_RowCommand" >
+                   <asp:GridView ID="dgvCarrito" runat="server" ></asp:GridView>
+<%--                   <asp:GridView ID="gvCar" runat="server" AutoGenerateColumns="False" class="table table-dark table-striped" OnRowCommand="gvCar_RowCommand" >--%>
                        <Columns>
                            <asp:BoundField DataField="#" HeaderText="#">
                            <ControlStyle Width="10px" />
