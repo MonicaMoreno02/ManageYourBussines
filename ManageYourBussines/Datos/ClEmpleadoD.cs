@@ -29,8 +29,8 @@ namespace ManageYourBussines.Datos
                 {
                     objDatosEmple.idEmpleado = int.Parse(tblDatos.Rows[0]["idEmpleado"].ToString());
                     objDatosEmple.documentoEmpleado = tblDatos.Rows[0]["documentoEmpleado"].ToString();
-                    objDatosEmple.nombreEmpleado = tblDatos.Rows[0]["nombresEmpleado"].ToString();
-                    objDatosEmple.apellidoEmpleado = tblDatos.Rows[0]["apellidosEmpleado"].ToString();
+                    objDatosEmple.nombresEmpleado = tblDatos.Rows[0]["nombresEmpleado"].ToString();
+                    objDatosEmple.apellidosEmpleado = tblDatos.Rows[0]["apellidosEmpleado"].ToString();
                     objDatosEmple.tipoEmpleado = tblDatos.Rows[0]["tipoEmpleado"].ToString();
                     objDatosEmple.emailEmpleado = tblDatos.Rows[0]["emailEmpleado"].ToString();
                     objDatosEmple.claveEmpleado = tblDatos.Rows[0]["claveEmpleado"].ToString();
@@ -69,8 +69,8 @@ namespace ManageYourBussines.Datos
 
                 objEmpleado.idEmpleado = int.Parse(tblEmpleados.Rows[i]["idEmpleado"].ToString());
                 objEmpleado.documentoEmpleado = tblEmpleados.Rows[i]["documentoEmpleado"].ToString();
-                objEmpleado.nombreEmpleado = tblEmpleados.Rows[i]["nombresEmpleado"].ToString();
-                objEmpleado.apellidoEmpleado = tblEmpleados.Rows[i]["apellidosEmpleado"].ToString();
+                objEmpleado.nombresEmpleado = tblEmpleados.Rows[i]["nombresEmpleado"].ToString();
+                objEmpleado.apellidosEmpleado = tblEmpleados.Rows[i]["apellidosEmpleado"].ToString();
                 objEmpleado.tipoEmpleado = tblEmpleados.Rows[i]["TipoEmpleado"].ToString();
                 objEmpleado.emailEmpleado = tblEmpleados.Rows[i]["emailEmpleado"].ToString();
                 objEmpleado.claveEmpleado = tblEmpleados.Rows[i]["claveEmpleado"].ToString();
@@ -86,8 +86,8 @@ namespace ManageYourBussines.Datos
         {
             string sql = "insert into empleado(documentoEmpleado,nombresEmpleado,apellidosEmpleado," +
                 "tipoEmpleado,emailEmpleado,claveEmpleado)" +
-                "values('" + objDatosEmpleados.documentoEmpleado + "','" + objDatosEmpleados.nombreEmpleado + "'" +
-                ",'" + objDatosEmpleados.apellidoEmpleado + "','" + objDatosEmpleados.tipoEmpleado + "'," +
+                "values('" + objDatosEmpleados.documentoEmpleado + "','" + objDatosEmpleados.nombresEmpleado + "'" +
+                ",'" + objDatosEmpleados.apellidosEmpleado + "','" + objDatosEmpleados.tipoEmpleado + "'," +
                 "'" + objDatosEmpleados.emailEmpleado + "','" + objDatosEmpleados.claveEmpleado + "')";
 
             clConexion objConexion = new clConexion();
@@ -98,8 +98,8 @@ namespace ManageYourBussines.Datos
 
         public int mtdEditar(clEmpleadoE objDatos)
         {
-            string sql = "Update Empleado set documentoEmpleado='" + objDatos.documentoEmpleado + "', nombreEmpleado='" + objDatos.nombreEmpleado + "'," +
-                "apellidoEmpleado='" + objDatos.apellidoEmpleado + "',tipoEmpleado='" + objDatos.tipoEmpleado + "',emailEmpleado='" + objDatos.emailEmpleado + "',claveEmpleado='" +
+            string sql = "Update Empleado set documentoEmpleado='" + objDatos.documentoEmpleado + "', nombresEmpleado='" + objDatos.nombresEmpleado + "'," +
+                "apellidosEmpleado='" + objDatos.apellidosEmpleado + "',tipoEmpleado='" + objDatos.tipoEmpleado + "',emailEmpleado='" + objDatos.emailEmpleado + "',claveEmpleado='" +
                 objDatos.claveEmpleado + "' where idEmpleado=" + objDatos.idEmpleado +  "";
 
             clConexion objConexion = new clConexion();

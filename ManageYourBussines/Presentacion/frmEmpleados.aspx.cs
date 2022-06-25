@@ -42,8 +42,8 @@ namespace ManageYourBussines.Presentacion
             clEmpleadoE objDatos = new clEmpleadoE();
             objDatos.idEmpleado = int.Parse(txtIDEmpleado.Text);
             objDatos.documentoEmpleado = txtDocumento.Text;
-            objDatos.nombreEmpleado = txtNombreEmpleado.Text;
-            objDatos.apellidoEmpleado = txtApellidos.Text;
+            objDatos.nombresEmpleado = txtNombreEmpleado.Text;
+            objDatos.apellidosEmpleado = txtApellidos.Text;
             objDatos.tipoEmpleado = txtTipoEmpleado.Text;
             objDatos.emailEmpleado = txtEmail.Text;
             objDatos.claveEmpleado = txtClave.Text;

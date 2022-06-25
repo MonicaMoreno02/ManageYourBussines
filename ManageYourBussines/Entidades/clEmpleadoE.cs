@@ -9,8 +9,8 @@ namespace ManageYourBussines.Entidades
     {
         public int idEmpleado { get; set; }
         public  string documentoEmpleado { get; set; }
-        public  string nombreEmpleado { get; set; }
-        public  string apellidoEmpleado { get; set; }
+        public  string nombresEmpleado { get; set; }
+        public  string apellidosEmpleado { get; set; }
         public  string tipoEmpleado { get; set; }
         public  string emailEmpleado { get; set; }
         public  string claveEmpleado { get; set; }
