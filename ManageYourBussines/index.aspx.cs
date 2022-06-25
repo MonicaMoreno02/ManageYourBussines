@@ -61,6 +61,7 @@ namespace ManageYourBussines
             else
             {
                 //lblMensaje.Text = "usuario no Registrado ";
+                
                 ScriptManager.RegisterClientScriptBlock(this.Page, this.GetType(), "AlertaLoginContrasenia", "window.onload = function(){ alert('La contraseña es incorrecta.'); };", true);
 
             }

@@ -224,6 +224,8 @@
                             </form>
                             <a href="" class="order_online">Compra Ahora
                             </a>--%>
+                            <asp:ScriptManager ID="ScriptManager1" runat="server">
+                            </asp:ScriptManager>
                         </div>
                     </div>
                 </nav>
