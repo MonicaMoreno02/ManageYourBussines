@@ -56,7 +56,6 @@ function sendDataAjax() {
         $("#txtTipoEmpleado").val(datos[4]);
         $("#txtEmail").val(datos[5]);
         $("#txtClave").val(datos[6]);
-        $("#txtSeguridadSocial").val(datos[7]);
     });
 
     $(document).on('click', '#btnEliminarD', function (e) {

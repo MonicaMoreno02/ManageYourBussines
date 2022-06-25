@@ -21,10 +21,10 @@ namespace ManageYourBussines.Datos
             if (tblDatos.Rows.Count == 1)
             {
                 objDatosCliente.idCliente = int.Parse(tblDatos.Rows[0]["idCliente"].ToString());
-                objDatosCliente.documento = tblDatos.Rows[0]["documento"].ToString();
+                objDatosCliente.documento = tblDatos.Rows[0]["documentoCliente"].ToString();
                 objDatosCliente.nombreCliente = tblDatos.Rows[0]["nombreCliente"].ToString();
                 objDatosCliente.telefono = tblDatos.Rows[0]["telefono"].ToString();
-                objDatosCliente.apellidosCliente = tblDatos.Rows[0]["apellidos"].ToString();
+                objDatosCliente.apellidosCliente = tblDatos.Rows[0]["apellidosCliente"].ToString();
                 objDatosCliente.direccion = tblDatos.Rows[0]["direccion"].ToString();
                 objDatosCliente.emailCliente = tblDatos.Rows[0]["emailCliente"].ToString();
                 objDatosCliente.claveCliente = tblDatos.Rows[0]["claveCliente"].ToString();
@@ -89,7 +89,7 @@ namespace ManageYourBussines.Datos
             if (tblDatos.Rows.Count == 1)
             {
 
-                objDatosUsuario.documento = tblDatos.Rows[0]["documento"].ToString();
+                objDatosUsuario.documento = tblDatos.Rows[0]["documentoCliente"].ToString();
                 objDatosUsuario.nombreCliente = tblDatos.Rows[0]["nombreCliente"].ToString();
                 objDatosUsuario.apellidosCliente = tblDatos.Rows[0]["apellidosCliente"].ToString();
                 objDatosUsuario.telefono = tblDatos.Rows[0]["telefono"].ToString();

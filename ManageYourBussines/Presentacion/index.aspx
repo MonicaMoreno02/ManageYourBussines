@@ -390,7 +390,7 @@
 		<ItemTemplate>
 			<div class="ItemSubMenu">
 				<asp:Literal ID="Imagen" runat="server" /><img src="<%#Eval("imagen") %>" width="200" height="200" /></td></tr><br>
-                <asp:Literal ID="nombre" runat="server" /> <%#Eval("nombreCliente") %><br>
+                <asp:Literal ID="nombre" runat="server" /> <%#Eval("nombreProducto") %><br>
                 <asp:Button ID="btnDetalles" runat="server" Text="Detalles:" CssClass="btn btn-success" onclick="btnDetalles_Click"/>
 			</div>				
 		</ItemTemplate>

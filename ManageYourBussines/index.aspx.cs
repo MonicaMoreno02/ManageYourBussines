@@ -29,44 +29,44 @@ namespace ManageYourBussines
 
 
 
-        
-
-      
-
-        //protected void btnIngresar_Click(object sender, EventArgs e)
-        //{
-        //    clUsuarioE objDatos = new clUsuarioE();
-        //    objDatos.emailCliente = txtEmail.Text;
-        //    objDatos.claveCliente = txtClave.Text;
-
-        //    clUsuarioL objUsuariosL = new clUsuarioL();
-        //    clUsuarioE objDatosClien = new clUsuarioE();
-        //    objDatosClien = objUsuariosL.mtdLogin(objDatos);
-        //    if (objDatosClien != null)
-        //    {
 
 
-        //        //lblUsuario.Text = objDatosClien.nombres + " " + objDatosClien.apellidos;
 
-        //        //Session["usuario"] = objDatos.nombres + " " + objDatos.apellidos;
-        //        Session["idc"] = objDatosClien.idCliente;
-        //        int idClient = objDatosClien.idCliente;
-        //        Response.Redirect("Presentacion/frmHome.aspx");
 
-              
+            //protected void btnIngresar_Click(object sender, EventArgs e)
+            //{
+            //    clUsuarioE objDatos = new clUsuarioE();
+            //    objDatos.emailCliente = txtEmail.Text;
+            //    objDatos.claveCliente = txtClave.Text;
 
-               
-               
-        //    }
-        //    else
-        //    {
-        //        //lblMensaje.Text = "usuario no Registrado ";
-        //        ScriptManager.RegisterClientScriptBlock(this.Page, this.GetType(), "AlertaLoginContrasenia", "window.onload = function(){ alert('La contraseña es incorrecta.'); };", true);
+            //    clUsuarioL objUsuariosL = new clUsuarioL();
+            //    clUsuarioE objDatosClien = new clUsuarioE();
+            //    objDatosClien = objUsuariosL.mtdLogin(objDatos);
+            //    if (objDatosClien != null)
+            //    {
 
-        //    }
+
+            //        //lblUsuario.Text = objDatosClien.nombres + " " + objDatosClien.apellidos;
+
+            //        //Session["usuario"] = objDatos.nombres + " " + objDatos.apellidos;
+            //        Session["idc"] = objDatosClien.idCliente;
+            //        int idClient = objDatosClien.idCliente;
+            //        Response.Redirect("Presentacion/frmHome.aspx");
+
+
+
+
+
+            //    }
+            //    else
+            //    {
+            //        //lblMensaje.Text = "usuario no Registrado ";
+            //        ScriptManager.RegisterClientScriptBlock(this.Page, this.GetType(), "AlertaLoginContrasenia", "window.onload = function(){ alert('La contraseña es incorrecta.'); };", true);
+
+            //    }
         }
 
-        
+
         protected void btnDetalles_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
@@ -146,18 +146,17 @@ namespace ManageYourBussines
                 ScriptManager.RegisterClientScriptBlock(this.Page, this.GetType(), "AlertaLoginContrasenia", "window.onload = function(){ alert(' el email o La contraseña es incorrecta.'); };", true);
 
                 //lblMensaje.Text = "usuario no Registrado ";
-                
+
                 ScriptManager.RegisterClientScriptBlock(this.Page, this.GetType(), "AlertaLoginContrasenia", "window.onload = function(){ alert('La contraseña es incorrecta.'); };", true);
 
+            }
+
+           
+
+
         }
 
-        protected void btnRecuperar_Click1(object sender, EventArgs e)
-        {
-            Response.Redirect("Recuperar.aspx");
-        }
-
-       
-        protected void btncliente_Click2(object sender, EventArgs e)
+        protected void btncliente_Click(object sender, EventArgs e)
         {
             clUsuarioE objDatos = new clUsuarioE();
             objDatos.emailCliente = txtEmail.Text;
@@ -182,10 +181,6 @@ namespace ManageYourBussines
                 Response.Redirect("Presentacion/frmHome.aspx");
 
 
-
-
-
-
             }
             else
             {
@@ -193,13 +188,16 @@ namespace ManageYourBussines
                 ScriptManager.RegisterClientScriptBlock(this.Page, this.GetType(), "AlertaLoginContrasenia", "window.onload = function(){ alert(' el email o La contraseña  es incorrecta.'); };", true);
             }
         }
+
+        protected void btnRecuperar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Recuperar.aspx");
+        }
     }
 
-       
-    }
+}
 
 
 
-        
 
- 
+
