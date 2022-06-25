@@ -146,7 +146,8 @@ namespace ManageYourBussines
                 ScriptManager.RegisterClientScriptBlock(this.Page, this.GetType(), "AlertaLoginContrasenia", "window.onload = function(){ alert(' el email o La contraseña es incorrecta.'); };", true);
 
                 //lblMensaje.Text = "usuario no Registrado ";
-            }
+                
+                ScriptManager.RegisterClientScriptBlock(this.Page, this.GetType(), "AlertaLoginContrasenia", "window.onload = function(){ alert('La contraseña es incorrecta.'); };", true);
 
         }
 
