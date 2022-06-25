@@ -11,7 +11,7 @@ namespace ManageYourBussines.Presentacion
 {
 
 
-    public partial class frmcarrito
+    public partial class frmCarrito
     {
 
         /// <summary>
@@ -51,12 +51,12 @@ namespace ManageYourBussines.Presentacion
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
 
         /// <summary>
-        /// Control gvCar.
+        /// Control dgvCarrito.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvCar;
+        protected global::System.Web.UI.WebControls.GridView dgvCarrito;
     }
 }
