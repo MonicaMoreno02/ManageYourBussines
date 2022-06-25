@@ -117,16 +117,16 @@
             <asp:ScriptManager ID="ScriptManager1" runat="server">
             </asp:ScriptManager>
             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-                <ContentTemplate>
+                <contenttemplate>
                     <asp:GridView ID="gvCar" runat="server" AutoGenerateColumns="False" class="table table-dark table-striped" OnRowCommand="gvCar_RowCommand">
-                        <Columns>
+                        <columns>
                             <asp:BoundField DataField="#" HeaderText="#">
-                                <ControlStyle Width="10px" />
-                                <ItemStyle Width="10px" />
+                                <controlstyle width="10px" />
+                                <itemstyle width="10px" />
                             </asp:BoundField>
                             <asp:ImageField DataImageUrlField="imagen" HeaderText="imagen">
-                                <ControlStyle Height="60px" Width="60px" />
-                                <ItemStyle Height="100px" Width="100px" />
+                                <controlstyle height="60px" width="60px" />
+                                <itemstyle height="100px" width="100px" />
                             </asp:ImageField>
                             <asp:BoundField DataField="nombreProducto" HeaderText="nombre" />
                             <asp:BoundField DataField="describcion" HeaderText="describcion" />
@@ -137,9 +137,9 @@
                             <asp:BoundField DataField="cantidadstock" HeaderText="cantidadstock" />
                             <asp:BoundField DataField="total" HeaderText="total" />
                             <asp:ButtonField ButtonType="Button" CommandName="eliminar" Text="eliminar" />
-                        </Columns>
+                        </columns>
                     </asp:GridView>
-                </ContentTemplate>
+                </contenttemplate>
             </asp:UpdatePanel>
 
 
@@ -154,25 +154,26 @@
                     shape: 'pill',
                     label: 'pay'
                 },
-                craeteOrder: function (data, actions) {
-                    return actions.order.create({
-                        purchase_units: [{
-                            amount: {
-                                value: 100
-                            }
-
-                        }]
-
+                // Sets up the transaction when a payment button is clicked
+              createOrder: (data, actions) => {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '77.44' // Can also reference a variable or function
+                        }
+                    }]
+                });
+              },
+                 // Finalize the transaction after payer approval
+              onApprove: (data, actions) => {
+                    return actions.order.capture().then(function(orderData) {
+                        console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+                        const transaction = orderData.purchase_units[0].payments.captures[0];
+                        alert(`Transaction ${transaction.status}: ${transaction.id}\n\nSee console for all available details`);
+            
                     });
-                },
-                onApprove: function (data, actions) {
-                    actions.order.capture().then(function (detalles) {
-                        console.log(detalles);
-                        window.location.href = "WebForm1.aspx";
-
-                    });
-
-                },
+        
+              },
 
 
                 onCancel: function (data) {
@@ -181,6 +182,8 @@
                 }
             }).render('#paypal-button-container');
         </script>
+
+
     </form>
 
 </asp:Content>
