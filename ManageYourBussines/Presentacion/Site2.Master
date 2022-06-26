@@ -63,7 +63,6 @@
     <link href="css/main.css" rel="stylesheet" media="all">
     <link href="recursos/css/cssbarra/main.css" rel="stylesheet" />
 
-
     <!--Boostrap css-->
     
     <link href="recursos/js/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" />

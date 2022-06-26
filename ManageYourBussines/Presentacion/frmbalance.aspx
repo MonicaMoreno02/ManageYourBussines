@@ -25,6 +25,19 @@
         <link rel="stylesheet" type="text/css" media="screen" href="vista/css/main.css" />
         <script src="vista/js/main.js"></script>
 
+         <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <div class="container-fluid">
+                <img src="recursos/images/icono3.png" widt="20" height="20" />
+                <a class="navbar-brand">Muebles San José</a>
+
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="frmAdmin.aspx">INICIO</a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
 
         <div class="container">
             <div class="jumbotron">

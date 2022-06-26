@@ -4,8 +4,21 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form runat="server">
+         <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <div class="container-fluid">
+                <img src="recursos/images/icono3.png" widt="20" height="20" />
+                <a class="navbar-brand">Muebles San José</a>
+
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="frmAdmin.aspx">INICIO</a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
         <%--PAOLA: Modal para registrar los empleados --%>
-        <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+        <div class="page-wrapper">
             <div class="wrapper wrapper--w790">
                 <div class="card card-5">
                     <div class="card-heading">
@@ -135,5 +148,5 @@
     <!-- Main JS-->
     <script src="js/global.js"></script>
 
-
+    
 </asp:Content>
