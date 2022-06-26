@@ -124,6 +124,7 @@
     <Content Include="Presentacion\frmAdmin.aspx" />
     <Content Include="Presentacion\frmEmpleados.aspx" />
     <Content Include="Presentacion\frmHome.aspx" />
+    <Content Include="Presentacion\frmInicioEmpleados.aspx" />
     <Content Include="Presentacion\frmInventario.aspx" />
     <Content Include="Presentacion\frmProductos.aspx" />
     <Content Include="Presentacion\frmEstadisticas.aspx" />
@@ -419,6 +420,13 @@
     <Compile Include="Presentacion\frmHome.aspx.designer.cs">
       <DependentUpon>frmHome.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\frmInicioEmpleados.aspx.cs">
+      <DependentUpon>frmInicioEmpleados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmInicioEmpleados.aspx.designer.cs">
+      <DependentUpon>frmInicioEmpleados.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\frmInventario.aspx.cs">
       <DependentUpon>frmInventario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -495,6 +503,13 @@
     </Compile>
     <Compile Include="Presentacion\Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Site3.Master.cs">
+      <DependentUpon>Site3.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Site3.Master.designer.cs">
+      <DependentUpon>Site3.Master</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
@@ -688,6 +703,7 @@
     <Content Include="Presentacion\ediar\scss\layouts\main.scss" />
     <Content Include="Presentacion\ediar\scss\layouts\responsive.scss" />
     <Content Include="Presentacion\ediar\scss\style.scss" />
+    <Content Include="Presentacion\Site3.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
