@@ -11,6 +11,7 @@ namespace ManageYourBussines.Presentacion
 {
     public partial class frmcarrito : System.Web.UI.Page
     {
+        int valorE = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["idc"] != null)
@@ -39,6 +40,17 @@ namespace ManageYourBussines.Presentacion
                 Response.Redirect("~/index.aspx");
             }
 
+            int total = 20000;
+             valorE = total / 4000;
+            //ScriptManager.RegisterStartupScript(Page, Page.ClientScript.GetType(), "MessageAlert", "javascript:mensaje(" + valorE + ")", true);
+
+            //ScriptManager.RegisterStartupScript(Page, Page.ClientScript.GetType(), "MessageAlert", "javascript:mensaje('" + valorE + "')", true);
+        }
+
+        public int valor
+        {
+            get { return this.valorE; }
+            
         }
 
         protected void gvCar_RowCommand(object sender, GridViewCommandEventArgs e)

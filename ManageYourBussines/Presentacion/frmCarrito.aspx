@@ -155,11 +155,12 @@
                     label: 'pay'
                 },
                 // Sets up the transaction when a payment button is clicked
-              createOrder: (data, actions) => {
-                return actions.order.create({
+                createOrder: (data, actions) => {
+                    var prueba = "<%= this.valor%>";    
+                  return actions.order.create({
                     purchase_units: [{
                         amount: {
-                            value: '77.44' // Can also reference a variable or function
+                            value: prueba// Can also reference a variable or function
                         }
                     }]
                 });
@@ -176,8 +177,8 @@
               },
 
 
-                onCancel: function (data) {
-                    alert("Pago cancelado")
+                onCancel: function (data, message) {
+                    alert("Pago cancelado" + message)
                     console.log(data);
                 }
             }).render('#paypal-button-container');
