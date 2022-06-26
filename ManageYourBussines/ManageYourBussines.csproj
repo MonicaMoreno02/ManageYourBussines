@@ -148,8 +148,10 @@
     <Content Include="Presentacion\recursos\css\style.css" />
     <Content Include="Presentacion\recursos\css\style2.css" />
     <Content Include="Presentacion\recursos\css\stylebuttons.css" />
+    <Content Include="Presentacion\recursos\css\StylebuttonsE.css" />
     <Content Include="Presentacion\recursos\images\about-img.png" />
     <Content Include="Presentacion\recursos\images\anadir-al-carrito %281%29.png" />
+    <Content Include="Presentacion\recursos\images\atrasE.png" />
     <Content Include="Presentacion\recursos\images\base.jpg" />
     <Content Include="Presentacion\recursos\images\baseg.jpg" />
     <Content Include="Presentacion\recursos\images\biblioteca1.png" />
@@ -167,6 +169,8 @@
     <Content Include="Presentacion\recursos\images\fondo2admin.jpeg" />
     <Content Include="Presentacion\recursos\images\fondo3.jpg" />
     <Content Include="Presentacion\recursos\images\fondo5.jpeg" />
+    <Content Include="Presentacion\recursos\images\fondoE.JPG" />
+    <Content Include="Presentacion\recursos\images\fondoemple2.jpg" />
     <Content Include="Presentacion\recursos\images\icono3.png" />
     <Content Include="Presentacion\recursos\images\iconoEscritorio.png" />
     <Content Include="Presentacion\recursos\images\iconoSofa.png" />

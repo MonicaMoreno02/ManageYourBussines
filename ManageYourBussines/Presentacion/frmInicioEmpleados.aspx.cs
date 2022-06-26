@@ -13,5 +13,16 @@ namespace ManageYourBussines.Presentacion
         {
 
         }
+
+        protected void BtnInicio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("~/index.aspx");
+
+        }
     }
 }

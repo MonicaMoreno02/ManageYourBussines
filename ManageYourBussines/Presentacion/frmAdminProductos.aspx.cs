@@ -217,6 +217,11 @@ namespace ManageYourBussines.Presentacion
            
 
         }
+
+        protected void txtAsignarDescripcion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

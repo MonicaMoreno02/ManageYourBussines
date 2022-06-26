@@ -4,38 +4,49 @@
 
 <html>
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+   <meta http-equiv="X-UA-Compatible" content="IE-edge"; charset="utf-8" />
+    <meta  name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>ADMINISTRADOR</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-    <%--    recursos de appPlantilla--%>
+    <%--<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">--%>
+
+
+<%--    recursos de appPlantilla--%>
     <link href="recursos/vendor/font-awesome-4.7/css/all.min.css" rel="stylesheet" />
     <link href="recursos/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" />
 
     <link href="recursos/css/sb-admin-2.min.css" rel="stylesheet" />
+
+     <!-- font awesome style -->
+    <link href="recursos/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="recursos/css/style.css" rel="stylesheet" />
+
 <%--    recursos de appPlantilla--%>
 
     	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 
+    <%--estilo para que sea responsive--%>
+    <link href="recursos/css/responsive.css" rel="stylesheet" />
 
-    <link href="recursos/css/main.css" rel="stylesheet" />
-    <link href="recursos/css/main.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-
-
+   <%-- Recursos para registro de empleados --%>
+    <link href="recursos/css/main.css" rel="stylesheet" />
+    <link href="recursos/css/main.min.css" rel="stylesheet" />
       <!-- Jquery JS-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <!-- Vendor JS-->
     <script src="vendor/select2/select2.min.js"></script>
     <script src="vendor/datepicker/moment.min.js"></script>
     <script src="vendor/datepicker/daterangepicker.js"></script>
-
     <!-- Main JS-->
-    <%--<script src="js/global.js"></script>--%>
-
+    <script src="js/global.js"></script>
       <!-- Icons font CSS-->
     <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
     <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
@@ -57,16 +68,17 @@
     
     <link href="recursos/js/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" />
 
+ 
 </head>
 <body>
-    <form id="form1" runat="server">
         <div>
             
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+
             </asp:ContentPlaceHolder>
 
         </div>
-    </form>
 
     <script src="recursos/js/sb-admin-2.min.js"></script>
 
