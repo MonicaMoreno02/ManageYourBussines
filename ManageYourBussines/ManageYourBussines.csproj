@@ -120,6 +120,7 @@
     <Content Include="Presentacion\frmbalance.aspx" />
     <Content Include="Presentacion\frmcarrito.aspx" />
     <Content Include="Presentacion\frmClientes.aspx" />
+    <Content Include="Presentacion\frmClientesVendedor.aspx" />
     <Content Include="Presentacion\frmdetalles.aspx" />
     <Content Include="Presentacion\frmAdmin.aspx" />
     <Content Include="Presentacion\frmEmpleados.aspx" />
@@ -213,6 +214,7 @@
     <Content Include="Presentacion\recursos\js\JavaSeguridad.js" />
     <Content Include="Presentacion\recursos\js\jquery-3.4.1.min.js" />
     <Content Include="Presentacion\Recursos\js\datosDatable.js" />
+    <Content Include="Presentacion\recursos\js\jsClienteE.js" />
     <Content Include="Presentacion\recursos\js\main.js" />
     <Content Include="Presentacion\recursos\js\sb-admin-2.js" />
     <Content Include="Presentacion\recursos\js\sb-admin-2.min.js" />
@@ -391,6 +393,13 @@
     </Compile>
     <Compile Include="Presentacion\frmClientes.aspx.designer.cs">
       <DependentUpon>frmClientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmClientesVendedor.aspx.cs">
+      <DependentUpon>frmClientesVendedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmClientesVendedor.aspx.designer.cs">
+      <DependentUpon>frmClientesVendedor.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmdetalles.aspx.cs">
       <DependentUpon>frmdetalles.aspx</DependentUpon>
