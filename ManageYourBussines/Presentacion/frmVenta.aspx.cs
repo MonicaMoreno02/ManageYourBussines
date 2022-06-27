@@ -73,7 +73,7 @@ namespace ManageYourBussines.Presentacion
                     {
                         string fech = lista[0].fechaVenta.ToString("yyyy/MM/dd");
 
-                        vtot = vtot + total;
+
                         DataRow row = datos.NewRow();
                         row["#"] = i + 1;
                         row["nombreProducto"] = fech;

@@ -72,13 +72,7 @@
                             <li class="nav-item active">
                                 <a class="nav-link" href="index.aspx">Home <span class="sr-only">(current)</span></a>
                             </li>
-                           <%-- <li class="nav-item">
-                                <a class="nav-link" href="menu.html">Productos</a>
-                            </li>--%>
-                           <%-- <li class="nav-item">
-                                <a class="nav-link" href="about.html">Sobre Nosotros</a>
-                            </li>--%>
-
+                         
 
                              <div class="container mt-">
 
@@ -154,7 +148,7 @@
       </li>
 
                                                         <li class="nav-item">
-          <a class="nav-link" href="loginEmpleado.aspx">Ingresar como empleado</a>
+          <a class="nav-link" href="loginEmpleado.aspx">Ingresar empleado</a>
       </li>
                 
                         </ul>
