@@ -133,6 +133,7 @@
     <Content Include="Presentacion\frmProductosVendedor.aspx" />
     <Content Include="Presentacion\frmRegisEmpleados.aspx" />
     <Content Include="Presentacion\frmRegistrar.aspx" />
+    <Content Include="Presentacion\frmRegistrarProducto.aspx" />
     <Content Include="Presentacion\frmSeguridadSocial.aspx" />
     <Content Include="Presentacion\frmSugerencias.aspx" />
     <Content Include="Presentacion\frmVendedor.aspx" />
@@ -491,6 +492,13 @@
     </Compile>
     <Compile Include="Presentacion\frmRegistrar.aspx.designer.cs">
       <DependentUpon>frmRegistrar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmRegistrarProducto.aspx.cs">
+      <DependentUpon>frmRegistrarProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmRegistrarProducto.aspx.designer.cs">
+      <DependentUpon>frmRegistrarProducto.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmSeguridadSocial.aspx.cs">
       <DependentUpon>frmSeguridadSocial.aspx</DependentUpon>
