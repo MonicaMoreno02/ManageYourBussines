@@ -51,5 +51,11 @@ namespace ManageYourBussines.Presentacion
             Response.Redirect("frmClientesVendedor.aspx");
 
         }
+
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("frmInicioEmpleados.aspx");
+
+        }
     }
 }

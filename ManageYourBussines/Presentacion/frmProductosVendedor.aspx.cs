@@ -24,6 +24,12 @@ namespace ManageYourBussines.Presentacion
             listarProductos = objProductoL.mtdListarP();
             return listarProductos;
 
-        }   
+        }
+
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("frmInicioEmpleados.aspx");
+
+        }
     }
 }
