@@ -158,6 +158,7 @@
     <Content Include="Presentacion\recursos\images\elefante.jpg" />
     <Content Include="Presentacion\recursos\images\Escritorio1.png" />
     <Content Include="Presentacion\recursos\images\Escritorio2.png" />
+    <Content Include="Presentacion\recursos\images\estadisticas.png" />
     <Content Include="Presentacion\recursos\images\estante2.png" />
     <Content Include="Presentacion\recursos\images\fondo1.jpg" />
     <Content Include="Presentacion\recursos\images\fondo2.jpeg" />

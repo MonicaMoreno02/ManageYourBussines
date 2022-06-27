@@ -47,6 +47,8 @@ namespace ManageYourBussines.Presentacion
             LblTipoEmpleado.Text = " ";
             txtEmailRegis.Text = " ";
             txtClaveRegis.Text = " ";
+
+            Response.Redirect("frmEmpleados.aspx");
         }
     }
 }

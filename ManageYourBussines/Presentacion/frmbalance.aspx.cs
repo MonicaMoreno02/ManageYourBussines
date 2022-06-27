@@ -469,5 +469,9 @@ namespace ManageYourBussines.Presentacion
             return listaGraficas;
         }
 
+        protected void btnEstadisticas_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("frmEstadisticas.aspx");
+        }
     }
 }

@@ -22,6 +22,11 @@
 
         <%--PAOLA: creo la tabla donde mostramos los datos del cliente --%>
         <div class="container-fluid">
+            <div class="card card-5">
+                <div class="card-heading">
+                    <h2 class="title">LISTADO CLIENTES</h2>
+                </div>
+            </div>
             <div class="card-body">
                 <div class="table-responsive">
 

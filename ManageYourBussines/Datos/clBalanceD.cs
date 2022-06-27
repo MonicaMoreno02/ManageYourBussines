@@ -103,10 +103,10 @@ namespace ManageYourBussines.Datos
             return listarBal;
         }
 
-        public List<clBalanceE> mtdlistargraficos1(clBalanceE objdatosgraficos)
+        public List<clBalanceE> mtdlistargraficos1()
         {
 
-            string sql = "select producto.nombreproducto, detallesVenta.cantidad from producto inner join detallesVenta on producto.idproducto = '"+ objdatosgraficos.idProducto+"'";
+            string sql = "select producto.nombreproducto, detallesVenta.cantidad from producto inner join detallesVenta on producto.idProducto = detallesVenta.idProducto";
             clConexion objConexion = new clConexion();
             DataTable tblGraficas = new DataTable();
             tblGraficas = objConexion.mtdDesconectado(sql);

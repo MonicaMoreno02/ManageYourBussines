@@ -35,11 +35,11 @@ namespace ManageYourBussines.Logica
 
         }
 
-        public List<clBalanceE> mtdListarGraficasL(clBalanceE objDatosGraficas)
+        public List<clBalanceE> mtdListarGraficasL()
         {
             clBalanceD objBalanceD = new clBalanceD();
             List<clBalanceE> listaGraficas = new List<clBalanceE>();
-            listaGraficas = objBalanceD.mtdlistargraficos1(objDatosGraficas);
+            listaGraficas = objBalanceD.mtdlistargraficos1();
             return listaGraficas;
         }
 

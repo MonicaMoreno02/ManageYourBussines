@@ -6,7 +6,7 @@
 
     <form runat="server">
 
-        <asp:Button CssClass="" ID="BtnInicio" runat="server" Text="INICIO" Height="96px" OnClick="BtnInicio_Click" Width="235px" BackColor="White" BorderColor="Black" BorderStyle="Solid" BorderWidth="3px" Font-Names="Century Gothic" Font-Size="40px" />
+        
         <br />
 
 
@@ -49,6 +49,14 @@
                 <a class="btn link" href="frmbalance.aspx">
                     <div class="btn from-bottom">
                         Balance 
+                    </div>
+                </a>
+            </li>
+            <li>
+
+                <a class="btn link" href="">
+                    <div class="btn from-center">
+                        Tareas 
                     </div>
                 </a>
             </li>
