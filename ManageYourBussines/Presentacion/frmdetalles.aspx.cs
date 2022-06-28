@@ -120,7 +120,12 @@ namespace ManageYourBussines.Presentacion
                 ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('por favor inicie seccion');", true);
             }
         }
+
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("frmcarrito.aspx");
         }
+    }
 
         
 

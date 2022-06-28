@@ -2,10 +2,26 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid">
+    <img src="recursos/images/icono3.png" widt="20" height="20"/>
+    <a class="navbar-brand" href="#">Muebles san José</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="frmAdmin.aspx">Página del administrador</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
      <div class="container-fluid">
           <form runat="server">
         
-            <h1 class="h3 mb-2 text-gray-800">Listado de Tareas</h1>
+            <h1 class="h3 mb-2 text-gray-800">LISTADO DE TAREAS</h1>
 
 
             <!-- DataTales Example -->
@@ -16,13 +32,13 @@
                         <table class="table table-bordered table-dark" id="dtDatosPersonal" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th>N°Tarea</th>
-                                    <th>Nombre Tareas</th>
-                                    <th>Descripción Tareas</th>
-                                    <th>estado</th>
-                                    <th>tiempo</th>
-                                    <th>Editar</th>
-                                    <th>Eliminar</th>
+                                    <th>N°TAREA</th>
+                                    <th>NOMBRE DE LA TAREA</th>
+                                    <th>DESCRIPCIÓN DE LA TAREA</th>
+                                    <th>ESTADO</th>
+                                    <th>TIEMPO</th>
+                                    <th>EDITAR</th>
+                                    <th>ELIMINAR</th>
                                    
                                 </tr>
                             </thead>
@@ -33,22 +49,22 @@
         </div>
     
   
-    <h1>Registrar Tareas:</h1>
+    <h1>REGISTRO DE TAREAS</h1>
         <br />
         <div class="col">
             <div class="form-group">
-                <label for="txtNombre" class="col-form-label">Nombre de la Tarea:</label>
+                <label for="txtNombre" class="col-form-label">NOMBRE DE LA TAREA</label>
                 <asp:TextBox ID="txtNombreTarea" class="form-control" runat="server"></asp:TextBox>
             </div>
             <div class="form-group">
-                <label for="txtDescripcion" class="col-form-label">Descripción de la Tarea:</label>
+                <label for="txtDescripcion" class="col-form-label">DESCRIPCIÓN DE LA TAREA</label>
                 <asp:TextBox ID="txtDescripcionTarea" class="form-control" runat="server"></asp:TextBox>
             </div>
             <div class="form-group">
-                <label for="txtPrecio" class="col-form-label">Tiempo</label>
+                <label for="txtPrecio" class="col-form-label">TIEMPO</label>
                 <asp:TextBox ID="txtTiempo" class="form-control" runat="server"></asp:TextBox>
             </div>
-             <asp:Button ID="btnRegistrar" runat="server" Text="Registrar Tarea" CssClass="btn btn-dark" OnClick="btnRegistrar_Click" />
+             <asp:Button ID="btnRegistrar" runat="server" Text="REGISTRAR TAREA" CssClass="btn btn-dark" OnClick="btnRegistrar_Click" />
         </div>
      
      <div class="modal fade" id="ModalDatos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

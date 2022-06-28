@@ -38,7 +38,7 @@
                                 <a class="nav-link" href="frmdetalles.aspx">Productos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="frmSobreNosotros.aspx">Sobre Nosotros</a>
+                                <a class="nav-link" href="About.aspx">Sobre Nosotros</a>
                             </li>
                              <li class="nav-item">
                                 <a class="nav-link" href="frmContactenos.aspx">Contactenos</a>

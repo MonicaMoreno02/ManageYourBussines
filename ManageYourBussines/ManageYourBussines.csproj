@@ -97,6 +97,7 @@
     <Content Include="plantilla 2\readme.txt" />
     <Content Include="plantilla 2\vendor\jquery\jquery-ui.min.js" />
     <Content Include="plantilla 2\vendor\jquery\jquery.min.js" />
+    <Content Include="Presentacion\About.aspx" />
     <Content Include="Presentacion\frmAbout.aspx" />
     <Content Include="Presentacion\frmAdminProductos.aspx" />
     <Content Include="Presentacion\frmbalance.aspx" />
@@ -114,6 +115,50 @@
     <Content Include="Presentacion\frmRegistrar.aspx" />
     <Content Include="Presentacion\frmTarea.aspx" />
     <Content Include="Presentacion\frmVenta.aspx" />
+    <Content Include="Presentacion\recursos2\css\animate.css" />
+    <Content Include="Presentacion\recursos2\css\bootstrap.min.css" />
+    <Content Include="Presentacion\recursos2\css\font-awesome.min.css" />
+    <Content Include="Presentacion\recursos2\css\owl.carousel.min.css" />
+    <Content Include="Presentacion\recursos2\css\reset.css" />
+    <Content Include="Presentacion\recursos2\css\responsive.css" />
+    <Content Include="Presentacion\recursos2\css\style.css" />
+    <Content Include="Presentacion\recursos2\fonts\fontawesome-webfont.svg" />
+    <Content Include="Presentacion\recursos2\img\address\1900x1000.png" />
+    <Content Include="Presentacion\recursos2\img\logo\cemrebakerylogo.png" />
+    <Content Include="Presentacion\recursos2\img\logo\cemrebakerytextlogo.png" />
+    <Content Include="Presentacion\recursos2\img\logo\cemrebakerytextlogolight.png" />
+    <Content Include="Presentacion\recursos2\img\new\1170x268.png" />
+    <Content Include="Presentacion\recursos2\img\new\1900x1000 - Copia.png" />
+    <Content Include="Presentacion\recursos2\img\new\cama.jpg" />
+    <Content Include="Presentacion\recursos2\img\new\elefante.jpg" />
+    <Content Include="Presentacion\recursos2\img\new\icon.png" />
+    <Content Include="Presentacion\recursos2\img\new\matero3.jpg" />
+    <Content Include="Presentacion\recursos2\img\new\product.png" />
+    <Content Include="Presentacion\recursos2\img\new\productnew.png" />
+    <Content Include="Presentacion\recursos2\img\new\Rectangle.png" />
+    <Content Include="Presentacion\recursos2\img\new\repisa.jpeg" />
+    <Content Include="Presentacion\recursos2\img\new\repisaSp.jpg" />
+    <Content Include="Presentacion\recursos2\img\shape\1900x1000.png" />
+    <Content Include="Presentacion\recursos2\img\shape\backgroundshape.png" />
+    <Content Include="Presentacion\recursos2\img\shape\shape1.png" />
+    <Content Include="Presentacion\recursos2\img\shape\shape2.png" />
+    <Content Include="Presentacion\recursos2\img\shape\shape3.png" />
+    <Content Include="Presentacion\recursos2\img\slider\1155x608.png" />
+    <Content Include="Presentacion\recursos2\img\slider\1900x1000.png" />
+    <Content Include="Presentacion\recursos2\img\slider\leftarrow.png" />
+    <Content Include="Presentacion\recursos2\img\slider\rightarrow.png" />
+    <Content Include="Presentacion\recursos2\img\testimonial\1900x1000.png" />
+    <Content Include="Presentacion\recursos2\js\ajax-mail.js" />
+    <Content Include="Presentacion\recursos2\js\bootstrap.min.js" />
+    <Content Include="Presentacion\recursos2\js\jquery-easing\jquery.easing.compatibility.js" />
+    <Content Include="Presentacion\recursos2\js\jquery-easing\jquery.easing.js" />
+    <Content Include="Presentacion\recursos2\js\jquery-easing\jquery.easing.min.js" />
+    <Content Include="Presentacion\recursos2\js\jquery.nicescroll.min.js" />
+    <Content Include="Presentacion\recursos2\js\main.js" />
+    <Content Include="Presentacion\recursos2\js\owl.carousel.min.js" />
+    <Content Include="Presentacion\recursos2\js\parallax.min.js" />
+    <Content Include="Presentacion\recursos2\js\vendor\jquery-1.12.0.min.js" />
+    <Content Include="Presentacion\recursos2\js\vendor\modernizr-2.8.3.min.js" />
     <Content Include="Presentacion\recursos\css\bootstrap.css" />
     <Content Include="Presentacion\recursos\css\estilosEmple.css" />
     <Content Include="Presentacion\recursos\css\font-awesome.min.css" />
@@ -170,6 +215,7 @@
     <Content Include="Presentacion\recursos\images\repisaB.jpg" />
     <Content Include="Presentacion\recursos\images\repisam.jpg" />
     <Content Include="Presentacion\recursos\images\repisaN.jpg" />
+    <Content Include="Presentacion\recursos\images\repisaSp - Copia.jpg" />
     <Content Include="Presentacion\recursos\images\repisaSp.jpg" />
     <Content Include="Presentacion\recursos\images\sala.jpeg" />
     <Content Include="Presentacion\recursos\images\sillaclasica.png" />
@@ -353,6 +399,13 @@
     <Compile Include="MailServices1\MasterMailServer.cs" />
     <Compile Include="MailServices1\systemSupportMail.cs" />
     <Compile Include="Logica\clVentaL.cs" />
+    <Compile Include="Presentacion\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\frmNomina.aspx.cs">
       <DependentUpon>frmNomina.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -643,6 +696,11 @@
     <Content Include="recursos\images\icono.jpg.webp" />
     <Content Include="recursos\css\style.css.map" />
     <Content Include="recursos\css\style.scss" />
+    <Content Include="Presentacion\recursos2\fonts\fontawesome-webfont.eot" />
+    <Content Include="Presentacion\recursos2\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Presentacion\recursos2\fonts\fontawesome-webfont.woff" />
+    <Content Include="Presentacion\recursos2\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Presentacion\recursos2\fonts\FontAwesome.otf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
