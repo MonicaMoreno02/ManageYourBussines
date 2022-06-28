@@ -167,6 +167,9 @@ namespace ManageYourBussines
             clUsuarioE bjDatosClien = new clUsuarioE();
             bjDatosClien = objUsuariosL.mtdLogin(objDatos);
 
+            var user = new clUsuarioL();
+            var result = user.recoverPassword(objDatos);
+
             if (bjDatosClien != null)
             {
 
@@ -191,6 +194,40 @@ namespace ManageYourBussines
                 //lblMensaje.Text = "usuario no Registrado ";
                 ScriptManager.RegisterClientScriptBlock(this.Page, this.GetType(), "AlertaLoginContrasenia", "window.onload = function(){ alert(' el email o La contraseña  es incorrecta.'); };", true);
             }
+
+
+
+            //clUsuarioE objEmpleadoE = new clUsuarioE();
+            //objEmpleadoE.emailCliente = txtEmail.Text;
+      
+            if (result != null)
+            {
+
+
+                ClientScript.RegisterStartupScript(
+                       this.GetType(),
+                       Guid.NewGuid().ToString(),
+
+
+                       string.Format("alert('{0}');", "# Se envio a tu correo una contraseña nueva para iniciar sesión"),
+                       true
+                   );
+
+
+                //ScriptManager.RegisterClientScriptBlock(this.Page, this.GetType(), "AlertaLoginContrasenia", "window.onload = function(){ alert('se envio su contrasena a su correo .'); };", true);
+                Response.Redirect("index.aspx");
+
+            }
+            else
+            {
+                ClientScript.RegisterStartupScript(
+                       this.GetType(),
+                       Guid.NewGuid().ToString(),
+                       string.Format("alert('{0}');", "#El correo no  fue enccontrado "),
+                       true
+                   );
+            }
+
         }
     }
 
