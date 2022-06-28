@@ -35,7 +35,7 @@ namespace ManageYourBussines.Datos
 
                 clConexion objConexion1 = new clConexion();
                 int resutado1 = objConexion1.mtdConectado(sql);
-                string estado = "proceso1";
+                string estado = "proceso";
 
                 sql = "Update tareas set estado='" + estado + "' where idTareas="+objdatosmat.idTareas+"";
                 clConexion objConexion2 = new clConexion();
@@ -44,7 +44,18 @@ namespace ManageYourBussines.Datos
 
             }
             return resutado;
+           
 
         }
+
+        public int mtdListarter(clTareaEpleE objdatosmat)
+        {
+             string sql = "Update tareas set estado='terminado' where idTareas=" + objdatosmat.idTareas + "";
+
+            clConexion objConexion = new clConexion();
+            int resutado = objConexion.mtdConectado(sql);
+            return resutado;
+        }
+
     }
 }

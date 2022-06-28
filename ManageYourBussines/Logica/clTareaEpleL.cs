@@ -18,6 +18,14 @@ namespace ManageYourBussines.Logica
             return filas;
         }
 
+        public int mtdlistarter(clTareaEpleE objter)
+        {
+            clTareaEpleD objmatD = new clTareaEpleD();
+            List<clTareaEpleE> listaClientes = new List<clTareaEpleE>();
+
+            int filas = objmatD.mtdListarter(objter);
+            return filas;
+        }
 
     }
 }

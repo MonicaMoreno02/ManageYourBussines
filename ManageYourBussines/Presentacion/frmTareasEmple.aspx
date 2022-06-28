@@ -11,7 +11,19 @@
              <asp:ButtonField ButtonType="Button" CommandName="aceptar" Text="aceptar tareas" />
          </Columns>
      </asp:GridView>
-    <asp:GridView ID="gvprogreso" runat="server"></asp:GridView>
+    <asp:GridView ID="gvprogreso" runat="server" OnRowCommand="gvprogreso_RowCommand" AutoGenerateColumns="False">
+        <Columns>
+             <asp:BoundField DataField="idEmpleado" HeaderText="idEmpleado" />
+                           <asp:BoundField DataField="idTareas" HeaderText="idTareas" />
+                           <asp:BoundField DataField="nombreTarea" HeaderText="nombreTarea" />
+                           <asp:BoundField DataField="descripcionTarea" HeaderText="descripcionTarea" />
+                           <asp:BoundField DataField="estado" HeaderText="estado" />
+                            <asp:BoundField DataField="fechaInicio" HeaderText="fechaInicio" />
+                             <asp:BoundField DataField="fechaTerminacion" HeaderText="fechaTerminacion" />
+            <asp:ButtonField ButtonType="Button" CommandName="terminar" Text="tarea terminada" />
+
+        </Columns>
+    </asp:GridView>
 
 
     <asp:GridView ID="gvmateriales" runat="server" AutoGenerateColumns="False" OnRowCommand="gvmateriales_RowCommand">

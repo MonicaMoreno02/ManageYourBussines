@@ -12,7 +12,7 @@ namespace ManageYourBussines.Datos
     {
         public List<clTareasE> mtdListaD(clTareasE objid)
         {
-            string sql = "select * from tareas";
+            string sql = "select * from tareas where estado = 'pendiente' ";
             clConexion objConexion = new clConexion();
             DataTable tblTareas = new DataTable();
             tblTareas = objConexion.mtdDesconectado(sql);

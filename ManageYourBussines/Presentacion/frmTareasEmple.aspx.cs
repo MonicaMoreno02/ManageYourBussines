@@ -21,7 +21,6 @@ namespace ManageYourBussines.Presentacion
             tareasL objtareaL = new tareasL();
             DataTable tareas = new DataTable();
             List<clTareasE> listartarea = new List<clTareasE>();
-            //Session["objeto"] = objCarritoL.mtdListcar();
             listartarea = objtareaL.mtdList(objTarea);
 
 
@@ -40,7 +39,7 @@ namespace ManageYourBussines.Presentacion
                 string valor = gvtareas.Rows[lista].Cells[1].Text;
                 int cantidades = int.Parse(valor);
                 lbidtarea.Text = valor.ToString();
-                lbpocicion.Text=lista.ToString();
+                lbpocicion.Text = lista.ToString();
 
 
                 clMaterialesL objmateriales = new clMaterialesL();
@@ -279,7 +278,7 @@ namespace ManageYourBussines.Presentacion
                 string valor2 = gvmateriales.Rows[i].Cells[3].Text;
                 float precio = float.Parse(valor2);
                 int num = 0;
-;                float tot = precio * cantidad;
+                ; float tot = precio * cantidad;
                 if (cantidad > 0)
                 {
                     num = num + 1;
@@ -291,9 +290,9 @@ namespace ManageYourBussines.Presentacion
                     objmat.idEmpleado = idemple;
                     objmat.pos = pos;
                     objmat.num = num;
-                    
 
-                    clTareaEpleL objmeterial=new clTareaEpleL();
+
+                    clTareaEpleL objmeterial = new clTareaEpleL();
                     int filas = objmeterial.mtdlistarmat(objmat);
 
                     if (filas > 0)
@@ -302,7 +301,7 @@ namespace ManageYourBussines.Presentacion
                         ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('la tare seasigno correctamente ');", true);
 
 
-                     
+
                         clTareasE objTarea = new clTareasE();
                         objTarea.idTareas = idemple;
 
@@ -349,7 +348,7 @@ namespace ManageYourBussines.Presentacion
         protected void btnprogreso_Click(object sender, EventArgs e)
         {
             int idemple = 1;
-            string progreso = "progreso";
+            string progreso = "proceso";
             estadoTareaE objTareas = new estadoTareaE();
             objTareas.idEmpleado = idemple;
             objTareas.estado = progreso;
@@ -360,8 +359,14 @@ namespace ManageYourBussines.Presentacion
             List<estadoTareaE> listartarea = new List<estadoTareaE>();
             //Session["objeto"] = objCarritoL.mtdListcar();
             listartarea = objtareaL.mtdList(objTareas);
-          gvprogreso.DataSource=listartarea;
+            gvprogreso.DataSource = listartarea;
             gvprogreso.DataBind();
+
+            gvtareas.DataSource = null;
+            gvtareas.DataBind();
+            gvmateriales.DataSource = null;
+            gvmateriales.DataBind();
+
         }
 
         protected void btnterminado_Click(object sender, EventArgs e)
@@ -380,6 +385,28 @@ namespace ManageYourBussines.Presentacion
             listartarea = objtareaL.mtdList(objTareas);
             gvprogreso.DataSource = listartarea;
             gvprogreso.DataBind();
+        }
+
+        protected void gvprogreso_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "terminar")
+            {
+
+                int lista = Convert.ToInt32(e.CommandArgument);
+                GridViewRow row = gvprogreso.Rows[lista];
+
+                string valor = gvprogreso.Rows[lista].Cells[1].Text;
+                int cantidades = int.Parse(valor);
+                lbidtarea.Text = valor.ToString();
+                lbpocicion.Text = lista.ToString();
+
+                clTareaEpleE objter = new clTareaEpleE();
+                objter.idTareas = cantidades;
+             
+                clTareaEpleL objmeterial = new clTareaEpleL();
+                int filas = objmeterial.mtdlistarter(objter);
+
+            }
         }
     }
 }
