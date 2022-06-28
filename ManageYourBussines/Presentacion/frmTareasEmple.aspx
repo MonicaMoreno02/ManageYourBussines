@@ -38,7 +38,18 @@
               </Columns>
     </asp:GridView>
 
-   
+    <asp:GridView ID="gvterminar" runat="server">
+         <Columns>
+             <asp:BoundField DataField="idEmpleado" HeaderText="idEmpleado" />
+                           <asp:BoundField DataField="idTareas" HeaderText="idTareas" />
+                           <asp:BoundField DataField="nombreTarea" HeaderText="nombreTarea" />
+                           <asp:BoundField DataField="descripcionTarea" HeaderText="descripcionTarea" />
+                           <asp:BoundField DataField="estado" HeaderText="estado" />
+                            <asp:BoundField DataField="fechaInicio" HeaderText="fechaInicio" />
+                             <asp:BoundField DataField="fechaTerminacion" HeaderText="fechaTerminacion" />
+            
+        </Columns>
+    </asp:GridView>
          
        
       <asp:Label ID="lbidtarea" runat="server" Text="Label"></asp:Label>

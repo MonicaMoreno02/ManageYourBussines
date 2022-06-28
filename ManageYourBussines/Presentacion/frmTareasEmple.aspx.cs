@@ -26,6 +26,10 @@ namespace ManageYourBussines.Presentacion
 
             gvtareas.DataSource = listartarea;
             gvtareas.DataBind();
+            gvterminar.DataSource = null;
+            gvterminar.DataBind();
+            gvprogreso.DataSource = null;
+            gvprogreso.DataBind();
         }
 
         protected void gvtareas_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -249,7 +253,7 @@ namespace ManageYourBussines.Presentacion
                 }
                 gvmateriales.DataSource = material;
                 gvmateriales.DataBind();
-
+               
 
 
             }
@@ -342,7 +346,10 @@ namespace ManageYourBussines.Presentacion
 
             gvtareas.DataSource = listartarea;
             gvtareas.DataBind();
-
+            gvterminar.DataSource = null;
+            gvterminar.DataBind();
+            gvprogreso.DataSource = null;
+            gvprogreso.DataBind();
         }
 
         protected void btnprogreso_Click(object sender, EventArgs e)
@@ -366,6 +373,8 @@ namespace ManageYourBussines.Presentacion
             gvtareas.DataBind();
             gvmateriales.DataSource = null;
             gvmateriales.DataBind();
+            gvterminar.DataSource = null;
+            gvterminar.DataBind();
 
         }
 
@@ -383,8 +392,14 @@ namespace ManageYourBussines.Presentacion
             List<estadoTareaE> listartarea = new List<estadoTareaE>();
             //Session["objeto"] = objCarritoL.mtdListcar();
             listartarea = objtareaL.mtdList(objTareas);
-            gvprogreso.DataSource = listartarea;
-            gvprogreso.DataBind();
+            gvterminar.DataSource = listartarea;
+            gvterminar.DataBind();
+            gvtareas.DataSource = null;
+            gvtareas.DataBind();
+            gvmateriales.DataSource = null;
+            gvmateriales.DataBind();
+          
+
         }
 
         protected void gvprogreso_RowCommand(object sender, GridViewCommandEventArgs e)
