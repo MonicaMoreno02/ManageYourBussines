@@ -8,12 +8,12 @@
             <asp:Button ID="btnpendiente" runat="server" OnClick="btnpendiente_Click" Text="pendiente" />
             <asp:Button ID="btnprogreso" runat="server" OnClick="btnprogreso_Click" Text="progreso" />
             <asp:Button ID="btnterminado" runat="server" OnClick="btnterminado_Click" Text="terminado" />
-            <asp:GridView ID="gvtareas" runat="server" OnRowCommand="gvtareas_RowCommand">
+            <asp:GridView ID="gvtareas" runat="server" OnRowCommand="gvtareas_RowCommand" class="table table-bordered">
                 <Columns>
                     <asp:ButtonField ButtonType="Button" CommandName="aceptar" Text="aceptar tareas" />
                 </Columns>
             </asp:GridView>
-            <asp:GridView ID="gvprogreso" runat="server" AutoGenerateColumns="False" OnRowCommand="gvprogreso_RowCommand">
+            <asp:GridView ID="gvprogreso" runat="server" AutoGenerateColumns="False" OnRowCommand="gvprogreso_RowCommand" class="table table-bordered">
                 <Columns>
                     <asp:BoundField DataField="idEmpleado" HeaderText="idEmpleado" />
                     <asp:BoundField DataField="idTareas" HeaderText="idTareas" />
@@ -25,7 +25,7 @@
                     <asp:ButtonField ButtonType="Button" CommandName="terminar" Text="tarea terminada" />
                 </Columns>
             </asp:GridView>
-            <asp:GridView ID="gvmateriales" runat="server" AutoGenerateColumns="False" OnRowCommand="gvmateriales_RowCommand">
+            <asp:GridView ID="gvmateriales" runat="server" AutoGenerateColumns="False" OnRowCommand="gvmateriales_RowCommand" Width="429px" class="table table-bordered" >
                 <Columns>
                     <asp:BoundField DataField="#" HeaderText="#" />
                     <asp:BoundField DataField="id" HeaderText="id" />
@@ -36,7 +36,7 @@
                     <asp:ButtonField ButtonType="Button" CommandName="restar" Text="-" />
                 </Columns>
             </asp:GridView>
-            <asp:GridView ID="gvterminar" runat="server">
+            <asp:GridView ID="gvterminar" runat="server" class="table table-bordered">
                 <Columns>
                     <asp:BoundField DataField="idEmpleado" HeaderText="idEmpleado" />
                     <asp:BoundField DataField="idTareas" HeaderText="idTareas" />
