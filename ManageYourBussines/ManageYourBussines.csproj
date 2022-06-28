@@ -151,6 +151,7 @@
     <Content Include="Presentacion\recursos\css\stylebuttons.css" />
     <Content Include="Presentacion\recursos\css\StylebuttonsE.css" />
     <Content Include="Presentacion\recursos\images\about-img.png" />
+    <Content Include="Presentacion\recursos\images\Agregarver.png" />
     <Content Include="Presentacion\recursos\images\anadir-al-carrito %281%29.png" />
     <Content Include="Presentacion\recursos\images\atrasblanco.png" />
     <Content Include="Presentacion\recursos\images\atrasE.png" />
