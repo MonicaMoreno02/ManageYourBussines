@@ -11,7 +11,7 @@
              <asp:ButtonField ButtonType="Button" CommandName="aceptar" Text="aceptar tareas" />
          </Columns>
      </asp:GridView>
-    <asp:GridView ID="gvprogreso" runat="server" OnRowCommand="gvprogreso_RowCommand" AutoGenerateColumns="False">
+    <asp:GridView ID="gvprogreso" runat="server" AutoGenerateColumns="False" OnRowCommand="gvprogreso_RowCommand" >
         <Columns>
              <asp:BoundField DataField="idEmpleado" HeaderText="idEmpleado" />
                            <asp:BoundField DataField="idTareas" HeaderText="idTareas" />

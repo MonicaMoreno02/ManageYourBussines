@@ -26,10 +26,7 @@ namespace ManageYourBussines.Presentacion
 
             gvtareas.DataSource = listartarea;
             gvtareas.DataBind();
-            gvterminar.DataSource = null;
-            gvterminar.DataBind();
-            gvprogreso.DataSource = null;
-            gvprogreso.DataBind();
+         
         }
 
         protected void gvtareas_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -404,24 +401,20 @@ namespace ManageYourBussines.Presentacion
 
         protected void gvprogreso_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            if (e.CommandName == "terminar")
-            {
 
-                int lista = Convert.ToInt32(e.CommandArgument);
-                GridViewRow row = gvprogreso.Rows[lista];
+            int lista = Convert.ToInt32(e.CommandArgument);
+            GridViewRow row = gvprogreso.Rows[lista];
 
-                string valor = gvprogreso.Rows[lista].Cells[1].Text;
-                int cantidades = int.Parse(valor);
-                lbidtarea.Text = valor.ToString();
-                lbpocicion.Text = lista.ToString();
+            string valor = gvprogreso.Rows[lista].Cells[1].Text;
+            int cantidades = int.Parse(valor);
+            lbidtarea.Text = valor.ToString();
+            lbpocicion.Text = lista.ToString();
 
-                clTareaEpleE objter = new clTareaEpleE();
-                objter.idTareas = cantidades;
-             
-                clTareaEpleL objmeterial = new clTareaEpleL();
-                int filas = objmeterial.mtdlistarter(objter);
+            clTareaEpleE objter = new clTareaEpleE();
+            objter.idTareas = cantidades;
 
-            }
+            clTareaEpleL objmeterial = new clTareaEpleL();
+            int filas = objmeterial.mtdlistarter(objter);
         }
     }
 }
