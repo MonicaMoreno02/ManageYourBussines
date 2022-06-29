@@ -103,27 +103,19 @@ namespace ManageYourBussines.Datos
             return listarBal;
         }
 
-        public List<clBalanceE> mtdlistargraficos1()
+        public DataTable mtdlistargraficos()
         {
 
-            string sql = "select producto.nombreproducto, detallesVenta.cantidad from producto inner join detallesVenta on producto.idProducto = detallesVenta.idProducto";
+            //string sql = "select producto.nombreproducto, detallesVenta.cantidad from producto inner join detallesVenta on producto.idProducto = detallesVenta.idProducto";
+            string sql = "select * from producto";
             clConexion objConexion = new clConexion();
-            DataTable tblGraficas = new DataTable();
-            tblGraficas = objConexion.mtdDesconectado(sql);
 
-            List<clBalanceE> listarGraficos = new List<clBalanceE>();
+            DataTable tblGraficos = new DataTable();
+            tblGraficos = objConexion.mtdDesconectado(sql);
 
-            int catnReg = tblGraficas.Rows.Count;
+            int catnReg = tblGraficos.Rows.Count;
 
-            for (int i = 0; i < catnReg; i++)
-            {
-                clBalanceE objbalance = new clBalanceE();
-                objbalance.idProducto = int.Parse(tblGraficas.Rows[i]["idProducto"].ToString());
-                objbalance.cantidad = int.Parse(tblGraficas.Rows[i]["cantidad"].ToString());
-
-                listarGraficos.Add(objbalance);
-            }
-            return listarGraficos;
+            return tblGraficos;
 
         }
     }

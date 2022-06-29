@@ -2,6 +2,7 @@
 using ManageYourBussines.Entidades;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 
@@ -35,12 +36,12 @@ namespace ManageYourBussines.Logica
 
         }
 
-        public List<clBalanceE> mtdListarGraficasL()
+        public DataTable mtdListarGraficasL()
         {
             clBalanceD objBalanceD = new clBalanceD();
-            List<clBalanceE> listaGraficas = new List<clBalanceE>();
-            listaGraficas = objBalanceD.mtdlistargraficos1();
-            return listaGraficas;
+            DataTable DatosG = new DataTable();
+            DatosG = objBalanceD.mtdlistargraficos();
+            return DatosG;
         }
 
 

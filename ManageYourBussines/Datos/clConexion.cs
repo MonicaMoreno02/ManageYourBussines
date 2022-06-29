@@ -9,32 +9,33 @@ namespace ManageYourBussines.Datos
 {
     public class clConexion
     {
-       
-        
-            SqlConnection conexion = null;
-            public clConexion()
-            {
 
-                conexion = new SqlConnection("Data Source=DESKTOP-N6FH313\\SQLEXPRESS;Initial Catalog=dbManage;Integrated Security=True");
-                conexion.Open();
-            }
 
-            public DataTable mtdDesconectado(string sql)//select
-            {
-                SqlDataAdapter adaptador = new SqlDataAdapter(sql, conexion);
-                DataTable tblDatos = new DataTable();
-                     adaptador.Fill(tblDatos);
-                conexion.Close();
-                return tblDatos;
-            }
+        SqlConnection conexion = null;
+        public clConexion()
+        {
 
-            public int mtdConectado(string sql)//Insert,Update,Delete
-            {
-                SqlCommand comando = new SqlCommand(sql, conexion);
-                int filasAfectadas = comando.ExecuteNonQuery();
-                conexion.Close();
-                return filasAfectadas;
-            }
-        
+            conexion = new SqlConnection("Data Source=DESKTOP-N6FH313\\SQLEXPRESS;Initial Catalog=dbManage;Integrated Security=True");
+            conexion.Open();
+        }
+
+        public DataTable mtdDesconectado(string sql)//select
+        {
+            SqlDataAdapter adaptador = new SqlDataAdapter(sql, conexion);
+            DataTable tblDatos = new DataTable();
+            adaptador.Fill(tblDatos);
+            conexion.Close();
+
+            return tblDatos;
+        }
+
+        public int mtdConectado(string sql)//Insert,Update,Delete
+        {
+            SqlCommand comando = new SqlCommand(sql, conexion);
+            int filasAfectadas = comando.ExecuteNonQuery();
+            conexion.Close();
+            return filasAfectadas;
+        }
+
     }
 }
