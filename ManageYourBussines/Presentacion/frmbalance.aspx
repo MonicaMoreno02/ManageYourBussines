@@ -25,7 +25,7 @@
         <link rel="stylesheet" type="text/css" media="screen" href="vista/css/main.css" />
         <script src="vista/js/main.js"></script>
 
-         <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
             <div class="container-fluid">
                 <img src="recursos/images/icono3.png" widt="20" height="20" />
                 <a class="navbar-brand">Muebles San José</a>
@@ -82,6 +82,10 @@
             </div>
 
 
+            <asp:ImageButton ID="btnEstadisticas" runat="server" ImageUrl="recursos/images/estadisticas.png" OnClick="btnEstadisticas_Click" Height="47px" Width="48px" />
+            <br />
+            <asp:Label ID="Label3" runat="server" Text="Ver aqui estadisticas"></asp:Label>
+
             <asp:UpdatePanel ID="UpdatePanel2" runat="server">
                 <ContentTemplate>
                     <div class="col-md-5">
@@ -96,10 +100,8 @@
 
         </div>
 
-        <asp:ImageButton ID="btnEstadisticas" runat="server" ImageUrl="recursos/images/estadisticas.png" OnClick="btnEstadisticas_Click" Height="47px" Width="48px"/>
-        <br />
-        <asp:Label ID="Label3" runat="server" Text="Ver aqui estadisticas"></asp:Label>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
+
 
 
 

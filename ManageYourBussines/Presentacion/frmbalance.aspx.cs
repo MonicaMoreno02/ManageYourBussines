@@ -462,7 +462,7 @@ namespace ManageYourBussines.Presentacion
 
         protected void btnEstadisticas_Click(object sender, ImageClickEventArgs e)
         {
-            Response.Redirect("frmEstadisticas.aspx");
+            Response.Redirect("frmEstadisticasG.aspx");
         }
     }
 }
