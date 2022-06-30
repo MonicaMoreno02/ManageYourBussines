@@ -13,5 +13,20 @@ namespace ManageYourBussines.Presentacion
         {
 
         }
+
+        protected void btnHome_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("frmHome.aspx");
+        }
+
+        protected void btnProductos_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("frmdetalles.aspx");
+        }
+
+        protected void btnContactenos_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("About.aspx");
+        }
     }
 }

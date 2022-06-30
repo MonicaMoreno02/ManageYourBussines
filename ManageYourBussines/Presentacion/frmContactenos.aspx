@@ -29,37 +29,76 @@
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 
     </head>
-    	 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <div class="container-fluid">
-    <img src="recursos/images/icono3.png" widt="20" height="20"/>
-    <a class="navbar-brand" href="#">Muebles San José</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="frmHome.aspx">Home</a>
-        </li>
-          <li class="nav-item">
-          <a class="nav-link" href="About.aspx">Sobre Nosotros</a>
-        </li>
-          <li class="nav-item">
-          <a class="nav-link" href="frmdetalles.aspx">Productos</a>
-        </li>
-      </ul>
-    </div>
+    	<header class="top">
+                  <div class="fixedArea">
+					<div class="row">
+						<div class="col-md-12 col-sm-12 col-xs-12 noPadding">
+                            <div class="content-wrapper one">
+                                <!-- Main Menu Start -->
+                                <!-- Navbar-->
+                                <header class="header">
+                                    <nav class="navbar navbar-default myNavBar">
+                                        <div class="container">
+
+                                            <!-- Brand and toggle get grouped for better mobile display -->
+                                            <div class="navbar-header">
+                                                <div class="row">
+                                                    <div class="col-md-9 col-sm-9 col-xs-9">
+                                                        <div class="row">
+                                                            <div class="col-md-3 col-xs-3 col-sm-3">
+                                                                <a style="padding-top:0px;" class="navbar-brand navBrandText text-uppercase font-weight-bold" href="index.html"><img src="recursos/images/iconoSofa.png" alt="restorant" widt="50" height="50" /></a>
+                                                                
+                                                            </div>
+                                                            <div class="col-md-9 col-sm-9 col-xs-9">
+                                                               <a class="navbar-brand" href="#">Muebles San José</a>
+                                                                
+                                                            </div>
+                                                        </div>
+
+
+                                                    </div>
+                                                    <div class="col-md-3 col-sm-3 col-xs-3">
+                                                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                                            <span class="sr-only">Toggle navigation</span>
+                                                            <span class="icon-bar"></span>
+                                                            <span class="icon-bar"></span>
+                                                            <span class="icon-bar"></span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                                     
+                                        <div class="btn-group">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Menú
+  </button>
+  <div class="dropdown-menu dropdown-menu-right">
+      <asp:Button ID="btnHome" runat="server" CssClass="dropdown-item-text" Text="Home" OnClick="btnHome_Click" />
+      <asp:Button ID="btnProductos" runat="server" CssClass="dropdown-item-text" Text="Productos" OnClick="btnProductos_Click" />
+      <asp:Button ID="btnContactenos" runat="server" CssClass="dropdown-item-text" Text="Sobre Nosotros" OnClick="btnContactenos_Click" />
+    
   </div>
-</nav>
-     
+</div>
+                                </header>
+                                <!-- Main Menu End -->
+                            </div>
+						</div>
+                  </div>
+			</div>
+		</header>
+    <body>
  <section id="section2">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12 ">
                         <div class="maintext text-center">
                             
-                            <h2>Encuentranos...</h2>                  
+                            <h2>ENCUÉNTRANOS...</h2>                  
+                            </div>  
+                    </div>
                 </div>
+       
                         
                 <div class="row shapes">
                     <div class="col-md-6 col-sm-6 col-xs-12">
@@ -126,7 +165,7 @@
                     </div>
                
             </div>
-
+</section>
        
           <section id="section7" class="row address parallax-window" data-parallax="scroll" data-image-src="../recursos/images/fondo5.jpeg" />
             <div class="col-md-12">
