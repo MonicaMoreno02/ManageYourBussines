@@ -10,7 +10,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using static ManageYourBussines.Datos.ClConexion;
+using static ManageYourBussines.Datos.clConexion;
 
 namespace ManageYourBussines
 {
@@ -22,7 +22,7 @@ namespace ManageYourBussines
             if (!IsPostBack)
             {
                 clProductoL objProductoL = new clProductoL();
-                Repeater2.DataSource = objProductoL.mtdListarProducto();
+                Repeater2.DataSource = objProductoL.mtdListarPro();
                 Repeater2.DataBind();
             }
 
@@ -31,13 +31,13 @@ namespace ManageYourBussines
 
         }
 
-      
+     
 
         protected void btnIngresar_Click(object sender, EventArgs e)
         {
             clUsuarioE objDatos = new clUsuarioE();
-            objDatos.email = txtEmail.Text;
-            objDatos.clave = txtClave.Text;
+            objDatos.emailCliente = txtEmail.Text;
+            objDatos.claveCliente = txtClave.Text;
 
             clUsuarioL objUsuariosL = new clUsuarioL();
             clUsuarioE objDatosClien = new clUsuarioE();

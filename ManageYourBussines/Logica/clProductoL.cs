@@ -12,11 +12,19 @@ namespace ManageYourBussines.Logica
      /// 
      /// </summary>
      /// <returns></returns>
+     /// 
+        public List<clProductoE> mtdListarPro()
+        {
+            clProductoD objProductoD = new clProductoD();
+            List<clProductoE> objProducto = new List<clProductoE>();
+            objProducto = objProductoD.mtdListar();
+            return objProducto;
+        }
         public List<clProductoE> mtdListarP()
         {
             clProductoD objProducto = new clProductoD();
             List<clProductoE> objProductoD = new List<clProductoE>();
-            objProductoD = objProducto.mtdListar();
+            objProductoD = objProducto.mtdListarProductos();
             return objProductoD;
 
         }
@@ -42,5 +50,33 @@ namespace ManageYourBussines.Logica
             return lista;
 
         }
+        //Metodo para recibir objeto de datos y enviarlo a Datos Cristian Salcedo
+        public int mtdAgregar(clProductoE objDatosProducto)
+        {
+            clProductoD objDatosD = new clProductoD();
+            int resultado = objDatosD.mtdAgregarD(objDatosProducto);
+            return resultado;
+
+        }
+        //Metodo para recibir un parametro a eliminar y enviarlo a datos Cristian Salcedo
+
+        public int mtdEliminar(int idProductos)
+        {
+            clProductoD objDatosD = new clProductoD();
+            int resultado = objDatosD.mtdEliminarD(idProductos);
+            return resultado;
+
+        }
+
+
+        //Metodo para recibir objeto de datos a editar y enviarlo a datos Cristian Salcedo
+        public int mtdEditar(clProductoE objDatosE)
+        {
+            clProductoD objDatosD = new clProductoD();
+            int resultado = objDatosD.mtdEditarD(objDatosE);
+            return resultado;
+
+        }
+
     }
 }

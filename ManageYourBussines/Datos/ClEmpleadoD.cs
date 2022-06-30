@@ -4,18 +4,59 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Web;
-using static ManageYourBussines.Datos.ClConexion;
+using static ManageYourBussines.Datos.clConexion;
 
 namespace ManageYourBussines.Datos
 {
     public class clEmpleadoD
     {
+        //metodo de login  del empleado
+        public clEmpleadoE mtdLogin(clEmpleadoE objDatos)
+        {
 
-        public List<clEmpleadoE> mtdListarEmpleadoD()
+            string consulta = "select * from  empleado  where email='" + objDatos.email+ "' and clave='" + objDatos.clave + "'";
+            clConexion objConexion = new clConexion();
+            DataTable tblDatos = new DataTable();
+            tblDatos = objConexion.mtdDesconectado(consulta);
+            clEmpleadoE objDatosEmple = new clEmpleadoE();
+
+            if (tblDatos.Rows.Count == 1)
+            {
+
+
+
+                if (tblDatos.Rows[0][4].ToString() == "Vendedor")
+                {
+                    objDatosEmple.idEmpleado = int.Parse(tblDatos.Rows[0]["idEmpleado"].ToString());
+                    objDatosEmple.documento = tblDatos.Rows[0]["documentoE"].ToString();
+                    objDatosEmple.nombreEmpleado = tblDatos.Rows[0]["nombreEmpleado"].ToString();
+                    objDatosEmple.apellidos = tblDatos.Rows[0]["apellidosEmple"].ToString();
+                    objDatosEmple.tipoEmpleado = tblDatos.Rows[0]["tipoEmpleado"].ToString();
+
+                    objDatosEmple.email = tblDatos.Rows[0]["email"].ToString();
+                    objDatosEmple.clave = tblDatos.Rows[0]["clave"].ToString();
+
+                }
+
+            }
+            else
+            {
+                objDatosEmple = null;
+
+            }
+            return objDatosEmple;
+        }
+
+    
+
+
+
+
+    public List<clEmpleadoE> mtdListarEmpleadoD()
         {
          
             string sql = "select * from empleado";
-            clConexion objConexion = new clConexion();
+            clConexion objConexion = new clConexion ();
             DataTable tblEmpleados = new DataTable();
             tblEmpleados = objConexion.mtdDesconectado(sql);
 
@@ -97,7 +138,7 @@ namespace ManageYourBussines.Datos
                 objSeguridad.porcentajePension = float.Parse(tblSeguridad.Rows[i]["porcentajePension"].ToString());
                 objSeguridad.porcentajeSalud = float.Parse(tblSeguridad.Rows[i]["porcentajeSalud"].ToString());
                 objSeguridad.smlv = float.Parse(tblSeguridad.Rows[i]["smlv"].ToString());
-                objSeguridad.año = int.Parse(tblSeguridad.Rows[i]["año"].ToString());
+                objSeguridad.fecha = DateTime.Parse(tblSeguridad.Rows[i]["fecha"].ToString());
                 
 
                 ListaSeguridad.Add(objSeguridad);

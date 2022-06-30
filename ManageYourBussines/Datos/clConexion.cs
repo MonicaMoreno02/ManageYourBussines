@@ -7,10 +7,10 @@ using System.Web;
 
 namespace ManageYourBussines.Datos
 {
-    public class ClConexion
+    public class clConexion
     {
-        public class clConexion
-        {
+       
+        
             SqlConnection conexion = null;
             public clConexion()
             {
@@ -35,6 +35,6 @@ namespace ManageYourBussines.Datos
                 conexion.Close();
                 return filasAfectadas;
             }
-        }
+        
     }
 }

@@ -72,13 +72,7 @@
                             <li class="nav-item active">
                                 <a class="nav-link" href="index.aspx">Home <span class="sr-only">(current)</span></a>
                             </li>
-                           <%-- <li class="nav-item">
-                                <a class="nav-link" href="menu.html">Productos</a>
-                            </li>--%>
-                           <%-- <li class="nav-item">
-                                <a class="nav-link" href="about.html">Sobre Nosotros</a>
-                            </li>--%>
-
+                         
 
                              <div class="container mt-">
 
@@ -129,10 +123,10 @@
                                                     </div>
                                                 </div>
                                                 <center>
-                                                    <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" CssClass="btn btn-success" onClick="btnIngresar_Click" /></center>
+                                                    <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" CssClass="btn btn-dark" onClick="btnIngresar_Click" /></center>
                                                 <br />
                                                 <center>
-                                                    <asp:Button ID="btnRecuperar" runat="server" Text="Recuperar Contraseña" CssClass="btn btn-success" onClick="btnRecuperar_Click" />
+                                                    <asp:Button ID="btnRecuperar" runat="server" Text="Recuperar Contraseña" CssClass="btn btn-dark" onClick="btnRecuperar_Click" />
                                          
 
 
@@ -140,7 +134,7 @@
 
                                         <!-- Modal footer --->
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                                         </div>
 
                                     </div>
@@ -153,6 +147,9 @@
           <a class="nav-link" href="Presentacion/frmRegistrar.aspx">Registrarse</a>
       </li>
 
+                                                        <li class="nav-item">
+          <a class="nav-link" href="loginEmpleado.aspx">Ingresar empleado</a>
+      </li>
                 
                         </ul>
                         <div class="user_option">
@@ -465,7 +462,7 @@
 			<div class="ItemSubMenu">
                  <asp:Label ID="LabelDato" runat="server" Visible="false" Text='<%#Eval("idProducto")%>'> </asp:Label>
 				<asp:Literal ID="Imagen" runat="server" /><img src="<%#Eval("imagen") %>" width="200" height="200" /></td></tr><br>
-                <asp:Literal ID="nombre" runat="server" /> <%#Eval("nombre") %><br>
+                <asp:Literal ID="nombreProducto" runat="server" /> <%#Eval("nombreProducto") %><br>
                 <asp:Literal ID="precio" runat="server" />$ <%#Eval("precio") %><br>
                 <asp:Button ID="btnDetalles" runat="server" Text="Detalles:" CssClass="btn btn-success" Onclick="btnDetalles_Click"/>
                 

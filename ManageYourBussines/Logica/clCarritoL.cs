@@ -49,7 +49,7 @@ namespace ManageYourBussines.Presentacion
             carrito.Columns.Add(new DataColumn("idproducto", typeof(string)));
             carrito.Columns.Add(new DataColumn("idcliente", typeof(string)));
             carrito.Columns.Add(new DataColumn("imagen", typeof(string)));
-            carrito.Columns.Add(new DataColumn("nombre", typeof(string)));
+            carrito.Columns.Add(new DataColumn("nombreProducto", typeof(string)));
             carrito.Columns.Add(new DataColumn("describcion", typeof(string)));
             carrito.Columns.Add(new DataColumn("precio", typeof(float)));
             carrito.Columns.Add(new DataColumn("cantidad", typeof(int)));
@@ -70,7 +70,7 @@ namespace ManageYourBussines.Presentacion
                     int idproducto = listarProductos[i].idproducto;
                     int idcliente = listarProductos[i].idcliente;
                     string imagen = listarProductos[i].Imagen;
-                    string nombre = listarProductos[i].nombre;
+                    string nombreProducto = listarProductos[i].nombreProducto;
                     string describcion = listarProductos[i].describcion;
                     float precio = listarProductos[i].precio;
                     int cantidad = listarProductos[i].catidad;
@@ -83,7 +83,7 @@ namespace ManageYourBussines.Presentacion
                     row["idproducto"] = idproducto;
                     row["idcliente"] = idcliente;
                     row["imagen"] = imagen;
-                    row["nombre"] = nombre;
+                    row["nombreProducto"] = nombreProducto;
                     row["describcion"] = describcion;
                     row["precio"] = precio;
                     row["cantidad"] = cantidad;
@@ -98,7 +98,7 @@ namespace ManageYourBussines.Presentacion
                     DataRow row = carrito.NewRow();
                     row["#"] = i + 1;
                     row["imagen"] = "";
-                    row["nombre"] = "vtotal =";
+                    row["nombreProducto"] = "vtotal =";
                     row["describcion"] = "";
                     row["precio"] = 0;
                     row["cantidad"] = 0;

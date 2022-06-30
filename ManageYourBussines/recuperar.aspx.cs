@@ -21,7 +21,7 @@ namespace ManageYourBussines
         {
            
             clUsuarioE objEmpleadoE = new clUsuarioE();
-            objEmpleadoE.email = txtEmail.Text;
+            objEmpleadoE.emailCliente = txtEmail.Text;
             var user = new clUsuarioL();
             var result = user.recoverPassword(objEmpleadoE);
             if (result != null)

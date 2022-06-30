@@ -373,7 +373,7 @@ namespace ManageYourBussines.Presentacion
 
             string nombreArchivo = "reporte" + ahora;
          
-            workbook.Save("D:/reporte"+ahora+".xlsx");
+            workbook.Save("B:/reporte"+ahora+".xlsx");
             ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Archivo creado correctamente guardado en: D:/reporte"+ahora+".xlsx');", true);
 
         }

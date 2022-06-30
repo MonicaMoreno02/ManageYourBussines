@@ -57,7 +57,7 @@
 
 
         <!--PAOLA: tabla de Seguridad Social -->
-        <div class="card shadow mb-4">
+        <%--<div class="card shadow mb-4">
             <div class="card-body">
                 <div class="table-responsive">
                     <div class="fa-3x">
@@ -80,9 +80,9 @@
                     </table>
                 </div>
             </div>
-        </div>
-       
-         <!--PAOLA: tabla de Seguridad Social -->
+        </div>--%>
+
+        <!--PAOLA: tabla de Seguridad Social -->
 
         <%--PAOLA: modal para eliminar--%>
         <div class="modal fade" id="ModalEliminar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -106,9 +106,10 @@
                                 </div>
                             </div>
 
+                            <asp:Button ID="btnBorrar" runat="server" Text="Borrar" OnClick="btnBorrar_Click" />
 
                             <div class="modal-footer">
-                                <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" class="btn btn-danger" OnClick="btnEliminar_Click" />
+                                <%--                                <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" class="btn btn-danger" OnClick="btnEliminar_Click"/>--%>
                             </div>
                         </ContentTemplate>
                     </asp:UpdatePanel>
@@ -118,7 +119,7 @@
                     <ContentTemplate>
                     </ContentTemplate>
                     <Triggers>
-                        <asp:AsyncPostBackTrigger ControlID="btnEliminar" EventName="Click" />
+                        <asp:AsyncPostBackTrigger ControlID="btnBorrar" EventName="Click" />
                     </Triggers>
                 </asp:UpdatePanel>
 
@@ -315,7 +316,7 @@
 
 
     <script src="recursos/js/JavaEmpleados.js"></script>
-    <script src="recursos/js/JavaSeguridad.js"></script>
+
 
     <script src="recursos/js/jquery-3.4.1.min.js"></script>
 

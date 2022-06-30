@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Web;
-using static ManageYourBussines.Datos.ClConexion;
+using static ManageYourBussines.Datos.clConexion;
 
 namespace ManageYourBussines.Datos
 {
@@ -12,7 +12,7 @@ namespace ManageYourBussines.Datos
     {
         public clUsuarioE mtdLogin(clUsuarioE objDatos)
         {
-            string consulta = "select * from  cliente  where emailCliente='" + objDatos.email + "' and claveCliente='" + objDatos.clave + "'";
+            string consulta = "select * from  cliente  where emailCliente='" + objDatos.emailCliente + "' and claveCliente='" + objDatos.claveCliente + "'";
             clConexion objConexion = new clConexion();
             DataTable tblDatos = new DataTable();
             tblDatos = objConexion.mtdDesconectado(consulta);
@@ -26,8 +26,8 @@ namespace ManageYourBussines.Datos
                 objDatosCliente.telefono = tblDatos.Rows[0]["telefono"].ToString();
                 objDatosCliente.apellidos = tblDatos.Rows[0]["apellidosCliente"].ToString();
                 objDatosCliente.direccion = tblDatos.Rows[0]["direccion"].ToString();
-                objDatosCliente.email = tblDatos.Rows[0]["emailCliente"].ToString();
-                objDatosCliente.clave = tblDatos.Rows[0]["claveCliente"].ToString();
+                objDatosCliente.emailCliente = tblDatos.Rows[0]["emailCliente"].ToString();
+                objDatosCliente.claveCliente = tblDatos.Rows[0]["claveCliente"].ToString();
 
             }
             else
@@ -40,8 +40,8 @@ namespace ManageYourBussines.Datos
 
         public int mtdRegistrar(clUsuarioE objDatosCliente)
         {
-            string sql = "insert into cliente(documento,nombreCliente,apellidos,telefono,direccion,email,clave)" +
-                "values ('" + objDatosCliente.documento + "' ,'" + objDatosCliente.nombreCliente + "','" + objDatosCliente.apellidos + "','" + objDatosCliente.telefono + "','" + objDatosCliente.direccion + "','" + objDatosCliente.email + "' ,'" + objDatosCliente.clave + "')";
+            string sql = "insert into cliente(documento,nombreCliente,apellidos,telefono,direccion,emailCliente,claveCliente)" +
+                "values ('" + objDatosCliente.documento + "' ,'" + objDatosCliente.nombreCliente + "','" + objDatosCliente.apellidos + "','" + objDatosCliente.telefono + "','" + objDatosCliente.direccion + "','" + objDatosCliente.emailCliente + "' ,'" + objDatosCliente.claveCliente + "')";
 
             clConexion objConexion = new clConexion();
 

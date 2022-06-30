@@ -15,8 +15,8 @@ namespace ManageYourBussines.Presentacion
         protected void Page_Load(object sender, EventArgs e)
         {
             //PAOLA: vuelve invisible los txt
-              txtIDEmpleado.Attributes.Add("style", "DISPLAY:none");
-              txtIDEmpleadoB.Attributes.Add("style", "DISPLAY:none");
+              //txtIDEmpleado.Attributes.Add("style", "DISPLAY:none");
+              //txtIDEmpleadoB.Attributes.Add("style", "DISPLAY:none");
         }
 
 
@@ -32,17 +32,7 @@ namespace ManageYourBussines.Presentacion
             return listaEmpleados;
         }
 
-        //PAOLA:listar seguridad
-        [WebMethod]
-        public static List<clSeguridadE> mtdListarSeguridad()
-        {
-            clEmpleadoL objEmpleado = new clEmpleadoL();
-            List<clSeguridadE> listaSeguridad = new List<clSeguridadE>();
-
-            listaSeguridad = objEmpleado.mtdListarSeguridad();
-
-            return listaSeguridad;
-        }
+       
 
 
         //PAOLA:editar empleados
@@ -109,11 +99,13 @@ namespace ManageYourBussines.Presentacion
             
         }
 
-        //PAOLA:eliminar empleados
+        //protected void btnEliminar_Click(object sender, EventArgs e)
+        //{
+        //}
 
-        protected void btnEliminar_Click(object sender, EventArgs e)
+        protected void btnBorrar_Click(object sender, EventArgs e)
         {
-            
+
             int id = int.Parse(txtIDEmpleadoB.Text);
 
             clEmpleadoL objEmpleadoL = new clEmpleadoL();
@@ -129,11 +121,13 @@ namespace ManageYourBussines.Presentacion
                 ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Algo ha salido mal y no hemos eliminado tu registro :(');", true);
                 Response.Redirect("frmEmpleados.aspx");
             }
-
         }
+
+        //PAOLA:eliminar empleados
+
 
         //PAOLA: Listar seguridad social
 
-            
+
     }
 }

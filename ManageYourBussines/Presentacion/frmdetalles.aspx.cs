@@ -71,7 +71,7 @@ namespace ManageYourBussines.Presentacion
                     List<clProductoE> listar = new List<clProductoE>();
                     listar = objProductoL.mtdListarProd(objProducto);
 
-                    string nombre = listar[0].nombre;
+                    string nombre = listar[0].nombreProducto;
                     string describsion = listar[0].descripcion;
                     float precio = listar[0].precio;
                     int cantidadstock = listar[0].cantidadStock;
@@ -94,7 +94,7 @@ namespace ManageYourBussines.Presentacion
                     objcarrito.precio = precio;
                     objcarrito.cantidadstock = cantidadstock;
                     objcarrito.catidad = catidad;
-                    objcarrito.nombre = nombre;
+                    objcarrito.nombreProducto = nombre;
                     objcarrito.Imagen = Imagen;
 
                     clCarritoL objCarritoL = new clCarritoL();
@@ -120,7 +120,12 @@ namespace ManageYourBussines.Presentacion
                 ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('por favor inicie seccion');", true);
             }
         }
+
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("frmcarrito.aspx");
         }
+    }
 
         
 

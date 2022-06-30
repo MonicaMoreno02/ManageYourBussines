@@ -9,7 +9,8 @@ namespace ManageYourBussines.Entidades
     {
         public int idTareas { get; set; }
         public string nombreTarea { get; set; }
-        public string describciontarea { get; set; }
+        public string descripcionTarea { get; set; }
+        public string estado { get; set; }
         public int tiempo { get; set; }
         public  string estado { get; set; }
 

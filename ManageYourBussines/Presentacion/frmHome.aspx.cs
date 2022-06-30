@@ -49,10 +49,9 @@ namespace ManageYourBussines.Presentacion
             ///auto posbak
 
             clProductoL objProductoL = new clProductoL();
-            repeater2.DataSource = objProductoL.mtdListarP();
+            repeater2.DataSource = objProductoL.mtdListarPro();
             repeater2.DataBind();
            
-
 
         }
         public void Getcarrito(object sender, EventArgs e)
@@ -88,7 +87,7 @@ namespace ManageYourBussines.Presentacion
                 List<clProductoE> listar = new List<clProductoE>();
                 listar = objProductoL.mtdListarProd(objProducto);
 
-                string nombre = listar[0].nombre;
+                string nombre = listar[0].nombreProducto;
                 string describsion = listar[0].descripcion;
                 float precio = listar[0].precio;
                 int cantidadstock = listar[0].cantidadStock;
@@ -111,7 +110,7 @@ namespace ManageYourBussines.Presentacion
                 objcarrito.precio = precio;
                 objcarrito.cantidadstock = cantidadstock;
                 objcarrito.catidad = catidad;
-                objcarrito.nombre = nombre;
+                objcarrito.nombreProducto = nombre;
                 objcarrito.Imagen = Imagen;
 
                 clCarritoL objCarritoL = new clCarritoL();
@@ -158,9 +157,27 @@ namespace ManageYourBussines.Presentacion
             Response.Redirect("frmcarrito.aspx");
         }
 
+        //Boton que envia la sugerencia a Logica Cristian Salcedo
+        protected void btnEnviar_Click(object sender, EventArgs e)
+        {
 
+            clSugerenciasE objDatosS = new clSugerenciasE();
+            objDatosS.opinion = txtSugerencia.Text;
+            //objDatosS.idCliente = int.Parse(Session["idCliente"].ToString()); no se ha implementado por que se debe hacer merge con Paty 
+            objDatosS.idCliente = 1;
+            clSugerenciasL objDatosL = new clSugerenciasL();
+            int filas = objDatosL.mtdAgregar(objDatosS);
+            if (filas != 0)
+            {
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Gracias por compartir tu opinion con nosotros');", true);
 
+            }
+            else
+            {
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Algo ha salido mal y no hemos guardado tu opinion :(');", true);
 
+            }
+        }
     }
 
 }

@@ -33,6 +33,9 @@ namespace ManageYourBussines.Presentacion
         }
 
 
+      
+
+
         //PAOLA:listar datos de ventas de cada cliente
 
         protected void btnAceptar_Click(object sender, EventArgs e)
