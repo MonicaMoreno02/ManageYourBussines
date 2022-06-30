@@ -11,10 +11,10 @@ namespace ManageYourBussines.Datos
     public class clEmpleadoD
     {
         //metodo de login  del empleado
-        public clEmpleadoE mtdLogin(clEmpleadoE objDatos)
+        public clEmpleadoE mtdLoginE(clEmpleadoE objDatos)
         {
 
-            string consulta = "select * from  empleado  where email='" + objDatos.email+ "' and clave='" + objDatos.clave + "'";
+            string consulta = "select * from  empleado  where emailEmpleado='" + objDatos.email+ "' and claveEmpleado='" + objDatos.clave + "'";
             clConexion objConexion = new clConexion();
             DataTable tblDatos = new DataTable();
             tblDatos = objConexion.mtdDesconectado(consulta);
@@ -33,9 +33,9 @@ namespace ManageYourBussines.Datos
                     objDatosEmple.apellidos = tblDatos.Rows[0]["apellidosEmple"].ToString();
                     objDatosEmple.tipoEmpleado = tblDatos.Rows[0]["tipoEmpleado"].ToString();
 
-                    objDatosEmple.email = tblDatos.Rows[0]["email"].ToString();
-                    objDatosEmple.clave = tblDatos.Rows[0]["clave"].ToString();
-
+                    objDatosEmple.email = tblDatos.Rows[0]["emailEmpleado"].ToString();
+                    objDatosEmple.clave = tblDatos.Rows[0]["claveEmpleado"].ToString();
+                
                 }
 
             }
@@ -69,7 +69,7 @@ namespace ManageYourBussines.Datos
                 clEmpleadoE objEmpleado = new clEmpleadoE();
 
                 objEmpleado.idEmpleado = int.Parse(tblEmpleados.Rows[i]["idEmpleado"].ToString());
-                objEmpleado.documento = tblEmpleados.Rows[i]["documento"].ToString();
+                objEmpleado.documento = tblEmpleados.Rows[i]["documentoEmpleado"].ToString();
                 objEmpleado.nombreEmpleado = tblEmpleados.Rows[i]["nombreEmpleado"].ToString();
                 objEmpleado.apellidos = tblEmpleados.Rows[i]["apellidos"].ToString();
                 objEmpleado.tipoEmpleado = tblEmpleados.Rows[i]["TipoEmpleado"].ToString();
@@ -147,6 +147,6 @@ namespace ManageYourBussines.Datos
             return ListaSeguridad;
         }
 
-
+       
     }
 }
