@@ -107,7 +107,7 @@ namespace ManageYourBussines.Datos
         {
 
             //string sql = "select producto.nombreproducto, detallesVenta.cantidad from producto inner join detallesVenta on producto.idProducto = detallesVenta.idProducto";
-            string sql = "select * from producto";
+            string sql = "select * from cliente";
             clConexion objConexion = new clConexion();
 
             DataTable tblGraficos = new DataTable();

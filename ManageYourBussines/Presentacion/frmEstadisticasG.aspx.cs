@@ -15,26 +15,26 @@ namespace ManageYourBussines.Presentacion
         {
 
         }
-        protected string obtenerDatos()
+        protected void obtenerDatos()
         {
 
-            clBalanceL objDatos = new clBalanceL();
-            DataTable Datos = new DataTable();
+            //clBalanceL objDatos = new clBalanceL();
+            //DataTable Datos = new DataTable();
 
-            Datos = objDatos.mtdListarGraficasL();
-            string strDatos;
+            //Datos = objDatos.mtdListarGraficasL();
+            //string strDatos;
 
-            strDatos = "['Task','Hours'],";
+            //strDatos = "['Task','Hours'],";
 
-            foreach (DataRow dr in Datos.Rows)
-            {
-                strDatos = strDatos + "[";
-                strDatos = strDatos + "'" + dr[0] + "'" + "," + dr[1];
-                strDatos = strDatos + "],";
-            }
+            //foreach (DataRow dr in Datos.Rows)
+            //{
+            //    strDatos = strDatos + "[";
+            //    strDatos = strDatos + "'" + dr[0] + "'" + "," + dr[1];
+            //    strDatos = strDatos + "],";
+            //}
 
-            strDatos = strDatos + "]";
-            return strDatos;
+            //strDatos = strDatos + "]";
+            //return strDatos;
         }
     }
 }
