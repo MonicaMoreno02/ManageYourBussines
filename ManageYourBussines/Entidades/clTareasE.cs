@@ -12,7 +12,7 @@ namespace ManageYourBussines.Entidades
         public string descripcionTarea { get; set; }
         public string estado { get; set; }
         public int tiempo { get; set; }
-        public  string estado { get; set; }
+        
 
 
     }
