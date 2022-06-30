@@ -1,5 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="ManageYourBussines.index" %>
 
+<link href="recursos/css/style.css" rel="stylesheet" />
 
 <html>
 
@@ -74,7 +75,7 @@
                             </li>
                          
 
-                            <div class="container mt-3">
+                            <div class="container mt-">
 
 
 
@@ -84,7 +85,7 @@
 
            <li class="nav-item">
           <a class="nav-link"  data-bs-toggle="modal" data-bs-target="#myModal">
-              Iniciar Sesion </a>
+              Iniciar Sesión </a>
          </li>
       </div>
 
@@ -99,7 +100,7 @@
 
                   <!-- Modal Header -->
                   <div class="modal-header">
-                     <center><h4 class="modal-title">Iniciar Sesion </h4></center> 
+                     <center><h4 class="modal-title">Iniciar Sesión </h4></center> 
                       <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                   </div>
 
@@ -172,7 +173,7 @@
 
                           <br />
                           <center>
-                              <asp:Button ID="btnRecuperar" runat="server" Text="Recuperar Contraseña" onClick="btnRecuperar_Click1"/></center>
+                              <asp:Button ID="btnRecuperar" runat="server" Text="Recuperar Contraseña" cssclass="btn btn-outline-success" onClick="btnRecuperar_Click1"/></center>
 
 
                           <hr>
@@ -270,14 +271,12 @@
       </li>
 
                                                         <li class="nav-item">
-          <a class="nav-link" href="loginEmpleado.aspx">Ingresar empleado</a>
+          <a class="nav-link" href="loginEmpleado.aspx">Ingreso de empleado</a>
       </li>
                 
                         </ul>
                         <div class="user_option">
-                            <a href="" class="user_link">
-                                <i class="fa fa-user" aria-hidden="true"></i>
-                            </a>
+                           
                            <%-- <asp:ImageButton ID="ImageButton1" runat="server" />--%>
                           <%--  <a class="cart_link" href="#">
                                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background: new 0 0 456.029 456.029;" xml:space="preserve">--%>
@@ -572,36 +571,40 @@
 
     <!-- food section -->
 
-  <section class="food_section layout_padding-bottom">
-    <div class="container">
-      <div class="heading_container heading_center">
-       <h2>
-          Nuestros Productos
-        </h2>
-        <div id="BlockItemSubMenu">
-	<asp:Repeater id="Repeater2" runat="server">
-		<ItemTemplate>
-			<div class="ItemSubMenu">
-                 <asp:Label ID="LabelDato" runat="server" Visible="false" Text='<%#Eval("idProducto")%>'> </asp:Label>
-				<asp:Literal ID="Imagen" runat="server" /><img src="<%#Eval("imagen") %>" width="200" height="200" /></td></tr><br>
-                <asp:Literal ID="nombreProducto" runat="server" /> <%#Eval("nombreProducto") %><br>
-                <asp:Literal ID="precio" runat="server" />$ <%#Eval("precio") %><br>
-                <asp:Button ID="btnDetalles" runat="server" Text="Detalles:" CssClass="btn btn-success" Onclick="btnDetalles_Click"/>
+ <section class="food_section layout_padding-bottom">
+        <div class="container">
+            <div class="heading_container heading_center">
+                <h2>Nuestros Productos
+                </h2>
+               
+      <div id="BlockItemSubMenu2">
+          <asp:Repeater ID="Repeater2" runat="server">
+              <ItemTemplate>
+                  <div class="ItemSubMenu2">
+                      <asp:Label ID="LabelDato" runat="server" Visible="false" Text='<%#Eval("idProducto")%>'> </asp:Label>
+
+                                <asp:Literal ID="Imagen" runat="server" /><img src="<%#Eval("imagen") %>" width="200" height="200" /></td></tr><br>
+                                <asp:Literal ID="nombre" runat="server" />
+                                <%#Eval("nombreProducto") %><br>
+                                <asp:Literal ID="precio" runat="server" />$ <%#Eval("precio") %><br>
+                                <asp:Button ID="btnDetalles" runat="server" Text="Detalles:" CssClass="btn btn-success" OnClick="btnDetalles_Click" />
+                      </div>
+              </ItemTemplate>
+          </asp:Repeater>
+          </div>
+
                 
-			</div>				
-		</ItemTemplate>
-	</asp:Repeater>
-</div> 
- </div>
-</div>
-</section>      
+    </section>
 
-    <!-- end food section -->
 
-    <!-- about section -->
 
-   <!-- end client section -->
 
+
+
+
+
+    <!-- end client section -->
+    <section>
     <!-- PIE DE PAGINA -->
     <footer class="footer_section">
         <div class="container">
@@ -675,7 +678,9 @@
 
         </div>
         </div>
-    </footer>
+        </footer>
+        </section>
+    <!-- footer section -->
     <!-- end about section -->
 
    

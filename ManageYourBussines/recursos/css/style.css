@@ -1004,4 +1004,14 @@ a:focus {
 .footer_section .footer-info p a {
   color: inherit;
 }
+#BlockItemSubMenu2 {
+    width: 1250px;
+    display: block;
+}
+
+    #BlockItemSubMenu2 .ItemSubMenu2 {
+        width: 395px;
+        float: left;
+        height: 300px;
+    }
 /*# sourceMappingURL=style.css.map */
