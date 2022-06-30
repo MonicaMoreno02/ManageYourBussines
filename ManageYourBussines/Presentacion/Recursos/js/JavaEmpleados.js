@@ -11,7 +11,7 @@ function agregarFilas(datos) {
         tabla.fnAddData([
             datos[i].idEmpleado,
             datos[i].documentoEmpleado,
-            datos[i].nombreEmpleado,
+            datos[i].nombresEmpleado,
             datos[i].apellidosEmpleado,
             datos[i].tipoEmpleado,
             datos[i].emailEmpleado,

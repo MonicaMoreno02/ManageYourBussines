@@ -124,11 +124,11 @@
     <Content Include="Presentacion\frmdetalles.aspx" />
     <Content Include="Presentacion\frmAdmin.aspx" />
     <Content Include="Presentacion\frmEmpleados.aspx" />
+    <Content Include="Presentacion\frmEstadisticasG.aspx" />
     <Content Include="Presentacion\frmHome.aspx" />
     <Content Include="Presentacion\frmInicioEmpleados.aspx" />
     <Content Include="Presentacion\frmInventario.aspx" />
     <Content Include="Presentacion\frmProductos.aspx" />
-    <Content Include="Presentacion\frmEstadisticas.aspx" />
     <Content Include="Presentacion\frmProductos2.aspx" />
     <Content Include="Presentacion\frmProductosVendedor.aspx" />
     <Content Include="Presentacion\frmRegisEmpleados.aspx" />
@@ -166,6 +166,7 @@
     <Content Include="Presentacion\recursos\images\elefante.jpg" />
     <Content Include="Presentacion\recursos\images\Escritorio1.png" />
     <Content Include="Presentacion\recursos\images\Escritorio2.png" />
+    <Content Include="Presentacion\recursos\images\estadisticas.png" />
     <Content Include="Presentacion\recursos\images\estante2.png" />
     <Content Include="Presentacion\recursos\images\fondo1.jpg" />
     <Content Include="Presentacion\recursos\images\fondo2.jpeg" />
@@ -431,6 +432,13 @@
     <Compile Include="Presentacion\frmEmpleados.aspx.designer.cs">
       <DependentUpon>frmEmpleados.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\frmEstadisticasG.aspx.cs">
+      <DependentUpon>frmEstadisticasG.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmEstadisticasG.aspx.designer.cs">
+      <DependentUpon>frmEstadisticasG.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\frmHome.aspx.cs">
       <DependentUpon>frmHome.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -458,13 +466,6 @@
     </Compile>
     <Compile Include="Presentacion\frmProductos.aspx.designer.cs">
       <DependentUpon>frmProductos.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Presentacion\frmEstadisticas.aspx.cs">
-      <DependentUpon>frmEstadisticas.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Presentacion\frmEstadisticas.aspx.designer.cs">
-      <DependentUpon>frmEstadisticas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmProductos2.aspx.cs">
       <DependentUpon>frmProductos2.aspx</DependentUpon>

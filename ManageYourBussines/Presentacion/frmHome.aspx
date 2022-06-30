@@ -7,7 +7,7 @@
         <!--Añadimos el fondo-->
         <div class="hero_area">
             <div class="bg-box">
-                <img src="recursos/images/fondo5.jpeg" alt="">
+                <img src="recursos/images/fondo5.jpeg" >
             </div>
             <asp:Label ID="LbidC" runat="server" Text="Label"></asp:Label>
             <!-- header section strats -->
@@ -37,8 +37,12 @@
                                     <a class="nav-link" href="frmdetalles.aspx">Productos</a>
                                 </li>
                             </ul>
-                            <asp:Label ForeColor="White" ID="lblEmpleado" runat="server"></asp:Label>
-                            <asp:Label ForeColor="White" ID="lblApellidos" runat="server"></asp:Label>
+
+                            <div class="text-uppercase">
+                                <asp:Label ForeColor="White" ID="lblEmpleado" runat="server"></asp:Label>
+                                <asp:Label ForeColor="White" ID="lblApellidos" runat="server"></asp:Label>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </div>
 
                             <div class="user_option">
 
@@ -55,6 +59,9 @@
                                         <li><a class="dropdown-item" href="../index.aspx">cerrar sesion </a></li>
 
                                     </ul>
+
+
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 
                                 </div>
@@ -175,7 +182,7 @@
                                                 En muebles San José te brindamos lo mejor en ebanistería ya que trabajamos con la mayor calidad usando excelentes materiales como pino, flor morado, cedro, MDF y muchos mas. 
                                             </p>
                                             <div class="btn-box">
-                                                <a href="" class="btn1">Hacer pedido
+                                                <a href="frmProductos2.aspx" class="btn1">Ver productos
                                                 </a>
                                             </div>
                                         </div>

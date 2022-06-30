@@ -458,16 +458,11 @@ namespace ManageYourBussines.Presentacion
             }
         }
 
-        //PAOLA: listar graficas de ventas
+     
 
-
-        public List<clBalanceE> mtdListarGracifasD(clBalanceE objGraficas)
+        protected void btnEstadisticas_Click(object sender, ImageClickEventArgs e)
         {
-            clBalanceL objBalance = new clBalanceL();
-            List<clBalanceE> listaGraficas = new List<clBalanceE>();
-            listaGraficas = objBalance.mtdListarGraficasL(objGraficas);
-            return listaGraficas;
+            Response.Redirect("frmEstadisticas.aspx");
         }
-
     }
 }

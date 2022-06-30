@@ -130,9 +130,9 @@ namespace ManageYourBussines
 
 
 
-                Session["empleado"] = objDatosClien.nombreEmpleado + " " + objDatos.apellidoEmpleado;
+                Session["empleado"] = objDatosClien.nombresEmpleado + " " + objDatos.apellidosEmpleado;
 
-                Session["apellidos"] = objDatosClien.apellidoEmpleado;
+                Session["apellidos"] = objDatosClien.apellidosEmpleado;
                 Response.Redirect("Presentacion/frmAdmin.aspx");
 
 

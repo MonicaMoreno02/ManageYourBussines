@@ -25,6 +25,19 @@
         <link rel="stylesheet" type="text/css" media="screen" href="vista/css/main.css" />
         <script src="vista/js/main.js"></script>
 
+         <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <div class="container-fluid">
+                <img src="recursos/images/icono3.png" widt="20" height="20" />
+                <a class="navbar-brand">Muebles San José</a>
+
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="frmAdmin.aspx">INICIO</a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
 
         <div class="container">
             <div class="jumbotron">
@@ -82,19 +95,10 @@
         </div>
 
         </div>
-        
-        <asp:Chart ID="Chart1" runat="server" Palette="Chocolate" DataSourceID="SqlDataSource2">
-            <Series>
-                <asp:Series Name="Series1" XValueMember="nombreproducto" YValueMembers="cantidad"></asp:Series>
-            </Series>
-            <ChartAreas>
-                <asp:ChartArea Name="ChartArea1"></asp:ChartArea>
-            </ChartAreas>
-        </asp:Chart>
 
-
-
-        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:dbManageConnectionString %>" SelectCommand="select producto.nombreproducto, detallesVenta.cantidad from producto inner join detallesVenta on producto.idProducto = detallesVenta.idProducto"></asp:SqlDataSource>
+        <asp:ImageButton ID="btnEstadisticas" runat="server" ImageUrl="recursos/images/estadisticas.png" OnClick="btnEstadisticas_Click" Height="47px" Width="48px"/>
+        <br />
+        <asp:Label ID="Label3" runat="server" Text="Ver aqui estadisticas"></asp:Label>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
 
 

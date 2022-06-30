@@ -5,10 +5,30 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <form runat="server">
+
         <%--Creacion de tabla productos--%>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <div class="container-fluid">
+                <img src="recursos/images/icono3.png" widt="20" height="20" />
+                <a class="navbar-brand">Muebles San José</a>
 
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="frmAdmin.aspx">INICIO</a>
+                    </li>
+                </ul>
 
+            </div>
+        </nav>
+
+      
         <div class="container-fluid">
+
+            <div class="card card-5">
+                <div class="card-heading">
+                    <h2 class="title">LISTADO PRODUCTOS </h2>
+                </div>
+            </div>
             <h1>Productos</h1>
             <p>
                 <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="recursos/images/Agregarver.png" Height="40px" OnClick="ImageButton1_Click" Width="47px"/>
@@ -137,7 +157,9 @@
                 </div>
             </div>
         </div>
+
     </form>
+
 
     <script src="recursos/js/jquery-3.4.1.min.js"></script>
     <script src="recursos/js/tablaJs.js"></script>

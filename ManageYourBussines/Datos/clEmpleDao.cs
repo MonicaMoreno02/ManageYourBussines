@@ -21,14 +21,14 @@ namespace ManageYourBussines.Datos
         if (tblDatos.Rows.Count == 1)
         {
             objDatosUsuario.idEmpleado = int.Parse(tblDatos.Rows[0]["idEmpleado"].ToString());
-            objDatosUsuario.nombreEmpleado = tblDatos.Rows[0]["nombreEmpleado"].ToString();
+            objDatosUsuario.nombresEmpleado = tblDatos.Rows[0]["nombresEmpleado"].ToString();
             objDatosUsuario.emailEmpleado = tblDatos.Rows[0]["emailEmpleado"].ToString();
             objDatosUsuario.claveEmpleado = tblDatos.Rows[0]["claveEmpleado"].ToString();
 
             var mailService = new servicioEmail.systemSupportMail();
             mailService.sendMail(
               subject: "Solicitud de recuperación de contraseña",
-              body: "Hola, " + objDatosUsuario.nombreEmpleado + "\nUsted solicitó recuperar su contraseña.\n" +
+              body: "Hola, " + objDatosUsuario.nombresEmpleado + "\nUsted solicitó recuperar su contraseña.\n" +
               "Tu contraseña actual es: " + objDatosUsuario.claveEmpleado,
               recipientMail: new List<string> { objDatosUsuario.emailEmpleado }
               );
