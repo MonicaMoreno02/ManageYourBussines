@@ -159,7 +159,7 @@
                               <br />
                           <br />
 
-<center><asp:Button ID="btncliente" runat="server" class="btn btn-outline-primary" Text="cliente"  OnClick="btncliente_Click2"/>
+<center><asp:Button ID="btncliente" runat="server" class="btn btn-outline-primary" Text="cliente"  onClick="btncliente_Click"/>
 <asp:Button ID="btnEmpleado" runat="server"  class="btn btn-outline-success" Text="Administrador" OnClick="btnEmpleado_Click" /></center>
 <%--                                               <asp:Button ID="btnEmpleados" runat="server" Text="Empleado"onClick="btnEmpleados_Click" />--%>
 

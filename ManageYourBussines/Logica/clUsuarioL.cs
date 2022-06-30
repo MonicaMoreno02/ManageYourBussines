@@ -37,5 +37,21 @@ namespace ManageYourBussines.Logica
         }
 
 
+        public clUsuarioE mtdEmpleado(clUsuarioE objDatos)
+        {
+            clUsuarioD objEmpleadoD = new clUsuarioD();
+            clUsuarioE objDatosEmpleado = new clUsuarioE();
+            objDatosEmpleado = objEmpleadoD.mtdEmpleado(objDatos);
+            return objDatosEmpleado;
+        }
+
+        //metodo para editar  los cliente s
+        public int mtdEditarPersona(clUsuarioE objDatos)
+        {
+            clUsuarioD objUsuarioD = new clUsuarioD();
+            int r = objUsuarioD.mtdEditar(objDatos);
+            return r;
+        }
+
     }
 }

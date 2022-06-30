@@ -13,12 +13,12 @@ namespace ManageYourBussines.Logica
 
         //metodo de recuperacion de contraseña del empleado y metodo de el login del empleado
 
-        public clEmpleadoE mtdLogin(clEmpleadoE objDatos)
+        public clEmpleadoE mtdLoginE(clEmpleadoE objDatos)
         {
             clEmpleadoD objDatosUsuarios = new clEmpleadoD();
             clEmpleadoE objDatosEmpleD = new clEmpleadoE();
 
-            objDatosEmpleD = objDatosUsuarios.mtdLogin(objDatos);
+            objDatosEmpleD = objDatosUsuarios.mtdLoginE(objDatos);
             return objDatosEmpleD;
 
 
@@ -88,5 +88,18 @@ namespace ManageYourBussines.Logica
 
             return ListaSeguridadSocial;
         }
-    }
+
+
+
+
+
+
+
+
+
+
+        
+
+    
+}
 }

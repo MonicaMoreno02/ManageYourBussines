@@ -78,6 +78,10 @@
 <body>
     <form id="form1" runat="server">
         <div>
+
+            <asp:Label ForeColor="White" ID="lblEmpleado" runat="server"></asp:Label>
+             <asp:Label ForeColor="White" ID="lblEmpleado1" runat="server"></asp:Label>
+               <asp:Label ForeColor="White" ID="lblApellidos" runat="server"></asp:Label>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
