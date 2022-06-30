@@ -33,43 +33,43 @@ namespace ManageYourBussines
 
      
 
-        //protected void btnIngresar_Click(object sender, EventArgs e)
-        //{
-        //    clUsuarioE objDatos = new clUsuarioE();
-        //    objDatos.emailCliente = txtEmail.Text;
-        //    objDatos.claveCliente = txtClave.Text;
+        protected void btnIngresar_Click(object sender, EventArgs e)
+        {
+            clUsuarioE objDatos = new clUsuarioE();
+            objDatos.emailCliente = txtEmail.Text;
+            objDatos.claveCliente = txtClave.Text;
 
-        //    clUsuarioL objUsuariosL = new clUsuarioL();
-        //    clUsuarioE objDatosClien = new clUsuarioE();
-        //    objDatosClien = objUsuariosL.mtdLogin(objDatos);
-        //    if (objDatosClien != null)
-        //    {
+            clUsuarioL objUsuariosL = new clUsuarioL();
+            clUsuarioE objDatosClien = new clUsuarioE();
+            objDatosClien = objUsuariosL.mtdLogin(objDatos);
+            if (objDatosClien != null)
+            {
 
 
-        //        //lblUsuario.Text = objDatosClien.nombres + " " + objDatosClien.apellidos;
+                //lblUsuario.Text = objDatosClien.nombres + " " + objDatosClien.apellidos;
 
-        //        //Session["usuario"] = objDatos.nombres + " " + objDatos.apellidos;
-        //        Session["idc"] = objDatosClien.idCliente;
-        //        int idClient = objDatosClien.idCliente;
-        //        Response.Redirect("Presentacion/frmHome.aspx");
+                //Session["usuario"] = objDatos.nombres + " " + objDatos.apellidos;
+                Session["idc"] = objDatosClien.idCliente;
+                int idClient = objDatosClien.idCliente;
+                Response.Redirect("Presentacion/frmHome.aspx");
 
               
 
                
                
-        //    }
-        //    else
-        //    {
-        //        //lblMensaje.Text = "usuario no Registrado ";
-        //        ScriptManager.RegisterClientScriptBlock(this.Page, this.GetType(), "AlertaLoginContrasenia", "window.onload = function(){ alert('La contraseña es incorrecta.'); };", true);
+            }
+            else
+            {
+                //lblMensaje.Text = "usuario no Registrado ";
+                ScriptManager.RegisterClientScriptBlock(this.Page, this.GetType(), "AlertaLoginContrasenia", "window.onload = function(){ alert('La contraseña es incorrecta.'); };", true);
 
-        //    }
-        
+            }
+        }
 
-        //protected void btnRecuperar_Click(object sender, EventArgs e)
-        //{
-        //    Response.Redirect("Recuperar.aspx");
-        //}
+        protected void btnRecuperar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Recuperar.aspx");
+        }
 
         protected void btnDetalles_Click(object sender, EventArgs e)
         {
