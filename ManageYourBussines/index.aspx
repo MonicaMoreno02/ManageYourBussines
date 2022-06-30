@@ -74,7 +74,129 @@
                             </li>
                          
 
-                             <div class="container mt-">
+                            <div class="container mt-3">
+
+
+
+     
+       
+             
+
+           <li class="nav-item">
+          <a class="nav-link"  data-bs-toggle="modal" data-bs-target="#myModal">
+              Iniciar Sesion </a>
+         </li>
+      </div>
+
+
+
+
+
+      <!-- The Modal -->
+      <div class="modal" id="myModal">
+          <div class="modal-dialog">
+              <div class="modal-content">
+
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                     <center><h4 class="modal-title">Iniciar Sesion </h4></center> 
+                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+
+                  <!-- Modal body -->
+                  <div class="modal-body">
+
+
+
+
+               
+
+
+
+
+                          <div class="mb-3 mt-3">
+                              <label for="email" class="form-label">Email:</label>
+
+                              <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="Email usuario" TextMode="Email"></asp:TextBox>
+
+
+                          </div>
+                          <div class="mb-3">
+                              <label for="pwd" class="form-label">Password:</label>
+
+
+                              <asp:TextBox ID="txtClave" runat="server" CssClass="form-control" placeholder="password" TextMode="Password"></asp:TextBox>
+                              <br />
+
+
+                          
+                              
+                             <%-- <div class="form-group">
+                                            <asp:DropDownList ID="idTipoUsuario" runat="server" class="form-select">
+                                                <asp:ListItem Value="Tipo usuario"></asp:ListItem>
+                                                <asp:ListItem Value="Cliente"></asp:ListItem>
+                                                <asp:ListItem Value="Empleado"></asp:ListItem>
+                                            </asp:DropDownList>
+                                        </div>--%>
+
+                             <div class="container mt-3">
+
+                                  
+                              </div>
+
+                              <div class=" col mt-3 mb-3">
+                                  <asp:Label ID="lblMensaje" runat="server" Text=""></asp:Label>
+
+
+
+
+
+
+                              </div>
+                          </div>
+                        
+                             <center> <asp:Label ID="Label3" runat="server" Text Style="color: blue;">Seleccione el tipo de Usuario que desea Ingresar</asp:Label> </center>
+                              <br />
+                          <br />
+
+<center><asp:Button ID="btncliente" runat="server" class="btn btn-outline-primary" Text="cliente"  OnClick="btncliente_Click2"/>
+<asp:Button ID="btnEmpleado" runat="server"  class="btn btn-outline-success" Text="Administrador" OnClick="btnEmpleado_Click" /></center>
+<%--                                               <asp:Button ID="btnEmpleados" runat="server" Text="Empleado"onClick="btnEmpleados_Click" />--%>
+
+                             <br />
+                                               <br />
+                             <%-- <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" OnClick="btnIngresar_Click" /></center>--%>
+               
+                           
+
+
+                          <br />
+                          <center>
+                              <asp:Button ID="btnRecuperar" runat="server" Text="Recuperar Contraseña" onClick="btnRecuperar_Click1"/></center>
+
+
+                          <hr>
+                        <%--<a href="" class="btn btn-google btn-user btn-block">
+                                            <i class="fab fa-google fa-fw"></i> Olvide mi contraseña 
+                                        </a>--%>
+                                      
+               
+
+
+
+
+                  </div>
+
+                  <!-- Modal footer --->
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                  </div>
+                  
+              </div>
+          </div>
+      </div>
+
+                      <%--       <div class="container mt-">
 
 
 
@@ -139,7 +261,7 @@
 
                                     </div>
                                 </div>
-                            </div>
+                            </div>--%>
                             <%-- cierre de  modal  --%>
 
                             <%-- continua con los  item de  navegacion --%>
