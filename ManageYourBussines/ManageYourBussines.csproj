@@ -147,6 +147,7 @@
     <Content Include="Presentacion\recursos\css\stylebuttons.css" />
     <Content Include="Presentacion\recursos\images\about-img.png" />
     <Content Include="Presentacion\recursos\images\anadir-al-carrito %281%29.png" />
+    <Content Include="Presentacion\recursos\images\atrasblanco.png" />
     <Content Include="Presentacion\recursos\images\base.jpg" />
     <Content Include="Presentacion\recursos\images\baseg.jpg" />
     <Content Include="Presentacion\recursos\images\biblioteca1.png" />
