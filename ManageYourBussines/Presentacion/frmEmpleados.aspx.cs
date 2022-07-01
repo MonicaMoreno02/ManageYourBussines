@@ -15,14 +15,14 @@ namespace ManageYourBussines.Presentacion
         protected void Page_Load(object sender, EventArgs e)
         {
             //PAOLA: vuelve invisible los txt
-              //txtIDEmpleado.Attributes.Add("style", "DISPLAY:none");
-              //txtIDEmpleadoB.Attributes.Add("style", "DISPLAY:none");
+            txtIDEmpleado.Attributes.Add("style", "DISPLAY:none");
+            txtIDEmpleadoB.Attributes.Add("style", "DISPLAY:none");
         }
 
 
         //PAOLA:listar empleados
         [WebMethod]
-        public static List<clEmpleadoE>mtdListar()
+        public static List<clEmpleadoE> mtdListar()
         {
             clEmpleadoL objEmpleado = new clEmpleadoL();
             List<clEmpleadoE> listaEmpleados = new List<clEmpleadoE>();
@@ -32,7 +32,7 @@ namespace ManageYourBussines.Presentacion
             return listaEmpleados;
         }
 
-       
+
 
 
         //PAOLA:editar empleados
@@ -61,51 +61,15 @@ namespace ManageYourBussines.Presentacion
             }
 
             Response.Redirect("frmEmpleados.aspx");
-           
+
         }
 
-        //PAOLA:registrar empleados
-        protected void btnRegistrar_Click(object sender, EventArgs e)
+
+
+
+
+        protected void btnEliminar_Click(object sender, EventArgs e)
         {
-            LblTipoEmpleado.Text = ddlTipoEmpleado.SelectedValue.ToString();
-
-            clEmpleadoE objEmpleadoE = new clEmpleadoE();
-            objEmpleadoE.documento = txtDocumentoRegis.Text;
-            objEmpleadoE.nombreEmpleado = txtNombreRegis.Text;
-            objEmpleadoE.apellidos = txtApellidoRegis.Text;
-            objEmpleadoE.tipoEmpleado = LblTipoEmpleado.Text;
-            objEmpleadoE.email = txtEmailRegis.Text;
-            objEmpleadoE.clave = txtClaveRegis.Text;
-
-
-            clEmpleadoL objDatosEmpleado = new clEmpleadoL();
-            int resultado =  objDatosEmpleado.mtdRegistrarEmple(objEmpleadoE);
-
-            if (resultado!=0)
-            {
-                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Registro guardado correctamente:(');", true);
-            }
-            else
-            {
-                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Algo ha salido mal y no hemos guardado tu registro :(');", true);
-            }
-
-            txtDocumentoRegis.Text = " ";
-            txtNombreRegis.Text = " ";
-            txtApellidoRegis.Text = " ";
-            LblTipoEmpleado.Text = " ";
-            txtEmailRegis.Text = " ";
-            txtClaveRegis.Text = " ";
-            
-        }
-
-        //protected void btnEliminar_Click(object sender, EventArgs e)
-        //{
-        //}
-
-        protected void btnBorrar_Click(object sender, EventArgs e)
-        {
-
             int id = int.Parse(txtIDEmpleadoB.Text);
 
             clEmpleadoL objEmpleadoL = new clEmpleadoL();
@@ -123,11 +87,16 @@ namespace ManageYourBussines.Presentacion
             }
         }
 
+        protected void btnRegistrarE_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("frmRegisEmpleados.aspx");
+
+        }
+
+
+
+
         //PAOLA:eliminar empleados
-
-
-        //PAOLA: Listar seguridad social
-
 
     }
 }

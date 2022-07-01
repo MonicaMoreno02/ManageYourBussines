@@ -57,6 +57,7 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Printing" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -113,6 +114,7 @@
     <Content Include="Presentacion\frmProductos.aspx" />
     <Content Include="Presentacion\frmEstadisticas.aspx" />
     <Content Include="Presentacion\frmProductos2.aspx" />
+    <Content Include="Presentacion\frmRegisEmpleados.aspx" />
     <Content Include="Presentacion\frmRegistrar.aspx" />
     <Content Include="Presentacion\frmTareasEmple.aspx" />
     <Content Include="Presentacion\frmTarea.aspx" />
@@ -169,6 +171,7 @@
     <Content Include="Presentacion\recursos\css\sb-admin-2.min.css" />
     <Content Include="Presentacion\recursos\css\style.css" />
     <Content Include="Presentacion\recursos\css\style2.css" />
+    <Content Include="Presentacion\recursos\css\stylebuttons.css" />
     <Content Include="Presentacion\recursos\images\about-img.png" />
     <Content Include="Presentacion\recursos\images\advertencia.png" />
     <Content Include="Presentacion\recursos\images\anadir-al-carrito %281%29.png" />
@@ -184,9 +187,11 @@
     <Content Include="Presentacion\recursos\images\elefante.jpg" />
     <Content Include="Presentacion\recursos\images\Escritorio1.png" />
     <Content Include="Presentacion\recursos\images\Escritorio2.png" />
+    <Content Include="Presentacion\recursos\images\estadisticas.png" />
     <Content Include="Presentacion\recursos\images\estante2.png" />
     <Content Include="Presentacion\recursos\images\fondo1.jpg" />
     <Content Include="Presentacion\recursos\images\fondo2.jpeg" />
+    <Content Include="Presentacion\recursos\images\fondo2admin.jpeg" />
     <Content Include="Presentacion\recursos\images\fondo3.jpg" />
     <Content Include="Presentacion\recursos\images\fondo5.jpeg" />
     <Content Include="Presentacion\recursos\images\icono3.png" />
@@ -429,6 +434,13 @@
     </Compile>
     <Compile Include="Presentacion\frmNomina.aspx.designer.cs">
       <DependentUpon>frmNomina.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmRegisEmpleados.aspx.cs">
+      <DependentUpon>frmRegisEmpleados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmRegisEmpleados.aspx.designer.cs">
+      <DependentUpon>frmRegisEmpleados.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmSobreNosotros.aspx.cs">
       <DependentUpon>frmSobreNosotros.aspx</DependentUpon>

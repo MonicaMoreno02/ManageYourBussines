@@ -3,8 +3,22 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+ <form runat="server">
 
-    <form runat="server">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <div class="container-fluid">
+                <img src="recursos/images/icono3.png" widt="20" height="20" />
+                <a class="navbar-brand" >Muebles San José</a>
+
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="frmAdmin.aspx">INICIO</a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+
         <div class="container-fluid">
             <!-- Page Heading -->
             <div class="card card-5">
@@ -18,10 +32,7 @@
             <div class="card shadow mb-4">
                 <div class="card-body">
                     <div class="table-responsive">
-                        <div class="fa-3x">
-                            <i class="fa-solid fa-cog fa-spin"></i>
-
-                        </div>
+                  
                         <table class="table table-bordered table-dark" id="dtEmpleado" width="100%" cellspacing="0">
 
                             <thead>
@@ -32,7 +43,7 @@
                                     <th>Documento</th>
                                     <th>Nombres</th>
                                     <th>Apellidos</th>
-                                    <th>Tipo Empleado</th>
+                                    <th>Tipo Empleado</th>.
                                     <th>Email</th>
                                     <th>Clave</th>
                                     <th>Editar</th>
@@ -48,41 +59,6 @@
         </div>
         <!--PAOLA: tabla de empleados FIN  -->
 
-        <!-- Page Heading -->
-        <div class="card card-5">
-            <div class="card-heading">
-                <h2 class="title">LISTA DE SEGURIDAD SOCIAL</h2>
-            </div>
-        </div>
-
-
-        <!--PAOLA: tabla de Seguridad Social -->
-        <%--<div class="card shadow mb-4">
-            <div class="card-body">
-                <div class="table-responsive">
-                    <div class="fa-3x">
-                        <i class="fa-solid fa-cog fa-spin"></i>
-
-                    </div>
-                    <table class="table table-bordered table-dark" id="dtSeguridad" width="100%" cellspacing="0">
-                        <thead>
-                            <tr>
-
-                                <th>id</th>
-                                <th>Porcentaje Pension</th>
-                                <th>Porcentaje Salud</th>
-                                <th>Salario</th>
-                                <th>Año</th>
-
-
-                            </tr>
-                        </thead>
-                    </table>
-                </div>
-            </div>
-        </div>--%>
-
-        <!--PAOLA: tabla de Seguridad Social -->
 
         <%--PAOLA: modal para eliminar--%>
         <div class="modal fade" id="ModalEliminar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -105,11 +81,8 @@
                                     <br />
                                 </div>
                             </div>
-
-                            <asp:Button ID="btnBorrar" runat="server" Text="Borrar" OnClick="btnBorrar_Click" />
-
                             <div class="modal-footer">
-                                <%--                                <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" class="btn btn-danger" OnClick="btnEliminar_Click"/>--%>
+                               <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" class="btn btn-danger"  OnClick="btnEliminar_Click"/>
                             </div>
                         </ContentTemplate>
                     </asp:UpdatePanel>
@@ -119,7 +92,7 @@
                     <ContentTemplate>
                     </ContentTemplate>
                     <Triggers>
-                        <asp:AsyncPostBackTrigger ControlID="btnBorrar" EventName="Click" />
+                        <asp:AsyncPostBackTrigger ControlID="btnEliminar" EventName="Click" />
                     </Triggers>
                 </asp:UpdatePanel>
 
@@ -171,11 +144,6 @@
                                     <label for="txtClave" class="col-form-label">Clave</label>
                                     <asp:TextBox ID="txtClave" class="form-control" runat="server"></asp:TextBox>
                                 </div>
-                                <div class="form-group">
-                                    <label for="txtSeguridadSocial" class="col-form-label">Clave</label>
-                                    <asp:TextBox ID="txtSeguridadSocial" class="form-control" runat="server"></asp:TextBox>
-                                </div>
-
 
                             </div>
                             <div class="modal-footer">
@@ -196,119 +164,8 @@
         </div>
         <%--PAOLA: Modal para editar empleados FIN--%>
 
-
-        <%--PAOLA: Modal para registrar los empleados --%>
-        <div class="card card-5">
-            <div class="card-heading">
-                <h2 class="title">Registrar Empleados</h2>
-            </div>
-            <div class="card-body">
-                <div class="form-row m-b-55">
-                    <div class="name">Documento</div>
-                    <div class="value">
-                        <div class="input-group">
-                            <div class="input--style-5" style="border: thin double #000000; margin: auto; padding: inherit;">
-                                <asp:TextBox ID="txtDocumentoRegis" type="text" runat="server" BackColor="#E5E5E5"></asp:TextBox>
-                                <br />
-                            </div>
-                        </div>
-                    </div>
-
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="txtNombreRegis" ErrorMessage="Campo Obligatorio" ForeColor="Red"></asp:RequiredFieldValidator>
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtDocumentoRegis" ErrorMessage="Documento invalido" ForeColor="Red" ValidationExpression="^\d+$"></asp:RegularExpressionValidator>
-
-                </div>
-                <div class="form-row m-b-55">
-                    <div class="name">Nombre</div>
-                    <div class="value">
-                        <div class="input-group">
-                            <div class="input--style-5" style="border: thin double #000000">
-                                <asp:TextBox ID="txtNombreRegis" runat="server" ValidateRequestMode="Enabled" BackColor="#E5E5E5"></asp:TextBox>
-                                <br />
-                            </div>
-
-                        </div>
-                    </div>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtNombreRegis" ErrorMessage="Campo Obligatorio" ForeColor="Red"></asp:RequiredFieldValidator>
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtNombreRegis" ErrorMessage="Solo letras" ForeColor="Red" ValidationExpression="^[a-zA-Z]+$"></asp:RegularExpressionValidator>
-                </div>
-
-                <div class="form-row m-b-55">
-                    <div class="name">Apellido</div>
-                    <div class="value">
-                        <div class="input-group">
-                            <div class="input--style-5" style="border: thin double #000000">
-                                <asp:TextBox ID="txtApellidoRegis" runat="server" ValidateRequestMode="Enabled" BackColor="#E5E5E5"></asp:TextBox>
-                            </div>
-
-                        </div>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtNombreRegis" ErrorMessage="Campo Obligatorio" ForeColor="Red"></asp:RequiredFieldValidator>
-                        <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="txtNombreRegis" ErrorMessage="Solo letras" ForeColor="Red" ValidationExpression="^[a-zA-Z]+$"></asp:RegularExpressionValidator>
-                    </div>
-                </div>
-
-
-                <div class="form-row">
-                    <div class="name">Tipo de Empleado</div>
-                    <div class="value">
-                        <div class="input-group">
-
-                            <asp:DropDownList ID="ddlTipoEmpleado" runat="server">
-                                <asp:ListItem>Seleccione...</asp:ListItem>
-                                <asp:ListItem>Vendedor</asp:ListItem>
-                                <asp:ListItem>Productor</asp:ListItem>
-                            </asp:DropDownList>
-                            <asp:Label ID="LblTipoEmpleado" runat="server" Text=" " ValidateRequestMode="Enabled"></asp:Label>
-
-                            <div class="select-dropdown">
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtNombreRegis" ErrorMessage="Campo Obligatorio" ForeColor="Red"></asp:RequiredFieldValidator>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="form-row m-b-55">
-                    <div class="name">Email</div>
-                    <div class="value">
-                        <div class="input-group">
-                            <div class="input--style-5" style="border: thin double #000000">
-                                <asp:TextBox ID="txtEmailRegis" runat="server" ValidateRequestMode="Enabled" BackColor="#E5E5E5"></asp:TextBox>
-                            </div>
-
-                        </div>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtNombreRegis" ErrorMessage="Campo Obligatorio" ForeColor="Red"></asp:RequiredFieldValidator>
-                        <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="txtEmailRegis" ErrorMessage="Email Invalido" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
-                    </div>
-                </div>
-
-
-                <div class="form-row m-b-55">
-                    <div class="name">Clave</div>
-                    <div class="value">
-                        <div class="input-group">
-                            <div class="input--style-5" style="border: thin double #000000">
-                                <asp:TextBox ID="txtClaveRegis" runat="server" ValidateRequestMode="Enabled" BackColor="#E5E5E5"></asp:TextBox>
-                            </div>
-
-                        </div>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtNombreRegis" ErrorMessage="Campo Obligatorio" ForeColor="Red"></asp:RequiredFieldValidator>
-                    </div>
-                </div>
-
-
-                <asp:Button ID="btnRegistrar" class="btn btn-primary" runat="server" Text="Registrar" OnClick="btnRegistrar_Click" Height="73px" Width="271px" />
-
-
-                <br />
-                <br />
-                <br />
-                &nbsp;<div>
-                </div>
-
-            </div>
-        </div>
-        <%--PAOLA: Modal para registrar los empleados --%>
+        <asp:Button ID="btnRegistrarE" runat="server" cssClass="btn-primary" Text="REGISTRE AQUI UN NUEVO EMPLEADO"  Font-Names="Britannic Bold" Height="52px" OnClick="btnRegistrarE_Click"/>
+      
     </form>
 
 
@@ -316,6 +173,7 @@
 
 
     <script src="recursos/js/JavaEmpleados.js"></script>
+    
 
 
     <script src="recursos/js/jquery-3.4.1.min.js"></script>
@@ -330,6 +188,7 @@
     <script src="recursos/js/datatables/jquery.dataTables.min.js"></script>
     <script src="recursos/js/datatables/dataTables.bootstrap4.min.js"></script>
     <script src="recursos/js/demo/datatables-demo.js"></script>
+
 
 
 

@@ -69,7 +69,7 @@ namespace ManageYourBussines.Datos
                 clEmpleadoE objEmpleado = new clEmpleadoE();
 
                 objEmpleado.idEmpleado = int.Parse(tblEmpleados.Rows[i]["idEmpleado"].ToString());
-                objEmpleado.documento = tblEmpleados.Rows[i]["documentoEmpleado"].ToString();
+                objEmpleado.documento = tblEmpleados.Rows[i]["documento"].ToString();
                 objEmpleado.nombreEmpleado = tblEmpleados.Rows[i]["nombreEmpleado"].ToString();
                 objEmpleado.apellidos = tblEmpleados.Rows[i]["apellidos"].ToString();
                 objEmpleado.tipoEmpleado = tblEmpleados.Rows[i]["TipoEmpleado"].ToString();

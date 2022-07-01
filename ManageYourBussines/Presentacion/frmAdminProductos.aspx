@@ -5,11 +5,32 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <form runat="server">
+
         <%--Creacion de tabla productos--%>
 
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <div class="container-fluid">
+                <img src="recursos/images/icono3.png" widt="20" height="20" />
+                <a class="navbar-brand">Muebles San José</a>
+
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="frmAdmin.aspx">INICIO</a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
 
         <div class="container-fluid">
-            <h1>Productos</h1>
+
+          
+            <div class="card card-5">
+                <div class="card-heading">
+                    <h2 class="title">LISTADO PRODUCTOS </h2>
+                </div>
+            </div>
+
             <div class="card shadow mb-4">
                 <div class="card-body">
                     <div class="table-responsive">
@@ -158,7 +179,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <asp:Button ID="btnActualizar" class="btn btn-primary" runat="server" Text="Actualizar" OnClick="btnActualizar_Click"/>
+                        <asp:Button ID="btnActualizar" class="btn btn-primary" runat="server" Text="Actualizar" OnClick="btnActualizar_Click" />
                     </div>
                 </div>
             </div>

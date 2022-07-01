@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Presentacion/Site1.Master" AutoEventWireup="true" CodeBehind="frmHome.aspx.cs" Inherits="ManageYourBussines.Presentacion.frmHome" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-     <script src="//code.tidio.co/xed0rnwvhavbuz7gsahpinux2goqrymt.js" async></script>
+    <script src="//code.tidio.co/xed0rnwvhavbuz7gsahpinux2goqrymt.js" async></script>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -15,7 +15,7 @@
         <header class="header_section">
             <div class="container">
                 <nav class="navbar navbar-expand-lg custom_nav-container ">
-                    <a class="navbar-brand" href="index.aspx">
+                    <a class="navbar-brand">
                         <span>Muebles San José
                         </span>
                     </a>
@@ -40,7 +40,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="About.aspx">Sobre Nosotros</a>
                             </li>
-                             <li class="nav-item">
+                            <li class="nav-item">
                                 <a class="nav-link" href="frmContactenos.aspx">Contactenos</a>
                             </li>
                             <!--<li class="nav-item">
@@ -48,8 +48,12 @@
               </li>-->
                         </ul>
 
-                        <asp:Label ForeColor="White" ID="lblEmpleado" runat="server"></asp:Label>
-                         <asp:Label ForeColor="White" ID="lblApellidos" runat="server"></asp:Label>
+                        <div class="text-uppercase">
+                            <asp:Label ForeColor="White" ID="lblEmpleado" runat="server"></asp:Label>
+                            <asp:Label ForeColor="White" ID="lblApellidos" runat="server"></asp:Label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                           
+                        </div>
 
                         <div class="user_option">
 
@@ -66,6 +70,8 @@
                                     <li><a class="dropdown-item" href="../index.aspx">cerrar sesion </a></li>
 
                                 </ul>
+
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 
                             </div>
@@ -186,8 +192,8 @@
                                             En muebles San José te brindamos lo mejor en ebanistería ya que trabajamos con la mayor calidad usando excelentes materiales como pino, flor morado, cedro, MDF y muchos mas. 
                                         </p>
                                         <div class="btn-box">
-                                            <a href="frmdetalles.aspx" class="btn1">Hacer pedido
-                                            </a>
+                                            <a href="frmProductos2.aspx" class="btn1">Ver productos
+                                                </a>
                                         </div>
                                     </div>
                                 </div>
@@ -205,8 +211,8 @@
                                             Puedes hacer tu pedido desde celular, tablet o laptop, ordenar la cantidad que necesites y con las especificaciones que requieras, para ello puedes comunicarte con nuestros asesores en el CHAT EN VIVO.
                                         </p>
                                         <div class="btn-box">
-                                            <a href="frmdetalles.aspx" class="btn1">Hacer pedido
-                                            </a>
+                                            <a href="frmProductos2.aspx" class="btn1">Ver productos
+                                                </a>
                                         </div>
                                     </div>
                                 </div>
@@ -228,13 +234,12 @@
                                                         </h2>
                                                     </div>
                                                     <p>
-                                                        
                                                         Dale un toque diferente a tus lugares, con nuestras alcobas, comedores, salas, muebles auxiliares, muebles de exterior.
        
                                                     </p>
                                                     <div class="btn-box">
-                                                        <a href="frmdetalles.aspx" class="btn1">Hacer pedido
-                                                        </a>
+                                                        <a href="frmProductos2.aspx" class="btn1">Ver productos
+                                                </a>
                                                     </div>
                                                 </div>
                                             </div>

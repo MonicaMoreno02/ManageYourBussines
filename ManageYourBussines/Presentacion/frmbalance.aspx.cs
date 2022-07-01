@@ -18,7 +18,7 @@ namespace ManageYourBussines.Presentacion
 
             clBalanceE objbalance = new clBalanceE();
             clBalanceL objbalanceL = new clBalanceL();
-        
+
             List<clBalanceE> listbalanceE = new List<clBalanceE>();
             DataTable dtBal = new DataTable();
             listbalanceE = objbalanceL.mtdListarBal(objbalance);
@@ -161,9 +161,9 @@ namespace ManageYourBussines.Presentacion
                 {
                     clBalanceE objbalance = new clBalanceE();
                     clBalanceL objbalanceL = new clBalanceL();
-   
-                   
-                  
+
+
+
                     listbalanceE = objbalanceL.mtdListarBal(objbalance);
 
                 }
@@ -176,10 +176,10 @@ namespace ManageYourBussines.Presentacion
                     objbalance.desde = DateTime.Parse(txtDesde.Text);
                     objbalance.Hasta = DateTime.Parse(txthasta.Text);
                     objbalance.num = consult;
-                   
+
                     listbalanceE = objbalanceL.mtdListarBal(objbalance);
                 }
-                
+
                 dtBal.Columns.Add(new DataColumn("#", typeof(int)));
                 dtBal.Columns.Add(new DataColumn("idVenta", typeof(int)));
                 dtBal.Columns.Add(new DataColumn("fechaVenta", typeof(DateTime)));
@@ -240,11 +240,11 @@ namespace ManageYourBussines.Presentacion
             DataSet dataSet = new DataSet();
             for (int i = 0; i < 2; i++)
             {
-                if (i!=1)
+                if (i != 1)
                 {
                     clBalanceE objbalance = new clBalanceE();
                     clBalanceL objbalanceL = new clBalanceL();
-                    
+
                     List<clBalanceE> listbalanceE = new List<clBalanceE>();
                     DataTable dtBal = new DataTable();
                     listbalanceE = objbalanceL.mtdListarBal(objbalance);
@@ -280,7 +280,7 @@ namespace ManageYourBussines.Presentacion
                             dtBal.Rows.Add(new object[] { "", "", "", "", "", "", total });
 
                         }
-                      
+
                     }
                     dataSet.Tables.Add(dtBal);
 
@@ -300,7 +300,7 @@ namespace ManageYourBussines.Presentacion
                     dtBal.Columns.Add(new DataColumn("cantidad", typeof(int)));
                     dtBal.Columns.Add(new DataColumn("precio", typeof(float)));
                     dtBal.Columns.Add(new DataColumn("valortotal", typeof(float)));
-                
+
 
                     int cuenta = listbalanceE.Count;
                     int num = cuenta + 2;
@@ -309,29 +309,29 @@ namespace ManageYourBussines.Presentacion
                     for (int j = 0; j < cuenta; j++)
                     {
 
-                        if (j !=cuenta)
+                        if (j != cuenta)
                         {
                             int numero = j + 1;
                             int idventa = listbalanceE[j].idventa;
                             DateTime fecha = listbalanceE[j].fechaVenta;
                             string codigoVenta = listbalanceE[j].codigoVenta;
-                            int idProducto=listbalanceE[j].idProducto;
-                            string nombre=listbalanceE[j].nombre;
+                            int idProducto = listbalanceE[j].idProducto;
+                            string nombre = listbalanceE[j].nombre;
                             int cantidad = listbalanceE[j].cantidad;
                             float precio = listbalanceE[j].precio;
                             float valortotal = precio * cantidad;
-                            
-                            dtBal.Rows.Add(new object[] { numero, idventa, fecha, codigoVenta,idProducto,nombre,cantidad,precio,valortotal });
+
+                            dtBal.Rows.Add(new object[] { numero, idventa, fecha, codigoVenta, idProducto, nombre, cantidad, precio, valortotal });
 
                         }
                         else
                         {
                             total = vtot;
-                            int numero=0;
+                            int numero = 0;
                             int idventa = 0;
                             DateTime fecha = DateTime.Now;
                             string codigoVenta = "";
-                            int idProducto=0;
+                            int idProducto = 0;
                             string nombre = "";
                             int cantidad = 0;
                             float precio = 0;
@@ -340,7 +340,7 @@ namespace ManageYourBussines.Presentacion
                             dtBal.Rows.Add(new object[] { numero, idventa, fecha, codigoVenta, idProducto, nombre, cantidad, precio, total });
 
                         }
-                       
+
                     }
                     dataSet.Tables.Add(dtBal);
 
@@ -368,13 +368,13 @@ namespace ManageYourBussines.Presentacion
             string ahora = DateTime.Now.ToString("yyyy-MM-dd-hh-m-s");
 
 
-         
-        
+
+
 
             string nombreArchivo = "reporte" + ahora;
-         
-            workbook.Save("B:/reporte"+ahora+".xlsx");
-            ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Archivo creado correctamente guardado en: D:/reporte"+ahora+".xlsx');", true);
+
+            workbook.Save("B:/reporte" + ahora + ".xlsx");
+            ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Archivo creado correctamente guardado en: D:/reporte" + ahora + ".xlsx');", true);
 
         }
 
@@ -382,10 +382,10 @@ namespace ManageYourBussines.Presentacion
         {
             string desde = txtDesde.Text;
             string hasta = txthasta.Text;
-            
-            
 
-            if (desde== ""||hasta == "")
+
+
+            if (desde == "" || hasta == "")
             {
                 ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('los campos estan vacios');", true);
 
@@ -452,14 +452,17 @@ namespace ManageYourBussines.Presentacion
                     }
 
 
-
-
-
                 }
 
                 gvBalance.DataSource = dtBal;
                 gvBalance.DataBind();
             }
+        }
+
+        protected void btnEstadisticas_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("frmEstadisticas.aspx");
+
         }
     }
 }
