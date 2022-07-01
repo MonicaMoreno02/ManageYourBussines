@@ -179,6 +179,11 @@ namespace ManageYourBussines.Presentacion
 
             }
         }
+
+        protected void Datos_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("editarDatos.aspx");
+        }
     }
 
 }

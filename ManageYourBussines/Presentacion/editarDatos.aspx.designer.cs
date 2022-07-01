@@ -11,71 +11,35 @@ namespace ManageYourBussines.Presentacion
 {
 
 
-    public partial class frmRegistrar
+    public partial class editarDatos
     {
 
         /// <summary>
-        /// Control txtEmail1.
+        /// Control lblEmpleado.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmail1;
+        protected global::System.Web.UI.WebControls.Label lblEmpleado;
 
         /// <summary>
-        /// Control txtClave1.
+        /// Control lblApellidos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtClave1;
+        protected global::System.Web.UI.WebControls.Label lblApellidos;
 
         /// <summary>
-        /// Control Label1.
+        /// Control btnDatos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
-
-        /// <summary>
-        /// Control Label3.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
-
-        /// <summary>
-        /// Control btncliente.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btncliente;
-
-        /// <summary>
-        /// Control btnEmpleado.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEmpleado;
-
-        /// <summary>
-        /// Control btnRecuperar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRecuperar;
+        protected global::System.Web.UI.WebControls.Button btnDatos;
 
         /// <summary>
         /// Control txtDocumento.
@@ -87,31 +51,31 @@ namespace ManageYourBussines.Presentacion
         protected global::System.Web.UI.WebControls.TextBox txtDocumento;
 
         /// <summary>
-        /// Control txtNombres.
+        /// Control txtnombreCliente.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombres;
+        protected global::System.Web.UI.WebControls.TextBox txtnombreCliente;
 
         /// <summary>
-        /// Control txtApellidos.
+        /// Control txtapellidos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtApellidos;
+        protected global::System.Web.UI.WebControls.TextBox txtapellidos;
 
         /// <summary>
-        /// Control txtTelefono.
+        /// Control txttelefono.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTelefono;
+        protected global::System.Web.UI.WebControls.TextBox txttelefono;
 
         /// <summary>
         /// Control txtDireccion.
@@ -141,21 +105,12 @@ namespace ManageYourBussines.Presentacion
         protected global::System.Web.UI.WebControls.TextBox txtClave;
 
         /// <summary>
-        /// Control lblMensaje.
+        /// Control btnActualizar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMensaje;
-
-        /// <summary>
-        /// Control btnRegistrar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRegistrar;
+        protected global::System.Web.UI.WebControls.Button btnActualizar;
     }
 }

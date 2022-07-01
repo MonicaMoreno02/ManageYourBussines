@@ -60,5 +60,41 @@ namespace ManageYourBussines
 
 
         }
+
+        protected void btnVendedor_Click(object sender, EventArgs e)
+        {
+
+            clEmpleadoE objDatos = new clEmpleadoE();
+            objDatos.email = txtEmailEmpledo.Text;
+            objDatos.clave = txtClaveEmpleado.Text;
+
+            clEmpleadoL objUsuariosL = new clEmpleadoL();
+            clEmpleadoE objDatosClien = new clEmpleadoE();
+            objDatosClien = objUsuariosL.mtdLoginProveedor(objDatos);
+            if (objDatosClien != null)
+            {
+
+
+
+                Session["EmpleadosVen"] = objDatos.nombreEmpleado + " " + objDatos.apellidos;
+                //Session["nombreEmpleado"] = objDatosClien.nombreEmpleado;
+                //Session["apellidos"] = objDatosClien.apellidosEmple;
+                Response.Redirect("Presentacion/frmbalance.aspx");
+
+
+
+
+
+
+            }
+            else
+            {
+                lblMensaje.Text = "usuario no Registrado ";
+            }
+
+
+        }
+
+
     }
 }
