@@ -100,5 +100,20 @@ namespace ManageYourBussines.Presentacion
 
 
         }
+
+        protected void btnregresar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("frmHome.aspx");
+        }
+
+        protected void btnregresar_Click1(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnregresar_Click2(object sender, EventArgs e)
+        {
+
+        }
     }
 }

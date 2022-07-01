@@ -38,8 +38,11 @@
                     <br />
                     <br />
                     <asp:Button ID="btnDatos" runat="server" Text="Datos" OnClick="btnDatos_Click1" />
-
-
+               <li class="nav-item active">
+                                <a class="nav-link" href="frmHome.aspx">Home </a>
+                            </li>
+                    <br />
+               
                     <label for="exampleInputName1">documento:</label>
                     <asp:TextBox class="form-control" type="text" ID="txtDocumento" runat="server"></asp:TextBox>
                 </div>
