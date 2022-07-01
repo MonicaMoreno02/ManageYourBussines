@@ -261,68 +261,73 @@ namespace ManageYourBussines.Presentacion
         protected void btnAceptar_Click(object sender, EventArgs e)
         {
             int idemple = 1;
-            int idtarea = int.Parse(lbidtarea.Text);
-            int pocicion = int.Parse(lbpocicion.Text);
-            int cuenta = gvmateriales.Rows.Count;
-            for (int i = 0; i < cuenta; i++)
+            if (lbidtarea != null)
             {
 
-                string valor = gvmateriales.Rows[i].Cells[1].Text;
-                int idmat = int.Parse(valor);
 
-                string pocicicion = gvtareas.Rows[pocicion].Cells[4].Text;
-                int pos = int.Parse(valor);
-
-                string valor1 = gvmateriales.Rows[i].Cells[4].Text;
-                int cantidad = int.Parse(valor);
-
-                string valor2 = gvmateriales.Rows[i].Cells[3].Text;
-                float precio = float.Parse(valor2);
-                int num = 0;
-                ; float tot = precio * cantidad;
-                if (cantidad > 0)
+                int idtarea = int.Parse(lbidtarea.Text);
+                int pocicion = int.Parse(lbpocicion.Text);
+                int cuenta = gvmateriales.Rows.Count;
+                for (int i = 0; i < cuenta; i++)
                 {
-                    num = num + 1;
-                    clTareaEpleE objmat = new clTareaEpleE();
-                    objmat.idTareas = idtarea;
-                    objmat.idmaterial = idmat;
-                    objmat.cantidad = cantidad;
-                    objmat.totalmat = tot;
-                    objmat.idEmpleado = idemple;
-                    objmat.pos = pos;
-                    objmat.num = num;
 
+                    string valor = gvmateriales.Rows[i].Cells[1].Text;
+                    int idmat = int.Parse(valor);
 
-                    clTareaEpleL objmeterial = new clTareaEpleL();
-                    int filas = objmeterial.mtdlistarmat(objmat);
+                    string pocicicion = gvtareas.Rows[pocicion].Cells[4].Text;
+                    int pos = int.Parse(valor);
 
-                    if (filas > 0)
+                    string valor1 = gvmateriales.Rows[i].Cells[4].Text;
+                    int cantidad = int.Parse(valor);
+
+                    string valor2 = gvmateriales.Rows[i].Cells[3].Text;
+                    float precio = float.Parse(valor2);
+                    int num = 0;
+                    ; float tot = precio * cantidad;
+                    if (cantidad > 0)
                     {
-
-                        ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('la tare seasigno correctamente ');", true);
-
-
-
-                        clTareasE objTarea = new clTareasE();
-                        objTarea.idTareas = idemple;
-
-                        tareasL objtareaL = new tareasL();
-                        DataTable tareas = new DataTable();
-                        List<clTareasE> listartarea = new List<clTareasE>();
-                        //Session["objeto"] = objCarritoL.mtdListcar();
-                        listartarea = objtareaL.mtdList(objTarea);
+                        num = num + 1;
+                        clTareaEpleE objmat = new clTareaEpleE();
+                        objmat.idTareas = idtarea;
+                        objmat.idmaterial = idmat;
+                        objmat.cantidad = cantidad;
+                        objmat.totalmat = tot;
+                        objmat.idEmpleado = idemple;
+                        objmat.pos = pos;
+                        objmat.num = num;
 
 
-                        gvtareas.DataSource = listartarea;
-                        gvtareas.DataBind();
+                        clTareaEpleL objmeterial = new clTareaEpleL();
+                        int filas = objmeterial.mtdlistarmat(objmat);
+
+                        if (filas > 0)
+                        {
+
+                            ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('la tare seasigno correctamente ');", true);
+
+
+
+                            clTareasE objTarea = new clTareasE();
+                            objTarea.idTareas = idemple;
+
+                            tareasL objtareaL = new tareasL();
+                            DataTable tareas = new DataTable();
+                            List<clTareasE> listartarea = new List<clTareasE>();
+                            //Session["objeto"] = objCarritoL.mtdListcar();
+                            listartarea = objtareaL.mtdList(objTarea);
+
+
+                            gvtareas.DataSource = listartarea;
+                            gvtareas.DataBind();
+
+                        }
+                        else
+                        {
+                            ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('jhhh');", true);
+                        }
+
 
                     }
-                    else
-                    {
-                        ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('jhhh');", true);
-                    }
-
-
                 }
             }
         }
