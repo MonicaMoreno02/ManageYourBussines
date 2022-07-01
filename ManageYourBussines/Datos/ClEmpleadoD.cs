@@ -28,9 +28,9 @@ namespace ManageYourBussines.Datos
                 if (tblDatos.Rows[0][4].ToString() == "Vendedor")
                 {
                     objDatosEmple.idEmpleado = int.Parse(tblDatos.Rows[0]["idEmpleado"].ToString());
-                    objDatosEmple.documento = tblDatos.Rows[0]["documentoE"].ToString();
-                    objDatosEmple.nombreEmpleado = tblDatos.Rows[0]["nombreEmpleado"].ToString();
-                    objDatosEmple.apellidos = tblDatos.Rows[0]["apellidosEmple"].ToString();
+                    objDatosEmple.documento = tblDatos.Rows[0]["documentoEmpleado"].ToString();
+                    objDatosEmple.nombreEmpleado = tblDatos.Rows[0]["nombresEmpleado"].ToString();
+                    objDatosEmple.apellidos = tblDatos.Rows[0]["apellidosEmpleado"].ToString();
                     objDatosEmple.tipoEmpleado = tblDatos.Rows[0]["tipoEmpleado"].ToString();
 
                     objDatosEmple.email = tblDatos.Rows[0]["emailEmpleado"].ToString();
@@ -47,12 +47,46 @@ namespace ManageYourBussines.Datos
             return objDatosEmple;
         }
 
-    
+
+
+        public clEmpleadoE mtdLoginProveedor(clEmpleadoE objDatos)
+        {
+
+            string consulta = "select * from  empleado  where emailEmpleado='" + objDatos.email + "' and claveEmpleado='" + objDatos.clave + "'";
+            clConexion objConexion = new clConexion();
+            DataTable tblDatos = new DataTable();
+            tblDatos = objConexion.mtdDesconectado(consulta);
+            clEmpleadoE objDatosEmple = new clEmpleadoE();
+
+            if (tblDatos.Rows.Count == 1)
+            {
 
 
 
+                if (tblDatos.Rows[0][4].ToString() == "Vendedor")
+                {
+                    objDatosEmple.idEmpleado = int.Parse(tblDatos.Rows[0]["idEmpleado"].ToString());
+                    objDatosEmple.documento = tblDatos.Rows[0]["documentoEmpleado"].ToString();
+                    objDatosEmple.nombreEmpleado = tblDatos.Rows[0]["nombresEmpleado"].ToString();
+                    objDatosEmple.apellidos = tblDatos.Rows[0]["apellidosEmpleado"].ToString();
+                    objDatosEmple.tipoEmpleado = tblDatos.Rows[0]["tipoEmpleado"].ToString();
 
-    public List<clEmpleadoE> mtdListarEmpleadoD()
+                    objDatosEmple.email = tblDatos.Rows[0]["emailEmpleado"].ToString();
+                    objDatosEmple.clave = tblDatos.Rows[0]["claveEmpleado"].ToString();
+
+                }
+
+            }
+            else
+            {
+                objDatosEmple = null;
+
+            }
+            return objDatosEmple;
+        }
+
+
+        public List<clEmpleadoE> mtdListarEmpleadoD()
         {
          
             string sql = "select * from empleado";

@@ -69,11 +69,13 @@
                                             </div>
                                         </div>
                                         <center>
-                                            <asp:Button ID="btnIniciarSesion" runat="server" Text="Iniciar Sesion" OnClick="btnIniciarSesion_Click" />
-
+                                            <asp:Button ID="btnIniciarSesion" runat="server" Text="Productor" OnClick="btnIniciarSesion_Click" />
+                                            <asp:Button ID="btnVendedor" runat="server" Text="Vendedor"  OnClick="btnVendedor_Click"/>
+                                
                                             <br />
                                             <center>
                                                 <br />
+                                     
                                                 <asp:Button ID="btnRecuperarCon" runat="server" Text="Recuperacion de Contraseña " OnClick="btnRecuperarCon_Click" />
                                     </form>
 
