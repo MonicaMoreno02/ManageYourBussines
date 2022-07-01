@@ -114,6 +114,7 @@
     <Content Include="Presentacion\frmHome.aspx" />
     <Content Include="Presentacion\frmInicioEmpleados.aspx" />
     <Content Include="Presentacion\frmInventario.aspx" />
+    <Content Include="Presentacion\frmNomina.aspx" />
     <Content Include="Presentacion\frmProductos.aspx" />
     <Content Include="Presentacion\frmEstadisticas.aspx" />
     <Content Include="Presentacion\frmProductos2.aspx" />

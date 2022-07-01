@@ -189,7 +189,7 @@
                                             En muebles San José te brindamos lo mejor en ebanistería ya que trabajamos con la mayor calidad usando excelentes materiales como pino, flor morado, cedro, MDF y muchos mas. 
                                         </p>
                                         <div class="btn-box">
-                                            <a href="frmProductos2.aspx" class="btn1">Ver productos
+                                            <a href="frmdetalles.aspx" class="btn1">Ver productos
                                                 </a>
                                         </div>
                                     </div>
@@ -208,7 +208,7 @@
                                             Puedes hacer tu pedido desde celular, tablet o laptop, ordenar la cantidad que necesites y con las especificaciones que requieras, para ello puedes comunicarte con nuestros asesores en el CHAT EN VIVO.
                                         </p>
                                         <div class="btn-box">
-                                            <a href="frmProductos2.aspx" class="btn1">Ver productos
+                                            <a href="frmdetalles.aspx" class="btn1">Ver productos
                                                 </a>
                                         </div>
                                     </div>
@@ -235,7 +235,7 @@
        
                                                     </p>
                                                     <div class="btn-box">
-                                                        <a href="frmProductos2.aspx" class="btn1">Ver productos
+                                                        <a href="frmdetalles.aspx" class="btn1">Ver productos
                                                 </a>
                                                     </div>
                                                 </div>
