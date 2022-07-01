@@ -422,8 +422,8 @@
                                 <asp:Literal ID="nombre" runat="server" />
                                 <%#Eval("nombreProducto") %><br>
                                 <asp:Literal ID="precio" runat="server" />$ <%#Eval("precio") %><br>
-                                <asp:Button ID="btnDetalles" runat="server" Text="Detalles:" CssClass="btn btn-success" OnClick="btnDetalles_Click" />
-                                <asp:Button ID="idcarrito" runat="server" Text="carrito:" OnClick="Getcarrito" CssClass="btn btn-warning" />
+                                <asp:Button ID="btnDetalles" runat="server" Text="Detalles" CssClass="btn btn-outline-success" OnClick="btnDetalles_Click" />
+                                <asp:Button ID="idcarrito" runat="server" Text="Carrito" OnClick="Getcarrito" CssClass="btn btn-outline-warning" />
                             </div>
                         </ItemTemplate>
                     </asp:Repeater>

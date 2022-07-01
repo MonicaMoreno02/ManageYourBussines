@@ -464,7 +464,7 @@
 				<asp:Literal ID="Imagen" runat="server" /><img src="<%#Eval("imagen") %>" width="200" height="200" /></td></tr><br>
                 <asp:Literal ID="nombreProducto" runat="server" /> <%#Eval("nombreProducto") %><br>
                 <asp:Literal ID="precio" runat="server" />$ <%#Eval("precio") %><br>
-                <asp:Button ID="btnDetalles" runat="server" Text="Detalles:" CssClass="btn btn-success" Onclick="btnDetalles_Click"/>
+                <asp:Button ID="btnDetalles" runat="server" Text="Detalles" CssClass="btn btn-outline-success" Onclick="btnDetalles_Click"/>
                 
 			</div>				
 		</ItemTemplate>

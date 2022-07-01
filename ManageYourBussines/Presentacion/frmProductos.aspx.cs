@@ -26,7 +26,7 @@ namespace ManageYourBussines.Presentacion
             List<clProductoE> listarProductos = new List<clProductoE>();
             listarProductos = objProductos.mtdListarD(objProducto);
 
-
+           
             string nombre = listarProductos[0].nombreProducto;
             lbnombre.Text = nombre;
             string imagen = listarProductos[0].imagen;
@@ -36,6 +36,8 @@ namespace ManageYourBussines.Presentacion
             lbDescripcion.Text = descripcion;
             string material = listarProductos[0].material;
             lbMaterial.Text = material;
+            float precio = int.Parse(listarProductos[0].precio.ToString());
+            lblPrecio.Text = precio.ToString();
         }
 
         protected void btnHome_Click(object sender, EventArgs e)
