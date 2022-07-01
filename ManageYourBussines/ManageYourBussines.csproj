@@ -105,17 +105,21 @@
     <Content Include="Presentacion\frmbalance.aspx" />
     <Content Include="Presentacion\frmcarrito.aspx" />
     <Content Include="Presentacion\frmClientes.aspx" />
+    <Content Include="Presentacion\frmClientesVendedor.aspx" />
     <Content Include="Presentacion\frmContactenos.aspx" />
     <Content Include="Presentacion\frmdetalles.aspx" />
     <Content Include="Presentacion\frmAdmin.aspx" />
     <Content Include="Presentacion\frmEmpleados.aspx" />
     <Content Include="Presentacion\frmHome.aspx" />
+    <Content Include="Presentacion\frmInicioEmpleados.aspx" />
     <Content Include="Presentacion\frmInventario.aspx" />
     <Content Include="Presentacion\frmProductos.aspx" />
     <Content Include="Presentacion\frmEstadisticas.aspx" />
     <Content Include="Presentacion\frmProductos2.aspx" />
+    <Content Include="Presentacion\frmProductosVendedor.aspx" />
     <Content Include="Presentacion\frmRegisEmpleados.aspx" />
     <Content Include="Presentacion\frmRegistrar.aspx" />
+    <Content Include="Presentacion\frmRegistrarProducto.aspx" />
     <Content Include="Presentacion\frmTareasEmple.aspx" />
     <Content Include="Presentacion\frmTarea.aspx" />
     <Content Include="Presentacion\frmVenta.aspx" />
@@ -172,9 +176,13 @@
     <Content Include="Presentacion\recursos\css\style.css" />
     <Content Include="Presentacion\recursos\css\style2.css" />
     <Content Include="Presentacion\recursos\css\stylebuttons.css" />
+    <Content Include="Presentacion\recursos\css\stylebuttonsE.css" />
     <Content Include="Presentacion\recursos\images\about-img.png" />
     <Content Include="Presentacion\recursos\images\advertencia.png" />
+    <Content Include="Presentacion\recursos\images\Agregarver.png" />
     <Content Include="Presentacion\recursos\images\anadir-al-carrito %281%29.png" />
+    <Content Include="Presentacion\recursos\images\atrasblanco.png" />
+    <Content Include="Presentacion\recursos\images\atrasE.png" />
     <Content Include="Presentacion\recursos\images\base.jpg" />
     <Content Include="Presentacion\recursos\images\baseg.jpg" />
     <Content Include="Presentacion\recursos\css\style2.css" />
@@ -194,6 +202,7 @@
     <Content Include="Presentacion\recursos\images\fondo2admin.jpeg" />
     <Content Include="Presentacion\recursos\images\fondo3.jpg" />
     <Content Include="Presentacion\recursos\images\fondo5.jpeg" />
+    <Content Include="Presentacion\recursos\images\fondoemple2.jpg" />
     <Content Include="Presentacion\recursos\images\icono3.png" />
     <Content Include="Presentacion\recursos\images\iconoEscritorio.png" />
     <Content Include="Presentacion\recursos\images\iconoSofa.png" />
@@ -255,6 +264,8 @@
     <Content Include="Presentacion\recursos\js\JavaTarea.js" />
     <Content Include="Presentacion\recursos\js\jquery-3.4.1.min.js" />
     <Content Include="Presentacion\Recursos\js\datosDatable.js" />
+    <Content Include="Presentacion\recursos\js\jsClienteE.js" />
+    <Content Include="Presentacion\recursos\js\jsProductosV.js" />
     <Content Include="Presentacion\recursos\js\main.js" />
     <Content Include="Presentacion\recursos\js\sb-admin-2.js" />
     <Content Include="Presentacion\recursos\js\sb-admin-2.min.js" />
@@ -428,6 +439,20 @@
     <Compile Include="Presentacion\About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\frmClientesVendedor.aspx.cs">
+      <DependentUpon>frmClientesVendedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmClientesVendedor.aspx.designer.cs">
+      <DependentUpon>frmClientesVendedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmInicioEmpleados.aspx.cs">
+      <DependentUpon>frmInicioEmpleados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmInicioEmpleados.aspx.designer.cs">
+      <DependentUpon>frmInicioEmpleados.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\frmNomina.aspx.cs">
       <DependentUpon>frmNomina.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -435,12 +460,26 @@
     <Compile Include="Presentacion\frmNomina.aspx.designer.cs">
       <DependentUpon>frmNomina.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\frmProductosVendedor.aspx.cs">
+      <DependentUpon>frmProductosVendedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmProductosVendedor.aspx.designer.cs">
+      <DependentUpon>frmProductosVendedor.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\frmRegisEmpleados.aspx.cs">
       <DependentUpon>frmRegisEmpleados.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentacion\frmRegisEmpleados.aspx.designer.cs">
       <DependentUpon>frmRegisEmpleados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmRegistrarProducto.aspx.cs">
+      <DependentUpon>frmRegistrarProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmRegistrarProducto.aspx.designer.cs">
+      <DependentUpon>frmRegistrarProducto.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmSobreNosotros.aspx.cs">
       <DependentUpon>frmSobreNosotros.aspx</DependentUpon>
@@ -596,6 +635,13 @@
     <Compile Include="Presentacion\Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\Site3.Master.cs">
+      <DependentUpon>Site3.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Site3.Master.designer.cs">
+      <DependentUpon>Site3.Master</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -737,6 +783,7 @@
     <Content Include="Presentacion\recursos2\fonts\fontawesome-webfont.woff" />
     <Content Include="Presentacion\recursos2\fonts\fontawesome-webfont.woff2" />
     <Content Include="Presentacion\recursos2\fonts\FontAwesome.otf" />
+    <Content Include="Presentacion\Site3.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -58,43 +58,45 @@
 
    
     <center>
-    <%--boton paypal--%>
-  <div id="paypal-button-container"></div>
-    <script>
-       
-        paypal.Buttons({
-            style: {
-                color: 'blue',
-                shape: 'pill',
-                label: 'pay' 
-            },
-            craeteOrder: function (data, actions) {
-                return actions.order.create({
-                    purchase_units: [{
-                        amount: {
-                            value: 100
-                        }
+   <%--boton paypal--%>
+        <div id="paypal-button-container"></div>
+        <script>
 
-                    }]
+            paypal.Buttons({
+                style: {
+                    color: 'blue',
+                    shape: 'pill',
+                    label: 'pay'
+                },
+                // Sets up the transaction when a payment button is clicked
+                createOrder: (data, actions) => {
+                    var prueba = "<%= this.valor%>";
+                    return actions.order.create({
+                        purchase_units: [{
+                            amount: {
+                                value: prueba// Can also reference a variable or function
+                            }
+                        }]
+                    });
+                },
+                // Finalize the transaction after payer approval
+                onApprove: (data, actions) => {
+                    return actions.order.capture().then(function (orderData) {
+                        console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+                        const transaction = orderData.purchase_units[0].payments.captures[0];
+                        alert(`Transaction ${transaction.status}: ${transaction.id}\n\nSee console for all available details`);
 
-                });
-            },
-            onApprove: function (data, actions) {
-                actions.order.capture().then(function (detalles) {
-                    console.log(detalles);
-                    window.location.href = "WebForm1.aspx";
+                    });
 
-                });
-
-            },
+                },
 
 
-            onCancel: function (data) {
-                alert("Pago cancelado")
-                console.log(data);
-            }
-        }).render('#paypal-button-container');
-    </script>
+                onCancel: function (data) {
+                    alert("Pago cancelado")
+                    console.log(data);
+                }
+            }).render('#paypal-button-container');
+        </script>
    </center>
 </section>
 

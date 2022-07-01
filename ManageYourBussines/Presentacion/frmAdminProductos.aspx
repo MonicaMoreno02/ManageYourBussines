@@ -5,7 +5,6 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <form runat="server">
-
         <%--Creacion de tabla productos--%>
 
         <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
@@ -24,13 +23,19 @@
 
         <div class="container-fluid">
 
-          
+
             <div class="card card-5">
                 <div class="card-heading">
                     <h2 class="title">LISTADO PRODUCTOS </h2>
+
                 </div>
             </div>
-
+            <p>
+                <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="recursos/images/Agregarver.png" Height="40px" OnClick="ImageButton1_Click" Width="47px" />
+                &nbsp;&nbsp;
+           
+            </p>
+            <p>&nbsp;</p>
             <div class="card shadow mb-4">
                 <div class="card-body">
                     <div class="table-responsive">
@@ -63,59 +68,6 @@
         <br />
         <br />
 
-        <%--        Formulario para agregar productos--%>
-        <h1>Registrar productos</h1>
-        <br />
-        <div class="col">
-            <div class="form-group">
-                <label for="txtNombre" class="col-form-label">Nombre</label>
-                <asp:TextBox ID="txtAsignarNombre" class="form-control" runat="server"></asp:TextBox>
-            </div>
-            <div class="form-group">
-                <label for="txtDescripcion" class="col-form-label">Descripcion</label>
-                <asp:TextBox ID="txtAsignarDescripcion" class="form-control" runat="server"></asp:TextBox>
-            </div>
-            <div class="form-group">
-                <label for="txtPrecio" class="col-form-label">Precio</label>
-                <asp:TextBox ID="txtAsignarPrecio" class="form-control" runat="server"></asp:TextBox>
-            </div>
-            <div class="form-group">
-                <label for="txtCantidadStock" class="col-form-label">Cantidad en Stock</label>
-                <asp:TextBox ID="txtAsignarCantidadStock" class="form-control" runat="server"></asp:TextBox>
-            </div>
-            <div class="form-group">
-                <label for="txtLargo" class="col-form-label">Largo</label>
-                <asp:TextBox ID="txtAsignarLargo" class="form-control" runat="server"></asp:TextBox>
-            </div>
-            <div class="form-group">
-                <label for="txtAncho" class="col-form-label">Ancho</label>
-                <asp:TextBox ID="txtAsignarAncho" class="form-control" runat="server"></asp:TextBox>
-            </div>
-            <div class="form-group">
-                <label for="txtProfundidad" class="col-form-label">Profundidad</label>
-                <asp:TextBox ID="txtAsignarProfundidad" class="form-control" runat="server"></asp:TextBox>
-            </div>
-            <div class="form-group">
-                <label for="txtMaterial" class="col-form-label">Material</label>
-                <asp:TextBox ID="txtAsignarMaterial" class="form-control" runat="server"></asp:TextBox>
-            </div>
-            <div class="form-group">
-                <label for="txtCaracteristicas" class="col-form-label">Caracteristicas</label>
-                <asp:TextBox ID="txtAsignarCaracteristicas" class="form-control" runat="server"></asp:TextBox>
-            </div>
-            <div class="form-group">
-                <label for="txtImagen" class="col-form-label">Imagen</label>
-                <asp:FileUpload ID="fuImagen" runat="server" />
-            </div>
-
-
-            <asp:Button ID="btnAgregar" runat="server" Text="Agregar" OnClick="btnAgregar_Click" />
-        </div>
-
-        <br />
-        <br />
-        <br />
-        <br />
 
 
         <%--Modal editar--%>
@@ -179,7 +131,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <asp:Button ID="btnActualizar" class="btn btn-primary" runat="server" Text="Actualizar" OnClick="btnActualizar_Click" />
+                        <asp:Button ID="btnActualizar" class="btn btn-primary" runat="server" Text="Actualizar" OnClick="btnActualizar_Click1" />
                     </div>
                 </div>
             </div>
@@ -201,7 +153,7 @@
                         <asp:Label ID="Label1" runat="server" Text="¿Estas seguro de eliminar este registro?"></asp:Label>
                     </div>
                     <div class="modal-footer">
-                        <asp:Button ID="txtEliminar" runat="server" class="btn btn-danger" Text="Eliminar" OnClick="txtEliminar_Click" />
+                        <asp:Button ID="txtEliminar" runat="server" class="btn btn-danger" Text="Eliminar" OnClick="txtEliminar_Click1" />
                     </div>
                 </div>
             </div>
@@ -210,4 +162,5 @@
 
     <script src="recursos/js/jquery-3.4.1.min.js"></script>
     <script src="recursos/js/tablaJs.js"></script>
+
 </asp:Content>

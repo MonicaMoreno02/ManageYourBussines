@@ -15,7 +15,8 @@ namespace ManageYourBussines.Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            txtIdProductoEditar.Attributes.Add("style", "DISPLAY: none");
+            txtIdProducto.Attributes.Add("style", "DISPLAY: none");
         }
 
         [WebMethod]
@@ -33,104 +34,23 @@ namespace ManageYourBussines.Presentacion
         protected void btnAgregar_Click(object sender, EventArgs e)
         {
 
-            clProductoE objDatosProducto = new clProductoE();
-            objDatosProducto.nombreProducto = txtAsignarNombre.Text;
-            objDatosProducto.descripcion = txtAsignarDescripcion.Text;
-            objDatosProducto.precio = float.Parse(txtAsignarPrecio.Text);
-            objDatosProducto.cantidadStock = int.Parse(txtAsignarCantidadStock.Text);
-            objDatosProducto.largo = txtAsignarLargo.Text;
-            objDatosProducto.ancho = txtAsignarAncho.Text;
-            objDatosProducto.profundidad = txtAsignarProfundidad.Text;
-            objDatosProducto.material = txtAsignarMaterial.Text;
-            objDatosProducto.caracteristicas = txtAsignarCaracteristicas.Text;
-
-
-            //Sacamos le url y guardamos la imagen en la base de datos Cristian Salcedo
-
-            string ext = Path.GetExtension(fuImagen.FileName);
-
-            if (ext != "")
-            {
-                if (ext == ".jpeg" || ext == ".jpg")
-                {
-                    string imagen = objDatosProducto.precio + ext;
-
-                    objDatosProducto.imagen = "recursos/images/" + imagen;
-
-                    clProductoL objDatosL = new clProductoL();
-                    int resultado = objDatosL.mtdAgregar(objDatosProducto);
-                    if (resultado != 0)
-                    {
-                        string ruta = objDatosProducto.imagen;
-                        fuImagen.SaveAs(Server.MapPath(ruta));
-                        txtAsignarNombre.Text = "";
-                        txtAsignarDescripcion.Text = "";
-                        txtAsignarPrecio.Text = "";
-                        txtAsignarCantidadStock.Text = "";
-                        txtAsignarLargo.Text = "";
-                        txtAsignarAncho.Text = "";
-                        txtAsignarProfundidad.Text = "";
-                        txtAsignarMaterial.Text = "";
-                        txtAsignarCaracteristicas.Text = "";
-                        ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Datos insertados correctamente');", true);
-
-                    }
-                    else
-                    {
-                        ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Error al insertar Datos');", true);
-
-                    }
-                }
-                else
-                {
-                    ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Error, el tipo de imagen no es compatible, debe ser .jpeg');", true);
-
-                }
-            }
-            else
-            {
-                clProductoL objDatosL = new clProductoL();
-                int resultado = objDatosL.mtdAgregar(objDatosProducto);
-
-                if (resultado != 0)
-                {
-                    string ruta = objDatosProducto.imagen;
-                    fuImagen.SaveAs(Server.MapPath(ruta));
-                    txtAsignarNombre.Text = "";
-                    txtAsignarDescripcion.Text = "";
-                    txtAsignarPrecio.Text = "";
-                    txtAsignarCantidadStock.Text = "";
-                    txtAsignarLargo.Text = "";
-                    txtAsignarAncho.Text = "";
-                    txtAsignarProfundidad.Text = "";
-                    txtAsignarMaterial.Text = "";
-                    txtAsignarCaracteristicas.Text = "";
-                    ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Datos insertados correctamente');", true);
-
-                }
-                else
-                {
-                    ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Error al insertar Datos');", true);
-
-                }
-            }
-
         }
 
         int idProductos = 0;
-        //Boton que elimina un producto Cristian Salcedo
-        protected void txtEliminar_Click(object sender, EventArgs e)
+
+
+
+        protected void txtAsignarDescripcion_TextChanged(object sender, EventArgs e)
         {
 
-            idProductos = int.Parse(txtIdProducto.Text);
-            clProductoL objDatosL = new clProductoL();
-                int resultado = objDatosL.mtdEliminar(idProductos);
-            
         }
+
+       
+
 
         //Boton que actualiza los datos del producto Cristian Salcedo
 
-        protected void btnActualizar_Click(object sender, EventArgs e)
+        protected void btnActualizar_Click1(object sender, EventArgs e)
         {
             clProductoE objDatosE = new clProductoE();
             objDatosE.idProducto = int.Parse(txtIdProductoEditar.Text);
@@ -214,7 +134,22 @@ namespace ManageYourBussines.Presentacion
 
                 }
             }
-           
+
+        }
+
+
+        //Boton que elimina un producto Cristian Salcedo
+
+        protected void txtEliminar_Click1(object sender, EventArgs e)
+        {
+            idProductos = int.Parse(txtIdProducto.Text);
+            clProductoL objDatosL = new clProductoL();
+            int resultado = objDatosL.mtdEliminar(idProductos);
+        }
+
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("frmRegistrarProducto.aspx");
 
         }
     }

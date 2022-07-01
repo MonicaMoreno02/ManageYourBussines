@@ -11,7 +11,7 @@ namespace ManageYourBussines.Presentacion
 {
 
 
-    public partial class frmAdminProductos
+    public partial class frmRegistrarProducto
     {
 
         /// <summary>
@@ -24,147 +24,111 @@ namespace ManageYourBussines.Presentacion
         protected global::System.Web.UI.WebControls.ImageButton ImageButton1;
 
         /// <summary>
-        /// Control txtIdProductoEditar.
+        /// Control Label2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtIdProductoEditar;
+        protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// Control txtNombreEditar.
+        /// Control txtAsignarNombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombreEditar;
+        protected global::System.Web.UI.WebControls.TextBox txtAsignarNombre;
 
         /// <summary>
-        /// Control txtDescripcionEditar.
+        /// Control txtAsignarDescripcion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDescripcionEditar;
+        protected global::System.Web.UI.WebControls.TextBox txtAsignarDescripcion;
 
         /// <summary>
-        /// Control txtPrecioEditar.
+        /// Control txtAsignarPrecio.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPrecioEditar;
+        protected global::System.Web.UI.WebControls.TextBox txtAsignarPrecio;
 
         /// <summary>
-        /// Control txtCantidadStockEditar.
+        /// Control txtAsignarCantidadStock.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCantidadStockEditar;
+        protected global::System.Web.UI.WebControls.TextBox txtAsignarCantidadStock;
 
         /// <summary>
-        /// Control txtLargoEditar.
+        /// Control txtAsignarLargo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtLargoEditar;
+        protected global::System.Web.UI.WebControls.TextBox txtAsignarLargo;
 
         /// <summary>
-        /// Control txtAnchoEditar.
+        /// Control txtAsignarAncho.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAnchoEditar;
+        protected global::System.Web.UI.WebControls.TextBox txtAsignarAncho;
 
         /// <summary>
-        /// Control txtProfundidadEditar.
+        /// Control txtAsignarProfundidad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtProfundidadEditar;
+        protected global::System.Web.UI.WebControls.TextBox txtAsignarProfundidad;
 
         /// <summary>
-        /// Control txtMaterialEditar.
+        /// Control txtAsignarMaterial.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMaterialEditar;
+        protected global::System.Web.UI.WebControls.TextBox txtAsignarMaterial;
 
         /// <summary>
-        /// Control txtCaracteristicasEditar.
+        /// Control txtAsignarCaracteristicas.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCaracteristicasEditar;
+        protected global::System.Web.UI.WebControls.TextBox txtAsignarCaracteristicas;
 
         /// <summary>
-        /// Control FuEditarImagen.
+        /// Control fuImagen.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FuEditarImagen;
+        protected global::System.Web.UI.WebControls.FileUpload fuImagen;
 
         /// <summary>
-        /// Control txtImagenE.
+        /// Control btnAgregar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtImagenE;
-
-        /// <summary>
-        /// Control btnActualizar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnActualizar;
-
-        /// <summary>
-        /// Control txtIdProducto.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtIdProducto;
-
-        /// <summary>
-        /// Control Label1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
-
-        /// <summary>
-        /// Control txtEliminar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button txtEliminar;
+        protected global::System.Web.UI.WebControls.Button btnAgregar;
     }
 }
