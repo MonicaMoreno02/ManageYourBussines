@@ -24,6 +24,17 @@ namespace ManageYourBussines.Logica
 
 
         }
+        public clEmpleadoE mtdLoginProveedor(clEmpleadoE objDatos)
+        {
+            clEmpleadoD objDatosUsuarios = new clEmpleadoD();
+            clEmpleadoE objDatosEmpleD = new clEmpleadoE();
+
+            objDatosEmpleD = objDatosUsuarios.mtdLoginProveedor(objDatos);
+            return objDatosEmpleD;
+
+
+
+        }
 
         public clEmpleadoE recoverPassword(clEmpleadoE empleRequesting)
         {

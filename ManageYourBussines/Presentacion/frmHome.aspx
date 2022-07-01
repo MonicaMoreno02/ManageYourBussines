@@ -63,9 +63,8 @@
                                     <i>Mi perfil</i>
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Datos Personales</a>
-
-                                    </li>
+                                    <li><a class="dropdown-item" href="editarDatos.aspx">Datos Personales</a>
+                                            </li>
 
                                     <li><a class="dropdown-item" href="../index.aspx">cerrar sesion </a></li>
 

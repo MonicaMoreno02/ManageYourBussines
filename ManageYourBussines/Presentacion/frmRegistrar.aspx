@@ -7,41 +7,52 @@
     <!DOCTYPE html>
     <html>
 
-    <head>
-        <!-- Basic -->
+
         <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <!-- Mobile Metas -->
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <!-- Site Metas -->
-        <meta name="keywords" content="" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <link rel="shortcut icon" href="recursos/images/favicon.png" type="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
 
-        <title></title>
 
-        <!-- bootstrap core css -->
-        <link rel="stylesheet" type="text/css" href="recursos/css/bootstrap.css" />
 
-        <!--owl slider stylesheet -->
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-        <!-- nice select  -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
-        <!-- font awesome style -->
-        <link href="recursos/css/font-awesome.min.css" rel="stylesheet" />
+    <!--Insertamos el icono que se visualiza en la esquina de la pestaña en el navegador-->
+    <link rel="shortcut icon" href="recursos/images/sillaIcono.png" type="">
+    <!--Añadimos el titulo-->
+    <title>Muebles San José</title>
 
-        <!-- Custom styles for this template -->
-        <link href="recursos/css/style.css" rel="stylesheet" />
-        <!-- responsive style -->
-        <link href="recursos/css/responsive.css" rel="stylesheet" />
 
-<!--validacion para formulario-->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="recursos/css/bootstrap.css" />
+
+    <!--owl slider stylesheet -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <!-- nice select  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
+    <!-- font awesome style -->
+    <link href="recursos/css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="recursos/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="recursos/css/responsive.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    </head>
+ 
+    <!-- Custom styles for this template -->
+    <link href="recursos/css/style.css" rel="stylesheet" />
+    <!-- estilo para que sea responsive -->
+    <link href="recursos/css/responsive.css" rel="stylesheet" />
 
-    <body>
+
+
+    <head>
+       
+  
 
  <!--Añadimos el fondo-->
     <div class="hero_area">
@@ -75,71 +86,130 @@
 
 
                             
-                            <div class="container mt-">
+                    <div class="container mt-3">
 
 
 
-                                <li class="nav-item">
-                                    <a class="nav-link" data-bs-toggle="modal" data-bs-target="#myModal">Iniciar Sesión </a>
-                                </li>
-                            </div>
+     
+       
+             
 
-                            <!-- The Modal -->
-                            <div class="modal" id="myModal">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-
-                                        <!-- Modal Header -->
-                                        <div class="modal-header">
-                                            <h4 class="modal-title">Iniciar Sesion </h4>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                                        </div>
-
-                                        <!-- Modal body  el inicio de sesion  para cliente y administraador -->
-                                        <div class="modal-body">
-
-                                          
-
-                                                <div class="mb-3 mt-3">
-                                                    <label for="email" class="form-label">Email:</label>
-
-                                                    <asp:TextBox ID="txtCorreo" runat="server" CssClass="form-control" placeholder="Email usuario" TextMode="Email"></asp:TextBox>
+           <li class="nav-item">
+          <a class="nav-link"  data-bs-toggle="modal" data-bs-target="#myModal">
+              Iniciar Sesion </a>
+         </li>
+      </div>
 
 
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="pwd" class="form-label">Password:</label>
 
 
-                                                    <asp:TextBox ID="txtClaves" runat="server" CssClass="form-control" placeholder="password" TextMode="Password"></asp:TextBox>
+
+      <!-- The Modal -->
+      <div class="modal" id="myModal">
+          <div class="modal-dialog">
+              <div class="modal-content">
 
 
-                                                    <div class="container mt-3">
-                                                    </div>
-
-                                                    <div class=" col mt-3 mb-3">
-                                                        <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
 
 
-                                                    </div>
-                                                </div>
-                                                <center>
-                                                    <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" onClick="btnIngresar_Click" /></center>
-                                                <br />
-                                                <center>
-                                                    <asp:Button ID="btnRecuperar" runat="server" Text="Recuperar Contraseña" OnClick="btnRecuperar_Click"  />
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                     <center><h4 class="modal-title">Iniciar Sesion </h4></center> 
+                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+
+                  <!-- Modal body -->
+                  <div class="modal-body">
+
+
+
+
+               
+
+
+
+
+                          <div class="mb-3 mt-3">
+                              <label for="email" class="form-label">Email:</label>
+
+                              <asp:TextBox ID="txtEmail1" runat="server" CssClass="form-control" placeholder="Email usuario" TextMode="Email"></asp:TextBox>
+
+
+                          </div>
+                          <div class="mb-3">
+                              <label for="pwd" class="form-label">Password:</label>
+
+
+                              <asp:TextBox ID="txtClave1" runat="server" CssClass="form-control" placeholder="password" TextMode="Password"></asp:TextBox>
+                              <br />
+
+
+                          
+                              
+                             <%-- <div class="form-group">
+                                            <asp:DropDownList ID="idTipoUsuario" runat="server" class="form-select">
+                                                <asp:ListItem Value="Tipo usuario"></asp:ListItem>
+                                                <asp:ListItem Value="Cliente"></asp:ListItem>
+                                                <asp:ListItem Value="Empleado"></asp:ListItem>
+                                            </asp:DropDownList>
+                                        </div>--%>
+
+                             <div class="container mt-3">
+
+                                  
+                              </div>
+
+                              <div class=" col mt-3 mb-3">
+                                  <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+
+
+
+
+
+
+                              </div>
+                          </div>
+                        
+                             <center> <asp:Label ID="Label3" runat="server" Text Style="color: blue;">Seleccione el tipo de Usuario que desea Ingresar</asp:Label> </center>
+                              <br />
+                          <br />
+
+<center><asp:Button ID="btncliente" runat="server" class="btn btn-outline-primary" Text="cliente" onClick="btncliente_Click"/>
+<asp:Button ID="btnEmpleado" runat="server"  class="btn btn-outline-success" Text="Administrador" OnClick="btnEmpleado_Click" /></center>
+<%--                                               <asp:Button ID="btnEmpleados" runat="server" Text="Empleado"onClick="btnEmpleados_Click" />--%>
+
+                             <br />
+                                               <br />
+                             <%-- <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" OnClick="btnIngresar_Click" /></center>--%>
+               
+                           
+
+
+                          <br />
+                          <center>
+                              <asp:Button ID="btnRecuperar" runat="server" Text="Recuperar Contraseña" onClick="btnRecuperar_Click1"/></center>
+
+
+                          <hr>
+                        <%--<a href="" class="btn btn-google btn-user btn-block">
+                                            <i class="fab fa-google fa-fw"></i> Olvide mi contraseña 
+                                        </a>--%>
                                       
+               
 
-                                        </div>
 
-                                        <!-- Modal footer --->
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-                                        </div>
 
-                                    </div>
-                                </div>
-                            </div>
+
+                  </div>
+
+                  <!-- Modal footer --->
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                  </div>
+                  
+              </div>
+          </div>
+      </div>
                             <%-- cierre de  modal  --%>
 
                             <%-- continua con los  item de  navegacion --%>
@@ -310,7 +380,7 @@
         <section class="book_section layout_padding">
             <div class="container">
                 <div class="heading_container">
-                    <h2>REGISTRARSE...
+                    <h2>REGISTRO DE CLIENTES.
                     </h2>
                 </div>
                 <div class="row" >

@@ -1,5 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="ManageYourBussines.index" %>
 
+<link href="recursos/css/style.css" rel="stylesheet" />
 
 <html>
 
@@ -73,9 +74,19 @@
                             </li>
 
 
-                            <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="modal" data-bs-target="#myModal">Iniciar Sesion </a>
-                            </li>
+                            <div class="container mt-">
+
+
+
+     
+       
+             
+
+           <li class="nav-item">
+          <a class="nav-link"  data-bs-toggle="modal" data-bs-target="#myModal">
+              Iniciar Sesión </a>
+         </li>
+      </div>
 
 
 
@@ -249,10 +260,10 @@
                                 <a class="nav-link" href="Presentacion/frmRegistrar.aspx">Registrarse</a>
                             </li>
 
-                            <li class="nav-item">
-                                <a class="nav-link" href="loginEmpleado.aspx">Ingresar empleado</a>
-                            </li>
-
+                                                        <li class="nav-item">
+          <a class="nav-link" href="loginEmpleado.aspx">Ingreso de empleado</a>
+      </li>
+                
                         </ul>
                         <div class="user_option">
                             <a href="" class="user_link">
@@ -522,36 +533,40 @@
 
     <!-- food section -->
 
-    <section class="food_section layout_padding-bottom">
+ <section class="food_section layout_padding-bottom">
         <div class="container">
             <div class="heading_container heading_center">
                 <h2>Nuestros Productos
                 </h2>
-                <div id="BlockItemSubMenu">
-                    <asp:Repeater ID="Repeater2" runat="server">
-                        <ItemTemplate>
-                            <div class="ItemSubMenu">
-                                <asp:Label ID="LabelDato" runat="server" Visible="false" Text='<%#Eval("idProducto")%>'> </asp:Label>
+               
+      <div id="BlockItemSubMenu2">
+          <asp:Repeater ID="Repeater2" runat="server">
+              <ItemTemplate>
+                  <div class="ItemSubMenu2">
+                      <asp:Label ID="LabelDato" runat="server" Visible="false" Text='<%#Eval("idProducto")%>'> </asp:Label>
+
                                 <asp:Literal ID="Imagen" runat="server" /><img src="<%#Eval("imagen") %>" width="200" height="200" /></td></tr><br>
-                                <asp:Literal ID="nombreProducto" runat="server" />
+                                <asp:Literal ID="nombre" runat="server" />
                                 <%#Eval("nombreProducto") %><br>
                                 <asp:Literal ID="precio" runat="server" />$ <%#Eval("precio") %><br>
                                 <asp:Button ID="btnDetalles" runat="server" Text="Detalles:" CssClass="btn btn-success" OnClick="btnDetalles_Click" />
+                      </div>
+              </ItemTemplate>
+          </asp:Repeater>
+          </div>
 
-                            </div>
-                        </ItemTemplate>
-                    </asp:Repeater>
-                </div>
-            </div>
-        </div>
+                
     </section>
 
-    <!-- end food section -->
 
-    <!-- about section -->
+
+
+
+
+
 
     <!-- end client section -->
-
+    <section>
     <!-- PIE DE PAGINA -->
     <footer class="footer_section">
         <div class="container">
@@ -625,7 +640,9 @@
 
         </div>
         </div>
-    </footer>
+        </footer>
+        </section>
+    <!-- footer section -->
     <!-- end about section -->
 
 
