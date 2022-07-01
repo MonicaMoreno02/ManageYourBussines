@@ -69,24 +69,14 @@
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav  mx-auto ">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="index.aspx">Home <span class="sr-only">(current)</span></a>
-                            </li>
+                           
 
 
                             <div class="container mt-">
-
-
-
-     
-       
-             
-
-           <li class="nav-item">
-          <a class="nav-link"  data-bs-toggle="modal" data-bs-target="#myModal">
-              Iniciar Sesión </a>
-         </li>
-      </div>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-bs-toggle="modal" data-bs-target="#myModal">Iniciar Sesión </a>
+                                </li>
+                            </div>
 
 
 
@@ -187,91 +177,20 @@
                                 </div>
                             </div>
 
-                            <%--       <div class="container mt-">
-
-
-
-                                <li class="nav-item">
-                                    <a class="nav-link" data-bs-toggle="modal" data-bs-target="#myModal">Iniciar Sesión </a>
-                                </li>
-                            </div>
-
-                            <!-- The Modal -->
-                            <div class="modal" id="myModal">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-
-                                        <!-- Modal Header -->
-                                        <div class="modal-header">
-                                            <h4 class="modal-title">Iniciar Sesión </h4>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                                        </div>
-
-                                        <!-- Modal body  el inicio de sesion  para cliente y administraador -->
-                                        <div class="modal-body">
-
-                                           
-
-                                                <div class="mb-3 mt-3">
-                                                    <label for="email" class="form-label">Email:</label>
-
-                                                    <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="Email usuario" TextMode="Email"></asp:TextBox>
-
-
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="pwd" class="form-label">Password:</label>
-
-
-                                                    <asp:TextBox ID="txtClave" runat="server" CssClass="form-control" placeholder="password" TextMode="Password"></asp:TextBox>
-
-
-                                                    <div class="container mt-3">
-                                                    </div>
-
-                                                    <div class=" col mt-3 mb-3">
-                                                        <asp:Label ID="lblMensaje" runat="server" Text=""></asp:Label>
-
-
-                                                    </div>
-                                                </div>
-                                                <center>
-                                                    <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" CssClass="btn btn-dark" onClick="btnIngresar_Click" /></center>
-                                                <br />
-                                                <center>
-                                                    <asp:Button ID="btnRecuperar" runat="server" Text="Recuperar Contraseña" CssClass="btn btn-dark" onClick="btnRecuperar_Click" />
-                                         
-
-
-                                        </div>
-
-                                        <!-- Modal footer --->
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>--%>
-                            <%-- cierre de  modal  --%>
+         
 
                             <%-- continua con los  item de  navegacion --%>
                             <li class="nav-item">
                                 <a class="nav-link" href="Presentacion/frmRegistrar.aspx">Registrarse</a>
                             </li>
 
-                                                        <li class="nav-item">
-          <a class="nav-link" href="loginEmpleado.aspx">Ingreso de empleado</a>
-      </li>
-                
+                            <li class="nav-item">
+                                <a class="nav-link" href="loginEmpleado.aspx">Ingreso de empleado</a>
+                            </li>
+
                         </ul>
                         <div class="user_option">
-                            <a href="" class="user_link">
-                                <i class="fa fa-user" aria-hidden="true"></i>
-                            </a>
-                            <%-- <asp:ImageButton ID="ImageButton1" runat="server" />--%>
-                            <%--  <a class="cart_link" href="#">
-                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background: new 0 0 456.029 456.029;" xml:space="preserve">--%>
+                            
                             <g>
                                 <g>
                                     <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
@@ -335,81 +254,81 @@
                     </div>
                 </nav>
             </div>
-    </header>
+        </header>
         <!-- end header section -->
-    <!-- slider section -->
-    <section class="slider_section ">
-        <div id="customCarousel1" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="container ">
-                        <div class="row">
-                            <div class="col-md-7 col-lg-6 ">
-                                <div class="detail-box">
-                                    <h1>Calidad en todo momento
-                                    </h1>
-                                    <p>
-                                        En muebles San José te brindamos lo mejor en ebanistería ya que trabajamos con la mayor calidad usando excelentes materiales como pino, flor morado, cedro, MDF y muchos mas. 
-                                    </p>
-                                    <div class="btn-box">
-                                        <a data-bs-toggle="modal" data-bs-target="#myModal" class="btn1">Ingresa y conoce más
-                                        </a>
+        <!-- slider section -->
+        <section class="slider_section ">
+            <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="container ">
+                            <div class="row">
+                                <div class="col-md-7 col-lg-6 ">
+                                    <div class="detail-box">
+                                        <h1>Calidad en todo momento
+                                        </h1>
+                                        <p>
+                                            En muebles San José te brindamos lo mejor en ebanistería ya que trabajamos con la mayor calidad usando excelentes materiales como pino, flor morado, cedro, MDF y muchos mas. 
+                                        </p>
+                                        <div class="btn-box">
+                                            <a data-bs-toggle="modal" data-bs-target="#myModal" class="btn1">Ingresa y conoce más
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <div class="container ">
+                            <div class="row">
+                                <div class="col-md-7 col-lg-6 ">
+                                    <div class="detail-box">
+                                        <h1>Accesible y Amable
+                                        </h1>
+                                        <p>
+                                            Puedes hacer tu pedido desde celular, tablet o laptop, ordenar la cantidad que necesites y con las especificaciones que requieras, para ello puedes comunicarte con nuestros asesores en el CHAT EN VIVO.
+                                        </p>
+                                        <div class="btn-box">
+                                            <a data-bs-toggle="modal" data-bs-target="#myModal" class="btn1">Ingresa y conoce más
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container ">
+                            <div class="row">
+                                <div class="col-md-7 col-lg-6 ">
+                                    <div class="detail-box">
+                                        <h1>Esfuerzo y dedicación
+                                        </h1>
+                                        <p>
+                                            En Muebles San José damos lo mejor de nosotros porque "La mejor publicidad es la que hacen los clientes satisfechos", nuestra prioridad es brindar sonrisas a nuestros compradores.
+                                        </p>
+                                        <div class="btn-box">
+                                            <a data-bs-toggle="modal" data-bs-target="#myModal" class="btn1">Ingresa y conoce más
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item ">
-                    <div class="container ">
-                        <div class="row">
-                            <div class="col-md-7 col-lg-6 ">
-                                <div class="detail-box">
-                                    <h1>Accesible y Amable
-                                    </h1>
-                                    <p>
-                                        Puedes hacer tu pedido desde celular, tablet o laptop, ordenar la cantidad que necesites y con las especificaciones que requieras, para ello puedes comunicarte con nuestros asesores en el CHAT EN VIVO.
-                                    </p>
-                                    <div class="btn-box">
-                                        <a data-bs-toggle="modal" data-bs-target="#myModal" class="btn1">Ingresa y conoce más
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="container ">
-                        <div class="row">
-                            <div class="col-md-7 col-lg-6 ">
-                                <div class="detail-box">
-                                    <h1>Esfuerzo y dedicación
-                                    </h1>
-                                    <p>
-                                        En Muebles San José damos lo mejor de nosotros porque "La mejor publicidad es la que hacen los clientes satisfechos", nuestra prioridad es brindar sonrisas a nuestros compradores.
-                                    </p>
-                                    <div class="btn-box">
-                                        <a data-bs-toggle="modal" data-bs-target="#myModal" class="btn1">Ingresa y conoce más
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="container">
+                    <ol class="carousel-indicators">
+                        <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
+                        <li data-target="#customCarousel1" data-slide-to="1"></li>
+                        <li data-target="#customCarousel1" data-slide-to="2"></li>
+                    </ol>
                 </div>
             </div>
-            <div class="container">
-                <ol class="carousel-indicators">
-                    <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
-                    <li data-target="#customCarousel1" data-slide-to="1"></li>
-                    <li data-target="#customCarousel1" data-slide-to="2"></li>
-                </ol>
-            </div>
-        </div>
 
-    </section>
-    <!-- end slider section -->
+        </section>
+        <!-- end slider section -->
     </div>
 
     <!-- offer section -->
@@ -533,29 +452,27 @@
 
     <!-- food section -->
 
- <section class="food_section layout_padding-bottom">
+    <section class="food_section layout_padding-bottom">
         <div class="container">
             <div class="heading_container heading_center">
                 <h2>Nuestros Productos
                 </h2>
-               
-      <div id="BlockItemSubMenu2">
-          <asp:Repeater ID="Repeater2" runat="server">
-              <ItemTemplate>
-                  <div class="ItemSubMenu2">
-                      <asp:Label ID="LabelDato" runat="server" Visible="false" Text='<%#Eval("idProducto")%>'> </asp:Label>
+
+                <div id="BlockItemSubMenu2">
+                    <asp:Repeater ID="Repeater2" runat="server">
+                        <ItemTemplate>
+                            <div class="ItemSubMenu2">
+                                <asp:Label ID="LabelDato" runat="server" Visible="false" Text='<%#Eval("idProducto")%>'> </asp:Label>
 
                                 <asp:Literal ID="Imagen" runat="server" /><img src="<%#Eval("imagen") %>" width="200" height="200" /></td></tr><br>
                                 <asp:Literal ID="nombre" runat="server" />
                                 <%#Eval("nombreProducto") %><br>
                                 <asp:Literal ID="precio" runat="server" />$ <%#Eval("precio") %><br>
                                 <asp:Button ID="btnDetalles" runat="server" Text="Detalles:" CssClass="btn btn-success" OnClick="btnDetalles_Click" />
-                      </div>
-              </ItemTemplate>
-          </asp:Repeater>
-          </div>
-
-                
+                            </div>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </div>
     </section>
 
 
@@ -567,81 +484,81 @@
 
     <!-- end client section -->
     <section>
-    <!-- PIE DE PAGINA -->
-    <footer class="footer_section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 footer-col">
-                    <div class="footer_contact">
-                        <h4>Contactanos
-                        </h4>
-                        <div class="contact_link_box">
-                            <a href="">
-                                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                <span>Cra40#24-63 - barrio Camilo Torres 
-                                </span>
-                            </a>
-                            <a href="">
-                                <i class="fa fa-phone" aria-hidden="true"></i>
-                                <span>3133658254
-         <br />
+        <!-- PIE DE PAGINA -->
+        <footer class="footer_section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 footer-col">
+                        <div class="footer_contact">
+                            <h4>Contactanos
+                            </h4>
+                            <div class="contact_link_box">
+                                <a href="">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    <span>Cra40#24-63 - barrio Camilo Torres 
+                                    </span>
+                                </a>
+                                <a href="">
                                     <i class="fa fa-phone" aria-hidden="true"></i>
-                                    <span>3125403349
-                                    </span></a>
-                            <a href="">
-                                <i class="fa fa-envelope" aria-hidden="true"></i>
-                                <span>muebles.sanjose@gmail.com
-                                </span>
-                            </a>
+                                    <span>3133658254
+         <br />
+                                        <i class="fa fa-phone" aria-hidden="true"></i>
+                                        <span>3125403349
+                                        </span></a>
+                                <a href="">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    <span>muebles.sanjose@gmail.com
+                                    </span>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 footer-col">
-                    <div class="footer_detail">
-                        <a href="" class="footer-logo">Nuestras redes sociales
-                        </a>
+                    <div class="col-md-4 footer-col">
+                        <div class="footer_detail">
+                            <a href="" class="footer-logo">Nuestras redes sociales
+                            </a>
+                            <p>
+                                Contamos con diseños exclusivos, llevando calidad e innovación a tu hogar. 
+                            </p>
+                            <div class="footer_social">
+
+
+
+                                <a href="https://web.facebook.com/Muebles-San-Jos%C3%A9-113560607081755" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                </a>
+
+                                <a href="https://instagram.com/muebles.san_jose?igshid=YmMyMTA2M2Y=" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                </a>
+
+                                <a href="http://wa.me/573133658254/" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                                </a>
+
+
+
+
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 footer-col">
+                        <h4>Horario de atención 
+                        </h4>
                         <p>
-                            Contamos con diseños exclusivos, llevando calidad e innovación a tu hogar. 
+                            Lunes a sábado
                         </p>
-                        <div class="footer_social">
-
-
-
-                            <a href="https://web.facebook.com/Muebles-San-Jos%C3%A9-113560607081755" target="_blank" rel="noopener noreferrer">
-                                <i class="fa fa-facebook" aria-hidden="true"></i>
-                            </a>
-
-                            <a href="https://instagram.com/muebles.san_jose?igshid=YmMyMTA2M2Y=" target="_blank" rel="noopener noreferrer">
-                                <i class="fa fa-instagram" aria-hidden="true"></i>
-                            </a>
-
-                            <a href="http://wa.me/573133658254/" target="_blank" rel="noopener noreferrer">
-                                <i class="fa fa-whatsapp" aria-hidden="true"></i>
-                            </a>
-
-
-
-
-                            </a>
-                        </div>
+                        <p>
+                            8:00 Am a 12:00 Pm - 2:00 Pm a 5:00 Pm
+                        </p>
                     </div>
                 </div>
-                <div class="col-md-4 footer-col">
-                    <h4>Horario de atención 
-                    </h4>
-                    <p>
-                        Lunes a sábado
-                    </p>
-                    <p>
-                        8:00 Am a 12:00 Pm - 2:00 Pm a 5:00 Pm
-                    </p>
-                </div>
-            </div>
 
-        </div>
-        </div>
+            </div>
+            </div>
         </footer>
-        </section>
+    </section>
     <!-- footer section -->
     <!-- end about section -->
 

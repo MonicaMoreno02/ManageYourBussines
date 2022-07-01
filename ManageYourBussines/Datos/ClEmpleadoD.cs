@@ -28,9 +28,9 @@ namespace ManageYourBussines.Datos
                 if (tblDatos.Rows[0][4].ToString() == "Vendedor")
                 {
                     objDatosEmple.idEmpleado = int.Parse(tblDatos.Rows[0]["idEmpleado"].ToString());
-                    objDatosEmple.documento = tblDatos.Rows[0]["documentoEmpleado"].ToString();
-                    objDatosEmple.nombreEmpleado = tblDatos.Rows[0]["nombresEmpleado"].ToString();
-                    objDatosEmple.apellidos = tblDatos.Rows[0]["apellidosEmpleado"].ToString();
+                    objDatosEmple.documento = tblDatos.Rows[0]["documento"].ToString();
+                    objDatosEmple.nombreEmpleado = tblDatos.Rows[0]["nombreEmpleado"].ToString();
+                    objDatosEmple.apellidos = tblDatos.Rows[0]["apellidos"].ToString();
                     objDatosEmple.tipoEmpleado = tblDatos.Rows[0]["tipoEmpleado"].ToString();
 
                     objDatosEmple.email = tblDatos.Rows[0]["emailEmpleado"].ToString();
@@ -66,9 +66,9 @@ namespace ManageYourBussines.Datos
                 if (tblDatos.Rows[0][4].ToString() == "Vendedor")
                 {
                     objDatosEmple.idEmpleado = int.Parse(tblDatos.Rows[0]["idEmpleado"].ToString());
-                    objDatosEmple.documento = tblDatos.Rows[0]["documentoEmpleado"].ToString();
-                    objDatosEmple.nombreEmpleado = tblDatos.Rows[0]["nombresEmpleado"].ToString();
-                    objDatosEmple.apellidos = tblDatos.Rows[0]["apellidosEmpleado"].ToString();
+                    objDatosEmple.documento = tblDatos.Rows[0]["documento"].ToString();
+                    objDatosEmple.nombreEmpleado = tblDatos.Rows[0]["nombreEmpleado"].ToString();
+                    objDatosEmple.apellidos = tblDatos.Rows[0]["apellidos"].ToString();
                     objDatosEmple.tipoEmpleado = tblDatos.Rows[0]["tipoEmpleado"].ToString();
 
                     objDatosEmple.email = tblDatos.Rows[0]["emailEmpleado"].ToString();

@@ -20,13 +20,7 @@
                     </div>
                 </a>
             </li>
-            <li>
-                <a class="btn link" href="frmVenta.aspx">
-                    <div class="btn from-left">
-                        Ventas     
-                    </div>
-                </a>
-            </li>
+
             <li>
                 <a class="btn link" href="frmClientes.aspx">
                     <div class="btn from-right">
@@ -51,7 +45,7 @@
             </li>
             <li>
 
-                <a class="btn link" href="">
+                <a class="btn link" href="frmTarea.aspx">
                     <div class="btn from-center">
                         Tareas 
                     </div>

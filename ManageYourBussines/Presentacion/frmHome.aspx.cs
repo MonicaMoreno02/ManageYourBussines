@@ -164,8 +164,8 @@ namespace ManageYourBussines.Presentacion
 
             clSugerenciasE objDatosS = new clSugerenciasE();
             objDatosS.opinion = txtSugerencia.Text;
-            //objDatosS.idCliente = int.Parse(Session["idCliente"].ToString()); no se ha implementado por que se debe hacer merge con Paty 
-            objDatosS.idCliente = 1;
+            objDatosS.idCliente = int.Parse(Session["idCliente"].ToString()); 
+            //objDatosS.idCliente = 1;
             clSugerenciasL objDatosL = new clSugerenciasL();
             int filas = objDatosL.mtdAgregar(objDatosS);
             if (filas != 0)

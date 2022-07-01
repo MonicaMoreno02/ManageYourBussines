@@ -12,7 +12,7 @@
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="frmAdmin.aspx">Página del administrador</a>
+          <a class="nav-link" href="../index.aspx">Inicio</a>
         </li>
       </ul>
     </div>

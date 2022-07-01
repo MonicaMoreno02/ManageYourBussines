@@ -26,9 +26,7 @@
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav  mx-auto ">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="index.aspx">Home <span class="sr-only">(current)</span></a>
-                            </li>
+                            
 
                             <li class="nav-item">
                                 <a class="nav-link" data-toggle="modal" data-target="#ModalSugerencias">Sugerencias</a>
@@ -270,11 +268,12 @@
                                 <img src="recursos/images/sillamesedora.png" alt="">
                             </div>
                             <div class="detail-box">
-                                <h5></h5>
+                               <h5>Lo mejor en sillas
+                                </h5>
                                 <h6>
-                                    <span>15%</span> Off
+                                    <span>100%</span> Confiables
                                 </h6>
-                                <a href="">Hacer Pedido
+                                <a href="frmProductos2.aspx">Ver mas Productos
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background: new 0 0 456.029 456.029;" xml:space="preserve">
                                         <g>
                                             <g>
@@ -337,12 +336,12 @@
                                 <img src="recursos/images/biblioteca1.png" alt="">
                             </div>
                             <div class="detail-box">
-                                <h5>Super Sabados
+                                <h5>Líderes en productividad
                                 </h5>
                                 <h6>
-                                    <span>20%</span> Off
+                                    <span>100%</span> Eficientes
                                 </h6>
-                                <a href="">Hacer Pedido
+                                <a href="frmProductos2.aspx">Ver mas Productos
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background: new 0 0 456.029 456.029;" xml:space="preserve">
                                         <g>
                                             <g>
